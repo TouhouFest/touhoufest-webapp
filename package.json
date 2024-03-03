@@ -1,6 +1,6 @@
 {
-  "name": "cjnwebapp",
-  "homepage": "https://schedule.conjanai.org",
+  "name": "touhoufest-webapp",
+  "homepage": "kir12.github.io/touhoufest-webapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
