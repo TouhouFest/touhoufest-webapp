@@ -1,0 +1,84 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.aqua {background-color: aqua !important; color:black !important}
+.purple {background-color: purple !important;color:white !important}
+.fuchsia {background-color: fuchsia !important;color:white !important}
+.green {background-color: green !important;color:white !important}
+.lime {background-color: lime !important;color:black!important}
+.olive {background-color: olive !important;color:white !important}
+.yellow {background-color: yellow !important;color:black !important}
+.navy {background-color: navy !important;color:white !important}
+.blue {background-color: blue !important;color:white !important}
+.teal {background-color: teal !important;color:white !important}
+.black {background-color: black !important;color:white !important}
+.silver {background-color: silver !important;color:black !important}
+.gray {background-color: gray !important;color:black !important}
+
+.eventDescription {
+  white-space: pre-line;
+}
+
+/* manually adjust the height of navbar and footer as fix to floating footer problem */
+#infobody2 {
+  min-height: calc(100vh - 56px - 40px);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height:100%;
+}
+
+.hasFilters {
+  background-color: lightgreen;
+  border-radius: 50px;
+}
+
+/*code to push date indicators below the navbar*/
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sticky-top2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 56px;
+    z-index: 1019;
+  }
+} 
+
+.day-indicator{
+  background-color: antiquewhite;
+}
