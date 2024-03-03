@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 /* DECLARE YOUR MENUPAGES HERE */
 let menupagedata = [directionsPage, parkingPage, conCenterPage, restarauntsPage, aboutConPage];
 
-let menuheader = (<>Con Ja Nai 2023</>);
+let menuheader = (<>TouhouFest 2023</>);
 
 root.render(
   <React.StrictMode>
