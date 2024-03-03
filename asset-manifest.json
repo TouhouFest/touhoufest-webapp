@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kir12.github.io/touhoufest-webapp/static/css/main.737b7bf0.css",
-    "main.js": "/kir12.github.io/touhoufest-webapp/static/js/main.018ff189.js",
-    "static/js/787.7ff3c85a.chunk.js": "/kir12.github.io/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
-    "static/media/events.csv": "/kir12.github.io/touhoufest-webapp/static/media/events.ade08b203f69b87527d4.csv",
-    "index.html": "/kir12.github.io/touhoufest-webapp/index.html",
-    "main.737b7bf0.css.map": "/kir12.github.io/touhoufest-webapp/static/css/main.737b7bf0.css.map",
-    "main.018ff189.js.map": "/kir12.github.io/touhoufest-webapp/static/js/main.018ff189.js.map",
-    "787.7ff3c85a.chunk.js.map": "/kir12.github.io/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
+    "main.css": "/touhoufest-webapp/static/css/main.737b7bf0.css",
+    "main.js": "/touhoufest-webapp/static/js/main.a53a418f.js",
+    "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
+    "static/media/events.csv": "/touhoufest-webapp/static/media/events.ade08b203f69b87527d4.csv",
+    "index.html": "/touhoufest-webapp/index.html",
+    "main.737b7bf0.css.map": "/touhoufest-webapp/static/css/main.737b7bf0.css.map",
+    "main.a53a418f.js.map": "/touhoufest-webapp/static/js/main.a53a418f.js.map",
+    "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.737b7bf0.css",
-    "static/js/main.018ff189.js"
+    "static/js/main.a53a418f.js"
   ]
 }
