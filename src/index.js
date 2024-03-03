@@ -14,7 +14,7 @@ import {aboutConPage} from "./menupages/AboutCon";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [directionsPage, parkingPage, conCenterPage, restarauntsPage, aboutConPage];
+let menupagedata = [aboutConPage, directionsPage, parkingPage, conCenterPage, restarauntsPage];
 
 let menuheader = (<>TouhouFest 2023</>);
 

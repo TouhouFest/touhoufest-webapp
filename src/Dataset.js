@@ -9,6 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
 import events from './events.csv';
+import noresults from './noresults.jpg'
 import Papa from 'papaparse';
 
 dayjs.extend(customParseFormat)
@@ -153,7 +154,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
       <div className="row d-flex align-items-center justify-content-center" id="infobody">
         <div className="col-sm-6 text-center opacity-75">
           <p className="small mb-0"><a href="https://twitter.com/sobamushi_mo/status/1399661514043232259" target="blank" rel="noreferrer">Source</a></p>
-          <img src = "/noresults.jpg" className="img-fluid" alt="Confused Marisa"></img>
+          <img src = {noresults} className="img-fluid" alt="Confused Marisa"></img>
           <h5>No Results</h5>
           <p>Try setting some bookmarks or adjusting your filter options</p>
         </div>
