@@ -15,9 +15,9 @@ import {operatingHours} from "./menupages/OperatingHours";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [aboutConPage, operatingHours, directionsPage, parkingPage, conCenterPage, restarauntsPage];
+let menupagedata = [aboutConPage, operatingHours, conCenterPage, restarauntsPage];
 
-let menuheader = (<>TouhouFest 2023</>);
+let menuheader = (<>TouhouFest 2024</>);
 
 root.render(
   <React.StrictMode>
