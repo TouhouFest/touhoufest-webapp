@@ -129,7 +129,7 @@ function App({ menupagedata, menuheader }) {
 
         }
       }
-      let total_scroll = 145 * total_evts + 42 * activeDayIndex;
+      let total_scroll = 164 * total_evts + 42 * activeDayIndex;
       window.scrollTo(0, total_scroll);
     }
   }, [summonDayScroll]);
@@ -148,7 +148,7 @@ function App({ menupagedata, menuheader }) {
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
-              <NavDropdown title="Select Day">
+              <NavDropdown title="Days">
                 {rendered_days}
               </NavDropdown>
             </Navbar.Brand>
@@ -195,7 +195,7 @@ function App({ menupagedata, menuheader }) {
             <Nav.Link eventKey="home"><FontAwesomeIcon icon={faBook}></FontAwesomeIcon> Events</Nav.Link>
           </Nav.Item>
           <Nav.Item onClick={() => handleRoleChange("bookmarks")}>
-            <Nav.Link eventKey="bookmarks"><FontAwesomeIcon icon={fasStar}></FontAwesomeIcon> Bookmarks</Nav.Link>
+            <Nav.Link eventKey="bookmarks"><FontAwesomeIcon icon={fasStar}></FontAwesomeIcon> Starred</Nav.Link>
           </Nav.Item>
           <Nav.Item onClick={() => handleRoleChange("filterView")}>
             <Nav.Link eventKey="filter"><FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> Filters</Nav.Link>

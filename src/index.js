@@ -11,11 +11,12 @@ import {operatingHours} from "./menupages/OperatingHours";
 import { guestsPage } from './menupages/Guests';
 import { gamingPage } from "./menupages/Gaming";
 import { artistVendorsPage } from './menupages/ArtistVendors';
+import { cosplayPage } from './menupages/Cosplay';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [aboutConPage, operatingHours, conCenterPage, guestsPage, gamingPage, artistVendorsPage];
+let menupagedata = [aboutConPage, operatingHours, conCenterPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage];
 
 let menuheader = (<>TouhouFest 2024</>);
 
