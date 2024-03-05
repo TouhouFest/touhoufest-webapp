@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/touhoufest-webapp/static/css/main.737b7bf0.css",
-    "main.js": "/touhoufest-webapp/static/js/main.76e5dede.js",
+    "main.js": "/touhoufest-webapp/static/js/main.3a6ea4aa.js",
     "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
     "static/media/con_banner.png": "/touhoufest-webapp/static/media/con_banner.1244a221d953ebee1171.png",
     "static/media/punderfullll.png": "/touhoufest-webapp/static/media/punderfullll.d7040b230f9a547bbdba.png",
@@ -20,11 +20,11 @@
     "static/media/events.csv": "/touhoufest-webapp/static/media/events.f0f5640723724061b251.csv",
     "index.html": "/touhoufest-webapp/index.html",
     "main.737b7bf0.css.map": "/touhoufest-webapp/static/css/main.737b7bf0.css.map",
-    "main.76e5dede.js.map": "/touhoufest-webapp/static/js/main.76e5dede.js.map",
+    "main.3a6ea4aa.js.map": "/touhoufest-webapp/static/js/main.3a6ea4aa.js.map",
     "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.737b7bf0.css",
-    "static/js/main.76e5dede.js"
+    "static/js/main.3a6ea4aa.js"
   ]
 }
