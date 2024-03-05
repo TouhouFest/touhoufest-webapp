@@ -5,18 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 /* IMPORT YOUR MENUPAGES HERE */
-import {directionsPage} from "./menupages/Directions";
-import {parkingPage} from "./menupages/Parking";
 import {conCenterPage} from "./menupages/ConCenter";
-import {restarauntsPage} from "./menupages/Restaraunts";
 import {aboutConPage} from "./menupages/AboutCon";
 import {operatingHours} from "./menupages/OperatingHours";
 import { guestsPage } from './menupages/Guests';
+import { gamingPage } from "./menupages/Gaming";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [aboutConPage, operatingHours, conCenterPage, guestsPage, restarauntsPage];
+let menupagedata = [aboutConPage, operatingHours, conCenterPage, guestsPage, gamingPage];
 
 let menuheader = (<>TouhouFest 2024</>);
 
