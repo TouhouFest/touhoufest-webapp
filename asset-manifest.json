@@ -1,14 +1,17 @@
 {
   "files": {
     "main.css": "/touhoufest-webapp/static/css/main.737b7bf0.css",
-    "main.js": "/touhoufest-webapp/static/js/main.f720c576.js",
+    "main.js": "/touhoufest-webapp/static/js/main.138b1083.js",
     "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
     "static/media/con_banner.png": "/touhoufest-webapp/static/media/con_banner.1244a221d953ebee1171.png",
     "static/media/punderfullll.png": "/touhoufest-webapp/static/media/punderfullll.d7040b230f9a547bbdba.png",
     "static/media/touhoufest_outer.jpg": "/touhoufest-webapp/static/media/touhoufest_outer.415a18250d713aa81a36.jpg",
     "static/media/touhoufest_main.jpg": "/touhoufest-webapp/static/media/touhoufest_main.052815066c1233b441b5.jpg",
+    "static/media/toyota.jpg": "/touhoufest-webapp/static/media/toyota.e9bcd3d145c39664b637.jpg",
+    "static/media/placeholder.jpg": "/touhoufest-webapp/static/media/placeholder.1b752223f1a4b50fdcb4.jpg",
     "static/media/noresults.jpg": "/touhoufest-webapp/static/media/noresults.f352fd06fa5590263067.jpg",
     "static/media/shihori.jpg": "/touhoufest-webapp/static/media/shihori.b63b49b824de2521262f.jpg",
+    "static/media/torinoplaza.jpg": "/touhoufest-webapp/static/media/torinoplaza.890553f3d1cf30265029.jpg",
     "static/media/TAM.JPG": "/touhoufest-webapp/static/media/TAM.1adeca3d0d2d6049934c.JPG",
     "static/media/freeze.jpg": "/touhoufest-webapp/static/media/freeze.aff51f4e23848a91adaf.jpg",
     "static/media/cloudie.jpg": "/touhoufest-webapp/static/media/cloudie.9e46ef6b03b83b1d5b69.jpg",
@@ -16,11 +19,11 @@
     "static/media/events.csv": "/touhoufest-webapp/static/media/events.f0f5640723724061b251.csv",
     "index.html": "/touhoufest-webapp/index.html",
     "main.737b7bf0.css.map": "/touhoufest-webapp/static/css/main.737b7bf0.css.map",
-    "main.f720c576.js.map": "/touhoufest-webapp/static/js/main.f720c576.js.map",
+    "main.138b1083.js.map": "/touhoufest-webapp/static/js/main.138b1083.js.map",
     "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.737b7bf0.css",
-    "static/js/main.f720c576.js"
+    "static/js/main.138b1083.js"
   ]
 }
