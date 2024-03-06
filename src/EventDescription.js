@@ -1,4 +1,5 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Bookmark from './Bookmark';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 
@@ -6,8 +7,7 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}) {
 
   let output = (<></>);
 
-  if (event_package !== {}){
-    // NOTE: maybe add bookmarking option here?
+  if (Object.keys(event_package).length !== 0){
     output = (
       <>
         {evt_print}
@@ -19,7 +19,7 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}) {
   return (
     <Offcanvas show={show_var} onHide={hide_fxn}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Event Description</Offcanvas.Title>
+        <Offcanvas.Title className="align-middle">Event Description <Bookmark index={event_package["uniqueID"]}></Bookmark></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         {output}
