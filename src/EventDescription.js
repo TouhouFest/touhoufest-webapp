@@ -12,6 +12,7 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}) {
     output = (
       <>
         {evt_print}
+        <hr />
         <Markdown>{event_package["event_description"]}</Markdown>
       </>
     );

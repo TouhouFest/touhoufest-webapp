@@ -277,7 +277,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
       let eventbulk = (<>
         <h4 className="mb-1">{elem["event_title"]} </h4>
         <p className="mb-1">{elem["event_room"]}, {startjs.toString()} - {endjs.toString()}</p>
-        <p><Badge pill className={css_class}>{elem["event_type"]}</Badge> <Badge pill bg="danger">{elem["event_age_limit"]}</Badge></p>
+        <p className="mb-1"><Badge pill className={css_class}>{elem["event_type"]}</Badge> <Badge pill bg="danger">{elem["event_age_limit"]}</Badge></p>
       </>);
 
       // generate event listing
