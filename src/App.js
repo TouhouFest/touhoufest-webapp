@@ -129,7 +129,7 @@ function App({ menupagedata, menuheader }) {
 
         }
       }
-      let total_scroll = 164 * total_evts + 42 * activeDayIndex;
+      let total_scroll = 130 * total_evts + 42 * activeDayIndex;
       window.scrollTo(0, total_scroll);
     }
   }, [summonDayScroll]);
