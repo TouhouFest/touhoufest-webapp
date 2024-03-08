@@ -82,3 +82,9 @@ body {
 .day-indicator{
   background-color: antiquewhite;
 }
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    box-shadow: none;
+}
