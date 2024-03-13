@@ -33,8 +33,9 @@ function App({ menupagedata, menuheader }) {
   const [scrollSettings, setScrollSettings] = useState({ "home": 0, "bookmarks": 0, "filter": 0 });
 
   const [availableDays, setAvailableDays] = useState([]);
-  const [activeDayIndex, setActiveDayIndex] = useState(0);
-  const [summonDayScroll, setSummonDayScoll] = useState(0);
+  // decomissioned with fragments inplace instead
+  // const [activeDayIndex, setActiveDayIndex] = useState(0);
+  // const [summonDayScroll, setSummonDayScoll] = useState(0);
 
   function changeMenuPageState(idx, isDisplayed) {
     let newstate = [...menupagebools];
@@ -83,11 +84,12 @@ function App({ menupagedata, menuheader }) {
     }
   }
 
-  function handleDaySelect(day) {
-    console.log(day);
-    setSummonDayScoll(summonDayScroll + 1);
-    setActiveDayIndex(availableDays.indexOf(day));
-  }
+  // decomissioned with usage of fragments instead
+  // function handleDaySelect(day) {
+  //   console.log(day);
+  //   setSummonDayScoll(summonDayScroll + 1);
+  //   setActiveDayIndex(availableDays.indexOf(day));
+  // }
 
   let menunavs = [];
   let menupages = [];
@@ -117,25 +119,27 @@ function App({ menupagedata, menuheader }) {
   // each of the day idnicators are polled for the number of events preceding it
   // (as it was inscribed into the classname)
   // then a rough scroll amount is calculated and we jump to that position
-  useEffect(() => {
-    if (availableDays.length > 0 && summonDayScroll > 0) {
-      let total_evts = 0;
-      for(const num in [...Array(activeDayIndex+1).keys()]){
-        try {
-          let clslist = [...document.getElementById(availableDays[num]).classList];
-          let num_evts = clslist.filter((cls) => cls.includes("events"))[0].split("-")[1];
-          total_evts += Number(num_evts);
-        } catch(e) {
+  // NOTE: decommissioned now that href fragments are in-place
+  // useEffect(() => {
+  //   if (availableDays.length > 0 && summonDayScroll > 0) {
+  //     let total_evts = 0;
+  //     for(const num in [...Array(activeDayIndex+1).keys()]){
+  //       try {
+  //         let clslist = [...document.getElementById(availableDays[num]).classList];
+  //         let num_evts = clslist.filter((cls) => cls.includes("events"))[0].split("-")[1];
+  //         total_evts += Number(num_evts);
+  //       } catch(e) {
 
-        }
-      }
-      let total_scroll = 130 * total_evts + 42 * activeDayIndex;
-      window.scrollTo(0, total_scroll);
-    }
-  }, [summonDayScroll]);
+  //       }
+  //     }
+  //     let total_scroll = 130 * total_evts + 42 * activeDayIndex;
+  //     window.scrollTo(0, total_scroll);
+  //   }
+  // }, [summonDayScroll]);
 
   let rendered_days = availableDays.map((day) => {
-    return (<NavDropdown.Item onClick={() => { handleDaySelect(day) }}>{day}</NavDropdown.Item>);
+    // onClick={() => { handleDaySelect(day)}
+    return (<NavDropdown.Item href={'#'+day}>{day}</NavDropdown.Item>);
   });
 
   return (
