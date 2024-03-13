@@ -135,7 +135,8 @@ function App({ menupagedata, menuheader }) {
   }, [summonDayScroll]);
 
   let rendered_days = availableDays.map((day) => {
-    return (<NavDropdown.Item onClick={() => { handleDaySelect(day) }}>{day}</NavDropdown.Item>);
+    // onClick={() => { handleDaySelect(day)}
+    return (<NavDropdown.Item href={'#'+day}>{day}</NavDropdown.Item>);
   });
 
   return (

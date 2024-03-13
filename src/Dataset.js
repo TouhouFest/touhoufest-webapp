@@ -255,9 +255,12 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
         let formatted_start = startjs.format("dddd, MMMM D").toString();
         // the number of events preceding the day indicator are enscribed into the classname
         output.push(
-          <ListGroup.Item key={formatted_start} className={"text-center sticky-top2 day-indicator events-" + num_evts_ctr} id={startjs.format("ddd, M/D").toString()}>
+          <ListGroup.Item key={formatted_start} className={"text-center sticky-top2 day-indicator events-" + num_evts_ctr} >
             <p className="mb-0"><b>{formatted_start}</b></p>
           </ListGroup.Item>
+        );
+        output.push(
+          <div id={startjs.format("ddd, M/D").toString()}></div>
         );
         num_evts_ctr = 0;
       }
