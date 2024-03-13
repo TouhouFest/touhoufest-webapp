@@ -89,6 +89,6 @@ body {
     box-shadow: none;
 }
 
-html {
-  scroll-padding-top: 96px; /* height of sticky header */
+.anchorpoint {
+  scroll-margin-top: 56px;
 }

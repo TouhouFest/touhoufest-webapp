@@ -153,7 +153,7 @@ function App({ menupagedata, menuheader }) {
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
               <NavDropdown title="Days">
-                {rendered_days}
+                { rendered_days }
               </NavDropdown>
             </Navbar.Brand>
             <Navbar.Offcanvas
