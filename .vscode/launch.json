@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:3000/touhoufest-webapp",
+            "webRoot": "${workspaceFolder}/src"
+        },
+        {
             "type": "firefox",
             "request": "launch",
             "name": "Launch localhost",

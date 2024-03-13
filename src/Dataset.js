@@ -260,7 +260,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
           </ListGroup.Item>
         );
         output.push(
-          <div id={startjs.format("ddd, M/D").toString()}></div>
+          <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
         );
         num_evts_ctr = 0;
       }

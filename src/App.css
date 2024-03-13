@@ -89,6 +89,16 @@ body {
     box-shadow: none;
 }
 
+/* height of sticky header */
+/*
 html {
-  scroll-padding-top: 96px; /* height of sticky header */
+  scroll-padding-top: 96px; 
+}
+*/
+
+.anchorpoint::before {
+  content:"";
+  height: 200px;
+  margin: -200px 0 0 0;
+  display: block;
 }
