@@ -4,8 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck } from '@fortawesome/free-solid-svg-icons';
-// faMagnifyingGlass to use in filteroptions when doing search
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
@@ -142,17 +141,18 @@ function App({ menupagedata, menuheader }) {
     return (<NavDropdown.Item href={'#'+day}>{day}</NavDropdown.Item>);
   });
 
+  // bg="light" data-bs-theme="light"
   return (
     <>
       <div className="App">
 
-        <Navbar collapseOnSelect expand={false} className="sticky-top mb-2 shadow-sm" bg="light" data-bs-theme="light">
+        <Navbar collapseOnSelect expand={false} className="sticky-top mb-0 shadow-sm"  id="main-navbar">
           <Container fluid>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
-              <NavDropdown title="Days">
+              <NavDropdown title={<><FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon> Days</>} id="day-dropdown-widget">
                 { rendered_days }
               </NavDropdown>
             </Navbar.Brand>
@@ -174,13 +174,13 @@ function App({ menupagedata, menuheader }) {
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-            <div className="d-flex order-1 ms-auto">
+            <div className="d-flex order-1 ms-auto" id="filter-widget">
               <Nav className="flex-row">
                 <Nav.Link href="#home" className={filterclass}>
                   <small><FontAwesomeIcon icon={faCheck} className="align-middle"></FontAwesomeIcon></small>
                 </Nav.Link>
                 <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}>
-                  <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> Filter/Search
+                  <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
                 </Nav.Link>
                 { /* <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon> Search</Nav.Link> */}
               </Nav>

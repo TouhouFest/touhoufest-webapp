@@ -80,7 +80,7 @@ body {
 } 
 
 .day-indicator{
-  background-color: antiquewhite;
+  background-color: #FFF9A8;
 }
 
 .navbar-toggler:focus,
@@ -91,4 +91,17 @@ body {
 
 .anchorpoint {
   scroll-margin-top: 56px;
+}
+
+/* TODO: implement more fancy theme setup with Sass */
+#main-navbar {
+  background-color: #FFF7F7 !important;
+}
+
+#filter-widget a, #day-dropdown-widget {
+  color: #3B3249 !important;
+}
+
+body {
+  background-color: #E6E4E8 !important;
 }

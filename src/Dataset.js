@@ -285,7 +285,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
 
       // generate event listing
       output.push(
-        <ListGroup.Item key={index}>
+        <ListGroup.Item key={index} className="event-item">
           <Row>
             <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk)}>
               {eventbulk}
