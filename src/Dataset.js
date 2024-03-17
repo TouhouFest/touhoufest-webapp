@@ -11,6 +11,7 @@ import Badge from 'react-bootstrap/Badge';
 import events from './events.csv';
 import noresults from './noresults.jpg'
 import Papa from 'papaparse';
+import Image from 'react-bootstrap/Image';
 
 dayjs.extend(customParseFormat)
 
@@ -21,7 +22,7 @@ class SPDataFrame {
   }
 
   addColumn(column_name, series) {
-    let output = this.data.map(function(row, index) {
+    let output = this.data.map(function (row, index) {
       row[column_name] = series[index];
       return row;
     })
@@ -35,44 +36,44 @@ class SPDataFrame {
     return output;
   }
 
-  sortValues(column, ascending=true){
-    this.data.sort((a,b) => {
+  sortValues(column, ascending = true) {
+    this.data.sort((a, b) => {
       let val = a[column].localeCompare(b[column]);
       return (ascending) ? val : !val;
     });
     return new SPDataFrame(this.data);
   }
 
-  get(column){
+  get(column) {
     let output = this.data.map((x) => {
       return x[column];
     });
     return output;
   }
 
-  debug(){
+  debug() {
     console.log(this.data);
   }
 
-  loc(params){
+  loc(params) {
     let rows = params.rows.map((value, index) => {
-      if(typeof value === "boolean" && value === true){
+      if (typeof value === "boolean" && value === true) {
         return this.data[index];
       }
-      else{
+      else {
         return this.data[value];
       }
-    }).filter(item => item); 
+    }).filter(item => item);
     return new SPDataFrame(rows);
   }
 
-  toJSON(){
+  toJSON() {
     return this.data;
   }
 
-  compare(column, value, op){
+  compare(column, value, op) {
     let output = this.data.filter((row) => {
-      switch(op){
+      switch (op) {
         case '!==':
           return row[column] !== value;
         case '>=':
@@ -86,7 +87,7 @@ class SPDataFrame {
 
 };
 
-export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
+export default function Dataset({ mode, param_fxn, appliedFilters, changeDays }) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
   const [showEventDescription, setShowEventDescription] = useState(false);
@@ -94,8 +95,8 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
   const [evtPrint, setEvtPrint] = useState(<></>);
   // const [availableDays, setAvailableDays] = useState([]);
 
-  function handleEventOnClick(index, evtbulk){
-    let evt = dataSet.loc({rows:[index]}).toJSON()[0];
+  function handleEventOnClick(index, evtbulk) {
+    let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
     // let evt = toJSON(dataSet.loc({rows:[index]}))[0];
     setEventDetails(evt);
     setShowEventDescription(true);
@@ -113,7 +114,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
       header: true,
       download: true,
       dynamicTyping: true,
-      complete: function(results) {
+      complete: function (results) {
         let newdata = new SPDataFrame(results.data);
         newdata = newdata.addColumn("combinedStart", newdata.apply((row) => {
           return dayjs(row["event_start_day"] + " " + row["event_start_time"], "M/D/YY H:mm").toISOString();
@@ -126,7 +127,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
 
         let event_types = uniqueColumn(newdata.get("event_type"));
         let room_list = uniqueColumn(newdata.get("event_room"));
-        let params = {'event_types':event_types, 'room_list': room_list};
+        let params = { 'event_types': event_types, 'room_list': room_list };
 
         // newdata.debug();
         // console.log(params);
@@ -149,13 +150,15 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
 
   }, []);
 
+  // <img src = {noresults} className="img-fluid" alt="Confused Marisa"></img>
+  // <p className="small mb-1"><a href="https://twitter.com/sobamushi_mo/status/1399661514043232259" target="blank" rel="noreferrer">Source</a></p>
   function noResults() {
     return (
       <div className="row d-flex align-items-center justify-content-center" id="infobody">
-        <div className="col-sm-6 text-center opacity-75">
-          <p className="small mb-0"><a href="https://twitter.com/sobamushi_mo/status/1399661514043232259" target="blank" rel="noreferrer">Source</a></p>
-          <img src = {noresults} className="img-fluid" alt="Confused Marisa"></img>
-          <h5>No Results</h5>
+        <div className="col-10 text-center opacity-75">
+          <p className="small mb-1"><a href="https://www.pixiv.net/en/artworks/54659563" target="blank" rel="noreferrer">Image Source</a></p>
+          <Image src={noresults} fluid alt="Confused Reimu" rounded />
+          <h5 className="mt-2">No Results</h5>
           <p>Try setting some bookmarks or adjusting your filter options</p>
         </div>
       </div>
@@ -179,55 +182,55 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
   }
 
   let output = [];
-  
+
   if (dataUpdated) {
 
     let event_types = uniqueColumn(dataSet.get("event_type"));
 
     let displayData = dataSet;
-    if(mode === "bookmarks"){
+    if (mode === "bookmarks") {
       let cookie_list = get_cookie_list();
       // console.log(cookie_list);
       cookie_list = cookie_list.map(Number);
       cookie_list.sort(cmp);
-      displayData = dataSet.loc({rows:cookie_list});
+      displayData = dataSet.loc({ rows: cookie_list });
     }
-    else if(mode === "filter"){
-       
-        if(appliedFilters["search_query"] !== ""){
-          let results = displayData.apply(rankResults);
-          results = results.map((rank, idx) => {
-            return {
-              "assignIndex": idx,
-              "rank": rank
-            };
-          });
-          let finalresults = (new SPDataFrame(results)).compare("rank",0.5,">=").get("assignIndex");
-          displayData = displayData.loc({rows: finalresults});
-        }
+    else if (mode === "filter") {
 
-        if(appliedFilters["event_types"].length > 0){
-            let result = displayData.get("event_type").map((param) => {return appliedFilters["event_types"].includes(param)});
-            // console.log(result);
-            displayData = displayData.loc({rows: result});
-        }
+      if (appliedFilters["search_query"] !== "") {
+        let results = displayData.apply(rankResults);
+        results = results.map((rank, idx) => {
+          return {
+            "assignIndex": idx,
+            "rank": rank
+          };
+        });
+        let finalresults = (new SPDataFrame(results)).compare("rank", 0.5, ">=").get("assignIndex");
+        displayData = displayData.loc({ rows: finalresults });
+      }
 
-        if(appliedFilters["room_list"].length > 0){
-            let result = displayData.get("event_room").map((param) => {return appliedFilters["room_list"].includes(param)});
-            // console.log(result);
-            displayData = displayData.loc({rows: result});
-        }
- 
-        // if(appliedFilters["room_list"] !== []){
-        //     displayData = displayData[displayData.event_room.ne(eventSeries)];
-        // }
+      if (appliedFilters["event_types"].length > 0) {
+        let result = displayData.get("event_type").map((param) => { return appliedFilters["event_types"].includes(param) });
+        // console.log(result);
+        displayData = displayData.loc({ rows: result });
+      }
+
+      if (appliedFilters["room_list"].length > 0) {
+        let result = displayData.get("event_room").map((param) => { return appliedFilters["room_list"].includes(param) });
+        // console.log(result);
+        displayData = displayData.loc({ rows: result });
+      }
+
+      // if(appliedFilters["room_list"] !== []){
+      //     displayData = displayData[displayData.event_room.ne(eventSeries)];
+      // }
     }
-    else{
+    else {
 
     }
-   
-    if(displayData.index.length > 0){
-      displayData = displayData.sortValues("combinedStart",{acending: true});
+
+    if (displayData.index.length > 0) {
+      displayData = displayData.sortValues("combinedStart", { acending: true });
     }
 
     let jsonexport = displayData.toJSON();
@@ -248,9 +251,9 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
       // compute time display
       let startjs = dayjs(elem["combinedStart"]);
       let endjs = dayjs(elem["combinedEnd"]);
-      
+
       // we've moved onto a new set of days, we need to add a new day indicator
-      if(daynum === -1 || startjs.day() !== daynum){
+      if (daynum === -1 || startjs.day() !== daynum) {
         daynum = startjs.day();
         let formatted_start = startjs.format("dddd, MMMM D").toString();
         // the number of events preceding the day indicator are enscribed into the classname
@@ -268,10 +271,10 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
       num_evts_ctr += 1;
 
       let format_str = "";
-      if(startjs.day() !== endjs.day()){
+      if (startjs.day() !== endjs.day()) {
         format_str = "D/M h:mm A";
       }
-      else{
+      else {
         format_str = "h:mm A";
       }
       startjs = startjs.format(format_str);
@@ -294,7 +297,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
               <Bookmark index={index}></Bookmark>
             </Col>
           </Row>
-       </ListGroup.Item>
+        </ListGroup.Item>
       );
     });
 
