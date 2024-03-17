@@ -194,7 +194,7 @@ function App({ menupagedata, menuheader }) {
             <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays}></Dataset>
           </div>
         </Container>
-        <Nav fill variant="pills" defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-sm mt-2">
+        <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
           <Nav.Item onClick={() => handleRoleChange("home")}>
             <Nav.Link eventKey="home"><FontAwesomeIcon icon={faBook}></FontAwesomeIcon> Events</Nav.Link>
           </Nav.Item>

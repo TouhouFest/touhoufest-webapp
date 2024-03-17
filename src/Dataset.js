@@ -303,7 +303,7 @@ export default function Dataset({mode, param_fxn, appliedFilters, changeDays}) {
   return (
     <>
       <EventDescription show_var={showEventDescription} hide_fxn={handleEventOnHide} event_package={eventDetails} evt_print={evtPrint}></EventDescription>
-      <ListGroup>
+      <ListGroup variant="flush">
         {output}
       </ListGroup>
       {output.length < 1 ? noResults() : <></>}
