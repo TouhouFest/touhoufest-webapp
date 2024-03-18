@@ -52,8 +52,9 @@
 }
 
 /* manually adjust the height of navbar and footer as fix to floating footer problem */
-#infobody2 {
+#dataset{
   min-height: calc(100vh - 56px - 40px);
+  display: flex;
 }
 
 html {
@@ -79,10 +80,6 @@ body {
   }
 } 
 
-.day-indicator{
-  background-color: antiquewhite;
-}
-
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -91,4 +88,39 @@ body {
 
 .anchorpoint {
   scroll-margin-top: 56px;
+}
+
+/* TODO: implement more fancy theme setup with Sass */
+
+.day-indicator{
+  background-color: #ff5959;
+  color: #FFF9EE;
+}
+
+#main-navbar {
+  background-color: #FFF7F7 !important;
+}
+
+#filter-widget a, #day-dropdown-widget {
+  color: #3B3249 !important;
+}
+
+.event-item{
+  background-color: #FFF9EE;
+}
+
+body{
+  background-color: #FFF9EE;
+}
+
+.nav-fill {
+  background-color: #372E45 !important;
+}
+
+.nav-fill .nav-item > .active {
+  color: #f5ec42;
+}
+
+.nav-fill .nav-item > :not(.active) {
+  color: white;
 }
