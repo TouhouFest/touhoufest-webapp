@@ -54,7 +54,7 @@
 /* manually adjust the height of navbar and footer as fix to floating footer problem */
 #dataset{
   min-height: calc(100vh - 56px - 40px);
-  display:flex;
+  display: flex;
 }
 
 html {

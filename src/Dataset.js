@@ -154,14 +154,14 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
   // <p className="small mb-1"><a href="https://twitter.com/sobamushi_mo/status/1399661514043232259" target="blank" rel="noreferrer">Source</a></p>
   function noResults() {
     return (
-      <div className="row d-flex align-items-center justify-content-center" id="infobody">
-        <div className="col-10 text-center opacity-75">
+      <Row className="d-flex align-items-center justify-content-center flex-grow-1" id="infobody">
+        <Col md={3} lg={4} className="text-center opacity-75">
           <p className="small mb-1"><a href="https://www.pixiv.net/en/artworks/54659563" target="blank" rel="noreferrer">Image Source</a></p>
           <Image src={noresults} fluid alt="Confused Reimu" rounded />
           <h5 className="mt-2">No Results</h5>
           <p>Try setting some bookmarks or adjusting your filter options</p>
-        </div>
-      </div>
+        </Col>
+      </Row>
     );
   }
 
@@ -306,9 +306,13 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
   return (
     <>
       <EventDescription show_var={showEventDescription} hide_fxn={handleEventOnHide} event_package={eventDetails} evt_print={evtPrint}></EventDescription>
-      <ListGroup variant="flush">
-        {output}
-      </ListGroup>
+      {output.length > 1 ?
+        <>
+          <ListGroup variant="flush" className="flex-grow-1">
+            {output}
+          </ListGroup>
+        </>
+      : <></>}
       {output.length < 1 ? noResults() : <></>}
     </>
   );
