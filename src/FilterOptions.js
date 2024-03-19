@@ -101,7 +101,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
 
   return (
     <Offcanvas show={show_var} onHide={hide_fxn} placement={"end"}>
-      <Offcanvas.Header closeButton>
+      <Offcanvas.Header closeButton closeVariant='white'>
         <Offcanvas.Title>Filter Options</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>

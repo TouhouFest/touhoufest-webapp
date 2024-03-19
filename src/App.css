@@ -124,3 +124,23 @@ body{
 .nav-fill .nav-item > :not(.active) {
   color: white;
 }
+
+.offcanvas-header {
+  color: #FFF9EE;
+  background-color: #D72640;
+}
+
+.offcanvas-title {
+  font-weight: bold;
+}
+
+.btn-close, .btn-close:hover{
+  filter: brightness(0%) invert(100%) !important;
+  color: white !important;
+  opacity: 1;
+}
+
+.offcanvas-body {
+  background-color: #E6E4E8;
+  color: #372E45;
+}
