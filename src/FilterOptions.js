@@ -5,7 +5,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOptions}) {
@@ -61,14 +61,14 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
   // modify applied events
   // the stack was initially manually unkept but that was superseded
   // this function will stay incase it's needed 
-  function foo(elem, type) {
-    // if(stack[type].includes(elem)){
-    //   stack[type].splice(stack[type].indexOf(elem), 1);
-    // }
-    // else{
-    //   stack[type].push(elem);
-    // }
-  }
+  // function foo(elem, type) {
+  //   if(stack[type].includes(elem)){
+  //     stack[type].splice(stack[type].indexOf(elem), 1);
+  //   }
+  //   else{
+  //     stack[type].push(elem);
+  //   }
+  // }
 
   let eventtypes = [];
   let rooms = [];
@@ -134,7 +134,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          <Button type="submit" className = "mt-3">Submit</Button>
+          <div className="text-center"><Button type="submit" className = "mt-3 submitbutton">Submit</Button></div>
           {/*<Button variant="secondary" type="reset" className="mt-3 mx-2">Clear Filters</Button>*/}
         </Form>
 
