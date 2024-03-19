@@ -27,7 +27,7 @@ function MapModals(){
             <Figure.Caption>Map of the entire convention center</Figure.Caption>
         </Figure>
 
-        <p><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
+        <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
 
         <Figure onClick={() => setShowInner(true)}>
             <Figure.Image src={touhoufest_main} fluid/>

@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Image } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
@@ -29,6 +29,7 @@ export const aboutConPage = {
           <Col><a href="https://twitter.com/TouhouFest" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faSquareXTwitter} fixedWidth></FontAwesomeIcon></h5></a></Col>
           <Col><a href="https://www.facebook.com/TouhouFest" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faSquareFacebook} fixedWidth></FontAwesomeIcon></h5></a></Col>
           <Col><a href="https://www.instagram.com/touhoufest/" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faInstagram} fixedWidth></FontAwesomeIcon></h5></a></Col>
+          <Col><a href="https://www.touhoufest.org/" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faGlobeAmericas} fixedWidth></FontAwesomeIcon></h5></a></Col>
         </Row>
         <div className = "text-center mt-3">
           <h4>Torrance Cultural Arts Center</h4>

@@ -18,12 +18,25 @@ import shihori from "./../images/shihori.jpg";
 import tam from "./../images/TAM.JPG";
 import cloudie from "./../images/cloudie.jpg";
 import freeze from "./../images/freeze.jpg";
+import a_one from "./../images/a-one.png";
 
 export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & Official Artists</>),
     "body": (<>
         <h4>Guests</h4>
         <Row xs={1} md={1} lg={1} className="g-4">
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={a_one}></Card.Img>
+                    <Card.Body>
+                        <Card.Title>A-ONE RECORDS</Card.Title>
+                        <Card.Text>Get ready to SCREAM OUT as A-One Records, the doujin circle behind TOHO EUROBEAT album series, joins us from overseas as our final guest for TouhouFest this year!</Card.Text>
+                        <Card.Text>Founded by Yassie and ELEMENTAS in 2008, A-One Records has since then become a household name in the Touhou remix and Eurobeat scenes alike, producing the TOHO EUROBEAT, SUPER EURO SMASH and EUROBEAT ATTACK!! album series.</Card.Text>
+                        <Card.Text>This year, A-ONE Records will be performing a live concert starring ELEMENTAS, Rute and Aki, truly an experience that must be seen to be believed!</Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-center"><a href="https://twitter.com/A_One_JP" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                </Card>
+            </Col>
             <Col>
                 <Card>
                     <Card.Img variant="top" src={shihori}></Card.Img>
