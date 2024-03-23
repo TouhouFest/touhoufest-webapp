@@ -10,14 +10,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import toyota from "./../images/toyota.jpg";
 import gaming from "./../images/gaming.jpg";
-import { Image } from 'react-bootstrap';
+import { Figure, Image } from 'react-bootstrap';
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
-        <p>All gaming-related events will be taking place in the <b>Toyota Hall</b>, with a variety of activities available.</p>
-        <Image src={toyota} fluid />
+        <h4>Location</h4>
+        <p>All gaming-related events will be taking place in the <b>Toyota Meeting Hall</b>, located to the right of the main vendors area.</p>
+        <Figure>
+            <Figure.Image src={toyota} fluid rounded></Figure.Image>
+            <Figure.Caption>Toyota Meeting Hall</Figure.Caption>
+        </Figure>
 
         <h4 className="mt-2">Free Play</h4> 
         <p>All Touhou mainline games, fighting games, and spinoffs will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/TouhouRoadShou" target="_blank" rel="noreferrer"><b>Touhou Road Shou</b></a> and <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>

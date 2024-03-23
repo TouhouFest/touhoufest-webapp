@@ -8,12 +8,12 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYen, faExclamationCircle, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
-import { Alert, ListGroup } from 'react-bootstrap';
+import { Alert, Figure, ListGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import placeholder from "./../images/placeholder.jpg"
-import torinoplaza from "./../images/torinoplaza.jpg";
+import kenmiller from "./../images/kenmiller.webp";
 import artistalley from "./../images/artistalley.jpg";
 import {Image} from 'react-bootstrap';
 
@@ -21,8 +21,12 @@ export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid/>),
     "body": (<>
-        <p>Artist Alley and Vendors will be held at the <b>Torino Plaza</b>, at the center of the main TouhouFest area.</p>
-        <Image src={torinoplaza} fluid/>
+        <h4>Location</h4>
+        <p>Artist Alley and Vendors will be held at the <b>Ken Miller Recreation Center</b>, the center of the main TouhouFest area.</p>
+        <Figure>
+            <Figure.Image src={kenmiller} fluid rounded/>
+            <Figure.Caption>Ken Miller Recreation Center</Figure.Caption>
+        </Figure>
 
         <h4 className="mt-2">Artist Alley</h4> 
         <Alert variant="warning"><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon> This section is a placeholder until it can be populated with actual artists</Alert>

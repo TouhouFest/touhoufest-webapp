@@ -20,13 +20,36 @@ import cloudie from "./../images/cloudie.jpg";
 import freeze from "./../images/freeze.jpg";
 import a_one from "./../images/a-one.png";
 import guestbanner from "./../images/guestbanner.jpg";
+import torinoplaza from "./../images/torinoplaza.jpg";
+import pinewindgarden from "./../images/pinewindgarden.jpg";
+import assemblyhall from "./../images/assemblyhall.png";
 import { Image } from 'react-bootstrap';
+import Figure from 'react-bootstrap/Figure';
 
 export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & Official Artists</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
-        <h4>Guests</h4>
+        <h4>Location(s)</h4>
+        <p>Events for the following guests will occur at the following locations:</p>
+        <ul>
+            <li><b>A-ONE/Odyssey/Shihori</b>: Assembly Hall</li>
+            <li><b>TAMUSIC</b>: Torino Plaza</li>
+            <li><b>Punderfull</b>: Pine Wind Garden</li>
+        </ul>
+        <Figure>
+            <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
+            <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
+        </Figure>
+        <Figure>
+            <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
+            <Figure.Caption>Torino Plaza</Figure.Caption>
+        </Figure>
+        <Figure>
+            <Figure.Image src={pinewindgarden} fluid rounded></Figure.Image>
+            <Figure.Caption>Pine Wind Garden</Figure.Caption>
+        </Figure>
+        <h4>About The Guests</h4>
         <Row xs={1} md={1} lg={1} className="g-4">
             <Col>
                 <Card>
