@@ -23,14 +23,14 @@ function MapModals(){
         <p>Tap to focus in/zoom on either map as needed.</p>
 
         <Figure onClick={() => setShowOuter(true)}>
-            <Figure.Image src={touhoufest_outer} fluid/>
+            <Figure.Image src={touhoufest_outer} fluid rounded/>
             <Figure.Caption>Map of the entire convention center</Figure.Caption>
         </Figure>
 
         <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
 
         <Figure onClick={() => setShowInner(true)}>
-            <Figure.Image src={touhoufest_main} fluid/>
+            <Figure.Image src={touhoufest_main} fluid rounded/>
             <Figure.Caption>Map of main areas of TouhouFest (The entirety of this map is contained within the bottom half of the first map)</Figure.Caption>
         </Figure>
 
