@@ -11,6 +11,7 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 export const operatingHours= {
     "header": (<><FontAwesomeIcon icon={faClock} fixedWidth></FontAwesomeIcon> Operating Hours</>),
+    "fluidImage": (<></>),
     "body": (<>
         <p><b>General Con Hours</b></p>
         <ul>

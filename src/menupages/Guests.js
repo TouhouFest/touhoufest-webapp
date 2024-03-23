@@ -19,9 +19,12 @@ import tam from "./../images/TAM.JPG";
 import cloudie from "./../images/cloudie.jpg";
 import freeze from "./../images/freeze.jpg";
 import a_one from "./../images/a-one.png";
+import guestbanner from "./../images/guestbanner.jpg";
+import { Image } from 'react-bootstrap';
 
 export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & Official Artists</>),
+    "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
         <h4>Guests</h4>
         <Row xs={1} md={1} lg={1} className="g-4">
