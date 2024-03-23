@@ -14,11 +14,12 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import placeholder from "./../images/placeholder.jpg"
 import torinoplaza from "./../images/torinoplaza.jpg";
+import artistalley from "./../images/artistalley.jpg";
 import {Image} from 'react-bootstrap';
 
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
-    "fluidImage": (<></>),
+    "fluidImage": (<Image src={artistalley} fluid/>),
     "body": (<>
         <p>Artist Alley and Vendors will be held at the <b>Torino Plaza</b>, at the center of the main TouhouFest area.</p>
         <Image src={torinoplaza} fluid/>

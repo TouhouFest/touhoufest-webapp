@@ -9,11 +9,12 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import pinewindgarden from './../images/pinewindgarden.jpg';
+import cosplaybanner from './../images/cosplaybanner.jpg';
 import { Image } from 'react-bootstrap';
 
 export const cosplayPage= {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
-    "fluidImage": (<></>),
+    "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
         <p>Most cosplay-related events/photoshoots will take place at the <b>Pine Wind Garden</b>, a beautiful Japanese-style garden ripe with photogenic spots.</p>
         <Image src={pinewindgarden} fluid/>

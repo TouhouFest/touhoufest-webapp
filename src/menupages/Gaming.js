@@ -9,11 +9,12 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import toyota from "./../images/toyota.jpg";
+import gaming from "./../images/gaming.jpg";
 import { Image } from 'react-bootstrap';
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
-    "fluidImage": (<></>),
+    "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
         <p>All gaming-related events will be taking place in the <b>Toyota Hall</b>, with a variety of activities available.</p>
         <Image src={toyota} fluid />
