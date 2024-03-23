@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/touhoufest-webapp/static/css/main.93931de5.css",
-    "main.js": "/touhoufest-webapp/static/js/main.8f308b30.js",
+    "main.js": "/touhoufest-webapp/static/js/main.b15a6cd6.js",
     "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
+    "static/media/cosplaybanner.jpg": "/touhoufest-webapp/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
+    "static/media/guestbanner.jpg": "/touhoufest-webapp/static/media/guestbanner.69d9374a0c1ae65daa3e.jpg",
     "static/media/con_banner.png": "/touhoufest-webapp/static/media/con_banner.1244a221d953ebee1171.png",
     "static/media/punderfullll.png": "/touhoufest-webapp/static/media/punderfullll.d7040b230f9a547bbdba.png",
     "static/media/touhoufest_outer.jpg": "/touhoufest-webapp/static/media/touhoufest_outer.415a18250d713aa81a36.jpg",
+    "static/media/gaming.jpg": "/touhoufest-webapp/static/media/gaming.41efe696ae7c444962f3.jpg",
     "static/media/touhoufest_main.jpg": "/touhoufest-webapp/static/media/touhoufest_main.052815066c1233b441b5.jpg",
     "static/media/toyota.jpg": "/touhoufest-webapp/static/media/toyota.e9bcd3d145c39664b637.jpg",
     "static/media/noresults.jpg": "/touhoufest-webapp/static/media/noresults.d11d2602ae041a85b194.jpg",
     "static/media/placeholder.jpg": "/touhoufest-webapp/static/media/placeholder.1b752223f1a4b50fdcb4.jpg",
+    "static/media/touhoufest.jpg": "/touhoufest-webapp/static/media/touhoufest.3466f89d43772e64c73a.jpg",
     "static/media/pinewindgarden.jpg": "/touhoufest-webapp/static/media/pinewindgarden.6e394f80fbecd7607b85.jpg",
     "static/media/shihori.jpg": "/touhoufest-webapp/static/media/shihori.b63b49b824de2521262f.jpg",
     "static/media/torinoplaza.jpg": "/touhoufest-webapp/static/media/torinoplaza.890553f3d1cf30265029.jpg",
@@ -17,15 +21,16 @@
     "static/media/freeze.jpg": "/touhoufest-webapp/static/media/freeze.aff51f4e23848a91adaf.jpg",
     "static/media/cloudie.jpg": "/touhoufest-webapp/static/media/cloudie.9e46ef6b03b83b1d5b69.jpg",
     "static/media/a-one.png": "/touhoufest-webapp/static/media/a-one.60070f908d789ec38388.png",
+    "static/media/artistalley.jpg": "/touhoufest-webapp/static/media/artistalley.502b78ade34a59bb2e26.jpg",
     "static/media/odyssey.jpg": "/touhoufest-webapp/static/media/odyssey.5b14aca741a6b5f24944.jpg",
     "static/media/events.csv": "/touhoufest-webapp/static/media/events.fa5410dd9a1b70f076f4.csv",
     "index.html": "/touhoufest-webapp/index.html",
     "main.93931de5.css.map": "/touhoufest-webapp/static/css/main.93931de5.css.map",
-    "main.8f308b30.js.map": "/touhoufest-webapp/static/js/main.8f308b30.js.map",
+    "main.b15a6cd6.js.map": "/touhoufest-webapp/static/js/main.b15a6cd6.js.map",
     "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93931de5.css",
-    "static/js/main.8f308b30.js"
+    "static/js/main.b15a6cd6.js"
   ]
 }
