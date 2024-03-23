@@ -134,7 +134,7 @@ body{
   font-weight: bold;
 }
 
-.btn-close, .btn-close:hover{
+.offcanvas-header > .btn-close, .offcanvas-header > .btn-close:hover{
   filter: brightness(0%) invert(100%) !important;
   color: white !important;
   opacity: 1;
