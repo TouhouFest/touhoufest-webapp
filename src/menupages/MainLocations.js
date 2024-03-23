@@ -14,7 +14,7 @@ import kenmiller from "./../images/kenmiller.webp";
 import pinewindgarden from "./../images/pinewindgarden.jpg";
 import toyota from "./../images/toyota.jpg";
 import panelroom from "./../images/panelroom.png";
-import { Alert, Figure } from 'react-bootstrap';
+import { Figure } from 'react-bootstrap';
 
 export const mainLocationsPage= {
   "header": (<><FontAwesomeIcon icon={faBuilding} fixedWidth></FontAwesomeIcon> Key Locations</>),
