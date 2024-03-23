@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/touhoufest-webapp/static/css/main.93931de5.css",
-    "main.js": "/touhoufest-webapp/static/js/main.b15a6cd6.js",
+    "main.js": "/touhoufest-webapp/static/js/main.f2e9b22e.js",
     "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
     "static/media/cosplaybanner.jpg": "/touhoufest-webapp/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
+    "static/media/gaming.jpg": "/touhoufest-webapp/static/media/gaming.a6dabd636e1c92e6857c.jpg",
     "static/media/guestbanner.jpg": "/touhoufest-webapp/static/media/guestbanner.69d9374a0c1ae65daa3e.jpg",
     "static/media/con_banner.png": "/touhoufest-webapp/static/media/con_banner.1244a221d953ebee1171.png",
     "static/media/punderfullll.png": "/touhoufest-webapp/static/media/punderfullll.d7040b230f9a547bbdba.png",
     "static/media/touhoufest_outer.jpg": "/touhoufest-webapp/static/media/touhoufest_outer.415a18250d713aa81a36.jpg",
-    "static/media/gaming.jpg": "/touhoufest-webapp/static/media/gaming.41efe696ae7c444962f3.jpg",
     "static/media/touhoufest_main.jpg": "/touhoufest-webapp/static/media/touhoufest_main.052815066c1233b441b5.jpg",
     "static/media/toyota.jpg": "/touhoufest-webapp/static/media/toyota.e9bcd3d145c39664b637.jpg",
     "static/media/noresults.jpg": "/touhoufest-webapp/static/media/noresults.d11d2602ae041a85b194.jpg",
@@ -26,11 +26,11 @@
     "static/media/events.csv": "/touhoufest-webapp/static/media/events.fa5410dd9a1b70f076f4.csv",
     "index.html": "/touhoufest-webapp/index.html",
     "main.93931de5.css.map": "/touhoufest-webapp/static/css/main.93931de5.css.map",
-    "main.b15a6cd6.js.map": "/touhoufest-webapp/static/js/main.b15a6cd6.js.map",
+    "main.f2e9b22e.js.map": "/touhoufest-webapp/static/js/main.f2e9b22e.js.map",
     "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93931de5.css",
-    "static/js/main.b15a6cd6.js"
+    "static/js/main.f2e9b22e.js"
   ]
 }
