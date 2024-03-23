@@ -13,6 +13,7 @@ import assemblyhall from "./../images/assemblyhall.png";
 import kenmiller from "./../images/kenmiller.webp";
 import pinewindgarden from "./../images/pinewindgarden.jpg";
 import toyota from "./../images/toyota.jpg";
+import panelroom from "./../images/panelroom.png";
 import { Alert, Figure } from 'react-bootstrap';
 
 export const mainLocationsPage= {
@@ -57,7 +58,10 @@ export const mainLocationsPage= {
 
       <h4>Garden Room B</h4>
       <p>The majority of panels will take place at Garden Room B.</p>
-      <Alert>TODO: add picture of panel room B when able</Alert>
+      <Figure>
+          <Figure.Image src={panelroom} fluid rounded></Figure.Image>
+          <Figure.Caption>Garden Room B (furniture may be adjusted depending on the event)</Figure.Caption>
+      </Figure>
    </>
   ),
 }
