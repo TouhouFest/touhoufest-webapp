@@ -13,6 +13,7 @@ import { Image } from 'react-bootstrap';
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
+    "fluidImage": (<></>),
     "body": (<>
         <p>All gaming-related events will be taking place in the <b>Toyota Hall</b>, with a variety of activities available.</p>
         <Image src={toyota} fluid />

@@ -11,5 +11,6 @@ import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Restaraunts</>),
+    "fluidImage": (<></>),
     "body": (<>test</>),
 }

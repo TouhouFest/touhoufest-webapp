@@ -13,6 +13,7 @@ import { Image } from 'react-bootstrap';
 
 export const cosplayPage= {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
+    "fluidImage": (<></>),
     "body": (<>
         <p>Most cosplay-related events/photoshoots will take place at the <b>Pine Wind Garden</b>, a beautiful Japanese-style garden ripe with photogenic spots.</p>
         <Image src={pinewindgarden} fluid/>

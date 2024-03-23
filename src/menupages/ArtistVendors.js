@@ -18,6 +18,7 @@ import {Image} from 'react-bootstrap';
 
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
+    "fluidImage": (<></>),
     "body": (<>
         <p>Artist Alley and Vendors will be held at the <b>Torino Plaza</b>, at the center of the main TouhouFest area.</p>
         <Image src={torinoplaza} fluid/>

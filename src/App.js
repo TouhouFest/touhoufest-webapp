@@ -12,6 +12,8 @@ import Dataset from "./Dataset";
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Image } from 'react-bootstrap';
+import touhoufest from "./images/touhoufest.jpg";
 
 function App({ menupagedata, menuheader }) {
 
@@ -98,7 +100,7 @@ function App({ menupagedata, menuheader }) {
     menupages.push(
       <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
         <MenuPage.Header >{entry["header"]}</MenuPage.Header>
-        <MenuPage.Body>{entry["body"]}</MenuPage.Body>
+        <MenuPage.Body fluidImage={entry["fluidImage"]} mainText={entry["body"]}></MenuPage.Body>
       </MenuPage>
     );
   }
@@ -166,13 +168,16 @@ function App({ menupagedata, menuheader }) {
                   {menuheader}
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  {menunavs}
-                  <Nav.Link href="https://github.com/kir12/touhoufest-webapp" target="_blank"><FontAwesomeIcon icon={faGithub} fixedWidth></FontAwesomeIcon> About App</Nav.Link>
-                  <Nav.Link href="https://www.google.com/search?q=marisa+kirisame&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwioqcvz4fT9AhW2kYkEHTCND3AQ0pQJegQIBBAC&biw=1920&bih=884&dpr=1" target="_blank"><FontAwesomeIcon icon={faHeart} fixedWidth></FontAwesomeIcon> Best Girl</Nav.Link>
-                </Nav>
-              </Offcanvas.Body>
+              <Offcanvas.Body className="p-0">
+                <Image src={touhoufest} fluid/>
+                <div className="p-3">
+                  <Nav className="justify-content-end flex-grow-1 pe-3">
+                    {menunavs}
+                    <Nav.Link href="https://github.com/kir12/touhoufest-webapp" target="_blank"><FontAwesomeIcon icon={faGithub} fixedWidth></FontAwesomeIcon> About App</Nav.Link>
+                    <Nav.Link href="https://www.google.com/search?q=marisa+kirisame&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwioqcvz4fT9AhW2kYkEHTCND3AQ0pQJegQIBBAC&biw=1920&bih=884&dpr=1" target="_blank"><FontAwesomeIcon icon={faHeart} fixedWidth></FontAwesomeIcon> Best Girl</Nav.Link>
+                  </Nav>
+                </div>
+             </Offcanvas.Body>
             </Navbar.Offcanvas>
             <div className="d-flex order-1 ms-auto" id="filter-widget">
               <Nav className="flex-row">

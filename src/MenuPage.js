@@ -24,13 +24,23 @@ function Header({children}) {
     );
 }
 
-function Body({children}) {
+function FluidImage({children}) {
     return (
-        <Offcanvas.Body>
-            {children}
+        <>{children}</>
+    );
+}
+
+function Body({fluidImage={}, mainText}) {
+    return (
+        <Offcanvas.Body className="p-0">
+            {fluidImage}
+            <div className="p-3">
+                {mainText}
+            </div>
         </Offcanvas.Body>
     );
 }
 
 MenuPage.Header = Header;
+MenuPage.FluidImage = FluidImage;
 MenuPage.Body = Body;

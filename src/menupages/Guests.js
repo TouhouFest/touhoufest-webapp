@@ -22,6 +22,7 @@ import a_one from "./../images/a-one.png";
 
 export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & Official Artists</>),
+    "fluidImage": (<></>),
     "body": (<>
         <h4>Guests</h4>
         <Row xs={1} md={1} lg={1} className="g-4">
