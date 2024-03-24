@@ -382,7 +382,8 @@ export const artistVendorsPage = {
                     <Card.Img variant="top" src={artist["image"]}></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                        {/* TODO: add vendor locations + map once they become available */}
+                        <ListGroup.Item className="text-center small">Vendor</ListGroup.Item>
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
                 </Card>
