@@ -51,7 +51,7 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "MARLOWEMEMO",
+        "name": <>MARLO&shy;WE&shy;MEMO</>,
         "image": marlo,
         "location": "Booth F1",
         "website": "https://marlowememo.carrd.co/",
@@ -86,7 +86,7 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "Colorfulkitten Art",
+        "name": <>Colorful&shy;kitten Art</>,
         "image": ckitten,
         "location": "Booth B1",
         "website": "https://twitter.com/ckitten_cosplay",
@@ -135,7 +135,7 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "Meiki/sirmasterknight",
+        "name": <>Meiki/sir&shy;master&shy;knight</>,
         "image": meiki,
         "location": "Booth C5",
         "website": "https://www.instagram.com/sirmasterknight/",
@@ -149,7 +149,7 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "GruvysGudies",
+        "name": <>Gruvys&shy;Gudies</>,
         "image": gruvysgudies,
         "location": "Booth B2",
         "website": "https://www.etsy.com/shop/GruvysGudies",
@@ -266,7 +266,7 @@ let vendors = [
         "description": ""
     },
     {
-        "name": "GuruGuruMaru",
+        "name": <>Guru&shy;Guru&shy;Maru</>,
         "image": gurugurumaru,
         "location": "UNKNOWN",
         "website": "https://twitter.com/GuruGuruMaru_",
@@ -284,7 +284,7 @@ let vendors = [
 
 let official_artists = [
     {
-        "name": "Cloudie/Cookietanukiart",
+        "name": <>Cloudie/Cookie&shy;tanuki&shy;art</>,
         "image": cookie,
         "location": "Booth D1",
         "website": "https://linktr.ee/cookietanuki",
@@ -311,6 +311,9 @@ export const artistVendorsPage = {
         </Figure>
 
         <h4>Artist Alley</h4>
+
+        <h5>Artist Alley Booth Map</h5>
+        <p>Tap to focus in/zoom on the map as needed.</p>
 
         <h5>Official Artists</h5>
 
