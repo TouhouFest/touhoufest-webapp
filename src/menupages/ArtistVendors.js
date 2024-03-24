@@ -7,8 +7,8 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYen, faExclamationCircle, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
-import { Alert, Figure, ListGroup } from 'react-bootstrap';
+import { faYen, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
+import { Figure, ListGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -40,7 +40,10 @@ import essukaa from "./../images/artistalley/essukaa.webp";
 import anazel from "./../images/artistalley/anazel.jpg";
 import cookie from "./../images/artistalley/cookie.png";
 import freezeex from "./../images/artistalley/freezeex.png";
+import artistalleymap from "./../images/artistalleymap.png";
 import { Image } from 'react-bootstrap';
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 
 let artistlist = [
     {
@@ -299,6 +302,27 @@ let official_artists = [
     }
 ];
 
+function ArtistAlleyMapModal(){
+    const [showMap, setShowMap] = useState(false);
+
+    return (<>
+        <Figure onClick={() => setShowMap(true)}>
+            <Figure.Image src={artistalleymap} rounded fluid/>
+            <Figure.Caption>Map of Artist Alley</Figure.Caption>
+        </Figure>
+
+        <Modal show={showMap} size="lg" onHide={() => setShowMap(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Artist Alley Booth Map</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={artistalleymap} fluid/>
+            </Modal.Body>
+        </Modal>
+
+    </>);
+}
+
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
@@ -313,7 +337,8 @@ export const artistVendorsPage = {
         <h4>Artist Alley</h4>
 
         <h5>Artist Alley Booth Map</h5>
-        <p>Tap to focus in/zoom on the map as needed.</p>
+        <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
+        <ArtistAlleyMapModal />
 
         <h5>Official Artists</h5>
 
