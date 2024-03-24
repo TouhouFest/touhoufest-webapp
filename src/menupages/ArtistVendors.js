@@ -8,11 +8,10 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYen, faExclamationCircle, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
-import { Accordion, Alert, Figure, ListGroup } from 'react-bootstrap';
+import { Alert, Figure, ListGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import placeholder from "./../images/placeholder.jpg"
 import kenmiller from "./../images/kenmiller.webp";
 import artistalley from "./../images/artistalley.jpg";
 import ace from "./../images/artistalley/ace.png";
@@ -26,13 +25,26 @@ import ckitten from "./../images/artistalley/ckitten.jpg";
 import codyyuki from "./../images/artistalley/codyyuki.png";
 import nono from "./../images/artistalley/nono.jpg";
 import gurugurumaru from "./../images/artistalley/gurugurumaru.png";
+import kuriarty from "./../images/artistalley/kuriarty.jpg";
+import fred from "./../images/artistalley/fred.png";
+import grillboss from "./../images/artistalley/grillboss.jpg";
+import birnam from "./../images/artistalley/birnam.jpg";
+import agi from "./../images/artistalley/agi.png";
+import meiki from "./../images/artistalley/meiki.jpg";
+import pumplin from "./../images/artistalley/pumpking.jpg";
+import siliconcat from "./../images/artistalley/siliconcat.png";
+import gruvysgudies from "./../images/artistalley/gruvysgudies.jpg";
+import xiaobbinc from "./../images/artistalley/xiaobb.avif";
+import placeholder from "./../images/placeholder.png";
+import essukaa from "./../images/artistalley/essukaa.webp";
+import anazel from "./../images/artistalley/anazel.jpg";
 import { Image } from 'react-bootstrap';
 
 let artistlist = [
     {
         "name": "Artist Collaboration Experience (ACE)",
         "image": ace,
-        "location": "Artist Location",
+        "location": "UNKNOWN",
         "website": "https://www.artcollabexp.com/",
         "description": "VENDOR"
     },
@@ -58,7 +70,7 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "Asazei Illustration",
+        "name": "Asazei + lunartsky",
         "image": asazei,
         "location": "Booth F2",
         "website": "https://twitter.com/ASAZEi_art",
@@ -90,11 +102,11 @@ let artistlist = [
         "image": codyyuki,
         "location": "Booth B3",
         "website": "",
-        "description": ""
+        "description": "CONFLICT: Booth B3 on map, Booth A8 on excel sheet"
     },
     {
-        "name": "nono",
-        "image": nono,
+        "name": "Nonomoe Inc",
+        "image": placeholder,
         "location": "Booth A5",
         "website": "",
         "description": ""
@@ -103,19 +115,166 @@ let artistlist = [
         "name": "GuruGuruMaru",
         "image": gurugurumaru,
         "location": "UNKNOWN",
+        "website": "https://twitter.com/GuruGuruMaru_",
+        "description": ""
+    },
+    {
+        "name": "Kuri Arty",
+        "image": kuriarty,
+        "location": "Booth A4",
+        "website": "https://twitter.com/kuriarty?lang=en",
+        "description": ""
+    },
+    {
+        "name": "Art With Fred",
+        "image": fred,
+        "location": "UNKNOWN",
         "website": "",
         "description": ""
     },
     {
-        "name": "nono",
-        "image": null,
-        "location": "",
+        "name": "Grillboss Co.",
+        "image": grillboss,
+        "location": "Booth D4",
         "website": "",
         "description": ""
     },
-
+    {
+        "name": "Birnam Hall",
+        "image": birnam,
+        "location": "Booth D3",
+        "website": "https://www.instagram.com/birnamhall/",
+        "description": ""
+    },
+    {
+        "name": "Velpiphants",
+        "image": agi,
+        "location": "Booth A1",
+        "website": "https://twitter.com/purpleuniphants",
+        "description": ""
+    },
+    {
+        "name": "Meiki/sirmasterknight",
+        "image": meiki,
+        "location": "Booth C5",
+        "website": "https://www.instagram.com/sirmasterknight/",
+        "description": "MAY be the same as sirmasterknight?"
+    },
+    {
+        "name": "Pumplin Group",
+        "image": pumplin,
+        "location": "Booth C3",
+        "website": "https://twitter.com/Sunnysiddedup",
+        "description": ""
+    },
+    {
+        "name": "Siliconcat",
+        "image": siliconcat,
+        "location": "UNKNOWN",
+        "website": "https://www.etsy.com/shop/Siliconcat",
+        "description": ""
+    },
+    {
+        "name": "GruvysGudies",
+        "image": gruvysgudies,
+        "location": "Booth B2",
+        "website": "https://www.etsy.com/shop/GruvysGudies",
+        "description": ""
+    },
+    {
+        "name": "Xiaobb inc",
+        "image": xiaobbinc,
+        "location": "Booth C6",
+        "website": "https://www.etsy.com/shop/Xiaobbinc",
+        "description": ""
+    },
+    {
+        "name": "Ah, Wakaranai",
+        "image": placeholder,
+        "location": "Booth A2",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "Gudnite edg3lord",
+        "image": placeholder,
+        "location": "Booth A7",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "Le MIni Gensokyo",
+        "image": placeholder,
+        "location": "Booth E2",
+        "website": "https://www.teepublic.com/user/archanciel",
+        "description": ""
+    },
+    {
+        "name": "Essukaa",
+        "image": essukaa,
+        "location": "Booth B4",
+        "website": "https://essukaa.shop/",
+        "description": ""
+    },
+    {
+        "name": "Anazel",
+        "image": anazel,
+        "location": "Booth E1",
+        "website": "https://www.instagram.com/anazel_art/?hl=en",
+        "description": ""
+    },
+    {
+        "name": "Grapevines",
+        "image": placeholder,
+        "location": "Booth F5",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "Idunrllyknow",
+        "image": placeholder,
+        "location": "Booth D6",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "Brokencrown Art",
+        "image": placeholder,
+        "location": "Booth A8",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "BRW",
+        "image": placeholder,
+        "location": "Booth D5",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "Feeya Art",
+        "image": placeholder,
+        "location": "Booth F3",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "cynicalfries / blaidmiracle",
+        "image": placeholder,
+        "location": "Booth C2",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "notnoe",
+        "image": nono,
+        "location": "Booth C4",
+        "website": "https://twitter.com/notnoe_",
+        "description": "inscribed as nono on the website"
+    },
 
 ];
+artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
@@ -130,8 +289,7 @@ export const artistVendorsPage = {
 
         <h4 className="mt-2">Artist Alley</h4>
 
-        <Alert variant="warning"><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon> This section is a placeholder until it can be populated with actual artists</Alert>
-        <Row xs={2} className="g-3">
+        <Row xs={2} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
              <Col>
                 <Card>
