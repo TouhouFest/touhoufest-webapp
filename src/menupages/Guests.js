@@ -27,7 +27,7 @@ import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 
 export const guestsPage = {
-    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & Official Artists</>),
+    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
@@ -112,6 +112,7 @@ export const guestsPage = {
                 </Card>
             </Col>
         </Row>
+        { /*
         <h4 className="mt-3">Official Artists</h4>
         <Row xs={1} md={1} lg={1} className="g-4">
             <Col>
@@ -136,6 +137,7 @@ export const guestsPage = {
                 </Card>
             </Col>
         </Row>
+        */ }
  
     </>),
 }

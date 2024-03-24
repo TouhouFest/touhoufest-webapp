@@ -38,16 +38,11 @@ import xiaobbinc from "./../images/artistalley/xiaobb.avif";
 import placeholder from "./../images/placeholder.png";
 import essukaa from "./../images/artistalley/essukaa.webp";
 import anazel from "./../images/artistalley/anazel.jpg";
+import cookie from "./../images/artistalley/cookie.png";
+import freezeex from "./../images/artistalley/freezeex.png";
 import { Image } from 'react-bootstrap';
 
 let artistlist = [
-    {
-        "name": "Artist Collaboration Experience (ACE)",
-        "image": ace,
-        "location": "UNKNOWN",
-        "website": "https://www.artcollabexp.com/",
-        "description": "VENDOR"
-    },
     {
         "name": "Tama Tama Shop",
         "image": tama,
@@ -112,24 +107,10 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "GuruGuruMaru",
-        "image": gurugurumaru,
-        "location": "UNKNOWN",
-        "website": "https://twitter.com/GuruGuruMaru_",
-        "description": ""
-    },
-    {
         "name": "Kuri Arty",
         "image": kuriarty,
         "location": "Booth A4",
         "website": "https://twitter.com/kuriarty?lang=en",
-        "description": ""
-    },
-    {
-        "name": "Art With Fred",
-        "image": fred,
-        "location": "UNKNOWN",
-        "website": "",
         "description": ""
     },
     {
@@ -165,13 +146,6 @@ let artistlist = [
         "image": pumplin,
         "location": "Booth C3",
         "website": "https://twitter.com/Sunnysiddedup",
-        "description": ""
-    },
-    {
-        "name": "Siliconcat",
-        "image": siliconcat,
-        "location": "UNKNOWN",
-        "website": "https://www.etsy.com/shop/Siliconcat",
         "description": ""
     },
     {
@@ -276,6 +250,55 @@ let artistlist = [
 ];
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
+let vendors = [
+    {
+        "name": "Siliconcat",
+        "image": siliconcat,
+        "location": "UNKNOWN",
+        "website": "https://www.etsy.com/shop/Siliconcat",
+        "description": ""
+    },
+    {
+        "name": "Art With Fred",
+        "image": fred,
+        "location": "UNKNOWN",
+        "website": "",
+        "description": ""
+    },
+    {
+        "name": "GuruGuruMaru",
+        "image": gurugurumaru,
+        "location": "UNKNOWN",
+        "website": "https://twitter.com/GuruGuruMaru_",
+        "description": ""
+    },
+    {
+        "name": "Artist Collaboration Experience (ACE)",
+        "image": ace,
+        "location": "UNKNOWN",
+        "website": "https://www.artcollabexp.com/",
+        "description": "VENDOR"
+    },
+
+];
+
+let official_artists = [
+    {
+        "name": "Cloudie/Cookietanukiart",
+        "image": cookie,
+        "location": "Booth D1",
+        "website": "https://linktr.ee/cookietanuki",
+        "description": ""
+    },
+    {
+        "name": "FREEZE-EX",
+        "image": freezeex,
+        "location": "Booth D2",
+        "website": "https://icecute.squarespace.com/",
+        "description": ""
+    }
+];
+
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
@@ -287,7 +310,26 @@ export const artistVendorsPage = {
             <Figure.Caption>Ken Miller Recreation Center</Figure.Caption>
         </Figure>
 
-        <h4 className="mt-2">Artist Alley</h4>
+        <h4>Artist Alley</h4>
+
+        <h5>Official Artists</h5>
+
+        <Row xs={2} className="g-3 justify-content-center">
+            {official_artists.map((artist, i) => <>
+             <Col>
+                <Card>
+                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                    <ListGroup className="list-group-flush">
+                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                    </ListGroup>
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                </Card>
+            </Col>
+            </>)}
+        </Row>
+
+        <h5 className="mt-2">All Other Artists</h5>
 
         <Row xs={2} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
@@ -305,49 +347,21 @@ export const artistVendorsPage = {
       </Row>
 
         <h4 className="mt-2">Vendors</h4>
-        <Alert variant="warning"><FontAwesomeIcon icon={faExclamationCircle}></FontAwesomeIcon> This section is a placeholder until it can be populated with actual vendors</Alert>
         <Row xs={2} className="g-3">
-            <Col>
+            {vendors.map((artist, i) => <>
+             <Col>
                 <Card>
-                    <Card.Img variant="top" src={placeholder}></Card.Img>
+                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">Vendor Name</ListGroup.Item>
-                        <ListGroup.Item className="text-center">Vendor Location</ListGroup.Item>
+                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
-                    <Card.Footer className="text-center"><a href="https://en.touhouwiki.net/wiki/Marisa_Kirisame" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> External Link</a></Card.Footer>
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
                 </Card>
             </Col>
-            <Col>
-                <Card>
-                    <Card.Img variant="top" src={placeholder}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">Vendor Name</ListGroup.Item>
-                        <ListGroup.Item className="text-center">Vendor Location</ListGroup.Item>
-                    </ListGroup>
-                    <Card.Footer className="text-center"><a href="https://en.touhouwiki.net/wiki/Marisa_Kirisame" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> External Link</a></Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Img variant="top" src={placeholder}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">Vendor Name</ListGroup.Item>
-                        <ListGroup.Item className="text-center">Vendor Location</ListGroup.Item>
-                    </ListGroup>
-                    <Card.Footer className="text-center"><a href="https://en.touhouwiki.net/wiki/Marisa_Kirisame" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> External Link</a></Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Img variant="top" src={placeholder}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">Vendor Name</ListGroup.Item>
-                        <ListGroup.Item className="text-center">Vendor Location</ListGroup.Item>
-                    </ListGroup>
-                    <Card.Footer className="text-center"><a href="https://en.touhouwiki.net/wiki/Marisa_Kirisame" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> External Link</a></Card.Footer>
-                </Card>
-            </Col>
-        </Row>
+            </>)}
+ 
+       </Row>
 
     </>),
 }
