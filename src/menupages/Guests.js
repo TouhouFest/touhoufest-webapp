@@ -16,8 +16,8 @@ import punderfullll from "./../images/punderfullll.png";
 import odyssey from "./../images/odyssey.jpg";
 import shihori from "./../images/shihori.jpg";
 import tam from "./../images/TAM.JPG";
-import cloudie from "./../images/cloudie.jpg";
-import freeze from "./../images/freeze.jpg";
+// import cloudie from "./../images/cloudie.jpg";
+// import freeze from "./../images/freeze.jpg";
 import a_one from "./../images/a-one.png";
 import guestbanner from "./../images/guestbanner.jpg";
 import torinoplaza from "./../images/torinoplaza.jpg";
@@ -27,7 +27,7 @@ import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 
 export const guestsPage = {
-    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & Official Artists</>),
+    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
@@ -112,6 +112,7 @@ export const guestsPage = {
                 </Card>
             </Col>
         </Row>
+        { /*
         <h4 className="mt-3">Official Artists</h4>
         <Row xs={1} md={1} lg={1} className="g-4">
             <Col>
@@ -136,6 +137,7 @@ export const guestsPage = {
                 </Card>
             </Col>
         </Row>
+        */ }
  
     </>),
 }
