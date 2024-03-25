@@ -41,6 +41,7 @@ import anazel from "./../images/artistalley/anazel.jpg";
 import cookie from "./../images/artistalley/cookie.png";
 import freezeex from "./../images/artistalley/freezeex.png";
 import artistalleymap from "./../images/artistalleymap.png";
+import feeyaart from "./../images/artistalley/feeyaart.jpg";
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
@@ -230,9 +231,9 @@ let artistlist = [
     },
     {
         "name": "Feeya Art",
-        "image": placeholder,
+        "image": feeyaart,
         "location": "Booth F3",
-        "website": "",
+        "website": "https://feeyaart.carrd.co/",
         "description": ""
     },
     {
