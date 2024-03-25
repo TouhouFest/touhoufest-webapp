@@ -156,3 +156,28 @@ body{
   color: #E6E4E8 !important;
 }
 */
+
+.pink-one {
+  background-color: #ffbdf8 !important;
+  color: #372E45 !important;
+}
+
+.red-one {
+  background-color: #ffbdbd !important;
+  color: #372E45 !important;
+}
+
+.purple-one {
+  background-color: #d4b3ff !important;
+  color: #372E45 !important;
+}
+
+.gold-bg {
+  background-color: gold;
+  color: black;
+}
+
+.silver-bg {
+  background-color: silver;
+  color: black;
+}
