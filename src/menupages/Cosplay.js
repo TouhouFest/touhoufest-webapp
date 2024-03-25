@@ -93,6 +93,8 @@ export const cosplayPage= {
                 <Card.Subtitle>Prize TBD</Card.Subtitle>
             </Card.Body>
         </Card>
+        <h5 className="mt-2">About the Judges</h5>
+        <p>Todo</p> 
         <h5 className="mt-2">Rules</h5>
         <Accordion>
             <Accordion.Item eventKey="0">
