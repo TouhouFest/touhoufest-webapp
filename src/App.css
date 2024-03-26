@@ -156,3 +156,63 @@ body{
   color: #E6E4E8 !important;
 }
 */
+
+.pink-one {
+  background-color: #ffbdf8 !important;
+  color: #372E45 !important;
+}
+
+.red-one {
+  background-color: #ffbdbd !important;
+  color: #372E45 !important;
+}
+
+.purple-one {
+  background-color: #d4b3ff !important;
+  color: #372E45 !important;
+}
+
+.gold-bg {
+  background-color: gold;
+  color: black;
+}
+
+.silver-bg {
+  background-color: silver;
+  color: black;
+}
+
+.th10 {
+  background: linear-gradient(135deg, #2bd887 0%,#7db9e8 100%);
+  color: black;
+}
+
+.th06 {
+  background: linear-gradient(135deg, #ff3236 0%,#ffd289 100%);
+  color: black;
+}
+
+.th07 {
+  background: linear-gradient(135deg, #a622ad 0%,#ffb5f0 100%);
+  color: black;
+}
+
+.th15 {
+  background: linear-gradient(135deg, #822c8c 0%,#ff3236 100%);
+  color: black;
+}
+
+.pc98 {
+  background: linear-gradient(135deg, #8d1cff 0%,#a8ddff 100%);
+  color: black;
+}
+
+.th08 {
+  background: linear-gradient(135deg, #560955 0%,#ffb121 100%);
+  color: black;
+}
+
+.fight {
+  background: linear-gradient(135deg, #1c73ff 0%,#ffa221 100%);
+  color: black;
+}
