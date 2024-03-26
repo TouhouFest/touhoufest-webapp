@@ -7,39 +7,53 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCameraRetro, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
 import pinewindgarden from './../images/pinewindgarden.jpg';
 import cosplaybanner from './../images/cosplaybanner.jpg';
 import assemblyhall from "./../images/assemblyhall.png";
-import { Accordion, Card, Figure, Image } from 'react-bootstrap';
+import medukitty from "./../images/medukitty.jpg";
+import violetreverie from "./../images/violetreverie.jpg";
+import cosplayrepair from "./../images/cosplayrepair.jpg";
+import entryplaza from "./../images/entryplaza.jpg";
+import { Accordion, Card, Figure, Image}  from 'react-bootstrap';
+import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const cosplayPage= {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
-        <p>Photoshoots will take place at the <b>Pine Wind Garden</b>, a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b>.</p>
+        <p>Photoshoots will take place at the <b>Pine Wind Garden</b>, a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b>. Cosplay booths and repair is located at the <b>Entry Plaza</b>, connected to the Torino Festival Plaza.</p>
         <Figure>
             <Figure.Image src={pinewindgarden} fluid rounded/>
             <Figure.Caption>Pine Wind Garden</Figure.Caption>
         </Figure>
-        <p className="small"><FontAwesomeIcon icon={faInfoCircle} fixedWidth></FontAwesomeIcon> The Pine Wind Garden is detached from most of the other areas used by TouhouFest and is across via the Public Plaza.</p>
         <Figure>
             <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
             <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
         </Figure>
-        <h4>Cosplay Meetups</h4>
-        <p>Photoshoots for most of the mainline Touhou games will be organized by our talented Cosplay Ambassadors -- for more details see the schedule.</p>
+        <Figure>
+            <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
+            <Figure.Caption>Entry Plaza</Figure.Caption>
+        </Figure>
+        <h4>Cosplay Meetups/Photoshoots</h4>
+        <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors -- for more details see the schedule.</p>
+        <h4>Cosplay Repair</h4>
+        <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner in the Entry Plaza.</p>
+        <Figure>
+            <Figure.Image src={cosplayrepair} fluid rounded/>
+            <Figure.Caption>Cosplay Repair Banner</Figure.Caption>
+        </Figure>
         <h4>Cosplay Contest</h4>
         <h5>Itinerary</h5>
-        <ul>
+        <ol>
             <li><b>Pre-Judging</b>: 3:00 PM - 4:00 PM</li>
-            <ul>
+            <ol type="a">
                 <li>Particpants in the <em>Craftsmanship</em> Category need to attend this event</li>
-            </ul>
+            </ol>
             <li><b>Seating</b>: 4:30 PM - 5:00 PM</li>
             <li><b>Cosplay Contest</b>: 5:00 PM - 6:00 PM</li>
-        </ul>
+        </ol>
         <h5>Categories</h5>
         <p>There are three components within the Cosplay Contest:</p>
         <Card className="pink-one">
@@ -94,7 +108,32 @@ export const cosplayPage= {
             </Card.Body>
         </Card>
         <h5 className="mt-2">About the Judges</h5>
-        <p>Todo</p> 
+        
+        <Card>
+            <Card.Img variant="top" src={medukitty} />
+            <Card.Body>
+                <Card.Title>Medukitty</Card.Title>
+                <Card.Text>I'm MeduKitty, a long time cosplayer and Touhou enthusiast who's thrilled to combine her two greatest passions!  I've been cosplaying from Touhou since 2018, and my favorite thing is making my costumes from scratch with as many details as I can fit into them.  I love our community so much and I can't wait to participate in TouhouFest with you all! </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link href="https://www.instagram.com/medukitty_/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                <Card.Link href="https://www.tiktok.com/@medukitty" target="_blank"><FontAwesomeIcon icon={faTiktok}/> TikTok</Card.Link>
+                <Card.Link href="https://twitter.com/medukitty" target="_blank"><FontAwesomeIcon icon={faXTwitter}/> Twitter</Card.Link>
+            </Card.Footer>
+        </Card>
+
+        <Card className="mt-2">
+            <Card.Img variant="top" src={violetreverie} />
+            <Card.Body>
+                <Card.Title>Violet Reverie</Card.Title>
+                <Card.Text>Hello nice to meet you! I'm Violet Reverie. My main goal is to empower the Worldwide Touhou Cosplay community, so I created the Touhou Cosplay Guild Discord Server to bring everyone together and provide learning resources. My other goal, over the course of the 17+ Touhou Cosplays I've made, is to pull the characters from Gensokyo and bring them to life through use of Design and Material to express their role, origin, and ability in my costumes.</Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link href="https://www.instagram.com/violet_reverie_cos/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                <Card.Link href="https://twitter.com/CuLightSource" target="_blank"><FontAwesomeIcon icon={faXTwitter}/> Twitter</Card.Link>
+            </Card.Footer>
+        </Card>
+
         <h5 className="mt-2">Rules</h5>
         <Accordion>
             <Accordion.Item eventKey="0">
