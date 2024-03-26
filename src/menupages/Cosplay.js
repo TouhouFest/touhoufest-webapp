@@ -15,17 +15,17 @@ import medukitty from "./../images/medukitty.jpg";
 import violetreverie from "./../images/violetreverie.jpg";
 import cosplayrepair from "./../images/cosplayrepair.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
-import { Accordion, Card, Figure, Image}  from 'react-bootstrap';
+import { Accordion, Card, Figure, Image } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-export const cosplayPage= {
+export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
         <p>Photoshoots will take place at the <b>Pine Wind Garden</b>, a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b>. Cosplay booths and repair is located at the <b>Entry Plaza</b>, connected to the Torino Festival Plaza.</p>
         <Figure>
-            <Figure.Image src={pinewindgarden} fluid rounded/>
+            <Figure.Image src={pinewindgarden} fluid rounded />
             <Figure.Caption>Pine Wind Garden</Figure.Caption>
         </Figure>
         <Figure>
@@ -37,11 +37,61 @@ export const cosplayPage= {
             <Figure.Caption>Entry Plaza</Figure.Caption>
         </Figure>
         <h4>Cosplay Meetups/Photoshoots</h4>
-        <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors -- for more details see the schedule.</p>
-        <h4>Cosplay Repair</h4>
+        <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
+        <Card className="th10">
+            <Card.Body className="text-center">
+                <Card.Title>The Faithful Gods</Card.Title>
+                <Card.Subtitle>Touhou 10 MoF</Card.Subtitle>
+                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className="mt-2 th06">
+            <Card.Body className="text-center">
+                <Card.Title>The Devil's Mansion</Card.Title>
+                <Card.Subtitle>Touhou 6 EoSD</Card.Subtitle>
+                <Card.Text>Saturday, 12:30 PM - 1:00 PM</Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className="mt-2 th07">
+            <Card.Body className="text-center">
+                <Card.Title>Netherworld</Card.Title>
+                <Card.Subtitle>Touhou 7 PCB</Card.Subtitle>
+                <Card.Text>Saturday, 1:30 PM - 2:00 PM</Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className="mt-2 th15">
+            <Card.Body className="text-center">
+                <Card.Title>Go to hell!!</Card.Title>
+                <Card.Subtitle>Touhou 15 LoLK</Card.Subtitle>
+                <Card.Text>Saturday, 2:00 PM - 2:30 PM</Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className="mt-2 pc98">
+            <Card.Body className="text-center">
+                <Card.Title>PC-98 Games</Card.Title>
+                <Card.Subtitle>Games From Touhou 1 ~ 5</Card.Subtitle>
+                <Card.Text>Sunday, 10:30 AM - 11:00 AM</Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className="mt-2 th08">
+            <Card.Body className="text-center">
+                <Card.Title>Lunar Landing in the Bamboo Forest</Card.Title>
+                <Card.Subtitle>Touhou 8 IN</Card.Subtitle>
+                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className="mt-2 fight">
+            <Card.Body className="text-center">
+                <Card.Title>Fighting Games</Card.Title>
+                <Card.Subtitle>Most *.5 Touhou Games</Card.Subtitle>
+                <Card.Text>Sunday, 12:00 PM - 1:00 PM</Card.Text>
+            </Card.Body>
+        </Card>
+
+        <h4 className="mt-2">Cosplay Repair</h4>
         <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner in the Entry Plaza.</p>
         <Figure>
-            <Figure.Image src={cosplayrepair} fluid rounded/>
+            <Figure.Image src={cosplayrepair} fluid rounded />
             <Figure.Caption>Cosplay Repair Banner</Figure.Caption>
         </Figure>
         <h4>Cosplay Contest</h4>
@@ -108,7 +158,7 @@ export const cosplayPage= {
             </Card.Body>
         </Card>
         <h5 className="mt-2">About the Judges</h5>
-        
+
         <Card>
             <Card.Img variant="top" src={medukitty} />
             <Card.Body>
@@ -117,8 +167,8 @@ export const cosplayPage= {
             </Card.Body>
             <Card.Footer className="text-center">
                 <Card.Link href="https://www.instagram.com/medukitty_/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                <Card.Link href="https://www.tiktok.com/@medukitty" target="_blank"><FontAwesomeIcon icon={faTiktok}/> TikTok</Card.Link>
-                <Card.Link href="https://twitter.com/medukitty" target="_blank"><FontAwesomeIcon icon={faXTwitter}/> Twitter</Card.Link>
+                <Card.Link href="https://www.tiktok.com/@medukitty" target="_blank"><FontAwesomeIcon icon={faTiktok} /> TikTok</Card.Link>
+                <Card.Link href="https://twitter.com/medukitty" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
             </Card.Footer>
         </Card>
 
@@ -130,7 +180,7 @@ export const cosplayPage= {
             </Card.Body>
             <Card.Footer className="text-center">
                 <Card.Link href="https://www.instagram.com/violet_reverie_cos/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                <Card.Link href="https://twitter.com/CuLightSource" target="_blank"><FontAwesomeIcon icon={faXTwitter}/> Twitter</Card.Link>
+                <Card.Link href="https://twitter.com/CuLightSource" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
             </Card.Footer>
         </Card>
 
@@ -139,17 +189,17 @@ export const cosplayPage= {
             <Accordion.Item eventKey="0">
                 <Accordion.Header>General Rules</Accordion.Header>
                 <Accordion.Body>
-                <p>These Rules apply to all three categories.</p>
-                <ul>
-                    <li>Costumes must be from Touhou Project media; these include the games, lore, manga, CDs, etc. Original characters or those from other media are not eligible. Costumes based on fanworks or officially licensed media (i.e. Lost Word) are allowed. If entering the Craftsmanship Competition, sufficient reference images must be provided.</li>
-                    <li>Costumes unable to fit through a standard door must be pre-approved.</li>
-                    <li>Costumes that have restricted vision or hindered movement should indicate as such on their entry form.</li>
-                    <li>One entry per attendee.</li>
-                    <li>You may only enter in one category. For example, if you made your own cosplay but entered in Performance, we cannot award you for Craftsmanship and vice versa.</li>
-                    <li>All entrants are expected to be on time to the main stage and walk the stage.</li>
-                    <li>There is a limited number of spots for each category. Applications are accepted on a first-come, first-serve basis, so in-person applications will only be available if we still have space. Therefore, please consider applying online ahead of time! Performance entries will NOT be accepted in-person, as performances must be approved ahead of time.</li>
-                </ul>
-                </Accordion.Body> 
+                    <p>These Rules apply to all three categories.</p>
+                    <ul>
+                        <li>Costumes must be from Touhou Project media; these include the games, lore, manga, CDs, etc. Original characters or those from other media are not eligible. Costumes based on fanworks or officially licensed media (i.e. Lost Word) are allowed. If entering the Craftsmanship Competition, sufficient reference images must be provided.</li>
+                        <li>Costumes unable to fit through a standard door must be pre-approved.</li>
+                        <li>Costumes that have restricted vision or hindered movement should indicate as such on their entry form.</li>
+                        <li>One entry per attendee.</li>
+                        <li>You may only enter in one category. For example, if you made your own cosplay but entered in Performance, we cannot award you for Craftsmanship and vice versa.</li>
+                        <li>All entrants are expected to be on time to the main stage and walk the stage.</li>
+                        <li>There is a limited number of spots for each category. Applications are accepted on a first-come, first-serve basis, so in-person applications will only be available if we still have space. Therefore, please consider applying online ahead of time! Performance entries will NOT be accepted in-person, as performances must be approved ahead of time.</li>
+                    </ul>
+                </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
                 <Accordion.Header>Craftsmanship Rules</Accordion.Header>
