@@ -1,4 +1,4 @@
-import { fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -30,6 +30,12 @@ export function cmp(a,b) {return a > b;}
 export function CircledBullets({argument}){
     let lettercomp = <FontAwesomeIcon icon={fa0} inverse fixedWidth transform="shrink-5"/>
     switch(argument){
+        case 'A':
+            lettercomp = <FontAwesomeIcon icon={faA} inverse fixedWidth transform="shrink-5"/>
+            break;
+        case 'B':
+            lettercomp = <FontAwesomeIcon icon={faB} inverse fixedWidth transform="shrink-5"/>
+            break;
         case '1':
             lettercomp = <FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-5"/>
             break;
@@ -60,8 +66,17 @@ export function CircledBullets({argument}){
         case '10':
             lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa0} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
+        case '11':
+            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            break;
+        case '12':
+            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa2} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            break;
         case '13':
             lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa3} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            break;
+        case '14':
+            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa4} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         case '15':
             lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa5} inverse fixedWidth transform="shrink-6 right-3"/></span>
