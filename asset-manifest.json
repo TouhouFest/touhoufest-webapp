@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/touhoufest-webapp/static/css/main.423d374d.css",
-    "main.js": "/touhoufest-webapp/static/js/main.6fe346ff.js",
+    "main.css": "/touhoufest-webapp/static/css/main.0d213ae8.css",
+    "main.js": "/touhoufest-webapp/static/js/main.383fed84.js",
     "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
     "static/media/assemblyhall.png": "/touhoufest-webapp/static/media/assemblyhall.1d93428891a097fada60.png",
     "static/media/cosplaybanner.jpg": "/touhoufest-webapp/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
+    "static/media/entryplaza.jpg": "/touhoufest-webapp/static/media/entryplaza.a1f241b4c8fc8caa0e9c.jpg",
     "static/media/artistalleymap.png": "/touhoufest-webapp/static/media/artistalleymap.524920c177fe168b68d7.png",
     "static/media/gaming.jpg": "/touhoufest-webapp/static/media/gaming.a6dabd636e1c92e6857c.jpg",
     "static/media/guestbanner.jpg": "/touhoufest-webapp/static/media/guestbanner.69d9374a0c1ae65daa3e.jpg",
@@ -21,12 +22,15 @@
     "static/media/codyyuki.png": "/touhoufest-webapp/static/media/codyyuki.396f49cf8dbae6993b09.png",
     "static/media/noresults.jpg": "/touhoufest-webapp/static/media/noresults.d11d2602ae041a85b194.jpg",
     "static/media/cookie.png": "/touhoufest-webapp/static/media/cookie.b6265a04ce94562d780e.png",
+    "static/media/medukitty.jpg": "/touhoufest-webapp/static/media/medukitty.8735652a9f489c9d1aef.jpg",
     "static/media/freezeex.png": "/touhoufest-webapp/static/media/freezeex.eeb939e4103f38ed3e4e.png",
     "static/media/fred.png": "/touhoufest-webapp/static/media/fred.b8bc890354c9e4fc7335.png",
     "static/media/gurugurumaru.png": "/touhoufest-webapp/static/media/gurugurumaru.052207bbf89b109253c4.png",
     "static/media/tama.png": "/touhoufest-webapp/static/media/tama.76c32dca877f68931654.png",
     "static/media/agi.png": "/touhoufest-webapp/static/media/agi.b81dffb6949538e1a739.png",
     "static/media/haiyun.png": "/touhoufest-webapp/static/media/haiyun.ae30d85fca768a4b8c7e.png",
+    "static/media/cosplayrepair.jpg": "/touhoufest-webapp/static/media/cosplayrepair.86908f89e8595e675c88.jpg",
+    "static/media/violetreverie.jpg": "/touhoufest-webapp/static/media/violetreverie.c0632e4f3c5904293612.jpg",
     "static/media/touhoufest.jpg": "/touhoufest-webapp/static/media/touhoufest.3466f89d43772e64c73a.jpg",
     "static/media/pinewindgarden.jpg": "/touhoufest-webapp/static/media/pinewindgarden.6e394f80fbecd7607b85.jpg",
     "static/media/shihori.jpg": "/touhoufest-webapp/static/media/shihori.b63b49b824de2521262f.jpg",
@@ -51,12 +55,12 @@
     "static/media/events.csv": "/touhoufest-webapp/static/media/events.fa5410dd9a1b70f076f4.csv",
     "static/media/xiaobb.avif": "/touhoufest-webapp/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/touhoufest-webapp/index.html",
-    "main.423d374d.css.map": "/touhoufest-webapp/static/css/main.423d374d.css.map",
-    "main.6fe346ff.js.map": "/touhoufest-webapp/static/js/main.6fe346ff.js.map",
+    "main.0d213ae8.css.map": "/touhoufest-webapp/static/css/main.0d213ae8.css.map",
+    "main.383fed84.js.map": "/touhoufest-webapp/static/js/main.383fed84.js.map",
     "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.423d374d.css",
-    "static/js/main.6fe346ff.js"
+    "static/css/main.0d213ae8.css",
+    "static/js/main.383fed84.js"
   ]
 }
