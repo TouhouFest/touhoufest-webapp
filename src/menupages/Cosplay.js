@@ -17,13 +17,14 @@ import cosplayrepair from "./../images/cosplayrepair.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
 import { Accordion, Card, Figure, Image } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { CircledBullets } from '../Utils';
 
 export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
-        <p>Photoshoots will take place at the <b>Pine Wind Garden</b>, a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b>. Cosplay booths and repair is located at the <b>Entry Plaza</b>, connected to the Torino Festival Plaza.</p>
+        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="15"/>), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="13"/>). Cosplay booths and repair is located at the <b>Entry Plaza</b> (<CircledBullets argument="5"/>), connected to the Torino Festival Plaza (<CircledBullets argument="7"/>).</p>
         <Figure>
             <Figure.Image src={pinewindgarden} fluid rounded />
             <Figure.Caption>Pine Wind Garden</Figure.Caption>
