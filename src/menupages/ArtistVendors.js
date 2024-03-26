@@ -12,7 +12,6 @@ import { Figure, ListGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import kenmiller from "./../images/kenmiller.webp";
 import artistalley from "./../images/artistalley.jpg";
 import ace from "./../images/artistalley/ace.png";
 import tama from "./../images/artistalley/tama.png";
