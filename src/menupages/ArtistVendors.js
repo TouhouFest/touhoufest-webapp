@@ -42,6 +42,8 @@ import cookie from "./../images/artistalley/cookie.png";
 import freezeex from "./../images/artistalley/freezeex.png";
 import artistalleymap from "./../images/artistalleymap.png";
 import feeyaart from "./../images/artistalley/feeyaart.jpg";
+import nakanotheatre from "./../images/nakanotheatre.jpg";
+import entryplaza from "./../images/entryplaza.jpg";
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
@@ -329,11 +331,16 @@ export const artistVendorsPage = {
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
         <h4>Location</h4>
-        <p>Artist Alley and Vendors will be held at the <b>Ken Miller Recreation Center</b>, the center of the main TouhouFest area.</p>
+        <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> in front of the Pine Wind Garden.</p>
         <Figure>
-            <Figure.Image src={kenmiller} fluid rounded />
-            <Figure.Caption>Ken Miller Recreation Center</Figure.Caption>
+            <Figure.Image src={nakanotheatre} fluid rounded />
+            <Figure.Caption>George Nakano Theatre</Figure.Caption>
         </Figure>
+        <Figure>
+            <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
+            <Figure.Caption>Entry Plaza</Figure.Caption>
+        </Figure>
+
 
         <h4>Artist Alley</h4>
 
