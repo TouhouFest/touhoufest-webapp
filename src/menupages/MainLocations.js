@@ -91,7 +91,7 @@ export const mainLocationsPage= {
         </Figure>
 
         <h4>Entry Foyer</h4>
-        <p>The Entry Foyer is immediately next to the Ken Miller Rec Center (and also has an exit outside of the convention). The following event spaces are located here:</p>
+        <p>The Entry Foyer is the exterior of the Ken Miller Rec Center, namely the room with the alternate exit leading out of the convention. The following event spaces are located here:</p>
         <ul className="list-unstyled">
             <li><CircledBullets argument="12"/> Community Booths</li>
         </ul>
