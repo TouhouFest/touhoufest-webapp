@@ -16,13 +16,14 @@ import gensouskydrift from "./../images/gaming/gensouskydrift.jpg";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
+import { CircledBullets } from '../Utils';
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
         <h4>Location(s)</h4>
-        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>Toyota Meeting Hall</b>, located to the right of the Torino Festival Plaza. Gaming events for Touhou <em>fangames</em> will take place at the <b>Ken Miller Rec Center</b>, to the left of the Torino Festival Plaza.</p>
+        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>Toyota Meeting Hall</b>, (<span className="text-primary"><CircledBullets argument="9"/></span>) located to the right of the Torino Festival Plaza. Gaming events for Touhou <em>fangames</em> will take place at the <b>Ken Miller Rec Center</b>, (<CircledBullets argument="10"/>) to the left of the Torino Festival Plaza.</p>
         <Figure>
             <Figure.Image src={toyota} fluid rounded></Figure.Image>
             <Figure.Caption>Toyota Meeting Hall</Figure.Caption>

@@ -25,6 +25,7 @@ import pinewindgarden from "./../images/pinewindgarden.jpg";
 import assemblyhall from "./../images/assemblyhall.png";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
+import { CircledBullets } from '../Utils';
 
 export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests</>),
@@ -33,9 +34,9 @@ export const guestsPage = {
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
         <ul>
-            <li><b>A-ONE/Odyssey/Shihori</b>: Assembly Hall</li>
-            <li><b>TAMUSIC</b>: Torino Plaza</li>
-            <li><b>Punderfull</b>: Pine Wind Garden</li>
+            <li><b>A-ONE</b>: Assembly Hall (<CircledBullets argument="13"/>)</li>
+            <li><b>TAMUSIC</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
+            <li><b>Punderfull</b>: Pine Wind Garden (<CircledBullets argument="15"/>)</li>
         </ul>
         <Figure>
             <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>

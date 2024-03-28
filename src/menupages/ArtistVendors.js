@@ -54,6 +54,7 @@ import entryplaza from "./../images/entryplaza.jpg";
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { CircledBullets } from '../Utils';
 
 let artistlist = [
     {
@@ -367,7 +368,7 @@ export const artistVendorsPage = {
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
         <h4>Location</h4>
-        <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> in front of the Pine Wind Garden.</p>
+        <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/>) behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> (<CircledBullets argument="3"/>) in front of the Pine Wind Garden.</p>
         <Figure>
             <Figure.Image src={nakanotheatre} fluid rounded />
             <Figure.Caption>George Nakano Theatre</Figure.Caption>
