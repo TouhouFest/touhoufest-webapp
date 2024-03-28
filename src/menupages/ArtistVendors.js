@@ -41,6 +41,14 @@ import cookie from "./../images/artistalley/cookie.png";
 import freezeex from "./../images/artistalley/freezeex.png";
 import artistalleymap from "./../images/artistalleymap.png";
 import feeyaart from "./../images/artistalley/feeyaart.jpg";
+import leminigensokyo from "./../images/artistalley/leminigensokyo.png";
+import ruproject from "./../images/artistalley/2ruproject.png";
+import grapevines from "./../images/artistalley/grapevines.png";
+import brw from "./../images/artistalley/BRW.jpg";
+import neosanctum from "./../images/artistalley/neosanctum.png";
+import galaxianrecordings from "./../images/artistalley/galaxianrecordings.png";
+import twinphoenix from "./../images/artistalley/TwinPhoenixInteractive.png";
+import izakaya from "./../images/artistalley/izakaya.jpg";
 import nakanotheatre from "./../images/nakanotheatre.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
 import { Image } from 'react-bootstrap';
@@ -175,15 +183,15 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "Gudnite edg3lord",
-        "image": placeholder,
+        "name": "2RU Project",
+        "image": ruproject,
         "location": "Booth A7",
         "website": "",
         "description": ""
     },
     {
         "name": "Le MIni Gensokyo",
-        "image": placeholder,
+        "image": leminigensokyo,
         "location": "Booth E2",
         "website": "https://www.teepublic.com/user/archanciel",
         "description": ""
@@ -204,7 +212,7 @@ let artistlist = [
     },
     {
         "name": "Grapevines",
-        "image": placeholder,
+        "image": grapevines,
         "location": "Booth F5",
         "website": "",
         "description": ""
@@ -225,7 +233,7 @@ let artistlist = [
     },
     {
         "name": "BRW",
-        "image": placeholder,
+        "image": brw,
         "location": "Booth D5",
         "website": "",
         "description": ""
@@ -259,31 +267,60 @@ let vendors = [
     {
         "name": "Siliconcat",
         "image": siliconcat,
-        "location": "UNKNOWN",
-        "website": "https://www.etsy.com/shop/Siliconcat",
+        "location": "Artist",
+        "website": "https://siliconcat.tumblr.com/tagged/my%20art",
         "description": ""
     },
     {
         "name": "Art With Fred",
         "image": fred,
-        "location": "UNKNOWN",
+        "location": "Artist",
         "website": "",
         "description": ""
     },
     {
         "name": <>Guru&shy;Guru&shy;Maru</>,
         "image": gurugurumaru,
-        "location": "UNKNOWN",
+        "location": "Artist",
         "website": "https://twitter.com/GuruGuruMaru_",
         "description": ""
     },
     {
         "name": "Artist Collaboration Experience (ACE)",
         "image": ace,
-        "location": "UNKNOWN",
+        "location": "Artist",
         "website": "https://www.artcollabexp.com/",
         "description": "VENDOR"
     },
+    {
+        "name": "Neo Sanctum",
+        "image": neosanctum,
+        "location": "Music",
+        "website": "https://neo-sanctum.com/home",
+        "description": "VENDOR"
+    },
+    {
+        "name": "Galaxian Recordings",
+        "image": galaxianrecordings,
+        "location": "Music",
+        "website": "https://galaxianrecordings.bandcamp.com/",
+        "description": "VENDOR"
+    },
+    {
+        "name": "Twin Phoenix Interactive",
+        "image": twinphoenix,
+        "location": "Game Dev",
+        "website": "https://twinphoenixinteractive.com/",
+        "description": "VENDOR"
+    },
+    {
+        "name": "Dichroic Purpillion",
+        "image": izakaya,
+        "location": "Game Dev",
+        "website": "https://store.steampowered.com/search/?developer=%E4%BA%8C%E8%89%B2%E5%B9%BD%E7%B4%AB%E8%9D%B6",
+        "description": "VENDOR"
+    },
+
 
 ];
 
@@ -390,9 +427,9 @@ export const artistVendorsPage = {
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
                         {/* TODO: add vendor locations + map once they become available */}
-                        <ListGroup.Item className="text-center small">Vendor</ListGroup.Item>
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
                 </Card>
             </Col>
             </>)}
