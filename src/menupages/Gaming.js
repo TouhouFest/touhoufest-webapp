@@ -71,7 +71,22 @@ export const gamingPage = {
         <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2024/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
         <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest already closed on April 25th, 2024.</p>
 
-        <h5>Wave Info</h5>
+        <h5>Prizes</h5>
+        <Card>
+            <Card.Body className="text-center gold-bg">
+                <Card.Title>First Place (Per Each Bracket)</Card.Title>
+                <Card.Subtitle>Free TouhouFest 2025 Badge</Card.Subtitle>
+            </Card.Body>
+        </Card>
+
+        <Card className="mt-2">
+            <Card.Body className="text-center silver-bg">
+                <Card.Title>Second Place (Per Each Bracket)</Card.Title>
+                <Card.Subtitle>Select Touhou-Themed Merch Giveaways</Card.Subtitle>
+            </Card.Body>
+        </Card>
+
+        <h5 className="mt-2">Wave Info</h5>
         <p>Gaming tournaments will be organized in "Waves" where specific games will compete based on their particular rules. Below is a listing of each wave, their included games, as well as their respective pools on start.gg.</p>
 
         <Card>
@@ -142,20 +157,6 @@ export const gamingPage = {
             </ListGroup>
         </Card>
 
-        <h5 className="mt-2">Prizes</h5>
-        <Card>
-            <Card.Body className="text-center gold-bg">
-                <Card.Title>First Place (Per Each Bracket)</Card.Title>
-                <Card.Subtitle>Free TouhouFest 2025 Badge</Card.Subtitle>
-            </Card.Body>
-        </Card>
-
-        <Card className="mt-2">
-            <Card.Body className="text-center silver-bg">
-                <Card.Title>Second Place (Per Each Bracket)</Card.Title>
-                <Card.Subtitle>Select Touhou-Themed Merch Giveaways</Card.Subtitle>
-            </Card.Body>
-        </Card>
 
 
     </>)
