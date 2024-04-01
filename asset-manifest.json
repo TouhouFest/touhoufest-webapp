@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/touhoufest-webapp/static/css/main.0d213ae8.css",
-    "main.js": "/touhoufest-webapp/static/js/main.2c5218a8.js",
+    "main.js": "/touhoufest-webapp/static/js/main.83b8e37a.js",
     "static/js/787.7ff3c85a.chunk.js": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js",
     "static/media/assemblyhall.png": "/touhoufest-webapp/static/media/assemblyhall.1d93428891a097fada60.png",
     "static/media/cosplaybanner.jpg": "/touhoufest-webapp/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
@@ -62,15 +62,15 @@
     "static/media/birnam.jpg": "/touhoufest-webapp/static/media/birnam.5f65b1855db636402f2e.jpg",
     "static/media/odyssey.jpg": "/touhoufest-webapp/static/media/odyssey.5b14aca741a6b5f24944.jpg",
     "static/media/essukaa.webp": "/touhoufest-webapp/static/media/essukaa.64a86844d495bd6ffa28.webp",
-    "static/media/events.csv": "/touhoufest-webapp/static/media/events.24e55eb8550d2fa6c11f.csv",
+    "static/media/events.csv": "/touhoufest-webapp/static/media/events.46b7868e466e1106fe45.csv",
     "static/media/xiaobb.avif": "/touhoufest-webapp/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/touhoufest-webapp/index.html",
     "main.0d213ae8.css.map": "/touhoufest-webapp/static/css/main.0d213ae8.css.map",
-    "main.2c5218a8.js.map": "/touhoufest-webapp/static/js/main.2c5218a8.js.map",
+    "main.83b8e37a.js.map": "/touhoufest-webapp/static/js/main.83b8e37a.js.map",
     "787.7ff3c85a.chunk.js.map": "/touhoufest-webapp/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d213ae8.css",
-    "static/js/main.2c5218a8.js"
+    "static/js/main.83b8e37a.js"
   ]
 }
