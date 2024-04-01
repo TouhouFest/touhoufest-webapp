@@ -216,3 +216,7 @@ body{
   background: linear-gradient(135deg, #1c73ff 0%,#ffa221 100%);
   color: black;
 }
+
+.event-item .datedisplay {
+  display: none;
+}
