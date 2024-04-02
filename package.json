@@ -1,6 +1,6 @@
 {
   "name": "touhoufest-webapp",
-  "homepage": "https://kir12.github.io/touhoufest-webapp",
+  "homepage": "https://schedule.touhoufest.org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
