@@ -25,7 +25,7 @@ export const operatingHours= {
             <li>Saturday: 9:00 AM - 11:00 PM</li>
             <li>Sunday: 9:00 AM - 6:00 PM</li>
         </ul>
-        <p><b>Artist's Alley</b></p>
+        <p><b>Artist's Alley/Vendors</b></p>
         <ul>
             <li>Friday: N/A</li>
             <li>Saturday: 9:00 AM - 6:00 PM</li>
