@@ -16,5 +16,22 @@
   "start_url": ".",
   "display": "fullscreen",
   "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "/widescreenshot.png",
+      "sizes": "1920x1080",
+      "type":"image/png",
+      "form_factor":"wide",
+      "label":"Desktop Version"
+    },
+    {
+      "src":"/narrow.png",
+      "sizes": "375x812",
+      "type":"image/png",
+      "form_factor":"wide",
+      "label":"Mobile Version"
+    }
+    
+  ]
 }
