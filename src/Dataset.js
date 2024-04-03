@@ -125,7 +125,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
         newdata = newdata.sortValues("combinedStart");
         newdata = newdata.addColumn("uniqueID", newdata.index);
 
-        let event_types = uniqueColumn(newdata.get("event_type"));
+        let event_types = uniqueColumn(newdata.get('event_type').map((elm) => elm.split(".")).flat(1)).sort();
         let room_list = uniqueColumn(newdata.get("event_room"));
         let params = { 'event_types': event_types, 'room_list': room_list };
 
@@ -190,7 +190,6 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     let displayData = dataSet;
     if (mode === "bookmarks") {
       let cookie_list = get_cookie_list();
-      // console.log(cookie_list);
       cookie_list = cookie_list.map(Number);
       cookie_list.sort(cmp);
       displayData = dataSet.loc({ rows: cookie_list });
@@ -210,8 +209,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       }
 
       if (appliedFilters["event_types"].length > 0) {
-        let result = displayData.get("event_type").map((param) => { return appliedFilters["event_types"].includes(param) });
-        // console.log(result);
+        let result = displayData.get("event_type").map((evtstr) => appliedFilters["event_types"].filter(item => evtstr.split(".").includes(item)).length > 0);
         displayData = displayData.loc({ rows: result });
       }
 
@@ -242,11 +240,11 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     jsonexport.forEach(function (elem, index_) {
 
       let index = elem["uniqueID"];
-
+      let splitevt = elem["event_type"].split(".");
+    
       // compute event type badge styling
-      let evttype = (elm) => elm === elem["event_type"];
-      let event_idx = event_types.findIndex(evttype);
-      let css_class = colors[event_idx];
+      let event_indexes = splitevt.map(evt => event_types.findIndex((elm) => {return elm === evt;}))
+      let css_classes = event_indexes.map((idx) => colors[idx]);
 
       // compute time display
       let startjs = dayjs(elem["combinedStart"]);
@@ -284,7 +282,12 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
         <h4 className="mb-1">{elem["event_title"]} </h4>
         <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
         <p className="mb-1">{elem["event_room"]}, {startjs.toString()} - {endjs.toString()}</p>
-        <p className="mb-1"><Badge pill className={css_class}>{elem["event_type"]}</Badge> <Badge pill bg="danger">{elem["event_age_limit"]}</Badge></p>
+        <p className="mb-1"><span>
+          {css_classes.map((color, idx) => {
+            return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
+          })}
+          <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
+        </span></p>
       </>);
 
       // generate event listing

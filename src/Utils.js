@@ -2,7 +2,7 @@ import { fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle } f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
-export let colors = ["purple","fuchsia","green","lime","olive","yellow","navy","blue","teal","black","silver","gray", "aqua"];
+export let colors = ["purple","fuchsia","green","lime","olive","yellow","navy","blue","teal","silver","gray", "aqua"];
 
 export const COOKIE_NAME = "BOOKMARKS";
 
