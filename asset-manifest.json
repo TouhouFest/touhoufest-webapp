@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.567e7bd5.css",
-    "main.js": "/static/js/main.d20aad59.js",
+    "main.js": "/static/js/main.396866e6.js",
     "static/js/787.7ff3c85a.chunk.js": "/static/js/787.7ff3c85a.chunk.js",
     "static/media/assemblyhall.png": "/static/media/assemblyhall.1d93428891a097fada60.png",
     "static/media/cosplaybanner.jpg": "/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
@@ -62,15 +62,16 @@
     "static/media/birnam.jpg": "/static/media/birnam.5f65b1855db636402f2e.jpg",
     "static/media/odyssey.jpg": "/static/media/odyssey.5b14aca741a6b5f24944.jpg",
     "static/media/essukaa.webp": "/static/media/essukaa.64a86844d495bd6ffa28.webp",
+    "service-worker.js": "/service-worker.js",
     "static/media/events.csv": "/static/media/events.d380631b7ffd3823d4dd.csv",
     "static/media/xiaobb.avif": "/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/index.html",
     "main.567e7bd5.css.map": "/static/css/main.567e7bd5.css.map",
-    "main.d20aad59.js.map": "/static/js/main.d20aad59.js.map",
+    "main.396866e6.js.map": "/static/js/main.396866e6.js.map",
     "787.7ff3c85a.chunk.js.map": "/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.567e7bd5.css",
-    "static/js/main.d20aad59.js"
+    "static/js/main.396866e6.js"
   ]
 }
