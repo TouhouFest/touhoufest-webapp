@@ -20,7 +20,7 @@
   "screenshots": [
     {
       "src": "/widescreenshot.png",
-      "sizes": "1920x1080",
+      "sizes": "1680x970",
       "type":"image/png",
       "form_factor":"wide",
       "label":"Desktop Version"
@@ -29,7 +29,7 @@
       "src":"/narrow.png",
       "sizes": "375x812",
       "type":"image/png",
-      "form_factor":"wide",
+      "form_factor":"narrow",
       "label":"Mobile Version"
     }
     
