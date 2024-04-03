@@ -131,31 +131,31 @@ export const cosplayPage = {
         <Card>
             <Card.Body className="text-center gold-bg">
                 <Card.Title>Best Craftsmanship</Card.Title>
-                <Card.Subtitle>Prize TBD</Card.Subtitle>
+                <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
             </Card.Body>
         </Card>
         <Card className="mt-2">
             <Card.Body className="text-center silver-bg">
                 <Card.Title>Runner-up Craftsmanship</Card.Title>
-                <Card.Subtitle>Prize TBD</Card.Subtitle>
+                <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
             </Card.Body>
         </Card>
         <Card className="mt-2">
             <Card.Body className="text-center gold-bg">
                 <Card.Title>Best Performance</Card.Title>
-                <Card.Subtitle>Prize TBD</Card.Subtitle>
+                <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
             </Card.Body>
         </Card>
         <Card className="mt-2">
             <Card.Body className="text-center silver-bg">
                 <Card.Title>Runner-up Performance</Card.Title>
-                <Card.Subtitle>Prize TBD</Card.Subtitle>
+                <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
             </Card.Body>
         </Card>
         <Card className="mt-2">
             <Card.Body className="text-center gold-bg">
                 <Card.Title>Judge's Choice (Per-Judge)</Card.Title>
-                <Card.Subtitle>Prize TBD</Card.Subtitle>
+                <Card.Subtitle>Prizes up to Judge Discretion</Card.Subtitle>
             </Card.Body>
         </Card>
         <h5 className="mt-2">About the Judges</h5>
