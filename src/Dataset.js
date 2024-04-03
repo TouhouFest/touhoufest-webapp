@@ -125,7 +125,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
         newdata = newdata.sortValues("combinedStart");
         newdata = newdata.addColumn("uniqueID", newdata.index);
 
-        let event_types = uniqueColumn(newdata.get('event_type').map((elm) => elm.split(".")).flat(1));
+        let event_types = uniqueColumn(newdata.get('event_type').map((elm) => elm.split(".")).flat(1)).sort();
         let room_list = uniqueColumn(newdata.get("event_room"));
         let params = { 'event_types': event_types, 'room_list': room_list };
 
@@ -243,7 +243,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       let splitevt = elem["event_type"].split(".");
     
       // compute event type badge styling
-      let event_indexes = splitevt.map(evt => event_types.findIndex((elm, idx) => {return elm === evt;}))
+      let event_indexes = splitevt.map(evt => event_types.findIndex((elm) => {return elm === evt;}))
       let css_classes = event_indexes.map((idx) => colors[idx]);
 
       // compute time display
