@@ -51,6 +51,8 @@ import twinphoenix from "./../images/artistalley/TwinPhoenixInteractive.png";
 import izakaya from "./../images/artistalley/izakaya.jpg";
 import nakanotheatre from "./../images/nakanotheatre.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
+import cynicalfries from "./../images/artistalley/cynicalfries.png";
+import lyricalive from "./../images/artistalley/lyricalive.png";
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
@@ -248,7 +250,7 @@ let artistlist = [
     },
     {
         "name": "cynicalfries / blaidmiracle",
-        "image": placeholder,
+        "image": cynicalfries,
         "location": "Booth C2",
         "website": "",
         "description": ""
@@ -308,6 +310,13 @@ let vendors = [
         "description": "VENDOR"
     },
     {
+        "name": "Lyrica Live",
+        "image": lyricalive,
+        "location": "Music",
+        "website": "https://lyricalive.carrd.co/",
+        "description": "VENDOR"
+    },
+    {
         "name": "Twin Phoenix Interactive",
         "image": twinphoenix,
         "location": "Game Dev",
@@ -321,8 +330,6 @@ let vendors = [
         "website": "https://store.steampowered.com/search/?developer=%E4%BA%8C%E8%89%B2%E5%B9%BD%E7%B4%AB%E8%9D%B6",
         "description": "VENDOR"
     },
-
-
 ];
 
 let official_artists = [
@@ -420,7 +427,7 @@ export const artistVendorsPage = {
       </Row>
 
         <h4 className="mt-2">Vendors</h4>
-        <Row xs={2} className="g-3">
+        <Row xs={2} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
                 <Card>
