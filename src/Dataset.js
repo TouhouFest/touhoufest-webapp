@@ -185,7 +185,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
 
   if (dataUpdated) {
 
-    let event_types = uniqueColumn(dataSet.get("event_type"));
+    let event_types = uniqueColumn(dataSet.get('event_type').map((elm) => elm.split(".")).flat(1)).sort();
 
     let displayData = dataSet;
     if (mode === "bookmarks") {
