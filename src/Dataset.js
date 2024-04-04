@@ -12,6 +12,8 @@ import events from './events.csv';
 import noresults from './noresults.jpg'
 import Papa from 'papaparse';
 import Image from 'react-bootstrap/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 
 dayjs.extend(customParseFormat)
 
@@ -156,7 +158,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     return (
       <Row className="d-flex align-items-center justify-content-center flex-grow-1" id="infobody">
         <Col md={3} lg={4} className="text-center opacity-75">
-          <p className="small mb-1"><a href="https://www.pixiv.net/en/artworks/54659563" target="blank" rel="noreferrer">Image Source</a></p>
+          <p className="small mb-1"><a href="https://www.pixiv.net/en/artworks/54659563" target="blank" rel="noreferrer"><FontAwesomeIcon icon={faPixiv}/> Image Source</a></p>
           <Image src={noresults} fluid alt="Confused Reimu" rounded />
           <h5 className="mt-2">No Results</h5>
           <p>Try setting some bookmarks or adjusting your filter options</p>
