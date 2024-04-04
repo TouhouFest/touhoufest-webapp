@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.567e7bd5.css",
-    "main.js": "/static/js/main.4be29d43.js",
+    "main.js": "/static/js/main.6011801f.js",
     "static/js/787.7ff3c85a.chunk.js": "/static/js/787.7ff3c85a.chunk.js",
     "static/media/assemblyhall.png": "/static/media/assemblyhall.1d93428891a097fada60.png",
     "static/media/cosplaybanner.jpg": "/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
@@ -39,11 +39,14 @@
     "static/media/violetreverie.jpg": "/static/media/violetreverie.c0632e4f3c5904293612.jpg",
     "static/media/touhoufest.jpg": "/static/media/touhoufest.3466f89d43772e64c73a.jpg",
     "static/media/pinewindgarden.jpg": "/static/media/pinewindgarden.6e394f80fbecd7607b85.jpg",
+    "static/media/androidchrome01.jpg": "/static/media/androidchrome01.035fa2cddd33a2cec5e2.jpg",
     "static/media/shihori.jpg": "/static/media/shihori.b63b49b824de2521262f.jpg",
+    "static/media/androidchrome02.jpg": "/static/media/androidchrome02.9c46259d60cf9ed097e8.jpg",
     "static/media/rustyhermit.jpg": "/static/media/rustyhermit.f33231a18f8a88fe5bda.jpg",
     "static/media/kuriarty.jpg": "/static/media/kuriarty.c8120113ffcd6e6b51ab.jpg",
     "static/media/torinoplaza.jpg": "/static/media/torinoplaza.890553f3d1cf30265029.jpg",
     "static/media/grapevines.png": "/static/media/grapevines.5d8f156b19702f4a7e91.png",
+    "static/media/androidchrome03.jpg": "/static/media/androidchrome03.870c09727b7f4c94b801.jpg",
     "static/media/TAM.JPG": "/static/media/TAM.1adeca3d0d2d6049934c.JPG",
     "static/media/grillboss.jpg": "/static/media/grillboss.a5cb8f1ec0117fcb1b75.jpg",
     "static/media/2ruproject.png": "/static/media/2ruproject.180763ab9fb848aa4703.png",
@@ -62,6 +65,7 @@
     "static/media/feeyaart.jpg": "/static/media/feeyaart.ea047f071d9874f7b94d.jpg",
     "static/media/gruvysgudies.jpg": "/static/media/gruvysgudies.acc51d1cd174a327b0bc.jpg",
     "static/media/birnam.jpg": "/static/media/birnam.5f65b1855db636402f2e.jpg",
+    "static/media/ios.webp": "/static/media/ios.279883d7a16fabafe7c6.webp",
     "static/media/odyssey.jpg": "/static/media/odyssey.5b14aca741a6b5f24944.jpg",
     "static/media/essukaa.webp": "/static/media/essukaa.64a86844d495bd6ffa28.webp",
     "service-worker.js": "/service-worker.js",
@@ -69,11 +73,11 @@
     "static/media/xiaobb.avif": "/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/index.html",
     "main.567e7bd5.css.map": "/static/css/main.567e7bd5.css.map",
-    "main.4be29d43.js.map": "/static/js/main.4be29d43.js.map",
+    "main.6011801f.js.map": "/static/js/main.6011801f.js.map",
     "787.7ff3c85a.chunk.js.map": "/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.567e7bd5.css",
-    "static/js/main.4be29d43.js"
+    "static/js/main.6011801f.js"
   ]
 }
