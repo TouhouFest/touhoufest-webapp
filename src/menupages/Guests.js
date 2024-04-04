@@ -22,7 +22,7 @@ import a_one from "./../images/a-one.png";
 import guestbanner from "./../images/guestbanner.jpg";
 import torinoplaza from "./../images/torinoplaza.jpg";
 import pinewindgarden from "./../images/pinewindgarden.jpg";
-import assemblyhall from "./../images/assemblyhall.png";
+import assemblyhall from "./../images/assemblyhall.jpg";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
