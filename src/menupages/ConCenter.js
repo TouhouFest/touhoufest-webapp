@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
 import touhoufest_map from "./../images/touhoufest_map.png";
 import artistalleymap from "./../images/artistalleymap.png";
+import vendorsmap from "./../images/vendorsmap.png";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
@@ -19,6 +20,7 @@ import { CircledBullets } from '../Utils';
 function MapModals(){
     const [showOuter, setShowOuter] = useState(false);
     const [showInner, setShowInner] = useState(false);
+    const [showVendors, setShowVendors] = useState(false);
 
     return (<>
         <p>Tap to focus in/zoom on either map as needed.</p>
@@ -89,6 +91,7 @@ function MapModals(){
         <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
 
         <h4>Artist Alley Map</h4>
+        <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/>)</p>
         <Figure onClick={() => setShowInner(true)}>
             <Figure.Image src={artistalleymap} fluid rounded/>
             <Figure.Caption>Map of Artist Alley</Figure.Caption>
@@ -109,6 +112,22 @@ function MapModals(){
             </Modal.Header>
             <Modal.Body className="align-items-center px-0">
                 <Image src={artistalleymap} fluid/>
+            </Modal.Body>
+        </Modal>
+
+        <h4>Vendors Map</h4>
+        <p>The entire below map is enclosed in the Entry Plaza. (<CircledBullets argument="3"/>) Nearby locations are also labeled.</p>
+        <Figure>
+            <Figure.Image src={vendorsmap} fluid onClick={() => setShowVendors(true)}/>
+            <Figure.Caption>Map of Vendors</Figure.Caption>
+        </Figure>
+
+        <Modal show={showVendors} size="lg" onHide={() => setShowVendors(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Vendors</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={vendorsmap} fluid className="mx-auto d-block"/>
             </Modal.Body>
         </Modal>
 
