@@ -53,6 +53,10 @@ import nakanotheatre from "./../images/nakanotheatre.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
 import cynicalfries from "./../images/artistalley/cynicalfries.png";
 import lyricalive from "./../images/artistalley/lyricalive.png";
+import vendorsmap from "./../images/vendorsmap.png";
+import maidacademy from "./../images/artistalley/maidacademy.webp";
+import popumai from "./../images/artistalley/popumai.webp";
+import loveboxf from "./../images/artistalley/loveboxf.jpg";
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
@@ -270,67 +274,109 @@ let vendors = [
     {
         "name": "Siliconcat",
         "image": siliconcat,
-        "location": "Artist",
+        "role": "Artist",
         "website": "https://siliconcat.tumblr.com/tagged/my%20art",
-        "description": ""
+        "description": "",
+        "location": "Booth V15"
     },
     {
         "name": "Art With Fred",
         "image": fred,
-        "location": "Artist",
+        "role": "Artist",
         "website": "",
-        "description": ""
+        "description": "",
+        "location": "Booth V12"
     },
     {
         "name": <>Guru&shy;Guru&shy;Maru</>,
         "image": gurugurumaru,
-        "location": "Artist",
+        "role": "Artist",
         "website": "https://twitter.com/GuruGuruMaru_",
-        "description": ""
+        "description": "",
+        "location": "Community Booths"
     },
     {
         "name": "Artist Collaboration Experience (ACE)",
         "image": ace,
-        "location": "Artist",
+        "role": "Artist",
         "website": "https://www.artcollabexp.com/",
-        "description": "VENDOR"
+        "description": "VENDOR",
+        "location": "Booth V11"
     },
     {
         "name": "Neo Sanctum",
         "image": neosanctum,
-        "location": "Music",
+        "role": "Music",
         "website": "https://neo-sanctum.com/home",
-        "description": "VENDOR"
+        "description": "VENDOR",
+        "location": "Music Booths"
     },
     {
         "name": "Galaxian Recordings",
         "image": galaxianrecordings,
-        "location": "Music",
+        "role": "Music",
         "website": "https://galaxianrecordings.bandcamp.com/",
-        "description": "VENDOR"
+        "description": "VENDOR",
+        "location": "Music Booths"
     },
     {
         "name": "Lyrica Live",
         "image": lyricalive,
-        "location": "Music",
+        "role": "Music",
         "website": "https://lyricalive.carrd.co/",
-        "description": "VENDOR"
+        "description": "VENDOR",
+        "location": "Booth V09"
     },
     {
         "name": "Twin Phoenix Interactive",
         "image": twinphoenix,
-        "location": "Game Dev",
+        "role": "Game Dev",
         "website": "https://twinphoenixinteractive.com/",
-        "description": "VENDOR"
+        "description": "VENDOR",
+        "location": "Community Booths"
     },
     {
         "name": "Dichroic Purpillion",
         "image": izakaya,
-        "location": "Game Dev",
+        "role": "Game Dev",
         "website": "https://store.steampowered.com/search/?developer=%E4%BA%8C%E8%89%B2%E5%B9%BD%E7%B4%AB%E8%9D%B6",
-        "description": "VENDOR"
+        "description": "VENDOR",
+        "location": "Booth V08"
     },
+    {
+        "name": "Pop Umai",
+        "image": popumai,
+        "role": "Vendor",
+        "website": "https://www.popumai.com/",
+        "description": "",
+        "location": "Booth V14"
+    },
+    {
+        "name": "loveboxf",
+        "image": loveboxf,
+        "role": "Artist",
+        "website":"https://www.pixiv.net/en/users/28004345",
+        "description":"",
+        "location":"Booth V13"
+    },
+    {
+        "name": "Maid Academy Cafe",
+        "image": maidacademy,
+        "role": "Vendor",
+        "website": "https://linktr.ee/maidacademy",
+        "description": "",
+        "location": "Booth V07"
+    },
+    {
+        "name": "Showcas3",
+        "image": placeholder,
+        "role": "Merch",
+        "website": "",
+        "description": "",
+        "location": "Booth V10"
+    }
 ];
+vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let official_artists = [
     {
@@ -364,6 +410,26 @@ function ArtistAlleyMapModal(){
             </Modal.Header>
             <Modal.Body className="align-items-center px-0">
                 <Image src={artistalleymap} fluid/>
+            </Modal.Body>
+        </Modal>
+
+    </>);
+}
+
+function VendorsMapModal() {
+    const [showVendors, setShowVendors] = useState(false);
+    return (<>
+        <Figure>
+            <Figure.Image src={vendorsmap} fluid onClick={() => setShowVendors(true)}/>
+            <Figure.Caption>Map of Vendors</Figure.Caption>
+        </Figure>
+
+        <Modal show={showVendors} size="lg" onHide={() => setShowVendors(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Vendors</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={vendorsmap} fluid className="mx-auto d-block"/>
             </Modal.Body>
         </Modal>
 
@@ -424,14 +490,30 @@ export const artistVendorsPage = {
                 </Card>
             </Col>
             </>)}
-      </Row>
+        </Row>
 
         <h4 className="mt-2">Vendors</h4>
+        <h5>Vendors Booth Map</h5>
+        <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
+        <VendorsMapModal />
+
+        <h5>Non-Vendors Booths</h5>
+        <p>These booths aren't actually vendors booths but due to their close proximity to the rest of the vendors are also listed here:</p>
+        <ul>
+            <li><b>Booth V1</b>: TouhouFest Info Booth</li>
+            <li><b>Booth V2</b>: Info Booth/Weapons Check</li>
+            <li><b>Booth V3</b>: Cosplay Repair</li>
+            <li><b>Booth V4</b>: Cosplay Ambassadors</li>
+            <li><b>Booth V5</b>: Punderfull's Booth</li>
+        </ul>
+        <h5>List of Vendors</h5>
+        <p>The majority of the entries listed below are in vendors (denoted "Booth VXX"). A select few are located elsewhere, either at the Ken Miller Rec Center (<CircledBullets argument="12"/> Community Booths) or the Entry Foyer (<CircledBullets argument="11"/> Music Booths).</p>
         <Row xs={2} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
                 <Card>
-                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
+                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
                         {/* TODO: add vendor locations + map once they become available */}

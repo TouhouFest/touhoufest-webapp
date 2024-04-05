@@ -131,6 +131,16 @@ function MapModals(){
             </Modal.Body>
         </Modal>
 
+        <p>Summary of listed booths in Entry Plaza:</p>
+        <ul>
+            <li><b>Booth V1</b>: TouhouFest Info Booth</li>
+            <li><b>Booth V2</b>: Info Booth/Weapons Check</li>
+            <li><b>Booth V3</b>: Cosplay Repair</li>
+            <li><b>Booth V4</b>: Cosplay Ambassadors</li>
+            <li><b>Booth V5</b>: Punderfull's Booth</li>
+            <li><b>Booth V6 ~ Booth V15</b>: Vendors</li>
+        </ul>
+
     </>);
 }
 
