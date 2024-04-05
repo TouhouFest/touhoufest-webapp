@@ -38,7 +38,48 @@ export const cosplayPage = {
             <Figure.Caption>Entry Plaza</Figure.Caption>
         </Figure>
         <h4>Cosplay Meetups/Photoshoots</h4>
-        <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
+        <Accordion className="my-2">
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>Cosplay Guidelines</Accordion.Header>
+                <Accordion.Body>
+                    <p>Costumes must be appropriate to wear in public. </p>
+
+                    <ul>
+                        <li>No bare feet, some form of foot covering must be worn.</li>
+
+                        <li>No hateful imagery should be included in cosplay for any reason. Cosplays must not be worn to agitate or intentionally offend other attendees.</li>
+
+                        <ul>
+                            <li>Examples include Nazi/SS imagery, KKK imagery, blackface, etc</li>
+                        </ul>
+
+                        <li>No props/costume pieces longer than six feet. Cosplays must not be big enough to block doorways!</li>
+
+                        <li>No excessively shedding props or costumes (Use of glitter, feathers, etc).</li>
+
+                        <li>No blades or metal props. PVC and wood are fine!</li>
+
+                        <li>Any weapons props must be taken to a prop check to be checked and tagged.</li>
+
+                        <ul>
+                            <li>Prop firearms must be clearly fake (Orange tip, painted with vibrant colors), be completely non-functional, and have no moving parts.</li>
+
+                                <ul>
+                                    <li>These rules extend to nerf and other foam dart guns, make sure they cannot shoot and have no parts that can move!</li>
+                                </ul>
+
+                            <li>Blades must not be sharp enough to hurt anyone</li>
+
+                            <li>Bow props must have no string between them, and arrow props must be non-functional.</li>
+
+                            <li>Nunchucks are not permitted</li>
+                        </ul>
+                    </ul>
+
+                </Accordion.Body>
+            </Accordion.Item>
+            </Accordion>
+                <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
         <Card className="th10">
             <Card.Body className="text-center">
                 <Card.Title>The Faithful Gods</Card.Title>

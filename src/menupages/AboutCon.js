@@ -14,6 +14,7 @@ import Ratio from 'react-bootstrap/Ratio';
 import con_banner from '../con_banner.png';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Accordion } from 'react-bootstrap';
 
 export const aboutConPage = {
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About the Convention</>),
@@ -43,6 +44,33 @@ export const aboutConPage = {
       <p className="mt-3 mb-0">
         A Touhou fan event being held on April 27-28th, 2024, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
+      <Accordion className="mt-2">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>General Convention Guidelines</Accordion.Header>
+        <Accordion.Body>
+          <p>TouhouFest strives to be a fun, family friendly event to be enjoyed by Touhou fans of all ages and backgrounds. We ask that you keep swearing and any explicitly adult behavior to a minimum.</p>
+          <ol>
+            <li>Please be kind and courteous to others, including fellow attendees. We want you to enjoy the event, but remember others also wish to enjoy the event as well. Be aware of your behavior and how it affects your surroundings.</li>
+
+            <li>Be respectful and courteous to TouhouFest Staff. Staff will try and assist when they can, but please remember that we are people as well as volunteers and not professionals.</li>
+
+            <li>Remember that cosplayers are people too! Treat them with respect like you would any other person!</li>
+
+            <li>Always make sure to ask for permission before taking any photographs of others (including cosplayers and cosplay ambassadors) at the convention.</li>
+
+            <li>Please avoid any play-fighting with cosplay props.</li>
+
+            <li>Please pick up after yourselves and try to maintain cleanliness. We hope to return to the venues, and keeping it in the same condition we arrived in will help greatly. </li>
+
+            <li>Do not harass or agitate other attendees for any reason. Even if you think you’re being playful, it lessens the experience for everyone involved. Harassment of others, including staff, may be punishable. </li>
+
+            <li>Suggestions and feedback are welcome, and TouhouFest encourages it. But please remember to go through the proper channels, such as the suggestion and feedback channel on discord, feedback form on website, or letting TouhouFest staff know.   </li>
+
+            <li>Above all, please enjoy and have fun at our events! We look forward to seeing you there!</li>
+          </ol>
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
     </>
   ),
 }
