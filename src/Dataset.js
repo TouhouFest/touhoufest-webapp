@@ -238,6 +238,8 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     let daynum = -1;
     let num_evts_ctr = 0;
 
+    let hourfxn = null;
+
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
 
@@ -266,6 +268,14 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
           </ListGroup.Item>
         );
         num_evts_ctr = 0;
+      }
+
+      let floortime = startjs.minute(0);
+      if(hourfxn === null || hourfxn.diff(floortime) !== 0){
+        output.push(
+          <><ListGroup.Item className="text-center small newtimes">{floortime.format("h:mm A")}</ListGroup.Item></>
+        );
+        hourfxn = floortime;
       }
 
       num_evts_ctr += 1;

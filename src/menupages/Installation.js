@@ -16,6 +16,9 @@ import Col from 'react-bootstrap/Col';
 import androidchrome01 from "./../images/installation/androidchrome01.jpg";
 import androidchrome02 from "./../images/installation/androidchrome02.jpg";
 import androidchrome03 from "./../images/installation/androidchrome03.jpg";
+import androidfirefox01 from "./../images/installation/androidfirefox01.jpg";
+import androidfirefox02 from "./../images/installation/androidfirefox02.jpg";
+import androidfirefox03 from "./../images/installation/androidfirefox03.jpg";
 import ios from "./../images/installation/ios.webp";
 import Accordion from 'react-bootstrap/Accordion';
 
@@ -48,8 +51,11 @@ export const installationPage = {
           <Accordion.Body>
             <ol>
               <li>Tap the <FontAwesomeIcon icon={faEllipsisVertical}/> button to bring up additional options; it should reside on the upper right portion of your window</li>
+              <Image src={androidfirefox01} rounded fluid className="my-2"/>
               <li>Tap the option named <b>Install</b></li>
+              <Image src={androidfirefox02} rounded fluid className="my-2"/>
               <li>The below prompt (or something similar) should appear. Tap the <b>Add</b> button</li>
+              <Image src={androidfirefox03} rounded fluid className="my-2"/>
               <li>At this point, the TouhouFest icon should appear on your phone's home screen. Tap it and it will open and function just like a regular app</li>
             </ol>
           </Accordion.Body>

@@ -220,3 +220,7 @@ body{
 .event-item .datedisplay {
   display: none;
 }
+
+.newtimes {
+  background-color: #ffff99;
+}
