@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3210ceb5.css",
-    "main.js": "/static/js/main.b859d1b1.js",
+    "main.js": "/static/js/main.17e7583a.js",
     "static/js/787.7ff3c85a.chunk.js": "/static/js/787.7ff3c85a.chunk.js",
     "static/media/assemblyhall.png": "/static/media/assemblyhall.1d93428891a097fada60.png",
     "static/media/cosplaybanner.jpg": "/static/media/cosplaybanner.f125b96c5ac870865741.jpg",
@@ -38,6 +38,8 @@
     "static/media/cosplayrepair.jpg": "/static/media/cosplayrepair.86908f89e8595e675c88.jpg",
     "static/media/violetreverie.jpg": "/static/media/violetreverie.c0632e4f3c5904293612.jpg",
     "static/media/touhoufest.jpg": "/static/media/touhoufest.3466f89d43772e64c73a.jpg",
+    "static/media/androidfirefox02.jpg": "/static/media/androidfirefox02.4aad5faf9cacad993b45.jpg",
+    "static/media/androidfirefox01.jpg": "/static/media/androidfirefox01.99cc40a1787c1e23adbb.jpg",
     "static/media/pinewindgarden.jpg": "/static/media/pinewindgarden.6e394f80fbecd7607b85.jpg",
     "static/media/androidchrome01.jpg": "/static/media/androidchrome01.035fa2cddd33a2cec5e2.jpg",
     "static/media/shihori.jpg": "/static/media/shihori.b63b49b824de2521262f.jpg",
@@ -50,6 +52,7 @@
     "static/media/TAM.JPG": "/static/media/TAM.1adeca3d0d2d6049934c.JPG",
     "static/media/grillboss.jpg": "/static/media/grillboss.a5cb8f1ec0117fcb1b75.jpg",
     "static/media/2ruproject.png": "/static/media/2ruproject.180763ab9fb848aa4703.png",
+    "static/media/androidfirefox03.jpg": "/static/media/androidfirefox03.d2eedbed8c17ef98c62d.jpg",
     "static/media/BRW.jpg": "/static/media/BRW.f96d6468e47b8132fcf7.jpg",
     "static/media/a-one.png": "/static/media/a-one.60070f908d789ec38388.png",
     "static/media/pumpking.jpg": "/static/media/pumpking.da9f00d37804eec819da.jpg",
@@ -61,6 +64,7 @@
     "static/media/ckitten.jpg": "/static/media/ckitten.46724987ea352f26e65f.jpg",
     "static/media/gensouskydrift.jpg": "/static/media/gensouskydrift.98d707e7cf6e6723e922.jpg",
     "static/media/kenmiller.webp": "/static/media/kenmiller.6a2f5bfd3d5884119c45.webp",
+    "static/media/vendorsmap.png": "/static/media/vendorsmap.587160c3f05f3ca52672.png",
     "static/media/nono.jpg": "/static/media/nono.e32d3b3821dce16f8373.jpg",
     "static/media/feeyaart.jpg": "/static/media/feeyaart.ea047f071d9874f7b94d.jpg",
     "static/media/gruvysgudies.jpg": "/static/media/gruvysgudies.acc51d1cd174a327b0bc.jpg",
@@ -69,15 +73,18 @@
     "static/media/odyssey.jpg": "/static/media/odyssey.5b14aca741a6b5f24944.jpg",
     "static/media/essukaa.webp": "/static/media/essukaa.64a86844d495bd6ffa28.webp",
     "service-worker.js": "/service-worker.js",
-    "static/media/events.csv": "/static/media/events.d2680fb4093931bf6545.csv",
+    "static/media/maidacademy.webp": "/static/media/maidacademy.129d992c2e1b0919c3c6.webp",
+    "static/media/loveboxf.jpg": "/static/media/loveboxf.d449bb50a7e3a39a13d7.jpg",
+    "static/media/popumai.webp": "/static/media/popumai.dfe48afdbe7707c11e4e.webp",
+    "static/media/events.csv": "/static/media/events.87b349a63a9b5bde23ce.csv",
     "static/media/xiaobb.avif": "/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/index.html",
     "main.3210ceb5.css.map": "/static/css/main.3210ceb5.css.map",
-    "main.b859d1b1.js.map": "/static/js/main.b859d1b1.js.map",
+    "main.17e7583a.js.map": "/static/js/main.17e7583a.js.map",
     "787.7ff3c85a.chunk.js.map": "/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3210ceb5.css",
-    "static/js/main.b859d1b1.js"
+    "static/js/main.17e7583a.js"
   ]
 }
