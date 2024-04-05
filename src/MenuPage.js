@@ -1,7 +1,6 @@
 // generalized Offcanvas to show pages derived from the menu
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { useState } from 'react';
 
 export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     
