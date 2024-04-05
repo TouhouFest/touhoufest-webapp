@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import torinoplaza from "./../images/torinoplaza.jpg";
-import assemblyhall from "./../images/assemblyhall.png";
+import assemblyhall from "./../images/assemblyhall.jpg";
 import kenmiller from "./../images/kenmiller.webp";
 import pinewindgarden from "./../images/pinewindgarden.jpg";
 import toyota from "./../images/toyota.jpg";

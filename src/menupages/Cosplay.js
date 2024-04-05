@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
 import pinewindgarden from './../images/pinewindgarden.jpg';
 import cosplaybanner from './../images/cosplaybanner.jpg';
-import assemblyhall from "./../images/assemblyhall.png";
+import assemblyhall from "./../images/assemblyhall.jpg";
 import medukitty from "./../images/medukitty.jpg";
 import violetreverie from "./../images/violetreverie.jpg";
 import cosplayrepair from "./../images/cosplayrepair.jpg";
