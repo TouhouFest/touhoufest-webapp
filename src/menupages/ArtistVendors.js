@@ -61,6 +61,14 @@ import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { CircledBullets } from '../Utils';
+import torinoplazamap from "./../images/torinoplazamap.png";
+import crescentia from "./../images/artistalley/crescentia.jpg";
+import shihori from "./../images/shihori.jpg";
+import odyssey from "./../images/odyssey.jpg";
+import tamusic from "./../images/TAM.JPG";
+import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
+import lemoncreme from "./../images/artistalley/lemoncreme.webp";
+import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
 
 let artistlist = [
     {
@@ -304,36 +312,12 @@ let vendors = [
         "location": "Booth V11"
     },
     {
-        "name": "Neo Sanctum",
-        "image": neosanctum,
-        "role": "Music",
-        "website": "https://neo-sanctum.com/home",
-        "description": "VENDOR",
-        "location": "Music Booths"
-    },
-    {
-        "name": "Galaxian Recordings",
-        "image": galaxianrecordings,
-        "role": "Music",
-        "website": "https://galaxianrecordings.bandcamp.com/",
-        "description": "VENDOR",
-        "location": "Music Booths"
-    },
-    {
         "name": "Lyrica Live",
         "image": lyricalive,
         "role": "Music",
         "website": "https://lyricalive.carrd.co/",
         "description": "VENDOR",
         "location": "Booth V09"
-    },
-    {
-        "name": "Twin Phoenix Interactive",
-        "image": twinphoenix,
-        "role": "Game Dev",
-        "website": "https://twinphoenixinteractive.com/",
-        "description": "VENDOR",
-        "location": "Community Booths"
     },
     {
         "name": "Dichroic Purpillion",
@@ -377,6 +361,120 @@ let vendors = [
     }
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
+
+let fanmusicgames = [
+    {
+        "name": "Neo Sanctum",
+        "image": neosanctum,
+        "role": "Fan Music",
+        "website": "https://neo-sanctum.com/home",
+        "description": "VENDOR",
+        "location": "Booth MC2"
+    },
+    {
+        "name": "Galaxian Recordings",
+        "image": galaxianrecordings,
+        "role": "Fan Music",
+        "website": "https://galaxianrecordings.bandcamp.com/",
+        "description": "VENDOR",
+        "location": "Booth MC3"
+    },
+    {
+        "name": "Twin Phoenix Interactive",
+        "image": twinphoenix,
+        "role": "Fangames",
+        "website": "https://twinphoenixinteractive.com/",
+        "description": "VENDOR",
+        "location": "Booth FG1"
+    },
+    {
+        "name": "Fire Land",
+        "image": placeholder,
+        "role": "Fangames",
+        "website": "",
+        "description": "",
+        "location": "Booth FG2"
+    },
+    {
+        "name": "crescentia",
+        "image": crescentia,
+        "role": "Fan Music",
+        "website": "https://soundcloud.com/crescentia",
+        "description": "",
+        "location": "Booth MC1"
+    },
+    {
+        "name": "NekoMofu Jinja",
+        "image": placeholder,
+        "website": "",
+        "description": "",
+        "location": "Booth MC4",
+        "role": "Fan Music"
+    }
+];
+fanmusicgames.sort((a,b) => a["location"].localeCompare(b["location"]));
+
+let plazatables = [
+    {
+        "name": "Shihori",
+        "image": shihori,
+        "role": "Guest",
+        "website": "https://linktr.ee/shihorimusic",
+        "location": "Booth FB1"
+    },
+    {
+        "name": "Odyssey",
+        "image": odyssey,
+        "role": "Guest",
+        "website": "https://linktr.ee/odysseyeurobeat",
+        "location": "Booth FB2"
+    },
+    {
+        "name": "TAMUSIC",
+        "image": tamusic,
+        "role": "Guest",
+        "website": "https://twitter.com/tamusic",
+        "location": "Booth FB3"
+    },
+    {
+        "name": "Goen Kizuna / Youkai Mountain",
+        "role": "Festival Booth",
+        "image": youkaimountain,
+        "website": "https://twitter.com/YoukaiMountain",
+        "location": "Booth FB6"
+    },
+    {
+        "name": "Lemon-Crème Studios",
+        "role": "Festival Booth",
+        "image": lemoncreme,
+        "website": "https://www.etsy.com/shop/LemonCremeStudios",
+        "location": "Booth FB7"
+    },
+    {
+        "name": "Touhou Hobby Society",
+        "role": "Festival Booth",
+        "image": placeholder,
+        "website": "",
+        "location": "Booth FB8"
+    },
+    {
+        "name": "Maid Academy Cafe",
+        "image": maidacademy,
+        "role": "Vendor",
+        "website": "https://linktr.ee/maidacademy",
+        "description": "",
+        "location": "Booth FB5"
+    },
+    {
+        "name": "Underworld Izakaya",
+        "image": underworldizakaya,
+        "role": "Festival Booth",
+        "website": "https://twitter.com/MystiaTorrance",
+        "description": "",
+        "location": "Booth FB4"
+    }
+];
+plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let official_artists = [
     {
@@ -433,6 +531,25 @@ function VendorsMapModal() {
             </Modal.Body>
         </Modal>
 
+    </>);
+}
+
+function ShrineMapModal() {
+    const [showTorinoMap, setShowTorinoMap] = useState(false);
+    return (<>
+        <Figure>
+            <Figure.Image src={torinoplazamap} fluid onClick={() => setShowTorinoMap(true)}/>
+            <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
+        </Figure>
+
+        <Modal show={showTorinoMap} size="lg" onHide={() => setShowTorinoMap(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Vendors at Torino Plaza</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={torinoplazamap} fluid className="mx-auto d-block"/>
+            </Modal.Body>
+        </Modal>
     </>);
 }
 
@@ -523,8 +640,49 @@ export const artistVendorsPage = {
                 </Card>
             </Col>
             </>)}
- 
        </Row>
+
+       <h4 className="mt-2">Music, Fangame, & Shrine Tables</h4>
+       <h5>Booth Map</h5>
+        <p>Tap to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
+        <ShrineMapModal />
+       <h5>List of Participants</h5>
+       <p>Booths FT1 ~ FT8 in the Entry Foyer are <CircledBullets argument="12"/> Community Booths and are open to public use.</p>
+       <h6>Ken Miller Rec Center</h6>
+        <Row xs={2} className="g-3 justify-content-center">
+            {fanmusicgames.map((artist, i) => <>
+             <Col>
+                <Card>
+                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
+                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
+                    <ListGroup className="list-group-flush">
+                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                        {/* TODO: add vendor locations + map once they become available */}
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                    </ListGroup>
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
+                </Card>
+            </Col>
+            </>)}
+       </Row>
+       <h6 className="mt-3">Torino Plaza</h6>
+        <Row xs={2} className="g-3 justify-content-center">
+            {plazatables.map((artist, i) => <>
+             <Col>
+                <Card>
+                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
+                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
+                    <ListGroup className="list-group-flush">
+                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                        {/* TODO: add vendor locations + map once they become available */}
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                    </ListGroup>
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
+                </Card>
+            </Col>
+            </>)}
+       </Row>
+
 
     </>),
 }

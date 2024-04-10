@@ -16,11 +16,13 @@ import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import { CircledBullets } from '../Utils';
+import torinoplazamap from "./../images/torinoplazamap.png";
 
 function MapModals(){
     const [showOuter, setShowOuter] = useState(false);
     const [showInner, setShowInner] = useState(false);
     const [showVendors, setShowVendors] = useState(false);
+    const [showTorinoMap, setShowTorinoMap] = useState(false);
 
     return (<>
         <p>Tap to focus in/zoom on either map as needed.</p>
@@ -69,7 +71,7 @@ function MapModals(){
         
         <b>Entry Foyer</b>
         <ul className="list-unstyled">
-            <li><CircledBullets argument="12"/> Community Booths</li>
+            <li><CircledBullets argument="12"/> Community Booths (open to public use!)</li>
         </ul>
 
         <b>Assembly Hall</b>
@@ -116,6 +118,7 @@ function MapModals(){
         </Modal>
 
         <h4>Vendors Map</h4>
+        <h5>Entry Plaza Map</h5>
         <p>The entire below map is enclosed in the Entry Plaza. (<CircledBullets argument="3"/>) Nearby locations are also labeled.</p>
         <Figure>
             <Figure.Image src={vendorsmap} fluid onClick={() => setShowVendors(true)}/>
@@ -132,15 +135,45 @@ function MapModals(){
         </Modal>
 
         <p>Summary of listed booths in Entry Plaza:</p>
+        <p className="mb-1"><CircledBullets argument="6"/> Info Booth | Lost and Found</p>
         <ul>
-            <li><b>Booth V1</b>: TouhouFest Info Booth</li>
-            <li><b>Booth V2</b>: Info Booth/Weapons Check</li>
-            <li><b>Booth V3</b>: Cosplay Repair</li>
-            <li><b>Booth V4</b>: Cosplay Ambassadors</li>
-            <li><b>Booth V5</b>: Punderfull's Booth</li>
-            <li><b>Booth V6 ~ Booth V15</b>: Vendors</li>
+            <li><b>V1</b>: TouhouFest Info Booth</li>
+            <li><b>V2</b>: Info Booth/Weapons Check</li>
+        </ul>
+        <p className="mb-1"><CircledBullets argument="5"/> Cosplay Booths & Cosplay Repair</p>
+        <ul>
+            <li><b>V3</b>: Cosplay Repair</li>
+            <li><b>V4</b>: Cosplay Ambassadors</li>
+            <li><b>V5</b>: Punderfull's Booth</li>
+        </ul>
+        <p className="mb-1"><CircledBullets argument="3"/> Vendors</p>
+        <ul>
+            <li><b>V6 ~ V15</b>: Vendors</li>
         </ul>
 
+        <h5>Torino Plaza Map</h5>
+        <p>The below map is enclosed within the Torino Plaza (<CircledBullets argument="7"/> and <CircledBullets argument="8"/>) and also shows locations of nearby areas at the convention.</p>
+        <Figure>
+            <Figure.Image src={torinoplazamap} fluid onClick={() => setShowTorinoMap(true)}/>
+            <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
+        </Figure>
+
+        <Modal show={showTorinoMap} size="lg" onHide={() => setShowTorinoMap(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Vendors at Torino Plaza</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={torinoplazamap} fluid className="mx-auto d-block"/>
+            </Modal.Body>
+        </Modal>
+        <p>Summary of listed booths in Torino Plaza:</p>
+        <ul>
+            <li><b>FT1 ~ FT8</b>: <CircledBullets argument="12"/> Community Booths</li>
+            <li><b>FG1 ~ FG7</b>: <CircledBullets argument="10"/> Fan Games</li>
+            <li><b>MC1 ~ MC4</b>: <CircledBullets argument="11"/> Music Booths</li>
+            <li><b>FB1 ~ FB3</b>: <CircledBullets argument="7"/> Guest Booths</li>
+            <li><b>FB4 ~ FB8</b>: Shrine Tables</li>
+        </ul>
     </>);
 }
 
