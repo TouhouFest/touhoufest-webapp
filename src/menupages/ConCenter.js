@@ -16,11 +16,13 @@ import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import { CircledBullets } from '../Utils';
+import torinoplazamap from "./../images/torinoplazamap.png";
 
 function MapModals(){
     const [showOuter, setShowOuter] = useState(false);
     const [showInner, setShowInner] = useState(false);
     const [showVendors, setShowVendors] = useState(false);
+    const [showTorinoMap, setShowTorinoMap] = useState(false);
 
     return (<>
         <p>Tap to focus in/zoom on either map as needed.</p>
@@ -116,6 +118,7 @@ function MapModals(){
         </Modal>
 
         <h4>Vendors Map</h4>
+        <h5>Entry Plaza Map</h5>
         <p>The entire below map is enclosed in the Entry Plaza. (<CircledBullets argument="3"/>) Nearby locations are also labeled.</p>
         <Figure>
             <Figure.Image src={vendorsmap} fluid onClick={() => setShowVendors(true)}/>
@@ -141,6 +144,21 @@ function MapModals(){
             <li><b>Booth V6 ~ Booth V15</b>: Vendors</li>
         </ul>
 
+        <h5>Torino Plaza Map</h5>
+        <p>The below map is enclosed within the Torino Plaza (<CircledBullets argument="7"/> and <CircledBullets argument="8"/>) and also shows locations of nearby areas at the convention.</p>
+        <Figure>
+            <Figure.Image src={torinoplazamap} fluid onClick={() => setShowTorinoMap(true)}/>
+            <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
+        </Figure>
+
+        <Modal show={showTorinoMap} size="lg" onHide={() => setShowTorinoMap(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Vendors at Torino Plaza</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={torinoplazamap} fluid className="mx-auto d-block"/>
+            </Modal.Body>
+        </Modal>
     </>);
 }
 
