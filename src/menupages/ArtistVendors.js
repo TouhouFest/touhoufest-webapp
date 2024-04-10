@@ -624,7 +624,7 @@ export const artistVendorsPage = {
             <li><b>Booth V5</b>: Punderfull's Booth</li>
         </ul>
         <h5>List of Vendors</h5>
-        <p>The majority of the entries listed below are in vendors (denoted "Booth VXX"). A select few are located elsewhere, either at the Ken Miller Rec Center (<CircledBullets argument="12"/> Community Booths) or the Entry Foyer (<CircledBullets argument="11"/> Music Booths).</p>
+        <p>The majority of the entries listed below are in vendors (denoted "Booth VXX").</p>
         <Row xs={2} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
