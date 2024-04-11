@@ -233,10 +233,10 @@ let artistlist = [
         "description": ""
     },
     {
-        "name": "Idunrllyknow",
-        "image": placeholder,
+        "name":  <>Idunrllyknow / Guru&shy;Guru&shy;Maru</>,
+        "image": gurugurumaru,
         "location": "Booth D6",
-        "website": "",
+        "website": "https://twitter.com/GuruGuruMaru_",
         "description": ""
     },
     {
@@ -294,14 +294,6 @@ let vendors = [
         "website": "",
         "description": "",
         "location": "Booth V12"
-    },
-    {
-        "name": <>Guru&shy;Guru&shy;Maru</>,
-        "image": gurugurumaru,
-        "role": "Artist",
-        "website": "https://twitter.com/GuruGuruMaru_",
-        "description": "",
-        "location": "Community Booths"
     },
     {
         "name": "Artist Collaboration Experience (ACE)",
