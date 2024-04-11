@@ -510,7 +510,7 @@ function VendorsMapModal() {
     const [showVendors, setShowVendors] = useState(false);
     return (<>
         <Figure>
-            <Figure.Image src={vendorsmap} fluid onClick={() => setShowVendors(true)}/>
+            <Figure.Image src={vendorsmap} fluid rounded onClick={() => setShowVendors(true)}/>
             <Figure.Caption>Map of Vendors</Figure.Caption>
         </Figure>
 
@@ -530,7 +530,7 @@ function ShrineMapModal() {
     const [showTorinoMap, setShowTorinoMap] = useState(false);
     return (<>
         <Figure>
-            <Figure.Image src={torinoplazamap} fluid onClick={() => setShowTorinoMap(true)}/>
+            <Figure.Image src={torinoplazamap} fluid rounded onClick={() => setShowTorinoMap(true)}/>
             <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
         </Figure>
 
