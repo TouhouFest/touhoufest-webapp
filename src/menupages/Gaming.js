@@ -70,7 +70,7 @@ export const gamingPage = {
             <li>Touhou 15.5 Antimony of Common Flowers</li>
         </ul>
         <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2024/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
-        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest already closed on April 25th, 2024.</p>
+        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on April 25th, 2024.</p>
 
         <h5>Prizes</h5>
         <Card>
