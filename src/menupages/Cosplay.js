@@ -271,6 +271,26 @@ export const cosplayPage = {
                             <li>Kutaka</li>
                             <li>Yuuma</li>
                         </ul>
+                        <p><strong>Touhou 19 &quot;Unfinished Dream of All Living Ghost&quot;</strong></p>
+                        <ul>
+                            <li>Sanae</li>
+                            <li>Ran</li>
+                            <li>Aunn</li>
+                            <li>Nazrin</li>
+                            <li>Seiran</li>
+                            <li>Rin</li>
+                            <li>Tsukasa</li>
+                            <li>Mamizou</li>
+                            <li>Yachie</li>
+                            <li>Saki</li>
+                            <li>Yuuma</li>
+                            <li>Suika</li>
+                            <li>Son Biten</li>
+                            <li>Enoko</li>
+                            <li>Chiyari</li>
+                            <li>Hisami</li>
+                            <li>Zanmu</li>
+                        </ul>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
