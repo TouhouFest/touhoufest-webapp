@@ -126,7 +126,7 @@ export const cosplayPage = {
                             <li>Kogasa</li>
                             <li>Yoshika</li>
                             <li>Seiga</li>
-                            <li>Tokiko</li>
+                            <li>Tojiko</li>
                             <li>Futo</li>
                             <li>Nue</li>
                             <li>Mamizou</li>
