@@ -143,7 +143,22 @@ export const cosplayPage = {
                             <li>Satono &amp; Mai</li>
                             <li>Okina</li>
                         </ul>
-
+                        <p><strong>Touhou 18 &quot;Unconnected Marketeers&quot;</strong></p>
+                        <ul>
+                            <li>Sakuya</li>
+                            <li>Sanae</li>
+                            <li>Mike</li>
+                            <li>Takane</li>
+                            <li>Sanyo</li>
+                            <li>Misumaru</li>
+                            <li>Tsukasa</li>
+                            <li>Megumu</li>
+                            <li>Chimata</li>
+                            <li>Momoyo</li>
+                            <li>Murasa</li>
+                            <li>Yuyuko</li>
+                            <li>Youmu</li>
+                        </ul>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
