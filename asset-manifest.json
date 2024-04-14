@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3210ceb5.css",
-    "main.js": "/static/js/main.b5eef744.js",
+    "main.js": "/static/js/main.dd546262.js",
     "static/js/787.7ff3c85a.chunk.js": "/static/js/787.7ff3c85a.chunk.js",
     "static/media/torinoplazamap.png": "/static/media/torinoplazamap.eb7efc81bc74d82f27c1.png",
     "static/media/con_banner.png": "/static/media/con_banner.1244a221d953ebee1171.png",
@@ -85,11 +85,11 @@
     "static/media/xiaobb.avif": "/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/index.html",
     "main.3210ceb5.css.map": "/static/css/main.3210ceb5.css.map",
-    "main.b5eef744.js.map": "/static/js/main.b5eef744.js.map",
+    "main.dd546262.js.map": "/static/js/main.dd546262.js.map",
     "787.7ff3c85a.chunk.js.map": "/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3210ceb5.css",
-    "static/js/main.b5eef744.js"
+    "static/js/main.dd546262.js"
   ]
 }
