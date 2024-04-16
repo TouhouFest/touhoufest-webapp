@@ -69,6 +69,13 @@ import tamusic from "./../images/TAM.JPG";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
 import lemoncreme from "./../images/artistalley/lemoncreme.webp";
 import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
+import andrewfm from "./../images/artistalley/andrewfm.png";
+import animelosangeles from "./../images/artistalley/animelosangeles.jpg";
+import bowersmuseum from "./../images/artistalley/bowersmuseum.jpg";
+import gensokyoradio from "./../images/artistalley/gensokyoradio.jpg";
+import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
+import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
+import roninexpo from "./../images/artistalley/roninexpo.png";
 
 let artistlist = [
     {
@@ -402,6 +409,20 @@ let fanmusicgames = [
         "description": "",
         "location": "Booth MC4",
         "role": "Fan Music"
+    },
+    {
+        "name": "AndrewFM",
+        "image": andrewfm,
+        "website": "https://eggzero.tumblr.com/",
+        "location": "Booth FG3",
+        "role": "Fangames"   
+    },
+    {
+        "name": "Touhou Game Dev",
+        "image": placeholder,
+        "website": "",
+        "location": "Booth FG4 ~ FG7",
+        "role": "Fangames"
     }
 ];
 fanmusicgames.sort((a,b) => a["location"].localeCompare(b["location"]));
@@ -467,6 +488,53 @@ let plazatables = [
     }
 ];
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
+
+let communitytables = [
+    {
+        "name": "Anime Los Angeles",
+        "image": animelosangeles,
+        "website": "https://animelosangeles.org/",
+        "location": "Booth FT1"
+    },
+    {
+        "name": "Bowers Museum",
+        "image": bowersmuseum,
+        "website": "https://www.bowers.org/",
+        "location": "Booth FT2",
+    },
+    {
+        "name": "Gensokyo Radio",
+        "image": gensokyoradio,
+        "website": "https://gensokyoradio.net/",
+        "location": "Booth FT3"
+    },
+    {
+        "name": "LA Idol Matsuri",
+        "image": idolmatsuri,
+        "website": "https://www.eventbrite.com/e/la-idol-matsuri-2024-tickets-785669607947",
+        "location": "Booth FT4"
+    },
+    {
+        "name": "Touhou: ONTJ",
+        "image": placeholder,
+        "website": "",
+        "location": "Booth FT5"
+    },
+    {
+        "name": "Rose City AniFest",
+        "image": rosecityanifest,
+        "website": "https://www.instagram.com/rosecityanifest/?hl=en",
+        "location": "Booth FT6"
+    },
+    {
+        "name": "Ronin-Expo",
+        "image": roninexpo,
+        "website": "https://www.ronin-expo.org/",
+        "location": "Booth FT7"
+    },
+
+];
+communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let official_artists = [
     {
@@ -639,8 +707,22 @@ export const artistVendorsPage = {
         <p>Tap to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
         <ShrineMapModal />
        <h5>List of Participants</h5>
-       <p>Booths FT1 ~ FT8 in the Entry Foyer are <CircledBullets argument="12"/> Community Booths and are open to public use.</p>
-       <h6>Ken Miller Rec Center</h6>
+        <h6>Entry Foyer (Community Tables)</h6>
+        <Row xs={2} className="g-3 justify-content-center">
+            {communitytables.map((artist, i) => <>
+             <Col>
+                <Card>
+                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                    <ListGroup className="list-group-flush">
+                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                    </ListGroup>
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                </Card>
+            </Col>
+            </>)}
+        </Row>
+       <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
         <Row xs={2} className="g-3 justify-content-center">
             {fanmusicgames.map((artist, i) => <>
              <Col>
@@ -657,7 +739,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
        </Row>
-       <h6 className="mt-3">Torino Plaza</h6>
+       <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
         <Row xs={2} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
