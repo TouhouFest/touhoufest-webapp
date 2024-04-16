@@ -249,17 +249,25 @@ export const cosplayPage = {
                             <li>Reimu</li>
                             <li>Marisa</li>
                         </ul>
-                        <p><strong>Touhou 15 &quot;Legacy of Lunatic Kingdom&quot;</strong> </p>
+                        <p><strong>Touhou 11 &quot;Subterranean Animism&quot;</strong></p>
                         <ul>
+                            <li>Alice</li>
+                            <li>Nitori</li>
+                            <li>Patchouli</li>
+                            <li>Suika</li>
+                            <li>Yukari</li>
+                            <li>Aya</li>
+                            <li>Kisume</li>
+                            <li>Yamame</li>
+                            <li>Parsee</li>
+                            <li>Yuugi</li>
+                            <li>Satori</li>
+                            <li>Orin</li>
+                            <li>Okuu</li>
                             <li>Sanae</li>
-                            <li>Reisen</li>
-                            <li>Seiran</li>
-                            <li>Ringo</li>
-                            <li>Doremy</li>
-                            <li>Sagume</li>
-                            <li>Clownpiece</li>
-                            <li>Junko</li>
-                            <li>Hecatia</li>
+                            <li>Koishi</li>
+                            <li>Kanako</li>
+                            <li>Suwako</li>
                         </ul>
                         <p><strong>Touhou 17 &quot;Wily Beast and Weakest Creature&quot;</strong></p>
                         <ul>
