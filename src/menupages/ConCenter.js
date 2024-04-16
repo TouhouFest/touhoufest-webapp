@@ -71,7 +71,7 @@ function MapModals(){
         
         <b>Entry Foyer</b>
         <ul className="list-unstyled">
-            <li><CircledBullets argument="12"/> Community Booths (open to public use!)</li>
+            <li><CircledBullets argument="12"/> Community Booths</li>
         </ul>
 
         <b>Assembly Hall</b>
