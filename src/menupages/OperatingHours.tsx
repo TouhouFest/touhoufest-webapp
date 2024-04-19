@@ -37,6 +37,6 @@ export const operatingHours= {
             <li>Saturday: 9:30AM - 10:30 PM</li>
             <li>Sunday: 9:00 AM - 5:00 PM</li>
         </ul>
-        <p class="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
+        <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
     </>),
 }
