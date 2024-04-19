@@ -93,4 +93,7 @@ export function CircledBullets({argument}){
     </>);
 }
 
+// location imports 
 export const con_banner = require("./con_banner.png");
+export const toyota = require("./images/toyota.jpg");
+export const kenmiller = require("./images/kenmiller.webp");
