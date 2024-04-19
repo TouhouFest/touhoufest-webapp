@@ -76,6 +76,7 @@ import gensokyoradio from "./../images/artistalley/gensokyoradio.jpg";
 import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
 import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
 import roninexpo from "./../images/artistalley/roninexpo.png";
+import kotori from "./../images/artistalley/kotori.jpg";
 
 let artistlist = [
     {
@@ -298,7 +299,7 @@ let vendors = [
         "name": "Art With Fred",
         "image": fred,
         "role": "Artist",
-        "website": "",
+        "website": "https://www.tiktok.com/@artwfred",
         "description": "",
         "location": "Booth V12"
     },
@@ -308,7 +309,7 @@ let vendors = [
         "role": "Artist",
         "website": "https://www.artcollabexp.com/",
         "description": "VENDOR",
-        "location": "Booth V11"
+        "location": "Booth V10"
     },
     {
         "name": "Lyrica Live",
@@ -351,12 +352,12 @@ let vendors = [
         "location": "Booth V07"
     },
     {
-        "name": "Showcas3",
-        "image": placeholder,
+        "name": "Kotori's Shop / Showcas3",
+        "image": kotori,
         "role": "Merch",
-        "website": "",
+        "website": "https://www.instagram.com/kotoris_shop_by_y/",
         "description": "",
-        "location": "Booth V10"
+        "location": "Booth V11"
     }
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
