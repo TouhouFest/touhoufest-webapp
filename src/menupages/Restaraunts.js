@@ -7,10 +7,47 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { Card } from 'react-bootstrap';
+import okamoto from "./../images/okamoto.jpg";
+import mexibachi from "./../images/mexibachi.jpg";
 
 export const restarauntsPage = {
-    "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Restaraunts</>),
+    "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
-    "body": (<>test</>),
+    "body": (<>
+        <h4>Food Trucks</h4>
+        <p>The below food trucks will be catering for TouhouFest for those interested. They will be located in the front entrance of TouhouFest, by the Circular Drive.</p> 
+
+        <Card>
+            <Card.Header className="text-center">Japanese Food</Card.Header>
+            <Card.Img src={okamoto} className="rounded-0"/>
+            <Card.Body>
+                <Card.Title>Okamoto Kitchen</Card.Title>
+                <Card.Text>Okamoto Kitchen brings people to authentic, lesser known Japanese dishes liek Chicken Nanban, Cheese, Mochi, and Classic Style Japanese Curry.</Card.Text>
+                <Card.Text>The vibrant Akiba-style decor and engaging customer service makes this food truck an experience you'll want to share with your friends!</Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link href="https://okamotokitchen.com/#" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
+                <Card.Link href="https://okamotokitchen.com/TakeOutMenu_Current.pdf" target="_blank"><FontAwesomeIcon icon={faBowlFood}/> Menu</Card.Link>
+            </Card.Footer>
+        </Card>
+
+        <Card className="mt-2">
+            <Card.Header className="text-center">Mexican/Japanese Food</Card.Header>
+            <Card.Img src={mexibachi} className="rounded-0"/>
+            <Card.Body>
+                <Card.Title>Mexibachi</Card.Title>
+                <Card.Text>Mexibachi is a first-generation family food truck buisness that prides itself on quality meats while catering to the nearest food trends. Stop by and experience a unique fusion of Japanese Hibachi and Mexican cuisine!</Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link href="https://www.originalmexibachi.com/"><FontAwesomeIcon icon={faGlobeAmericas} target="_blank"/> Link</Card.Link>
+                <Card.Link href="https://www.originalmexibachi.com/menu"><FontAwesomeIcon icon={faPepperHot} target="_blank"/> Menu</Card.Link>
+            </Card.Footer>
+        </Card>
+
+        <h4 className="mt-2">Other Options</h4>
+        <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
+
+    </>),
 }
