@@ -9,8 +9,8 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card } from 'react-bootstrap';
-import okamoto from "./../images/okamoto.jpg";
-import mexibachi from "./../images/mexibachi.jpg";
+const okamoto  = require("./../images/okamoto.jpg");
+const mexibachi  = require("./../images/mexibachi.jpg");
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
