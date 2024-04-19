@@ -10,14 +10,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpFromBracket, faDownload, faEllipsisVertical, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { faAndroid, faChrome, faApple, faFirefoxBrowser } from '@fortawesome/free-brands-svg-icons';
 import { Image } from 'react-bootstrap';
-import androidchrome01 from "./../images/installation/androidchrome01.jpg";
-import androidchrome02 from "./../images/installation/androidchrome02.jpg";
-import androidchrome03 from "./../images/installation/androidchrome03.jpg";
-import androidfirefox01 from "./../images/installation/androidfirefox01.jpg";
-import androidfirefox02 from "./../images/installation/androidfirefox02.jpg";
-import androidfirefox03 from "./../images/installation/androidfirefox03.jpg";
-import ios from "./../images/installation/ios.webp";
 import Accordion from 'react-bootstrap/Accordion';
+const androidchrome01 = require("./../images/installation/androidchrome01.jpg");
+const androidchrome02 = require("./../images/installation/androidchrome02.jpg");
+const androidchrome03 = require("./../images/installation/androidchrome03.jpg");
+const androidfirefox01 = require("./../images/installation/androidfirefox01.jpg");
+const androidfirefox02 = require("./../images/installation/androidfirefox02.jpg");
+const androidfirefox03 = require("./../images/installation/androidfirefox03.jpg");
+const ios = require("./../images/installation/ios.webp");
 
 export const installationPage = {
   "header": (<><FontAwesomeIcon icon={faDownload} fixedWidth></FontAwesomeIcon> Installation Options</>),
