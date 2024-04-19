@@ -92,3 +92,5 @@ export function CircledBullets({argument}){
         </span> 
     </>);
 }
+
+export const con_banner = require("./con_banner.png");
