@@ -100,3 +100,9 @@ export const kenmiller = require("./images/kenmiller.webp");
 export const pinewindgarden = require("./images/pinewindgarden.jpg");
 export const assemblyhall = require("./images/assemblyhall.jpg");
 export const entryplaza = require("./images/entryplaza.jpg");
+export const torinoplaza = require("./images/torinoplaza.jpg");
+
+// selective guest/artist imports
+export const odyssey = require("./images/odyssey.jpg");
+export const shihori = require("./images/shihori.jpg");
+export const tam = require("./images/TAM.JPG");

@@ -12,20 +12,14 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import punderfullll from "./../images/punderfullll.png";
-import odyssey from "./../images/odyssey.jpg";
-import shihori from "./../images/shihori.jpg";
-import tam from "./../images/TAM.JPG";
-// import cloudie from "./../images/cloudie.jpg";
-// import freeze from "./../images/freeze.jpg";
-import a_one from "./../images/a-one.png";
-import guestbanner from "./../images/guestbanner.jpg";
-import torinoplaza from "./../images/torinoplaza.jpg";
-import pinewindgarden from "./../images/pinewindgarden.jpg";
-import assemblyhall from "./../images/assemblyhall.jpg";
+import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam } from "./../Utils";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
+
+const punderfullll = require("./../images/punderfullll.png");
+const a_one = require("./../images/a-one.png");
+const guestbanner = require("./../images/guestbanner.jpg");
 
 export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests</>),
@@ -113,32 +107,5 @@ export const guestsPage = {
                 </Card>
             </Col>
         </Row>
-        { /*
-        <h4 className="mt-3">Official Artists</h4>
-        <Row xs={1} md={1} lg={1} className="g-4">
-            <Col>
-                <Card>
-                    <Card.Img variant="top" src={cloudie}></Card.Img>
-                    <Card.Body>
-                        <Card.Title>Cookietanukiart</Card.Title>
-                            <Card.Text>Happy to meet you! I'm Cloudie, a 20 year old (as of 2021) self-taught artist who loves creating content for my interests. I love Touhou Project and all of its characters, and as such I've used my artwork and platforms to express my love for the series with the community.  Aside from fanart I also create my own original art and occasionally cosplay. I look forward to meeting everyone at TouhouFest in 2023!</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-center"><a href="https://linktr.ee/cookietanuki" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Linktree</a></Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Img variant="top" src={freeze}></Card.Img>
-                    <Card.Body>
-                        <Card.Title>Freeze-Ex</Card.Title>
-                            <Card.Text>My name is Freeze-Ex.</Card.Text>
-                            <Card.Text>I am an Illustrator born in Hong Kong, lives in Boston. Currently traveling around different anime conventions and gaming tournaments selling my artwork, strive to inspire other people. Part-time streamer and art instructor who has been a long-time Touhou fan since 2008. I have published multiple Touhou doujinshi, was an art director and illustrator of doujin music circle Touhou Boston, and participated in working on Touhou Scroll Project and Danmaku!! tabletop game.</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-center"><a href="https://icecute.squarespace.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Website</a></Card.Footer>
-                </Card>
-            </Col>
-        </Row>
-        */ }
- 
     </>),
 }
