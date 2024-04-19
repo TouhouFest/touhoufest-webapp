@@ -9,12 +9,11 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Image } from 'react-bootstrap';
+import { Image, Accordion } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
 import { con_banner } from "./../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Accordion } from 'react-bootstrap';
 
 export const aboutConPage = {
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About the Convention</>),
