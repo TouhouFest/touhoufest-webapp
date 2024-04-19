@@ -8,16 +8,15 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import pinewindgarden from './../images/pinewindgarden.jpg';
-import cosplaybanner from './../images/cosplaybanner.jpg';
-import assemblyhall from "./../images/assemblyhall.jpg";
-import medukitty from "./../images/medukitty.jpg";
-import violetreverie from "./../images/violetreverie.jpg";
-import cosplayrepair from "./../images/cosplayrepair.jpg";
-import entryplaza from "./../images/entryplaza.jpg";
+import {pinewindgarden, assemblyhall, entryplaza } from "./../Utils";
 import { Accordion, Card, Figure, Image } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
+
+const cosplaybanner = require('./../images/cosplaybanner.jpg');
+const medukitty = require("./../images/medukitty.jpg");
+const violetreverie = require("./../images/violetreverie.jpg");
+const cosplayrepair = require("./../images/cosplayrepair.jpg");
 
 export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),

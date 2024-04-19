@@ -97,3 +97,6 @@ export function CircledBullets({argument}){
 export const con_banner = require("./con_banner.png");
 export const toyota = require("./images/toyota.jpg");
 export const kenmiller = require("./images/kenmiller.webp");
+export const pinewindgarden = require("./images/pinewindgarden.jpg");
+export const assemblyhall = require("./images/assemblyhall.jpg");
+export const entryplaza = require("./images/entryplaza.jpg");
