@@ -11,7 +11,7 @@ import { faCircleInfo, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Image, Accordion } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
-import { con_banner } from "./../Utils";
+import { con_banner } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 

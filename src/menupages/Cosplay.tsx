@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import {pinewindgarden, assemblyhall, entryplaza } from "./../Utils";
+import {pinewindgarden, assemblyhall, entryplaza } from "../Utils";
 import { Accordion, Card, Figure, Image } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';

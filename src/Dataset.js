@@ -4,7 +4,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp } from "./Utils.js"
+import { colors, get_cookie_list, cmp } from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';

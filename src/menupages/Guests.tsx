@@ -12,7 +12,7 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam } from "./../Utils";
+import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam } from "../Utils";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';

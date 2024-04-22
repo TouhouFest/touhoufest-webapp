@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
 // import toyota from "./../images/toyota.jpg";
 // import kenmiller from "./../images/kenmiller.webp";
-import { toyota, kenmiller } from "./../Utils";
+import { toyota, kenmiller } from "../Utils";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';

@@ -1,6 +1,6 @@
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
-import { COOKIE_NAME, get_cookie_list, cookies, cookie_parameters } from "./Utils.js"
+import { COOKIE_NAME, get_cookie_list, cookies, cookie_parameters } from "./Utils"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
