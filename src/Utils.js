@@ -101,6 +101,7 @@ export const pinewindgarden = require("./images/pinewindgarden.jpg");
 export const assemblyhall = require("./images/assemblyhall.jpg");
 export const entryplaza = require("./images/entryplaza.jpg");
 export const torinoplaza = require("./images/torinoplaza.jpg");
+export const nakanotheatre = require("./images/nakanotheatre.jpg");
 
 // selective guest/artist imports
 export const odyssey = require("./images/odyssey.jpg");

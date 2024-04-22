@@ -15,7 +15,7 @@ import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { CircledBullets, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap } from '../Utils';
+import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap } from '../Utils';
 
 const artistalley = require("./../images/artistalley.jpg");
 const ace = require("./../images/artistalley/ace.png");
@@ -53,7 +53,6 @@ const neosanctum = require("./../images/artistalley/neosanctum.png");
 const galaxianrecordings = require("./../images/artistalley/galaxianrecordings.png");
 const twinphoenix = require("./../images/artistalley/TwinPhoenixInteractive.png");
 const izakaya = require("./../images/artistalley/izakaya.jpg");
-const nakanotheatre = require("./../images/nakanotheatre.jpg");
 const entryplaza = require("./../images/entryplaza.jpg");
 const cynicalfries = require("./../images/artistalley/cynicalfries.png");
 const lyricalive = require("./../images/artistalley/lyricalive.png");
