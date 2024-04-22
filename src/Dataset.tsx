@@ -1,5 +1,5 @@
-import dayjs from 'dayjs';
-import customParseFormat from "dayjs/plugin/customParseFormat";
+import  * as dayjs from 'dayjs';
+import * as customParseFormat from "dayjs/plugin/customParseFormat";
 import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
@@ -8,19 +8,25 @@ import { colors, get_cookie_list, cmp } from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
-import events from './events.csv';
-import noresults from './noresults.jpg'
 import Papa from 'papaparse';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 
+const events = require('./events.csv');
+const noresults = require('./noresults.jpg');
+
 dayjs.extend(customParseFormat)
 
 class SPDataFrame {
+  
+  data:any[];
+  index:any[];
+
+
   constructor(data) {
     this.data = data;
-    this.index = [...Array(data.length).keys()];
+    this.index = Array.from(Array(data.length).keys());
   }
 
   addColumn(column_name, series) {
@@ -107,7 +113,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
   const handleEventOnHide = () => setShowEventDescription(false);
 
   function uniqueColumn(series) {
-    return [...new Set(series)];
+    return Array.from(new Set(series));
   }
 
   useEffect(() => {
@@ -176,9 +182,9 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     let reduced_description = new Set(row["event_description"].replace(/[^\w\s]/gi, '').toLowerCase().split(" "));
     let cleaned_search = new Set(appliedFilters["search_query"].split(" "));
     // conduct searches wrt title and description
-    let title_search = new Set([...reduced_title].filter(i => cleaned_search.has(i)))
-    let description_search = new Set([...reduced_description].filter(i => cleaned_search.has(i)));
-    let unified_search = new Set([...title_search, ...description_search]);
+    let title_search = new Set(Array.from(reduced_title).filter(i => cleaned_search.has(i)))
+    let description_search = new Set(Array.from(reduced_description).filter(i => cleaned_search.has(i)));
+    let unified_search = new Set(Array.from(title_search).concat(Array.from(description_search)));
     // return ratio of words that got hits from original search compared to total
     return unified_search.size / cleaned_search.size;
   }
@@ -230,7 +236,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     }
 
     if (displayData.index.length > 0) {
-      displayData = displayData.sortValues("combinedStart", { acending: true });
+      displayData = displayData.sortValues("combinedStart");
     }
 
     let jsonexport = displayData.toJSON();
@@ -287,13 +293,13 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       else {
         format_str = "h:mm A";
       }
-      startjs = startjs.format(format_str);
-      endjs = endjs.format(format_str);
+      let startstr = startjs.format(format_str);
+      let endstr = endjs.format(format_str);
 
       let eventbulk = (<>
         <h4 className="mb-1">{elem["event_title"]} </h4>
         <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
-        <p className="mb-1">{elem["event_room"]}, {startjs.toString()} - {endjs.toString()}</p>
+        <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {
             return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
