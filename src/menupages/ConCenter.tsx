@@ -8,15 +8,12 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
-import touhoufest_map from "./../images/touhoufest_map.png";
-import artistalleymap from "./../images/artistalleymap.png";
-import vendorsmap from "./../images/vendorsmap.png";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
-import { CircledBullets } from '../Utils';
-import torinoplazamap from "./../images/torinoplazamap.png";
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap } from '../Utils';
+const touhoufest_map = require("./../images/touhoufest_map.png");
 
 function MapModals(){
     const [showOuter, setShowOuter] = useState(false);
