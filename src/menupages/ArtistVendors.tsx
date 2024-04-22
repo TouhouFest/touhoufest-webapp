@@ -12,71 +12,66 @@ import { Figure, ListGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import artistalley from "./../images/artistalley.jpg";
-import ace from "./../images/artistalley/ace.png";
-import tama from "./../images/artistalley/tama.png";
-import marlo from "./../images/artistalley/MARLOWEMEMO.png";
-import rustyhermit from "./../images/artistalley/rustyhermit.jpg";
-import asazei from "./../images/artistalley/asazei.png";
-import kurehii from "./../images/artistalley/kurehii.png";
-import haiyun from "./../images/artistalley/haiyun.png";
-import ckitten from "./../images/artistalley/ckitten.jpg";
-import codyyuki from "./../images/artistalley/codyyuki.png";
-import nono from "./../images/artistalley/nono.jpg";
-import gurugurumaru from "./../images/artistalley/gurugurumaru.png";
-import kuriarty from "./../images/artistalley/kuriarty.jpg";
-import fred from "./../images/artistalley/fred.png";
-import grillboss from "./../images/artistalley/grillboss.jpg";
-import birnam from "./../images/artistalley/birnam.jpg";
-import agi from "./../images/artistalley/agi.png";
-import meiki from "./../images/artistalley/meiki.jpg";
-import pumplin from "./../images/artistalley/pumpking.jpg";
-import siliconcat from "./../images/artistalley/siliconcat.png";
-import gruvysgudies from "./../images/artistalley/gruvysgudies.jpg";
-import xiaobbinc from "./../images/artistalley/xiaobb.avif";
-import placeholder from "./../images/placeholder.png";
-import essukaa from "./../images/artistalley/essukaa.webp";
-import anazel from "./../images/artistalley/anazel.jpg";
-import cookie from "./../images/artistalley/cookie.png";
-import freezeex from "./../images/artistalley/freezeex.png";
-import artistalleymap from "./../images/artistalleymap.png";
-import feeyaart from "./../images/artistalley/feeyaart.jpg";
-import leminigensokyo from "./../images/artistalley/leminigensokyo.png";
-import ruproject from "./../images/artistalley/2ruproject.png";
-import grapevines from "./../images/artistalley/grapevines.png";
-import brw from "./../images/artistalley/BRW.jpg";
-import neosanctum from "./../images/artistalley/neosanctum.png";
-import galaxianrecordings from "./../images/artistalley/galaxianrecordings.png";
-import twinphoenix from "./../images/artistalley/TwinPhoenixInteractive.png";
-import izakaya from "./../images/artistalley/izakaya.jpg";
-import nakanotheatre from "./../images/nakanotheatre.jpg";
-import entryplaza from "./../images/entryplaza.jpg";
-import cynicalfries from "./../images/artistalley/cynicalfries.png";
-import lyricalive from "./../images/artistalley/lyricalive.png";
-import vendorsmap from "./../images/vendorsmap.png";
-import maidacademy from "./../images/artistalley/maidacademy.webp";
-import popumai from "./../images/artistalley/popumai.webp";
-import loveboxf from "./../images/artistalley/loveboxf.jpg";
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { CircledBullets } from '../Utils';
-import torinoplazamap from "./../images/torinoplazamap.png";
-import crescentia from "./../images/artistalley/crescentia.jpg";
-import shihori from "./../images/shihori.jpg";
-import odyssey from "./../images/odyssey.jpg";
-import tamusic from "./../images/TAM.JPG";
-import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
-import lemoncreme from "./../images/artistalley/lemoncreme.webp";
-import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
-import andrewfm from "./../images/artistalley/andrewfm.png";
-import animelosangeles from "./../images/artistalley/animelosangeles.jpg";
-import bowersmuseum from "./../images/artistalley/bowersmuseum.jpg";
-import gensokyoradio from "./../images/artistalley/gensokyoradio.jpg";
-import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
-import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
-import roninexpo from "./../images/artistalley/roninexpo.png";
-import kotori from "./../images/artistalley/kotori.jpg";
+import { CircledBullets, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap } from '../Utils';
+
+const artistalley = require("./../images/artistalley.jpg");
+const ace = require("./../images/artistalley/ace.png");
+const tama = require("./../images/artistalley/tama.png");
+const marlo = require("./../images/artistalley/MARLOWEMEMO.png");
+const rustyhermit = require("./../images/artistalley/rustyhermit.jpg");
+const asazei = require("./../images/artistalley/asazei.png");
+const kurehii = require("./../images/artistalley/kurehii.png");
+const haiyun = require("./../images/artistalley/haiyun.png");
+const ckitten = require("./../images/artistalley/ckitten.jpg");
+const codyyuki = require("./../images/artistalley/codyyuki.png");
+const nono = require("./../images/artistalley/nono.jpg");
+const gurugurumaru = require("./../images/artistalley/gurugurumaru.png");
+const kuriarty = require("./../images/artistalley/kuriarty.jpg");
+const fred = require("./../images/artistalley/fred.png");
+const grillboss = require("./../images/artistalley/grillboss.jpg");
+const birnam = require("./../images/artistalley/birnam.jpg");
+const agi = require("./../images/artistalley/agi.png");
+const meiki = require("./../images/artistalley/meiki.jpg");
+const pumplin = require("./../images/artistalley/pumpking.jpg");
+const siliconcat = require("./../images/artistalley/siliconcat.png");
+const gruvysgudies = require("./../images/artistalley/gruvysgudies.jpg");
+const xiaobbinc = require("./../images/artistalley/xiaobb.avif");
+const placeholder = require("./../images/placeholder.png");
+const essukaa = require("./../images/artistalley/essukaa.webp");
+const anazel = require("./../images/artistalley/anazel.jpg");
+const cookie = require("./../images/artistalley/cookie.png");
+const freezeex = require("./../images/artistalley/freezeex.png");
+const feeyaart = require("./../images/artistalley/feeyaart.jpg");
+const leminigensokyo = require("./../images/artistalley/leminigensokyo.png");
+const ruproject = require("./../images/artistalley/2ruproject.png");
+const grapevines = require("./../images/artistalley/grapevines.png");
+const brw = require("./../images/artistalley/BRW.jpg");
+const neosanctum = require("./../images/artistalley/neosanctum.png");
+const galaxianrecordings = require("./../images/artistalley/galaxianrecordings.png");
+const twinphoenix = require("./../images/artistalley/TwinPhoenixInteractive.png");
+const izakaya = require("./../images/artistalley/izakaya.jpg");
+const nakanotheatre = require("./../images/nakanotheatre.jpg");
+const entryplaza = require("./../images/entryplaza.jpg");
+const cynicalfries = require("./../images/artistalley/cynicalfries.png");
+const lyricalive = require("./../images/artistalley/lyricalive.png");
+const maidacademy = require("./../images/artistalley/maidacademy.webp");
+const popumai = require("./../images/artistalley/popumai.webp");
+const loveboxf = require("./../images/artistalley/loveboxf.jpg");
+const crescentia = require("./../images/artistalley/crescentia.jpg");
+const youkaimountain = require("./../images/artistalley/youkaimountain.jpg");
+const lemoncreme = require("./../images/artistalley/lemoncreme.webp");
+const underworldizakaya = require("./../images/artistalley/underworldizakaya.jpg");
+const andrewfm = require("./../images/artistalley/andrewfm.png");
+const animelosangeles = require("./../images/artistalley/animelosangeles.jpg");
+const bowersmuseum = require("./../images/artistalley/bowersmuseum.jpg");
+const gensokyoradio = require("./../images/artistalley/gensokyoradio.jpg");
+const idolmatsuri = require("./../images/artistalley/idolmatsuri.png");
+const rosecityanifest = require("./../images/artistalley/rosecityanifest.jpg");
+const roninexpo = require("./../images/artistalley/roninexpo.png");
+const kotori = require("./../images/artistalley/kotori.jpg");
 
 let artistlist = [
     {
@@ -445,7 +440,7 @@ let plazatables = [
     },
     {
         "name": "TAMUSIC",
-        "image": tamusic,
+        "image": tam,
         "role": "Guest",
         "website": "https://twitter.com/tamusic",
         "location": "Booth FB3"
