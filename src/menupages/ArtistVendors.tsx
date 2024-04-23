@@ -15,7 +15,7 @@ import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap } from '../Utils';
+import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap, placeholder } from '../Utils';
 
 const artistalley = require("./../images/artistalley.jpg");
 const ace = require("./../images/artistalley/ace.png");
@@ -39,7 +39,6 @@ const pumplin = require("./../images/artistalley/pumpking.jpg");
 const siliconcat = require("./../images/artistalley/siliconcat.png");
 const gruvysgudies = require("./../images/artistalley/gruvysgudies.jpg");
 const xiaobbinc = require("./../images/artistalley/xiaobb.avif");
-const placeholder = require("./../images/placeholder.png");
 const essukaa = require("./../images/artistalley/essukaa.webp");
 const anazel = require("./../images/artistalley/anazel.jpg");
 const cookie = require("./../images/artistalley/cookie.png");

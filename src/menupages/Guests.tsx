@@ -16,13 +16,47 @@ import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam } from 
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
+import { ListGroup } from 'react-bootstrap';
 
 const punderfullll = require("./../images/punderfullll.png");
 const a_one = require("./../images/a-one.png");
 const guestbanner = require("./../images/guestbanner.jpg");
+const ryuko = require("./../images/artistalley/ryuko.jpg");
+const bakkun = require("./../images/artistalley/bakkun.jpg");
+const suzubrah = require("./../images/artistalley/suzubrah.jpg");
+const coobie = require("./../images/artistalley/coobie.jpg");
+
+let djs = [
+    {
+        "name": "Ryuko Pegasasu",
+        "image": ryuko,
+        "website": "https://twitter.com/RyukoPegasasu",
+        "description": "",
+        "location": "Saturday"
+    },
+    {
+        "name": "Bakkun",
+        "image": bakkun,
+        "website": "https://twitter.com/master_bacon",
+        "location": "Saturday & Sunday"
+    },
+    {
+        "name": "Suzubrah",
+        "image": suzubrah,
+        "location": "Saturday",
+        "website": "https://twitter.com/suzubrah?lang=en"
+    },
+    {
+        "name": "Coobie",
+        "image": coobie,
+        "location": "Sunday",
+        "website": "https://twitter.com/ultimatecoobie?lang=en"
+    }
+
+];
 
 export const guestsPage = {
-    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests</>),
+    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & DJs</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
@@ -106,6 +140,24 @@ export const guestsPage = {
                     <Card.Footer className="text-center"><a href="https://linktr.ee/punderfullll" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Linktree</a></Card.Footer>
                 </Card>
             </Col>
+        </Row>
+
+        <h4 className="mt-2">DJs</h4>
+        <p>Throughout the convention the below talented individuals will be providing background music in the Torino Festival Plaza. Feel free to stop by and listen if able!</p>
+
+        <Row xs={2} className="g-3 justify-content-center">
+            {djs.map((artist, i) => <>
+             <Col>
+                <Card>
+                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                    <ListGroup className="list-group-flush">
+                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                    </ListGroup>
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                </Card>
+            </Col>
+            </>)}
         </Row>
     </>),
 }
