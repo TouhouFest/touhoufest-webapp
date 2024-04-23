@@ -14,11 +14,31 @@ import { toyota, kenmiller } from "../Utils";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
-import { CircledBullets } from '../Utils';
+import { CircledBullets, gamingmap } from '../Utils';
+import { useState } from 'react';
+import { Modal } from 'react-bootstrap';
 
 const gaming = require("./../images/gaming.jpg");
 const fracturedtransience = require("./../images/gaming/fracturedtransience.jpg");
 const gensouskydrift = require("./../images/gaming/gensouskydrift.jpg");
+
+function GamingModal() {
+    const [showGamingMap, setShowGamingMap] = useState(false);
+    return (<>
+      <Figure>
+            <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
+            <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
+        </Figure>
+        <Modal show={showGamingMap} size="lg" onHide={() => setShowGamingMap(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Gaming at Toyota Hall</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={gamingmap} fluid className="mx-auto d-block"/>
+            </Modal.Body>
+        </Modal>
+    </>);
+}
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
@@ -34,6 +54,10 @@ export const gamingPage = {
             <Figure.Image src={kenmiller} fluid rounded/>
             <Figure.Caption>Ken Miller Recreation Center</Figure.Caption>
         </Figure>
+
+        <h5>Gaming Hall Map</h5>
+        <p>The entire below map is enclosed in the Toyota Hall.</p>
+        <GamingModal />
 
         <h4>Free Play</h4> 
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>

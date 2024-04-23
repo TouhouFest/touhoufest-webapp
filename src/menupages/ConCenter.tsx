@@ -12,7 +12,7 @@ import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap } from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap } from '../Utils';
 const touhoufest_map = require("./../images/touhoufest_map.png");
 
 function MapModals(){
@@ -20,6 +20,7 @@ function MapModals(){
     const [showInner, setShowInner] = useState(false);
     const [showVendors, setShowVendors] = useState(false);
     const [showTorinoMap, setShowTorinoMap] = useState(false);
+    const [showGamingMap, setShowGamingMap] = useState(false);
 
     return (<>
         <p>Tap to focus in/zoom on either map as needed.</p>
@@ -171,6 +172,22 @@ function MapModals(){
             <li><b>FB1 ~ FB3</b>: <CircledBullets argument="7"/> Guest Booths</li>
             <li><b>FB4 ~ FB8</b>: Shrine Tables</li>
         </ul>
+
+        <h4>Gaming Hall Map</h4>
+        <p>The entire below map is enclosed in the Toyota Hall.</p>
+        <Figure>
+            <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
+            <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
+        </Figure>
+        <Modal show={showGamingMap} size="lg" onHide={() => setShowGamingMap(false)} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Map of Gaming at Toyota Hall</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="align-items-center px-0">
+                <Image src={gamingmap} fluid className="mx-auto d-block"/>
+            </Modal.Body>
+        </Modal>
+
     </>);
 }
 

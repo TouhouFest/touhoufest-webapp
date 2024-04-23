@@ -111,3 +111,4 @@ export const tam = require("./images/TAM.JPG");
 export const artistalleymap = require("./images/artistalleymap.png");
 export const vendorsmap = require("./images/vendorsmap.png");
 export const torinoplazamap = require("./images/torinoplazamap.png");
+export const gamingmap = require("./images/gamingmap.png");
