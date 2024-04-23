@@ -21,6 +21,7 @@ import { Modal } from 'react-bootstrap';
 const gaming = require("./../images/gaming.jpg");
 const fracturedtransience = require("./../images/gaming/fracturedtransience.jpg");
 const gensouskydrift = require("./../images/gaming/gensouskydrift.jpg");
+const skyarena = require("./../images/gaming/skyarena.jpg");
 
 function GamingModal() {
     const [showGamingMap, setShowGamingMap] = useState(false);
@@ -83,6 +84,17 @@ export const gamingPage = {
             </Card.Body>
             <Card.Footer className="text-center">
                 <Card.Link className="small" href="https://store.steampowered.com/app/1065260/GENSOU_Skydrift/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
+            </Card.Footer>
+        </Card>
+
+        <Card className="mt-2">
+            <Card.Img src={skyarena} variant="top"/>
+            <Card.Body className="text-center">
+                <Card.Subtitle>TOUHOU SKY ARENA MATSURI CLIMAX</Card.Subtitle>
+                <Card.Text className="small">3D Danmaku Game</Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link className="small" href="https://store.steampowered.com/app/1086860/TOUHOU_SKY_ARENA_MATSURI_CLIMAX/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
             </Card.Footer>
         </Card>
 
