@@ -56,7 +56,7 @@ let djs = [
 ];
 
 export const guestsPage = {
-    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests</>),
+    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & DJs</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
