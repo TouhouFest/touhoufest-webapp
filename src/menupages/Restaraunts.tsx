@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBowlFood, faGlobeAmericas, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faBowlFood, faGlobeAmericas, faUtensils, faWarning } from '@fortawesome/free-solid-svg-icons';
 import { Card } from 'react-bootstrap';
 const okamoto  = require("./../images/okamoto.jpg");
 const tokyostyle = require("./../images/tokyostyle.webp");
@@ -41,6 +41,7 @@ export const restarauntsPage = {
             <Card.Body>
                 <Card.Title>Tokyo Style Food Truck</Card.Title>
                 <Card.Text>Tokyo Doggie Style Food Truck has been in operation since the spring of 2013, serving CIA alumnus Chef Keith Yokoyama’s tasty creations of Japanese fusion comfort food -- a variety of dishes and specialty beverages that are “culturally authentic and culinarily unique.” The menu includes from original Japanese fusion hot dogs (MUST TRY!), signature Yakiniku Philly Cheese Steak (most popular!), Rice Bowls, to such homemade craft drinks as Lychee Lemonade and Non-dairy boba milk teas. Special meal options (vegetarian/vegan/gluten-free) are also available</Card.Text>
+                <Card.Text className="small"><FontAwesomeIcon icon={faWarning}/> Tokyo Style Food Truck will only be at TouhouFest on <b>Sunday</b>.</Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
                 <Card.Link href="https://www.twitter.com/tokyostyletruck" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
