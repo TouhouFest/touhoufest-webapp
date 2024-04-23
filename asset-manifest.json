@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.302ea05c.css",
-    "main.js": "/static/js/main.b45ecc8d.js",
+    "main.js": "/static/js/main.5f479607.js",
     "static/js/787.7ff3c85a.chunk.js": "/static/js/787.7ff3c85a.chunk.js",
     "static/media/orientalbreeze.jpg": "/static/media/orientalbreeze.7e3105caae78269d1730.jpg",
     "static/media/gamingmap.png": "/static/media/gamingmap.7586a6a92123aa234dc3.png",
@@ -67,6 +67,7 @@
     "static/media/artistalley.jpg": "/static/media/artistalley.502b78ade34a59bb2e26.jpg",
     "static/media/ace.png": "/static/media/ace.25e445c0fecf494db18e.png",
     "static/media/meiki.jpg": "/static/media/meiki.f149e3be988fc2949882.jpg",
+    "static/media/skyarena.jpg": "/static/media/skyarena.bfafd64aa9cafa00733f.jpg",
     "static/media/galaxianrecordings.png": "/static/media/galaxianrecordings.82889b82e0eceb3ad715.png",
     "static/media/fracturedtransience.jpg": "/static/media/fracturedtransience.e34009e2d6580993e63f.jpg",
     "static/media/touhoufest_map.png": "/static/media/touhoufest_map.37cfbbf5daadbed8039b.png",
@@ -101,11 +102,11 @@
     "static/media/xiaobb.avif": "/static/media/xiaobb.e382d4be7e2346d8655b.avif",
     "index.html": "/index.html",
     "main.302ea05c.css.map": "/static/css/main.302ea05c.css.map",
-    "main.b45ecc8d.js.map": "/static/js/main.b45ecc8d.js.map",
+    "main.5f479607.js.map": "/static/js/main.5f479607.js.map",
     "787.7ff3c85a.chunk.js.map": "/static/js/787.7ff3c85a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.302ea05c.css",
-    "static/js/main.b45ecc8d.js"
+    "static/js/main.5f479607.js"
   ]
 }
