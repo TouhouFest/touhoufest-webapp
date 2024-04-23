@@ -107,6 +107,7 @@ export const nakanotheatre = require("./images/nakanotheatre.jpg");
 export const odyssey = require("./images/odyssey.jpg");
 export const shihori = require("./images/shihori.jpg");
 export const tam = require("./images/TAM.JPG");
+export const placeholder = require("./images/placeholder.png");
 
 export const artistalleymap = require("./images/artistalleymap.png");
 export const vendorsmap = require("./images/vendorsmap.png");
