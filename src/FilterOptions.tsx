@@ -20,19 +20,22 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
 
     let selected_rooms = [];
     for(const room of filterOptions["room_list"]) {
-      if(document.getElementById(room).checked){
+      const elem = document.getElementById(room) as HTMLInputElement;
+      if(elem.checked){
         selected_rooms.push(room);
       }
     }
 
     let selected_types = [];
     for(const event of filterOptions["event_types"]) {
-      if(document.getElementById(event).checked){
+      const elem = document.getElementById(event) as HTMLInputElement;
+      if(elem.checked){
         selected_types.push(event);
       }
     }
 
-    let query = document.getElementById("searchtext").value.replace(/[^\w\s]/gi, '').toLowerCase();
+    let queryelem = document.getElementById("searchtext") as HTMLInputElement;
+    let query = queryelem.value.replace(/[^\w\s]/gi, '').toLowerCase();
    
     let newState = {
       "event_types": selected_types,
@@ -55,7 +58,8 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
   }
   
   function clearText(){
-    document.getElementById("searchtext").value = "";
+    let elem = document.getElementById("searchtext") as HTMLInputElement;
+    elem.value = "";
   }
 
   // modify applied events

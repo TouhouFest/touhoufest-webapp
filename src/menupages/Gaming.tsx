@@ -8,15 +8,17 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
-import toyota from "./../images/toyota.jpg";
-import kenmiller from "./../images/kenmiller.webp";
-import gaming from "./../images/gaming.jpg";
-import fracturedtransience from "./../images/gaming/fracturedtransience.jpg";
-import gensouskydrift from "./../images/gaming/gensouskydrift.jpg";
+// import toyota from "./../images/toyota.jpg";
+// import kenmiller from "./../images/kenmiller.webp";
+import { toyota, kenmiller } from "../Utils";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
 import { CircledBullets } from '../Utils';
+
+const gaming = require("./../images/gaming.jpg");
+const fracturedtransience = require("./../images/gaming/fracturedtransience.jpg");
+const gensouskydrift = require("./../images/gaming/gensouskydrift.jpg");
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),

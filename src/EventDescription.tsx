@@ -1,8 +1,6 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Bookmark from './Bookmark';
 import Markdown from 'marked-react';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 
 function EventDescription({show_var, hide_fxn, event_package, evt_print}) {
 

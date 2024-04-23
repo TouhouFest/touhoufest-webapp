@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Image } from 'react-bootstrap';
-import touhoufest from "./images/touhoufest.jpg";
+const touhoufest = require("./images/touhoufest.jpg");
 
 function App({ menupagedata, menuheader }) {
 
@@ -113,7 +113,7 @@ function App({ menupagedata, menuheader }) {
 
   // this useeffect runs whenever mode changes, and after the display set is repopulated
   useEffect(() => {
-    window.scrollTo({ top: scrollSettings[mode], behavior: 'instant' });
+    window.scrollTo({ top: scrollSettings[mode], behavior:  'instant' });
   }, [mode]);
 
   // this method runs whenever the day adjustor is selected

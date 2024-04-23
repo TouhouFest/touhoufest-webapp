@@ -8,7 +8,7 @@ export const COOKIE_NAME = "BOOKMARKS";
 
 let today = new Date();
 today.setDate(today.getDate() + 30);
-export const cookie_parameters = {expires: today, sameSite:"lax"}
+export const cookie_parameters = {expires: today, sameSite:"lax" as const}
 export const cookies = new Cookies();
 
 export function get_cookie_list(){
@@ -92,3 +92,22 @@ export function CircledBullets({argument}){
         </span> 
     </>);
 }
+
+// location imports 
+export const con_banner = require("./con_banner.png");
+export const toyota = require("./images/toyota.jpg");
+export const kenmiller = require("./images/kenmiller.webp");
+export const pinewindgarden = require("./images/pinewindgarden.jpg");
+export const assemblyhall = require("./images/assemblyhall.jpg");
+export const entryplaza = require("./images/entryplaza.jpg");
+export const torinoplaza = require("./images/torinoplaza.jpg");
+export const nakanotheatre = require("./images/nakanotheatre.jpg");
+
+// selective guest/artist imports
+export const odyssey = require("./images/odyssey.jpg");
+export const shihori = require("./images/shihori.jpg");
+export const tam = require("./images/TAM.JPG");
+
+export const artistalleymap = require("./images/artistalleymap.png");
+export const vendorsmap = require("./images/vendorsmap.png");
+export const torinoplazamap = require("./images/torinoplazamap.png");

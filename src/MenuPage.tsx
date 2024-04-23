@@ -29,7 +29,7 @@ function FluidImage({children}) {
     );
 }
 
-function Body({fluidImage={}, mainText}) {
+function Body({fluidImage=<></>, mainText}) {
     return (
         <Offcanvas.Body className="p-0">
             {fluidImage}
