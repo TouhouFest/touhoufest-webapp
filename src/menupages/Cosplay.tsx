@@ -562,7 +562,11 @@ export const cosplayPage = {
             </ol>
             <li><b>Seating</b>: 4:30 PM - 5:00 PM</li>
             <li><b>Cosplay Contest</b>: 5:00 PM - 6:00 PM</li>
+            <ol type="a">
+                <li>During the cosplay judging period (roughly around 5:30 PM), Renko*, one of our special guests, will be giving a special performance!</li>
+            </ol>
         </ol>
+        <p className="small">*Renko in this case refers to the lyricist and vocalist from <a href="http://feltmusic.net/" target="_blank" rel="noreferrer">FELT</a>, an esteemed Touhou folk rock music circle. For more information, see the "Guests" page.</p>
         <h5>Categories</h5>
         <p>There are three components within the Cosplay Contest:</p>
         <Card className="pink-one">
