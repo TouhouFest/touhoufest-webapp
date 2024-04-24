@@ -12,7 +12,7 @@ import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icon
 // import kenmiller from "./../images/kenmiller.webp";
 import { toyota, kenmiller } from "../Utils";
 import { Card, Figure, Image } from 'react-bootstrap';
-import { faSteam } from '@fortawesome/free-brands-svg-icons';
+import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
 import { CircledBullets, gamingmap } from '../Utils';
 import { useState } from 'react';
@@ -22,6 +22,8 @@ const gaming = require("./../images/gaming.jpg");
 const fracturedtransience = require("./../images/gaming/fracturedtransience.jpg");
 const gensouskydrift = require("./../images/gaming/gensouskydrift.jpg");
 const skyarena = require("./../images/gaming/skyarena.jpg");
+const retrospective = require("./../images/gaming/retrospective.png");
+const showcase = require("./../images/gaming/showcase.png");
 
 function GamingModal() {
     const [showGamingMap, setShowGamingMap] = useState(false);
@@ -95,6 +97,28 @@ export const gamingPage = {
             </Card.Body>
             <Card.Footer className="text-center">
                 <Card.Link className="small" href="https://store.steampowered.com/app/1086860/TOUHOU_SKY_ARENA_MATSURI_CLIMAX/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
+            </Card.Footer>
+        </Card>
+
+        <p className="mt-2">The below itch.io collections -- composed of fangames made by a variety of aspiring developers -- will also be featured at TouhouFest and are for the most part playable.</p>
+
+        <Card className="mt-2">
+            <Card.Img src={retrospective} variant="top"/>
+            <Card.Body className="text-center">
+                <Card.Subtitle>Touhou Retrospective Collection (2024)</Card.Subtitle>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link className="small" href="https://itch.io/c/4310537/touhou-retrospective-collection-2024" target="_blank"><FontAwesomeIcon icon={faItchIo}/> Itch.io Link</Card.Link>
+            </Card.Footer>
+        </Card>
+
+        <Card className="mt-2">
+            <Card.Img src={showcase} variant="top"/>
+            <Card.Body className="text-center">
+                <Card.Subtitle>Jam 13 "TouhouFest" Showcase Games</Card.Subtitle>
+            </Card.Body>
+            <Card.Footer className="text-center">
+                <Card.Link className="small" href="https://itch.io/c/4310520/jam-13-touhoufest-showcase-games" target="_blank"><FontAwesomeIcon icon={faItchIo}/> Itch.io Link</Card.Link>
             </Card.Footer>
         </Card>
 
