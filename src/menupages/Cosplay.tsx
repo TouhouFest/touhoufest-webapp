@@ -429,6 +429,7 @@ export const cosplayPage = {
                         <ul>
                             <li>Cirno</li>
                             <li>Wakasagahime</li>
+                            <li>Sekibanki</li>
                             <li>Kagerou</li>
                             <li>Benben &amp; Yatsuhashi</li>
                             <li>Seija</li>
