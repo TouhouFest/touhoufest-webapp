@@ -27,7 +27,7 @@ export const installationPage = {
       <p>For those wishing to use this schedule in a downloaded offline fashion, a number of options exist depending on your platform.</p>
       <h4>Progressive Web Apps</h4>
       <p>Depending on your phone's operating system, you may be able to download this website onto your home screen as a semi-standalone application right from your browser. The below instructions may be helpful:</p>
-      <p className="small"><FontAwesomeIcon icon={faInfoCircle}/> If you encounter issues with the website or downloaded app, it may help to either re-fresh or re-install it.</p>
+      <p className="small"><FontAwesomeIcon icon={faInfoCircle}/> If you encounter issues with the website or downloaded app, it may help to re-fresh, re-open the tab, close and re-open the browser, and/or re-install it.</p>
       <h5><FontAwesomeIcon icon={faAndroid}/> Android</h5>
       <Accordion alwaysOpen>
         <Accordion.Item eventKey="0">
