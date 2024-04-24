@@ -11,7 +11,7 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
 import { Figure } from 'react-bootstrap';
 
-const panelroom = require("./../images/panelroom.png");
+const panelroom = require("./../images/panelroom.jpg");
 const con_banner = require("./../con_banner.png");
 
 export const mainLocationsPage= {

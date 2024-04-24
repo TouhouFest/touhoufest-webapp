@@ -13,7 +13,7 @@ const okamoto  = require("./../images/okamoto.jpg");
 const tokyostyle = require("./../images/tokyostyle.webp");
 const brazilplate = require("./../images/brazilplate.jpg");
 const orientalbreeze = require("./../images/orientalbreeze.jpg");
-const noodsfoodtruck = require("./../images/noodsfoodtruck.png");
+const noodsfoodtruck = require("./../images/noodsfoodtruck.jpg");
 const lupitastacos = require("./../images/lupitas-tacos.jpg");
 
 export const restarauntsPage = {
