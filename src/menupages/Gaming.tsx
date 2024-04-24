@@ -64,7 +64,8 @@ export const gamingPage = {
 
         <h4>Free Play</h4> 
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
-        
+
+        <h5>Fangames</h5> 
         <p>Below is a sampling of the fangames on the docket:</p>
 
         <Card>
@@ -100,7 +101,8 @@ export const gamingPage = {
             </Card.Footer>
         </Card>
 
-        <p className="mt-2">The below itch.io collections -- composed of fangames made by a variety of aspiring developers -- will also be featured at TouhouFest and are for the most part playable.</p>
+        <h5 className="mt-2">Touhou Game Dev Fangames</h5>
+        <p>The below itch.io collections -- composed of fangames made by a variety of aspiring developers -- will also be featured at TouhouFest and are for the most part playable.</p>
 
         <Card className="mt-2">
             <Card.Img src={retrospective} variant="top"/>
