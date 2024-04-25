@@ -16,13 +16,15 @@ import { cosplayPage } from './menupages/Cosplay';
 import { mainLocationsPage } from './menupages/MainLocations';
 import { installationPage } from './menupages/Installation';
 import { restarauntsPage } from './menupages/Restaraunts';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
 let menupagedata = [aboutConPage, operatingHours, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage ];
 
-let menuheader = (<>TouhouFest 2024</>);
+let menuheader = (<><FontAwesomeIcon icon={faToriiGate}/> TouhouFest 2024</>);
 
 root.render(
   <React.StrictMode>

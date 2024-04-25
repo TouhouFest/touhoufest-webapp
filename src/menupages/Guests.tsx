@@ -18,7 +18,7 @@ import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
 import { ListGroup } from 'react-bootstrap';
 
-const punderfullll = require("./../images/punderfullll.png");
+const punderfullll = require("./../images/punderfullll.jpg");
 const a_one = require("./../images/a-one.png");
 const guestbanner = require("./../images/guestbanner.jpg");
 const ryuko = require("./../images/artistalley/ryuko.jpg");
@@ -124,10 +124,11 @@ export const guestsPage = {
                     <Card.Body>
                         <Card.Title>Renko</Card.Title>
                         <Card.Subtitle>*Yes, the FELT Renko</Card.Subtitle>
-                        <Card.Text>Renko is a formerly Tokyo-based vocalist and lyricist from California who has been a part of many different Touhou arrange and original music circles. She is the founder of and vocalist and lyricist for ORANGE★JAM, as well as the English lyricist for FELT. </Card.Text>
-                        <Card.Text>Inspired by the creative nature, music, characters, and stories of Touhou Project, Renko started her own Touhou arrange music circle, ORANGE★JAM, at Winter Comiket 81 (2011), which began as one of the first native English, international Touhou arrange circles, collaborating as a circle and individual with many different international and Japanese composers, artists, and circles alike, such as A-One, SuganoMusic, IOSYS, Frozen Starfall, and Machikado-Mapoze, which led to works in beatmania IIDX, DANCE aROUND, and DANCERUSH STARDOM.</Card.Text>
-                        <Card.Text>Joining FELT as their main English lyricist since "Blue Drop" at Summer Comiket 80 (2011), she continued writing English lyrics, such as "One More Time", "Can't Look Away", "Goodbye", and "Puppet in the Dark", for FELT until their disbandment at Winter Comiket 99 (2021). </Card.Text>
-                        <Card.Text>In her spare time, aside from streaming various video games and kareoke regularly on Twitch twice a week, she practices archery and spoilers her corgi.</Card.Text>
+                        <Card.Text>Renko is a formerly Tokyo-based vocalist and lyricist, from California who has been a part of many different Touhou arrange and original music circles. She is the founder, vocalist, and lyricist for ORANGE★JAM, as well as the English lyricist for FELT.</Card.Text>
+
+                        <Card.Text>Inspired by the creative nature, music, characters, and stories of Touhou Project, Renko started her own Touhou arrange music circle, ORANGE★JAM, at Comiket 81 (2011), one of the first native English, international Touhou arrange circles, and joined FELT as their main English lyricist from "Blue Drop" at Comiket 80 (2011), working with Maurits "Zen" Cornelis, Vivienne, and NAGI☆ until FELT's disbandment at Comiket 99 (2021).</Card.Text>
+
+                        <Card.Text>Since then, she has continued to collaborate with various international and Japanese composers, artists, and circles, such as A-One, SuganoMusic, IOSYS, Frozen Starfall, Machikado-Mapoze, and SOUND HOLIC, which led to works in beatmania IIDX, DANCE aROUND, DANCERUSH STARDOM, and Arcaea. </Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center small">
                         <Card.Link href="https://renko.studio/" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Portfolio</Card.Link>
