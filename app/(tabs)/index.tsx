@@ -1,4 +1,6 @@
-import { Text, View } from "react-native";
+import { Text, View } from "tamagui";
+import { Link } from "expo-router";
+import { Pressable } from "react-native";
 
 export default function Index() {
   return (

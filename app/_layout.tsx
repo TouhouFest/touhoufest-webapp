@@ -7,6 +7,8 @@ import { TamaguiProvider } from 'tamagui'
 
 import { tamaguiConfig } from '../tamagui.config'
 
+// light mode is forced on until dark mode becomes the issue to tackle
+// also because it defaults to dark mode by default which makes it hard to develop
 export default function RootLayout() {
   const colorScheme = 'light' // useColorScheme()
 
@@ -16,7 +18,7 @@ export default function RootLayout() {
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+          {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
         </Stack>
       </ThemeProvider>
     </TamaguiProvider>

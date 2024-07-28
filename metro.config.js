@@ -17,3 +17,4 @@ module.exports = withTamagui(config, {
   outputCSS: './tamagui-web.css',
 })
 
+module.exports = config;
