@@ -1,17 +1,21 @@
 import { Text, View } from "tamagui";
 import { Link } from "expo-router";
 import { Pressable } from "react-native";
+import { ListItem } from "tamagui";
+import { YStack } from "tamagui";
 
 export default function Index() {
   return (
-    <View
+    <YStack
+      padding="$2"
       style={{
         flex: 1,
-        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+      <ListItem>test</ListItem>
+      <ListItem>test2</ListItem>
+      <ListItem>test3</ListItem>
+    </YStack>
   );
 }
