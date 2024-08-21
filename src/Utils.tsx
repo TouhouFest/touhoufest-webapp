@@ -94,22 +94,22 @@ export function CircledBullets({argument}){
 }
 
 // location imports 
-export const con_banner = require("./con_banner.png");
-export const toyota = require("./images/toyota.jpg");
-export const kenmiller = require("./images/kenmiller.webp");
-export const pinewindgarden = require("./images/pinewindgarden.jpg");
-export const assemblyhall = require("./images/assemblyhall.jpg");
-export const entryplaza = require("./images/entryplaza.jpg");
-export const torinoplaza = require("./images/torinoplaza.jpg");
-export const nakanotheatre = require("./images/nakanotheatre.jpg");
+export const con_banner = "./con_banner.png";
+export const toyota = "./src/images/toyota.jpg";
+export const kenmiller = "./src/images/kenmiller.webp";
+export const pinewindgarden = "./src/images/pinewindgarden.jpg";
+export const assemblyhall = "./src/images/assemblyhall.jpg";
+export const entryplaza = "./src/images/entryplaza.jpg";
+export const torinoplaza = "./src/images/torinoplaza.jpg";
+export const nakanotheatre = "./src/images/nakanotheatre.jpg";
 
-// selective guest/artist imports
-export const odyssey = require("./images/odyssey.jpg");
-export const shihori = require("./images/shihori.jpg");
-export const tam = require("./images/TAM.JPG");
-export const placeholder = require("./images/placeholder.png");
+// selective guest/artissrc/t
+export const odyssey = "./src/images/odyssey.jpg";
+export const shihori = "./src/images/shihori.jpg";
+export const tam = "./src/images/TAM.JPG";
+export const placeholder = "./src/images/placeholder.png";
 
-export const artistalleymap = require("./images/artistalleymap.png");
-export const vendorsmap = require("./images/vendorsmap.png");
-export const torinoplazamap = require("./images/torinoplazamap.png");
-export const gamingmap = require("./images/gamingmap.jpg");
+export const artistalleymap = "./src/images/artistalleymap.png";
+export const vendorsmap = "./src/images/vendorsmap.png";
+export const torinoplazamap = "./src/images/torinoplazamap.png";
+export const gamingmap = "./src/images/gamingmap.jpg";

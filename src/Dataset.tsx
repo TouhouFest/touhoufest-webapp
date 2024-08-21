@@ -1,5 +1,5 @@
-import  * as dayjs from 'dayjs';
-import * as customParseFormat from "dayjs/plugin/customParseFormat";
+import dayjs from "dayjs/esm/index.js";
+import customParseFormat from "dayjs/esm/plugin/customParseFormat";
 import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
@@ -13,10 +13,10 @@ import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 
-const events = require('./events.csv');
-const noresults = require('./noresults.jpg');
+const events = './src/events.csv';
+const noresults = './src/noresults.jpg';
 
-dayjs.extend(customParseFormat)
+dayjs.extend(customParseFormat);
 
 class SPDataFrame {
   

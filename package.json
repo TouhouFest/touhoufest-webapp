@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "touhoufest-webapp",
   "homepage": "https://schedule.touhoufest.org",
   "version": "0.1.0",
@@ -28,6 +29,7 @@
     "source-map-explorer": "^2.5.3",
     "typescript": "^5.4.5",
     "universal-cookie": "^4.0.4",
+    "vite-plugin-commonjs": "^0.10.1",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.4.2",
     "workbox-broadcast-update": "^6.4.2",
@@ -43,10 +45,9 @@
     "workbox-streams": "^6.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
@@ -70,8 +71,9 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
     "gh-pages": "^6.1.1",
-    "react-scripts": "5.0.1"
+    "vite": "^5.4.2"
   },
   "overrides": {
     "typescript": "^5.4.5"
