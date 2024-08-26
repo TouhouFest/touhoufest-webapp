@@ -94,22 +94,21 @@ export function CircledBullets({argument}){
 }
 
 // location imports 
-export const con_banner = "./con_banner.png";
-export const toyota = "./src/images/toyota.jpg";
-export const kenmiller = "./src/images/kenmiller.webp";
-export const pinewindgarden = "./src/images/pinewindgarden.jpg";
-export const assemblyhall = "./src/images/assemblyhall.jpg";
-export const entryplaza = "./src/images/entryplaza.jpg";
-export const torinoplaza = "./src/images/torinoplaza.jpg";
-export const nakanotheatre = "./src/images/nakanotheatre.jpg";
+import con_banner from "./con_banner.png";
+import toyota from "./images/toyota.jpg";
+import kenmiller from "./images/kenmiller.webp";
+import pinewindgarden from "./images/pinewindgarden.jpg";
+import assemblyhall from "./images/assemblyhall.jpg";
+import entryplaza from "./images/entryplaza.jpg";
+import torinoplaza from "./images/torinoplaza.jpg";
+import nakanotheatre from "./images/nakanotheatre.jpg";
+import odyssey from "./images/odyssey.jpg";
+import shihori from "./images/shihori.jpg";
+import tam from "./images/tam.jpg";
+import placeholder from "./images/placeholder.png";
+import artistalleymap from "./images/artistalleymap.png";
+import vendorsmap from "./images/vendorsmap.png";
+import torinoplazamap from "./images/torinoplazamap.png";
+import gamingmap from "./images/gamingmap.jpg";
 
-// selective guest/artissrc/t
-export const odyssey = "./src/images/odyssey.jpg";
-export const shihori = "./src/images/shihori.jpg";
-export const tam = "./src/images/TAM.JPG";
-export const placeholder = "./src/images/placeholder.png";
-
-export const artistalleymap = "./src/images/artistalleymap.png";
-export const vendorsmap = "./src/images/vendorsmap.png";
-export const torinoplazamap = "./src/images/torinoplazamap.png";
-export const gamingmap = "./src/images/gamingmap.jpg";
+export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
