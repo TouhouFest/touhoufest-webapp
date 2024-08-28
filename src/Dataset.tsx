@@ -13,7 +13,7 @@ import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 
-const events = './src/events.csv';
+import events from './events.csv';
 import noresults from './noresults.jpg';
 
 dayjs.extend(customParseFormat);
