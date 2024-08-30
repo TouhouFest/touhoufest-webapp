@@ -15,6 +15,59 @@ import { con_banner } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import Button from 'react-bootstrap/Button';
+import {LocalNotifications, ScheduleOptions} from '@capacitor/local-notifications';
+
+
+function NotificationTest() {
+
+  function issueNotification(){
+    LocalNotifications.schedule({
+      notifications: [
+        {
+          title:"test notification",
+          body:"this is a test notification",
+          id:1,
+          schedule: {
+            at: new Date(Date.now() + 1000 * 3)
+          }
+        }
+      ]
+    });
+  }
+
+  function permissionsCheck() {
+    // attempt to issue notification
+    // if denied, means user will need to go into settings
+    LocalNotifications.requestPermissions().then((e) => {
+      if (e.display != 'granted') {
+        console.log("DENIED!");
+      }
+      else {
+        issueNotification();
+      }
+    });
+  }
+
+  function onTriggerFunction() {
+    // check permissions the first time
+    LocalNotifications.checkPermissions().then(
+      (e) => {
+        // issue permissions check if not granted, otherwise issue notification
+        if (e.display != 'granted') {
+          permissionsCheck();
+        }
+        else {
+          issueNotification();
+        }
+      });
+ }
+
+  return (
+    <Button onClick={() => onTriggerFunction()}>trigger notification test</Button>
+  );
+}
+
 export const aboutConPage = {
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About the Convention</>),
   "fluidImage": (<><Image src={con_banner} fluid /></>),
@@ -70,6 +123,7 @@ export const aboutConPage = {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+    <NotificationTest />
     </>
   ),
 }
