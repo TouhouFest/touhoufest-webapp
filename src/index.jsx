@@ -18,6 +18,7 @@ import { installationPage } from './menupages/Installation';
 import { restarauntsPage } from './menupages/Restaraunts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,6 +26,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let menupagedata = [aboutConPage, operatingHours, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage ];
 
 let menuheader = (<><FontAwesomeIcon icon={faToriiGate}/> TouhouFest 2024</>);
+
+// Call the element loader before the render call
+defineCustomElements(window);
 
 root.render(
   <React.StrictMode>

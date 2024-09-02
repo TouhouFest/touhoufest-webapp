@@ -17,6 +17,7 @@ import Col from 'react-bootstrap/Col';
 
 import Button from 'react-bootstrap/Button';
 import {LocalNotifications, ScheduleOptions} from '@capacitor/local-notifications';
+import {Toast} from '@capacitor/toast';
 
 
 function NotificationTest() {
@@ -29,8 +30,9 @@ function NotificationTest() {
           body:"this is a test notification",
           id:1,
           schedule: {
-            at: new Date(Date.now() + 1000 * 3)
-          }
+            at: new Date(Date.now() + 1000 * 3),
+            allowWhileIdle:true
+          },
         }
       ]
     });
@@ -41,7 +43,10 @@ function NotificationTest() {
     // if denied, means user will need to go into settings
     LocalNotifications.requestPermissions().then((e) => {
       if (e.display != 'granted') {
-        console.log("DENIED!");
+        Toast.show({
+          text:"Notifications permissions were denied!",
+          position:"center"
+        }); 
       }
       else {
         issueNotification();

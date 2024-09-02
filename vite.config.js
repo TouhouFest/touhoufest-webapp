@@ -8,6 +8,7 @@ export default defineConfig(() => {
       outDir: 'build',
     },
     plugins: [react(), commonjs()],
-    assetsInclude: ["**/*.csv"]
+    assetsInclude: ["**/*.csv"],
+    base:"/"
   };
 });
