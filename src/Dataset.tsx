@@ -16,6 +16,8 @@ import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 import events from './events.csv';
 import noresults from './noresults.jpg';
 
+import { IonList, IonItem, IonLabel, IonBadge, IonItemDivider } from "@ionic/react";
+
 dayjs.extend(customParseFormat);
 
 class SPDataFrame {
@@ -189,7 +191,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
     return unified_search.size / cleaned_search.size;
   }
 
-  let output = [];
+  let output: any[] = [];
 
   if (dataUpdated) {
 
@@ -269,9 +271,9 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
           <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
         );
         output.push(
-          <ListGroup.Item key={formatted_start} className={"text-center sticky-top2 day-indicator events-" + num_evts_ctr} >
-            <p className="mb-0"><b>{formatted_start}</b></p>
-          </ListGroup.Item>
+          <IonItemDivider sticky={true} key={formatted_start} className={"text-center day-indicator events-" + num_evts_ctr} >
+            <IonLabel><b>{formatted_start}</b></IonLabel>
+          </IonItemDivider>
         );
         num_evts_ctr = 0;
       }
@@ -279,7 +281,9 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <><ListGroup.Item className="text-center small newtimes">{floortime.format("h:mm A")}</ListGroup.Item></>
+          <><IonItem className="text-center small newtimes">
+            <IonLabel>{floortime.format("h:mm A")}</IonLabel>
+          </IonItem></>
         );
         hourfxn = floortime;
       }
@@ -297,19 +301,27 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       let endstr = endjs.format(format_str);
 
       let eventbulk = (<>
-        <h4 className="mb-1">{elem["event_title"]} </h4>
-        <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
-        <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
-        <p className="mb-1"><span>
-          {css_classes.map((color, idx) => {
-            return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
-          })}
-          <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
-        </span></p>
+        <IonLabel>
+          <h1 className="mb-1">{elem["event_title"]} </h1>
+          <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
+          <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
+          <p className="mb-1"><span>
+            {css_classes.map((color, idx) => {
+              return (<><IonBadge className={color + ' me-1'}>{splitevt[idx]}</IonBadge></>);
+            })}
+            <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
+          </span></p>
+        </IonLabel>
       </>);
 
       // generate event listing
       output.push(
+        <IonItem>
+          {eventbulk}
+        </IonItem>
+      );
+      
+      /*
         <ListGroup.Item key={index} className="event-item">
           <Row>
             <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk)}>
@@ -320,11 +332,22 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
             </Col>
           </Row>
         </ListGroup.Item>
-      );
+
+      */
+
     });
 
   }
 
+  return (
+    <>
+      <IonList>
+        {output}
+      </IonList>
+    </>
+  );
+
+  /*
   return (
     <>
       <EventDescription show_var={showEventDescription} hide_fxn={handleEventOnHide} event_package={eventDetails} evt_print={evtPrint}></EventDescription>
@@ -338,5 +361,6 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       {output.length < 1 ? noResults() : <></>}
     </>
   );
+  */
 }
 
