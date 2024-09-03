@@ -16,6 +16,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@ionic/pwa-elements": "^3.3.0",
+    "@ionic/react": "^8.2.7",
+    "@ionic/react-router": "^8.2.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

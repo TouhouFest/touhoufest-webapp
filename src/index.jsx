@@ -18,7 +18,24 @@ import { installationPage } from './menupages/Installation';
 import { restarauntsPage } from './menupages/Restaraunts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
+
+// capacitor and ionic imports go here
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import { setupIonicReact } from '@ionic/react';
+import '@ionic/react/css/core.css';
+/* Basic CSS for apps built with Ionic */
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
+
+/* Optional CSS utils that can be commented out */
+import '@ionic/react/css/padding.css';
+import '@ionic/react/css/float-elements.css';
+import '@ionic/react/css/text-alignment.css';
+import '@ionic/react/css/text-transformation.css';
+import '@ionic/react/css/flex-utils.css';
+import '@ionic/react/css/display.css';
+setupIonicReact();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
