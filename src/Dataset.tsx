@@ -307,7 +307,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
           <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
           <p className="mb-1"><span>
             {css_classes.map((color, idx) => {
-              return (<><IonBadge className={color + ' me-1'}>{splitevt[idx]}</IonBadge></>);
+              return (<><IonBadge className={color + ' ion-margin-end'}>{splitevt[idx]}</IonBadge></>);
             })}
             <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
           </span></p>

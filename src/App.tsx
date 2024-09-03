@@ -19,6 +19,7 @@ import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonGrid, IonRow, IonCol } from '@ionic/react';
 
 function MainBody({ menupagedata, menuheader }) {
 
@@ -150,7 +151,14 @@ function MainBody({ menupagedata, menuheader }) {
 
   function homeStuff() {
     return (
-      <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays}/>
+      
+      <IonGrid>
+        <IonRow className="ion-justify-content-center">
+          <IonCol size-xl="8">
+            <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays}/>
+          </IonCol>
+        </IonRow>
+      </IonGrid>
     );
   }
 
