@@ -18,14 +18,15 @@ import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
 import { ListGroup } from 'react-bootstrap';
 
-const punderfullll = require("./../images/punderfullll.jpg");
-const a_one = require("./../images/a-one.png");
-const guestbanner = require("./../images/guestbanner.jpg");
-const ryuko = require("./../images/artistalley/ryuko.jpg");
-const bakkun = require("./../images/artistalley/bakkun.jpg");
-const suzubrah = require("./../images/artistalley/suzubrah.jpg");
-const coobie = require("./../images/artistalley/coobie.jpg");
-const renko = require("./../images/renko.jpg");
+import punderfullll from "./../images/punderfullll.jpg";
+// const punderfullll = require("./../images/punderfullll.jpg");
+import a_one from "./../images/a-one.png";
+import guestbanner from "./../images/guestbanner.jpg";
+import ryuko from "./../images/artistalley/ryuko.jpg";
+import bakkun from "./../images/artistalley/bakkun.jpg";
+import suzubrah from "./../images/artistalley/suzubrah.jpg";
+import coobie from "./../images/artistalley/coobie.jpg";
+import renko from "./../images/renko.jpg";
 
 let djs = [
     {

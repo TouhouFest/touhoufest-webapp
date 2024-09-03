@@ -94,22 +94,21 @@ export function CircledBullets({argument}){
 }
 
 // location imports 
-export const con_banner = require("./con_banner.png");
-export const toyota = require("./images/toyota.jpg");
-export const kenmiller = require("./images/kenmiller.webp");
-export const pinewindgarden = require("./images/pinewindgarden.jpg");
-export const assemblyhall = require("./images/assemblyhall.jpg");
-export const entryplaza = require("./images/entryplaza.jpg");
-export const torinoplaza = require("./images/torinoplaza.jpg");
-export const nakanotheatre = require("./images/nakanotheatre.jpg");
+import con_banner from "./con_banner.png";
+import toyota from "./images/toyota.jpg";
+import kenmiller from "./images/kenmiller.webp";
+import pinewindgarden from "./images/pinewindgarden.jpg";
+import assemblyhall from "./images/assemblyhall.jpg";
+import entryplaza from "./images/entryplaza.jpg";
+import torinoplaza from "./images/torinoplaza.jpg";
+import nakanotheatre from "./images/nakanotheatre.jpg";
+import odyssey from "./images/odyssey.jpg";
+import shihori from "./images/shihori.jpg";
+import tam from "./images/tam.jpg";
+import placeholder from "./images/placeholder.png";
+import artistalleymap from "./images/artistalleymap.png";
+import vendorsmap from "./images/vendorsmap.png";
+import torinoplazamap from "./images/torinoplazamap.png";
+import gamingmap from "./images/gamingmap.jpg";
 
-// selective guest/artist imports
-export const odyssey = require("./images/odyssey.jpg");
-export const shihori = require("./images/shihori.jpg");
-export const tam = require("./images/TAM.JPG");
-export const placeholder = require("./images/placeholder.png");
-
-export const artistalleymap = require("./images/artistalleymap.png");
-export const vendorsmap = require("./images/vendorsmap.png");
-export const torinoplazamap = require("./images/torinoplazamap.png");
-export const gamingmap = require("./images/gamingmap.jpg");
+export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
