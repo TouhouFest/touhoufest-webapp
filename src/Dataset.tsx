@@ -271,7 +271,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
           <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
         );
         output.push(
-          <IonItemDivider sticky={true} key={formatted_start} className={"text-center day-indicator events-" + num_evts_ctr} >
+          <IonItemDivider sticky={true} key={formatted_start} className={"ion-text-center events-" + num_evts_ctr} >
             <IonLabel><b>{formatted_start}</b></IonLabel>
           </IonItemDivider>
         );
@@ -281,7 +281,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <><IonItem className="text-center small newtimes">
+          <><IonItem className="ion-text-center small newtimes">
             <IonLabel>{floortime.format("h:mm A")}</IonLabel>
           </IonItem></>
         );
