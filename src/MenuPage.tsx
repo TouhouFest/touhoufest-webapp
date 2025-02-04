@@ -1,6 +1,7 @@
 // generalized Offcanvas to show pages derived from the menu
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Container } from 'react-bootstrap';
 
 export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     
@@ -9,7 +10,7 @@ export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     }
 
     return (
-        <Offcanvas show={show_var} onHide={handleHide} placement={"end"}>
+        <Offcanvas show={show_var} onHide={handleHide} placement={"end"} className="w-100">
             {children}
         </Offcanvas>
     );
@@ -32,10 +33,12 @@ function FluidImage({children}) {
 function Body({fluidImage=<></>, mainText}) {
     return (
         <Offcanvas.Body className="p-0">
-            {fluidImage}
-            <div className="p-3">
-                {mainText}
-            </div>
+            <Container fluid="md" className="px-0">
+                {fluidImage}
+                <div className="p-3">
+                    {mainText}
+                </div>
+            </Container>
         </Offcanvas.Body>
     );
 }
