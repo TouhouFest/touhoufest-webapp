@@ -34,7 +34,7 @@ function Body({fluidImage=<></>, mainText}) {
     return (
         <Offcanvas.Body className="p-0">
             <Container fluid="md" className="px-0">
-                {fluidImage}
+                <div className="text-center">{fluidImage}</div>
                 <div className="p-3">
                     {mainText}
                 </div>

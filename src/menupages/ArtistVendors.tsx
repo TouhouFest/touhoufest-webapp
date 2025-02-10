@@ -631,7 +631,7 @@ export const artistVendorsPage = {
 
         <h5>Official Artists</h5>
 
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {official_artists.map((artist, i) => <>
              <Col>
                 <Card>
@@ -648,7 +648,7 @@ export const artistVendorsPage = {
 
         <h5 className="mt-2">All Other Artists</h5>
 
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
              <Col>
                 <Card>
@@ -679,7 +679,7 @@ export const artistVendorsPage = {
         </ul>
         <h5>List of Vendors</h5>
         <p>The majority of the entries listed below are in vendors (denoted "Booth VXX").</p>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
                 <Card>
@@ -702,7 +702,7 @@ export const artistVendorsPage = {
         <ShrineMapModal />
        <h5>List of Participants</h5>
         <h6>Entry Foyer (Community Tables)</h6>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
              <Col>
                 <Card>
@@ -717,7 +717,7 @@ export const artistVendorsPage = {
             </>)}
         </Row>
        <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {fanmusicgames.map((artist, i) => <>
              <Col>
                 <Card>
@@ -734,7 +734,7 @@ export const artistVendorsPage = {
             </>)}
        </Row>
        <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
                 <Card>
