@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
-import { Image } from 'react-bootstrap';
+import { Image, Row, Col } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
@@ -26,76 +26,76 @@ function MapModals(){
         <p>Tap to focus in/zoom on either map as needed.</p>
 
         <h4>Main TouhouFest Map</h4>
-        <Figure onClick={() => setShowOuter(true)}>
-            <Figure.Image src={touhoufest_map} fluid rounded/>
-            <Figure.Caption>Map of the main areas of TouhouFest</Figure.Caption>
-        </Figure>
+        <Row>
+            <Col xs={12} lg={6}>
+                <Figure onClick={() => setShowOuter(true)}>
+                    <Figure.Image src={touhoufest_map} fluid rounded/>
+                    <Figure.Caption>Map of the main areas of TouhouFest</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} md={6} lg={3}>
+                <p>See below for convention spaces/buildings and map locations:</p>
 
-        <p>See below for convention spaces/buildings and map locations:</p>
+                <b>George Nakano Theatre</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="1"/> Registration</li>
+                    <li><CircledBullets argument="2"/> Artist Alley</li>
+                </ul>
 
-        <b>George Nakano Theatre</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="1"/> Registration</li>
-            <li><CircledBullets argument="2"/> Artist Alley</li>
-        </ul>
+                <b>Entry Plaza</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="3"/> Vendors Booth</li>
+                    <li><CircledBullets argument="5"/> Cosplay Booths & Cosplay Repair</li>
+                    <li><CircledBullets argument="6"/> Info Booth | Lost and Found</li>
+                </ul>
 
-        <b>Entry Plaza</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="3"/> Vendors Booth</li>
-            <li><CircledBullets argument="5"/> Cosplay Booths & Cosplay Repair</li>
-            <li><CircledBullets argument="6"/> Info Booth | Lost and Found</li>
-        </ul>
+                <b>Garden Room B</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="4"/> Panels</li>
+                </ul>
 
-        <b>Garden Room B</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="4"/> Panels</li>
-        </ul>
+                <b>Pine Wind Garden</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="15"/> Cosplay Meetups</li>
+                </ul>
 
-        <b>Pine Wind Garden</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="15"/> Cosplay Meetups</li>
-        </ul>
+                <b>Toyota Meeting Hall</b>
+                <ul className="list-unstyled">
+                    <li><span className="text-primary"><CircledBullets argument="9"/></span> Gaming Hall 1: Official Touhou Games</li>
+                </ul>
+            </Col>
+            <Col xs={12} md={6} lg={3}>
+                <b>Ken Miller Rec Center</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="10"/> Gaming Hall 2: Fan Games</li>
+                    <li><CircledBullets argument="11"/> Music Booths</li>
+                </ul>
+                
+                <b>Entry Foyer</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="12"/> Community Booths</li>
+                </ul>
 
-        <b>Toyota Meeting Hall</b>
-        <ul className="list-unstyled">
-            <li><span className="text-primary"><CircledBullets argument="9"/></span> Gaming Hall 1: Official Touhou Games</li>
-        </ul>
+                <b>Assembly Hall</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="13"/> Assembly Hall</li>
+                </ul>
 
-        <b>Ken Miller Rec Center</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="10"/> Gaming Hall 2: Fan Games</li>
-            <li><CircledBullets argument="11"/> Music Booths</li>
-        </ul>
-        
-        <b>Entry Foyer</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="12"/> Community Booths</li>
-        </ul>
+                <b>Torino Plaza</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="7"/> Guest Booths</li>
+                    <li><CircledBullets argument="8"/> Main Stage</li>
+                </ul>
 
-        <b>Assembly Hall</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="13"/> Assembly Hall</li>
-        </ul>
+                <b>Front Circular Drive</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="14"/> Food Trucks</li>
+                </ul>
 
-        <b>Torino Plaza</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="7"/> Guest Booths</li>
-            <li><CircledBullets argument="8"/> Main Stage</li>
-        </ul>
+                <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
 
-        <b>Front Circular Drive</b>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="14"/> Food Trucks</li>
-        </ul>
-
-        <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
-
-        <h4>Artist Alley Map</h4>
-        <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/>)</p>
-        <Figure onClick={() => setShowInner(true)}>
-            <Figure.Image src={artistalleymap} fluid rounded/>
-            <Figure.Caption>Map of Artist Alley</Figure.Caption>
-        </Figure>
+            </Col>
+        </Row>
 
         <Modal show={showOuter} size="lg" onHide={() => setShowOuter(false)} centered>
             <Modal.Header closeButton>
@@ -115,14 +115,6 @@ function MapModals(){
             </Modal.Body>
         </Modal>
 
-        <h4>Vendors Map</h4>
-        <h5>Entry Plaza Map</h5>
-        <p>The entire below map is enclosed in the Entry Plaza. (<CircledBullets argument="3"/>) Nearby locations are also labeled.</p>
-        <Figure>
-            <Figure.Image src={vendorsmap} fluid rounded onClick={() => setShowVendors(true)}/>
-            <Figure.Caption>Map of Vendors</Figure.Caption>
-        </Figure>
-
         <Modal show={showVendors} size="lg" onHide={() => setShowVendors(false)} centered>
             <Modal.Header closeButton>
                 <Modal.Title>Map of Vendors</Modal.Title>
@@ -132,29 +124,51 @@ function MapModals(){
             </Modal.Body>
         </Modal>
 
-        <p>Summary of listed booths in Entry Plaza:</p>
-        <p className="mb-1"><CircledBullets argument="6"/> Info Booth | Lost and Found</p>
-        <ul>
-            <li><b>V1</b>: TouhouFest Info Booth</li>
-            <li><b>V2</b>: Info Booth/Weapons Check</li>
-        </ul>
-        <p className="mb-1"><CircledBullets argument="5"/> Cosplay Booths & Cosplay Repair</p>
-        <ul>
-            <li><b>V3</b>: Cosplay Repair</li>
-            <li><b>V4</b>: Cosplay Ambassadors</li>
-            <li><b>V5</b>: Punderfull's Booth</li>
-        </ul>
-        <p className="mb-1"><CircledBullets argument="3"/> Vendors</p>
-        <ul>
-            <li><b>V6 ~ V15</b>: Vendors</li>
-        </ul>
+        <Row>
+            <Col xs={12} lg={6}>
+                <h4>Artist Alley Map</h4>
+                <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/>)</p>
+                <Figure onClick={() => setShowInner(true)}>
+                    <Figure.Image src={artistalleymap} fluid rounded/>
+                    <Figure.Caption>Map of Artist Alley</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} lg={6}>
+                <h4>Vendors Map</h4>
+                <h5>Entry Plaza Map</h5>
+                <p>The entire below map is enclosed in the Entry Plaza. (<CircledBullets argument="3"/>) Nearby locations are also labeled.</p>
+                <Figure>
+                    <Figure.Image src={vendorsmap} fluid rounded onClick={() => setShowVendors(true)}/>
+                    <Figure.Caption>Map of Vendors</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
 
-        <h5>Torino Plaza Map</h5>
-        <p>The below map is enclosed within the Torino Plaza (<CircledBullets argument="7"/> and <CircledBullets argument="8"/>) and also shows locations of nearby areas at the convention.</p>
-        <Figure>
-            <Figure.Image src={torinoplazamap} fluid rounded onClick={() => setShowTorinoMap(true)}/>
-            <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
-        </Figure>
+ 
+        <p>Summary of listed booths in Entry Plaza:</p>
+        <Row xs={1} md={3}>
+            <Col>
+                <p className="mb-1"><CircledBullets argument="6"/> Info Booth | Lost and Found</p>
+                <ul>
+                    <li><b>V1</b>: TouhouFest Info Booth</li>
+                    <li><b>V2</b>: Info Booth/Weapons Check</li>
+                </ul>
+            </Col>
+            <Col>
+                <p className="mb-1"><CircledBullets argument="5"/> Cosplay Booths & Cosplay Repair</p>
+                <ul>
+                    <li><b>V3</b>: Cosplay Repair</li>
+                    <li><b>V4</b>: Cosplay Ambassadors</li>
+                    <li><b>V5</b>: Punderfull's Booth</li>
+                </ul>
+            </Col>
+            <Col>
+                <p className="mb-1"><CircledBullets argument="3"/> Vendors</p>
+                <ul>
+                    <li><b>V6 ~ V15</b>: Vendors</li>
+                </ul>
+            </Col>
+        </Row>
 
         <Modal show={showTorinoMap} size="lg" onHide={() => setShowTorinoMap(false)} centered>
             <Modal.Header closeButton>
@@ -164,21 +178,38 @@ function MapModals(){
                 <Image src={torinoplazamap} fluid className="mx-auto d-block"/>
             </Modal.Body>
         </Modal>
-        <p>Summary of listed booths in Torino Plaza:</p>
-        <ul>
-            <li><b>FT1 ~ FT8</b>: <CircledBullets argument="12"/> Community Booths</li>
-            <li><b>FG1 ~ FG7</b>: <CircledBullets argument="10"/> Fan Games</li>
-            <li><b>MC1 ~ MC4</b>: <CircledBullets argument="11"/> Music Booths</li>
-            <li><b>FB1 ~ FB3</b>: <CircledBullets argument="7"/> Guest Booths</li>
-            <li><b>FB4 ~ FB8</b>: Shrine Tables</li>
-        </ul>
+
+        <h5>Torino Plaza Map</h5>
+        <p>The below map is enclosed within the Torino Plaza (<CircledBullets argument="7"/> and <CircledBullets argument="8"/>) and also shows locations of nearby areas at the convention.</p>
+        <Row>
+            <Col xs={12} lg={8}>
+                <Figure>
+                    <Figure.Image src={torinoplazamap} fluid rounded onClick={() => setShowTorinoMap(true)}/>
+                    <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} lg={4}>
+                <p>Summary of listed booths in Torino Plaza:</p>
+                <ul>
+                    <li><b>FT1 ~ FT8</b>: <CircledBullets argument="12"/> Community Booths</li>
+                    <li><b>FG1 ~ FG7</b>: <CircledBullets argument="10"/> Fan Games</li>
+                    <li><b>MC1 ~ MC4</b>: <CircledBullets argument="11"/> Music Booths</li>
+                    <li><b>FB1 ~ FB3</b>: <CircledBullets argument="7"/> Guest Booths</li>
+                    <li><b>FB4 ~ FB8</b>: Shrine Tables</li>
+                </ul>
+            </Col>
+        </Row>
 
         <h4>Gaming Hall Map</h4>
         <p>The entire below map is enclosed in the Toyota Hall.</p>
-        <Figure>
-            <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
-            <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
-        </Figure>
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={6}>
+                <Figure>
+                    <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
+                    <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
         <Modal show={showGamingMap} size="lg" onHide={() => setShowGamingMap(false)} centered>
             <Modal.Header closeButton>
                 <Modal.Title>Map of Gaming at Toyota Hall</Modal.Title>

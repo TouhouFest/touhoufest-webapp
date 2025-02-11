@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpFromBracket, faDownload, faEllipsisVertical, faExclamationCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { faAndroid, faChrome, faApple, faFirefoxBrowser } from '@fortawesome/free-brands-svg-icons';
-import { Image } from 'react-bootstrap';
+import { Image, Row, Col } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 const androidchrome01 = require("./../images/installation/androidchrome01.jpg");
 const androidchrome02 = require("./../images/installation/androidchrome02.jpg");
@@ -35,11 +35,23 @@ export const installationPage = {
           <Accordion.Body>
             <ol>
               <li>Tap the <FontAwesomeIcon icon={faEllipsisVertical}/> button to bring up additional options; it should reside on the upper right portion of your window</li>
-              <Image src={androidchrome01} rounded fluid className="my-2"/>
+              <Row className="justify-content-center">
+                <Col xs={12} md={6} lg={3}>
+                  <Image src={androidchrome01} rounded fluid className="my-2"/>
+                </Col>
+              </Row>
               <li>Tap the option named <b>Install app</b></li>
-              <Image src={androidchrome02} rounded fluid className="my-2"/>
+              <Row className="justify-content-center">
+                <Col xs={12} md={6} lg={3}>
+                  <Image src={androidchrome02} rounded fluid className="my-2"/>
+                </Col>
+              </Row>
               <li>The below prompt (or something similar) should appear. Tap the <b>Install</b> button</li>
-              <Image src={androidchrome03} rounded fluid className="my-2"/>
+              <Row className="justify-content-center">
+                <Col xs={12} md={6} lg={3}>
+                  <Image src={androidchrome03} rounded fluid className="my-2"/>
+                </Col>
+              </Row>
               <li>At this point, the TouhouFest icon should appear on your phone's home screen. Tap it and it will open and function just like a regular app</li>
             </ol>
           </Accordion.Body>
@@ -49,11 +61,23 @@ export const installationPage = {
           <Accordion.Body>
             <ol>
               <li>Tap the <FontAwesomeIcon icon={faEllipsisVertical}/> button to bring up additional options; it should reside on the upper right portion of your window</li>
-              <Image src={androidfirefox01} rounded fluid className="my-2"/>
+              <Row className="justify-content-center">
+                <Col xs={12} md={6} lg={3}>
+                  <Image src={androidfirefox01} rounded fluid className="my-2"/>
+                </Col>
+              </Row>
               <li>Tap the option named <b>Install</b></li>
-              <Image src={androidfirefox02} rounded fluid className="my-2"/>
+              <Row className="justify-content-center">
+                <Col xs={12} md={6} lg={3}>
+                  <Image src={androidfirefox02} rounded fluid className="my-2"/>
+                </Col>
+              </Row>
               <li>The below prompt (or something similar) should appear. Tap the <b>Add</b> button</li>
-              <Image src={androidfirefox03} rounded fluid className="my-2"/>
+              <Row className="justify-content-center">
+                <Col xs={12} md={6} lg={3}>
+                  <Image src={androidfirefox03} rounded fluid className="my-2"/>
+                </Col>
+              </Row>
               <li>At this point, the TouhouFest icon should appear on your phone's home screen. Tap it and it will open and function just like a regular app</li>
             </ol>
           </Accordion.Body>
