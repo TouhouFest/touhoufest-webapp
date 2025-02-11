@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza } from "../Utils";
-import { Accordion, Card, Figure, Image } from 'react-bootstrap';
+import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
@@ -24,18 +24,27 @@ export const cosplayPage = {
     "body": (<>
         <h4>Location(s)</h4>
         <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="15"/>), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="13"/>). Cosplay booths and repair is located at the <b>Entry Plaza</b> (<CircledBullets argument="5"/>), connected to the Torino Festival Plaza (<CircledBullets argument="7"/>).</p>
-        <Figure>
-            <Figure.Image src={pinewindgarden} fluid rounded />
-            <Figure.Caption>Pine Wind Garden</Figure.Caption>
-        </Figure>
-        <Figure>
-            <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
-            <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
-        </Figure>
-        <Figure>
-            <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-            <Figure.Caption>Entry Plaza</Figure.Caption>
-        </Figure>
+        <Row className="justify-content-center text-center">
+            <Col xs={12} md={10} lg={8}>
+                <Figure>
+                    <Figure.Image src={pinewindgarden} fluid rounded />
+                    <Figure.Caption>Pine Wind Garden</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} md={10} lg={8}>
+                <Figure>
+                    <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
+                    <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} md={10} lg={8}>
+                <Figure>
+                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
+                    <Figure.Caption>Entry Plaza</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
+
         <h4>Cosplay Meetups/Photoshoots</h4>
         <Accordion className="my-2">
             <Accordion.Item eventKey="0">
@@ -550,10 +559,14 @@ export const cosplayPage = {
 
         <h4 className="mt-2">Cosplay Repair</h4>
         <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner in the Entry Plaza.</p>
-        <Figure>
-            <Figure.Image src={cosplayrepair} fluid rounded />
-            <Figure.Caption>Cosplay Repair Banner</Figure.Caption>
-        </Figure>
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <Figure>
+                    <Figure.Image src={cosplayrepair} fluid rounded />
+                    <Figure.Caption>Cosplay Repair Banner</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
         <h4>Cosplay Contest</h4>
         <h5>Itinerary</h5>
         <ol>
@@ -570,84 +583,107 @@ export const cosplayPage = {
         <p className="small">*Renko in this case refers to the lyricist and vocalist from <a href="http://feltmusic.net/" target="_blank" rel="noreferrer">FELT</a>, an esteemed Touhou folk rock music circle. For more information, see the "Guests" page.</p>
         <h5>Categories</h5>
         <p>There are three components within the Cosplay Contest:</p>
-        <Card className="pink-one">
-            <Card.Body>
-                <Card.Title className="text-center">Craftmanship</Card.Title>
-                <Card.Text>The Craftsmanship category will be judged based on how well you’ve made your costume. If you’re proud of your sewing, foamwork, or any other techniques you used to put your costume together, this category is for you! You’ll have time before the contest to meet with the judges so they can see your work up close and ask any questions. During the contest, you’ll walk across the stage and strike some cool poses in front of the audience!</Card.Text>
-            </Card.Body>
-        </Card>
-        <Card className="mt-2 red-one">
-            <Card.Body>
-                <Card.Title className="text-center">Performance</Card.Title>
-                <Card.Text>If you love to entertain, then consider entering the Performance category! You don’t have to have a self-made costume to perform, rather you’ll be judged on how well you’re able to capture the audience. This can be through a skit, dance, or anything else you can think of. You can be as comedic or dramatic as you’d like, so get creative!</Card.Text>
-            </Card.Body>
-        </Card>
-        <Card className="mt-2 purple-one">
-            <Card.Body>
-                <Card.Title className="text-center">Exhibition</Card.Title>
-                <Card.Text>The Exhibition category is for anyone that wants a chance to walk across the stage, but doesn’t want to compete. This is just for fun, so there are no limits to whether you’ve made your costume yourself or not.</Card.Text>
-            </Card.Body>
-        </Card>
+        <Row xs={1} md={3} className="justify-content-center gy-3">
+            <Col>
+                <Card className="pink-one">
+                    <Card.Body>
+                        <Card.Title className="text-center">Craftmanship</Card.Title>
+                        <Card.Text>The Craftsmanship category will be judged based on how well you’ve made your costume. If you’re proud of your sewing, foamwork, or any other techniques you used to put your costume together, this category is for you! You’ll have time before the contest to meet with the judges so they can see your work up close and ask any questions. During the contest, you’ll walk across the stage and strike some cool poses in front of the audience!</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="red-one">
+                    <Card.Body>
+                        <Card.Title className="text-center">Performance</Card.Title>
+                        <Card.Text>If you love to entertain, then consider entering the Performance category! You don’t have to have a self-made costume to perform, rather you’ll be judged on how well you’re able to capture the audience. This can be through a skit, dance, or anything else you can think of. You can be as comedic or dramatic as you’d like, so get creative!</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="purple-one">
+                    <Card.Body>
+                        <Card.Title className="text-center">Exhibition</Card.Title>
+                        <Card.Text>The Exhibition category is for anyone that wants a chance to walk across the stage, but doesn’t want to compete. This is just for fun, so there are no limits to whether you’ve made your costume yourself or not.</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
 
         <h5 className="mt-2">Awards & Prizes</h5>
         <p>Please note that the Exhibition Category is not eligible for awards.</p>
-        <Card>
-            <Card.Body className="text-center gold-bg">
-                <Card.Title>Best Craftsmanship</Card.Title>
-                <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
-            </Card.Body>
-        </Card>
-        <Card className="mt-2">
-            <Card.Body className="text-center silver-bg">
-                <Card.Title>Runner-up Craftsmanship</Card.Title>
-                <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
-            </Card.Body>
-        </Card>
-        <Card className="mt-2">
-            <Card.Body className="text-center gold-bg">
-                <Card.Title>Best Performance</Card.Title>
-                <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
-            </Card.Body>
-        </Card>
-        <Card className="mt-2">
-            <Card.Body className="text-center silver-bg">
-                <Card.Title>Runner-up Performance</Card.Title>
-                <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
-            </Card.Body>
-        </Card>
-        <Card className="mt-2">
-            <Card.Body className="text-center gold-bg">
-                <Card.Title>Judge's Choice (Per-Judge)</Card.Title>
-                <Card.Subtitle>Prizes up to Judge Discretion</Card.Subtitle>
-            </Card.Body>
-        </Card>
+        <Row xs={1} lg={3} className="gy-3 justify-content-center">
+            <Col >
+                <Card>
+                    <Card.Body className="text-center gold-bg">
+                        <Card.Title>Best Craftsmanship</Card.Title>
+                        <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="">
+                    <Card.Body className="text-center silver-bg">
+                        <Card.Title>Runner-up Craftsmanship</Card.Title>
+                        <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="">
+                    <Card.Body className="text-center gold-bg">
+                        <Card.Title>Best Performance</Card.Title>
+                        <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="">
+                    <Card.Body className="text-center silver-bg">
+                        <Card.Title>Runner-up Performance</Card.Title>
+                        <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="">
+                    <Card.Body className="text-center gold-bg">
+                        <Card.Title>Judge's Choice (Per-Judge)</Card.Title>
+                        <Card.Subtitle>Prizes up to Judge Discretion</Card.Subtitle>
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
         <h5 className="mt-2">About the Judges</h5>
-
-        <Card>
-            <Card.Img variant="top" src={medukitty} />
-            <Card.Body>
-                <Card.Title>Medukitty</Card.Title>
-                <Card.Text>I'm MeduKitty, a long time cosplayer and Touhou enthusiast who's thrilled to combine her two greatest passions!  I've been cosplaying from Touhou since 2018, and my favorite thing is making my costumes from scratch with as many details as I can fit into them.  I love our community so much and I can't wait to participate in TouhouFest with you all! </Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center">
-                <Card.Link href="https://www.instagram.com/medukitty_/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                <Card.Link href="https://www.tiktok.com/@medukitty" target="_blank"><FontAwesomeIcon icon={faTiktok} /> TikTok</Card.Link>
-                <Card.Link href="https://twitter.com/medukitty" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
-            </Card.Footer>
-        </Card>
-
-        <Card className="mt-2">
-            <Card.Img variant="top" src={violetreverie} />
-            <Card.Body>
-                <Card.Title>Violet Reverie</Card.Title>
-                <Card.Text>Hello nice to meet you! I'm Violet Reverie. My main goal is to empower the Worldwide Touhou Cosplay community, so I created the Touhou Cosplay Guild Discord Server to bring everyone together and provide learning resources. My other goal, over the course of the 17+ Touhou Cosplays I've made, is to pull the characters from Gensokyo and bring them to life through use of Design and Material to express their role, origin, and ability in my costumes.</Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center">
-                <Card.Link href="https://www.instagram.com/violet_reverie_cos/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                <Card.Link href="https://twitter.com/CuLightSource" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
-            </Card.Footer>
-        </Card>
-
+        <Row xs={1} lg={2} className="gy-3">
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={medukitty} />
+                    <Card.Body>
+                        <Card.Title>Medukitty</Card.Title>
+                        <Card.Text>I'm MeduKitty, a long time cosplayer and Touhou enthusiast who's thrilled to combine her two greatest passions!  I've been cosplaying from Touhou since 2018, and my favorite thing is making my costumes from scratch with as many details as I can fit into them.  I love our community so much and I can't wait to participate in TouhouFest with you all! </Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-center">
+                        <Card.Link href="https://www.instagram.com/medukitty_/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                        <Card.Link href="https://www.tiktok.com/@medukitty" target="_blank"><FontAwesomeIcon icon={faTiktok} /> TikTok</Card.Link>
+                        <Card.Link href="https://twitter.com/medukitty" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
+                    </Card.Footer>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="">
+                    <Card.Img variant="top" src={violetreverie} />
+                    <Card.Body>
+                        <Card.Title>Violet Reverie</Card.Title>
+                        <Card.Text>Hello nice to meet you! I'm Violet Reverie. My main goal is to empower the Worldwide Touhou Cosplay community, so I created the Touhou Cosplay Guild Discord Server to bring everyone together and provide learning resources. My other goal, over the course of the 17+ Touhou Cosplays I've made, is to pull the characters from Gensokyo and bring them to life through use of Design and Material to express their role, origin, and ability in my costumes.</Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-center">
+                        <Card.Link href="https://www.instagram.com/violet_reverie_cos/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                        <Card.Link href="https://twitter.com/CuLightSource" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
+                    </Card.Footer>
+                </Card>
+            </Col>
+        </Row>
         <h5 className="mt-2">Rules</h5>
         <Accordion>
             <Accordion.Item eventKey="0">
