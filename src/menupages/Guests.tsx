@@ -68,20 +68,28 @@ export const guestsPage = {
             <li><b>TAMUSIC</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
             <li><b>Punderfull</b>: Pine Wind Garden (<CircledBullets argument="15"/>)</li>
         </ul>
-        <Figure>
-            <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
-            <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
-        </Figure>
-        <Figure>
-            <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
-            <Figure.Caption>Torino Plaza</Figure.Caption>
-        </Figure>
-        <Figure>
-            <Figure.Image src={pinewindgarden} fluid rounded></Figure.Image>
-            <Figure.Caption>Pine Wind Garden</Figure.Caption>
-        </Figure>
+        <Row className="justify-content-center">
+            <Col xs={12} className="text-center">
+                <Figure className="">
+                    <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
+                    <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} md={6}>
+                <Figure>
+                    <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
+                    <Figure.Caption>Torino Plaza</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col xs={12} md={6}>
+                <Figure>
+                    <Figure.Image src={pinewindgarden} fluid rounded></Figure.Image>
+                    <Figure.Caption>Pine Wind Garden</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
         <h4>About The Guests</h4>
-        <Row xs={1} md={1} lg={1} className="g-4">
+        <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
            <Col>
                 <Card>
                     <Card.Img variant="top" src={a_one}></Card.Img>
@@ -166,7 +174,7 @@ export const guestsPage = {
         <h4 className="mt-2">DJs</h4>
         <p>Throughout the convention the below talented individuals will be providing background music in the Torino Festival Plaza. Feel free to stop by and listen if able!</p>
 
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
             {djs.map((artist, i) => <>
              <Col>
                 <Card>
