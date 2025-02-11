@@ -613,21 +613,32 @@ export const artistVendorsPage = {
     "body": (<>
         <h4>Location</h4>
         <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/>) behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> (<CircledBullets argument="3"/>) in front of the Pine Wind Garden.</p>
-        <Figure>
-            <Figure.Image src={nakanotheatre} fluid rounded />
-            <Figure.Caption>George Nakano Theatre</Figure.Caption>
-        </Figure>
-        <Figure>
-            <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-            <Figure.Caption>Entry Plaza</Figure.Caption>
-        </Figure>
+        <Row xs={1} md={2}>
+            <Col>
+                <Figure>
+                    <Figure.Image src={nakanotheatre} fluid rounded />
+                    <Figure.Caption>George Nakano Theatre</Figure.Caption>
+                </Figure>
+            </Col>
+            <Col>
+                <Figure>
+                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
+                    <Figure.Caption>Entry Plaza</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
 
+        <Row xs={1} md={2}>
+            <Col>
+                <h4>Artist Alley</h4>
 
-        <h4>Artist Alley</h4>
-
-        <h5>Artist Alley Booth Map</h5>
-        <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
-        <ArtistAlleyMapModal />
+                <h5>Artist Alley Booth Map</h5>
+                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
+            </Col>
+            <Col>
+                <ArtistAlleyMapModal />
+            </Col>
+        </Row>
 
         <h5>Official Artists</h5>
 
