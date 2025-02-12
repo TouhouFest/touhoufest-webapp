@@ -613,42 +613,53 @@ export const artistVendorsPage = {
     "body": (<>
         <h4>Location</h4>
         <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/>) behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> (<CircledBullets argument="3"/>) in front of the Pine Wind Garden.</p>
-        <Figure>
-            <Figure.Image src={nakanotheatre} fluid rounded />
-            <Figure.Caption>George Nakano Theatre</Figure.Caption>
-        </Figure>
-        <Figure>
-            <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-            <Figure.Caption>Entry Plaza</Figure.Caption>
-        </Figure>
-
-
-        <h4>Artist Alley</h4>
-
-        <h5>Artist Alley Booth Map</h5>
-        <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
-        <ArtistAlleyMapModal />
-
-        <h5>Official Artists</h5>
-
-        <Row xs={2} className="g-3 justify-content-center">
-            {official_artists.map((artist, i) => <>
-             <Col>
-                <Card>
-                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
-                </Card>
+        <Row xs={1} md={2}>
+            <Col>
+                <Figure>
+                    <Figure.Image src={nakanotheatre} fluid rounded />
+                    <Figure.Caption>George Nakano Theatre</Figure.Caption>
+                </Figure>
             </Col>
-            </>)}
+            <Col>
+                <Figure>
+                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
+                    <Figure.Caption>Entry Plaza</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
+
+
+        <Row xs={1} md={2}>
+            <Col>
+                <h4>Artist Alley</h4>
+                <h5>Official Artists</h5>
+
+                <Row xs={2} className="g-3 justify-content-center">
+                    {official_artists.map((artist, i) => <>
+                    <Col>
+                        <Card>
+                            <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                            <ListGroup className="list-group-flush">
+                                <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                                <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                            </ListGroup>
+                            {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                        </Card>
+                    </Col>
+                    </>)}
+                </Row>
+                <h5 className="mt-3">Artist Alley Booth Map</h5>
+                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
+
+            </Col>
+            <Col>
+                <ArtistAlleyMapModal />
+            </Col>
         </Row>
 
         <h5 className="mt-2">All Other Artists</h5>
 
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
              <Col>
                 <Card>
@@ -663,23 +674,33 @@ export const artistVendorsPage = {
             </>)}
         </Row>
 
-        <h4 className="mt-2">Vendors</h4>
-        <h5>Vendors Booth Map</h5>
-        <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
-        <VendorsMapModal />
 
-        <h5>Non-Vendors Booths</h5>
-        <p>These booths aren't actually vendors booths but due to their close proximity to the rest of the vendors are also listed here:</p>
-        <ul>
-            <li><b>Booth V1</b>: TouhouFest Info Booth</li>
-            <li><b>Booth V2</b>: Info Booth/Weapons Check</li>
-            <li><b>Booth V3</b>: Cosplay Repair</li>
-            <li><b>Booth V4</b>: Cosplay Ambassadors</li>
-            <li><b>Booth V5</b>: Punderfull's Booth</li>
-        </ul>
+        <Row xs={1} md={2} className="mt-3">
+            <Col>
+                <h4>Vendors</h4>
+                <h5>Vendors Booth Map</h5>
+                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
+
+                <h5>Non-Vendors Booths</h5>
+                <p>These booths aren't actually vendors booths but due to their close proximity to the rest of the vendors are also listed here:</p>
+                <ul>
+                    <li><b>Booth V1</b>: TouhouFest Info Booth</li>
+                    <li><b>Booth V2</b>: Info Booth/Weapons Check</li>
+                    <li><b>Booth V3</b>: Cosplay Repair</li>
+                    <li><b>Booth V4</b>: Cosplay Ambassadors</li>
+                    <li><b>Booth V5</b>: Punderfull's Booth</li>
+                </ul>
+
+            </Col>
+            <Col>
+                <VendorsMapModal />
+            </Col>
+        </Row>
+
+
         <h5>List of Vendors</h5>
         <p>The majority of the entries listed below are in vendors (denoted "Booth VXX").</p>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
                 <Card>
@@ -699,10 +720,14 @@ export const artistVendorsPage = {
        <h4 className="mt-2">Music, Fangame, & Shrine Tables</h4>
        <h5>Booth Map</h5>
         <p>Tap to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
-        <ShrineMapModal />
+        <Row xs={1} md={2} className="justify-content-center">
+            <Col>
+                <ShrineMapModal />
+            </Col>
+        </Row>
        <h5>List of Participants</h5>
         <h6>Entry Foyer (Community Tables)</h6>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
              <Col>
                 <Card>
@@ -717,7 +742,7 @@ export const artistVendorsPage = {
             </>)}
         </Row>
        <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {fanmusicgames.map((artist, i) => <>
              <Col>
                 <Card>
@@ -734,7 +759,7 @@ export const artistVendorsPage = {
             </>)}
        </Row>
        <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
-        <Row xs={2} className="g-3 justify-content-center">
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
                 <Card>

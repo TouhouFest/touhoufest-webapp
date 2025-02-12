@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils, faWarning } from '@fortawesome/free-solid-svg-icons';
-import { Card } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 const okamoto  = require("./../images/okamoto.jpg");
 const tokyostyle = require("./../images/tokyostyle.webp");
 const brazilplate = require("./../images/brazilplate.jpg");
@@ -23,7 +23,11 @@ export const restarauntsPage = {
         <h4>Food Trucks</h4>
         <p>The below food trucks will be catering for TouhouFest for those interested. They will be located in the front entrance of TouhouFest, by the Circular Drive.</p> 
 
-        <Card>
+        <Row>
+
+        <Col xs={12} md={6} lg={true}>
+
+        <Card className="mt-2">
             <Card.Header className="text-center small">Japanese Food</Card.Header>
             <Card.Img src={okamoto} className="rounded-0"/>
             <Card.Body>
@@ -36,6 +40,10 @@ export const restarauntsPage = {
                 <Card.Link href="https://okamotokitchen.com/TakeOutMenu_Current.pdf" target="_blank"><FontAwesomeIcon icon={faBowlFood}/> Menu</Card.Link>
             </Card.Footer>
         </Card>
+
+        </Col>
+
+        <Col xs={12} md={6} lg={true}>
 
         <Card className="mt-2">
             <Card.Header className="text-center small">Japanese Food</Card.Header>
@@ -51,6 +59,8 @@ export const restarauntsPage = {
             </Card.Footer>
         </Card>
 
+        </Col>
+        <Col xs={12} md={6} lg={true}>
         <Card className="mt-2">
             <Card.Header className="text-center small">Thai Food</Card.Header>
             <Card.Img src={noodsfoodtruck} className="rounded-0"/>
@@ -63,7 +73,8 @@ export const restarauntsPage = {
                 <Card.Link href="https://www.noodsfoodtruck.com/" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link & Menu</Card.Link>
             </Card.Footer>
         </Card>
-
+        </Col>
+        <Col xs={12} md={6} lg={true}>
         <Card className="mt-2">
             <Card.Header className="text-center small">Mexican Food</Card.Header>
             <Card.Img src={lupitastacos} className="rounded-0"/>
@@ -77,9 +88,14 @@ export const restarauntsPage = {
                 <Card.Link href="https://www.bestfoodtrucks.com/truck/lupita-s-tacos/menu" target="_blank"><FontAwesomeIcon icon={faPepperHot}/> Menu</Card.Link>
             </Card.Footer>
         </Card>
+        </Col>
+        </Row>
 
         <h4 className="mt-2">Other Options</h4>
         <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful. Some additional restaraunt recommendations below:</p>
+
+        <Row>
+        <Col xs={12} md={6}>
 
         <Card className="mt-2">
             <Card.Header className="text-center small">Brazillian Food</Card.Header>
@@ -92,6 +108,9 @@ export const restarauntsPage = {
             </Card.Footer>
         </Card>
 
+        </Col>
+        <Col xs={12} md={6}>
+
         <Card className="mt-2">
             <Card.Header className="text-center small">Sushi</Card.Header>
             <Card.Img src={orientalbreeze} className="rounded-0"/>
@@ -103,5 +122,7 @@ export const restarauntsPage = {
             </Card.Footer>
         </Card>
 
+        </Col>
+        </Row>
     </>),
 }
