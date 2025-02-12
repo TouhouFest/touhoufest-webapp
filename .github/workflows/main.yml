@@ -14,7 +14,8 @@ jobs:
         run: curl --output src/events.csv ""$SUPER_SECRET""
         env:
           SUPER_SECRET: ${{ secrets.GOOGLE_SHEETS_URL }}
-      - run: git status
+      - run: git status 
+      - run: git diff
       # - name: Deploy with gh-pages
       #   run: |
       #     git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
