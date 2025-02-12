@@ -11,7 +11,7 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: npm install
       - name: Pull down events from Google Sheets
-        run: curl --output src/events.csv ""$SUPER_SECRET""
+        run: curl ""$SUPER_SECRET""
         env:
           SUPER_SECRET: ${{ secrets.GOOGLE_SHEETS_URL }}
       # - name: Deploy with gh-pages
