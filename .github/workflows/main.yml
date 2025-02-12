@@ -4,8 +4,8 @@ jobs:
   Deploy-Step:
     runs-on: ubuntu-latest
     steps:
-      # - name: Pull down repository 
-      #   uses: actions/checkout@v4
+      - name: Pull down repository 
+        uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
       - run: npm install
       - name: Deploy with gh-pages
