@@ -4,11 +4,12 @@ jobs:
   Deploy-Step:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull down repository
-        uses: actions/checkout@v4
+      # - name: Pull down repository 
+      #   uses: actions/checkout@v4
+      - run: cd ${{ github.workspace }}
+      - run: npm install
       - name: Deploy with gh-pages
         run: |
-          cd ${{ github.workspace }}
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
