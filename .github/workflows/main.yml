@@ -15,9 +15,9 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.GOOGLE_SHEETS_URL }}
       - uses: stefanzweifel/git-auto-commit-action@v5
-      # - name: Deploy with gh-pages
-      #   run: |
-      #     git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-      #     npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
