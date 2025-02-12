@@ -2,6 +2,8 @@ name: Deploy with Github Actions
 on: workflow_dispatch
 jobs:
   Deploy-Step:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Pull down repository 
