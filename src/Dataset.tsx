@@ -12,9 +12,11 @@ import Papa from 'papaparse';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPixiv } from '@fortawesome/free-brands-svg-icons';
-
+import IssueNotifications from "./IssueNotifications";
 import events from './events.csv';
 import noresults from './noresults.jpg';
+
+import Stack from "react-bootstrap/Stack";
 
 dayjs.extend(customParseFormat);
 
@@ -94,6 +96,7 @@ class SPDataFrame {
   }
 
 };
+
 
 export default function Dataset({ mode, param_fxn, appliedFilters, changeDays }) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
@@ -316,7 +319,10 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
               {eventbulk}
             </Col>
             <Col xs="2" className="text-center align-self-center">
-              <Bookmark index={index}></Bookmark>
+              <Stack gap={3}>
+                <Bookmark index={index}></Bookmark>
+                <IssueNotifications index={index} title={elem["event_title"]}/>
+              </Stack>
             </Col>
           </Row>
         </ListGroup.Item>
