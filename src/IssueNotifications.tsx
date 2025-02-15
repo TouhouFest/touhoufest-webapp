@@ -9,8 +9,13 @@ import { useEffect, useState } from 'react';
 export default function IssueNotifications({index, title}: {index:number, title:string}) {
 
   const [bellType, setBellType] = useState(faBell);
+  const NOTIFYNAME = "NOTIFY";
 
   function issueNotification(){
+    // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
+    let usedate = new Date(Date.now() + 1000 * 10);
+    localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toString());
+
     let bodydesc:string = `Your event "${title}" is starting in XYZ minutes.`
     LocalNotifications.schedule({
       notifications: [
@@ -19,7 +24,7 @@ export default function IssueNotifications({index, title}: {index:number, title:
           body:bodydesc,
           id:index,
           schedule: {
-            at: new Date(Date.now() + 1000 * 10),
+            at: usedate,
             allowWhileIdle:true
           },
         }
@@ -60,14 +65,41 @@ export default function IssueNotifications({index, title}: {index:number, title:
   }
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
+    // remove item from storage -- doesn't raise exception if already gone so whatever
+    localStorage.removeItem(`${NOTIFYNAME}-${index}`);
+    //update ui accordingly
     if (fired_not["id"] === index) {
       setBellType(faBell);
     }
   }
 
   useEffect(function() {
+   
+    // search localnotifications to see if a notification is already queued
+    let foundNotification:boolean = false;
     LocalNotifications.getPending().then((result) => {
-      console.log(result);
+      result.notifications.map((notice, i) => {
+        if (notice.id === index) {
+          foundNotification = true;
+        }
+      });
+    // run after inspection of pending notifications is complete
+    }).then(() => {
+      // case 1: a pending notification was already found
+      if (foundNotification) {
+        setBellType(fasBell);
+      }
+      // case 2: no pending notifications were found
+      else {
+        // check for existence of cached notification
+        let cachedtime = localStorage.getItem(`${NOTIFYNAME}-${index}`);
+        // check if a cached notification exist; leave alone if not
+        if (cachedtime !== null){
+          // todo: check if current time is less than that of event start time
+          // schedule if it is, otherwise ignore
+          console.log(cachedtime);
+        }
+      }
     });
   }, [])
 
