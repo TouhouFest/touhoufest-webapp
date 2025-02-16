@@ -6,17 +6,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
-export default function IssueNotifications({index, title}: {index:number, title:string}) {
+export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:number}) {
 
   const [bellType, setBellType] = useState(faBell);
   const NOTIFYNAME = "NOTIFY";
 
-  function issueNotification(){
+  function issueNotification(usedate:Date|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
-    let usedate = new Date(Date.now() + 1000 * 10);
+    if(usedate === null) {
+      usedate = new Date(Date.now() + 1000 * 10);
+    }
     localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toString());
 
-    let bodydesc:string = `Your event "${title}" is starting in XYZ minutes.`
+    let bodydesc:string = `Your event "${title}" is starting soon.`
     LocalNotifications.schedule({
       notifications: [
         {
@@ -29,6 +31,9 @@ export default function IssueNotifications({index, title}: {index:number, title:
           },
         }
       ]
+    }).then(() => {
+      // add listener for when any notification is fired off
+      LocalNotifications.addListener('localNotificationReceived', checkNotificationFired);
     }).then(() => {
       setBellType(fasBell);
     });
@@ -65,10 +70,10 @@ export default function IssueNotifications({index, title}: {index:number, title:
   }
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
-    // remove item from storage -- doesn't raise exception if already gone so whatever
-    localStorage.removeItem(`${NOTIFYNAME}-${index}`);
     //update ui accordingly
     if (fired_not["id"] === index) {
+      // remove item from storage -- doesn't raise exception if already gone so whatever
+      localStorage.removeItem(`${NOTIFYNAME}-${index}`);
       setBellType(faBell);
     }
   }
@@ -92,12 +97,19 @@ export default function IssueNotifications({index, title}: {index:number, title:
       // case 2: no pending notifications were found
       else {
         // check for existence of cached notification
-        let cachedtime = localStorage.getItem(`${NOTIFYNAME}-${index}`);
+        let cachedtime:string|null = localStorage.getItem(`${NOTIFYNAME}-${index}`);
         // check if a cached notification exist; leave alone if not
         if (cachedtime !== null){
-          // todo: check if current time is less than that of event start time
+          let parsed_cachedtime:Date= new Date(cachedtime);
+          let parsed_starttime:Date = new Date(start_ts);
+          let now_time = new Date();
+          
+          // check if current time is less than that of event start time
           // schedule if it is, otherwise ignore
-          console.log(cachedtime);
+          issueNotification(parsed_cachedtime);
+          // if( now_time < parsed_starttime) {
+          //   issueNotification(parsed_cachedtime);
+          // }
         }
       }
     });

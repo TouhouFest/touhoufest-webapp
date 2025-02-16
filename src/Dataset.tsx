@@ -321,7 +321,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
             <Col xs="2" className="text-center align-self-center">
               <Stack gap={3}>
                 <Bookmark index={index}></Bookmark>
-                <IssueNotifications index={index} title={elem["event_title"]}/>
+                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs.valueOf()}/>
               </Stack>
             </Col>
           </Row>
