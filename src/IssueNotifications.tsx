@@ -106,10 +106,13 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
           
           // check if current time is less than that of event start time
           // schedule if it is, otherwise ignore
-          issueNotification(parsed_cachedtime);
-          // if( now_time < parsed_starttime) {
-          //   issueNotification(parsed_cachedtime);
-          // }
+          if( now_time < parsed_starttime) {
+            issueNotification(parsed_cachedtime);
+          }
+          // remove the old item
+          else {
+            localStorage.removeItem(`${NOTIFYNAME}-${index}`);
+          }
         }
       }
     });
