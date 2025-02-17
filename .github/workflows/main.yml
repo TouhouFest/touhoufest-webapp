@@ -28,6 +28,9 @@ jobs:
   Android-Deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Pull down repository 
+        uses: actions/checkout@v4
+      - run: cd ${{ github.workspace }}
       - name: Java Setup
         uses: actions/setup-java@v4
         with:
@@ -36,9 +39,6 @@ jobs:
           cache: gradle
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Pull down repository 
-        uses: actions/checkout@v4
-      - run: cd ${{ github.workspace }}
       - name: Unlock secrets
         uses: sliteteam/github-action-git-crypt-unlock@1.2.0
         env:
