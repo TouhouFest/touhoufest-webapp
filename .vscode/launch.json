@@ -16,7 +16,13 @@
             "request": "launch",
             "name": "Launch localhost",
             "url": "http://localhost:5173",
-            "webRoot": "${workspaceFolder}/src"
-        },
+            "webRoot": "${workspaceFolder}/src",
+            "pathMappings": [
+                {
+                    "url": "http://localhost:5173/src",
+                    "path": "${workspaceFolder}/src"
+                }
+            ]
+        }
     ]
 }
