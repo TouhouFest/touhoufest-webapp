@@ -65,8 +65,8 @@ jobs:
       - run: npx cap sync android
       - uses: stefanzweifel/git-auto-commit-action@v5
       # build app and publish as artifact
-      - run: npx cap build android --androidreleastype AAB
-      - run: npx cap build android --androidreleastype APK
+      - run: npx cap build android --androidreleasetype AAB
+      - run: npx cap build android --androidreleasetype APK
       - name: Upload app artifacts
         uses: actions/upload-artifact@v4
         with:
