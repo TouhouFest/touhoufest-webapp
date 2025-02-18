@@ -45,15 +45,14 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '23'
-          cache: gradle
+          java-version: '22'
       # use this webpage to match-up java versions and gradle versions
       # https://docs.gradle.org/current/userguide/compatibility.html
       - name: Gradle Setup
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.10"
-      - run: alias gradle='/home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-8.10/bin/gradle'
+          gradle-version: "8.7"
+      # - run: alias gradle='/home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-8.10/bin/gradle'
       # install npm dependencies
       - run: npm install
       # unlock repository using git crypt secrets
