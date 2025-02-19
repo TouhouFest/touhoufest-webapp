@@ -6,6 +6,8 @@ export let colors = ["purple","fuchsia","green","lime","olive","yellow","navy","
 
 export const COOKIE_NAME = "BOOKMARKS";
 
+export const CON_TIMEZONE:string = "America/Los_Angeles";
+
 let today = new Date();
 today.setDate(today.getDate() + 30);
 export const cookie_parameters = {expires: today, sameSite:"lax" as const}
