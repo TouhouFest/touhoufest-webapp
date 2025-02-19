@@ -1,22 +1,27 @@
-import {LocalNotifications, ScheduleOptions, LocalNotificationSchema, PendingResult} from '@capacitor/local-notifications';
+import {LocalNotifications, ScheduleOptions, LocalNotificationSchema, PendingResult, LocalNotificationDescriptor, CancelOptions} from '@capacitor/local-notifications';
 import {Toast} from '@capacitor/toast';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faBell as fasBell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
+import dayjs from "dayjs/esm/index.js";
 
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
-export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:number}) {
+export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
 
   const [bellType, setBellType] = useState(faBell);
   const NOTIFYNAME = "NOTIFY";
 
-  function issueNotification(usedate:Date|null = null){
+  function issueNotification(usedate:dayjs.Dayjs|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
     if(usedate === null) {
-      usedate = new Date(Date.now() + 1000 * 10);
+      // TODO: update to use start_ts
+      // usedate = new Date(Date.now() + 1000 * 10);
+      // usedate = dayjs().add(10,"s");
+      usedate = start_ts.subtract(5,"m");
+
     }
-    localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toString());
+    localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toISOString());
 
     let bodydesc:string = `Your event "${title}" is starting soon.`
     LocalNotifications.schedule({
@@ -26,7 +31,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
           body:bodydesc,
           id:index,
           schedule: {
-            at: usedate,
+            at: usedate.toDate(),
             allowWhileIdle:true
           },
         }
@@ -57,24 +62,36 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
 
   function onTriggerFunction() {
     // check permissions the first time
-    LocalNotifications.checkPermissions().then(
-      (e) => {
-        // issue permissions check if not granted, otherwise issue notification
-        if (e.display != 'granted') {
-          permissionsCheck();
-        }
-        else {
-          issueNotification();
-        }
+    if (bellType === fasBell) {
+      let cancelitem:CancelOptions = {notifications: [{id: index}]};
+      LocalNotifications.cancel(cancelitem).then(() => {
+        removeNotification();
       });
+    }
+    else{
+      LocalNotifications.checkPermissions().then(
+        (e) => {
+          // issue permissions check if not granted, otherwise issue notification
+          if (e.display != 'granted') {
+            permissionsCheck();
+          }
+          else {
+            issueNotification();
+          }
+      });
+    }
+  }
+
+  // remove item from storage and update ui -- doesn't raise exception if already gone so whatever
+  function removeNotification() {
+    localStorage.removeItem(`${NOTIFYNAME}-${index}`);
+    setBellType(faBell);
   }
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
     //update ui accordingly
     if (fired_not["id"] === index) {
-      // remove item from storage -- doesn't raise exception if already gone so whatever
-      localStorage.removeItem(`${NOTIFYNAME}-${index}`);
-      setBellType(faBell);
+      removeNotification();
     }
   }
 
@@ -100,13 +117,12 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
         let cachedtime:string|null = localStorage.getItem(`${NOTIFYNAME}-${index}`);
         // check if a cached notification exist; leave alone if not
         if (cachedtime !== null){
-          let parsed_cachedtime:Date= new Date(cachedtime);
-          let parsed_starttime:Date = new Date(start_ts);
-          let now_time = new Date();
+          let parsed_cachedtime:dayjs.Dayjs = dayjs(cachedtime);
+          let now_time = dayjs();
           
           // check if current time is less than that of event start time
           // schedule if it is, otherwise ignore
-          if( now_time < parsed_starttime) {
+          if( now_time < start_ts) {
             issueNotification(parsed_cachedtime);
           }
           // remove the old item

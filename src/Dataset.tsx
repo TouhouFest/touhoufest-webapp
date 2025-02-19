@@ -1,10 +1,15 @@
 import dayjs from "dayjs/esm/index.js";
 import customParseFormat from "dayjs/esm/plugin/customParseFormat";
+import timezone from "dayjs/esm/plugin/timezone";
+import utc from "dayjs/esm/plugin/utc";
+// import dayjs from "dayjs";
+// import customParseFormat from "dayjs/plugin/customParseFormat";
+// import timezone from "dayjs/plugin/timezone";
 import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE } from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -19,6 +24,8 @@ import noresults from './noresults.jpg';
 import Stack from "react-bootstrap/Stack";
 
 dayjs.extend(customParseFormat);
+dayjs.extend(timezone);
+dayjs.extend(utc);
 
 class SPDataFrame {
   
@@ -128,10 +135,10 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
       complete: function (results) {
         let newdata = new SPDataFrame(results.data);
         newdata = newdata.addColumn("combinedStart", newdata.apply((row) => {
-          return dayjs(row["event_start_day"] + " " + row["event_start_time"], "M/D/YY H:mm").toISOString();
+          return dayjs.tz(row["event_start_day"] + " " + row["event_start_time"], "M/D/YY H:mm", CON_TIMEZONE).toISOString();
         }));
         newdata = newdata.addColumn("combinedEnd", newdata.apply((row) => {
-          return dayjs(row["event_end_day"] + " " + row["event_end_time"], "M/D/YY H:mm").toISOString();
+          return dayjs.tz(row["event_end_day"] + " " + row["event_end_time"], "M/D/YY H:mm", CON_TIMEZONE).toISOString();
         }));
         newdata = newdata.sortValues("combinedStart");
         newdata = newdata.addColumn("uniqueID", newdata.index);
@@ -321,7 +328,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
             <Col xs="2" className="text-center align-self-center">
               <Stack gap={3}>
                 <Bookmark index={index}></Bookmark>
-                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs.valueOf()}/>
+                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs}/>
               </Stack>
             </Col>
           </Row>
