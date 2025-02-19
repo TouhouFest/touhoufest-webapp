@@ -1,4 +1,4 @@
-import {LocalNotifications, ScheduleOptions, LocalNotificationSchema, PendingResult} from '@capacitor/local-notifications';
+import {LocalNotifications, ScheduleOptions, LocalNotificationSchema, PendingResult, LocalNotificationDescriptor, CancelOptions} from '@capacitor/local-notifications';
 import {Toast} from '@capacitor/toast';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faBell as fasBell } from '@fortawesome/free-solid-svg-icons';
@@ -62,24 +62,36 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
 
   function onTriggerFunction() {
     // check permissions the first time
-    LocalNotifications.checkPermissions().then(
-      (e) => {
-        // issue permissions check if not granted, otherwise issue notification
-        if (e.display != 'granted') {
-          permissionsCheck();
-        }
-        else {
-          issueNotification();
-        }
+    if (bellType === fasBell) {
+      let cancelitem:CancelOptions = {notifications: [{id: index}]};
+      LocalNotifications.cancel(cancelitem).then(() => {
+        removeNotification();
       });
+    }
+    else{
+      LocalNotifications.checkPermissions().then(
+        (e) => {
+          // issue permissions check if not granted, otherwise issue notification
+          if (e.display != 'granted') {
+            permissionsCheck();
+          }
+          else {
+            issueNotification();
+          }
+      });
+    }
+  }
+
+  // remove item from storage and update ui -- doesn't raise exception if already gone so whatever
+  function removeNotification() {
+    localStorage.removeItem(`${NOTIFYNAME}-${index}`);
+    setBellType(faBell);
   }
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
     //update ui accordingly
     if (fired_not["id"] === index) {
-      // remove item from storage -- doesn't raise exception if already gone so whatever
-      localStorage.removeItem(`${NOTIFYNAME}-${index}`);
-      setBellType(faBell);
+      removeNotification();
     }
   }
 
