@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 import dayjs from "dayjs/esm/index.js";
 
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
-export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
+export default function IssueNotifications({index, title, start_ts, showModalFunc}: {index:number, title:string, start_ts:dayjs.Dayjs, showModalFunc:Function}) {
 
   const [bellType, setBellType] = useState(faBell);
-  const NOTIFYNAME = "NOTIFY";
+  const NOTIFYNAME:string = "NOTIFY";
 
   function issueNotification(usedate:dayjs.Dayjs|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
@@ -76,7 +76,9 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
             permissionsCheck();
           }
           else {
-            issueNotification();
+            // TODO: add localstorage check for default notification, then uncomment
+            // issueNotification();
+            showModalFunc(true);
           }
       });
     }

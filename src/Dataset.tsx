@@ -20,7 +20,7 @@ import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 import IssueNotifications from "./IssueNotifications";
 import events from './events.csv';
 import noresults from './noresults.jpg';
-
+import DefaultNoficationModal from './DefaultNotificationModal';
 import Stack from "react-bootstrap/Stack";
 
 dayjs.extend(customParseFormat);
@@ -112,6 +112,9 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
   const [eventDetails, setEventDetails] = useState({});
   const [evtPrint, setEvtPrint] = useState(<></>);
   // const [availableDays, setAvailableDays] = useState([]);
+
+  // show/dont show default nofication modal
+  const [showModal, setShowModal] = useState(false);
 
   function handleEventOnClick(index, evtbulk) {
     let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
@@ -328,7 +331,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
             <Col xs="2" className="text-center align-self-center">
               <Stack gap={3}>
                 <Bookmark index={index}></Bookmark>
-                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs}/>
+                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} showModalFunc={setShowModal}/>
               </Stack>
             </Col>
           </Row>
@@ -341,6 +344,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
   return (
     <>
       <EventDescription show_var={showEventDescription} hide_fxn={handleEventOnHide} event_package={eventDetails} evt_print={evtPrint}></EventDescription>
+      <DefaultNoficationModal show={showModal} changeState={setShowModal} />
       {output.length > 1 ?
         <>
           <ListGroup variant="flush" className="flex-grow-1">
