@@ -3,6 +3,17 @@ import { Modal, Form, Button } from "react-bootstrap";
 export default function DefaultNoficationModal({show, changeState}: {show:boolean, changeState:Function}) {
     
     // state var for show dictated by App.tsx
+    function handleSubmit(e:React.FormEvent) {
+        e.preventDefault();
+    }
+
+    // prevent pressing Enter from prematurely submitting the form
+    function disableEnter(e:React.KeyboardEvent) {
+        if(e.keyCode === 13){
+        e.preventDefault();
+        return false;
+        }
+  }
 
     return (<>
         <Modal show={show} onHide={() => changeState(false)} centered>
@@ -11,7 +22,8 @@ export default function DefaultNoficationModal({show, changeState}: {show:boolea
             </Modal.Header> 
             <Modal.Body>
                 <p>Please set a nofication time.</p>
-                <Form>
+                <p className="small">Exiting out of this modal without submitting will neither queue a notification nor modify any default notification preferences.</p>
+                <Form onSubmit={handleSubmit} onKeyDown={disableEnter}>
                     <Form.Group className="mb-3">
                         <Form.Label>Time Before Event Start</Form.Label>
                         <Form.Select>
