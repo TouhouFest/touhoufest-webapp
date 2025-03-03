@@ -11,12 +11,15 @@ import { DEFAULTNOTIFY } from './Utils';
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
 export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
 
-  const [bellType, setBellType] = useState((dayjs().isAfter(start_ts)) ? faBellSlash : faBell);
+  const [bellType, setBellType] = useState(defaultState());
   const NOTIFYNAME:string = "NOTIFY";
 
   // show/dont show default nofication modal
   const [showModal, setShowModal] = useState(false);
 
+  function defaultState() {
+    return (dayjs().isAfter(start_ts)) ? faBellSlash : faBell;
+  }
 
   function issueNotification(subtracttime:number = 0, usedate:dayjs.Dayjs|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
@@ -25,6 +28,12 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
       // usedate = new Date(Date.now() + 1000 * 10);
       // usedate = dayjs().add(10,"s");
       usedate = start_ts.subtract(subtracttime,"m");
+      
+      // edge case: if time of notification start is after calculated event start time,
+      // then fall back to the event start date
+      if(dayjs().isAfter(usedate)) {
+        usedate = start_ts;
+      }
 
     }
     localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toISOString());
@@ -106,7 +115,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
   // remove item from storage and update ui -- doesn't raise exception if already gone so whatever
   function removeNotification() {
     localStorage.removeItem(`${NOTIFYNAME}-${index}`);
-    setBellType(faBell);
+    setBellType(defaultState());
   }
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
