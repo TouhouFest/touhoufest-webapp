@@ -177,3 +177,7 @@ body{
 .newtimes {
   background-color: #ffff99;
 }
+
+pwa-toast{
+  z-index:9999;
+}

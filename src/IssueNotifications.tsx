@@ -1,24 +1,39 @@
 import {LocalNotifications, ScheduleOptions, LocalNotificationSchema, PendingResult, LocalNotificationDescriptor, CancelOptions} from '@capacitor/local-notifications';
 import {Toast} from '@capacitor/toast';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { faBell, faBellSlash } from '@fortawesome/free-regular-svg-icons';
 import { faBell as fasBell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import dayjs from "dayjs/esm/index.js";
+import DefaultNoficationModal from './DefaultNotificationModal';
+import { DEFAULTNOTIFY } from './Utils';
 
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
 export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
 
-  const [bellType, setBellType] = useState(faBell);
-  const NOTIFYNAME = "NOTIFY";
+  const [bellType, setBellType] = useState(defaultState());
+  const NOTIFYNAME:string = "NOTIFY";
 
-  function issueNotification(usedate:dayjs.Dayjs|null = null){
+  // show/dont show default nofication modal
+  const [showModal, setShowModal] = useState(false);
+
+  function defaultState() {
+    return (dayjs().isAfter(start_ts)) ? faBellSlash : faBell;
+  }
+
+  function issueNotification(subtracttime:number = 0, usedate:dayjs.Dayjs|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
     if(usedate === null) {
       // TODO: update to use start_ts
       // usedate = new Date(Date.now() + 1000 * 10);
       // usedate = dayjs().add(10,"s");
-      usedate = start_ts.subtract(5,"m");
+      usedate = start_ts.subtract(subtracttime,"m");
+      
+      // edge case: if time of notification start is after calculated event start time,
+      // then fall back to the event start date
+      if(dayjs().isAfter(usedate)) {
+        usedate = start_ts;
+      }
 
     }
     localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toISOString());
@@ -55,14 +70,22 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
         }); 
       }
       else {
-        issueNotification();
+        // issueNotification();
+        setShowModal(true);
       }
     });
   }
 
   function onTriggerFunction() {
+    // disable notifications if the event has already started
+    if(bellType === faBellSlash) {
+        Toast.show({
+          text:"This event has already started.",
+          position:"center"
+        }); 
+    }
     // check permissions the first time
-    if (bellType === fasBell) {
+    else if (bellType === fasBell) {
       let cancelitem:CancelOptions = {notifications: [{id: index}]};
       LocalNotifications.cancel(cancelitem).then(() => {
         removeNotification();
@@ -75,8 +98,15 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
           if (e.display != 'granted') {
             permissionsCheck();
           }
+          else if (localStorage.getItem(DEFAULTNOTIFY) !== null){
+            // a default value is required for TypeScript typing, however
+            // it is guaranteed to never be used because of the null check
+            let filledval:string = localStorage.getItem(DEFAULTNOTIFY) || '0';
+            issueNotification(+filledval);
+          }
           else {
-            issueNotification();
+            // issueNotification();
+            setShowModal(true);
           }
       });
     }
@@ -85,7 +115,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
   // remove item from storage and update ui -- doesn't raise exception if already gone so whatever
   function removeNotification() {
     localStorage.removeItem(`${NOTIFYNAME}-${index}`);
-    setBellType(faBell);
+    setBellType(defaultState());
   }
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
@@ -123,7 +153,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
           // check if current time is less than that of event start time
           // schedule if it is, otherwise ignore
           if( now_time < start_ts) {
-            issueNotification(parsed_cachedtime);
+            issueNotification(0, parsed_cachedtime);
           }
           // remove the old item
           else {
@@ -138,6 +168,9 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
   LocalNotifications.addListener('localNotificationReceived', checkNotificationFired);
 
   return (
-    <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size="lg"/>
+    <>
+      <DefaultNoficationModal show={showModal} changeState={setShowModal} callBackNotify = {issueNotification}/>
+      <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size="lg"/>
+    </>
   );
 }

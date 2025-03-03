@@ -114,3 +114,5 @@ import torinoplazamap from "./images/torinoplazamap.png";
 import gamingmap from "./images/gamingmap.jpg";
 
 export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
+
+export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";

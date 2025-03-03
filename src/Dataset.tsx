@@ -20,7 +20,6 @@ import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 import IssueNotifications from "./IssueNotifications";
 import events from './events.csv';
 import noresults from './noresults.jpg';
-
 import Stack from "react-bootstrap/Stack";
 
 dayjs.extend(customParseFormat);
