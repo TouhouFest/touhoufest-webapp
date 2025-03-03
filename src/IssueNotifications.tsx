@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import dayjs from "dayjs/esm/index.js";
 import DefaultNoficationModal from './DefaultNotificationModal';
+import { DEFAULTNOTIFY } from './Utils';
 
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
 export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
@@ -81,8 +82,13 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
           if (e.display != 'granted') {
             permissionsCheck();
           }
+          else if (localStorage.getItem(DEFAULTNOTIFY) !== null){
+            // a default value is required for TypeScript typing, however
+            // it is guaranteed to never be used because of the null check
+            let filledval:string = localStorage.getItem(DEFAULTNOTIFY) || '0';
+            issueNotification(+filledval);
+          }
           else {
-            // TODO: add localstorage check for default notification, then uncomment
             // issueNotification();
             setShowModal(true);
           }

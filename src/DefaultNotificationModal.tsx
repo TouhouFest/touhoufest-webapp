@@ -1,8 +1,7 @@
 import { Modal, Form, Button } from "react-bootstrap";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";
+import {DEFAULTNOTIFY} from "./Utils";
 
 export default function DefaultNoficationModal({show, changeState, callBackNotify}: {show:boolean, changeState:Function, callBackNotify:Function}) {
     
