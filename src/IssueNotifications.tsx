@@ -1,6 +1,6 @@
 import {LocalNotifications, ScheduleOptions, LocalNotificationSchema, PendingResult, LocalNotificationDescriptor, CancelOptions} from '@capacitor/local-notifications';
 import {Toast} from '@capacitor/toast';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { faBell, faBellSlash } from '@fortawesome/free-regular-svg-icons';
 import { faBell as fasBell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
@@ -11,7 +11,7 @@ import { DEFAULTNOTIFY } from './Utils';
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
 export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
 
-  const [bellType, setBellType] = useState(faBell);
+  const [bellType, setBellType] = useState((dayjs().isAfter(start_ts)) ? faBellSlash : faBell);
   const NOTIFYNAME:string = "NOTIFY";
 
   // show/dont show default nofication modal
@@ -68,8 +68,15 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
   }
 
   function onTriggerFunction() {
+    // disable notifications if the event has already started
+    if(bellType === faBellSlash) {
+        Toast.show({
+          text:"This event has already started.",
+          position:"center"
+        }); 
+    }
     // check permissions the first time
-    if (bellType === fasBell) {
+    else if (bellType === fasBell) {
       let cancelitem:CancelOptions = {notifications: [{id: index}]};
       LocalNotifications.cancel(cancelitem).then(() => {
         removeNotification();
