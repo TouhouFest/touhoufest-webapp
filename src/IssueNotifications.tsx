@@ -5,20 +5,25 @@ import { faBell as fasBell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import dayjs from "dayjs/esm/index.js";
+import DefaultNoficationModal from './DefaultNotificationModal';
 
 // todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
-export default function IssueNotifications({index, title, start_ts, showModalFunc}: {index:number, title:string, start_ts:dayjs.Dayjs, showModalFunc:Function}) {
+export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
 
   const [bellType, setBellType] = useState(faBell);
   const NOTIFYNAME:string = "NOTIFY";
 
-  function issueNotification(usedate:dayjs.Dayjs|null = null){
+  // show/dont show default nofication modal
+  const [showModal, setShowModal] = useState(false);
+
+
+  function issueNotification(subtracttime:number = 0, usedate:dayjs.Dayjs|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
     if(usedate === null) {
       // TODO: update to use start_ts
       // usedate = new Date(Date.now() + 1000 * 10);
       // usedate = dayjs().add(10,"s");
-      usedate = start_ts.subtract(5,"m");
+      usedate = start_ts.subtract(subtracttime,"m");
 
     }
     localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toISOString());
@@ -55,7 +60,8 @@ export default function IssueNotifications({index, title, start_ts, showModalFun
         }); 
       }
       else {
-        issueNotification();
+        // issueNotification();
+        setShowModal(true);
       }
     });
   }
@@ -78,7 +84,7 @@ export default function IssueNotifications({index, title, start_ts, showModalFun
           else {
             // TODO: add localstorage check for default notification, then uncomment
             // issueNotification();
-            showModalFunc(true);
+            setShowModal(true);
           }
       });
     }
@@ -125,7 +131,7 @@ export default function IssueNotifications({index, title, start_ts, showModalFun
           // check if current time is less than that of event start time
           // schedule if it is, otherwise ignore
           if( now_time < start_ts) {
-            issueNotification(parsed_cachedtime);
+            issueNotification(0, parsed_cachedtime);
           }
           // remove the old item
           else {
@@ -140,6 +146,9 @@ export default function IssueNotifications({index, title, start_ts, showModalFun
   LocalNotifications.addListener('localNotificationReceived', checkNotificationFired);
 
   return (
-    <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size="lg"/>
+    <>
+      <DefaultNoficationModal show={showModal} changeState={setShowModal} callBackNotify = {issueNotification}/>
+      <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size="lg"/>
+    </>
   );
 }
