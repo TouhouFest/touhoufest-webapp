@@ -8,7 +8,7 @@ import dayjs from "dayjs/esm/index.js";
 import DefaultNoficationModal from './DefaultNotificationModal';
 import { DEFAULTNOTIFY } from './Utils';
 
-// todo: optionally save notifcations issued to localstorage as a backup in case page close/open cancels notifications
+// todo: optionally switch to push notifications if louder notifications are requested
 export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
 
   const [bellType, setBellType] = useState(defaultState());
@@ -24,9 +24,6 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
   function issueNotification(subtracttime:number = 0, usedate:dayjs.Dayjs|null = null){
     // retrieve date to use and store notification for later in case it gets cleared for whatever reason    
     if(usedate === null) {
-      // TODO: update to use start_ts
-      // usedate = new Date(Date.now() + 1000 * 10);
-      // usedate = dayjs().add(10,"s");
       usedate = start_ts.subtract(subtracttime,"m");
       
       // edge case: if time of notification start is after calculated event start time,

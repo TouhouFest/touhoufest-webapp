@@ -29,7 +29,7 @@ export default function DefaultNoficationModal({show, changeState, callBackNotif
             e.preventDefault();
             return false;
         }
-  }
+    }
 
     return (<>
         <Modal show={show} onHide={() => changeState(false)} centered>
