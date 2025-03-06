@@ -12,7 +12,6 @@ export default function DefaultNoficationModal({show, changeState, callBackNotif
         let formdata = new FormData(e.currentTarget);
         let duration:string | null = formdata.get("timebefore") as string;
         let raw_setdefault:string | null = formdata.get("setdefault") as string;
-        console.log("test");
 
         // case if checked
         if (raw_setdefault !== null) {

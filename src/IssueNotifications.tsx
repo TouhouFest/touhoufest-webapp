@@ -35,6 +35,11 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
         usedate = start_ts;
       }
 
+      Toast.show({
+        text: `Will notify ${subtracttime} minutes before start time.`,
+        position: "center"
+      });
+
     }
     localStorage.setItem(`${NOTIFYNAME}-${index}`, usedate.toISOString());
 
