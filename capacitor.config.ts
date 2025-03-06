@@ -1,4 +1,6 @@
 import type { CapacitorConfig } from '@capacitor/cli';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const config: CapacitorConfig = {
   appId: 'com.example.touhoufestwebapp',
@@ -8,6 +10,14 @@ const config: CapacitorConfig = {
     LocalNotifications: {
       iconColor: "#D72640",
       smallIcon: "favicon"
+    }
+  },
+  android: {
+    buildOptions: {
+      keystorePath: process.env.KEYSTOREPATH, 
+      keystorePassword: process.env.KEYSTOREPASSWORD,
+      keystoreAlias: process.env.KEYSTOREALIAS,
+      keystoreAliasPassword: process.env.KEYSTOREALIASPASSWORD
     }
   }
 };
