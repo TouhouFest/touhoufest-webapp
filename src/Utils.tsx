@@ -6,6 +6,8 @@ export let colors = ["purple","fuchsia","green","lime","olive","yellow","navy","
 
 export const COOKIE_NAME = "BOOKMARKS";
 
+export const CON_TIMEZONE:string = "America/Los_Angeles";
+
 let today = new Date();
 today.setDate(today.getDate() + 30);
 export const cookie_parameters = {expires: today, sameSite:"lax" as const}
@@ -112,3 +114,5 @@ import torinoplazamap from "./images/torinoplazamap.png";
 import gamingmap from "./images/gamingmap.jpg";
 
 export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
+
+export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";

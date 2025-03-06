@@ -38,6 +38,7 @@ function App({ menupagedata, menuheader }) {
   // const [activeDayIndex, setActiveDayIndex] = useState(0);
   // const [summonDayScroll, setSummonDayScoll] = useState(0);
 
+
   function changeMenuPageState(idx, isDisplayed) {
     let newstate = [...menupagebools];
     newstate[idx] = isDisplayed;

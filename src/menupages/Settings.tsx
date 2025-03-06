@@ -1,0 +1,78 @@
+/* 
+directions menupage for CJN webapp
+these menupages can and should be modified for your convention's needs
+and are mainly here to provide a source of reference
+
+fontawesome and bootstrap are imported here for you so you can use them outright (and any other dependencies as you see fit)
+*/
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGear, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { Form, Button } from 'react-bootstrap';
+import { DEFAULTNOTIFY } from '../Utils';
+import { Toast } from '@capacitor/toast';
+
+function DefaultNotificationSetting() {
+  
+    // note: react casts a warning that using the "selected" attribute is bad
+    // intended functionality still operates, so this will hold until otherwise required
+    function createValues() {
+        let hasdefault:boolean = localStorage.getItem(DEFAULTNOTIFY) !== null;
+        let output = [];
+        output.push(<><option value="" selected={!hasdefault}>Select a Time</option></>);
+        let defaultval:string|null = localStorage.getItem(DEFAULTNOTIFY);
+        ["0","5","10","15","30","60"].map((elem) => {
+            output.push(<option value={elem} selected={defaultval === elem}>{elem + " Minutes"}</option>);
+        });
+        return output;
+    }
+
+    function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        let formdata = new FormData(e.currentTarget);
+        let duration:string | null = formdata.get("timebefore") as string;
+
+        if(duration === "") {
+            localStorage.removeItem(DEFAULTNOTIFY);
+        }
+        else {
+            localStorage.setItem(DEFAULTNOTIFY, duration);
+            Toast.show({
+                text: "Default notification time set",
+                position: "center"
+            });
+        }
+
+    }
+
+    // prevent pressing Enter from prematurely submitting the form
+    function disableEnter(e:React.KeyboardEvent) {
+        if(e.key === "Enter"){
+            e.preventDefault();
+            return false;
+        }
+    }
+
+    return (<>
+        <Form onSubmit={handleSubmit} onKeyDown={disableEnter}>
+            <Form.Group className="mb-3">
+                <Form.Label>Default Time Before Event Start</Form.Label>
+                <Form.Select name="timebefore">
+                    {createValues()}
+                </Form.Select>
+            </Form.Group>
+            <Button variant="primary" type="submit">Submit</Button>
+        </Form> 
+    </>);
+}
+
+export const settingsPage = {
+    "header": (<><FontAwesomeIcon icon={faGear} fixedWidth></FontAwesomeIcon> Settings/FAQ</>),
+    "fluidImage": (<></>),
+    "body": (<>
+        <h4>Event Notifications</h4>
+        <p className="small"><FontAwesomeIcon icon={faTriangleExclamation} className="small"/> Due to platform limitations, event notifications may exhibit a minor degree of inconsistency. (e.g. They may only make an appearance on your mobile device's notifications bar without vibrating or having an auditory cue)</p>
+        <DefaultNotificationSetting />
+    </>),
+}
