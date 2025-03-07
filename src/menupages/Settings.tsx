@@ -38,12 +38,11 @@ function DefaultNotificationSetting() {
         }
         else {
             localStorage.setItem(DEFAULTNOTIFY, duration);
-            Toast.show({
-                text: "Default notification time set",
-                position: "center"
-            });
-        }
-
+       }
+        Toast.show({
+            text: "Default notification time set",
+            position: "center"
+        });
     }
 
     // prevent pressing Enter from prematurely submitting the form
