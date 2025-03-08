@@ -50,6 +50,19 @@ const isLocalhost = Boolean(
         }
       });
     }
+
+    // grab latest commit hash, compare to cached, then reload if necessary
+    fetch("https://api.github.com/repos/TouhouFest/touhoufest-webapp/git/refs/heads/main")
+      .then((resp) => resp.json())
+      .then((obj) => {
+        let latest_sha = obj["object"]["sha"];
+        let cached_ver = localStorage.getItem("LATEST_SHA");
+        if(cached_ver !== latest_sha) {
+          localStorage.setItem("LATEST_SHA",latest_sha);
+          forceReload();
+        }
+      })
+
   }
   
   function registerValidSW(swUrl, config) {
@@ -135,3 +148,11 @@ const isLocalhost = Boolean(
         });
     }
   }
+
+  export const forceReload = () =>
+  navigator.serviceWorker
+    .getRegistrations()
+    .then((registrations) =>
+      Promise.all(registrations.map((r) => r.unregister())),
+    )
+    .then(() => window.location.reload())
