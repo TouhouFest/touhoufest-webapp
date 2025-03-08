@@ -21,3 +21,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+node_modules
+.DS_Store
+dist
+dev-dist
+dist-examples-root
+# intellij stuff
+.idea/
+# routify
+.routify/
+examples/*/test-results/
+examples/*/playwright-report/
+examples/*/playwright/.cache/

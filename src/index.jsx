@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 /* IMPORT YOUR MENUPAGES HERE */
 import {conCenterPage} from "./menupages/ConCenter";
@@ -46,16 +46,17 @@ reportWebVitals();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
-serviceWorkerRegistration.register();
+// serviceWorkerRegistration.register();
 
 // grab latest commit hash, compare to cached, then reload if necessary
-fetch("https://api.github.com/repos/TouhouFest/touhoufest-webapp/git/refs/heads/main")
-  .then((resp) => resp.json())
-  .then((obj) => {
-    let latest_sha = obj["object"]["sha"];
-    let cached_ver = localStorage.getItem("LATEST_SHA");
-    if(cached_ver !== latest_sha) {
-      localStorage.setItem("LATEST_SHA",latest_sha);
-      // forceReload();
-    }
-  });
+// fetch("https://api.github.com/repos/TouhouFest/touhoufest-webapp/git/refs/heads/main")
+//   .then((resp) => resp.json())
+//   .then((obj) => {
+//     let latest_sha = obj["object"]["sha"];
+//     let cached_ver = localStorage.getItem("LATEST_SHA");
+//     if(cached_ver !== latest_sha) {
+//       localStorage.setItem("LATEST_SHA",latest_sha);
+//       // forceReload();
+//     }
+//   });
+// 
