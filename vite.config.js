@@ -27,6 +27,22 @@ export default defineConfig(() => {
             sizes: '512x512',
             type: 'image/png'
           }
+        ],
+        screenshots: [
+          {
+            src: "widescreenshot.png",
+            sizes: "1680x970",
+            type:"image/png",
+            form_factor:"wide",
+            label:"Desktop Version"
+          },
+          {
+            src:"narrow.png",
+            sizes: "375x812",
+            type:"image/png",
+            form_factor:"narrow",
+            label:"Mobile Version"
+          }
         ]
       }
     }) ],
