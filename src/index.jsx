@@ -20,6 +20,9 @@ import { settingsPage } from './menupages/Settings'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import { registerSW } from 'virtual:pwa-register'
+
+registerSW({ immediate: true })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
