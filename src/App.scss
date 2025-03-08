@@ -55,27 +55,45 @@ body {
   scroll-margin-top: 56px;
 }
 
+
 /* TODO: implement more fancy theme setup with Sass */
+[data-bs-theme="light"] {
+  .day-indicator{
+    background-color: #ff5959;
+    color: #FFF9EE;
+  }
 
-.day-indicator{
-  background-color: #ff5959;
-  color: #FFF9EE;
+  #main-navbar {
+    background-color: #FFF7F7 !important;
+  }
+
+  #filter-widget a, #day-dropdown-widget {
+    color: #3B3249 !important;
+  }
+
+  .event-item{
+    background-color: #FFF9EE;
+  }
+
+  body{
+    background-color: #FFF9EE;
+  }
+
 }
 
-#main-navbar {
-  background-color: #FFF7F7 !important;
-}
+[data-bs-theme="dark"] {
+  #main-navbar {
+    background-color: #3B3249 !important;
+  }
 
-#filter-widget a, #day-dropdown-widget {
-  color: #3B3249 !important;
-}
+  #filter-widget a, #day-dropdown-widget {
+    color: #FFF7F7 !important;
+  }
 
-.event-item{
-  background-color: #FFF9EE;
-}
-
-body{
-  background-color: #FFF9EE;
+  .day-indicator{
+    background-color:#1f0c00;
+    color: #FFF9EE;
+  }
 }
 
 .nav-fill {

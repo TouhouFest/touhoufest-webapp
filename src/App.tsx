@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
+import './App.scss';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
