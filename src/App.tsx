@@ -220,7 +220,7 @@ function App({ menupagedata, menuheader }) {
         <Container id="infobody2">
           <FilterOptions show_var={showFilterPane} hide_fxn={handleFilterPaneOnHide} param_fxn={dualLink} filterOptions={filterOptions}></FilterOptions>
           <div id="dataset">
-            <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays}></Dataset>
+            <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays} oppositeTheme={oppositecolorState}></Dataset>
           </div>
         </Container>
         <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
