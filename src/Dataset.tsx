@@ -20,7 +20,9 @@ import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 import IssueNotifications from "./IssueNotifications";
 import events from './events.csv';
 import noresults from './noresults.jpg';
+import noresultsdark from "./noresults-dark.jpg";
 import Stack from "react-bootstrap/Stack";
+import { faToriiGate } from "@fortawesome/free-solid-svg-icons";
 
 dayjs.extend(customParseFormat);
 dayjs.extend(timezone);
@@ -104,7 +106,7 @@ class SPDataFrame {
 };
 
 
-export default function Dataset({ mode, param_fxn, appliedFilters, changeDays }) {
+export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, oppositeTheme}) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
   const [showEventDescription, setShowEventDescription] = useState(false);
@@ -170,11 +172,21 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays })
   // <img src = {noresults} className="img-fluid" alt="Confused Marisa"></img>
   // <p className="small mb-1"><a href="https://twitter.com/sobamushi_mo/status/1399661514043232259" target="blank" rel="noreferrer">Source</a></p>
   function noResults() {
+
+    let source:string = "";
+    if(oppositeTheme !== faToriiGate) {
+      source = "https://www.pixiv.net/en/artworks/54659563";
+    }
+    else {
+      source = "https://x.com/sobamushi_mo/status/1399661514043232259";
+    }
+
     return (
       <Row className="d-flex align-items-center justify-content-center flex-grow-1" id="infobody">
         <Col md={3} lg={4} className="text-center opacity-75">
-          <p className="small mb-1"><a href="https://www.pixiv.net/en/artworks/54659563" target="blank" rel="noreferrer"><FontAwesomeIcon icon={faPixiv}/> Image Source</a></p>
-          <Image src={noresults} fluid alt="Confused Reimu" rounded />
+          <p className="small mb-1"><a href={source} target="blank" rel="noreferrer">Image Source</a></p>
+          {(oppositeTheme !== faToriiGate) ? <Image src={noresults} fluid alt="Confused Reimu" rounded /> : <Image src={noresultsdark} fluid alt="Confused Marisa" rounded />}
+          
           <h5 className="mt-2">No Results</h5>
           <p>Try setting some bookmarks or adjusting your filter options</p>
         </Col>

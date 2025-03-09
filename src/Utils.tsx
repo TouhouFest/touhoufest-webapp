@@ -1,4 +1,4 @@
-import { fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -7,6 +7,8 @@ export let colors = ["purple","fuchsia","green","lime","olive","yellow","navy","
 export const COOKIE_NAME = "BOOKMARKS";
 
 export const CON_TIMEZONE:string = "America/Los_Angeles";
+
+export const COLORSTATUS:string = "COLORSTATUS";
 
 let today = new Date();
 today.setDate(today.getDate() + 30);
@@ -30,58 +32,63 @@ export function get_cookie_list(){
 export function cmp(a,b) {return a > b;}
 
 export function CircledBullets({argument}){
-    let lettercomp = <FontAwesomeIcon icon={fa0} inverse fixedWidth transform="shrink-5"/>
+    
+    function returnicon(arg:IconDefinition,shrink:number=5,adds:string="") {
+        return <FontAwesomeIcon icon={arg} color="white" fixedWidth transform={`shrink-${shrink} ${adds}`}/>;
+    }
+
+    let lettercomp = returnicon(fa0) 
     switch(argument){
         case 'A':
-            lettercomp = <FontAwesomeIcon icon={faA} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(faA);
             break;
         case 'B':
-            lettercomp = <FontAwesomeIcon icon={faB} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(faB);
             break;
         case '1':
-            lettercomp = <FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa1);
             break;
         case '2':
-            lettercomp = <FontAwesomeIcon icon={fa2} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa2);
             break;
         case '3':
-            lettercomp = <FontAwesomeIcon icon={fa3} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa3);
             break;
         case '4':
-            lettercomp = <FontAwesomeIcon icon={fa4} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa4);
             break;
         case '5':
-            lettercomp = <FontAwesomeIcon icon={fa5} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa5);
             break;
         case '6':
-            lettercomp = <FontAwesomeIcon icon={fa6} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa6);
             break;
         case '7':
-            lettercomp = <FontAwesomeIcon icon={fa7} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa7);
             break;
         case '8':
-            lettercomp = <FontAwesomeIcon icon={fa8} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa8);
             break;
         case '9':
-            lettercomp = <FontAwesomeIcon icon={fa9} inverse fixedWidth transform="shrink-5"/>
+            lettercomp = returnicon(fa9);
             break;
         case '10':
-            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa0} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa0, 6, "right-3")}</span>
             break;
         case '11':
-            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa1, 6, "right-3")}</span>
             break;
         case '12':
-            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa2} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa2, 6, "right-3")}</span>
             break;
         case '13':
-            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa3} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa3, 6, "right-3")}</span>
             break;
         case '14':
-            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa4} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa4, 6, "right-3")}</span>
             break;
         case '15':
-            lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa5} inverse fixedWidth transform="shrink-6 right-3"/></span>
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa5, 6, "right-3")}</span>
             break;
         default:
             break;
@@ -89,7 +96,7 @@ export function CircledBullets({argument}){
 
     return (<>
         <span className="fa-layers fa-fw">
-            <FontAwesomeIcon icon={faCircle} fixedWidth/>
+            <FontAwesomeIcon icon={faCircle} fixedWidth color="black"/>
             {lettercomp}    
         </span> 
     </>);

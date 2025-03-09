@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
+import './App.scss';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
@@ -13,6 +13,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Image } from 'react-bootstrap';
+import DarkModeSelector from './DarkModeSelector';
+import { COLORSTATUS } from './Utils';
+
 const touhoufest = require("./images/touhoufest.jpg");
 
 function App({ menupagedata, menuheader }) {
@@ -38,6 +41,24 @@ function App({ menupagedata, menuheader }) {
   // const [activeDayIndex, setActiveDayIndex] = useState(0);
   // const [summonDayScroll, setSummonDayScoll] = useState(0);
 
+  // state variables/functions for setting color theme
+  // (i cant beievei its this much typescript all for changing the color theme :skull:)
+  const [oppositecolorState, setOppositeColorState] = useState(getColorState());
+  function getColorState() {
+      let status:string|null = localStorage.getItem(COLORSTATUS);
+      if(status === "light" || status === null) {
+          document.documentElement.setAttribute('data-bs-theme','light');
+          return faBroom;
+      }
+      else {
+          document.documentElement.setAttribute('data-bs-theme','dark');
+          return faToriiGate;
+      }
+  }
+  function grabTrueColorState(input:IconDefinition) {
+    if(input === faToriiGate) {return faBroom;}
+    else{ return faToriiGate;}
+  }
 
   function changeMenuPageState(idx, isDisplayed) {
     let newstate = [...menupagebools];
@@ -166,7 +187,7 @@ function App({ menupagedata, menuheader }) {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  {menuheader}
+                  <span><FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/> {menuheader}</span>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="p-0">
@@ -174,6 +195,7 @@ function App({ menupagedata, menuheader }) {
                 <div className="p-3">
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     {menunavs}
+                    <Nav.Link><DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/></Nav.Link>
                     <Nav.Link href="https://google.com" target="_blank"><FontAwesomeIcon icon={faComment} fixedWidth/> Feedback Form</Nav.Link>
                     <Nav.Link href="https://github.com/kir12/touhoufest-webapp" target="_blank"><FontAwesomeIcon icon={faGithub} fixedWidth></FontAwesomeIcon> About App</Nav.Link>
                     <Nav.Link href="https://www.google.com/search?q=marisa+kirisame&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwioqcvz4fT9AhW2kYkEHTCND3AQ0pQJegQIBBAC&biw=1920&bih=884&dpr=1" target="_blank"><FontAwesomeIcon icon={faHeart} fixedWidth></FontAwesomeIcon> Best Girl</Nav.Link>
@@ -198,7 +220,7 @@ function App({ menupagedata, menuheader }) {
         <Container id="infobody2">
           <FilterOptions show_var={showFilterPane} hide_fxn={handleFilterPaneOnHide} param_fxn={dualLink} filterOptions={filterOptions}></FilterOptions>
           <div id="dataset">
-            <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays}></Dataset>
+            <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays} oppositeTheme={oppositecolorState}></Dataset>
           </div>
         </Container>
         <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
