@@ -9,12 +9,12 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils, faWarning } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col } from 'react-bootstrap';
-const okamoto  = require("./../images/okamoto.jpg");
-const tokyostyle = require("./../images/tokyostyle.webp");
-const brazilplate = require("./../images/brazilplate.jpg");
-const orientalbreeze = require("./../images/orientalbreeze.jpg");
-const noodsfoodtruck = require("./../images/noodsfoodtruck.jpg");
-const lupitastacos = require("./../images/lupitas-tacos.jpg");
+import okamoto from "./../images/okamoto.jpg";
+import tokyostyle from "./../images/tokyostyle.webp";
+import brazilplate from "./../images/brazilplate.jpg";
+import orientalbreeze from "./../images/orientalbreeze.jpg";
+import noodsfoodtruck from "./../images/noodsfoodtruck.jpg";
+import lupitastacos from "./../images/lupitas-tacos.jpg";
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),

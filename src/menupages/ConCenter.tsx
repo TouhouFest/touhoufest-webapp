@@ -13,7 +13,7 @@ import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap } from '../Utils';
-const touhoufest_map = require("./../images/touhoufest_map.png");
+import touhoufest_map from "./../images/touhoufest_map.png";
 
 function MapModals(){
     const [showOuter, setShowOuter] = useState(false);
