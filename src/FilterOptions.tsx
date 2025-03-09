@@ -8,14 +8,14 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOptions}) {
+export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOptions}: {show_var:boolean, hide_fxn:Function, param_fxn:Function, filterOptions:any}) {
 
   const [stack, setStack] = useState({"event_types":[], "room_list": [], "search_query": ""});
 
   // I wasn't able to get form submission to work with checkboxes,
   // so I just tracked each checkbox via state instead.
   // TODO: figure out how to preserve?
-  function handleSubmit(e) {
+  function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     let selected_rooms = [];
@@ -50,7 +50,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
   }
 
   // prevent pressing Enter from prematurely submitting the form
-  function disableEnter(e) {
+  function disableEnter(e:React.KeyboardEvent) {
     if(e.keyCode === 13){
       e.preventDefault();
       return false;

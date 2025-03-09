@@ -3,7 +3,7 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Container } from 'react-bootstrap';
 
-export default function MenuPage({ show_var, hide_fxn, idx, children }) {
+export default function MenuPage({ show_var, hide_fxn, idx, children }: {show_var:any, hide_fxn:Function, idx:any, children:JSX.Element|JSX.Element[]}) {
     
     function handleHide() {
         hide_fxn(idx, false);
@@ -16,7 +16,7 @@ export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     );
 }
 
-function Header({children}) {
+function Header({children}: {children:JSX.Element|JSX.Element[]}) {
     return (
         <Offcanvas.Header closeButton>
             <Offcanvas.Title>{children}</Offcanvas.Title>
@@ -24,7 +24,7 @@ function Header({children}) {
     );
 }
 
-function FluidImage({children}) {
+function FluidImage({children}: {children:JSX.Element|JSX.Element[]}) {
     return (
         <>{children}</>
     );
