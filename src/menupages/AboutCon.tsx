@@ -25,11 +25,11 @@ export const aboutConPage = {
         <p className="lead">April 27th-28th, 2024</p>
       </div>
       <Row className="text-center">
-        <Col><a href="https://discord.com/invite/touhoufest" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://twitter.com/TouhouFest" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faSquareXTwitter} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://www.facebook.com/TouhouFest" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faSquareFacebook} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://www.instagram.com/touhoufest/" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faInstagram} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://www.touhoufest.org/" target="_blank" rel="noreferrer" className="text-black"><h5><FontAwesomeIcon icon={faGlobeAmericas} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://discord.com/invite/touhoufest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://twitter.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareXTwitter} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://www.facebook.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareFacebook} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://www.instagram.com/touhoufest/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faInstagram} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://www.touhoufest.org/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faGlobeAmericas} fixedWidth></FontAwesomeIcon></h5></a></Col>
       </Row>
       <div className="text-center mt-3">
         <h4>Torrance Cultural Arts Center</h4>
