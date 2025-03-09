@@ -187,7 +187,7 @@ function App({ menupagedata, menuheader }) {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  <span><FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)}/> {menuheader}</span>
+                  <span><FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/> {menuheader}</span>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="p-0">
