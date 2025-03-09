@@ -16,9 +16,9 @@ import { Image } from 'react-bootstrap';
 import DarkModeSelector from './DarkModeSelector';
 import { COLORSTATUS } from './Utils';
 
-const touhoufest = require("./images/touhoufest.jpg");
+import touhoufest from "./images/touhoufest.jpg";
 
-function App({ menupagedata, menuheader }) {
+function App({ menupagedata, menuheader }: {menupagedata:JSX.Element[], menuheader:JSX.Element|JSX.Element[]}) {
 
   // indicator for home, bookmarks, filtering
   const [mode, setMode] = useState("home");
@@ -67,7 +67,7 @@ function App({ menupagedata, menuheader }) {
   }
   function getMenuState(idx) { return menupagebools[idx]; }
 
-  function handleRoleChange(type) {
+  function handleRoleChange(type:string) {
 
     let oldmode = mode;
 
@@ -98,7 +98,7 @@ function App({ menupagedata, menuheader }) {
 
   }
 
-  function dualLink(params, mode) {
+  function dualLink(params, mode:string) {
     if (mode === "toFilterOptions") {
       setFilterOptions(params);
     }

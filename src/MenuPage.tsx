@@ -30,7 +30,7 @@ function FluidImage({children}: {children:JSX.Element|JSX.Element[]}) {
     );
 }
 
-function Body({fluidImage=<></>, mainText}) {
+function Body({fluidImage=<></>, mainText}: {fluidImage:JSX.Element, mainText:JSX.Element|JSX.Element[]}) {
     return (
         <Offcanvas.Body className="p-0">
             <Container fluid="md" className="px-0">
