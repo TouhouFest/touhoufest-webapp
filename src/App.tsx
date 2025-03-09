@@ -15,7 +15,6 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Image } from 'react-bootstrap';
 import DarkModeSelector from './DarkModeSelector';
 import { COLORSTATUS } from './Utils';
-import { Icon } from '@fortawesome/fontawesome-svg-core';
 
 const touhoufest = require("./images/touhoufest.jpg");
 
