@@ -88,6 +88,12 @@ body {
     background-color: #D72640;
   }
 
+  .offcanvas-body {
+    background-color: #E6E4E8;
+    color: #372E45;
+  }
+
+
 }
 
 [data-bs-theme="dark"] {
@@ -110,7 +116,12 @@ body {
 
   .offcanvas-header {
     color: #FFF9EE;
-    background-color: #25004f;
+    background-color: #16001f;
+  }
+
+  .offcanvas-body {
+    color: #E6E4E8;
+    background-color: #372E45;
   }
 
 }
@@ -135,10 +146,6 @@ body {
   opacity: 1;
 }
 
-.offcanvas-body {
-  background-color: #E6E4E8;
-  color: #372E45;
-}
 
 .pink-one {
   background-color: #ffbdf8 !important;
