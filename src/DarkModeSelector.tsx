@@ -1,24 +1,11 @@
-import { faToriiGate, faBroom } from "@fortawesome/free-solid-svg-icons";
+import { faToriiGate, faBroom, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { COLORSTATUS } from "./Utils";
 
-const COLORSTATUS:string = "COLORSTATUS";
-
-export default function DarkModeSelector() {
+export default function DarkModeSelector({oppositecolorState, setOppositeColorState}: {oppositecolorState:IconDefinition, setOppositeColorState:Function}) {
     
-    const [oppositecolorState, setOppositeColorState] = useState(getColorState());
-
     let output:string = oppositecolorState === faBroom ? "Enable Dark Mode" : "Enable Light Mode";
-
-    function getColorState() {
-        let status:string|null = localStorage.getItem(COLORSTATUS);
-        if(status === "light" || status === null) {
-            return faBroom;
-        }
-        else {
-            return faToriiGate;
-        }
-    }
 
     function handleOnClick() {
         if(oppositecolorState === faBroom) {

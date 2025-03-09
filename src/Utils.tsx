@@ -8,6 +8,8 @@ export const COOKIE_NAME = "BOOKMARKS";
 
 export const CON_TIMEZONE:string = "America/Los_Angeles";
 
+export const COLORSTATUS:string = "COLORSTATUS";
+
 let today = new Date();
 today.setDate(today.getDate() + 30);
 export const cookie_parameters = {expires: today, sameSite:"lax" as const}

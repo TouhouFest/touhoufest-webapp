@@ -79,6 +79,15 @@ body {
     background-color: #FFF9EE;
   }
 
+  .nav-fill {
+    background-color: #ff4242 !important;
+  }
+
+  .offcanvas-header {
+    color: #FFF9EE;
+    background-color: #D72640;
+  }
+
 }
 
 [data-bs-theme="dark"] {
@@ -94,11 +103,18 @@ body {
     background-color:#1f0c00;
     color: #FFF9EE;
   }
+
+  .nav-fill {
+    background-color: #372E45 !important;
+  }
+
+  .offcanvas-header {
+    color: #FFF9EE;
+    background-color: #25004f;
+  }
+
 }
 
-.nav-fill {
-  background-color: #372E45 !important;
-}
 
 .nav-fill .nav-item > .active {
   color: #f5ec42;
@@ -108,10 +124,6 @@ body {
   color: white;
 }
 
-.offcanvas-header {
-  color: #FFF9EE;
-  background-color: #D72640;
-}
 
 .offcanvas-title {
   font-weight: bold;
@@ -194,6 +206,7 @@ body {
 
 .newtimes {
   background-color: #ffff99;
+  color: black;
 }
 
 pwa-toast{
