@@ -37,7 +37,7 @@ export function CircledBullets({argument}){
         return <FontAwesomeIcon icon={arg} color="white" fixedWidth transform={`shrink-${shrink} ${adds}`}/>;
     }
 
-    let lettercomp = returnicon(fa0) // <FontAwesomeIcon icon={fa0} inverse fixedWidth transform="shrink-5"/>
+    let lettercomp = returnicon(fa0) 
     switch(argument){
         case 'A':
             lettercomp = returnicon(faA);
@@ -74,27 +74,21 @@ export function CircledBullets({argument}){
             break;
         case '10':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa0, 6, "right-3")}</span>
-            // lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa0} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         case '11':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa1, 6, "right-3")}</span>
-            // lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         case '12':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa2, 6, "right-3")}</span>
-            // lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa2} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         case '13':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa3, 6, "right-3")}</span>
-            // lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa3} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         case '14':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa4, 6, "right-3")}</span>
-            // lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa4} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         case '15':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa5, 6, "right-3")}</span>
-            // lettercomp = <span><FontAwesomeIcon icon={fa1} inverse fixedWidth transform="shrink-6 left-3"/><FontAwesomeIcon icon={fa5} inverse fixedWidth transform="shrink-6 right-3"/></span>
             break;
         default:
             break;
