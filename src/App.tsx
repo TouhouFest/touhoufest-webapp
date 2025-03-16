@@ -60,12 +60,12 @@ function App({ menupagedata, menuheader }: {menupagedata:JSX.Element[], menuhead
     else{ return faToriiGate;}
   }
 
-  function changeMenuPageState(idx, isDisplayed) {
+  function changeMenuPageState(idx:number, isDisplayed:boolean) {
     let newstate = [...menupagebools];
     newstate[idx] = isDisplayed;
     setMenuPages(newstate);
   }
-  function getMenuState(idx) { return menupagebools[idx]; }
+  function getMenuState(idx:number) { return menupagebools[idx]; }
 
   function handleRoleChange(type:string) {
 
@@ -98,7 +98,7 @@ function App({ menupagedata, menuheader }: {menupagedata:JSX.Element[], menuhead
 
   }
 
-  function dualLink(params, mode:string) {
+  function dualLink(params:any, mode:string) {
     if (mode === "toFilterOptions") {
       setFilterOptions(params);
     }
