@@ -15,7 +15,8 @@ import { con_banner } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export const aboutConPage = {
+// aboutConPage:Record<string, JSX.Element>
+export const aboutConPage = { 
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About the Convention</>),
   "fluidImage": (<><Image src={con_banner} fluid /></>),
   "body": (

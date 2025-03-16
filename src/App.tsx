@@ -18,7 +18,7 @@ import { COLORSTATUS } from './Utils';
 
 import touhoufest from "./images/touhoufest.jpg";
 
-function App({ menupagedata, menuheader }: {menupagedata:JSX.Element[], menuheader:JSX.Element|JSX.Element[]}) {
+function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) {
 
   // indicator for home, bookmarks, filtering
   const [mode, setMode] = useState("home");
@@ -34,7 +34,8 @@ function App({ menupagedata, menuheader }: {menupagedata:JSX.Element[], menuhead
   // keep track of opened/closed status of menu pages
   const [menupagebools, setMenuPages] = useState(Array(menupagedata.length).fill(false));
 
-  const [scrollSettings, setScrollSettings] = useState({ "home": 0, "bookmarks": 0, "filter": 0 });
+  let initScrollSettings:Record<string,number> = { "home": 0, "bookmarks": 0, "filter": 0 };
+  const [scrollSettings, setScrollSettings] = useState(initScrollSettings);
 
   const [availableDays, setAvailableDays] = useState([]);
   // decomissioned with fragments inplace instead
