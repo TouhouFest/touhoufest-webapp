@@ -9,19 +9,14 @@ import { Toast } from '@capacitor/toast';
 export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     
     function handleHide() {
-        console.log("something happened here");
-        hide_fxn(idx, false);
         App.removeAllListeners().then(() => {
             hide_fxn(idx, false);
         });
     }
 
     useEffect(() => {
-        console.log(show_var);
-        if(show_var === true) {
-            console.log("something happened here!!!!");
+        if(show_var() === true) {
             App.addListener('backButton', () => {
-                Toast.show({"text": "something was supposed to happen"});
                 handleHide();
             });
         }
