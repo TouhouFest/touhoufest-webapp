@@ -15,6 +15,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Image } from 'react-bootstrap';
 import DarkModeSelector from './DarkModeSelector';
 import { COLORSTATUS } from './Utils';
+import MainMenuOffcanvas from './MainMenuOffcanvas';
 
 const touhoufest = require("./images/touhoufest.jpg");
 
@@ -40,6 +41,8 @@ function App({ menupagedata, menuheader }) {
   // decomissioned with fragments inplace instead
   // const [activeDayIndex, setActiveDayIndex] = useState(0);
   // const [summonDayScroll, setSummonDayScoll] = useState(0);
+
+  const [showMainMenu, setShowMainMenu] = useState(false);
 
   // state variables/functions for setting color theme
   // (i cant beievei its this much typescript all for changing the color theme :skull:)
@@ -170,9 +173,9 @@ function App({ menupagedata, menuheader }) {
     <>
       <div className="App">
 
-        <Navbar collapseOnSelect expand={false} className="sticky-top mb-0 shadow-sm"  id="main-navbar">
+        <Navbar collapseOnSelect expand={false} className="sticky-top mb-0 shadow-sm"  id="main-navbar" onSelect={() => setShowMainMenu(false)}>
           <Container fluid>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} onClick={() => setShowMainMenu(true)}/>
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
@@ -180,29 +183,14 @@ function App({ menupagedata, menuheader }) {
                 { rendered_days }
               </NavDropdown>
             </Navbar.Brand>
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-false`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-false`}
-              placement="start"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
-                  <span><FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/> {menuheader}</span>
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body className="p-0">
-                <Image src={touhoufest} fluid/>
-                <div className="p-3">
-                  <Nav className="justify-content-end flex-grow-1 pe-3">
-                    {menunavs}
-                    <Nav.Link><DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/></Nav.Link>
-                    <Nav.Link href="https://google.com" target="_blank"><FontAwesomeIcon icon={faComment} fixedWidth/> Feedback Form</Nav.Link>
-                    <Nav.Link href="https://github.com/kir12/touhoufest-webapp" target="_blank"><FontAwesomeIcon icon={faGithub} fixedWidth></FontAwesomeIcon> About App</Nav.Link>
-                    <Nav.Link href="https://www.google.com/search?q=marisa+kirisame&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwioqcvz4fT9AhW2kYkEHTCND3AQ0pQJegQIBBAC&biw=1920&bih=884&dpr=1" target="_blank"><FontAwesomeIcon icon={faHeart} fixedWidth></FontAwesomeIcon> Best Girl</Nav.Link>
-                  </Nav>
-                </div>
-             </Offcanvas.Body>
-            </Navbar.Offcanvas>
+            <MainMenuOffcanvas 
+              mainIcon={<FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/>} 
+              menuheader={menuheader} 
+              touhoufest={touhoufest} 
+              menunavs={menunavs} 
+              darkModeSelector={<DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/>}
+              showMainMenu={showMainMenu} setShowMainMenu={setShowMainMenu}
+            />
             <div className="d-flex order-1 ms-auto" id="filter-widget">
               <Nav className="flex-row">
                 <Nav.Link href="#home" className={filterclass}>
