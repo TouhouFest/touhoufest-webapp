@@ -2,12 +2,31 @@
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Container } from 'react-bootstrap';
+import {App} from '@capacitor/app';
+import { useEffect } from 'react';
+import { Toast } from '@capacitor/toast';
 
 export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     
     function handleHide() {
+        console.log("something happened here");
         hide_fxn(idx, false);
+        App.removeAllListeners().then(() => {
+            hide_fxn(idx, false);
+        });
     }
+
+    useEffect(() => {
+        console.log(show_var);
+        if(show_var === true) {
+            console.log("something happened here!!!!");
+            App.addListener('backButton', () => {
+                Toast.show({"text": "something was supposed to happen"});
+                handleHide();
+            });
+        }
+    }, [show_var]);
+
 
     return (
         <Offcanvas show={show_var} onHide={handleHide} placement={"end"} className="w-100">
