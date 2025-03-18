@@ -5,12 +5,27 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { App } from '@capacitor/app';
 
 export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOptions}) {
 
   const [stack, setStack] = useState({"event_types":[], "room_list": [], "search_query": ""});
+
+  function handleHide() {
+    App.removeAllListeners().then(() => {
+      hide_fxn();
+    });
+  }
+
+  useEffect(() => {
+    if(show_var === true) {
+        App.addListener('backButton', () => {
+          handleHide();
+        });
+    }
+  }, [show_var]);
 
   // I wasn't able to get form submission to work with checkboxes,
   // so I just tracked each checkbox via state instead.
@@ -46,7 +61,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
     setStack(newState);
 
     param_fxn(newState, "toDataSet");
-    hide_fxn();
+    handleHide();
   }
 
   // prevent pressing Enter from prematurely submitting the form
@@ -104,7 +119,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
   // }
 
   return (
-    <Offcanvas show={show_var} onHide={hide_fxn} placement={"end"}>
+    <Offcanvas show={show_var} onHide={handleHide} placement={"end"}>
       <Offcanvas.Header closeButton closeVariant='white'>
         <Offcanvas.Title>Filter Options</Offcanvas.Title>
       </Offcanvas.Header>
