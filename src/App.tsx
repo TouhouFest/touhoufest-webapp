@@ -16,6 +16,7 @@ import { Image } from 'react-bootstrap';
 import DarkModeSelector from './DarkModeSelector';
 import { COLORSTATUS } from './Utils';
 import MainMenuOffcanvas from './MainMenuOffcanvas';
+import {App as CapacitorApp} from '@capacitor/app';
 
 const touhoufest = require("./images/touhoufest.jpg");
 
@@ -109,6 +110,18 @@ function App({ menupagedata, menuheader }) {
       setAppliedFilters(params);
     }
   }
+
+  // TODO: need to figure how to avoid prematurely closing the app
+  useEffect(() => {
+    CapacitorApp.addListener('backButton', () => {
+      if(showFilterPane === true) {
+        console.log("no no no!!!");
+      }
+      else {
+        console.log("yes yes yes!!!");
+      }
+    })
+  }, []);
 
   // decomissioned with usage of fragments instead
   // function handleDaySelect(day) {
