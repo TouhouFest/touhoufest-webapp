@@ -113,12 +113,12 @@ function App({ menupagedata, menuheader }) {
 
   // TODO: need to figure how to avoid prematurely closing the app
   useEffect(() => {
-    if(showFilterPane === false && showMainMenu === false) {
+    if(showFilterPane === false && showMainMenu === false && menupagebools.every(v => !v) ) {
       CapacitorApp.addListener('backButton', () => {
         console.log("yes yes yes!!");
       })
     }
-  }, [showFilterPane, showMainMenu]);
+  }, [showFilterPane, showMainMenu, menupagebools]);
 
   // decomissioned with usage of fragments instead
   // function handleDaySelect(day) {
