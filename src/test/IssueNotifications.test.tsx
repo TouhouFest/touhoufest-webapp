@@ -6,6 +6,7 @@ import dayjs from "dayjs/esm/index.js";
 import userEvent from '@testing-library/user-event';
 
 import { LocalNotifications } from '@capacitor/local-notifications';
+import { Toast } from '@capacitor/toast';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -24,12 +25,14 @@ describe("Notifications",() => {
 
     });
 
-    test('check permissions check', async () => {
+    test('toast fired on permissions check', async () => {
 
-        let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs()}/>
+        const showToast = vi.spyOn(Toast, "show");
+        let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs().add(7,'day')}/>
         render(notification);
         await userEvent.click(screen.getByRole("img", {hidden:true}));
 
+        expect(showToast).toHaveBeenCalled();
         // todo: check for permissions check conducted
         
     })
