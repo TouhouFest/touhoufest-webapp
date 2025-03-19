@@ -11,8 +11,10 @@ export default function MainMenuOffcanvas({mainIcon, menuheader, touhoufest, men
     useEffect(() => {
         // enable listener for backbutton
         if(showMainMenu === true) {
-          App.addListener('backButton', () => {
-            setShowMainMenu(false);
+          App.removeAllListeners().then(() => {
+            App.addListener('backButton', () => {
+                setShowMainMenu(false);
+            });
           });
         }
         // otherwise destroy app listeners in this class

@@ -21,8 +21,10 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
 
   useEffect(() => {
     if(show_var === true) {
-        App.addListener('backButton', () => {
-          handleHide();
+        App.removeAllListeners().then(() => {
+          App.addListener('backButton', () => {
+            handleHide();
+          });
         });
     }
   }, [show_var]);
