@@ -16,8 +16,10 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}) {
 
   useEffect(() => {
       if(show_var === true) {
-          App.addListener('backButton', () => {
-            handleHide();
+          App.removeAllListeners().then(() => {
+            App.addListener('backButton', () => {
+              handleHide();
+            });
           });
       }
   }, [show_var]);

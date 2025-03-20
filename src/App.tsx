@@ -45,6 +45,8 @@ function App({ menupagedata, menuheader }) {
 
   const [showMainMenu, setShowMainMenu] = useState(false);
 
+  const [showEventDescription, setShowEventDescription] = useState(false);
+
   // state variables/functions for setting color theme
   // (i cant beievei its this much typescript all for changing the color theme :skull:)
   const [oppositecolorState, setOppositeColorState] = useState(getColorState());
@@ -113,9 +115,9 @@ function App({ menupagedata, menuheader }) {
 
   // TODO: need to figure how to avoid prematurely closing the app
   useEffect(() => {
-    if(showFilterPane === false && showMainMenu === false && menupagebools.every(v => !v) ) {
+    if(showFilterPane === false && showMainMenu === false && menupagebools.every(v => !v) && showEventDescription === false ) {
       CapacitorApp.addListener('backButton', () => {
-        console.log("yes yes yes!!");
+        CapacitorApp.exitApp();
       })
     }
   }, [showFilterPane, showMainMenu, menupagebools]);
@@ -218,7 +220,13 @@ function App({ menupagedata, menuheader }) {
         <Container id="infobody2">
           <FilterOptions show_var={showFilterPane} hide_fxn={handleFilterPaneOnHide} param_fxn={dualLink} filterOptions={filterOptions}></FilterOptions>
           <div id="dataset">
-            <Dataset mode={mode} param_fxn={dualLink} appliedFilters={appliedFilters} changeDays={setAvailableDays} oppositeTheme={oppositecolorState}></Dataset>
+            <Dataset 
+              mode={mode} 
+              param_fxn={dualLink} 
+              appliedFilters={appliedFilters} 
+              changeDays={setAvailableDays} 
+              oppositeTheme={oppositecolorState}
+              showEventDescription={showEventDescription} setShowEventDescription={setShowEventDescription}></Dataset>
           </div>
         </Container>
         <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">

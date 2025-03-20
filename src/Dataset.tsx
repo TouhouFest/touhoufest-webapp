@@ -106,10 +106,9 @@ class SPDataFrame {
 };
 
 
-export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, oppositeTheme}) {
+export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription}) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
-  const [showEventDescription, setShowEventDescription] = useState(false);
   const [eventDetails, setEventDetails] = useState({});
   const [evtPrint, setEvtPrint] = useState(<></>);
   // const [availableDays, setAvailableDays] = useState([]);

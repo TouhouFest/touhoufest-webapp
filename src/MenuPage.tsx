@@ -4,10 +4,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Container } from 'react-bootstrap';
 import {App} from '@capacitor/app';
 import { useEffect } from 'react';
-import { Toast } from '@capacitor/toast';
 
 export default function MenuPage({ show_var, hide_fxn, idx, children }) {
-    
+   
     function handleHide() {
         App.removeAllListeners().then(() => {
             hide_fxn(idx, false);
@@ -23,7 +22,6 @@ export default function MenuPage({ show_var, hide_fxn, idx, children }) {
             });
         }
     }, [show_var]);
-
 
     return (
         <Offcanvas show={show_var} onHide={handleHide} placement={"end"} className="w-100">
