@@ -120,7 +120,7 @@ function App({ menupagedata, menuheader }) {
         CapacitorApp.exitApp();
       })
     }
-  }, [showFilterPane, showMainMenu, menupagebools]);
+  }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
 
   // decomissioned with usage of fragments instead
   // function handleDaySelect(day) {
