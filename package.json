@@ -6,8 +6,8 @@
   "private": true,
   "dependencies": {
     "@capacitor/android": "^6.2.0",
-    "@capacitor/app": "^6.0.2",
     "@capacitor/core": "^6.2.0",
+    "@capacitor/app": "^6.0.2",
     "@capacitor/ios": "^6.2.0",
     "@capacitor/local-notifications": "^6.1.2",
     "@capacitor/toast": "^6.0.3",
@@ -52,7 +52,7 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "vite",
+    "start": "vite --host",
     "build": "vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
