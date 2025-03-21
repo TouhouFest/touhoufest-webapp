@@ -50,6 +50,10 @@ export default defineConfig(() => {
       }
     }) ],
     assetsInclude: ["**/*.csv"],
-    base:"/"
+    base:"/",
+    test: {
+      environment: 'jsdom',
+      setupFiles: './src/test/setup.tsx'
+    }
   };
 });
