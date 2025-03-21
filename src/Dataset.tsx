@@ -162,8 +162,8 @@ export default function Dataset(
         // newdata.debug();
         // console.log(params);
 
-        let days = newdata.apply((row) => {
-          return dayjs(row["combinedStart"]).format("ddd, M/D").toString();
+        let days = newdata.apply((row:EventListing) => {
+          return dayjs(row["combinedStart" as keyof EventListing]).format("ddd, M/D").toString();
         });
         days = uniqueColumn(days);
         changeDays(days);
@@ -208,7 +208,7 @@ export default function Dataset(
   // reduce title and description to just alphanumeric + characters, split by word
   // then do a set intersection
   // return the number of hit
-  function rankResults(row) {
+  function rankResults(row:EventListing) {
     // reduce title, description, and search to sets and split by word
     let reduced_title = new Set(row["event_title"].replace(/[^\w\s]/gi, '').toLowerCase().split(" "));
     let reduced_description = new Set(row["event_description"].replace(/[^\w\s]/gi, '').toLowerCase().split(" "));
@@ -281,7 +281,7 @@ export default function Dataset(
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
 
-      let index = elem["uniqueID"];
+      let index = elem["uniqueID" as keyof EventListing];
       let splitevt = elem["event_type"].split(".");
     
       // compute event type badge styling
@@ -289,8 +289,8 @@ export default function Dataset(
       let css_classes = event_indexes.map((idx) => colors[idx]);
 
       // compute time display
-      let startjs = dayjs(elem["combinedStart"]);
-      let endjs = dayjs(elem["combinedEnd"]);
+      let startjs = dayjs(elem["combinedStart" as keyof EventListing]);
+      let endjs = dayjs(elem["combinedEnd" as keyof EventListing]);
 
       // we've moved onto a new set of days, we need to add a new day indicator
       if (daynum === -1 || startjs.day() !== daynum) {
@@ -330,7 +330,7 @@ export default function Dataset(
 
       let eventbulk = (<>
         <h4 className="mb-1">{elem["event_title"]} </h4>
-        <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
+        <p className="mb-1 datedisplay">{dayjs(elem['combinedStart' as keyof EventListing]).format("dddd, MMMM D").toString()}</p>
         <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {
