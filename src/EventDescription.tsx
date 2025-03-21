@@ -4,7 +4,7 @@ import Markdown from 'marked-react';
 import {App} from '@capacitor/app';
 import { useEffect } from 'react';
 
-function EventDescription({show_var, hide_fxn, event_package, evt_print}) {
+function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_var:boolean, hide_fxn:Function, event_package:any, evt_print:JSX.Element}) {
 
   let output = (<></>);
 

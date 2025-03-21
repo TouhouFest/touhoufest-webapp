@@ -18,9 +18,9 @@ import { COLORSTATUS } from './Utils';
 import MainMenuOffcanvas from './MainMenuOffcanvas';
 import {App as CapacitorApp} from '@capacitor/app';
 
-const touhoufest = require("./images/touhoufest.jpg");
+import touhoufest from "./images/touhoufest.jpg";
 
-function App({ menupagedata, menuheader }) {
+function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) {
 
   // indicator for home, bookmarks, filtering
   const [mode, setMode] = useState("home");
@@ -36,7 +36,8 @@ function App({ menupagedata, menuheader }) {
   // keep track of opened/closed status of menu pages
   const [menupagebools, setMenuPages] = useState(Array(menupagedata.length).fill(false));
 
-  const [scrollSettings, setScrollSettings] = useState({ "home": 0, "bookmarks": 0, "filter": 0 });
+  let initScrollSettings:Record<string,number> = { "home": 0, "bookmarks": 0, "filter": 0 };
+  const [scrollSettings, setScrollSettings] = useState(initScrollSettings);
 
   const [availableDays, setAvailableDays] = useState([]);
   // decomissioned with fragments inplace instead
@@ -66,14 +67,14 @@ function App({ menupagedata, menuheader }) {
     else{ return faToriiGate;}
   }
 
-  function changeMenuPageState(idx, isDisplayed) {
+  function changeMenuPageState(idx:number, isDisplayed:boolean) {
     let newstate = [...menupagebools];
     newstate[idx] = isDisplayed;
     setMenuPages(newstate);
   }
-  function getMenuState(idx) { return menupagebools[idx]; }
+  function getMenuState(idx:number) { return menupagebools[idx]; }
 
-  function handleRoleChange(type) {
+  function handleRoleChange(type:string) {
 
     let oldmode = mode;
 
@@ -104,7 +105,7 @@ function App({ menupagedata, menuheader }) {
 
   }
 
-  function dualLink(params, mode) {
+  function dualLink(params:any, mode:string) {
     if (mode === "toFilterOptions") {
       setFilterOptions(params);
     }

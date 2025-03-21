@@ -13,10 +13,11 @@ import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
-const cosplaybanner = require('./../images/cosplaybanner.jpg');
-const medukitty = require("./../images/medukitty.jpg");
-const violetreverie = require("./../images/violetreverie.jpg");
-const cosplayrepair = require("./../images/cosplayrepair.jpg");
+// const cosplaybanner = require('./../images/cosplaybanner.jpg');
+import cosplaybanner from "./../images/cosplaybanner.jpg";
+import medukitty from "./../images/medukitty.jpg";
+import violetreverie from "./../images/violetreverie.jpg";
+import cosplayrepair from "./../images/cosplayrepair.jpg";
 
 export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),

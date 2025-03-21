@@ -29,9 +29,9 @@ export function get_cookie_list(){
     return current_cookie_list;
 }
 
-export function cmp(a,b) {return a > b;}
+export function cmp(a:number,b:number) {return a > b;}
 
-export function CircledBullets({argument}){
+export function CircledBullets({argument}: {argument:string}){
     
     function returnicon(arg:IconDefinition,shrink:number=5,adds:string="") {
         return <FontAwesomeIcon icon={arg} color="white" fixedWidth transform={`shrink-${shrink} ${adds}`}/>;

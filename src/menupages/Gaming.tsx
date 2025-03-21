@@ -18,12 +18,12 @@ import { CircledBullets, gamingmap } from '../Utils';
 import { useState } from 'react';
 import { Modal, Row, Col } from 'react-bootstrap';
 
-const gaming = require("./../images/gaming.jpg");
-const fracturedtransience = require("./../images/gaming/fracturedtransience.jpg");
-const gensouskydrift = require("./../images/gaming/gensouskydrift.jpg");
-const skyarena = require("./../images/gaming/skyarena.jpg");
-const retrospective = require("./../images/gaming/retrospective.png");
-const showcase = require("./../images/gaming/showcase.png");
+import gaming from "./../images/gaming.jpg";
+import fracturedtransience from "./../images/gaming/fracturedtransience.jpg";
+import gensouskydrift from "./../images/gaming/gensouskydrift.jpg";
+import skyarena from "./../images/gaming/skyarena.jpg";
+import retrospective from "./../images/gaming/retrospective.png";
+import showcase from "./../images/gaming/showcase.png";
 
 function GamingModal() {
     const [showGamingMap, setShowGamingMap] = useState(false);

@@ -4,7 +4,7 @@ import { COOKIE_NAME, get_cookie_list, cookies, cookie_parameters } from "./Util
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
-export default function Bookmark({index}) {
+export default function Bookmark({index}: {index:number}) {
   const [starType, setStarType] = useState(faStar);
 
 

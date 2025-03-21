@@ -5,8 +5,8 @@ import { Container } from 'react-bootstrap';
 import {App} from '@capacitor/app';
 import { useEffect } from 'react';
 
-export default function MenuPage({ show_var, hide_fxn, idx, children }) {
-   
+export default function MenuPage({ show_var, hide_fxn, idx, children }: {show_var:any, hide_fxn:Function, idx:any, children:JSX.Element|JSX.Element[]}) {
+
     function handleHide() {
         App.removeAllListeners().then(() => {
             hide_fxn(idx, false);
@@ -30,7 +30,7 @@ export default function MenuPage({ show_var, hide_fxn, idx, children }) {
     );
 }
 
-function Header({children}) {
+function Header({children}: {children:JSX.Element|JSX.Element[]}) {
     return (
         <Offcanvas.Header closeButton>
             <Offcanvas.Title>{children}</Offcanvas.Title>
@@ -38,13 +38,13 @@ function Header({children}) {
     );
 }
 
-function FluidImage({children}) {
+function FluidImage({children}: {children:JSX.Element|JSX.Element[]}) {
     return (
         <>{children}</>
     );
 }
 
-function Body({fluidImage=<></>, mainText}) {
+function Body({fluidImage=<></>, mainText}: {fluidImage:JSX.Element, mainText:JSX.Element|JSX.Element[]}) {
     return (
         <Offcanvas.Body className="p-0">
             <Container fluid="md" className="px-0">

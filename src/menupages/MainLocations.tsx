@@ -11,8 +11,8 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
 import { Figure, Row, Col } from 'react-bootstrap';
 
-const panelroom = require("./../images/panelroom.jpg");
-const con_banner = require("./../con_banner.png");
+import panelroom from "./../images/panelroom.jpg";
+import con_banner from "./../con_banner.png";
 
 export const mainLocationsPage= {
   "header": (<><FontAwesomeIcon icon={faBuilding} fixedWidth></FontAwesomeIcon> Key Locations</>),
