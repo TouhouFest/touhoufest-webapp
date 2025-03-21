@@ -15,14 +15,12 @@ import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
 import Papa from 'papaparse';
 import Image from 'react-bootstrap/Image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPixiv } from '@fortawesome/free-brands-svg-icons';
 import IssueNotifications from "./IssueNotifications";
 import events from './events.csv';
 import noresults from './noresults.jpg';
 import noresultsdark from "./noresults-dark.jpg";
 import Stack from "react-bootstrap/Stack";
-import { faToriiGate } from "@fortawesome/free-solid-svg-icons";
+import { faToriiGate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 dayjs.extend(customParseFormat);
 dayjs.extend(timezone);
@@ -30,41 +28,41 @@ dayjs.extend(utc);
 
 class SPDataFrame {
   
-  data:any[];
-  index:any[];
+  data:EventListing[];
+  index:number[];
 
 
-  constructor(data) {
+  constructor(data: EventListing[]) {
     this.data = data;
     this.index = Array.from(Array(data.length).keys());
   }
 
-  addColumn(column_name, series) {
-    let output = this.data.map(function (row, index) {
-      row[column_name] = series[index];
+  addColumn(column_name:string, series:any[]) {
+    let output = this.data.map(function (row:EventListing, index:number) {
+      row[column_name as keyof EventListing] = series[index];
       return row;
     })
     return new SPDataFrame(output);
   }
 
-  apply(func) {
+  apply(func:Function) {
     let output = this.data.map((row) => {
       return func(row);
     });
     return output;
   }
 
-  sortValues(column, ascending = true) {
-    this.data.sort((a, b) => {
-      let val = a[column].localeCompare(b[column]);
-      return (ascending) ? val : !val;
+  sortValues(column:string, ascending = true) {
+    this.data.sort((a:EventListing, b:EventListing) : number => {
+      let val = a[column as keyof EventListing].localeCompare(b[column as keyof EventListing]);
+      return (ascending) ? val : Math.abs(val);
     });
     return new SPDataFrame(this.data);
   }
 
-  get(column) {
-    let output = this.data.map((x) => {
-      return x[column];
+  get(column:string) {
+    let output = this.data.map((x:EventListing) => {
+      return x[column as keyof EventListing];
     });
     return output;
   }
@@ -105,15 +103,29 @@ class SPDataFrame {
 
 };
 
+interface EventListing {
+  event_title:string,
+  event_description:string,
+  event_room:string,
+  event_start_day:string,
+  event_start_time:string,
+  event_end_day:string,
+  event_end_time:string,
+  event_type:string,
+  event_age_limit:string
+}
 
-export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription}) {
+export default function Dataset(
+  { mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription}: 
+  { mode:string, param_fxn:Function, appliedFilters:any, changeDays:Function, oppositeTheme:IconDefinition, showEventDescription:boolean, setShowEventDescription:Function}
+) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
   const [eventDetails, setEventDetails] = useState({});
   const [evtPrint, setEvtPrint] = useState(<></>);
   // const [availableDays, setAvailableDays] = useState([]);
 
-  function handleEventOnClick(index, evtbulk) {
+  function handleEventOnClick(index:number, evtbulk:JSX.Element) {
     let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
     // let evt = toJSON(dataSet.loc({rows:[index]}))[0];
     setEventDetails(evt);
@@ -132,12 +144,12 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
       header: true,
       download: true,
       dynamicTyping: true,
-      complete: function (results) {
+      complete: function (results:Papa.ParseResult<EventListing>) {
         let newdata = new SPDataFrame(results.data);
-        newdata = newdata.addColumn("combinedStart", newdata.apply((row) => {
+        newdata = newdata.addColumn("combinedStart", newdata.apply((row:EventListing) => {
           return dayjs.tz(row["event_start_day"] + " " + row["event_start_time"], "M/D/YY H:mm", CON_TIMEZONE).toISOString();
         }));
-        newdata = newdata.addColumn("combinedEnd", newdata.apply((row) => {
+        newdata = newdata.addColumn("combinedEnd", newdata.apply((row:EventListing) => {
           return dayjs.tz(row["event_end_day"] + " " + row["event_end_time"], "M/D/YY H:mm", CON_TIMEZONE).toISOString();
         }));
         newdata = newdata.sortValues("combinedStart");
@@ -209,7 +221,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
     return unified_search.size / cleaned_search.size;
   }
 
-  let output = [];
+  let output:JSX.Element[] = [];
 
   if (dataUpdated) {
 
@@ -264,7 +276,7 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
     let daynum = -1;
     let num_evts_ctr = 0;
 
-    let hourfxn = null;
+    let hourfxn:dayjs.Dayjs | null = null;
 
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
