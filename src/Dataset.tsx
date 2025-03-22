@@ -26,20 +26,20 @@ dayjs.extend(customParseFormat);
 dayjs.extend(timezone);
 dayjs.extend(utc);
 
-class SPDataFrame {
+class SPDataFrame<Type> {
   
-  data:EventListing[];
+  data:Type[];
   index:number[];
 
 
-  constructor(data: EventListing[]) {
+  constructor(data: Type[]) {
     this.data = data;
     this.index = Array.from(Array(data.length).keys());
   }
 
   addColumn(column_name:string, series:any[]) {
-    let output = this.data.map(function (row:EventListing, index:number) {
-      row[column_name as keyof EventListing] = series[index];
+    let output = this.data.map(function (row:Type, index:number) {
+      row[column_name as keyof Type] = series[index];
       return row;
     })
     return new SPDataFrame(output);
@@ -112,7 +112,9 @@ interface EventListing {
   event_end_day:string,
   event_end_time:string,
   event_type:string,
-  event_age_limit:string
+  event_age_limit:string,
+  uniqueID: number,
+  [key:string]: any;
 }
 
 export default function Dataset(
@@ -281,7 +283,7 @@ export default function Dataset(
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
 
-      let index = elem["uniqueID" as keyof EventListing];
+      let index:number = elem["uniqueID" as keyof EventListing];
       let splitevt = elem["event_type"].split(".");
     
       // compute event type badge styling
