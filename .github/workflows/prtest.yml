@@ -1,0 +1,29 @@
+name: Netlify Test Deployments for PRs
+on: 
+  workflow_dispatch:
+jobs:
+  Web-Deploy:
+    permissions:
+        contents: write
+    runs-on: ubuntu-latest
+    steps:
+      # pull down repository and new events
+      - name: Pull down repository 
+        uses: actions/checkout@v4
+      - run: cd ${{ github.workspace }}
+      - run: npm install
+      # unlock repository using git crypt secrets
+      - uses: flydiverny/setup-git-crypt@v4
+      - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di --decode > ~/key && git-crypt unlock ~/key && rm ~/key
+        env:
+          GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
+      - run: git status
+      # - name: Pull down events from Google Sheets
+      #   run: curl --output src/events.csv ""$SUPER_SECRET""
+      #   env:
+      #     SUPER_SECRET: ${{ secrets.GOOGLE_SHEETS_URL }}
+      # commit new events and deploy to website
+      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: nelonoel/branch-name@v1.0.1
+      - run: git status
+
