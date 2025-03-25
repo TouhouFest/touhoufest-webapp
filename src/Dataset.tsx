@@ -307,8 +307,8 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
       num_evts_ctr += 1;
 
       let format_str = "";
-      if (startjs.day() !== endjs.day()) {
-        format_str = "D/M h:mm A";
+      if (startjs.date() !== endjs.date()) {
+        format_str = "M/D h:mm A";
       }
       else {
         format_str = "h:mm A";
