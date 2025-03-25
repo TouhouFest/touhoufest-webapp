@@ -2,6 +2,9 @@ import { describe, expect, test, vi } from "vitest";
 import Dataset from "../Dataset";
 import { render, screen, waitFor } from "@testing-library/react";
 import Papa from 'papaparse';
+import dayjs, { Dayjs } from "dayjs/esm";
+import timezone from "dayjs/esm/plugin/timezone";
+import utc from "dayjs/esm/plugin/utc";
 
 // attempting to mock events.csv directly hasn't worked because Papa.parse will not properly parse the input
 // HOWEVER, mocking the *result* of Papa.parse has been found to be a good enough workaround!
@@ -83,6 +86,62 @@ describe("Dataset", () => {
     });
 
     test("events show PST time when in PST timezone", async () => {
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","America/Los_Angeles");
+        expect(dayjs.tz.guess()).toBe("America/Los_Angeles");
+        
+        // load event
+        Papa.parse = GenerateMockPapa([{
+            "event_title":"test event 0",
+            "event_description": "test description 0",
+            "event_room": "All",
+            "event_start_day": "3/2/25",
+            "event_start_time": "19:35",
+            "event_end_day": "3/2/25",
+            "event_end_time": "20:30",
+            "event_type": "Convention",
+            "event_age_limit": ""
+        }]); 
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        // expectation: time should print exactly
+        await waitFor(() => {
+            expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
+        });
+
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
-    })
+    });
+
+    test("events show EST time when in EST timezone", async () => {
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","America/New_York");
+        expect(dayjs.tz.guess()).toBe("America/New_York");
+        
+        // load event
+        Papa.parse = GenerateMockPapa([{
+            "event_title":"test event 0",
+            "event_description": "test description 0",
+            "event_room": "All",
+            "event_start_day": "3/2/25",
+            "event_start_time": "19:35",
+            "event_end_day": "3/2/25",
+            "event_end_time": "20:30",
+            "event_type": "Convention",
+            "event_age_limit": ""
+        }]); 
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        await waitFor(() => {
+            expect(screen.getByText(`All, 10:35 PM - 11:30 PM`)).toBeDefined();
+        });
+
+        // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
+    });
+
 })
