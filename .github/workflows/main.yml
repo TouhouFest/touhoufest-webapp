@@ -1,9 +1,9 @@
 name: Deploy with Github Actions
 on: 
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 jobs:
   Web-Deploy:
     permissions:

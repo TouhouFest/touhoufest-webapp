@@ -1,3 +1,5 @@
+# note: this workflow is obsolete because netlify already does this,
+# but it will be preserved for posterity
 name: Netlify Test Deployments for PRs
 on: 
   workflow_dispatch:
