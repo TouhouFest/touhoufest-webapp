@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, NATIVETIME, USECONTZ, NATIVETIMETYPE } from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -266,6 +266,14 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
 
     let hourfxn = null;
 
+    let con_timezone_type:string = "";
+    if(localStorage.getItem(NATIVETIMETYPE) === null ){
+      con_timezone_type = USECONTZ;
+    }
+    else {
+      con_timezone_type = localStorage.getItem(NATIVETIMETYPE) || USECONTZ;
+    }
+
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
 
@@ -279,6 +287,13 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
       // compute time display
       let startjs = dayjs(elem["combinedStart"]);
       let endjs = dayjs(elem["combinedEnd"]);
+
+      let guessed_tz:string = dayjs.tz.guess();
+
+      if(guessed_tz !== CON_TIMEZONE && con_timezone_type === USECONTZ) {
+        startjs = startjs.tz(CON_TIMEZONE);
+        endjs = endjs.tz(CON_TIMEZONE);
+      }
 
       // we've moved onto a new set of days, we need to add a new day indicator
       if (daynum === -1 || startjs.day() !== daynum) {

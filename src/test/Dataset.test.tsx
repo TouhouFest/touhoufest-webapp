@@ -5,6 +5,7 @@ import Papa from 'papaparse';
 import dayjs, { Dayjs } from "dayjs/esm";
 import timezone from "dayjs/esm/plugin/timezone";
 import utc from "dayjs/esm/plugin/utc";
+import { NATIVETIMETYPE, USEDEVICETZ } from "../Utils";
 
 // attempting to mock events.csv directly hasn't worked because Papa.parse will not properly parse the input
 // HOWEVER, mocking the *result* of Papa.parse has been found to be a good enough workaround!
@@ -35,6 +36,7 @@ Object.defineProperty(window, 'matchMedia', {
     })),
   });
 
+// helper function to forcefully callback helper function inside complete() with supplied parameters
 function GenerateMockPapa(mockup:any[]) {
     return vi.fn().mockImplementation(
         async (csvString, config) => {
@@ -49,7 +51,12 @@ function GenerateMockPapa(mockup:any[]) {
 
 describe("Dataset", () => {
     test("cross-day events show proper times", async () => {
-        
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","America/New_York");
+        expect(dayjs.tz.guess()).toBe("America/New_York");
+
         let mockup:any[] = [
             {
                 "event_title":"test event 0",
@@ -75,6 +82,8 @@ describe("Dataset", () => {
             },
         ];
 
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+
         Papa.parse = GenerateMockPapa(mockup);
         let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
@@ -92,6 +101,8 @@ describe("Dataset", () => {
         vi.stubEnv("TZ","America/Los_Angeles");
         expect(dayjs.tz.guess()).toBe("America/Los_Angeles");
         
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+
         // load event
         Papa.parse = GenerateMockPapa([{
             "event_title":"test event 0",
@@ -115,13 +126,15 @@ describe("Dataset", () => {
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
     });
 
-    test("events show EST time when in EST timezone", async () => {
+    test("events show CST time when flag set to device tz", async () => {
         // sanity check mocking timezone
         dayjs.extend(utc);
         dayjs.extend(timezone);
-        vi.stubEnv("TZ","America/New_York");
-        expect(dayjs.tz.guess()).toBe("America/New_York");
+        vi.stubEnv("TZ","America/Chicago");
+        expect(dayjs.tz.guess()).toBe("America/Chicago");
         
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+
         // load event
         Papa.parse = GenerateMockPapa([{
             "event_title":"test event 0",
@@ -138,10 +151,42 @@ describe("Dataset", () => {
         render(dataset);
 
         await waitFor(() => {
-            expect(screen.getByText(`All, 10:35 PM - 11:30 PM`)).toBeDefined();
+            expect(screen.getByText(`All, 9:35 PM - 10:30 PM`)).toBeDefined();
         });
 
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
+    });
+
+    test("show PST times in JST timezone", async () => {
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","Asia/Tokyo");
+        expect(dayjs.tz.guess()).toBe("Asia/Tokyo");
+        
+        // load event
+        Papa.parse = GenerateMockPapa([{
+            "event_title":"test event 0",
+            "event_description": "test description 0",
+            "event_room": "All",
+            "event_start_day": "3/2/25",
+            "event_start_time": "19:35",
+            "event_end_day": "3/2/25",
+            "event_end_time": "20:30",
+            "event_type": "Convention",
+            "event_age_limit": ""
+        }]); 
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        // expectation: time should print PST times because flag set to show in con timezone
+        await waitFor(() => {
+            expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
+            expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
+        });
+
+
     });
 
 })
