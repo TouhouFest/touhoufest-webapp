@@ -66,6 +66,24 @@ function DefaultNotificationSetting() {
     </>);
 }
 
+function TimezoneSettings() {
+
+    function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        let formdata = new FormData(e.currentTarget);
+    }
+
+    return (<>
+        <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" >
+                <Form.Check type="checkbox" id="tzPrefs" label="Display Event Times in Device Time"/>
+            </Form.Group>
+            <Button variant="primary" type="submit">Submit</Button>
+        </Form>
+    </>);
+}
+
 export const settingsPage = {
     "header": (<><FontAwesomeIcon icon={faGear} fixedWidth></FontAwesomeIcon> Settings/FAQ</>),
     "fluidImage": (<></>),
@@ -73,5 +91,8 @@ export const settingsPage = {
         <h4>Event Notifications</h4>
         <p className="small"><FontAwesomeIcon icon={faTriangleExclamation} className="small"/> Due to platform limitations, event notifications may exhibit a minor degree of inconsistency. (e.g. They may only make an appearance on your mobile device's notifications bar without vibrating or having an auditory cue)</p>
         <DefaultNotificationSetting />
+        <h4 className="mt-3">Event Timezone Settings</h4>
+        <p className="small"><FontAwesomeIcon icon={faTriangleExclamation} className="small"/> Event times will be displayed in the <b>convention's timezone (Pacific Standard Time)</b> unless otherwise indicated below:</p>
+        <TimezoneSettings />
     </>),
 }
