@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { Form, Button } from 'react-bootstrap';
-import { DEFAULTNOTIFY } from '../Utils';
+import { DEFAULTNOTIFY, NATIVETIMETYPE, USEDEVICETZ } from '../Utils';
 import { Toast } from '@capacitor/toast';
 
 function DefaultNotificationSetting() {
@@ -69,15 +69,17 @@ function DefaultNotificationSetting() {
 function TimezoneSettings() {
 
     function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-
+        // e.preventDefault();
+        console.log("foobar");
         let formdata = new FormData(e.currentTarget);
+        let usecontz:boolean = formdata.get("tzPrefs") as boolean;
+        localStorage.setItem(NATIVETIMETYPE, USEDEVICETZ);
     }
 
     return (<>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" >
-                <Form.Check type="checkbox" id="tzPrefs" label="Display Event Times in Device Time"/>
+                <Form.Check type="checkbox" label="Display Event Times in Device Time" name="tzPrefs"/>
             </Form.Group>
             <Button variant="primary" type="submit">Submit</Button>
         </Form>
