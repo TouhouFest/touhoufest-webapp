@@ -26,20 +26,20 @@ dayjs.extend(customParseFormat);
 dayjs.extend(timezone);
 dayjs.extend(utc);
 
-class SPDataFrame<Type> {
+class SPDataFrame {
   
-  data:Type[];
+  data:EventListing[];
   index:number[];
 
 
-  constructor(data: Type[]) {
+  constructor(data: EventListing[]) {
     this.data = data;
     this.index = Array.from(Array(data.length).keys());
   }
 
   addColumn(column_name:string, series:any[]) {
-    let output = this.data.map(function (row:Type, index:number) {
-      row[column_name as keyof Type] = series[index];
+    let output = this.data.map(function (row:EventListing, index:number) {
+      row[column_name as keyof EventListing] = series[index];
       return row;
     })
     return new SPDataFrame(output);
@@ -71,15 +71,15 @@ class SPDataFrame<Type> {
     console.log(this.data);
   }
 
-  loc(params) {
-    let rows = params.rows.map((value, index) => {
+  loc(params:any) {
+    let rows = params.rows.map((value:any, index:number) => {
       if (typeof value === "boolean" && value === true) {
         return this.data[index];
       }
       else {
         return this.data[value];
       }
-    }).filter(item => item);
+    }).filter((item:any) => item);
     return new SPDataFrame(rows);
   }
 
@@ -87,7 +87,7 @@ class SPDataFrame<Type> {
     return this.data;
   }
 
-  compare(column, value, op) {
+  compare(column:string, value:number, op:string) {
     let output = this.data.filter((row) => {
       switch (op) {
         case '!==':
@@ -136,7 +136,7 @@ export default function Dataset(
   };
   const handleEventOnHide = () => setShowEventDescription(false);
 
-  function uniqueColumn(series) {
+  function uniqueColumn(series:any) {
     return Array.from(new Set(series));
   }
 
@@ -251,7 +251,7 @@ export default function Dataset(
       }
 
       if (appliedFilters["event_types"].length > 0) {
-        let result = displayData.get("event_type").map((evtstr) => appliedFilters["event_types"].filter(item => evtstr.split(".").includes(item)).length > 0);
+        let result = displayData.get("event_type").map((evtstr) => appliedFilters["event_types"].filter((item:string) => evtstr.split(".").includes(item)).length > 0);
         displayData = displayData.loc({ rows: result });
       }
 
