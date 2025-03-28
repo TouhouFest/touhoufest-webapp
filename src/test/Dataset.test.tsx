@@ -172,8 +172,6 @@ describe("Dataset", () => {
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
             expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
         });
-
-
     });
 
 })
