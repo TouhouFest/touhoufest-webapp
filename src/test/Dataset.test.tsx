@@ -169,7 +169,6 @@ describe("Dataset", () => {
 
         // expectation: time should print PST times because flag set to show in con timezone
         await waitFor(() => {
-            screen.debug();
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
             expect(screen.getAllByText(`Sunday, March 2`).length).greaterThan(0);
             expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
@@ -201,7 +200,6 @@ describe("Dataset", () => {
 
         // expectation: time should print PST times because flag set to show in con timezone
         await waitFor(() => {
-            screen.debug();
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
             expect(screen.getAllByText(`Monday, March 3`).length).greaterThan(0);
         });

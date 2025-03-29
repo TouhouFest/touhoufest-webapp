@@ -62,7 +62,6 @@ describe("Settings", () => {
         await userEvent.click(screen.getAllByText('Submit')[1]);
         
         await waitFor(async () => {
-            screen.debug();
             expect(setItemTest).toHaveBeenCalledWith(NATIVETIMETYPE, USECONTZ);
             expect(Toast.show).toHaveBeenCalledWith({text:"Event times will display in con timezone", position:"center"});
         });
