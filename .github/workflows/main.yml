@@ -56,7 +56,7 @@ jobs:
           gradle-version: "8.7"
       # - run: alias gradle='/home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-8.10/bin/gradle'
       # install npm dependencies
-      - run: npm install
+      - run: npm ci 
       # unlock repository using git crypt secrets
       - uses: flydiverny/setup-git-crypt@v4
       - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di --decode > ~/key && git-crypt unlock ~/key
@@ -64,6 +64,7 @@ jobs:
           GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
       # refresh build for android, commit
       - run: npm run build
+      - run: npm test
       - run: npx cap sync android
       - uses: stefanzweifel/git-auto-commit-action@v5
       # build app and publish as artifact

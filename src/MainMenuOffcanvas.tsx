@@ -6,7 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
 import { App } from "@capacitor/app";
 
-export default function MainMenuOffcanvas({mainIcon, menuheader, touhoufest, menunavs, darkModeSelector, showMainMenu, setShowMainMenu}: {mainIcon:JSX.Element, menuheader: JSX.Element, touhoufest:any, menunavs:JSX.Element[], darkModeSelector:JSX.Element, showMainMenu:boolean, setShowMainMenu:Function}) {
+export default function MainMenuOffcanvas({mainIcon, menuheader, touhoufest, menunavs, darkModeSelector, showMainMenu, setShowMainMenu}: {mainIcon:JSX.Element, menuheader: JSX.Element | JSX.Element[], touhoufest:any, menunavs:JSX.Element[], darkModeSelector:JSX.Element, showMainMenu:boolean, setShowMainMenu:Function}) {
     
     useEffect(() => {
         // enable listener for backbutton

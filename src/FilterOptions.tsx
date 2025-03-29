@@ -11,7 +11,9 @@ import { App } from '@capacitor/app';
 
 export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOptions}: {show_var:boolean, hide_fxn:Function, param_fxn:Function, filterOptions:any}) {
 
-  const [stack, setStack] = useState({"event_types":[], "room_list": [], "search_query": ""});
+  let event_type_starter:string[] = [];
+  let room_list_starter:string[] = [];
+  const [stack, setStack] = useState({"event_types":event_type_starter, "room_list": room_list_starter, "search_query": ""});
 
   function handleHide() {
     App.removeAllListeners().then(() => {
