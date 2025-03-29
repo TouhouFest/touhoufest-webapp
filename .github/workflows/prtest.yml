@@ -3,6 +3,7 @@
 name: Netlify Test Deployments for PRs
 on: 
   workflow_dispatch:
+  pull_request:
 jobs:
   Web-Deploy:
     permissions:
@@ -10,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # pull down repository and new events
-      - name: Pull down repository 
+      - name: Pull down repository to merge of PR
         uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
-      - run: npm install
+      - run: npm ci
       # unlock repository using git crypt secrets
       - uses: flydiverny/setup-git-crypt@v4
       - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di --decode > ~/key && git-crypt unlock ~/key && rm ~/key
@@ -26,19 +27,5 @@ jobs:
       # commit new events and deploy to website
       # - uses: stefanzweifel/git-auto-commit-action@v5
       - uses: nelonoel/branch-name@v1.0.1
-      # Sets the branch name as environment variable
-      - uses: jsmrcaga/action-netlify-deploy@master
-        with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          deploy_alias: ${{ env.BRANCH_NAME }}
-      
-      # Creates a status check with link to preview
-      - name: Status check
-        uses: Sibz/github-status-action@v1.1.1
-        with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: Netlify preview
-          state: success
-          target_url: ${{ env.NETLIFY_PREVIEW_URL }}
-
+      - run: npm run build
+      - run: npm test
