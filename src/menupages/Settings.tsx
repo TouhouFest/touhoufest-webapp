@@ -70,7 +70,6 @@ function TimezoneSettings() {
 
     function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        console.log("foobar");
         let formdata = new FormData(e.currentTarget);
         let usecontz:FormDataEntryValue | null = formdata.get("tzPrefs");
         let toastOutput:string = "";

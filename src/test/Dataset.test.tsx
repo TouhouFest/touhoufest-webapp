@@ -169,9 +169,43 @@ describe("Dataset", () => {
 
         // expectation: time should print PST times because flag set to show in con timezone
         await waitFor(() => {
+            screen.debug();
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
+            expect(screen.getAllByText(`Sunday, March 2`).length).greaterThan(0);
             expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
         });
+    });
+
+    test("times with different tz-aware dates show on device mode", async () => {
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","Asia/Tokyo");
+        expect(dayjs.tz.guess()).toBe("Asia/Tokyo");
+        
+        // load event
+        Papa.parse = GenerateMockPapa([{
+            "event_title":"test event 0",
+            "event_description": "test description 0",
+            "event_room": "All",
+            "event_start_day": "3/2/25",
+            "event_start_time": "19:35",
+            "event_end_day": "3/2/25",
+            "event_end_time": "20:30",
+            "event_type": "Convention",
+            "event_age_limit": ""
+        }]); 
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        // expectation: time should print PST times because flag set to show in con timezone
+        await waitFor(() => {
+            screen.debug();
+            expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
+            expect(screen.getAllByText(`Monday, March 3`).length).greaterThan(0);
+        });
+
     });
 
 })

@@ -331,9 +331,10 @@ export default function Dataset({ mode, param_fxn, appliedFilters, changeDays, o
       let startstr = startjs.format(format_str);
       let endstr = endjs.format(format_str);
 
+      // <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
+
       let eventbulk = (<>
         <h4 className="mb-1">{elem["event_title"]} </h4>
-        <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
         <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {
