@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, NATIVETIME, USECONTZ, NATIVETIMETYPE } from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -280,6 +280,14 @@ export default function Dataset(
 
     let hourfxn:dayjs.Dayjs | null = null;
 
+    let con_timezone_type:string = "";
+    if(localStorage.getItem(NATIVETIMETYPE) === null ){
+      con_timezone_type = USECONTZ;
+    }
+    else {
+      con_timezone_type = localStorage.getItem(NATIVETIMETYPE) || USECONTZ;
+    }
+
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
 
@@ -293,6 +301,13 @@ export default function Dataset(
       // compute time display
       let startjs = dayjs(elem["combinedStart" as keyof EventListing]);
       let endjs = dayjs(elem["combinedEnd" as keyof EventListing]);
+
+      let guessed_tz:string = dayjs.tz.guess();
+
+      if(guessed_tz !== CON_TIMEZONE && con_timezone_type === USECONTZ) {
+        startjs = startjs.tz(CON_TIMEZONE);
+        endjs = endjs.tz(CON_TIMEZONE);
+      }
 
       // we've moved onto a new set of days, we need to add a new day indicator
       if (daynum === -1 || startjs.day() !== daynum) {
@@ -321,8 +336,8 @@ export default function Dataset(
       num_evts_ctr += 1;
 
       let format_str = "";
-      if (startjs.day() !== endjs.day()) {
-        format_str = "D/M h:mm A";
+      if (startjs.date() !== endjs.date()) {
+        format_str = "M/D h:mm A";
       }
       else {
         format_str = "h:mm A";
@@ -330,9 +345,11 @@ export default function Dataset(
       let startstr = startjs.format(format_str);
       let endstr = endjs.format(format_str);
 
+      // <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
+
       let eventbulk = (<>
         <h4 className="mb-1">{elem["event_title"]} </h4>
-        <p className="mb-1 datedisplay">{dayjs(elem['combinedStart' as keyof EventListing]).format("dddd, MMMM D").toString()}</p>
+
         <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {

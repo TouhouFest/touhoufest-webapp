@@ -123,3 +123,9 @@ import gamingmap from "./images/gamingmap.jpg";
 export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
 
 export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";
+
+// consts to determine if the app should display event times relative to the CON
+// or to the DEVICE TZ
+export const NATIVETIMETYPE:string = "NATIVETIMETYPE";
+export const USECONTZ:string = "USECONTZ";
+export const USEDEVICETZ:string = "USEDEVICETZ";

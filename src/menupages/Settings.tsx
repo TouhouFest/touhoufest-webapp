@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { Form, Button } from 'react-bootstrap';
-import { DEFAULTNOTIFY } from '../Utils';
+import { DEFAULTNOTIFY, NATIVETIMETYPE, USECONTZ, USEDEVICETZ } from '../Utils';
 import { Toast } from '@capacitor/toast';
 
 function DefaultNotificationSetting() {
@@ -66,6 +66,35 @@ function DefaultNotificationSetting() {
     </>);
 }
 
+function TimezoneSettings() {
+
+    function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        let formdata = new FormData(e.currentTarget);
+        let usecontz:FormDataEntryValue | null = formdata.get("tzPrefs");
+        let toastOutput:string = "";
+        if (usecontz !== null) {
+            localStorage.setItem(NATIVETIMETYPE, USEDEVICETZ);
+            toastOutput = "Event times will display in device timezone";
+        }
+        else {
+            localStorage.setItem(NATIVETIMETYPE, USECONTZ);
+            toastOutput = "Event times will display in con timezone";
+        }
+
+        Toast.show({text: toastOutput, position:"center"})
+    }
+
+    return (<>
+        <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" >
+                <Form.Check type="checkbox" label="Display Event Times in Device Time" name="tzPrefs" defaultChecked={localStorage.getItem(NATIVETIMETYPE) === USEDEVICETZ}/>
+            </Form.Group>
+            <Button variant="primary" type="submit">Submit</Button>
+        </Form>
+    </>);
+}
+
 export const settingsPage = {
     "header": (<><FontAwesomeIcon icon={faGear} fixedWidth></FontAwesomeIcon> Settings/FAQ</>),
     "fluidImage": (<></>),
@@ -73,5 +102,8 @@ export const settingsPage = {
         <h4>Event Notifications</h4>
         <p className="small"><FontAwesomeIcon icon={faTriangleExclamation} className="small"/> Due to platform limitations, event notifications may exhibit a minor degree of inconsistency. (e.g. They may only make an appearance on your mobile device's notifications bar without vibrating or having an auditory cue)</p>
         <DefaultNotificationSetting />
+        <h4 className="mt-3">Event Timezone Settings</h4>
+        <p className="small"><FontAwesomeIcon icon={faTriangleExclamation} className="small"/> Event times will be displayed in the <b>convention's timezone (Pacific Standard Time)</b> unless otherwise indicated below:</p>
+        <TimezoneSettings />
     </>),
 }
