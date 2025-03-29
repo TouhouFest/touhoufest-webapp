@@ -14,7 +14,8 @@ jobs:
       - name: Pull down repository 
         uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
-      - run: npm install
+      - run: npm ci
+      - run: npm test
       # unlock repository using git crypt secrets
       - uses: flydiverny/setup-git-crypt@v4
       - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di --decode > ~/key && git-crypt unlock ~/key && rm ~/key
