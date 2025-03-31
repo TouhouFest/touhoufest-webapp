@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE, NATIVETIME, USECONTZ, NATIVETIMETYPE } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE } from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -275,8 +275,8 @@ export default function Dataset(
 
     let jsonexport = displayData.toJSON();
 
-    let daynum = -1;
-    let num_evts_ctr = 0;
+    let daynum:number = -1;
+    let num_evts_ctr:number = 0;
 
     let hourfxn:dayjs.Dayjs | null = null;
 
@@ -310,8 +310,8 @@ export default function Dataset(
       }
 
       // we've moved onto a new set of days, we need to add a new day indicator
-      if (daynum === -1 || startjs.day() !== daynum) {
-        daynum = startjs.day();
+      if (daynum === -1 || startjs.date() !== daynum) {
+        daynum = startjs.date();
         let formatted_start = startjs.format("dddd, MMMM D").toString();
         // the number of events preceding the day indicator are enscribed into the classname
         output.push(
