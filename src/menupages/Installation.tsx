@@ -35,25 +35,21 @@ export const installationPage = {
           <Accordion.Body>
             <ol>
               <li>Tap the <FontAwesomeIcon icon={faEllipsisVertical}/> button to bring up additional options; it should reside on the upper right portion of your window</li>
-              <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={3}>
-                  <Image src={androidchrome01} rounded fluid className="my-2"/>
-                </Col>
-              </Row>
               <li>Tap the option named <b>Install app</b></li>
-              <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={3}>
-                  <Image src={androidchrome02} rounded fluid className="my-2"/>
-                </Col>
-              </Row>
-              <li>The below prompt (or something similar) should appear. Tap the <b>Install</b> button</li>
-              <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={3}>
-                  <Image src={androidchrome03} rounded fluid className="my-2"/>
-                </Col>
-              </Row>
+              <li>The below prompt (or something similar) should appear. Tap the <b>Add to Home screen</b> button</li>
               <li>At this point, the TouhouFest icon should appear on your phone's home screen. Tap it and it will open and function just like a regular app</li>
             </ol>
+            <Row className="justify-content-center">
+              <Col xs={12} md={4} lg={3}>
+                <Image src={androidchrome01} rounded fluid className="my-2"/>
+              </Col>
+              <Col xs={12} md={4} lg={3}>
+                <Image src={androidchrome02} rounded fluid className="my-2"/>
+              </Col>
+              <Col xs={12} md={4} lg={3}>
+                <Image src={androidchrome03} rounded fluid className="my-2"/>
+              </Col>
+            </Row>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
@@ -61,25 +57,21 @@ export const installationPage = {
           <Accordion.Body>
             <ol>
               <li>Tap the <FontAwesomeIcon icon={faEllipsisVertical}/> button to bring up additional options; it should reside on the upper right portion of your window</li>
-              <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={3}>
-                  <Image src={androidfirefox01} rounded fluid className="my-2"/>
-                </Col>
-              </Row>
-              <li>Tap the option named <b>Install</b></li>
-              <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={3}>
-                  <Image src={androidfirefox02} rounded fluid className="my-2"/>
-                </Col>
-              </Row>
+              <li>Tap the option named <b>Add app to Home screen</b></li>
               <li>The below prompt (or something similar) should appear. Tap the <b>Add</b> button</li>
-              <Row className="justify-content-center">
-                <Col xs={12} md={6} lg={3}>
-                  <Image src={androidfirefox03} rounded fluid className="my-2"/>
-                </Col>
-              </Row>
               <li>At this point, the TouhouFest icon should appear on your phone's home screen. Tap it and it will open and function just like a regular app</li>
             </ol>
+            <Row className="justify-content-center">
+              <Col xs={12} md={4} lg={3}>
+                <Image src={androidfirefox01} rounded fluid className="my-2"/>
+              </Col>
+              <Col xs={12} md={4} lg={3}>
+                <Image src={androidfirefox02} rounded fluid className="my-2"/>
+              </Col>
+              <Col xs={12} md={4} lg={3}>
+                <Image src={androidfirefox03} rounded fluid className="my-2"/>
+              </Col>
+            </Row>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
