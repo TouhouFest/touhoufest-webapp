@@ -64,6 +64,9 @@ jobs:
         env:
           GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
       # refresh build for android, commit
+      - run: npx capacitor-set-version -v ""$GITHUB_RUN_NUMBER"" -b ""$GITHUB_RUN_NUMBER""
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
       - run: npm run build
       - run: npm test
       - run: npx cap sync android
