@@ -6,6 +6,7 @@ import dayjs, { Dayjs } from "dayjs/esm";
 import timezone from "dayjs/esm/plugin/timezone";
 import utc from "dayjs/esm/plugin/utc";
 import { NATIVETIMETYPE, USEDEVICETZ } from "../Utils";
+import { faBroom } from "@fortawesome/free-solid-svg-icons";
 
 // attempting to mock events.csv directly hasn't worked because Papa.parse will not properly parse the input
 // HOWEVER, mocking the *result* of Papa.parse has been found to be a good enough workaround!
@@ -34,6 +35,11 @@ function GenerateMockPapa(mockup:any[]) {
         }
     );
    
+}
+
+function mockGetItemImplementation(input:string, output:string | null) : string | null {
+    if(input === NATIVETIMETYPE) {return output;}
+    else {return null;}
 }
 
 describe("Dataset", () => {
@@ -69,10 +75,11 @@ describe("Dataset", () => {
             },
         ];
 
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
+        // const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
 
         Papa.parse = GenerateMockPapa(mockup);
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
         await waitFor(() => {
             // todo: adjust output of papa.parse to maybe call complete function?
@@ -88,7 +95,7 @@ describe("Dataset", () => {
         vi.stubEnv("TZ","America/Los_Angeles");
         expect(dayjs.tz.guess()).toBe("America/Los_Angeles");
         
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
 
         // load event
         Papa.parse = GenerateMockPapa([{
@@ -102,7 +109,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
 
         // expectation: time should print exactly
@@ -120,7 +127,7 @@ describe("Dataset", () => {
         vi.stubEnv("TZ","America/Chicago");
         expect(dayjs.tz.guess()).toBe("America/Chicago");
         
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
 
         // load event
         Papa.parse = GenerateMockPapa([{
@@ -134,7 +141,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
 
         await waitFor(() => {
@@ -145,7 +152,7 @@ describe("Dataset", () => {
     });
 
     test("show PST times in JST timezone", async () => {
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, null));
         // sanity check mocking timezone
         dayjs.extend(utc);
         dayjs.extend(timezone);
@@ -164,7 +171,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
 
         // expectation: time should print PST times because flag set to show in con timezone
@@ -176,7 +183,7 @@ describe("Dataset", () => {
     });
 
     test("times with different tz-aware dates show on device mode", async () => {
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
         // sanity check mocking timezone
         dayjs.extend(utc);
         dayjs.extend(timezone);
@@ -195,7 +202,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={vi.fn()} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
 
         // expectation: time should print PST times because flag set to show in con timezone
@@ -203,7 +210,69 @@ describe("Dataset", () => {
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
             expect(screen.getAllByText(`Monday, March 3`).length).greaterThan(0);
         });
-
     });
 
+    test("overlapping long events edge case", async () => {
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","America/Los_Angeles");
+        expect(dayjs.tz.guess()).toBe("America/Los_Angeles");
+        Papa.parse = GenerateMockPapa([
+            {
+                "event_title":"test event 0",
+                "event_description": "test description 0",
+                "event_room": "All",
+                "event_start_day": "3/2/25",
+                "event_start_time": "19:35",
+                "event_end_day": "3/2/25",
+                "event_end_time": "20:30",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+            {
+                "event_title":"test event 1",
+                "event_description": "test description 1",
+                "event_room": "All",
+                "event_start_day": "3/2/25",
+                "event_start_time": "19:45",
+                "event_end_day": "4/27/25",
+                "event_end_time": "9:00",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+            {
+                "event_title":"test event 2",
+                "event_description": "test description 2",
+                "event_room": "All",
+                "event_start_day": "4/27/25",
+                "event_start_time": "11:00",
+                "event_end_day": "4/27/25",
+                "event_end_time": "11:30",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+            {
+                "event_title":"test event 3",
+                "event_description": "test description 3",
+                "event_room": "All",
+                "event_start_day": "4/28/25",
+                "event_start_time": "14:30",
+                "event_end_day": "4/28/25",
+                "event_end_time": "15:30",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+        ]); 
+
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        // expectation: time should print PST times because flag set to show in con timezone
+        await waitFor(() => {
+            expect(screen.queryAllByText(`Sunday, April 27`).length).greaterThan(0);
+        });
+
+
+    });
 })
