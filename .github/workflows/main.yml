@@ -76,5 +76,11 @@ jobs:
         with:
           name: app-files
           path: /home/runner/work/touhoufest-webapp/touhoufest-webapp/android/app/build/outputs/bundle/release/
+      # - name: Upload app to Google Play
+      #   uses: r0adkll/upload-google-play@v1
+      #   with:
+      #     packageName: com.example.touhoufestwebapp
+      #     releaseFiles: /home/runner/work/touhoufest-webapp/touhoufest-webapp/android/app/build/outputs/bundle/release/app-release-signed.aab
+      #     track: production
       # TODO: publish to app store
         
