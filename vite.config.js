@@ -15,7 +15,7 @@ export default defineConfig(() => {
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'TouhouFest 2024 Schedule',
+        name: 'TouhouFest 2025 Schedule',
         short_name: 'TouhouFest',
         description: 'Digital schedule for TouhouFest with events, bookmarks, filters, and more',
         theme_color: '#ffffff',
