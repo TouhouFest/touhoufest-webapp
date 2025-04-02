@@ -11,9 +11,24 @@ import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons
 import { Image, Row, Col } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import Modal from 'react-bootstrap/Modal';
-import { useState } from 'react';
+import { createRef, RefObject, useCallback, useRef, useState } from 'react';
 import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap } from '../Utils';
 import touhoufest_map from "./../images/touhoufest_map.png";
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
+
+function GlobalTransformWrapper({src, caption}: {src:any, caption:string}) : JSX.Element {
+    return (<>
+        <Figure>
+            <TransformWrapper>
+                <TransformComponent>
+                    <Figure.Image src={src} fluid rounded/>
+                </TransformComponent>
+            </TransformWrapper>
+            <Figure.Caption>{caption}</Figure.Caption>
+        </Figure>
+
+    </>);
+}
 
 function MapModals(){
     const [showOuter, setShowOuter] = useState(false);
@@ -23,15 +38,12 @@ function MapModals(){
     const [showGamingMap, setShowGamingMap] = useState(false);
 
     return (<>
-        <p>Tap to focus in/zoom on either map as needed.</p>
+        <p>Pinch to focus in/zoom on all maps as needed.</p>
 
         <h4>Main TouhouFest Map</h4>
         <Row>
             <Col xs={12} lg={6}>
-                <Figure onClick={() => setShowOuter(true)}>
-                    <Figure.Image src={touhoufest_map} fluid rounded/>
-                    <Figure.Caption>Map of the main areas of TouhouFest</Figure.Caption>
-                </Figure>
+                <GlobalTransformWrapper src={touhoufest_map} caption="Map of the main areas of TouhouFest"/>
             </Col>
             <Col xs={12} md={6} lg={3}>
                 <p>See below for convention spaces/buildings and map locations:</p>
