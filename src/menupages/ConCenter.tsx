@@ -8,15 +8,14 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
-import { Image, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
-import Modal from 'react-bootstrap/Modal';
-import { createRef, RefObject, useCallback, useRef, useState } from 'react';
+import { useState } from 'react';
 import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap } from '../Utils';
 import touhoufest_map from "./../images/touhoufest_map.png";
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
-function GlobalTransformWrapper({src, caption}: {src:any, caption:string}) : JSX.Element {
+export function GlobalTransformWrapper({src, caption}: {src:any, caption:string}) : JSX.Element {
     return (<>
         <Figure>
             <TransformWrapper>
@@ -31,11 +30,6 @@ function GlobalTransformWrapper({src, caption}: {src:any, caption:string}) : JSX
 }
 
 function MapModals(){
-    const [showOuter, setShowOuter] = useState(false);
-    const [showInner, setShowInner] = useState(false);
-    const [showVendors, setShowVendors] = useState(false);
-    const [showTorinoMap, setShowTorinoMap] = useState(false);
-    const [showGamingMap, setShowGamingMap] = useState(false);
 
     return (<>
         <p>Pinch to focus in/zoom on all maps as needed.</p>
@@ -109,50 +103,17 @@ function MapModals(){
             </Col>
         </Row>
 
-        <Modal show={showOuter} size="lg" onHide={() => setShowOuter(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Outer TouhouFest Map</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={touhoufest_map} fluid/>
-            </Modal.Body>
-        </Modal>
-
-        <Modal show={showInner} size="lg" onHide={() => setShowInner(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Artist Alley Map</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={artistalleymap} fluid/>
-            </Modal.Body>
-        </Modal>
-
-        <Modal show={showVendors} size="lg" onHide={() => setShowVendors(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Map of Vendors</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={vendorsmap} fluid className="mx-auto d-block"/>
-            </Modal.Body>
-        </Modal>
-
         <Row>
             <Col xs={12} lg={6}>
                 <h4>Artist Alley Map</h4>
                 <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/>)</p>
-                <Figure onClick={() => setShowInner(true)}>
-                    <Figure.Image src={artistalleymap} fluid rounded/>
-                    <Figure.Caption>Map of Artist Alley</Figure.Caption>
-                </Figure>
+                <GlobalTransformWrapper src={artistalleymap} caption="Map of Artist Alley"/>
             </Col>
             <Col xs={12} lg={6}>
                 <h4>Vendors Map</h4>
                 <h5>Entry Plaza Map</h5>
                 <p>The entire below map is enclosed in the Entry Plaza. (<CircledBullets argument="3"/>) Nearby locations are also labeled.</p>
-                <Figure>
-                    <Figure.Image src={vendorsmap} fluid rounded onClick={() => setShowVendors(true)}/>
-                    <Figure.Caption>Map of Vendors</Figure.Caption>
-                </Figure>
+                <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
             </Col>
         </Row>
 
@@ -182,23 +143,11 @@ function MapModals(){
             </Col>
         </Row>
 
-        <Modal show={showTorinoMap} size="lg" onHide={() => setShowTorinoMap(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Map of Vendors at Torino Plaza</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={torinoplazamap} fluid className="mx-auto d-block"/>
-            </Modal.Body>
-        </Modal>
-
         <h5>Torino Plaza Map</h5>
         <p>The below map is enclosed within the Torino Plaza (<CircledBullets argument="7"/> and <CircledBullets argument="8"/>) and also shows locations of nearby areas at the convention.</p>
         <Row>
             <Col xs={12} lg={8}>
-                <Figure>
-                    <Figure.Image src={torinoplazamap} fluid rounded onClick={() => setShowTorinoMap(true)}/>
-                    <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
-                </Figure>
+                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza"/>
             </Col>
             <Col xs={12} lg={4}>
                 <p>Summary of listed booths in Torino Plaza:</p>
@@ -216,21 +165,9 @@ function MapModals(){
         <p>The entire below map is enclosed in the Toyota Hall.</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={6}>
-                <Figure>
-                    <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
-                    <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
-                </Figure>
+                <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
             </Col>
         </Row>
-        <Modal show={showGamingMap} size="lg" onHide={() => setShowGamingMap(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Map of Gaming at Toyota Hall</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={gamingmap} fluid className="mx-auto d-block"/>
-            </Modal.Body>
-        </Modal>
-
     </>);
 }
 

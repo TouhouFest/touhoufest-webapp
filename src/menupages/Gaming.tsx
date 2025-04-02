@@ -8,8 +8,6 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
-// import toyota from "./../images/toyota.jpg";
-// import kenmiller from "./../images/kenmiller.webp";
 import { toyota, kenmiller } from "../Utils.js";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
@@ -17,6 +15,7 @@ import { ListGroup } from 'react-bootstrap';
 import { CircledBullets, gamingmap } from '../Utils';
 import { useState } from 'react';
 import { Modal, Row, Col } from 'react-bootstrap';
+import {GlobalTransformWrapper} from './ConCenter'
 
 import gaming from "./../images/gaming.jpg";
 import fracturedtransience from "./../images/gaming/fracturedtransience.jpg";
@@ -28,18 +27,11 @@ import showcase from "./../images/gaming/showcase.png";
 function GamingModal() {
     const [showGamingMap, setShowGamingMap] = useState(false);
     return (<>
-      <Figure>
+        <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
+        <Figure>
             <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
             <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
         </Figure>
-        <Modal show={showGamingMap} size="lg" onHide={() => setShowGamingMap(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Map of Gaming at Toyota Hall</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={gamingmap} fluid className="mx-auto d-block"/>
-            </Modal.Body>
-        </Modal>
     </>);
 }
 
