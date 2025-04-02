@@ -16,6 +16,7 @@ import MainMenuOffcanvas from './MainMenuOffcanvas';
 import {App as CapacitorApp} from '@capacitor/app';
 
 import touhoufest from "./images/touhoufest.jpg";
+import touhoufest_dark from "./images/touhoufest_dark.png";
 
 function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) {
 
@@ -196,7 +197,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <MainMenuOffcanvas 
               mainIcon={<FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/>} 
               menuheader={menuheader} 
-              touhoufest={touhoufest} 
+              touhoufest={localStorage.getItem(COLORSTATUS) === 'dark' ? touhoufest_dark : touhoufest} 
               menunavs={menunavs} 
               darkModeSelector={<DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/>}
               showMainMenu={showMainMenu} setShowMainMenu={setShowMainMenu}
