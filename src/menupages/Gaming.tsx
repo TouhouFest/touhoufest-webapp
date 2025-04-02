@@ -24,17 +24,6 @@ import skyarena from "./../images/gaming/skyarena.jpg";
 import retrospective from "./../images/gaming/retrospective.png";
 import showcase from "./../images/gaming/showcase.png";
 
-function GamingModal() {
-    const [showGamingMap, setShowGamingMap] = useState(false);
-    return (<>
-        <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
-        <Figure>
-            <Figure.Image src={gamingmap} fluid rounded onClick={() => setShowGamingMap(true)}/>
-            <Figure.Caption>Map of Gaming at Toyota Hall</Figure.Caption>
-        </Figure>
-    </>);
-}
-
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
@@ -60,7 +49,7 @@ export const gamingPage = {
         <p>The entire below map is enclosed in the Toyota Hall.</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8} className="text-center">
-                <GamingModal />
+                <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
             </Col>
         </Row>
 

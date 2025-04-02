@@ -591,7 +591,7 @@ export const artistVendorsPage = {
                     </>)}
                 </Row>
                 <h5 className="mt-3">Artist Alley Booth Map</h5>
-                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
+                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
 
             </Col>
             <Col>
@@ -621,7 +621,7 @@ export const artistVendorsPage = {
             <Col>
                 <h4>Vendors</h4>
                 <h5>Vendors Booth Map</h5>
-                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
+                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
 
                 <h5>Non-Vendors Booths</h5>
                 <p>These booths aren't actually vendors booths but due to their close proximity to the rest of the vendors are also listed here:</p>
@@ -661,7 +661,7 @@ export const artistVendorsPage = {
 
        <h4 className="mt-2">Music, Fangame, & Shrine Tables</h4>
        <h5>Booth Map</h5>
-        <p>Tap to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
+        <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
         <Row xs={1} md={2} className="justify-content-center">
             <Col>
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
