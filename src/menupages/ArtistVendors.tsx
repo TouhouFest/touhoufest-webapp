@@ -70,6 +70,7 @@ import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
 import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
 import roninexpo from "./../images/artistalley/roninexpo.png";
 import kotori from "./../images/artistalley/kotori.jpg";
+import { GlobalTransformWrapper } from './ConCenter';
 
 let artistlist = [
     {
@@ -547,65 +548,6 @@ let official_artists = [
     }
 ];
 
-function ArtistAlleyMapModal(){
-    const [showMap, setShowMap] = useState(false);
-
-    return (<>
-        <Figure onClick={() => setShowMap(true)}>
-            <Figure.Image src={artistalleymap} rounded fluid/>
-            <Figure.Caption>Map of Artist Alley</Figure.Caption>
-        </Figure>
-
-        <Modal show={showMap} size="lg" onHide={() => setShowMap(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Artist Alley Booth Map</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={artistalleymap} fluid/>
-            </Modal.Body>
-        </Modal>
-
-    </>);
-}
-
-function VendorsMapModal() {
-    const [showVendors, setShowVendors] = useState(false);
-    return (<>
-        <Figure>
-            <Figure.Image src={vendorsmap} fluid rounded onClick={() => setShowVendors(true)}/>
-            <Figure.Caption>Map of Vendors</Figure.Caption>
-        </Figure>
-
-        <Modal show={showVendors} size="lg" onHide={() => setShowVendors(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Map of Vendors</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={vendorsmap} fluid className="mx-auto d-block"/>
-            </Modal.Body>
-        </Modal>
-
-    </>);
-}
-
-function ShrineMapModal() {
-    const [showTorinoMap, setShowTorinoMap] = useState(false);
-    return (<>
-        <Figure>
-            <Figure.Image src={torinoplazamap} fluid rounded onClick={() => setShowTorinoMap(true)}/>
-            <Figure.Caption>Map of Vendors at Torino Plaza</Figure.Caption>
-        </Figure>
-
-        <Modal show={showTorinoMap} size="lg" onHide={() => setShowTorinoMap(false)} centered>
-            <Modal.Header closeButton>
-                <Modal.Title>Map of Vendors at Torino Plaza</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="align-items-center px-0">
-                <Image src={torinoplazamap} fluid className="mx-auto d-block"/>
-            </Modal.Body>
-        </Modal>
-    </>);
-}
 
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
@@ -649,11 +591,11 @@ export const artistVendorsPage = {
                     </>)}
                 </Row>
                 <h5 className="mt-3">Artist Alley Booth Map</h5>
-                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
+                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
 
             </Col>
             <Col>
-                <ArtistAlleyMapModal />
+                <GlobalTransformWrapper src={artistalleymap} caption="Map of Artist Alley"/>
             </Col>
         </Row>
 
@@ -679,7 +621,7 @@ export const artistVendorsPage = {
             <Col>
                 <h4>Vendors</h4>
                 <h5>Vendors Booth Map</h5>
-                <p>Tap to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
+                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
 
                 <h5>Non-Vendors Booths</h5>
                 <p>These booths aren't actually vendors booths but due to their close proximity to the rest of the vendors are also listed here:</p>
@@ -693,7 +635,7 @@ export const artistVendorsPage = {
 
             </Col>
             <Col>
-                <VendorsMapModal />
+                <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
             </Col>
         </Row>
 
@@ -719,10 +661,10 @@ export const artistVendorsPage = {
 
        <h4 className="mt-2">Music, Fangame, & Shrine Tables</h4>
        <h5>Booth Map</h5>
-        <p>Tap to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
+        <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
         <Row xs={1} md={2} className="justify-content-center">
             <Col>
-                <ShrineMapModal />
+                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>
        <h5>List of Participants</h5>
