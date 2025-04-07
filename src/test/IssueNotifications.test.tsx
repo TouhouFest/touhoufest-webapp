@@ -7,6 +7,7 @@ import userEvent from '@testing-library/user-event';
 
 import { LocalNotifications } from '@capacitor/local-notifications';
 import { Toast } from '@capacitor/toast';
+import { DEFAULTNOTIFY } from '../Utils';
 
 describe("Notifications",() => {
     
@@ -68,6 +69,31 @@ describe("Notifications",() => {
     });
 
     test('notifications schedule properly on timezone', async () => {
+        vi.useFakeTimers();
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => {
+            if(input == DEFAULTNOTIFY) {return "15";}
+            else {return null;}
+        });
+        const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockReturnValue();
+        LocalNotifications.checkPermissions = vi.fn().mockImplementation(
+            async () => {
+                return {display: 'granted'}
+            }
+        );
+
+        const mockedSystemTime = new Date(2025,2,3,12,30,0);
+        vi.setSystemTime(mockedSystemTime);
+
+        let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs("2025-03-21 16:00")}/>
+        render(notification);
+        await userEvent.click(screen.getByRole("img", {hidden:true}));
+
+        await waitFor(() => {
+            expect(setItemTest).toHaveBeenCalledWith("foobar");
+            // expect(LocalNotifications.schedule).toHaveBeenCalled();
+        });
+
+        vi.useRealTimers();
 
     });
 });
