@@ -1,5 +1,5 @@
 import { PluginListenerHandle } from "@capacitor/core/types/definitions";
-import { LocalNotificationSchema, PendingResult, PermissionStatus } from "@capacitor/local-notifications"
+import { LocalNotification, LocalNotificationSchema, PendingResult, PermissionStatus, ScheduleOptions, ScheduleResult } from "@capacitor/local-notifications"
 import { vi } from "vitest"
 
 vi.mock('@capacitor/local-notifications');
@@ -18,6 +18,10 @@ export const LocalNotifications = {
     },
 
     async getPending() : Promise<PendingResult> {
+        return {notifications: []};
+    },
+
+    async schedule(options: ScheduleOptions) : Promise<ScheduleResult> {
         return {notifications: []};
     }
 }

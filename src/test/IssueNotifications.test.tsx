@@ -80,6 +80,9 @@ describe("Notifications",() => {
                 return {display: 'granted'}
             }
         );
+        LocalNotifications.schedule = vi.fn().mockImplementation(async () => {
+            return {notifications: []}
+        });
 
         const mockedSystemTime = new Date(2025,2,3,12,30,0);
         vi.setSystemTime(mockedSystemTime);
