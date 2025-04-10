@@ -10,7 +10,7 @@ import { Toast } from '@capacitor/toast';
 import { DEFAULTNOTIFY } from '../Utils';
 
 describe("Notifications",() => {
-    
+   
     test('stupid simple notifications', () => {
         let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs()}/>
         render(notification);
@@ -74,7 +74,7 @@ describe("Notifications",() => {
             if(input == DEFAULTNOTIFY) {return "15";}
             else {return null;}
         });
-        const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockReturnValue();
+        const setItemTest = vi.spyOn(Storage.prototype, "setItem");
         LocalNotifications.checkPermissions = vi.fn().mockImplementation(
             async () => {
                 return {display: 'granted'}
@@ -82,6 +82,9 @@ describe("Notifications",() => {
         );
         LocalNotifications.schedule = vi.fn().mockImplementation(async () => {
             return {notifications: []}
+        });
+        LocalNotifications.addListener = vi.fn().mockImplementation(async () => {
+            return {remove: null}
         });
 
         const mockedSystemTime = new Date(2025,2,3,12,30,0);
@@ -92,11 +95,12 @@ describe("Notifications",() => {
         await userEvent.click(screen.getByRole("img", {hidden:true}));
 
         await waitFor(() => {
-            expect(setItemTest).toHaveBeenCalledWith("foobar");
-            // expect(LocalNotifications.schedule).toHaveBeenCalled();
+            expect(setItemTest).toHaveBeenLastCalledWith("NOTIFY-1");
+            expect(LocalNotifications.schedule).toHaveBeenCalled();
+        }).then(() => {
+            vi.useRealTimers();
         });
 
-        vi.useRealTimers();
 
     });
 });
