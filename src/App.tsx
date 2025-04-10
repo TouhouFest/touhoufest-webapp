@@ -16,7 +16,7 @@ import MainMenuOffcanvas from './MainMenuOffcanvas';
 import {App as CapacitorApp} from '@capacitor/app';
 
 import touhoufest from "./images/touhoufest.jpg";
-import touhoufest_dark from "./images/touhoufest_dark.png";
+import touhoufest_dark from "./images/touhoufest_dark.jpg";
 
 function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) {
 
