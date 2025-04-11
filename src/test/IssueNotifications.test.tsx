@@ -10,6 +10,10 @@ import utc from "dayjs/esm/plugin/utc";
 import { LocalNotifications } from '@capacitor/local-notifications';
 import { Toast } from '@capacitor/toast';
 import { DEFAULTNOTIFY } from '../Utils';
+import Papa from 'papaparse';
+import { GenerateMockPapa } from './Dataset.test';
+import Dataset from '../Dataset';
+import { faBroom } from '@fortawesome/free-solid-svg-icons';
 
 describe("Notifications",() => {
  
@@ -136,7 +140,6 @@ describe("Notifications",() => {
 
                 }]
             });
-            // expect(LocalNotifications.schedule).toHaveBeenCalled();
         }).then(() => {
             vi.useRealTimers();
         });
@@ -144,7 +147,45 @@ describe("Notifications",() => {
     });
 
     test("timezone-aware selection with dataset", async () => {
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","America/New_York");
+        expect(dayjs.tz.guess()).toBe("America/New_York");
+
+        let mockup:any[] = [
+            {
+                "event_title":"test event 0",
+                "event_description": "test description 0",
+                "event_room": "All",
+                "event_start_day": "3/21/25",
+                "event_start_time": "19:35",
+                "event_end_day": "4/6/25",
+                "event_end_time": "20:30",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+        ];
+        Papa.parse = GenerateMockPapa(mockup);
+        vi.useFakeTimers();
+
+        const mockedSystemTime = new Date(2025,2,3,12,30,0);
+        vi.setSystemTime(mockedSystemTime);
+
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        await userEvent.click(screen.getAllByRole("img", {hidden:true})[1]);
+
+        // todo: mock localnotifications permissions and local storage calls
+
+        await waitFor(() => {
+            screen.debug();
+        }).then(() => {
+            vi.useRealTimers();
+        });
 
     });
 });
+
 

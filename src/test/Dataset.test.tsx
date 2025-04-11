@@ -25,7 +25,7 @@ Opening Ceremonies,Welcome to TouhouFest! MikoTan and several others on TouhouFe
 
 
 // helper function to forcefully callback helper function inside complete() with supplied parameters
-function GenerateMockPapa(mockup:any[]) {
+export function GenerateMockPapa(mockup:any[]) {
     return vi.fn().mockImplementation(
         async (csvString, config) => {
             config["complete"]({data: mockup});
