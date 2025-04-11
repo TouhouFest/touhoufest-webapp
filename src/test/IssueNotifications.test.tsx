@@ -9,7 +9,7 @@ import utc from "dayjs/esm/plugin/utc";
 
 import { LocalNotifications } from '@capacitor/local-notifications';
 import { Toast } from '@capacitor/toast';
-import { DEFAULTNOTIFY } from '../Utils';
+import { CON_TIMEZONE, DEFAULTNOTIFY } from '../Utils';
 import Papa from 'papaparse';
 import { GenerateMockPapa } from './Dataset.test';
 import Dataset from '../Dataset';
@@ -146,12 +146,7 @@ describe("Notifications",() => {
 
     });
 
-    test("timezone-aware selection with dataset", async () => {
-        // sanity check mocking timezone
-        dayjs.extend(utc);
-        dayjs.extend(timezone);
-        vi.stubEnv("TZ","America/New_York");
-        expect(dayjs.tz.guess()).toBe("America/New_York");
+    test("notifications schedule such that they correspond properly in device time", async () => {
 
         let mockup:any[] = [
             {
@@ -169,18 +164,61 @@ describe("Notifications",() => {
         Papa.parse = GenerateMockPapa(mockup);
         vi.useFakeTimers();
 
+        // sanity check mocking timezone
+        dayjs.extend(utc);
+        dayjs.extend(timezone);
+        vi.stubEnv("TZ","America/New_York");
+        expect(dayjs.tz.guess()).toBe("America/New_York");
+
         const mockedSystemTime = new Date(2025,2,3,12,30,0);
         vi.setSystemTime(mockedSystemTime);
+
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => {
+            if(input == DEFAULTNOTIFY) {return "15";}
+            else {return null;}
+        });
+        const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockImplementation((key, value) => {
+            return null
+        });
+        LocalNotifications.checkPermissions = vi.fn().mockImplementation(
+            async () => {
+                return {display: 'granted'}
+            }
+        );
+        LocalNotifications.schedule = vi.fn().mockImplementation(async () => {
+            return {notifications: []}
+        });
+        LocalNotifications.addListener = vi.fn().mockImplementation(async () => {
+            return {remove: null}
+        });
 
         let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
         render(dataset);
 
         await userEvent.click(screen.getAllByRole("img", {hidden:true})[1]);
 
-        // todo: mock localnotifications permissions and local storage calls
+        // major insight: localnotification times need to be scheduled that they'll be accurate
+        // if casted to DEVICE TIMEZONE
+        let expectedTime:dayjs.Dayjs = dayjs("3/21/25 22:20");
+        let expectedTimeString:string = expectedTime.toISOString();
+        let expectedTimeDate:Date = expectedTime.toDate();
 
         await waitFor(() => {
-            screen.debug();
+            expect(LocalNotifications.checkPermissions).toHaveBeenCalled();
+            expect(setItemTest).toHaveBeenCalledWith("NOTIFY-0",expectedTimeString);
+            expect(LocalNotifications.schedule).toHaveBeenCalledWith({
+                notifications: [
+                    {
+                        body: 'Your event "test event 0" is starting soon.',
+                        id: 0,
+                        schedule: {
+                            allowWhileIdle: true,
+                            at: expectedTimeDate
+                        },
+                        title: "Event Starting Soon!"
+                    }
+                ]
+            });
         }).then(() => {
             vi.useRealTimers();
         });
