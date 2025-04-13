@@ -27,6 +27,7 @@ export const LocalNotifications = {
 
 vi.mock('@capacitor/local-notifications');
 vi.mock('@capacitor/toast');
+vi.mock('@capacitor/app');
 
 Object.defineProperty(window, 'matchMedia', {
     writable: true,

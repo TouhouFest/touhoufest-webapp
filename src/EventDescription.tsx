@@ -2,7 +2,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Bookmark from './Bookmark';
 import Markdown from 'marked-react';
 import {App} from '@capacitor/app';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import IssueNotifications from './IssueNotifications';
 import dayjs from "dayjs/esm/index.js";
 import customParseFormat from "dayjs/esm/plugin/customParseFormat";
@@ -14,6 +14,8 @@ dayjs.extend(timezone);
 dayjs.extend(utc);
 
 function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_var:boolean, hide_fxn:Function, event_package:any, evt_print:JSX.Element}) {
+
+  const [notifyModalOpen, setNotifyModalOpen] = useState(false);
 
   let output = (<></>);
 

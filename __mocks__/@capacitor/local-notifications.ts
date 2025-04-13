@@ -23,5 +23,7 @@ export const LocalNotifications = {
 
     async schedule(options: ScheduleOptions) : Promise<ScheduleResult> {
         return {notifications: []};
-    }
+    },
+    
+    async removeAllListeners() : Promise<void> {}
 }
