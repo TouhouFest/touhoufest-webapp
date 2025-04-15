@@ -144,7 +144,7 @@ describe('EventDescription', () => {
  
     });
 
-    test("back button doesnt trigger when default notification UI open", async () => {
+    test("notification modal closes with page if back button is pressed", async () => {
         SetDeviceTimeZone("America/Los_Angeles");
         vi.useFakeTimers();
         const mockedSystemTime = new Date(2025,2,3,12,30,0);
@@ -185,19 +185,17 @@ describe('EventDescription', () => {
         let filterResult:HTMLElement[] = screen.getAllByRole("img", {hidden:true});
         expect(filterResult.length).equal(2);
 
-        let expectedTime:Dayjs = start_time.subtract(15,'minute');
-        let expectedTimeString:string = expectedTime.toISOString();
-        let expectedTimeDate:Date = expectedTime.toDate();
-
         await userEvent.click(filterResult[1]);
 
         await waitFor(() => {
             expect(callbackFxn).not.equal(callBackConst); 
+            expect(screen.getAllByText("Notification Time").length).greaterThan(0);
             callbackFxn();
         }).then(() => {
-            expect(test_hide_fxn).not.toBeCalled();
+            expect(test_hide_fxn).toBeCalled();
             vi.useRealTimers();
         });
  
     });
+
 });

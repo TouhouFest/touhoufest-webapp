@@ -1,12 +1,15 @@
-import { describe, expect, test, vi } from "vitest";
+import { beforeAll, describe, expect, test, vi } from "vitest";
 import Dataset from "../Dataset";
 import { render, screen, waitFor } from "@testing-library/react";
 import Papa from 'papaparse';
 import dayjs, { Dayjs } from "dayjs/esm";
 import timezone from "dayjs/esm/plugin/timezone";
 import utc from "dayjs/esm/plugin/utc";
-import { NATIVETIMETYPE, USEDEVICETZ } from "../Utils";
+import { DEFAULTNOTIFY, NATIVETIMETYPE, USEDEVICETZ } from "../Utils";
 import { faBroom } from "@fortawesome/free-solid-svg-icons";
+import { SetDeviceTimeZone } from "./TestUtils";
+import { LocalNotifications } from "@capacitor/local-notifications";
+import userEvent from "@testing-library/user-event";
 
 // attempting to mock events.csv directly hasn't worked because Papa.parse will not properly parse the input
 // HOWEVER, mocking the *result* of Papa.parse has been found to be a good enough workaround!
@@ -43,6 +46,19 @@ function mockGetItemImplementation(input:string, output:string | null) : string 
 }
 
 describe("Dataset", () => {
+
+    // necessary to allow vitest fake timers to test properly with react-testing-library
+    beforeAll(() => {
+        const _jest = globalThis.jest;
+    
+        globalThis.jest = {
+        ...globalThis.jest,
+        advanceTimersByTime: vi.advanceTimersByTime.bind(vi)
+        };
+    
+        return () => void (globalThis.jest = _jest);
+    });
+
     test("cross-day events show proper times", async () => {
         // sanity check mocking timezone
         dayjs.extend(utc);
@@ -275,4 +291,68 @@ describe("Dataset", () => {
 
 
     });
+
+    test("notification components update if user sets notification inside event description", async () => {
+        SetDeviceTimeZone("America/New_York");
+        vi.useFakeTimers();
+        const mockedSystemTime = new Date(2025,1,3,12,30,0);
+        vi.setSystemTime(mockedSystemTime);
+
+        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => {
+            return null;
+        });
+        const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockImplementation((key, value) => {
+            return null;
+        });
+        LocalNotifications.checkPermissions = vi.fn().mockImplementation(
+            async () => {
+                return {display: 'granted'}
+            }
+        );
+        LocalNotifications.schedule = vi.fn().mockImplementation(async () => {
+            return {notifications: []}
+        });
+        LocalNotifications.addListener = vi.fn().mockImplementation(async () => {
+            return {remove: null}
+        });
+
+        Papa.parse = GenerateMockPapa([
+            {
+                "event_title":"test event 0",
+                "event_description": "test description 0",
+                "event_room": "All",
+                "event_start_day": "3/2/25",
+                "event_start_time": "19:35",
+                "event_end_day": "3/2/25",
+                "event_end_time": "20:30",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+        ]); 
+
+        let mockShowEventDescription = false;
+
+        let MockSetShowEventDescription = vi.fn().mockImplementation((input:boolean) => {
+            mockShowEventDescription = input;
+        });
+
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={mockShowEventDescription} setShowEventDescription={MockSetShowEventDescription} />
+        render(dataset);
+
+        let filterResult:HTMLElement[] = screen.getAllByRole("img", {hidden:true});
+        expect(filterResult.length).equal(2);
+
+        await userEvent.click(screen.getByText("Convention"));
+
+        await waitFor(() => {
+            screen.debug();
+            let expandedFilterResults:HTMLElement[] = screen.getAllByRole("img", {hidden: true});
+            expect(screen.findAllByText("test description 0")).length.greaterThan(0);
+            expect(expandedFilterResults.length).equal(4);
+        }).then(() => {
+            vi.useRealTimers();
+        });
+
+    });
+
 })

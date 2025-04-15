@@ -2,6 +2,7 @@ import { Modal, Form, Button } from "react-bootstrap";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {DEFAULTNOTIFY} from "./Utils";
+import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 
 export default function DefaultNoficationModal({show, changeState, callBackNotify}: {show:boolean, changeState:Function, callBackNotify:Function}) {
     
@@ -38,7 +39,8 @@ export default function DefaultNoficationModal({show, changeState, callBackNotif
             </Modal.Header> 
             <Modal.Body>
                 <p>Please set a nofication time.</p>
-                <p className="small"><FontAwesomeIcon icon={faInfoCircle}/> Exiting out of this modal without submitting will neither queue a notification nor modify any default notification preferences.</p>
+                <p className="small"><FontAwesomeIcon icon={faInfoCircle} fixedWidth/> Exiting out of this modal without submitting will neither queue a notification nor modify any default notification preferences.</p>
+                <p className="small"><FontAwesomeIcon icon={faAndroid} fixedWidth/> On <b>Android</b> devices, using the back button will exit out of <em>the page you're currently on</em>, including this modal.</p>
                 <Form onSubmit={handleSubmit} onKeyDown={disableEnter}>
                     <Form.Group className="mb-3">
                         <Form.Label>Time Before Event Start</Form.Label>
