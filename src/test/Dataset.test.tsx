@@ -10,6 +10,7 @@ import { faBroom } from "@fortawesome/free-solid-svg-icons";
 import { SetDeviceTimeZone } from "./TestUtils";
 import { LocalNotifications } from "@capacitor/local-notifications";
 import userEvent from "@testing-library/user-event";
+import App from "../App";
 
 // attempting to mock events.csv directly hasn't worked because Papa.parse will not properly parse the input
 // HOWEVER, mocking the *result* of Papa.parse has been found to be a good enough workaround!
@@ -299,7 +300,8 @@ describe("Dataset", () => {
         vi.setSystemTime(mockedSystemTime);
 
         const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => {
-            return null;
+            if(input === DEFAULTNOTIFY) {return "15";}
+            else {return null;}
         });
         const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockImplementation((key, value) => {
             return null;
@@ -330,12 +332,45 @@ describe("Dataset", () => {
             },
         ]); 
 
-        let mockShowEventDescription = false;
+        let app = <App menupagedata={[]} menuheader={<></>} />
+        const {container} = render(app);
 
-        let MockSetShowEventDescription = vi.fn().mockImplementation((input:boolean) => {
-            mockShowEventDescription = input;
+        let result:HTMLCollectionOf<Element> = container.getElementsByClassName("fa-bell");
+        expect(result.length).equal(1);
+        expect(result[0].getAttribute("data-prefix")).equal("far");
+
+        await userEvent.click(screen.getByText("test event 0"));
+
+        await waitFor(() => {
+            expect(screen.getAllByText("test description 0").length).toBe(1);
+            let allicons:HTMLElement[] = screen.getAllByRole("img", {hidden: true});
+            allicons = allicons.filter((elem:HTMLElement) => {
+                let cls:string = elem.getAttribute("class") || "";
+                return cls.includes("fa-bell") && elem.getAttribute("data-prefix") === "far";
+            });
+            expect(allicons.length).toBe(2);
+
+            userEvent.click(allicons[1]);
+        })
+        
+        await waitFor(() => {
+            screen.debug();
+            expect(getItemTest).toHaveBeenCalledWith(DEFAULTNOTIFY);
+            // expect(setItemTest).toHaveBeenCalledWith("NOTIFY-0");
+            let allicons:HTMLElement[] = screen.getAllByRole("img", {hidden: true});
+            allicons = allicons.filter((elem:HTMLElement) => {
+                let cls:string = elem.getAttribute("class") || "";
+                return cls.includes("fa-bell") && elem.getAttribute("data-prefix") === "fas";
+            });
+            expect(allicons.length).toBe(2);
         });
 
+        // let filterResult:HTMLElement[] = screen.getAllByRole("img", {hidden:true});
+        // expect(filterResult[0].classList).toHaveClass("foobar");
+        // await expect.element(filterResult[0])
+
+
+        /*
         let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={mockShowEventDescription} setShowEventDescription={MockSetShowEventDescription} />
         render(dataset);
 
@@ -347,11 +382,14 @@ describe("Dataset", () => {
         await waitFor(() => {
             screen.debug();
             let expandedFilterResults:HTMLElement[] = screen.getAllByRole("img", {hidden: true});
+            expect(screen.getByText("test description 0")).toBeTruthy();
             expect(screen.findAllByText("test description 0")).length.greaterThan(0);
             expect(expandedFilterResults.length).equal(4);
         }).then(() => {
             vi.useRealTimers();
         });
+
+        */
 
     });
 
