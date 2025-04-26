@@ -33,6 +33,7 @@ import hojo from "./../images/hojo.jpg";
 import afterglow from "./../images/artistalley/afterglow.jpg";
 import yona from "./../images/artistalley/yona.jpg";
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
+import oyamada from "./../images/oyamada.jpg";
 import { neosanctum } from '../Utils';
 
 let djs = [
@@ -82,9 +83,8 @@ export const guestsPage = {
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
         <ul>
-            <li><b>A-ONE</b>: Assembly Hall (<CircledBullets argument="13"/>)</li>
-            <li><b>TAMUSIC</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
-            <li><b>Punderfull</b>: Pine Wind Garden (<CircledBullets argument="15"/>)</li>
+            <li><b>Shihori, A-ONE, & Miko</b>: Assembly Hall (<CircledBullets argument="13"/>)</li>
+            <li><b>TAMUSIC & Miko</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
         </ul>
         <Row className="justify-content-center">
             <Col xs={12} className="text-center">
@@ -97,12 +97,6 @@ export const guestsPage = {
                 <Figure>
                     <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
                     <Figure.Caption>Torino Plaza</Figure.Caption>
-                </Figure>
-            </Col>
-            <Col xs={12} md={6}>
-                <Figure>
-                    <Figure.Image src={pinewindgarden} fluid rounded></Figure.Image>
-                    <Figure.Caption>Pine Wind Garden</Figure.Caption>
                 </Figure>
             </Col>
         </Row>
@@ -211,19 +205,20 @@ export const guestsPage = {
                     <Card.Img variant="top" src={hojo}></Card.Img>
                     <Card.Body>
                         <Card.Title>Hojo-san</Card.Title>
-                        <Card.Text>Placeholder text for hojo-san</Card.Text>
+                        <Card.Text>Hojo-san is the head organizer of the <b>Hakurei Jinja Reitaisai Festival</b>, (or just <b>Reitaisai</b>) the world's largest Touhou-specific fan gathering/convention. Multiple big names in Touhou gather at this convention every year (also hosted at the Tokyo Big Sight, by the way!) up to and including ZUN himself whenever he releases game demos.</Card.Text>
+                        <Card.Text><small>Fun Fact: ZUN isn't involved in running Reitaisai, but he <em>did</em> give Reitaisai its name when it first started way back in 2004!</small></Card.Text>
                    </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://x.com/HakureijinjyaS" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
                 </Card>
             </Col>
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={placeholder}></Card.Img>
+                    <Card.Img variant="top" src={oyamada}></Card.Img>
                     <Card.Body>
                         <Card.Title>Oyamada-san</Card.Title>
-                        <Card.Text>Placeholder text for omayada-san</Card.Text>
-                   </Card.Body>
-                    <Card.Footer className="text-center small"><a href="https://google.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                        <Card.Text>Oyamada-san handles a substantial portion of the management of Team Shanghai Alice and works closely with ZUN himself. For all intents and purposes he can be considered ZUN's right hand man.</Card.Text>
+                    </Card.Body>
+                    {/* <Card.Footer className="text-center small"><a href="https://google.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer> */}
                 </Card>
             </Col>
             <Col>
@@ -231,7 +226,7 @@ export const guestsPage = {
                     <Card.Img variant="top" src={suzukann}></Card.Img>
                     <Card.Body>
                         <Card.Title>Suzukann-san</Card.Title>
-                        <Card.Text>Placeholder text for suzukann</Card.Text>
+                        <Card.Text>Suzukann is a dedicated and very talented artist who draws a litany of Touhou artworks and fanworks. Her work has been featured in a variety of different places, up to and including album art for the esteemed Touhou circle Shinra-Bansho.</Card.Text>
                    </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://x.com/suzukannn" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
                 </Card>
