@@ -119,8 +119,11 @@ import artistalleymap from "./images/artistalleymap.png";
 import vendorsmap from "./images/vendorsmap.png";
 import torinoplazamap from "./images/torinoplazamap.png";
 import gamingmap from "./images/gamingmap.jpg";
+import maidacademy from "./images/artistalley/maidacademy.webp";
 
-export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
+import neosanctum from "./images/artistalley/neosanctum.jpg";
+
+export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap, neosanctum, maidacademy};
 
 export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";
 

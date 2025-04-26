@@ -12,7 +12,7 @@ import { faTwitch, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam } from "../Utils";
+import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam, placeholder, maidacademy } from "../Utils";
 import { Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
@@ -27,12 +27,20 @@ import bakkun from "./../images/artistalley/bakkun.jpg";
 import suzubrah from "./../images/artistalley/suzubrah.jpg";
 import coobie from "./../images/artistalley/coobie.jpg";
 import renko from "./../images/renko.jpg";
+import miko from "./../images/miko.jpg";
+import suzukann from "./../images/suzukann.jpg";
+import hojo from "./../images/hojo.jpg";
+import afterglow from "./../images/artistalley/afterglow.jpg";
+import yona from "./../images/artistalley/yona.jpg";
+import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
+import oyamada from "./../images/oyamada.jpg";
+import { neosanctum } from '../Utils';
 
 let djs = [
     {
-        "name": "Ryuko Pegasasu",
-        "image": ryuko,
-        "website": "https://twitter.com/RyukoPegasasu",
+        "name": "AfterGlow",
+        "image": afterglow,
+        "website": "https://x.com/afterglowset",
         "description": "",
         "location": "Saturday"
     },
@@ -40,21 +48,32 @@ let djs = [
         "name": "Bakkun",
         "image": bakkun,
         "website": "https://twitter.com/master_bacon",
-        "location": "Saturday & Sunday"
+        "location": "Saturday"
     },
     {
-        "name": "Suzubrah",
-        "image": suzubrah,
+        "name": "Neo Sanctum",
+        "image": neosanctum,
         "location": "Saturday",
-        "website": "https://twitter.com/suzubrah?lang=en"
+        "website": "https://neo-sanctum.com/home"
     },
     {
-        "name": "Coobie",
-        "image": coobie,
+        "name": "Maid Academy",
+        "image": maidacademy,
         "location": "Sunday",
-        "website": "https://twitter.com/ultimatecoobie?lang=en"
+        "website": "https://linktr.ee/maidacademy"
+    },
+    {
+        "name": "YONA",
+        "image": yona,
+        "location": "Saturday",
+        "website": "https://x.com/itsjonasw"
+    },
+    {
+        "name": "CorpsDanceCrew",
+        "image": corpsdancecrew,
+        "location": "Saturday",
+        "website": "https://x.com/TheCorpsDC"
     }
-
 ];
 
 export const guestsPage = {
@@ -64,9 +83,8 @@ export const guestsPage = {
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
         <ul>
-            <li><b>A-ONE</b>: Assembly Hall (<CircledBullets argument="13"/>)</li>
-            <li><b>TAMUSIC</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
-            <li><b>Punderfull</b>: Pine Wind Garden (<CircledBullets argument="15"/>)</li>
+            <li><b>Shihori, A-ONE, & Miko</b>: Assembly Hall (<CircledBullets argument="13"/>)</li>
+            <li><b>TAMUSIC & Miko</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
         </ul>
         <Row className="justify-content-center">
             <Col xs={12} className="text-center">
@@ -81,15 +99,9 @@ export const guestsPage = {
                     <Figure.Caption>Torino Plaza</Figure.Caption>
                 </Figure>
             </Col>
-            <Col xs={12} md={6}>
-                <Figure>
-                    <Figure.Image src={pinewindgarden} fluid rounded></Figure.Image>
-                    <Figure.Caption>Pine Wind Garden</Figure.Caption>
-                </Figure>
-            </Col>
         </Row>
         <h4>About The Guests</h4>
-        <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
+        <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
            <Col>
                 <Card>
                     <Card.Img variant="top" src={a_one}></Card.Img>
@@ -115,6 +127,7 @@ export const guestsPage = {
                     <Card.Footer className="text-center small"><a href="https://linktr.ee/shihorimusic" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Linktree</a></Card.Footer>
                 </Card>
             </Col>
+            { /*
             <Col>
                 <Card>
                     <Card.Img variant="top" src={odyssey}></Card.Img>
@@ -127,6 +140,8 @@ export const guestsPage = {
                     <Card.Footer className="text-center small"><a href="https://linktr.ee/odysseyeurobeat" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Linktree</a></Card.Footer>
                 </Card>
             </Col>
+            */ }
+            { /*
             <Col>
                 <Card>
                     <Card.Img variant="top" src={renko}></Card.Img>
@@ -146,7 +161,8 @@ export const guestsPage = {
                     </Card.Footer>
                 </Card>
             </Col>
-           <Col>
+            */}
+            <Col>
                 <Card>
                     <Card.Img variant="top" src={tam}></Card.Img>
                     <Card.Body>
@@ -158,6 +174,7 @@ export const guestsPage = {
                     <Card.Footer className="text-center small"><a href="https://twitter.com/tamusic" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
                 </Card>
             </Col>
+            {/*
             <Col>
                 <Card>
                     <Card.Img variant="top" src={punderfullll}></Card.Img>
@@ -169,10 +186,56 @@ export const guestsPage = {
                     <Card.Footer className="text-center small"><a href="https://linktr.ee/punderfullll" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Linktree</a></Card.Footer>
                 </Card>
             </Col>
+            */}
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={miko}></Card.Img>
+                    <Card.Body>
+                        <Card.Title>Miko (IOSYS)</Card.Title>
+                        <Card.Text>From August 2004, working as a freelance vocalist and voice provider. From May 2022, the special tourism ambassador for Choshi City, Chiba Prefecture,Japan.</Card.Text>
+                        <Card.Text>miko's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "Marisa Stole Something Precious", "Cirno's Perfect Math Class," and "Scarlet Police Ghetto Patrol 24 Hours" became popular on video sites.</Card.Text>
+                        <Card.Text>Since then, she has been active as a vocalist in a wide range of fields, both commercial and doujin, singing songs for major companies' web commercials, game music, game character image songs, and TV program theme songs. She also has a wide range of activities outside of singing, such as appearing in visual videos, voice acting, radio personality, and stage performances.</Card.Text>
+                        <Card.Text>Her main occupation is systems engineering!</Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-center small"><a href="https://x.com/mikonyu" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={hojo}></Card.Img>
+                    <Card.Body>
+                        <Card.Title>Hojo-san</Card.Title>
+                        <Card.Text>Hojo-san is the head organizer of the <b>Hakurei Jinja Reitaisai Festival</b>, (or just <b>Reitaisai</b>) the world's largest Touhou-specific fan gathering/convention. Multiple big names in Touhou gather at this convention every year (also hosted at the Tokyo Big Sight, by the way!) up to and including ZUN himself whenever he releases game demos.</Card.Text>
+                        <Card.Text><small>Fun Fact: ZUN isn't involved in running Reitaisai, but he <em>did</em> give Reitaisai its name when it first started way back in 2004!</small></Card.Text>
+                   </Card.Body>
+                    <Card.Footer className="text-center small"><a href="https://x.com/HakureijinjyaS" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={oyamada}></Card.Img>
+                    <Card.Body>
+                        <Card.Title>Oyamada-san</Card.Title>
+                        <Card.Text>Oyamada-san handles a substantial portion of the management of Team Shanghai Alice and works closely with ZUN himself. For all intents and purposes he can be considered ZUN's right hand man.</Card.Text>
+                    </Card.Body>
+                    {/* <Card.Footer className="text-center small"><a href="https://google.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer> */}
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={suzukann}></Card.Img>
+                    <Card.Body>
+                        <Card.Title>Suzukann-san</Card.Title>
+                        <Card.Text>Suzukann is a dedicated and very talented artist who draws a litany of Touhou artworks and fanworks. Her work has been featured as part of collaborations with a variety of big Touhou names such as Beatmario, Shinra-Bansho, and Reitaisai!</Card.Text>
+                   </Card.Body>
+                    <Card.Footer className="text-center small"><a href="https://x.com/suzukannn" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                </Card>
+            </Col>
+
         </Row>
 
-        <h4 className="mt-2">DJs</h4>
-        <p>Throughout the convention the below talented individuals will be providing background music in the Torino Festival Plaza. Feel free to stop by and listen if able!</p>
+        <h4 className="mt-2">DJs/Performers</h4>
+        <p>Throughout the convention the below talented individuals will be providing background music and/or smaller performances at the Torino Festival Plaza. Feel free to stop by and listen if able!</p>
 
         <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
             {djs.map((artist, i) => <>
@@ -183,7 +246,7 @@ export const guestsPage = {
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> DJ Link</a></Card.Footer> : <></>}
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
                 </Card>
             </Col>
             </>)}
