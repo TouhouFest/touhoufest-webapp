@@ -48,14 +48,12 @@ import leminigensokyo from "./../images/artistalley/leminigensokyo.jpg";
 import ruproject from "./../images/artistalley/2ruproject.png";
 import grapevines from "./../images/artistalley/grapevines.png";
 import brw from "./../images/artistalley/BRW.jpg";
-import neosanctum from "./../images/artistalley/neosanctum.jpg";
 import galaxianrecordings from "./../images/artistalley/galaxianrecordings.png";
 import twinphoenix from "./../images/artistalley/TwinPhoenixInteractive.jpg";
 import izakaya from "./../images/artistalley/izakaya.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
 import cynicalfries from "./../images/artistalley/cynicalfries.png";
 import lyricalive from "./../images/artistalley/lyricalive.png";
-import maidacademy from "./../images/artistalley/maidacademy.webp";
 import popumai from "./../images/artistalley/popumai.webp";
 import loveboxf from "./../images/artistalley/loveboxf.jpg";
 import crescentia from "./../images/artistalley/crescentia.jpg";
@@ -71,6 +69,7 @@ import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
 import roninexpo from "./../images/artistalley/roninexpo.png";
 import kotori from "./../images/artistalley/kotori.jpg";
 import { GlobalTransformWrapper } from './ConCenter';
+import { neosanctum, maidacademy } from "./../Utils";
 
 let artistlist = [
     {
