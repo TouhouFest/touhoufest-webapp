@@ -226,7 +226,7 @@ export const guestsPage = {
                     <Card.Img variant="top" src={suzukann}></Card.Img>
                     <Card.Body>
                         <Card.Title>Suzukann-san</Card.Title>
-                        <Card.Text>Suzukann is a dedicated and very talented artist who draws a litany of Touhou artworks and fanworks. Her work has been featured in a variety of different places, up to and including album art for the esteemed Touhou circle Shinra-Bansho.</Card.Text>
+                        <Card.Text>Suzukann is a dedicated and very talented artist who draws a litany of Touhou artworks and fanworks. Her work has been featured as part of collaborations with a variety of big Touhou names such as Beatmario, Shinra-Bansho, and Reitaisai!</Card.Text>
                    </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://x.com/suzukannn" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
                 </Card>
