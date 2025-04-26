@@ -73,8 +73,6 @@ let djs = [
         "location": "Saturday",
         "website": "https://x.com/TheCorpsDC"
     }
-
-
 ];
 
 export const guestsPage = {
