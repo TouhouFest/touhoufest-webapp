@@ -98,7 +98,7 @@ export const cosplayPage = {
                         <Card className="th10">
                             <Card.Body className="text-center">
                                 <Card.Title>The Faithful Gods</Card.Title>
-                                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
+                                <Card.Text>Saturday, 5:00 PM - 6:30 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
@@ -177,7 +177,7 @@ export const cosplayPage = {
                         <Card className="mt-2 th06">
                             <Card.Body className="text-center">
                                 <Card.Title>The Devil's Mansion</Card.Title>
-                                <Card.Text>Saturday, 12:30 PM - 1:00 PM</Card.Text>
+                                <Card.Text>Sunday, 12:00 PM - 1:00 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Touhou 6 &quot;Embodiment of Scarlet Devil&quot;</strong></p>
@@ -251,7 +251,7 @@ export const cosplayPage = {
                         <Card className="mt-2 th15">
                             <Card.Body className="text-center">
                                 <Card.Title>Go to hell!!</Card.Title>
-                                <Card.Text>Saturday, 2:00 PM - 2:30 PM</Card.Text>
+                                <Card.Text>Saturday, 10:00 AM - 11:00 AM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Protagonists</strong></p>
@@ -399,7 +399,7 @@ export const cosplayPage = {
                         <Card className="mt-2 th08">
                             <Card.Body className="text-center">
                                 <Card.Title>Lunar Landing in the Bamboo Forest</Card.Title>
-                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
+                                <Card.Text>Saturday, 4:30 PM - 5:30 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
@@ -458,7 +458,7 @@ export const cosplayPage = {
                         <Card className="mt-2 fight">
                             <Card.Body className="text-center">
                                 <Card.Title>Fighting Games</Card.Title>
-                                <Card.Text>Sunday, 12:00 PM - 1:00 PM</Card.Text>
+                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
