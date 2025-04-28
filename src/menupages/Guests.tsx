@@ -7,13 +7,13 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faEarthAmericas, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { faTwitch, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam, placeholder, maidacademy } from "../Utils";
-import { Image } from 'react-bootstrap';
+import { Alert, Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
 import { ListGroup } from 'react-bootstrap';
@@ -101,7 +101,7 @@ export const guestsPage = {
             </Col>
         </Row>
         <h4>About The Guests</h4>
-        <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
+        <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
            <Col>
                 <Card>
                     <Card.Img variant="top" src={a_one}></Card.Img>
@@ -110,6 +110,9 @@ export const guestsPage = {
                         <Card.Text>Get ready to SCREAM OUT as A-One Records, the doujin circle behind TOHO EUROBEAT album series, joins us from overseas as our final guest for TouhouFest this year!</Card.Text>
                         <Card.Text>Founded by Yassie and ELEMENTAS in 2008, A-One Records has since then become a household name in the Touhou remix and Eurobeat scenes alike, producing the TOHO EUROBEAT, SUPER EURO SMASH and EUROBEAT ATTACK!! album series.</Card.Text>
                         <Card.Text>This year, A-ONE Records will be performing a live concert starring ELEMENTAS, Rute and Aki, truly an experience that must be seen to be believed!</Card.Text>
+                        <Alert variant="success">
+                            <Card.Text><FontAwesomeIcon icon={faCompactDisc}/> A-One will be selling their newest release "<b>TOHO EUROBEAT VOL. 25</b>" in-person at TouhouFest!</Card.Text>
+                        </Alert>
                     </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://twitter.com/A_One_JP" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
                 </Card>
@@ -209,16 +212,6 @@ export const guestsPage = {
                         <Card.Text><small>Fun Fact: ZUN isn't involved in running Reitaisai, but he <em>did</em> give Reitaisai its name when it first started way back in 2004!</small></Card.Text>
                    </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://x.com/HakureijinjyaS" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Img variant="top" src={oyamada}></Card.Img>
-                    <Card.Body>
-                        <Card.Title>Oyamada-san</Card.Title>
-                        <Card.Text>Oyamada-san handles a substantial portion of the management of Team Shanghai Alice and works closely with ZUN himself. For all intents and purposes he can be considered ZUN's right hand man.</Card.Text>
-                    </Card.Body>
-                    {/* <Card.Footer className="text-center small"><a href="https://google.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer> */}
                 </Card>
             </Col>
             <Col>
