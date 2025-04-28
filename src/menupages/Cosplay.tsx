@@ -19,6 +19,8 @@ import medukitty from "./../images/medukitty.jpg";
 import violetreverie from "./../images/violetreverie.jpg";
 import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
+import pumpking from "./../images/pumpking.jpg";
+import mysticallala from "./../images/mysticallala.jpg";
 
 export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
@@ -674,7 +676,7 @@ export const cosplayPage = {
             </Col>
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={placeholder} />
+                    <Card.Img variant="top" src={pumpking} />
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Pumpking</Card.Title>
@@ -688,7 +690,7 @@ export const cosplayPage = {
             </Col>
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={placeholder} />
+                    <Card.Img variant="top" src={mysticallala} />
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Mystical Lala</Card.Title>
