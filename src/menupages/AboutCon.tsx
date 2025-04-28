@@ -53,6 +53,8 @@ export const aboutConPage = {
           <ol>
             <li>Please be kind and courteous to others, including fellow attendees. We want you to enjoy the event, but remember others also wish to enjoy the event as well. Be aware of your behavior and how it affects your surroundings.</li>
 
+            <li>Real weapons are not permitted. This includes but is not limited to firearms, swords, sharp knives, or blunt objects that can easily be used as a weapon. The definition of such a weapon is left to the discretion of TouhouFest security personnel. </li>
+
             <li>Be respectful and courteous to TouhouFest Staff. Staff will try and assist when they can, but please remember that we are people as well as volunteers and not professionals.</li>
 
             <li>Remember that cosplayers are people too! Treat them with respect like you would any other person!</li>
