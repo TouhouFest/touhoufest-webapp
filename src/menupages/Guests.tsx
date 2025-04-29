@@ -28,13 +28,12 @@ import suzubrah from "./../images/artistalley/suzubrah.jpg";
 import coobie from "./../images/artistalley/coobie.jpg";
 import renko from "./../images/renko.jpg";
 import miko from "./../images/miko.jpg";
-import suzukann from "./../images/suzukann.jpg";
 import hojo from "./../images/hojo.jpg";
 import afterglow from "./../images/artistalley/afterglow.jpg";
 import yona from "./../images/artistalley/yona.jpg";
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import oyamada from "./../images/oyamada.jpg";
-import { neosanctum } from '../Utils';
+import { neosanctum,suzukann } from '../Utils';
 
 let djs = [
     {
