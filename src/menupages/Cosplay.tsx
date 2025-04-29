@@ -658,7 +658,7 @@ export const cosplayPage = {
             </Col>
         </Row>
         <h5 className="mt-2">About the Cosplay Contest Judges</h5>
-        <Row xs={1} lg={4} className="gy-3">
+        <Row xs={1} md={2} lg={4} className="gy-3">
             <Col>
                 <Card>
                     <Card.Img variant="top" src={medukitty} />
@@ -680,7 +680,7 @@ export const cosplayPage = {
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Pumpking</Card.Title>
-                        <Card.Text>Placeholder for pumpking text</Card.Text>
+                        <Card.Text>Hi!! My name is Pumpking! I'm 24 years old (as of 2025) and got into Touhou in 2020 during Covid! I love to cosplay and especially pride myself in sharing cosplay designers and making shopping overseas more accessible for newcomers. I've started making my own stuff recently too. Thank you for having me!</Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
                         <Card.Link href="https://www.instagram.com/sunnysiddedup/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
@@ -694,7 +694,7 @@ export const cosplayPage = {
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Mystical Lala</Card.Title>
-                        <Card.Text>Placeholder for pumpking text</Card.Text>
+                        <Card.Text>Mystical Lala is one of our talented Cosplay Ambassadors who will also be joining us this year for TouhouFest 2025 as a Cosplay Judge!</Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
                         <Card.Link href="https://www.instagram.com/mystical.lala/?hl=en" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
