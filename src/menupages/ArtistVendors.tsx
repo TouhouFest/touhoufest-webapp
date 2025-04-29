@@ -18,7 +18,6 @@ import Modal from 'react-bootstrap/Modal';
 import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap, placeholder } from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
-import ace from "./../images/artistalley/ace.png";
 import marlo from "./../images/artistalley/MARLOWEMEMO.jpg";
 import rustyhermit from "./../images/artistalley/rustyhermit.jpg";
 import ckitten from "./../images/artistalley/ckitten.jpg";
@@ -26,7 +25,6 @@ import kuriarty from "./../images/artistalley/kuriarty.jpg";
 import fred from "./../images/artistalley/fred.png";
 import agi from "./../images/artistalley/agi.png";
 import pumplin from "./../images/artistalley/pumpking.jpg";
-import siliconcat from "./../images/artistalley/siliconcat.png";
 import xiaobbinc from "./../images/artistalley/xiaobb.avif";
 import essukaa from "./../images/artistalley/essukaa.webp";
 import anazel from "./../images/artistalley/anazel.jpg";
@@ -41,8 +39,6 @@ import izakaya from "./../images/artistalley/izakaya.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
 import popumai from "./../images/artistalley/popumai.webp";
 import loveboxf from "./../images/artistalley/loveboxf.jpg";
-import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
-import lemoncreme from "./../images/artistalley/lemoncreme.webp";
 import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
 import andrewfm from "./../images/artistalley/andrewfm.png";
 import animelosangeles from "./../images/artistalley/animelosangeles.jpg";
@@ -51,7 +47,6 @@ import gensokyoradio from "./../images/artistalley/gensokyoradio.jpg";
 import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
 import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
 import roninexpo from "./../images/artistalley/roninexpo.png";
-import kotori from "./../images/artistalley/kotori.jpg";
 
 import lyricalive from "./../images/artistalley/lyricalive.jpg";
 import gurugurumaru from "./../images/artistalley/gurugurumaru.jpg";
@@ -103,6 +98,22 @@ import panchamon from "./../images/artistalley/panchamon.jpg";
 import BRW from "./../images/artistalley/BRW.jpg";
 import cssrart from "./../images/artistalley/cssrart.jpg";
 
+import siliconcat from "./../images/artistalley/siliconcat.jpg";
+import matcha from "./../images/artistalley/matcha.jpg";
+import ace from "./../images/artistalley/ace.jpg";
+import ideafactory from "./../images/artistalley/ideafactory.jpg";
+import kotori from "./../images/artistalley/kotori.jpg";
+import fmanime from "./../images/artistalley/fmanime.jpg";
+import touhoufest from "./../images/artistalley/touhoufest.jpg";
+import kinocreations from "./../images/artistalley/kinocreations.jpg";
+import serapim from "./../images/artistalley/serapim.jpg";
+import whimsicalarchive from "./../images/artistalley/whimsicalarchive.jpg";
+import brainjuice from "./../images/artistalley/brainjuice.jpg";
+import sunameridrill from "./../images/artistalley/sunameridrill.jpg";
+
+import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
+import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
+import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
 
 import { GlobalTransformWrapper } from './ConCenter';
 import { neosanctum, maidacademy, suzukann } from "./../Utils";
@@ -163,78 +174,21 @@ let artistlist = [
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let vendors = [
-    {
-        "name": "Siliconcat",
-        "image": siliconcat,
-        "role": "Artist",
-        "website": "https://siliconcat.tumblr.com/tagged/my%20art",
-        "description": "",
-        "location": "Booth V15"
-    },
-    {
-        "name": "Art With Fred",
-        "image": fred,
-        "role": "Artist",
-        "website": "https://www.tiktok.com/@artwfred",
-        "description": "",
-        "location": "Booth V12"
-    },
-    {
-        "name": "Artist Collaboration Experience (ACE)",
-        "image": ace,
-        "role": "Artist",
-        "website": "https://www.artcollabexp.com/",
-        "description": "VENDOR",
-        "location": "Booth V10"
-    },
-    {
-        "name": "Lyrica Live",
-        "image": lyricalive,
-        "role": "Music",
-        "website": "https://lyricalive.carrd.co/",
-        "description": "VENDOR",
-        "location": "Booth V09"
-    },
-    {
-        "name": "Dichroic Purpillion",
-        "image": izakaya,
-        "role": "Game Dev",
-        "website": "https://store.steampowered.com/search/?developer=%E4%BA%8C%E8%89%B2%E5%B9%BD%E7%B4%AB%E8%9D%B6",
-        "description": "VENDOR",
-        "location": "Booth V08"
-    },
-    {
-        "name": "Pop Umai",
-        "image": popumai,
-        "role": "Vendor",
-        "website": "https://www.popumai.com/",
-        "description": "",
-        "location": "Booth V14"
-    },
-    {
-        "name": "loveboxf",
-        "image": loveboxf,
-        "role": "Artist",
-        "website":"https://www.pixiv.net/en/users/28004345",
-        "description":"",
-        "location":"Booth V13"
-    },
-    {
-        "name": "Maid Academy Cafe",
-        "image": maidacademy,
-        "role": "Vendor",
-        "website": "https://linktr.ee/maidacademy",
-        "description": "",
-        "location": "Booth V07"
-    },
-    {
-        "name": "Kotori's Shop / Showcas3",
-        "image": kotori,
-        "role": "Merch",
-        "website": "https://www.instagram.com/kotoris_shop_by_y/",
-        "description": "",
-        "location": "Booth V11"
-    }
+{"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
+{"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
+{"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
+{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "", "role": "Merch"},
+{"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
+{"name": "Kotori's Shop by Y", "image": kotori, "location": "V07", "website": "https://www.instagram.com/kotoris_shop_by_y/", "role": "Merch"},
+{"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
+{"name": "TouhouFest Merch", "image": touhoufest, "location": "V09", "website": "https://www.touhoufest.org/store", "role": "Merch"},
+{"name": "TouhouFest Info Booth", "image": touhoufest, "location": "V10", "website": "https://schedule.touhoufest.org", "role": "Info"},
+{"name": <>Kino&shy;Kreations</>, "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
+{"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
+{"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
+{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "", "role": "Vendor"},
+{"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
+{"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -305,64 +259,14 @@ let fanmusicgames = [
 fanmusicgames.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let plazatables = [
-    {
-        "name": "Shihori",
-        "image": shihori,
-        "role": "Guest",
-        "website": "https://linktr.ee/shihorimusic",
-        "location": "Booth FB1"
-    },
-    {
-        "name": "Odyssey",
-        "image": odyssey,
-        "role": "Guest",
-        "website": "https://linktr.ee/odysseyeurobeat",
-        "location": "Booth FB2"
-    },
-    {
-        "name": "TAMUSIC",
-        "image": tam,
-        "role": "Guest",
-        "website": "https://twitter.com/tamusic",
-        "location": "Booth FB3"
-    },
-    {
-        "name": "Goen Kizuna / Youkai Mountain",
-        "role": "Festival Booth",
-        "image": youkaimountain,
-        "website": "https://twitter.com/YoukaiMountain",
-        "location": "Booth FB6"
-    },
-    {
-        "name": "Lemon-Crème Studios",
-        "role": "Festival Booth",
-        "image": lemoncreme,
-        "website": "https://www.etsy.com/shop/LemonCremeStudios",
-        "location": "Booth FB7"
-    },
-    {
-        "name": "Touhou Hobby Society",
-        "role": "Festival Booth",
-        "image": placeholder,
-        "website": "",
-        "location": "Booth FB8"
-    },
-    {
-        "name": "Maid Academy Cafe",
-        "image": maidacademy,
-        "role": "Vendor",
-        "website": "https://linktr.ee/maidacademy",
-        "description": "",
-        "location": "Booth FB5"
-    },
-    {
-        "name": "Underworld Izakaya",
-        "image": underworldizakaya,
-        "role": "Festival Booth",
-        "website": "https://twitter.com/MystiaTorrance",
-        "description": "",
-        "location": "Booth FB4"
-    }
+{"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
+{"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
+{"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
+{"name": "Kusoya / Yasoku", "image": placeholder, "location": "Booth FB04", "website": "", "role": "Festival Booth"},
+{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB05", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
+{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB06", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
+{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB07", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
+{"name": "Edward Cadenza", "image": placeholder, "location": "Booth FB08 ~ FB10", "website": "", "role": "Festival Booth"},
 ];
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -417,14 +321,14 @@ let official_artists = [
     {
         "name": <>Cloudie/Cookie&shy;tanuki&shy;art</>,
         "image": cookie,
-        "location": "Outside AA",
+        "location": "See Torino Plaza",
         "website": "https://linktr.ee/cookietanuki",
         "description": ""
     },
     {
         "name": "FREEZE-EX",
         "image": freezeex,
-        "location": "Outside AA",
+        "location": "See Torino Plaza",
         "website": "https://icecute.squarespace.com/",
         "description": ""
     },
@@ -506,32 +410,18 @@ export const artistVendorsPage = {
             </>)}
         </Row>
 
+        <h4>Vendors</h4>
+        <h5>Vendors Booth Map</h5>
+        <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
 
-        <Row xs={1} md={2} className="mt-3">
-            <Col>
-                <h4>Vendors</h4>
-                <h5>Vendors Booth Map</h5>
-                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
-
-                <h5>Non-Vendors Booths</h5>
-                <p>These booths aren't actually vendors booths but due to their close proximity to the rest of the vendors are also listed here:</p>
-                <ul>
-                    <li><b>Booth V1</b>: TouhouFest Info Booth</li>
-                    <li><b>Booth V2</b>: Info Booth/Weapons Check</li>
-                    <li><b>Booth V3</b>: Cosplay Repair</li>
-                    <li><b>Booth V4</b>: Cosplay Ambassadors</li>
-                    <li><b>Booth V5</b>: Punderfull's Booth</li>
-                </ul>
-
-            </Col>
-            <Col>
+        <Row className="mt-3 justify-content-center">
+            <Col xs={12} md={8} className="text-center">
                 <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
             </Col>
         </Row>
 
-
         <h5>List of Vendors</h5>
-        <p>The majority of the entries listed below are in vendors (denoted "Booth VXX").</p>
+        <p>Entries listed below are in vendors (denoted "Booth VXX").</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
@@ -549,11 +439,11 @@ export const artistVendorsPage = {
             </>)}
        </Row>
 
-       <h4 className="mt-2">Music, Fangame, & Shrine Tables</h4>
+       <h4 className="mt-2">Music, Fangame, & Shrine Tables at Torino Plaza</h4>
        <h5>Booth Map</h5>
         <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
-        <Row xs={1} md={2} className="justify-content-center">
-            <Col>
+        <Row className="justify-content-center">
+            <Col xs={12} lg={10}>
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>
