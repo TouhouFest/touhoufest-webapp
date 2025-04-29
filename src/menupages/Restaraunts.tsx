@@ -92,37 +92,7 @@ export const restarauntsPage = {
         </Row>
 
         <h4 className="mt-2">Other Options</h4>
-        <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful. Some additional restaraunt recommendations below:</p>
+        <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
 
-        <Row>
-        <Col xs={12} md={6}>
-
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Brazillian Food</Card.Header>
-            <Card.Img src={brazilplate} className="rounded-0"/>
-            <Card.Body className="text-center">
-                <Card.Text>Brazillian Plate House</Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://www.google.com/maps/place/Brazilian+Plate+House/@33.8377178,-118.3618229,927m/data=!3m1!1e3!4m6!3m5!1s0x80c2b4cc39f2a7cf:0xaab6da9555284c93!8m2!3d33.8377961!4d-118.3617372!16s%2Fg%2F11c3vngsl9?authuser=0&entry=ttu" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Google Maps Link</Card.Link>
-            </Card.Footer>
-        </Card>
-
-        </Col>
-        <Col xs={12} md={6}>
-
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Sushi</Card.Header>
-            <Card.Img src={orientalbreeze} className="rounded-0"/>
-            <Card.Body className="text-center">
-                <Card.Text>Oriental Breeze</Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://www.google.com/maps/place/Oriental+Breeze/@33.8392898,-118.3918499,21z/data=!4m6!3m5!1s0x80c2b4a651d7acb7:0xcedfa5cd53245be8!8m2!3d33.8392898!4d-118.3918499!16s%2Fg%2F1tf3bt94?entry=ttu" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Google Maps Link</Card.Link>
-            </Card.Footer>
-        </Card>
-
-        </Col>
-        </Row>
     </>),
 }
