@@ -19,32 +19,19 @@ import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, v
 
 import artistalley from "./../images/artistalley.jpg";
 import ace from "./../images/artistalley/ace.png";
-import tama from "./../images/artistalley/tama.png";
 import marlo from "./../images/artistalley/MARLOWEMEMO.jpg";
 import rustyhermit from "./../images/artistalley/rustyhermit.jpg";
-import asazei from "./../images/artistalley/asazei.jpg";
-import kurehii from "./../images/artistalley/kurehii.jpg";
-import haiyun from "./../images/artistalley/haiyun.png";
 import ckitten from "./../images/artistalley/ckitten.jpg";
-import codyyuki from "./../images/artistalley/codyyuki.png";
-import nono from "./../images/artistalley/nono.jpg";
-import gurugurumaru from "./../images/artistalley/gurugurumaru.png";
 import kuriarty from "./../images/artistalley/kuriarty.jpg";
 import fred from "./../images/artistalley/fred.png";
-import grillboss from "./../images/artistalley/grillboss.jpg";
-import birnam from "./../images/artistalley/birnam.jpg";
 import agi from "./../images/artistalley/agi.png";
-import meiki from "./../images/artistalley/meiki.jpg";
 import pumplin from "./../images/artistalley/pumpking.jpg";
 import siliconcat from "./../images/artistalley/siliconcat.png";
-import gruvysgudies from "./../images/artistalley/gruvysgudies.jpg";
 import xiaobbinc from "./../images/artistalley/xiaobb.avif";
 import essukaa from "./../images/artistalley/essukaa.webp";
 import anazel from "./../images/artistalley/anazel.jpg";
 import cookie from "./../images/artistalley/cookie.png";
 import freezeex from "./../images/artistalley/freezeex.png";
-import feeyaart from "./../images/artistalley/feeyaart.jpg";
-import leminigensokyo from "./../images/artistalley/leminigensokyo.jpg";
 import ruproject from "./../images/artistalley/2ruproject.png";
 import grapevines from "./../images/artistalley/grapevines.png";
 import brw from "./../images/artistalley/BRW.jpg";
@@ -52,11 +39,8 @@ import galaxianrecordings from "./../images/artistalley/galaxianrecordings.png";
 import twinphoenix from "./../images/artistalley/TwinPhoenixInteractive.jpg";
 import izakaya from "./../images/artistalley/izakaya.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
-import cynicalfries from "./../images/artistalley/cynicalfries.png";
-import lyricalive from "./../images/artistalley/lyricalive.png";
 import popumai from "./../images/artistalley/popumai.webp";
 import loveboxf from "./../images/artistalley/loveboxf.jpg";
-import crescentia from "./../images/artistalley/crescentia.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
 import lemoncreme from "./../images/artistalley/lemoncreme.webp";
 import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
@@ -68,214 +52,114 @@ import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
 import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
 import roninexpo from "./../images/artistalley/roninexpo.png";
 import kotori from "./../images/artistalley/kotori.jpg";
+
+import lyricalive from "./../images/artistalley/lyricalive.jpg";
+import gurugurumaru from "./../images/artistalley/gurugurumaru.jpg";
+import xiaobb from "./../images/artistalley/xiaobb.jpg";
+import umaholics from "./../images/artistalley/umaholics.jpg";
+import netcavy from "./../images/artistalley/netcavy.jpg";
+//import neosanctum from "./../images/artistalley/neosanctum.jpg";
+import crescentia from "./../images/artistalley/crescentia.jpg";
+import dreamingchimera from "./../images/artistalley/dreamingchimera.jpg";
+import asazei from "./../images/artistalley/asazei.jpg";
+import quowl from "./../images/artistalley/quowl.jpg";
+import julianaegg from "./../images/artistalley/julianaegg.jpg";
+import MARLOWEMEMO from "./../images/artistalley/MARLOWEMEMO.jpg";
+import limpachu from "./../images/artistalley/limpachu.jpg";
+import meiki from "./../images/artistalley/meiki.jpg";
+import nekomofu from "./../images/artistalley/nekomofu.jpg";
+import grillboss from "./../images/artistalley/grillboss.jpg";
+import partyu from "./../images/artistalley/partyu.jpg";
+import kurehii from "./../images/artistalley/kurehii.jpg";
+import biscaybiscuits from "./../images/artistalley/biscaybiscuits.jpg";
+import chennakitty from "./../images/artistalley/chennakitty.jpg";
+import haiyun from "./../images/artistalley/haiyun.jpg";
+import birnam from "./../images/artistalley/birnam.jpg";
+import tama from "./../images/artistalley/tama.jpg";
+import gruvysgudies from "./../images/artistalley/gruvysgudies.jpg";
+import lazydaytee from "./../images/artistalley/lazydaytee.jpg";
+import bapysociety from "./../images/artistalley/bapysociety.jpg";
+import jellistuff from "./../images/artistalley/jellistuff.jpg";
+import barksnarl from "./../images/artistalley/barksnarl.jpg";
+import girutea from "./../images/artistalley/girutea.jpg";
+import duckyafterdark from "./../images/artistalley/duckyafterdark.jpg";
+import feeyaart from "./../images/artistalley/feeyaart.jpg";
+import melty from "./../images/artistalley/melty.jpg";
+import cynicalfries from "./../images/artistalley/cynicalfries.jpg";
+import ahwakanarai from "./../images/artistalley/ahwakanarai.jpg";
+import scaryyandere from "./../images/artistalley/scaryyandere.jpg";
+import nono from "./../images/artistalley/nono.jpg";
+import leminigensokyo from "./../images/artistalley/leminigensokyo.jpg";
+import tboddy from "./../images/artistalley/tboddy.jpg";
+import moguman from "./../images/artistalley/moguman.jpg";
+import minimono from "./../images/artistalley/minimono.jpg";
+import mystia from "./../images/artistalley/mystia.jpg";
+import codyyuki from "./../images/artistalley/codyyuki.jpg";
+import remirii from "./../images/artistalley/remirii.jpg";
+import g8kp from "./../images/artistalley/g8kp.jpg";
+import linnyuwu from "./../images/artistalley/linnyuwu.jpg";
+import emby from "./../images/artistalley/emby.jpg";
+import vampyland from "./../images/artistalley/vampyland.jpg";
+import panchamon from "./../images/artistalley/panchamon.jpg";
+import BRW from "./../images/artistalley/BRW.jpg";
+import cssrart from "./../images/artistalley/cssrart.jpg";
+
+
 import { GlobalTransformWrapper } from './ConCenter';
-import { neosanctum, maidacademy } from "./../Utils";
+import { neosanctum, maidacademy, suzukann } from "./../Utils";
 
 let artistlist = [
-    {
-        "name": "Tama Tama Shop",
-        "image": tama,
-        "location": "Booth A3",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": <>MARLO&shy;WE&shy;MEMO</>,
-        "image": marlo,
-        "location": "Booth F1",
-        "website": "https://marlowememo.carrd.co/",
-        "description": ""
-    },
-    {
-        "name": "Rusty Hermit",
-        "image": rustyhermit,
-        "location": "Booth C1",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "Asazei + lunartsky",
-        "image": asazei,
-        "location": "Booth F2",
-        "website": "https://twitter.com/ASAZEi_art",
-        "description": ""
-    },
-    {
-        "name": "Kurehii",
-        "image": kurehii,
-        "location": "Booth F4",
-        "website": "https://twitter.com/kureihii",
-        "description": ""
-    },
-    {
-        "name": "HaiYun",
-        "image": haiyun,
-        "location": "Booth D7",
-        "website": "https://haiyun.moe/",
-        "description": ""
-    },
-    {
-        "name": <>Colorful&shy;kitten Art</>,
-        "image": ckitten,
-        "location": "Booth B1",
-        "website": "https://twitter.com/ckitten_cosplay",
-        "description": ""
-    },
-    {
-        "name": "CodyYuki",
-        "image": codyyuki,
-        "location": "Booth B3",
-        "website": "",
-        "description": "CONFLICT: Booth B3 on map, Booth A8 on excel sheet"
-    },
-    {
-        "name": "Nonomoe Inc",
-        "image": placeholder,
-        "location": "Booth A5",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "Kuri Arty",
-        "image": kuriarty,
-        "location": "Booth A4",
-        "website": "https://twitter.com/kuriarty?lang=en",
-        "description": ""
-    },
-    {
-        "name": "Grillboss Co.",
-        "image": grillboss,
-        "location": "Booth D4",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "Birnam Hall",
-        "image": birnam,
-        "location": "Booth D3",
-        "website": "https://www.instagram.com/birnamhall/",
-        "description": ""
-    },
-    {
-        "name": "Velpiphants",
-        "image": agi,
-        "location": "Booth A1",
-        "website": "https://twitter.com/purpleuniphants",
-        "description": ""
-    },
-    {
-        "name": <>Meiki/sir&shy;master&shy;knight</>,
-        "image": meiki,
-        "location": "Booth C5",
-        "website": "https://www.instagram.com/sirmasterknight/",
-        "description": "MAY be the same as sirmasterknight?"
-    },
-    {
-        "name": "Pumplin Group",
-        "image": pumplin,
-        "location": "Booth C3",
-        "website": "https://twitter.com/Sunnysiddedup",
-        "description": ""
-    },
-    {
-        "name": <>Gruvys&shy;Gudies</>,
-        "image": gruvysgudies,
-        "location": "Booth B2",
-        "website": "https://www.etsy.com/shop/GruvysGudies",
-        "description": ""
-    },
-    {
-        "name": "Xiaobb inc",
-        "image": xiaobbinc,
-        "location": "Booth C6",
-        "website": "https://www.etsy.com/shop/Xiaobbinc",
-        "description": ""
-    },
-    {
-        "name": "Ah, Wakaranai",
-        "image": placeholder,
-        "location": "Booth A2",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "2RU Project",
-        "image": ruproject,
-        "location": "Booth A7",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "Le MIni Gensokyo",
-        "image": leminigensokyo,
-        "location": "Booth E2",
-        "website": "https://www.teepublic.com/user/archanciel",
-        "description": ""
-    },
-    {
-        "name": "Essukaa",
-        "image": essukaa,
-        "location": "Booth B4",
-        "website": "https://essukaa.shop/",
-        "description": ""
-    },
-    {
-        "name": "Anazel",
-        "image": anazel,
-        "location": "Booth E1",
-        "website": "https://www.instagram.com/anazel_art/?hl=en",
-        "description": ""
-    },
-    {
-        "name": "Grapevines",
-        "image": grapevines,
-        "location": "Booth F5",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name":  <>Idunrllyknow / Guru&shy;Guru&shy;Maru</>,
-        "image": gurugurumaru,
-        "location": "Booth D6",
-        "website": "https://twitter.com/GuruGuruMaru_",
-        "description": ""
-    },
-    {
-        "name": "Brokencrown Art",
-        "image": placeholder,
-        "location": "Booth A8",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "BRW",
-        "image": brw,
-        "location": "Booth D5",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "Feeya Art",
-        "image": feeyaart,
-        "location": "Booth F3",
-        "website": "https://feeyaart.carrd.co/",
-        "description": ""
-    },
-    {
-        "name": "cynicalfries / blaidmiracle",
-        "image": cynicalfries,
-        "location": "Booth C2",
-        "website": "",
-        "description": ""
-    },
-    {
-        "name": "notnoe",
-        "image": nono,
-        "location": "Booth C4",
-        "website": "https://twitter.com/notnoe_",
-        "description": "inscribed as nono on the website"
-    },
-
+{"name": "Lyrica Live", "image": lyricalive, "location": "Booth A1", "website": "https://lyricalive.carrd.co/", "description": ""},
+{"name": "GuruGuruMaru", "image": gurugurumaru, "location": "Booth A2", "website": "https://x.com/GuruGuruMaru_?t=LpCCKsbKLTIa_WDah5Ehyw&s=09", "description": ""},
+{"name": "Xiaobbinc", "image": xiaobb, "location": "Booth A3", "website": "www.instagram.com/xiaobbinc", "description": ""},
+{"name": "Umaholics Anonymous", "image": umaholics, "location": "Booth A4", "website": "https://umaholics-anonymous.carrd.co/", "description": ""},
+{"name": "Netcavy Records", "image": netcavy, "location": "Booth B1", "website": "https://netcavy.net/portfolio", "description": ""},
+{"name": "Neo Sanctum", "image": neosanctum, "location": "Booth B2", "website": "https://x.com/NSanctum", "description": ""},
+{"name": "crescentia (11th hour)", "image": crescentia, "location": "Booth B3", "website": "https://crescentia.bandcamp.com/album/touhou-orchestral-suite-grand-fantasy", "description": ""},
+{"name": "Dreaming Chimera", "image": dreamingchimera, "location": "Booth B4", "website": "https://dreamingchimera.carrd.co/", "description": ""},
+{"name": "ASAZEi", "image": asazei, "location": "Booth B5", "website": "https://x.com/ASAZEi_art", "description": ""},
+{"name": "quowl", "image": quowl, "location": "Booth B6", "website": "https://quowl.carrd.co/", "description": ""},
+{"name": "Juliana Egg", "image": julianaegg, "location": "Booth C1", "website": "instagram.com/juliana_egg", "description": ""},
+{"name": "MARLOWEMEMO", "image": MARLOWEMEMO, "location": "Booth C2", "website": "https://www.instagram.com/marlowememo/", "description": ""},
+{"name": "limpachi", "image": limpachu, "location": "Booth C3", "website": "https://twitter.com/limpachu", "description": ""},
+{"name": "sirmasterknight (Meiki)", "image": meiki, "location": "Booth C4", "website": "https://sirmasterknight.carrd.co/", "description": ""},
+{"name": "NekoMofu Jinja", "image": nekomofu, "location": "Booth C5", "website": "https://www.instagram.com/schemanineko/", "description": ""},
+{"name": "Grillboss Co.", "image": grillboss, "location": "Booth C6", "website": "https://egguv.carrd.co/", "description": ""},
+{"name": "Partyu", "image": partyu, "location": "Booth D1", "website": "https://twitter.com/_partyu", "description": ""},
+{"name": "Kureihii", "image": kurehii, "location": "Booth D2", "website": "https://www.instagram.com/kureihii/?hl=en", "description": ""},
+{"name": "BiscayBiscuits", "image": biscaybiscuits, "location": "Booth D3", "website": "https://www.instagram.com/themoondruid?igsh=NGVhN2U2NjQ0Yg==", "description": ""},
+{"name": "Chenna Kitty", "image": chennakitty, "location": "Booth D4", "website": "https://chennakitty.carrd.co/ ", "description": ""},
+{"name": "haiyun", "image": haiyun, "location": "Booth D5", "website": "https://www.instagram.com/haiyunee/", "description": ""},
+{"name": "Birnam Hall", "image": birnam, "location": "Booth D6", "website": "https://www.instagram.com/birnamhall/", "description": ""},
+{"name": "Tama Tama Shop", "image": tama, "location": "Booth E1", "website": "https://tamamagatama.carrd.co", "description": ""},
+{"name": "GruvysGudies", "image": gruvysgudies, "location": "Booth E2", "website": "https://www.instagram.com/gruvyboi/", "description": ""},
+{"name": "LazyDayTee", "image": lazydaytee, "location": "Booth E3", "website": "instagram.com/LazyDayTee", "description": ""},
+{"name": "BAPY Society", "image": bapysociety, "location": "Booth E4", "website": "https://bapysociety.carrd.co/#gallery", "description": ""},
+{"name": "jellisstuf", "image": jellistuff, "location": "Booth E5", "website": "https://www.etsy.com/shop/JellisStuff", "description": ""},
+{"name": "Bark Snarl", "image": barksnarl, "location": "Booth E6", "website": "https://barksnarl.myshopify.com/", "description": ""},
+{"name": "Girutea", "image": girutea, "location": "Booth F1", "website": "https://girutea.storenvy.com/", "description": ""},
+{"name": "Duckyafterdark", "image": duckyafterdark, "location": "Booth F2", "website": "www.duckyafterdark.com", "description": ""},
+{"name": "Feeya Art", "image": feeyaart, "location": "Booth F3", "website": "https://x.com/feeyaowo", "description": ""},
+{"name": "Melty Uchuu", "image": melty, "location": "Booth F4", "website": "https://meltyportfolio.carrd.co/", "description": ""},
+{"name": "cynicalfries / blaidmiracle", "image": cynicalfries, "location": "Booth F5", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
+{"name": "Suzunannn ", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
+{"name": "Ah'Wakaranai", "image": ahwakanarai, "location": "Booth G2", "website": "https://x.com/SWatanabe_yo", "description": ""},
+{"name": "ScaryYandere", "image": scaryyandere, "location": "Booth G3", "website": "https://x.com/ScaryYandere", "description": ""},
+{"name": "notnoe_", "image": nono, "location": "Booth G4", "website": "https://x.com/notnoe_", "description": ""},
+{"name": "Archanciel's Magic Shop (LMG)", "image": leminigensokyo, "location": "Booth G5", "website": "https://www.facebook.com/LeMiniGensokyo/", "description": ""},
+{"name": "tboddy", "image": tboddy, "location": "Booth G6", "website": "https://tboddy.itch.io/", "description": ""},
+{"name": "Moguman", "image": moguman, "location": "Booth G7", "website": "https://x.com/_MoguMan_/media", "description": ""},
+{"name": "Minomino", "image": minimono, "location": "Booth G8", "website": "Instagram.com/minominoten", "description": ""},
+{"name": "Yu Long (Dichroic Purpilion)", "image": mystia, "location": "Booth H1", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "description": ""},
+{"name": "CodyYuki", "image": codyyuki, "location": "Booth H2", "website": "https://x.com/CodyYuki_", "description": ""},
+{"name": "remirii", "image": remirii, "location": "Booth H3", "website": "https://remirii-portfolio.weebly.com/illustrations.html", "description": ""},
+{"name": "G8KP", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
+{"name": "LinnyUwU", "image": linnyuwu, "location": "Booth H5", "website": "https://x.com/LinnyUwU", "description": ""},
+{"name": "mintchokuma / mcsquiddies", "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
+{"name": "Vampy Land", "image": vampyland, "location": "Booth H7", "website": "https://vampy.land/portfolio", "description": ""},
+{"name": "Panchamon", "image": panchamon, "location": "Booth H8", "website": "https://bsky.app/profile/panchamon.bsky.social", "description": ""},
+{"name": "BRW", "image": BRW, "location": "Booth H9", "website": "https://twitter.com/hnbryal", "description": ""},
+{"name": "CSSRart", "image": cssrart, "location": "Booth H10", "website": "https://x.com/CssRart", "description": ""},
 ];
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
