@@ -58,7 +58,6 @@ import gurugurumaru from "./../images/artistalley/gurugurumaru.jpg";
 import xiaobb from "./../images/artistalley/xiaobb.jpg";
 import umaholics from "./../images/artistalley/umaholics.jpg";
 import netcavy from "./../images/artistalley/netcavy.jpg";
-//import neosanctum from "./../images/artistalley/neosanctum.jpg";
 import crescentia from "./../images/artistalley/crescentia.jpg";
 import dreamingchimera from "./../images/artistalley/dreamingchimera.jpg";
 import asazei from "./../images/artistalley/asazei.jpg";
@@ -418,17 +417,25 @@ let official_artists = [
     {
         "name": <>Cloudie/Cookie&shy;tanuki&shy;art</>,
         "image": cookie,
-        "location": "Booth D1",
+        "location": "Outside AA",
         "website": "https://linktr.ee/cookietanuki",
         "description": ""
     },
     {
         "name": "FREEZE-EX",
         "image": freezeex,
-        "location": "Booth D2",
+        "location": "Outside AA",
         "website": "https://icecute.squarespace.com/",
         "description": ""
+    },
+    {
+        "name": "Anazel",
+        "image": anazel,
+        "location": "Not at TF",
+        "website": "https://www.instagram.com/anazel_art/?hl=en",
+        "description": ""
     }
+
 ];
 
 
@@ -454,12 +461,12 @@ export const artistVendorsPage = {
         </Row>
 
 
-        <Row xs={1} md={2}>
+        <Row xs={1} lg={2}>
             <Col>
                 <h4>Artist Alley</h4>
                 <h5>Official Artists</h5>
 
-                <Row xs={2} className="g-3 justify-content-center">
+                <Row xs={2} md={3} className="g-3 justify-content-center">
                     {official_artists.map((artist, i) => <>
                     <Col>
                         <Card>
