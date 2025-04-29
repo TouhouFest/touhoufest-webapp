@@ -39,8 +39,6 @@ import izakaya from "./../images/artistalley/izakaya.jpg";
 import entryplaza from "./../images/entryplaza.jpg";
 import popumai from "./../images/artistalley/popumai.webp";
 import loveboxf from "./../images/artistalley/loveboxf.jpg";
-import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
-import lemoncreme from "./../images/artistalley/lemoncreme.webp";
 import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
 import andrewfm from "./../images/artistalley/andrewfm.png";
 import animelosangeles from "./../images/artistalley/animelosangeles.jpg";
@@ -113,6 +111,10 @@ import whimsicalarchive from "./../images/artistalley/whimsicalarchive.jpg";
 import brainjuice from "./../images/artistalley/brainjuice.jpg";
 import sunameridrill from "./../images/artistalley/sunameridrill.jpg";
 
+import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
+import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
+import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
+
 import { GlobalTransformWrapper } from './ConCenter';
 import { neosanctum, maidacademy, suzukann } from "./../Utils";
 
@@ -181,12 +183,12 @@ let vendors = [
 {"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
 {"name": "TouhouFest Merch", "image": touhoufest, "location": "V09", "website": "https://www.touhoufest.org/store", "role": "Merch"},
 {"name": "TouhouFest Info Booth", "image": touhoufest, "location": "V10", "website": "https://schedule.touhoufest.org", "role": "Info"},
-{"name": "KinoKreations", "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
+{"name": <>Kino&shy;Kreations</>, "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
 {"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
 {"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
 {"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "", "role": "Vendor"},
 {"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
-{"name": "SunameriDrill", "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
+{"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -257,64 +259,14 @@ let fanmusicgames = [
 fanmusicgames.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let plazatables = [
-    {
-        "name": "Shihori",
-        "image": shihori,
-        "role": "Guest",
-        "website": "https://linktr.ee/shihorimusic",
-        "location": "Booth FB1"
-    },
-    {
-        "name": "Odyssey",
-        "image": odyssey,
-        "role": "Guest",
-        "website": "https://linktr.ee/odysseyeurobeat",
-        "location": "Booth FB2"
-    },
-    {
-        "name": "TAMUSIC",
-        "image": tam,
-        "role": "Guest",
-        "website": "https://twitter.com/tamusic",
-        "location": "Booth FB3"
-    },
-    {
-        "name": "Goen Kizuna / Youkai Mountain",
-        "role": "Festival Booth",
-        "image": youkaimountain,
-        "website": "https://twitter.com/YoukaiMountain",
-        "location": "Booth FB6"
-    },
-    {
-        "name": "Lemon-Crème Studios",
-        "role": "Festival Booth",
-        "image": lemoncreme,
-        "website": "https://www.etsy.com/shop/LemonCremeStudios",
-        "location": "Booth FB7"
-    },
-    {
-        "name": "Touhou Hobby Society",
-        "role": "Festival Booth",
-        "image": placeholder,
-        "website": "",
-        "location": "Booth FB8"
-    },
-    {
-        "name": "Maid Academy Cafe",
-        "image": maidacademy,
-        "role": "Vendor",
-        "website": "https://linktr.ee/maidacademy",
-        "description": "",
-        "location": "Booth FB5"
-    },
-    {
-        "name": "Underworld Izakaya",
-        "image": underworldizakaya,
-        "role": "Festival Booth",
-        "website": "https://twitter.com/MystiaTorrance",
-        "description": "",
-        "location": "Booth FB4"
-    }
+{"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
+{"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
+{"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
+{"name": "Kusoya / Yasoku", "image": placeholder, "location": "Booth FB04", "website": "", "role": "Festival Booth"},
+{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB05", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
+{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB06", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
+{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB07", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
+{"name": "Edward Cadenza", "image": placeholder, "location": "Booth FB08 ~ FB10", "website": "", "role": "Festival Booth"},
 ];
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -369,14 +321,14 @@ let official_artists = [
     {
         "name": <>Cloudie/Cookie&shy;tanuki&shy;art</>,
         "image": cookie,
-        "location": "Outside AA",
+        "location": "See Torino Plaza",
         "website": "https://linktr.ee/cookietanuki",
         "description": ""
     },
     {
         "name": "FREEZE-EX",
         "image": freezeex,
-        "location": "Outside AA",
+        "location": "See Torino Plaza",
         "website": "https://icecute.squarespace.com/",
         "description": ""
     },
@@ -469,7 +421,7 @@ export const artistVendorsPage = {
         </Row>
 
         <h5>List of Vendors</h5>
-        <p>The majority of the entries listed below are in vendors (denoted "Booth VXX").</p>
+        <p>Entries listed below are in vendors (denoted "Booth VXX").</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
@@ -487,11 +439,11 @@ export const artistVendorsPage = {
             </>)}
        </Row>
 
-       <h4 className="mt-2">Music, Fangame, & Shrine Tables</h4>
+       <h4 className="mt-2">Music, Fangame, & Shrine Tables at Torino Plaza</h4>
        <h5>Booth Map</h5>
         <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
-        <Row xs={1} md={2} className="justify-content-center">
-            <Col>
+        <Row className="justify-content-center">
+            <Col xs={12} lg={10}>
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>

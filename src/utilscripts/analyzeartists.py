@@ -16,9 +16,9 @@ def generate_imports(imagename):
 
 if __name__ == "__main__":
     
-    name="vendors"
+    name="shrinebooths"
 
-    df = pd.read_csv("vendors.csv").fillna("")
+    df = pd.read_csv(f"{name}.csv").fillna("")
     
     imports = df["image"].map(generate_imports)
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
             print(row, file=f)
 
     df = df.apply(operate_func, axis=1)
-    with open("vendors.txt","w") as f:
+    with open(f"{name}.txt","w") as f:
         print("[", file=f)
         for row in df.tolist():
             print(f"{row},", file=f)

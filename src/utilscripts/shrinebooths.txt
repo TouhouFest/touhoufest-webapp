@@ -1,0 +1,10 @@
+[
+{"name": "Cloudie", "image": cloudie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
+{"name": "Freeze", "image": freezex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
+{"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
+{"name": "Kusoya / Yasoku", "image": placeholder, "location": "Booth FB04", "website": "", "role": "Festival Booth"},
+{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB05", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
+{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB06", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
+{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB07", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
+{"name": "Edward Cadenza", "image": placeholder, "location": "Booth FB08 ~ FB10", "website": "", "role": "Festival Booth"},
+]
