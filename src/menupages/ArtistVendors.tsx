@@ -114,7 +114,7 @@ let artistlist = [
 {"name": "Umaholics Anonymous", "image": umaholics, "location": "Booth A4", "website": "https://umaholics-anonymous.carrd.co/", "description": ""},
 {"name": "Netcavy Records", "image": netcavy, "location": "Booth B1", "website": "https://netcavy.net/portfolio", "description": ""},
 {"name": "Neo Sanctum", "image": neosanctum, "location": "Booth B2", "website": "https://x.com/NSanctum", "description": ""},
-{"name": "crescentia (11th hour)", "image": crescentia, "location": "Booth B3", "website": "https://crescentia.bandcamp.com/album/touhou-orchestral-suite-grand-fantasy", "description": ""},
+{"name": "11th hour", "image": crescentia, "location": "Booth B3", "website": "https://crescentia.bandcamp.com/album/touhou-orchestral-suite-grand-fantasy", "description": ""},
 {"name": "Dreaming Chimera", "image": dreamingchimera, "location": "Booth B4", "website": "https://dreamingchimera.carrd.co/", "description": ""},
 {"name": "ASAZEi", "image": asazei, "location": "Booth B5", "website": "https://x.com/ASAZEi_art", "description": ""},
 {"name": "quowl", "image": quowl, "location": "Booth B6", "website": "https://quowl.carrd.co/", "description": ""},
@@ -149,7 +149,7 @@ let artistlist = [
 {"name": "tboddy", "image": tboddy, "location": "Booth G6", "website": "https://tboddy.itch.io/", "description": ""},
 {"name": "Moguman", "image": moguman, "location": "Booth G7", "website": "https://x.com/_MoguMan_/media", "description": ""},
 {"name": "Minomino", "image": minimono, "location": "Booth G8", "website": "Instagram.com/minominoten", "description": ""},
-{"name": "Yu Long (Dichroic Purpilion)", "image": mystia, "location": "Booth H1", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "description": ""},
+{"name": "Dichroic Purpilion", "image": mystia, "location": "Booth H1", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "description": ""},
 {"name": "CodyYuki", "image": codyyuki, "location": "Booth H2", "website": "https://x.com/CodyYuki_", "description": ""},
 {"name": "remirii", "image": remirii, "location": "Booth H3", "website": "https://remirii-portfolio.weebly.com/illustrations.html", "description": ""},
 {"name": "G8KP", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
@@ -481,7 +481,7 @@ export const artistVendorsPage = {
                     </>)}
                 </Row>
                 <h5 className="mt-3">Artist Alley Booth Map</h5>
-                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. CLOUDIE corresponds to D1)</p>
+                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. Lyrica Live corresponds to A1)</p>
 
             </Col>
             <Col>
