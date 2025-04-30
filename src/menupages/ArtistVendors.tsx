@@ -15,7 +15,7 @@ import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap, placeholder } from '../Utils';
+import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap, placeholder, WarningAlert } from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
 import marlo from "./../images/artistalley/MARLOWEMEMO.jpg";
@@ -347,6 +347,20 @@ export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
+        <WarningAlert>
+            <p>The following bulletins are <b>placeholders</b> and need to be updated:</p>
+            <ul>
+                <li>Artist Alley Images (Properly selected by artists)</li>
+                <li>Vendors Images (Properly selected by vendors)</li>
+                <li>Images and Links for some Vendors and Shrine Booths</li>
+            </ul>
+            <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
+            <ul>
+                <li>Locations (see remarks on "Key Locations" page)</li>
+                <li>Community Tables</li>
+                <li>Fangame & Music Tables (Either to be removed outright or duly updated on the map)</li>
+            </ul>
+        </WarningAlert>
         <h4>Location</h4>
         <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/>) behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> (<CircledBullets argument="3"/>) in front of the Pine Wind Garden.</p>
         <Row xs={1} md={2}>
