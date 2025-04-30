@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -119,8 +119,13 @@ import artistalleymap from "./images/artistalleymap.png";
 import vendorsmap from "./images/vendorsmap.png";
 import torinoplazamap from "./images/torinoplazamap.png";
 import gamingmap from "./images/gamingmap.jpg";
+import maidacademy from "./images/artistalley/maidacademy.webp";
 
-export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap};
+import neosanctum from "./images/artistalley/neosanctum.jpg";
+import suzukann from "./images/suzukann.jpg";
+import { Alert } from 'react-bootstrap';
+
+export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap, neosanctum, maidacademy, suzukann};
 
 export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";
 
@@ -129,3 +134,12 @@ export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";
 export const NATIVETIMETYPE:string = "NATIVETIMETYPE";
 export const USECONTZ:string = "USECONTZ";
 export const USEDEVICETZ:string = "USEDEVICETZ";
+
+export function WarningAlert({children}:{children:any}) {
+    return (<>
+        <Alert variant="warning">
+            <p><FontAwesomeIcon icon={faCircleExclamation}/> <b>Warning!</b></p>
+            <div>{children}</div>
+        </Alert> 
+    </>);
+}

@@ -1,0 +1,17 @@
+[
+{"name": "Siliconcat", "image": siliconcat, "location": "V1", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
+{"name": "Matcha", "image": matcha, "location": "V2", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
+{"name": "Artist Collaboration Experience", "image": ace, "location": "V3", "website": "https://www.artcollabexp.com/", "role": "Artist"},
+{"name": "Touhou Hobby Society", "image": placeholder, "location": "V4", "website": "", "role": "Merch"},
+{"name": "Idea Factory Intl.", "image": ideafactory, "location": "V5 & V6", "website": "https://ifi.games/", "role": "Games"},
+{"name": "Kotori's Shop by Y", "image": kotori, "location": "V7", "website": "https://www.instagram.com/kotoris_shop_by_y/", "role": "Merch"},
+{"name": "FMAnime Shop", "image": fmanime, "location": "V8", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
+{"name": "TouhouFest Merch", "image": touhoufest, "location": "V9", "website": "https://www.touhoufest.org/store", "role": "Merch"},
+{"name": "TouhouFest Info Booth", "image": touhoufest, "location": "V10", "website": "https://schedule.touhoufest.org", "role": "Info"},
+{"name": "KinoKreations", "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
+{"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
+{"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
+{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "", "role": "Vendor"},
+{"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
+{"name": "SunameriDrill", "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
+]

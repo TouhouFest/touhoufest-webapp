@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
-import { toyota, kenmiller } from "../Utils.js";
+import { toyota, kenmiller, WarningAlert } from "../Utils.js";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
@@ -28,6 +28,17 @@ export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
+        <WarningAlert>
+            <p>The below bulletins are <b>outdated</b> and need to be updated:</p>
+            <ul>
+                <li>Locations (see remarks on "Key Locations" page)</li>
+                <li>Tournament timeslots (for updating the schedule)</li>
+                <li>start.gg links for each tournament timeslot</li>
+                <li>Tournament Rules</li>
+                <li>Fangames & Arcade Games</li>
+                <li>Gaming Hall Map</li>
+            </ul>
+        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Gaming events for <em>official</em> Touhou games will take place in the <b>Toyota Meeting Hall</b>, (<span className="text-primary"><CircledBullets argument="9"/></span>) located to the right of the Torino Festival Plaza. Gaming events for Touhou <em>fangames</em> will take place at the <b>Ken Miller Rec Center</b>, (<CircledBullets argument="10"/>) to the left of the Torino Festival Plaza.</p>
         <Row className="justify-content-center">

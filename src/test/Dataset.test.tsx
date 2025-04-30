@@ -289,6 +289,32 @@ describe("Dataset", () => {
         await waitFor(() => {
             expect(screen.queryAllByText(`Sunday, April 27`).length).greaterThan(0);
         });
+    });
+
+    test("handle events with empty description", async () => {
+        // follow a similar model if scenario arises where event_title needs to be null
+        Papa.parse = GenerateMockPapa([
+            {
+                "event_title":"test event 0",
+                "event_description": null,
+                "event_room": "All",
+                "event_start_day": "3/2/25",
+                "event_start_time": "19:35",
+                "event_end_day": "3/2/25",
+                "event_end_time": "20:30",
+                "event_type": "Convention",
+                "event_age_limit": ""
+            },
+       ]); 
+
+        let dataset = <Dataset mode="filter" param_fxn={vi.fn()} appliedFilters={{"search_query":"test", "event_types":[], "room_list":[]}} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        render(dataset);
+
+        // expectation: time should print PST times because flag set to show in con timezone
+        await waitFor(() => {
+            expect(screen.getAllByText("test event 0").length).eq(1);
+        });
+
 
 
     });

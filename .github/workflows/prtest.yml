@@ -14,6 +14,7 @@ jobs:
       - name: Pull down repository to merge of PR
         uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
+      # - run: git pull
       - run: npm ci
       # unlock repository using git crypt secrets
       - uses: flydiverny/setup-git-crypt@v4
