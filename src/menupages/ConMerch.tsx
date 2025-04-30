@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { Card, Col, ListGroup, Row } from 'react-bootstrap';
+import { Card, Col, Figure, ListGroup, Row } from 'react-bootstrap';
 
 import totebag from "./../images/conmerch/totebag.png";
 import lightstick_freeze from "./../images/conmerch/lightstick_freeze.png";
@@ -11,6 +11,7 @@ import enamelpin from "./../images/conmerch/enamelpin.png";
 import reimuposter from "./../images/conmerch/reimuposter.png";
 import reimutote from "./../images/conmerch/reimutote.png";
 import tfestposter from "./../images/conmerch/tfestposter.png";
+import { entryplaza } from '../Utils';
 
 let pricelist = [
     {
@@ -83,7 +84,17 @@ export const conMerchPage= {
     "header": (<><FontAwesomeIcon icon={faBagShopping} fixedWidth></FontAwesomeIcon> Con Merch</>),
     "fluidImage": (<></>),
     "body": (<>
-        <p>The below items are available for purchase at TouhouFest's Merch Booth! It is located in the <b>Entry Plaza</b> at <b>Booth V09</b>. (See below map)</p>
+        <h4>Location</h4>
+        <p>The below items are available for purchase at TouhouFest's Merch Booth! It is located in the <b>Entry Plaza</b>.</p>
+        <Row className="justify-content-center">
+            <Col xs={12} sm={10} lg={8}>
+                <Figure>
+                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
+                    <Figure.Caption>Entry Plaza (when entering from the Nakano Theatre entrance)</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
+        <h4>Items</h4>
         <Row xs={1} md={2} lg={4} className="justify-content-center g-3">
             {pricelist.map((item, i) => <>
             <Col>
