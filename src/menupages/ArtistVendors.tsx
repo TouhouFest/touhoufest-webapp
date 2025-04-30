@@ -358,7 +358,6 @@ export const artistVendorsPage = {
             <ul>
                 <li>Locations (see remarks on "Key Locations" page)</li>
                 <li>Community Tables</li>
-                <li>Fangame & Music Tables (Either to be removed outright or duly updated on the map)</li>
             </ul>
         </WarningAlert>
         <h4>Location</h4>
@@ -477,6 +476,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
         </Row>
+       {/*
        <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {fanmusicgames.map((artist, i) => <>
@@ -486,7 +486,6 @@ export const artistVendorsPage = {
                     <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
@@ -494,6 +493,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
        </Row>
+       */}
        <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
