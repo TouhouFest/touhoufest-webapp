@@ -8,6 +8,9 @@ import lightstick_cloudie from "./../images/conmerch/lightstick_cloudie.png";
 import lanyard from "./../images/conmerch/lanyard.png";
 import marisapin from "./../images/conmerch/marisapin.png";
 import enamelpin from "./../images/conmerch/enamelpin.png";
+import reimuposter from "./../images/conmerch/reimuposter.png";
+import reimutote from "./../images/conmerch/reimutote.png";
+import tfestposter from "./../images/conmerch/tfestposter.png";
 
 let pricelist = [
     {
@@ -39,19 +42,41 @@ let pricelist = [
         "notes": ""
     },
     {
-        "price": "$15.00",
-        "title": "TouhouFest 2025 Tote Bag",
-        "description": "TouhouFest’s official 2025 exclusive tote bag featuring various Touhou Project characters, including Reimu Hakurei, Marisa Kirisame, Sanae Kochiya, Cirno, Reisen Udongein Inaba, and Youmu Konpaku!",
+        "price": "$5.00",
+        "title": "TouhouFest 2024 Marisa Button Pin ",
+        "description": "TouhouFest’s official 2024 button pin featuring the character Marisa Kirisame!",
         "photo": marisapin,
         "notes": ""
     },
     {
-        "price": "$15.00",
+        "price": "$10.00",
         "title": "TouhouFest Logo Enamel Pin",
         "description": "TouhouFest’s official enamel pin featuring the TouhouFest logo! ",
         "photo": enamelpin,
         "notes": ""
-    }
+    },
+    {
+        "price": "From $10.00",
+        "title": "TouhouFest Reimu Poster ",
+        "description": "A print of TouhouFest’s official artwork featuring the Touhou Project character, Reimu Hakurei! Choose between two sizes: 8 in. x 11 in. ($10.00) or 11 in. x 17 in. ($15.00)",
+        "photo": reimuposter,
+        "notes": ""
+    },
+    {
+        "price": "$15.00",
+        "title": "TouhouFest 2024 Tote Bag",
+        "description": "TouhouFest’s official tote bag featuring the Touhou Project character, Reimu Hakurei!",
+        "photo": reimutote,
+        "notes": "May be in short supply!"
+    },
+    {
+        "price": "$15.00",
+        "title": "TouhouFest 2024 Reimu and Marisa Poster",
+        "description": "A print of TouhouFest’s official 2024 artwork featuring the Touhou Project characters, Reimu Hakurei and Marisa Kirisame!",
+        "photo": tfestposter,
+        "notes": "May be in short supply!"
+    },
+
 ];
 
 export const conMerchPage= {
