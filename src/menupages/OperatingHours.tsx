@@ -8,11 +8,20 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { Alert } from 'react-bootstrap';
+import { WarningAlert } from '../Utils';
 
 export const operatingHours= {
     "header": (<><FontAwesomeIcon icon={faClock} fixedWidth></FontAwesomeIcon> Operating Hours</>),
     "fluidImage": (<></>),
     "body": (<>
+        <WarningAlert>
+            <p>The following operating hours have <b>not</b> been confirmed yet:</p>
+            <ul>
+                <li>Registration</li>
+                <li>Gaming</li>
+            </ul>
+        </WarningAlert>
         <p><b>General Con Hours</b></p>
         <ul>
             <li>Friday: N/A</li>

@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import {pinewindgarden, assemblyhall, entryplaza } from "../Utils";
+import {pinewindgarden, assemblyhall, entryplaza, placeholder, WarningAlert } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
@@ -18,11 +18,21 @@ import cosplaybanner from "./../images/cosplaybanner.jpg";
 import medukitty from "./../images/medukitty.jpg";
 import violetreverie from "./../images/violetreverie.jpg";
 import cosplayrepair from "./../images/cosplayrepair.jpg";
+import uniphants from "./../images/uniphants.jpg";
+import pumpking from "./../images/pumpking.jpg";
+import mysticallala from "./../images/mysticallala.jpg";
 
 export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
+        <WarningAlert>
+            <p>The below items are <b>outdated</b> and should be updated:</p>
+            <ul>
+                <li>Locations (see remarks in "Key Locations" page)</li>
+                <li>Status of "Netherworld" photoshoot (Whether to update or remove from app)</li>
+            </ul>
+        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="15"/>), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="13"/>). Cosplay booths and repair is located at the <b>Entry Plaza</b> (<CircledBullets argument="5"/>), connected to the Torino Festival Plaza (<CircledBullets argument="7"/>).</p>
         <Row className="justify-content-center text-center">
@@ -97,7 +107,7 @@ export const cosplayPage = {
                         <Card className="th10">
                             <Card.Body className="text-center">
                                 <Card.Title>The Faithful Gods</Card.Title>
-                                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
+                                <Card.Text>Saturday, 5:00 PM - 6:30 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
@@ -176,7 +186,7 @@ export const cosplayPage = {
                         <Card className="mt-2 th06">
                             <Card.Body className="text-center">
                                 <Card.Title>The Devil's Mansion</Card.Title>
-                                <Card.Text>Saturday, 12:30 PM - 1:00 PM</Card.Text>
+                                <Card.Text>Sunday, 12:00 PM - 1:00 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Touhou 6 &quot;Embodiment of Scarlet Devil&quot;</strong></p>
@@ -250,7 +260,7 @@ export const cosplayPage = {
                         <Card className="mt-2 th15">
                             <Card.Body className="text-center">
                                 <Card.Title>Go to hell!!</Card.Title>
-                                <Card.Text>Saturday, 2:00 PM - 2:30 PM</Card.Text>
+                                <Card.Text>Saturday, 10:00 AM - 11:00 AM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Protagonists</strong></p>
@@ -398,7 +408,7 @@ export const cosplayPage = {
                         <Card className="mt-2 th08">
                             <Card.Body className="text-center">
                                 <Card.Title>Lunar Landing in the Bamboo Forest</Card.Title>
-                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
+                                <Card.Text>Saturday, 4:30 PM - 5:30 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
@@ -457,7 +467,7 @@ export const cosplayPage = {
                         <Card className="mt-2 fight">
                             <Card.Body className="text-center">
                                 <Card.Title>Fighting Games</Card.Title>
-                                <Card.Text>Sunday, 12:00 PM - 1:00 PM</Card.Text>
+                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
@@ -571,17 +581,16 @@ export const cosplayPage = {
         <h4>Cosplay Contest</h4>
         <h5>Itinerary</h5>
         <ol>
-            <li><b>Pre-Judging</b>: 3:00 PM - 4:00 PM</li>
+            <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
             <ol type="a">
                 <li>Particpants in the <em>Craftsmanship</em> Category need to attend this event</li>
             </ol>
-            <li><b>Seating</b>: 4:30 PM - 5:00 PM</li>
-            <li><b>Cosplay Contest</b>: 5:00 PM - 6:00 PM</li>
+            <li><b>Seating</b>: 1:00 PM - 1:30 PM</li>
+            <li><b>Cosplay Contest</b>: 1:30 PM - 3:00 PM</li>
             <ol type="a">
-                <li>During the cosplay judging period (roughly around 5:30 PM), Renko*, one of our special guests, will be giving a special performance!</li>
+                <li>During the cosplay judging period, CorpsDanceCrew will be giving a special performance!</li>
             </ol>
         </ol>
-        <p className="small">*Renko in this case refers to the lyricist and vocalist from <a href="http://feltmusic.net/" target="_blank" rel="noreferrer">FELT</a>, an esteemed Touhou folk rock music circle. For more information, see the "Guests" page.</p>
         <h5>Categories</h5>
         <p>There are three components within the Cosplay Contest:</p>
         <Row xs={1} md={3} className="justify-content-center gy-3">
@@ -605,7 +614,7 @@ export const cosplayPage = {
                 <Card className="purple-one">
                     <Card.Body>
                         <Card.Title className="text-center">Exhibition</Card.Title>
-                        <Card.Text>The Exhibition category is for anyone that wants a chance to walk across the stage, but doesn’t want to compete. This is just for fun, so there are no limits to whether you’ve made your costume yourself or not.</Card.Text>
+                        <Card.Text>The Exhibition category is for anyone that wants a chance to walk across the stage, but doesn’t want to compete. This is just for fun and is NOT eligible for prizes, so there are no limits to whether you’ve made your costume yourself or not. Anyone may participate in this category, including staff and guests. </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
@@ -616,50 +625,51 @@ export const cosplayPage = {
         <Row xs={1} lg={3} className="gy-3 justify-content-center">
             <Col >
                 <Card>
-                    <Card.Body className="text-center gold-bg">
+                    <Card.Body className="text-center gold-bg rounded">
                         <Card.Title>Best Craftsmanship</Card.Title>
-                        <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
+                        <Card.Subtitle>Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Body className="text-center silver-bg">
-                        <Card.Title>Runner-up Craftsmanship</Card.Title>
-                        <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
+                    <Card.Body className="text-center silver-bg rounded">
+                        <Card.Title>Runner-up Best Craftsmanship</Card.Title>
+                        <Card.Subtitle>Medal</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Body className="text-center gold-bg">
+                    <Card.Body className="text-center gold-bg rounded">
                         <Card.Title>Best Performance</Card.Title>
-                        <Card.Subtitle>2 Free TouhouFest 2025 Badges</Card.Subtitle>
+                        <Card.Subtitle>Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Body className="text-center silver-bg">
-                        <Card.Title>Runner-up Performance</Card.Title>
-                        <Card.Subtitle>1 Free TouhouFest 2025 Badge</Card.Subtitle>
+                    <Card.Body className="text-center silver-bg rounded">
+                        <Card.Title>Runner-up Best Performance</Card.Title>
+                        <Card.Subtitle>Medal</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Body className="text-center gold-bg">
+                    <Card.Body className="text-center gold-bg rounded">
                         <Card.Title>Judge's Choice (Per-Judge)</Card.Title>
                         <Card.Subtitle>Prizes up to Judge Discretion</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
         </Row>
-        <h5 className="mt-2">About the Judges</h5>
-        <Row xs={1} lg={2} className="gy-3">
+        <h5 className="mt-2">About the Cosplay Contest Judges</h5>
+        <Row xs={1} md={2} lg={4} className="gy-3">
             <Col>
                 <Card>
                     <Card.Img variant="top" src={medukitty} />
+                    <Card.Header className="text-center">Master of Ceremonies</Card.Header>
                     <Card.Body>
                         <Card.Title>Medukitty</Card.Title>
                         <Card.Text>I'm MeduKitty, a long time cosplayer and Touhou enthusiast who's thrilled to combine her two greatest passions!  I've been cosplaying from Touhou since 2018, and my favorite thing is making my costumes from scratch with as many details as I can fit into them.  I love our community so much and I can't wait to participate in TouhouFest with you all! </Card.Text>
@@ -672,15 +682,44 @@ export const cosplayPage = {
                 </Card>
             </Col>
             <Col>
-                <Card className="">
-                    <Card.Img variant="top" src={violetreverie} />
+                <Card>
+                    <Card.Img variant="top" src={pumpking} />
+                    <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
-                        <Card.Title>Violet Reverie</Card.Title>
-                        <Card.Text>Hello nice to meet you! I'm Violet Reverie. My main goal is to empower the Worldwide Touhou Cosplay community, so I created the Touhou Cosplay Guild Discord Server to bring everyone together and provide learning resources. My other goal, over the course of the 17+ Touhou Cosplays I've made, is to pull the characters from Gensokyo and bring them to life through use of Design and Material to express their role, origin, and ability in my costumes.</Card.Text>
+                        <Card.Title>Pumpking</Card.Title>
+                        <Card.Text>Hi!! My name is Pumpking! I'm 24 years old (as of 2025) and got into Touhou in 2020 during Covid! I love to cosplay and especially pride myself in sharing cosplay designers and making shopping overseas more accessible for newcomers. I've started making my own stuff recently too. Thank you for having me!</Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link href="https://www.instagram.com/violet_reverie_cos/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                        <Card.Link href="https://twitter.com/CuLightSource" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
+                        <Card.Link href="https://www.instagram.com/sunnysiddedup/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                        <Card.Link href="https://x.com/Sunnysiddedup" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
+                    </Card.Footer>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                    <Card.Img variant="top" src={mysticallala} />
+                    <Card.Header className="text-center">Cosplay Judge</Card.Header>
+                    <Card.Body>
+                        <Card.Title>Mystical Lala</Card.Title>
+                        <Card.Text>Hi I'm Lala! I'm just a girl who cosplays the characters she loves! I've been cosplaying since 2012, and I make, buy, alter cosplays! I love cosplaying mainly Touhou girls but I do stuff from other series as well. If you have any questions I can try to help! Anyone can cosplay as long as they have fun!</Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-center">
+                        <Card.Link href="https://www.instagram.com/mystical.lala/?hl=en" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                        <Card.Link href="https://x.com/Mysticallala" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
+                    </Card.Footer>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="">
+                    <Card.Img variant="top" src={uniphants} />
+                    <Card.Header className="text-center">Cosplay Guest Judge</Card.Header>
+                    <Card.Body>
+                        <Card.Title>Purple Uniphants</Card.Title>
+                        <Card.Text>You can call me Uni! I've been cosplaying since 2011, and I ventured into Touhou shortly after. I have a handful of awards under my belt, but please don't be intimidated: I love seeing how we as cosplayers bring fiction to reality with our own styles and personalities. I owe all of my crafting knowledge to the internet, but I'm still not done learning!</Card.Text>
+                    </Card.Body>
+                    <Card.Footer className="text-center">
+                        <Card.Link href="https://www.instagram.com/purpleuniphants/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
+                        <Card.Link href="https://x.com/purpleuniphants" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
@@ -699,6 +738,8 @@ export const cosplayPage = {
                         <li>You may only enter in one category. For example, if you made your own cosplay but entered in Performance, we cannot award you for Craftsmanship and vice versa.</li>
                         <li>All entrants are expected to be on time to the main stage and walk the stage.</li>
                         <li>There is a limited number of spots for each category. Applications are accepted on a first-come, first-serve basis, so in-person applications will only be available if we still have space. Therefore, please consider applying online ahead of time! Performance entries will NOT be accepted in-person, as performances must be approved ahead of time.</li>
+                        <li>TouhouFest staff and guests are ONLY eligible to participate in the Exhibition Category.</li>
+                        <li>Be respectful of staff, the venue, and your fellow attendees. Follow the TouhouFest Convention Guidelines at all times.</li>
                     </ul>
                 </Accordion.Body>
             </Accordion.Item>
@@ -720,8 +761,8 @@ export const cosplayPage = {
                     <p>These Rules apply to only the Performance Category.</p>
                     <ul>
                         <li>All audio, including dialogue, must be pre-recorded. There will be no mics available to use during performances.</li>
-                        <li>Audio must be submitted and approved by staff before the contest. You will be contacted if any changes need to be made. The deadline for submitting audio is April 19th, with no further revisions accepted past April 24th.</li>
-                        <li>Performances are limited to 2.5 minutes in length. Any performance that goes over this limit will not be accepted.</li>
+                        <li>Audio must be submitted and approved by staff before the contest. You will be contacted if any changes need to be made. The deadline for submitting audio is June 1st, with no further revisions accepted past June 6th.</li>
+                        <li>Performances are limited to <b>2.5 minutes</b> in length. Any performance that goes over this limit will not be accepted.</li>
                         <li>Audio must be submitted as it is intended to be played. We can’t accommodate special requests to start and stop, or play multiple audio files. Please be kind to our sound team and make it as simple for them as possible!</li>
                         <li>You may have a maximum of five participants in your performance. Please be mindful of the size of the stage while planning.</li>
                         <li>Don’t throw anything into the audience.</li>

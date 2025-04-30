@@ -12,7 +12,7 @@ import { faTwitch, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam, placeholder, maidacademy } from "../Utils";
+import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam, placeholder, maidacademy, WarningAlert } from "../Utils";
 import { Alert, Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
@@ -28,13 +28,12 @@ import suzubrah from "./../images/artistalley/suzubrah.jpg";
 import coobie from "./../images/artistalley/coobie.jpg";
 import renko from "./../images/renko.jpg";
 import miko from "./../images/miko.jpg";
-import suzukann from "./../images/suzukann.jpg";
 import hojo from "./../images/hojo.jpg";
 import afterglow from "./../images/artistalley/afterglow.jpg";
 import yona from "./../images/artistalley/yona.jpg";
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import oyamada from "./../images/oyamada.jpg";
-import { neosanctum } from '../Utils';
+import { neosanctum,suzukann } from '../Utils';
 
 let djs = [
     {
@@ -80,6 +79,22 @@ export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & DJs</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
+        <WarningAlert>
+            <p>The below section are <b>outdated</b> and need to be updated:</p>
+            <ul>
+                <li>Location(s) (see remarks on "Key Locations" page)</li>
+            </ul>
+            <p>The below bulletins are <b>placeholders</b> and should be updated:</p>
+            <ul>
+                <li>Updated bios for Suzukann and Hojo-san (ideally better than the ones I came up for them)</li>
+                <li>Finalized event titles and descriptions for the below guest-related events:</li>
+                <ul>
+                    <li>TouhouFest LIVE Concert</li>
+                    <li>Placeholder for M-1 Grand Prix Showing</li>
+                    <li>Placeholder for Miko-san Performance</li>
+                </ul>
+            </ul>
+        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
         <ul>

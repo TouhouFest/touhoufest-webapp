@@ -34,3 +34,5 @@ dist-examples-root
 examples/*/test-results/
 examples/*/playwright-report/
 examples/*/playwright/.cache/
+
+myenv
