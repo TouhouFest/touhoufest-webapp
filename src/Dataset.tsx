@@ -213,7 +213,7 @@ export default function Dataset(
   function rankResults(row:EventListing) {
     // reduce title, description, and search to sets and split by word
     let reduced_title = new Set(row["event_title"].replace(/[^\w\s]/gi, '').toLowerCase().split(" "));
-    let reduced_description = new Set(row["event_description"].replace(/[^\w\s]/gi, '').toLowerCase().split(" "));
+    let reduced_description = new Set((row["event_description"] || '').replace(/[^\w\s]/gi, '').toLowerCase().split(" "));
     let cleaned_search = new Set(appliedFilters["search_query"].split(" "));
     // conduct searches wrt title and description
     let title_search = new Set(Array.from(reduced_title).filter(i => cleaned_search.has(i)))
