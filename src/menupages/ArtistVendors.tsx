@@ -351,7 +351,6 @@ export const artistVendorsPage = {
             <p>The following bulletins are <b>placeholders</b> and need to be updated:</p>
             <ul>
                 <li>Artist Alley Images (Properly selected by artists)</li>
-                <li>Vendors Images (Properly selected by vendors)</li>
                 <li>Images and Links for some Shrine Booths</li>
             </ul>
             <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
