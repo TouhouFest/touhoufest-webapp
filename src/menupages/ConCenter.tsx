@@ -11,7 +11,7 @@ import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons
 import { Row, Col } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { useState } from 'react';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap } from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap, WarningAlert } from '../Utils';
 import touhoufest_map from "./../images/touhoufest_map.png";
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
@@ -32,6 +32,14 @@ export function GlobalTransformWrapper({src, caption}: {src:any, caption:string}
 function MapModals(){
 
     return (<>
+        <WarningAlert>
+            <p>The below items are still <b>outdated</b>:</p>
+            <ul>
+                <li>Finalized Main TouhouFest Map</li>
+                <li>Key Locations based off the Main TouhouFest Map (i.e. bulletins like <CircledBullets argument="1"/> <CircledBullets argument="2"/> etc.)</li>
+                <li>Gaming Hall Map</li>
+            </ul>
+        </WarningAlert>
         <p>Pinch to focus in/zoom on all maps as needed.</p>
 
         <h4>Main TouhouFest Map</h4>

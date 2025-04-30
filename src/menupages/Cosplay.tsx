@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import {pinewindgarden, assemblyhall, entryplaza, placeholder } from "../Utils";
+import {pinewindgarden, assemblyhall, entryplaza, placeholder, WarningAlert } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
@@ -26,6 +26,12 @@ export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
+        <WarningAlert>
+            <p>The below items are <b>outdated</b> and should be updated:</p>
+            <ul>
+                <li>Status of "Netherworld" photoshoot (Whether to update or remove from app)</li>
+            </ul>
+        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="15"/>), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="13"/>). Cosplay booths and repair is located at the <b>Entry Plaza</b> (<CircledBullets argument="5"/>), connected to the Torino Festival Plaza (<CircledBullets argument="7"/>).</p>
         <Row className="justify-content-center text-center">
@@ -694,7 +700,7 @@ export const cosplayPage = {
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Mystical Lala</Card.Title>
-                        <Card.Text>Mystical Lala is one of our talented Cosplay Ambassadors who will also be joining us this year for TouhouFest 2025 as a Cosplay Judge!</Card.Text>
+                        <Card.Text>Hi I'm Lala! I'm just a girl who cosplays the characters she loves! I've been cosplaying since 2012, and I make, buy, alter cosplays! I love cosplaying mainly Touhou girls but I do stuff from other series as well. If you have any questions I can try to help! Anyone can cosplay as long as they have fun!</Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
                         <Card.Link href="https://www.instagram.com/mystical.lala/?hl=en" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>

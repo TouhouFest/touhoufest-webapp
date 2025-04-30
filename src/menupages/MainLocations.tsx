@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
-import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
+import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre, WarningAlert } from '../Utils';
 import { Figure, Row, Col } from 'react-bootstrap';
 
 import panelroom from "./../images/panelroom.jpg";
@@ -19,6 +19,12 @@ export const mainLocationsPage= {
   "fluidImage": (<></>),
   "body": (
     <>
+        <WarningAlert>
+            <p>This page is <b>outdated</b> and requires the below item to be updated:</p>
+            <ul>
+                <li>Finalized Main TouhouFest Map (necessary to properly update the location bulletins e.g. <CircledBullets argument="1"/> <CircledBullets argument="2"/> etc.)</li>
+            </ul>
+        </WarningAlert>
         <h4>George Nakano Theatre</h4>
         <p>The George Nakano Theatre is the right-most building of the convention. The following event spaces are located here:</p>
         <ul className="list-unstyled">

@@ -15,11 +15,18 @@ import brazilplate from "./../images/brazilplate.jpg";
 import orientalbreeze from "./../images/orientalbreeze.jpg";
 import noodsfoodtruck from "./../images/noodsfoodtruck.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
+import { WarningAlert } from '../Utils';
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>
+        <WarningAlert>
+            <p>The below section is <b>outdated</b> and need to be updated:</p>
+            <ul>
+                <li>Food Trucks</li>
+            </ul>
+        </WarningAlert>
         <h4>Food Trucks</h4>
         <p>The below food trucks will be catering for TouhouFest for those interested. They will be located in the front entrance of TouhouFest, by the Circular Drive.</p> 
 
