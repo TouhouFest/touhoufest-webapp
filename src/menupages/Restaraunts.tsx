@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils, faWarning } from '@fortawesome/free-solid-svg-icons';
+import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import tokyostyle from "./../images/tokyostyle.webp";
@@ -15,22 +15,16 @@ import brazilplate from "./../images/brazilplate.jpg";
 import orientalbreeze from "./../images/orientalbreeze.jpg";
 import noodsfoodtruck from "./../images/noodsfoodtruck.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
-import { WarningAlert } from '../Utils';
+import poutinebrothers from "./../images/poutinebrothers.png";
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>
-        <WarningAlert>
-            <p>The below section is <b>outdated</b> and need to be updated:</p>
-            <ul>
-                <li>Food Trucks</li>
-            </ul>
-        </WarningAlert>
         <h4>Food Trucks</h4>
         <p>The below food trucks will be catering for TouhouFest for those interested. They will be located in the front entrance of TouhouFest, by the Circular Drive.</p> 
 
-        <Row>
+        <Row className="justify-content-center">
 
         <Col xs={12} md={6} lg={true}>
 
@@ -39,7 +33,7 @@ export const restarauntsPage = {
             <Card.Img src={okamoto} className="rounded-0"/>
             <Card.Body>
                 <Card.Title>Okamoto Kitchen</Card.Title>
-                <Card.Text>Okamoto Kitchen brings people to authentic, lesser known Japanese dishes liek Chicken Nanban, Cheese, Mochi, and Classic Style Japanese Curry.</Card.Text>
+                <Card.Text>Okamoto Kitchen brings people to authentic, lesser known Japanese dishes like Chicken Nanban, Cheese, Mochi, and Classic Style Japanese Curry.</Card.Text>
                 <Card.Text>The vibrant Akiba-style decor and engaging customer service makes this food truck an experience you'll want to share with your friends!</Card.Text>
             </Card.Body>
             <Card.Footer className="text-center small">
@@ -51,44 +45,28 @@ export const restarauntsPage = {
         </Col>
 
         <Col xs={12} md={6} lg={true}>
-
         <Card className="mt-2">
-            <Card.Header className="text-center small">Japanese Food</Card.Header>
-            <Card.Img src={tokyostyle} className="rounded-0"/>
+            <Card.Header className="text-center small">Poutine</Card.Header>
+            <Card.Img src={poutinebrothers} className="rounded-0"/>
             <Card.Body>
-                <Card.Title>Tokyo Style Food Truck</Card.Title>
-                <Card.Text>Tokyo Doggie Style Food Truck has been in operation since the spring of 2013, serving CIA alumnus Chef Keith Yokoyama’s tasty creations of Japanese fusion comfort food -- a variety of dishes and specialty beverages that are “culturally authentic and culinarily unique.” The menu includes from original Japanese fusion hot dogs (MUST TRY!), signature Yakiniku Philly Cheese Steak (most popular!), Rice Bowls, to such homemade craft drinks as Lychee Lemonade and Non-dairy boba milk teas. Special meal options (vegetarian/vegan/gluten-free) are also available</Card.Text>
-                <Card.Text className="small"><FontAwesomeIcon icon={faWarning}/> Tokyo Style Food Truck will only be at TouhouFest on <b>Sunday</b>.</Card.Text>
+                <Card.Title>Poutine Brothers</Card.Title>
+                <Card.Text>Poutine Brothers will make their first appearance at this year's Touhoufest. They specialize in different styles of poutine. If you haven't had poutine before you're in for a treat. </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center small">
-                <Card.Link href="https://www.twitter.com/tokyostyletruck" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-                <Card.Link href="http://www.tokyostylefoodtruck.com/2021%20Lunch%20Menu.pdf" target="_blank"><FontAwesomeIcon icon={faBowlFood}/> Menu</Card.Link>
-            </Card.Footer>
-        </Card>
-
-        </Col>
-        <Col xs={12} md={6} lg={true}>
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Thai Food</Card.Header>
-            <Card.Img src={noodsfoodtruck} className="rounded-0"/>
-            <Card.Body>
-                <Card.Title>Noods Food Truck</Card.Title>
-                <Card.Text>After many years of experience in the food truck world we felt a passion to create a new flavor profile that will express our creativity and culinary skills .  Noods is a combination of different types of cuisines that we have brought together to  create amazing flavors that will blow your mind !</Card.Text>
-                <Card.Text>Our aromatic broth flavors with different kinds of noodles and toppings were carefully crafted to make the perfect noodle bowl for any crowd. </Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://www.noodsfoodtruck.com/" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link & Menu</Card.Link>
+                <Card.Link href="https://poutinebrothers.com/" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
+                <Card.Link href="https://static1.squarespace.com/static/6232a315838eac42a1d9696c/t/678888d8ce614b2156b4f6ee/1737001177635/Poutine+Brothers+Website.pdf" target="_blank"><FontAwesomeIcon icon={faUtensils}/> Menu</Card.Link>
             </Card.Footer>
         </Card>
         </Col>
+
         <Col xs={12} md={6} lg={true}>
         <Card className="mt-2">
             <Card.Header className="text-center small">Mexican Food</Card.Header>
             <Card.Img src={lupitastacos} className="rounded-0"/>
             <Card.Body>
                 <Card.Title>Lupitas Tacos</Card.Title>
-                <Card.Text>A high-quality Mexican Food Truck that serves a variety of delicious dishes with fresh and authentic ingredients.</Card.Text>
-                <Card.Text className="small"><FontAwesomeIcon icon={faWarning}/> Lupitas Tacos will only be at TouhouFest on <b>Saturday</b>.</Card.Text>
+                <Card.Text>Lupitas Tacos will be returning again this year. They are known for their delicious Mexican cuisine. Be on the look out for their Touhoufest themed dishes. 
+                </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center small">
                 <Card.Link href="https://www.instagram.com/lupitastacos/?hl=en" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>

@@ -177,7 +177,7 @@ let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
 {"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
-{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "", "role": "Merch"},
+{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
 {"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
 {"name": "Kotori's Shop by Y", "image": kotori, "location": "V07", "website": "https://www.instagram.com/kotoris_shop_by_y/", "role": "Merch"},
 {"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
@@ -186,7 +186,7 @@ let vendors = [
 {"name": <>Kino&shy;Kreations</>, "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
 {"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
 {"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
-{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "", "role": "Vendor"},
+{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "https://ruddyg851.myportfolio.com", "role": "Vendor"},
 {"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
 {"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
 ];
@@ -351,14 +351,12 @@ export const artistVendorsPage = {
             <p>The following bulletins are <b>placeholders</b> and need to be updated:</p>
             <ul>
                 <li>Artist Alley Images (Properly selected by artists)</li>
-                <li>Vendors Images (Properly selected by vendors)</li>
-                <li>Images and Links for some Vendors and Shrine Booths</li>
+                <li>Images and Links for some Shrine Booths</li>
             </ul>
             <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
             <ul>
                 <li>Locations (see remarks on "Key Locations" page)</li>
                 <li>Community Tables</li>
-                <li>Fangame & Music Tables (Either to be removed outright or duly updated on the map)</li>
             </ul>
         </WarningAlert>
         <h4>Location</h4>
@@ -477,6 +475,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
         </Row>
+       {/*
        <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {fanmusicgames.map((artist, i) => <>
@@ -486,7 +485,6 @@ export const artistVendorsPage = {
                     <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
@@ -494,6 +492,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
        </Row>
+       */}
        <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>

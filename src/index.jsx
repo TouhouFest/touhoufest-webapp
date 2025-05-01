@@ -19,13 +19,14 @@ import { restarauntsPage } from './menupages/Restaraunts';
 import { settingsPage } from './menupages/Settings'
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { registerSW } from 'virtual:pwa-register'
+import { conMerchPage } from "./menupages/ConMerch";
 
 registerSW({ immediate: true })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [aboutConPage, operatingHours, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, settingsPage ];
+let menupagedata = [aboutConPage, operatingHours, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ];
 
 let menuheader = (<>TouhouFest 2025</>);
 
