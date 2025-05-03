@@ -8,7 +8,6 @@ import reportWebVitals from './reportWebVitals';
 /* IMPORT YOUR MENUPAGES HERE */
 import {conCenterPage} from "./menupages/ConCenter";
 import {aboutConPage} from "./menupages/AboutCon";
-import {operatingHours} from "./menupages/OperatingHours";
 import { guestsPage } from './menupages/Guests';
 import { gamingPage } from "./menupages/Gaming";
 import { artistVendorsPage } from './menupages/ArtistVendors';
@@ -26,7 +25,7 @@ registerSW({ immediate: true })
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [aboutConPage, operatingHours, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ];
+let menupagedata = [aboutConPage, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ];
 
 let menuheader = (<>TouhouFest 2025</>);
 
