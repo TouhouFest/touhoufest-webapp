@@ -80,6 +80,7 @@ import duckyafterdark from "./../images/artistalley/duckyafterdark.jpg";
 import feeyaart from "./../images/artistalley/feeyaart.jpg";
 import melty from "./../images/artistalley/melty.jpg";
 import cynicalfries from "./../images/artistalley/cynicalfries.jpg";
+import blaidmiracle from "./../images/artistalley/blaidmiracle.jpg";
 import ahwakanarai from "./../images/artistalley/ahwakanarai.jpg";
 import scaryyandere from "./../images/artistalley/scaryyandere.jpg";
 import nono from "./../images/artistalley/nono.jpg";
@@ -110,6 +111,7 @@ import serapim from "./../images/artistalley/serapim.jpg";
 import whimsicalarchive from "./../images/artistalley/whimsicalarchive.jpg";
 import brainjuice from "./../images/artistalley/brainjuice.jpg";
 import sunameridrill from "./../images/artistalley/sunameridrill.jpg";
+import mintchokuma from "./../images/artistalley/mintchokuma.jpg";
 
 import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
@@ -151,7 +153,8 @@ let artistlist = [
 {"name": <>Duckyafter&shy;dark</>, "image": duckyafterdark, "location": "Booth F2", "website": "www.duckyafterdark.com", "description": ""},
 {"name": "Feeya Art", "image": feeyaart, "location": "Booth F3", "website": "https://x.com/feeyaowo", "description": ""},
 {"name": "Melty Uchuu", "image": melty, "location": "Booth F4", "website": "https://meltyportfolio.carrd.co/", "description": ""},
-{"name": "cynicalfries / blaidmiracle", "image": cynicalfries, "location": "Booth F5", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
+{"name": "cynicalfries", "image": cynicalfries, "location": "Booth F5", "website": "https://www.instagram.com/cynicalfries/?utm_source=qr", "description": ""},
+{"name": "blaidmiracle", "image": blaidmiracle, "location": "Booth F5", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
 {"name": "Suzukannn ", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
 {"name": <>Ah'Wakara&shy;nai</>, "image": ahwakanarai, "location": "Booth G2", "website": "https://x.com/SWatanabe_yo", "description": ""},
 {"name": "ScaryYandere", "image": scaryyandere, "location": "Booth G3", "website": "https://x.com/ScaryYandere", "description": ""},
@@ -165,7 +168,8 @@ let artistlist = [
 {"name": "remirii", "image": remirii, "location": "Booth H3", "website": "https://remirii-portfolio.weebly.com/illustrations.html", "description": ""},
 {"name": "G8KP", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
 {"name": "LinnyUwU", "image": linnyuwu, "location": "Booth H5", "website": "https://x.com/LinnyUwU", "description": ""},
-{"name": <>mintcho&shy;kuma / mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
+{"name": <>mintcho&shy;kuma</>, "image": mintchokuma, "location": "Booth H6", "website": "https://x.com/mintchokuma", "description": ""},
+{"name": <>mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
 {"name": "Vampy Land", "image": vampyland, "location": "Booth H7", "website": "https://vampy.land/portfolio", "description": ""},
 {"name": "Panchamon", "image": panchamon, "location": "Booth H8", "website": "https://bsky.app/profile/panchamon.bsky.social", "description": ""},
 {"name": "BRW", "image": BRW, "location": "Booth H9", "website": "https://twitter.com/hnbryal", "description": ""},
@@ -350,7 +354,6 @@ export const artistVendorsPage = {
         <WarningAlert>
             <p>The following bulletins are <b>placeholders</b> and need to be updated:</p>
             <ul>
-                <li>Artist Alley Images (Properly selected by artists)</li>
                 <li>Images and Links for some Shrine Booths</li>
             </ul>
             <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
@@ -405,7 +408,7 @@ export const artistVendorsPage = {
             </Col>
         </Row>
 
-        <h5 className="mt-2">All Other Artists</h5>
+        <h5 className="mt-2">Artist Alley Listing</h5>
 
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
