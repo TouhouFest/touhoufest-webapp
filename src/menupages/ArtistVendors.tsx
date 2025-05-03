@@ -152,7 +152,7 @@ let artistlist = [
 {"name": "Feeya Art", "image": feeyaart, "location": "Booth F3", "website": "https://x.com/feeyaowo", "description": ""},
 {"name": "Melty Uchuu", "image": melty, "location": "Booth F4", "website": "https://meltyportfolio.carrd.co/", "description": ""},
 {"name": "cynicalfries / blaidmiracle", "image": cynicalfries, "location": "Booth F5", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
-{"name": "Suzunannn ", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
+{"name": "Suzukannn ", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
 {"name": <>Ah'Wakara&shy;nai</>, "image": ahwakanarai, "location": "Booth G2", "website": "https://x.com/SWatanabe_yo", "description": ""},
 {"name": "ScaryYandere", "image": scaryyandere, "location": "Booth G3", "website": "https://x.com/ScaryYandere", "description": ""},
 {"name": "notnoe_", "image": nono, "location": "Booth G4", "website": "https://x.com/notnoe_", "description": ""},
