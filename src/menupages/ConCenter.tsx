@@ -9,25 +9,10 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
 import { Row, Col } from 'react-bootstrap';
-import Figure from 'react-bootstrap/Figure';
-import { useState } from 'react';
 import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap, WarningAlert } from '../Utils';
 import touhoufest_map from "./../images/touhoufest_map.png";
-import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
-export function GlobalTransformWrapper({src, caption}: {src:any, caption:string}) : JSX.Element {
-    return (<>
-        <Figure>
-            <TransformWrapper>
-                <TransformComponent>
-                    <Figure.Image src={src} fluid rounded/>
-                </TransformComponent>
-            </TransformWrapper>
-            <Figure.Caption>{caption}</Figure.Caption>
-        </Figure>
-
-    </>);
-}
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
 function MapModals(){
 

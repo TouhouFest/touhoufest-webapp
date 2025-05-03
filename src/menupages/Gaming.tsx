@@ -15,7 +15,7 @@ import { ListGroup } from 'react-bootstrap';
 import { CircledBullets, gamingmap } from '../Utils';
 import { useState } from 'react';
 import { Modal, Row, Col } from 'react-bootstrap';
-import {GlobalTransformWrapper} from './ConCenter'
+import {GlobalTransformWrapper} from './../GlobalTransformWrapper';
 
 import gaming from "./../images/gaming.jpg";
 import fracturedtransience from "./../images/gaming/fracturedtransience.jpg";

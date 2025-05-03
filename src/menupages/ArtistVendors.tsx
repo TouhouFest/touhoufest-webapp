@@ -117,8 +117,9 @@ import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
 import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
 
-import { GlobalTransformWrapper } from './ConCenter';
 import { neosanctum, maidacademy, suzukann } from "./../Utils";
+
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
 let artistlist = [
 {"name": "Lyrica Live", "image": lyricalive, "location": "Booth A1", "website": "https://lyricalive.carrd.co/", "description": ""},
