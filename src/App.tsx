@@ -207,7 +207,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <MainMenuOffcanvas 
               mainIcon={<FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/>} 
               menuheader={menuheader} 
-              touhoufest={localStorage.getItem(COLORSTATUS) === 'dark' ? touhoufest_dark : touhoufest} 
+              touhoufest={grabTrueColorState(oppositecolorState) === faBroom ? touhoufest_dark : touhoufest} 
               menunavs={menunavs} 
               darkModeSelector={<DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/>}
               showMainMenu={showMainMenu} setShowMainMenu={setShowMainMenu}
