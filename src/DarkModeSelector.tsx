@@ -1,4 +1,4 @@
-import { faToriiGate, faBroom, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faToriiGate, faBroom, IconDefinition, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { COLORSTATUS } from "./Utils";
@@ -22,5 +22,5 @@ export default function DarkModeSelector({oppositecolorState, setOppositeColorSt
         }
     }
 
-    return (<><span onClick={handleOnClick}><FontAwesomeIcon fixedWidth icon={oppositecolorState}/> {output}</span></>);
+    return (<><span onClick={handleOnClick}><FontAwesomeIcon fixedWidth icon={oppositecolorState === faBroom ? faMoon : faSun}/> {output}</span></>);
 }

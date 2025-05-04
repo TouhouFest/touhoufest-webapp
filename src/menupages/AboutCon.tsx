@@ -11,16 +11,22 @@ import { faCircleInfo, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
 import { Image, Accordion } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
-import { con_banner } from "../Utils";
+import { con_banner, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
-  "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About the Convention</>),
+  "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
   "fluidImage": (<><Image src={con_banner} fluid /></>),
   "body": (
     <>
+      <WarningAlert>
+          <p>The following bulletins have <b>not</b> been confirmed yet:</p>
+          <ul>
+              <li>Gaming operating hours</li>
+          </ul>
+      </WarningAlert>
       <div className="text-center">
         <h3 className="display-6">Welcome to TouhouFest!</h3>
         <p className="lead">June 14th - 15th, 2025</p>
@@ -74,6 +80,34 @@ export const aboutConPage = {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+
+    <h4 className="mt-3">Operating Hours</h4>
+    <p><b>General Con Hours</b></p>
+    <ul>
+        <li>Friday: N/A</li>
+        <li>Saturday: 9:00 AM - 11:00 PM</li>
+        <li>Sunday: 9:00 AM - 6:00 PM</li>
+    </ul>
+    <p><b>Registration</b></p>
+    <ul>
+        <li>Friday: 3:00 PM - 7:00 PM</li>
+        <li>Saturday: 9:00 AM - 5:00 PM</li>
+        <li>Sunday: 9:00 AM - 3:00 PM</li>
+    </ul>
+    <p><b>Artist's Alley/Vendors</b></p>
+    <ul>
+        <li>Friday: N/A</li>
+        <li>Saturday: 9:00 AM - 6:00 PM</li>
+        <li>Sunday: 9:00 AM - 5:30 PM</li>
+    </ul>
+    <p><b>Gaming*</b></p>
+    <ul>
+        <li>Friday: N/A</li>
+        <li>Saturday: 9:30AM - 10:30 PM</li>
+        <li>Sunday: 9:00 AM - 5:00 PM</li>
+    </ul>
+    <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
+
     </>
   ),
 }
