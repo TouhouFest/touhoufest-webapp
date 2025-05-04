@@ -84,15 +84,6 @@ export const guestsPage = {
             <ul>
                 <li>Location(s) (see remarks on "Key Locations" page)</li>
             </ul>
-            <p>The below bulletins are <b>placeholders</b> and should be updated:</p>
-            <ul>
-                <li>Finalized event titles and descriptions for the below guest-related events:</li>
-                <ul>
-                    <li>TouhouFest LIVE Concert</li>
-                    <li>Placeholder for M-1 Grand Prix Showing</li>
-                    <li>Placeholder for Miko-san Performance</li>
-                </ul>
-            </ul>
         </WarningAlert>
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
@@ -208,9 +199,9 @@ export const guestsPage = {
                 <Card>
                     <Card.Img variant="top" src={miko}></Card.Img>
                     <Card.Body>
-                        <Card.Title>Miko (IOSYS)</Card.Title>
+                        <Card.Title>Miko-san</Card.Title>
                         <Card.Text>From August 2004, working as a freelance vocalist and voice provider. From May 2022, the special tourism ambassador for Choshi City, Chiba Prefecture,Japan.</Card.Text>
-                        <Card.Text>miko's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "Marisa Stole Something Precious", "Cirno's Perfect Math Class," and "Scarlet Police Ghetto Patrol 24 Hours" became popular on video sites.</Card.Text>
+                        <Card.Text>miko-san's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "Marisa Stole Something Precious", "Cirno's Perfect Math Class," and "Scarlet Police Ghetto Patrol 24 Hours" became popular on video sites.</Card.Text>
                         <Card.Text>Since then, she has been active as a vocalist in a wide range of fields, both commercial and doujin, singing songs for major companies' web commercials, game music, game character image songs, and TV program theme songs. She also has a wide range of activities outside of singing, such as appearing in visual videos, voice acting, radio personality, and stage performances.</Card.Text>
                         <Card.Text>Her main occupation is systems engineering!</Card.Text>
                     </Card.Body>
