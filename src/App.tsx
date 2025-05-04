@@ -51,13 +51,23 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
   const [oppositecolorState, setOppositeColorState] = useState(getColorState());
   function getColorState() {
       let status:string|null = localStorage.getItem(COLORSTATUS);
-      if(status === "light" || status === null) {
-          document.documentElement.setAttribute('data-bs-theme','light');
-          return faBroom;
-      }
-      else {
+      if(status === null ){
+        if((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.setAttribute('data-bs-theme','dark');
           return faToriiGate;
+        }
+        else {
+          document.documentElement.setAttribute('data-bs-theme','light');
+          return faBroom;
+        }
+      }
+      if(status === "light") {
+        document.documentElement.setAttribute('data-bs-theme','light');
+        return faBroom;
+      }
+      else {
+        document.documentElement.setAttribute('data-bs-theme','dark');
+        return faToriiGate;
       }
   }
   function grabTrueColorState(input:IconDefinition) {
