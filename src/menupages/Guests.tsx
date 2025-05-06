@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobeAmericas, faShop } from '@fortawesome/free-solid-svg-icons';
-import { faTwitch, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faTwitch, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -116,7 +116,7 @@ export const guestsPage = {
                         <Card.Text>Founded by Yassie and ELEMENTAS in 2008, A-One Records has since then become a household name in the Touhou remix and Eurobeat scenes alike, producing the TOHO EUROBEAT, SUPER EURO SMASH and EUROBEAT ATTACK!! album series.</Card.Text>
                         <Card.Text>This year, A-ONE Records will be performing a live concert starring ELEMENTAS, Rute and Aki, truly an experience that must be seen to be believed!</Card.Text>
                         <Alert variant="success">
-                            <Card.Text><FontAwesomeIcon icon={faCompactDisc}/> A-One will be selling their newest release "<b>TOHO EUROBEAT VOL. 25</b>" in-person at TouhouFest!</Card.Text>
+                            <Card.Text><FontAwesomeIcon icon={faCompactDisc}/> A-One will be selling their newest release "<b><a href = "https://www.youtube.com/watch?v=YglkdN6NqfA" target="_blank" rel="noreferrer">TOHO EUROBEAT VOL. 25</a></b>" in-person at TouhouFest!</Card.Text>
                         </Alert>
                     </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://twitter.com/A_One_JP" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
@@ -179,7 +179,10 @@ export const guestsPage = {
                         <Card.Text>Music circle TAMUSIC is run by its head musician TAM and is the world's most prolific and largest Doujin music circle. He is capable of improvising any song he has listened to, and composes music that plays with 30 different types of instruments. Currently the world's first publisher of Touhou Ensou Douga (東方演奏動画).</Card.Text>
                         <Card.Text>Since 2004, his Youtube channel has reached 120k subscribers, 60 million replays, and he has released 192 Touhou doujin music CDs, produced over 2000 rearrange music tracks, and traveled across the world and performed in 20 different locations across Asia, North America, and Europe.</Card.Text>
                     </Card.Body>
-                    <Card.Footer className="text-center small"><a href="https://twitter.com/tamusic" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                    <Card.Footer className="text-center small">
+                        <Card.Link href="https://twitter.com/tamusic" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</Card.Link>
+                        <Card.Link href="https://www.youtube.com/user/violinpiano2" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube}/> YouTube</Card.Link>
+                    </Card.Footer>
                 </Card>
             </Col>
             {/*
@@ -201,7 +204,7 @@ export const guestsPage = {
                     <Card.Body>
                         <Card.Title>Miko-san</Card.Title>
                         <Card.Text>From August 2004, working as a freelance vocalist and voice provider. From May 2022, the special tourism ambassador for Choshi City, Chiba Prefecture,Japan.</Card.Text>
-                        <Card.Text>miko-san's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "Marisa Stole Something Precious", "Cirno's Perfect Math Class," and "Scarlet Police Ghetto Patrol 24 Hours" became popular on video sites.</Card.Text>
+                        <Card.Text>miko-san's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "<a href="https://www.youtube.com/watch?v=1pDM6fQUfJs" target="_blank" rel="noreferrer">Marisa Stole Something Precious</a>", "<a href="https://www.youtube.com/watch?v=5wFDWP5JwSM" target="_blank" rel="noreferrer">Cirno's Perfect Math Class</a>," and "<a href="https://www.youtube.com/watch?v=rl7ppuXMfC8" target="_blank" rel="noreferrer">Scarlet Police Ghetto Patrol 24 Hours</a>" became popular on video sites.</Card.Text>
                         <Card.Text>Since then, she has been active as a vocalist in a wide range of fields, both commercial and doujin, singing songs for major companies' web commercials, game music, game character image songs, and TV program theme songs. She also has a wide range of activities outside of singing, such as appearing in visual videos, voice acting, radio personality, and stage performances.</Card.Text>
                         <Card.Text>Her main occupation is systems engineering!</Card.Text>
                     </Card.Body>
