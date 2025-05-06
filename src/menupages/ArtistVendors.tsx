@@ -157,7 +157,6 @@ let artistlist = [
 {"name": "Sailin' Yumemi", "image": placeholder, "location": "Booth F5", "website": "https://space.bilibili.com/280431373?plat_id=1&share_from=space&share_medium=iphone&share_plat=ios&share_session_id=0E66CBF3-AF77-43D1-A2DA-40E600B42856&share_source=COPY&share_tag=s_i&spmid=main.space.0.0&timestamp=1721227907&unique_k=eX9r7Ab", "description": ""},
 {"name": "cynicalfries", "image": cynicalfries, "location": "Booth F6", "website": "https://www.instagram.com/cynicalfries/?utm_source=qr", "description": ""},
 {"name": "blaidmiracle", "image": blaidmiracle, "location": "Booth F6", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
-
 {"name": "Suzukannn", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
 {"name": <>Ah'Wakara&shy;nai</>, "image": ahwakanarai, "location": "Booth G2", "website": "https://x.com/SWatanabe_yo", "description": ""},
 {"name": "ScaryYandere", "image": scaryyandere, "location": "Booth G3", "website": "https://x.com/ScaryYandere", "description": ""},
