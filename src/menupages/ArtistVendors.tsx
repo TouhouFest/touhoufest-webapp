@@ -163,7 +163,6 @@ let artistlist = [
 {"name": "notnoe", "image": nono, "location": "Booth G4", "website": "https://x.com/notnoe_", "description": ""},
 {"name": "Archanciel (LMG)", "image": leminigensokyo, "location": "Booth G5", "website": "https://www.facebook.com/LeMiniGensokyo/", "description": ""},
 {"name": "Megapig9001", "image": megapig, "location": "Booth G6", "website": "https://www.youtube.com/c/Megapig9001", "description": ""},
-
 {"name": "Moguman", "image": moguman, "location": "Booth G7", "website": "https://x.com/_MoguMan_/media", "description": ""},
 {"name": "Minomino", "image": minimono, "location": "Booth G8", "website": "Instagram.com/minominoten", "description": ""},
 {"name": "Dichroic Purpilion", "image": mystia, "location": "Booth H1", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "description": ""},
@@ -175,8 +174,6 @@ let artistlist = [
 {"name": <>mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
 {"name": "Vampy Land", "image": vampyland, "location": "Booth H7", "website": "https://vampy.land/portfolio", "description": ""},
 {"name": "Chenna Kitty", "image": chennakitty, "location": "Booth H8", "website": "https://chennakitty.carrd.co/ ", "description": ""},
-
-
 {"name": "BRW", "image": BRW, "location": "Booth H9", "website": "https://twitter.com/hnbryal", "description": ""},
 {"name": "CSSRart", "image": cssrart, "location": "Booth H10", "website": "https://x.com/CssRart", "description": ""},
 ];
