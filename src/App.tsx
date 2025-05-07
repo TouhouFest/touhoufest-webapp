@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle } from '@fortawesome/free-solid-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
 import Dataset from "./Dataset";
@@ -151,7 +151,8 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     );
   }
 
-  let filterclass = "hasFilters p-1 me-2 align-items-center";
+  // let filterclass = "hasFilters p-1 me-2 align-items-center";
+  let filterclass = "p-1 me-2 align-items-center";
   let num_filters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
   if (num_filters === 0 && appliedFilters["search_query"] === "") {
     filterclass += " d-none"
@@ -215,7 +216,11 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <div className="d-flex order-1 ms-auto" id="filter-widget">
               <Nav className="flex-row">
                 <Nav.Link href="#home" className={filterclass}>
-                  <small><FontAwesomeIcon icon={faCheck} className="align-middle"></FontAwesomeIcon></small>
+                  {/*<small><FontAwesomeIcon icon={faCheck} className="align-middle"></FontAwesomeIcon></small> */}
+                  <span className="fa-layers fa-fw">
+                    <FontAwesomeIcon icon={faFilter}/>
+                    <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/>
+                  </span>
                 </Nav.Link>
                 <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}>
                   <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
