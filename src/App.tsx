@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle } from '@fortawesome/free-solid-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
 import Dataset from "./Dataset";
@@ -151,11 +151,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     );
   }
 
-  let filterclass = "hasFilters p-1 me-2 align-items-center";
+  // let filterclass = "hasFilters p-1 me-2 align-items-center";
   let num_filters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
-  if (num_filters === 0 && appliedFilters["search_query"] === "") {
-    filterclass += " d-none"
-  }
+  let filter_active:boolean = !(num_filters === 0 && appliedFilters["search_query"] === "");
 
   // this useeffect runs whenever mode changes, and after the display set is repopulated
   useEffect(() => {
@@ -212,15 +210,12 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
               darkModeSelector={<DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/>}
               showMainMenu={showMainMenu} setShowMainMenu={setShowMainMenu}
             />
+            {/* this section won't display on devices but can be re-enabled if desired to do other stuff */}
             <div className="d-flex order-1 ms-auto" id="filter-widget">
-              <Nav className="flex-row">
-                <Nav.Link href="#home" className={filterclass}>
-                  <small><FontAwesomeIcon icon={faCheck} className="align-middle"></FontAwesomeIcon></small>
-                </Nav.Link>
+              <Nav className="flex-row d-none">
                 <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}>
                   <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
                 </Nav.Link>
-                { /* <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon> Search</Nav.Link> */}
               </Nav>
             </div>
           </Container>
@@ -246,7 +241,11 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <Nav.Link eventKey="bookmarks"><FontAwesomeIcon icon={fasStar}></FontAwesomeIcon> Starred</Nav.Link>
           </Nav.Item>
           <Nav.Item onClick={() => handleRoleChange("filterView")}>
-            <Nav.Link eventKey="filter"><FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> Filters</Nav.Link>
+            <Nav.Link eventKey="filter">
+              <span className="fa-layers fa-fw">
+                  <FontAwesomeIcon icon={faFilter}/>
+                  {filter_active ? <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/> : <></>}
+              </span> Filters</Nav.Link>
           </Nav.Item>
         </Nav>
       </div>
