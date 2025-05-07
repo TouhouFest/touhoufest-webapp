@@ -210,8 +210,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
               darkModeSelector={<DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/>}
               showMainMenu={showMainMenu} setShowMainMenu={setShowMainMenu}
             />
+            {/* this section won't display on devices but can be re-enabled if desired to do other stuff */}
             <div className="d-flex order-1 ms-auto" id="filter-widget">
-              <Nav className="flex-row">
+              <Nav className="flex-row d-none">
                 <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}>
                   <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
                 </Nav.Link>
