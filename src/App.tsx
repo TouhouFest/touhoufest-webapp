@@ -187,6 +187,13 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     return (<NavDropdown.Item href={'#'+day}>{day}</NavDropdown.Item>);
   });
 
+  function returnFilterIndicator() : JSX.Element {
+    return (<span className="fa-layers fa-fw">
+      <FontAwesomeIcon icon={faFilter}/>
+      {filter_active ? <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/> : <></>}
+    </span>);
+  }
+
   // bg="light" data-bs-theme="light"
   return (
     <>
@@ -210,11 +217,11 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
               darkModeSelector={<DarkModeSelector oppositecolorState={oppositecolorState} setOppositeColorState={setOppositeColorState}/>}
               showMainMenu={showMainMenu} setShowMainMenu={setShowMainMenu}
             />
-            {/* this section won't display on devices but can be re-enabled if desired to do other stuff */}
+
             <div className="d-flex order-1 ms-auto" id="filter-widget">
-              <Nav className="flex-row d-none">
+              <Nav className="flex-row">
                 <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}>
-                  <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon> / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
+                  {returnFilterIndicator()} / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
                 </Nav.Link>
               </Nav>
             </div>
@@ -241,11 +248,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <Nav.Link eventKey="bookmarks"><FontAwesomeIcon icon={fasStar}></FontAwesomeIcon> Starred</Nav.Link>
           </Nav.Item>
           <Nav.Item onClick={() => handleRoleChange("filterView")}>
-            <Nav.Link eventKey="filter">
-              <span className="fa-layers fa-fw">
-                  <FontAwesomeIcon icon={faFilter}/>
-                  {filter_active ? <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/> : <></>}
-              </span> Filters</Nav.Link>
+            <Nav.Link eventKey="filter">{returnFilterIndicator()}Filters</Nav.Link>
           </Nav.Item>
         </Nav>
       </div>
