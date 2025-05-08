@@ -30,7 +30,6 @@ export const cosplayPage = {
             <p>The below items are <b>outdated</b> and should be updated:</p>
             <ul>
                 <li>Locations (see remarks in "Key Locations" page)</li>
-                <li>"Netherworld" photoshoot timeslot</li>
             </ul>
         </WarningAlert>
         <h4>Location(s)</h4>
