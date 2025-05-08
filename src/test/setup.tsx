@@ -2,6 +2,8 @@ import { expect, afterEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import * as matchers from "@testing-library/jest-dom/matchers";
 
+/// <reference types="@vitest/browser/context" />
+
 expect.extend(matchers);
 
 afterEach(() => {
@@ -27,6 +29,7 @@ export const LocalNotifications = {
 
 vi.mock('@capacitor/local-notifications');
 vi.mock('@capacitor/toast');
+vi.mock('@capacitor/app');
 
 Object.defineProperty(window, 'matchMedia', {
     writable: true,

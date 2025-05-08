@@ -2,7 +2,16 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Bookmark from './Bookmark';
 import Markdown from 'marked-react';
 import {App} from '@capacitor/app';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import IssueNotifications from './IssueNotifications';
+import dayjs from "dayjs/esm/index.js";
+import customParseFormat from "dayjs/esm/plugin/customParseFormat";
+import timezone from "dayjs/esm/plugin/timezone";
+import utc from "dayjs/esm/plugin/utc";
+
+dayjs.extend(customParseFormat);
+dayjs.extend(timezone);
+dayjs.extend(utc);
 
 function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_var:boolean, hide_fxn:Function, event_package:any, evt_print:JSX.Element}) {
 
@@ -37,7 +46,7 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   return (
     <Offcanvas show={show_var} onHide={handleHide}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title className="align-middle">Event Details <Bookmark index={event_package["uniqueID"]}></Bookmark></Offcanvas.Title>
+        <Offcanvas.Title className="align-middle">Event Details <Bookmark index={event_package["uniqueID"]} /> <IssueNotifications index={event_package["uniqueID"]} title={event_package["title"]} start_ts={dayjs(event_package["combinedStart"])} /></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         {output}
