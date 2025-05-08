@@ -221,7 +221,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <div className="d-flex order-1 ms-auto" id="filter-widget">
               <Nav className="flex-row">
                 <Nav.Link href="#home" className="me-2" onClick={() => handleRoleChange("filter")}>
-                  {returnFilterIndicator()} / <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
+                  {returnFilterIndicator()} Edit Filters
                 </Nav.Link>
               </Nav>
             </div>
