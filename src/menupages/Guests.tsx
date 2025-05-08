@@ -202,7 +202,7 @@ export const guestsPage = {
                 <Card>
                     <Card.Img variant="top" src={miko}></Card.Img>
                     <Card.Body>
-                        <Card.Title>Miko-san</Card.Title>
+                        <Card.Title>Miko</Card.Title>
                         <Card.Text>From August 2004, working as a freelance vocalist and voice provider. From May 2022, the special tourism ambassador for Choshi City, Chiba Prefecture,Japan.</Card.Text>
                         <Card.Text>miko-san's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "<a href="https://www.youtube.com/watch?v=1pDM6fQUfJs" target="_blank" rel="noreferrer">Marisa Stole Something Precious</a>", "<a href="https://www.youtube.com/watch?v=5wFDWP5JwSM" target="_blank" rel="noreferrer">Cirno's Perfect Math Class</a>," and "<a href="https://www.youtube.com/watch?v=rl7ppuXMfC8" target="_blank" rel="noreferrer">Scarlet Police Ghetto Patrol 24 Hours</a>" became popular on video sites.</Card.Text>
                         <Card.Text>Since then, she has been active as a vocalist in a wide range of fields, both commercial and doujin, singing songs for major companies' web commercials, game music, game character image songs, and TV program theme songs. She also has a wide range of activities outside of singing, such as appearing in visual videos, voice acting, radio personality, and stage performances.</Card.Text>

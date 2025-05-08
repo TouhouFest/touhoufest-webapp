@@ -354,10 +354,6 @@ export const artistVendorsPage = {
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
         <WarningAlert>
-            <p>The following bulletins are <b>placeholders</b> and need to be updated:</p>
-            <ul>
-                <li>Images and Links for some Shrine Booths</li>
-            </ul>
             <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
             <ul>
                 <li>Locations (see remarks on "Key Locations" page)</li>
