@@ -30,7 +30,7 @@ export const cosplayPage = {
             <p>The below items are <b>outdated</b> and should be updated:</p>
             <ul>
                 <li>Locations (see remarks in "Key Locations" page)</li>
-                <li>Status of "Netherworld" photoshoot (Whether to update or remove from app)</li>
+                <li>"Netherworld" photoshoot timeslot</li>
             </ul>
         </WarningAlert>
         <h4>Location(s)</h4>
@@ -56,13 +56,12 @@ export const cosplayPage = {
             </Col>
         </Row>
 
-        <h4>Cosplay Meetups/Photoshoots</h4>
+        <h4>Cosplay Rules</h4>
+        <p>TouhouFest celebrates the creativity of cosplayers and encourage everyone to cosplay whomever they wish regardless of size, gender, age, religion, shape, color, or even species. Cosplay is all about having fun and creativity!</p>
         <Accordion className="my-2">
             <Accordion.Item eventKey="0">
                 <Accordion.Header>Cosplay Guidelines</Accordion.Header>
                 <Accordion.Body>
-                    <p>Costumes must be appropriate to wear in public. </p>
-
                     <ul>
                         <li>No bare feet, some form of foot covering must be worn.</li>
 
@@ -72,33 +71,100 @@ export const cosplayPage = {
                             <li>Examples include Nazi/SS imagery, KKK imagery, blackface, etc</li>
                         </ul>
 
-                        <li>No props/costume pieces longer than six feet. Cosplays must not be big enough to block doorways!</li>
+                        <li>Costumes should not obstruct or impede the flow of traffic or entryway.</li>
 
                         <li>No excessively shedding props or costumes (Use of glitter, feathers, etc).</li>
 
                         <li>No blades or metal props. PVC and wood are fine!</li>
 
+                        <li>Props must measure less than 6 feet in any arbitrary direction at rest. Expandable props and costumes can be extended temporarily for pictures or photoshoots, provided doing so does not interfere with traffic flow.</li>
+
+                        <li>Costume and clothing should not expose the body in such a way as to be deemed indecent exposure. Private parts must be covered in an opaque material that will not slip or have gaps.</li>
+
+                        <li>Males wearing tight-fitting costumes are required to wear a dance belt.</li>
+
+                        <li>Costumes or props that offer extra mobility (i.e. skates, skateboards, in line skates, scooter, or bikes) can be used for display purposes only. They cannot be ridden around.</li>
+
+                        <li>Vintage, historical, any non current uniform and any military or police-style costumes may be address at the convention’s discretion.</li>
+
                         <li>Any weapons props must be taken to a prop check to be checked and tagged.</li>
 
-                        <ul>
-                            <li>Prop firearms must be clearly fake (Orange tip, painted with vibrant colors), be completely non-functional, and have no moving parts.</li>
-
-                                <ul>
-                                    <li>These rules extend to nerf and other foam dart guns, make sure they cannot shoot and have no parts that can move!</li>
-                                </ul>
-
-                            <li>Blades must not be sharp enough to hurt anyone</li>
-
-                            <li>Bow props must have no string between them, and arrow props must be non-functional.</li>
-
-                            <li>Nunchucks are not permitted</li>
-                        </ul>
                     </ul>
+
+                    <p>Attendees should understand and agree that, for their safety and the safety of everyone at TouhouFest, we have the absolute and immediate discretion and right to inspect your costumes, prop weapons, and any other items you bring to the Event. Because your safety and the safety of every attendee is of the utmost importance.</p>
+
+                    <p>TouhouFest reserves the right to modify and/or update this policy at any time in their sole discretion and without prior notice.</p>
 
                 </Accordion.Body>
             </Accordion.Item>
-            </Accordion>
-                <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
+            <Accordion.Item eventKey="1">
+                <Accordion.Header>Props & Peace Bonding</Accordion.Header>
+                <Accordion.Body>
+                    <p>Prop weapons must be submitted to “Weapons Check” for Peace Bonding. TouhouFest has the sole discretion to approve prop weapons. Please visit us at one of our Weapons Check booths during the Event. TouhouFest Weapons Check booth locations shall be designated in the programs and on signs.</p>
+                    <p>We may revoke your Peace Bond at any time in our sole discretion. Behavior which will warrant revocation of your Peace Bond includes:</p>
+                    <ul>
+                        <li>Brandishing an item in an inappropriate fashion, such as play-fighting or swinging the prop around</li>
+                        <li>Causing complaints from other attendees of the Event</li>
+                        <li>Tampering or altering of the Peace Bond</li>
+                    </ul>
+                    <h5>Prop Weapons</h5>
+                    <p>Prop weapons are inoperable weapons that support the overall look of your costume or character. For example, plastic Airsoft guns, Nerf guns, water guns, dart guns, disc guns, pellet guns, and cap guns are prop weapons.</p>
+                    <h5>Peace Bonding Rules</h5>
+                    <p>If a prop weapon is, or was, at any time capable of firing anything, it must be rendered permanently inoperable in order to qualify for Peace Bonding. You can do this by, for example, permanently plugging the barrel with glue, caulk, or any non-removable substance and hot gluing all moving components of the prop in place. You must be able to prove that the prop weapon is permanently inoperable upon inspection.</p>
+                    <p>In addition, to qualify for Peace Bonding, your prop weapon must meet the following criteria:</p>
+                    <ul>
+                        <li>All bladed props, prop firearms and prop knives cannot contain metal, have metal components, or have metal-based paints on them.</li>
+                        <ul>
+                            <li>Note: Lightsabers with metal hilts are allowed.</li>
+                        </ul>
+                        <li>Prop explosives or ammunition cannot be made out of metal.</li>
+                        <li>All swords and bladed prop weapons must adhere to the following rules:</li>
+                        <ul>
+                            <li>They cannot be made out of metal</li>
+                            <li>If your non-metal blade has a sharp edge or pointed tip, it must be anchored to a hard sheath for the duration of the Event</li>
+                            <li>If you do not have a hard sheath, your non-metal blade must have a blunt edge and blunt tip</li>
+                        </ul>
+                        <li>All prop bows must be unstrung or have a low-tensile thread with no draw weight and be incapable of shooting.</li>
+                        <li>All prop arrows must have blunt non-metal tips.</li>
+                        <li>Metal chains are not permitted unless it is for cosplay and affixed to a piece of clothing and/or armor.</li>
+                    </ul>
+                    <p>If your prop weapon is a toy, look-alike, or imitation firearm, then federal regulations (<a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-II/subchapter-H/part-272/section-272.3" rel="noreferrer">15 CFR § 272.3</a>) require that it either be translucent enough to, permit unmistakable observation of the device’s complete contents or must have at least one of the following:</p>
+                    <ul>
+                        <li>An Orange Solid Plug in Barrel: Have a blaze orange (Fed-Std-595B 12199) or orange color brighter than that specified by the federal standard color number solid plug permanently affixed to the muzzle end of the barrel as an integral part of the entire device and recessed no more than 6 millimeters from the muzzle end of the barrel; or</li>
+                        <li>An Orange Barrel Marking: A blaze orange (Fed-Std-595B 12199) or orange color brighter than that specified by the federal standard color number, marking permanently affixed to the exterior surface of the barrel, covering the circumference of the barrel from the muzzle end for a depth of at least 6 millimeters; or</li>
+                        <li>Entire Surface Coloration: Coloration of the entire exterior surface of the device in white, bright red, bright orange, bright yellow, bright green, bright blue, bright pink, or bright purple, either singly or as the predominant color in combination with other colors in any pattern.</li>
+                    </ul>
+                    <p>Please take care when outside or when transporting any form of firearm prop.</p>
+                    <p>Regardless of how realistic the prop may look, ensure that it is completely hidden while traveling and be aware of your surroundings, attire, and the appearance of your props to bystanders when outside of TouhouFest. Do not assume a costume will reassure people that your prop is not a real weapon.</p>
+                    <h5>Peace-Bonded Weapons at TouhouFest</h5>
+                    <p>You may display your prop weapons only as costume pieces. Do not swing or brandish your prop weapon in any way that could be considered unsafe or threatening.</p>
+                    <p>You may pose with a prop weapon in a brandishing manner, so long as no reasonable person would interpret it as anything but a pose for dramatic effect. TouhouFest staff or management may stop your posed brandishing in their sole discretion.</p>
+                    <p>Please put your prop weapons away when leaving the Event site at night so that you don’t get the attention of local law enforcement. TouhouFest cannot be responsible for any actions taken by local law enforcement agencies, such as detaining and questioning you, if you decide to display or brandish your prop weapons at or outside of TouhouFest. </p>
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+                <Accordion.Header>Prohibited Items</Accordion.Header>
+                <Accordion.Body>
+                    <p><b><em>No Real Weapons Are Allowed at TouhouFest!</em></b></p>
+                    <p>This includes firearms, knives, curios, relic antique firearms, any form of ammunition, any items designed or manufactured with the intent to cause death or serious bodily injury, whether carried openly or concealed, even if any such weapons are inoperable or unusable and irrespective of whether you are licensed to possess such weapons. Items that may otherwise be legal for you to own or carry are not welcome at TouhouFest if they violate this Prop / Replica Weapons Policy.</p>
+                    <p>The following items are not permitted at TouhouFest:</p>
+                    <ul>
+                        <li>All Metal Weapons</li>
+                        <li>Firearms, Ammunition, Rifles, Shotguns, Handguns, Blowguns, Tasers, Laser Pointers, Laser-Aiming Devices or similar Laser Devices</li>
+                        <li>Explosives, Incendiary Devices, Chemical Weapons, and Pepper Spray / Mace</li>
+                        <li>Knives, Live Blades/Swords (including Katana and other Martial Arts Style Swords), Daggers, Sword Canes, Switchblades, Bali-Song (Butterfly Knife), Axes, Kunai, Ice Skates, and Hatchets</li>
+                        <li>Metal Pole Arms, Wooden/Metal Bats, Paddles, Stilts, Golf Clubs, and Vuvuzelas</li>
+                        <li>Archery and Hunting Bows, Arrows, Nunchucks, Brass Knuckles, and Whips</li>
+                        <li>Any item designed or manufactured with the intent to cause death or serious bodily injury to any person or property, any item that is illegal in the State of California, or any item that appears, in TouhouFest’s sole discretion, to be dangerous or which would pose or place others at risk or harm, immediate or otherwise.</li>
+                    </ul>
+                    <p>(Note: some venues prohibit other items e.g. glass bottles, food, alcohol, and e-cigarettes. Please check with the venue before bringing such items.)</p>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
+
+        <h4>Cosplay Meetups/Photoshoots</h4>
+
+        <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
 
             <Accordion>
                 <Accordion.Item eventKey="0">

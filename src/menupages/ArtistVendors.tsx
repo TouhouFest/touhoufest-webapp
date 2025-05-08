@@ -80,11 +80,12 @@ import duckyafterdark from "./../images/artistalley/duckyafterdark.jpg";
 import feeyaart from "./../images/artistalley/feeyaart.jpg";
 import melty from "./../images/artistalley/melty.jpg";
 import cynicalfries from "./../images/artistalley/cynicalfries.jpg";
+import blaidmiracle from "./../images/artistalley/blaidmiracle.jpg";
 import ahwakanarai from "./../images/artistalley/ahwakanarai.jpg";
 import scaryyandere from "./../images/artistalley/scaryyandere.jpg";
 import nono from "./../images/artistalley/nono.jpg";
 import leminigensokyo from "./../images/artistalley/leminigensokyo.jpg";
-import tboddy from "./../images/artistalley/tboddy.jpg";
+import megapig from "./../images/artistalley/megapig.jpg"
 import moguman from "./../images/artistalley/moguman.jpg";
 import minimono from "./../images/artistalley/minimono.jpg";
 import mystia from "./../images/artistalley/mystia.jpg";
@@ -110,35 +111,37 @@ import serapim from "./../images/artistalley/serapim.jpg";
 import whimsicalarchive from "./../images/artistalley/whimsicalarchive.jpg";
 import brainjuice from "./../images/artistalley/brainjuice.jpg";
 import sunameridrill from "./../images/artistalley/sunameridrill.jpg";
+import mintchokuma from "./../images/artistalley/mintchokuma.jpg";
 
 import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
 import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
 
-import { GlobalTransformWrapper } from './ConCenter';
 import { neosanctum, maidacademy, suzukann } from "./../Utils";
+
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
 let artistlist = [
 {"name": "Lyrica Live", "image": lyricalive, "location": "Booth A1", "website": "https://lyricalive.carrd.co/", "description": ""},
 {"name": <>GuruGuru&shy;Maru</>, "image": gurugurumaru, "location": "Booth A2", "website": "https://x.com/GuruGuruMaru_?t=LpCCKsbKLTIa_WDah5Ehyw&s=09", "description": ""},
-{"name": "Xiaobbinc", "image": xiaobb, "location": "Booth A3", "website": "www.instagram.com/xiaobbinc", "description": ""},
+{"name": "Xiaobb inc", "image": xiaobb, "location": "Booth A3", "website": "www.instagram.com/xiaobbinc", "description": ""},
 {"name": "Umaholics Anonymous", "image": umaholics, "location": "Booth A4", "website": "https://umaholics-anonymous.carrd.co/", "description": ""},
 {"name": "Netcavy Records", "image": netcavy, "location": "Booth B1", "website": "https://netcavy.net/portfolio", "description": ""},
 {"name": "Neo Sanctum", "image": neosanctum, "location": "Booth B2", "website": "https://x.com/NSanctum", "description": ""},
 {"name": "11th hour", "image": crescentia, "location": "Booth B3", "website": "https://crescentia.bandcamp.com/album/touhou-orchestral-suite-grand-fantasy", "description": ""},
 {"name": "Dreaming Chimera", "image": dreamingchimera, "location": "Booth B4", "website": "https://dreamingchimera.carrd.co/", "description": ""},
 {"name": "ASAZEi", "image": asazei, "location": "Booth B5", "website": "https://x.com/ASAZEi_art", "description": ""},
-{"name": "quowl", "image": quowl, "location": "Booth B6", "website": "https://quowl.carrd.co/", "description": ""},
+{"name": <>Biscay&shy;Biscuits</>, "image": biscaybiscuits, "location": "Booth B6", "website": "https://www.instagram.com/themoondruid?igsh=NGVhN2U2NjQ0Yg==", "description": ""},
 {"name": "Juliana Egg", "image": julianaegg, "location": "Booth C1", "website": "instagram.com/juliana_egg", "description": ""},
 {"name": <>MARLO&shy;WEMEMO</>, "image": MARLOWEMEMO, "location": "Booth C2", "website": "https://www.instagram.com/marlowememo/", "description": ""},
 {"name": "limpachi", "image": limpachu, "location": "Booth C3", "website": "https://twitter.com/limpachu", "description": ""},
-{"name": <>sirmaster&shy;knight (Meiki)</>, "image": meiki, "location": "Booth C4", "website": "https://sirmasterknight.carrd.co/", "description": ""},
+{"name": <>Meiki</>, "image": meiki, "location": "Booth C4", "website": "https://sirmasterknight.carrd.co/", "description": ""},
 {"name": "NekoMofu Jinja", "image": nekomofu, "location": "Booth C5", "website": "https://www.instagram.com/schemanineko/", "description": ""},
 {"name": "Grillboss Co.", "image": grillboss, "location": "Booth C6", "website": "https://egguv.carrd.co/", "description": ""},
 {"name": "Partyu", "image": partyu, "location": "Booth D1", "website": "https://twitter.com/_partyu", "description": ""},
-{"name": "Kureihii", "image": kurehii, "location": "Booth D2", "website": "https://www.instagram.com/kureihii/?hl=en", "description": ""},
-{"name": <>Biscay&shy;Biscuits</>, "image": biscaybiscuits, "location": "Booth D3", "website": "https://www.instagram.com/themoondruid?igsh=NGVhN2U2NjQ0Yg==", "description": ""},
-{"name": "Chenna Kitty", "image": chennakitty, "location": "Booth D4", "website": "https://chennakitty.carrd.co/ ", "description": ""},
+{"name": "Kureihii Art", "image": kurehii, "location": "Booth D2", "website": "https://www.instagram.com/kureihii/?hl=en", "description": ""},
+{"name": "quowl", "image": quowl, "location": "Booth D3", "website": "https://quowl.carrd.co/", "description": ""},
+{"name": "Panchamon", "image": panchamon, "location": "Booth D4", "website": "https://bsky.app/profile/panchamon.bsky.social", "description": ""},
 {"name": "haiyun", "image": haiyun, "location": "Booth D5", "website": "https://www.instagram.com/haiyunee/", "description": ""},
 {"name": "Birnam Hall", "image": birnam, "location": "Booth D6", "website": "https://www.instagram.com/birnamhall/", "description": ""},
 {"name": "Tama Tama Shop", "image": tama, "location": "Booth E1", "website": "https://tamamagatama.carrd.co", "description": ""},
@@ -151,23 +154,26 @@ let artistlist = [
 {"name": <>Duckyafter&shy;dark</>, "image": duckyafterdark, "location": "Booth F2", "website": "www.duckyafterdark.com", "description": ""},
 {"name": "Feeya Art", "image": feeyaart, "location": "Booth F3", "website": "https://x.com/feeyaowo", "description": ""},
 {"name": "Melty Uchuu", "image": melty, "location": "Booth F4", "website": "https://meltyportfolio.carrd.co/", "description": ""},
-{"name": "cynicalfries / blaidmiracle", "image": cynicalfries, "location": "Booth F5", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
-{"name": "Suzunannn ", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
+{"name": "Sailin' Yumemi", "image": placeholder, "location": "Booth F5", "website": "https://space.bilibili.com/280431373?plat_id=1&share_from=space&share_medium=iphone&share_plat=ios&share_session_id=0E66CBF3-AF77-43D1-A2DA-40E600B42856&share_source=COPY&share_tag=s_i&spmid=main.space.0.0&timestamp=1721227907&unique_k=eX9r7Ab", "description": ""},
+{"name": "cynicalfries", "image": cynicalfries, "location": "Booth F6", "website": "https://www.instagram.com/cynicalfries/?utm_source=qr", "description": ""},
+{"name": "blaidmiracle", "image": blaidmiracle, "location": "Booth F6", "website": "https://www.pixiv.net/en/users/97844354/artworks", "description": ""},
+{"name": "Suzukannn", "image": suzukann, "location": "Booth G1", "website": "https://x.com/suzukannn", "description": ""},
 {"name": <>Ah'Wakara&shy;nai</>, "image": ahwakanarai, "location": "Booth G2", "website": "https://x.com/SWatanabe_yo", "description": ""},
 {"name": "ScaryYandere", "image": scaryyandere, "location": "Booth G3", "website": "https://x.com/ScaryYandere", "description": ""},
-{"name": "notnoe_", "image": nono, "location": "Booth G4", "website": "https://x.com/notnoe_", "description": ""},
-{"name": "Archanciel's Magic Shop (LMG)", "image": leminigensokyo, "location": "Booth G5", "website": "https://www.facebook.com/LeMiniGensokyo/", "description": ""},
-{"name": "tboddy", "image": tboddy, "location": "Booth G6", "website": "https://tboddy.itch.io/", "description": ""},
+{"name": "notnoe", "image": nono, "location": "Booth G4", "website": "https://x.com/notnoe_", "description": ""},
+{"name": "Archanciel (LMG)", "image": leminigensokyo, "location": "Booth G5", "website": "https://www.facebook.com/LeMiniGensokyo/", "description": ""},
+{"name": "Megapig9001", "image": megapig, "location": "Booth G6", "website": "https://www.youtube.com/c/Megapig9001", "description": ""},
 {"name": "Moguman", "image": moguman, "location": "Booth G7", "website": "https://x.com/_MoguMan_/media", "description": ""},
 {"name": "Minomino", "image": minimono, "location": "Booth G8", "website": "Instagram.com/minominoten", "description": ""},
 {"name": "Dichroic Purpilion", "image": mystia, "location": "Booth H1", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "description": ""},
 {"name": "CodyYuki", "image": codyyuki, "location": "Booth H2", "website": "https://x.com/CodyYuki_", "description": ""},
 {"name": "remirii", "image": remirii, "location": "Booth H3", "website": "https://remirii-portfolio.weebly.com/illustrations.html", "description": ""},
-{"name": "G8KP", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
+{"name": "G8KB", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
 {"name": "LinnyUwU", "image": linnyuwu, "location": "Booth H5", "website": "https://x.com/LinnyUwU", "description": ""},
-{"name": <>mintcho&shy;kuma / mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
+{"name": <>mintcho&shy;kuma</>, "image": mintchokuma, "location": "Booth H6", "website": "https://x.com/mintchokuma", "description": ""},
+{"name": <>mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
 {"name": "Vampy Land", "image": vampyland, "location": "Booth H7", "website": "https://vampy.land/portfolio", "description": ""},
-{"name": "Panchamon", "image": panchamon, "location": "Booth H8", "website": "https://bsky.app/profile/panchamon.bsky.social", "description": ""},
+{"name": "Chenna Kitty", "image": chennakitty, "location": "Booth H8", "website": "https://chennakitty.carrd.co/ ", "description": ""},
 {"name": "BRW", "image": BRW, "location": "Booth H9", "website": "https://twitter.com/hnbryal", "description": ""},
 {"name": "CSSRart", "image": cssrart, "location": "Booth H10", "website": "https://x.com/CssRart", "description": ""},
 ];
@@ -177,7 +183,7 @@ let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
 {"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
-{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "", "role": "Merch"},
+{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
 {"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
 {"name": "Kotori's Shop by Y", "image": kotori, "location": "V07", "website": "https://www.instagram.com/kotoris_shop_by_y/", "role": "Merch"},
 {"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
@@ -186,7 +192,7 @@ let vendors = [
 {"name": <>Kino&shy;Kreations</>, "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
 {"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
 {"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
-{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "", "role": "Vendor"},
+{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "https://ruddyg851.myportfolio.com", "role": "Vendor"},
 {"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
 {"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
 ];
@@ -348,17 +354,10 @@ export const artistVendorsPage = {
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
         <WarningAlert>
-            <p>The following bulletins are <b>placeholders</b> and need to be updated:</p>
-            <ul>
-                <li>Artist Alley Images (Properly selected by artists)</li>
-                <li>Vendors Images (Properly selected by vendors)</li>
-                <li>Images and Links for some Vendors and Shrine Booths</li>
-            </ul>
             <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
             <ul>
                 <li>Locations (see remarks on "Key Locations" page)</li>
                 <li>Community Tables</li>
-                <li>Fangame & Music Tables (Either to be removed outright or duly updated on the map)</li>
             </ul>
         </WarningAlert>
         <h4>Location</h4>
@@ -407,7 +406,7 @@ export const artistVendorsPage = {
             </Col>
         </Row>
 
-        <h5 className="mt-2">All Other Artists</h5>
+        <h5 className="mt-2">Artist Alley Listing</h5>
 
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
@@ -477,6 +476,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
         </Row>
+       {/*
        <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {fanmusicgames.map((artist, i) => <>
@@ -486,7 +486,6 @@ export const artistVendorsPage = {
                     <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
@@ -494,6 +493,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
        </Row>
+       */}
        <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>

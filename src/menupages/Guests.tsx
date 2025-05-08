@@ -7,8 +7,8 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
-import { faTwitch, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobeAmericas, faShop } from '@fortawesome/free-solid-svg-icons';
+import { faTwitch, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -84,16 +84,6 @@ export const guestsPage = {
             <ul>
                 <li>Location(s) (see remarks on "Key Locations" page)</li>
             </ul>
-            <p>The below bulletins are <b>placeholders</b> and should be updated:</p>
-            <ul>
-                <li>Updated bios for Suzukann and Hojo-san (ideally better than the ones I came up for them)</li>
-                <li>Finalized event titles and descriptions for the below guest-related events:</li>
-                <ul>
-                    <li>TouhouFest LIVE Concert</li>
-                    <li>Placeholder for M-1 Grand Prix Showing</li>
-                    <li>Placeholder for Miko-san Performance</li>
-                </ul>
-            </ul>
         </WarningAlert>
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
@@ -126,7 +116,7 @@ export const guestsPage = {
                         <Card.Text>Founded by Yassie and ELEMENTAS in 2008, A-One Records has since then become a household name in the Touhou remix and Eurobeat scenes alike, producing the TOHO EUROBEAT, SUPER EURO SMASH and EUROBEAT ATTACK!! album series.</Card.Text>
                         <Card.Text>This year, A-ONE Records will be performing a live concert starring ELEMENTAS, Rute and Aki, truly an experience that must be seen to be believed!</Card.Text>
                         <Alert variant="success">
-                            <Card.Text><FontAwesomeIcon icon={faCompactDisc}/> A-One will be selling their newest release "<b>TOHO EUROBEAT VOL. 25</b>" in-person at TouhouFest!</Card.Text>
+                            <Card.Text><FontAwesomeIcon icon={faCompactDisc}/> A-One will be selling their newest release "<b><a href = "https://www.youtube.com/watch?v=YglkdN6NqfA" target="_blank" rel="noreferrer">TOHO EUROBEAT VOL. 25</a></b>" in-person at TouhouFest!</Card.Text>
                         </Alert>
                     </Card.Body>
                     <Card.Footer className="text-center small"><a href="https://twitter.com/A_One_JP" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
@@ -189,7 +179,10 @@ export const guestsPage = {
                         <Card.Text>Music circle TAMUSIC is run by its head musician TAM and is the world's most prolific and largest Doujin music circle. He is capable of improvising any song he has listened to, and composes music that plays with 30 different types of instruments. Currently the world's first publisher of Touhou Ensou Douga (東方演奏動画).</Card.Text>
                         <Card.Text>Since 2004, his Youtube channel has reached 120k subscribers, 60 million replays, and he has released 192 Touhou doujin music CDs, produced over 2000 rearrange music tracks, and traveled across the world and performed in 20 different locations across Asia, North America, and Europe.</Card.Text>
                     </Card.Body>
-                    <Card.Footer className="text-center small"><a href="https://twitter.com/tamusic" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                    <Card.Footer className="text-center small">
+                        <Card.Link href="https://twitter.com/tamusic" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</Card.Link>
+                        <Card.Link href="https://www.youtube.com/user/violinpiano2" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube}/> YouTube</Card.Link>
+                    </Card.Footer>
                 </Card>
             </Col>
             {/*
@@ -209,9 +202,9 @@ export const guestsPage = {
                 <Card>
                     <Card.Img variant="top" src={miko}></Card.Img>
                     <Card.Body>
-                        <Card.Title>Miko (IOSYS)</Card.Title>
+                        <Card.Title>Miko</Card.Title>
                         <Card.Text>From August 2004, working as a freelance vocalist and voice provider. From May 2022, the special tourism ambassador for Choshi City, Chiba Prefecture,Japan.</Card.Text>
-                        <Card.Text>miko's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "Marisa Stole Something Precious", "Cirno's Perfect Math Class," and "Scarlet Police Ghetto Patrol 24 Hours" became popular on video sites.</Card.Text>
+                        <Card.Text>miko-san's name became widely known as music circle "IOSYS"'s Touhou arrangements such as "<a href="https://www.youtube.com/watch?v=1pDM6fQUfJs" target="_blank" rel="noreferrer">Marisa Stole Something Precious</a>", "<a href="https://www.youtube.com/watch?v=5wFDWP5JwSM" target="_blank" rel="noreferrer">Cirno's Perfect Math Class</a>," and "<a href="https://www.youtube.com/watch?v=rl7ppuXMfC8" target="_blank" rel="noreferrer">Scarlet Police Ghetto Patrol 24 Hours</a>" became popular on video sites.</Card.Text>
                         <Card.Text>Since then, she has been active as a vocalist in a wide range of fields, both commercial and doujin, singing songs for major companies' web commercials, game music, game character image songs, and TV program theme songs. She also has a wide range of activities outside of singing, such as appearing in visual videos, voice acting, radio personality, and stage performances.</Card.Text>
                         <Card.Text>Her main occupation is systems engineering!</Card.Text>
                     </Card.Body>
@@ -223,20 +216,25 @@ export const guestsPage = {
                     <Card.Img variant="top" src={hojo}></Card.Img>
                     <Card.Body>
                         <Card.Title>Hojo-san</Card.Title>
-                        <Card.Text>Hojo-san is the head organizer of the <b>Hakurei Jinja Reitaisai Festival</b>, (or just <b>Reitaisai</b>) the world's largest Touhou-specific fan gathering/convention. Multiple big names in Touhou gather at this convention every year (also hosted at the Tokyo Big Sight, by the way!) up to and including ZUN himself whenever he releases game demos.</Card.Text>
-                        <Card.Text><small>Fun Fact: ZUN isn't involved in running Reitaisai, but he <em>did</em> give Reitaisai its name when it first started way back in 2004!</small></Card.Text>
+                        <Card.Text>Greetings, we are the Hakurei Shrine Reitaisai, a Touhou-only event focused on Touhou Project and its fandom. Hosted by the Hakurei Shrine Office, our event is hosted twice each year, in Spring and Fall, at Tokyo Big Sight. Please come and visit us for the biggest gathering of Touhou fans!</Card.Text>
                    </Card.Body>
-                    <Card.Footer className="text-center small"><a href="https://x.com/HakureijinjyaS" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                    <Card.Footer className="text-center small">
+                        <Card.Link href="https://x.com/HakureijinjyaS" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</Card.Link>
+                        <Card.Link href = "https://reitaisai.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGlobeAmericas}/>Reitaisai Link</Card.Link>
+                    </Card.Footer>
                 </Card>
             </Col>
             <Col>
                 <Card>
                     <Card.Img variant="top" src={suzukann}></Card.Img>
                     <Card.Body>
-                        <Card.Title>Suzukann-san</Card.Title>
-                        <Card.Text>Suzukann is a dedicated and very talented artist who draws a litany of Touhou artworks and fanworks. Her work has been featured as part of collaborations with a variety of big Touhou names such as Beatmario, Shinra-Bansho, and Reitaisai!</Card.Text>
+                        <Card.Title>Suzukannn</Card.Title>
+                        <Card.Text>Suzukannn is a dedicated and very talented illustrator who draws a litany of Touhou artworks and fanworks. Her work has been featured as part of collaborations with a variety of big Touhou names such as BeatMARIO, <a href = "https://www.youtube.com/watch?v=jWvuUeUyyKU" target="_blank" rel="noreferrer">Shinra-Bansho</a>, and Reitaisai!</Card.Text>
                    </Card.Body>
-                    <Card.Footer className="text-center small"><a href="https://x.com/suzukannn" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</a></Card.Footer>
+                    <Card.Footer className="text-center small">
+                        <Card.Link href="https://x.com/suzukannn" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter}></FontAwesomeIcon> Twitter</Card.Link>
+                        <Card.Link href="https://suzukannn.booth.pm/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faShop}></FontAwesomeIcon> Booth.pm</Card.Link>
+                    </Card.Footer>
                 </Card>
             </Col>
 

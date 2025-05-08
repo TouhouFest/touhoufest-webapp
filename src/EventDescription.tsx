@@ -46,7 +46,7 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   return (
     <Offcanvas show={show_var} onHide={handleHide}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title className="align-middle">Event Description <Bookmark index={event_package["uniqueID"]} /> <IssueNotifications index={event_package["uniqueID"]} title={event_package["title"]} start_ts={dayjs(event_package["combinedStart"])} /></Offcanvas.Title>
+        <Offcanvas.Title className="align-middle">Event Details <Bookmark index={event_package["uniqueID"]} /> <IssueNotifications index={event_package["uniqueID"]} title={event_package["title"]} start_ts={dayjs(event_package["combinedStart"])} /></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         {output}
