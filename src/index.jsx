@@ -20,12 +20,20 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { registerSW } from 'virtual:pwa-register'
 import { conMerchPage } from "./menupages/ConMerch";
 
+import { Capacitor } from '@capacitor/core';
+
 registerSW({ immediate: true })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 /* DECLARE YOUR MENUPAGES HERE */
-let menupagedata = [aboutConPage, installationPage, conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ];
+let menupagedata = [aboutConPage];
+
+if(!Capacitor.isNativePlatform() && Capacitor.getPlatform() == 'web') {
+  menupagedata = menupagedata.concat([installationPage]);
+}
+
+menupagedata = menupagedata.concat([conCenterPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ]);
 
 let menuheader = (<>TouhouFest 2025</>);
 
