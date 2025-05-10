@@ -15,6 +15,15 @@ import { con_banner, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import fullweekend from "./../images/badges/fullweekend.jpg";
+import saturday from "./../images/badges/saturday.jpg";
+import sunday from "./../images/badges/sunday.jpg";
+import staff from "./../images/badges/staff.jpg";
+import guest from "./../images/badges/guest.jpg";
+import performer from "./../images/badges/performer.jpg";
+import exhibitor from "./../images/badges/exhibitor.jpg";
+import press from "./../images/badges/press.jpg";
+
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
@@ -51,8 +60,37 @@ export const aboutConPage = {
       <p className="mt-3">
         A Touhou fan event being held on June 14th - 15th, 2025, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
+
+      <h4 className="mt-3">Operating Hours</h4>
+      <p><b>General Con Hours</b></p>
+      <ul>
+          <li>Friday: N/A</li>
+          <li>Saturday: 9:00 AM - 11:00 PM</li>
+          <li>Sunday: 9:00 AM - 6:00 PM</li>
+      </ul>
+      <p><b>Registration</b></p>
+      <ul>
+          <li>Friday: 3:00 PM - 7:00 PM</li>
+          <li>Saturday: 9:00 AM - 5:00 PM</li>
+          <li>Sunday: 9:00 AM - 3:00 PM</li>
+      </ul>
+      <p><b>Artist's Alley/Vendors</b></p>
+      <ul>
+          <li>Friday: N/A</li>
+          <li>Saturday: 9:00 AM - 6:00 PM</li>
+          <li>Sunday: 9:00 AM - 5:30 PM</li>
+      </ul>
+      <p><b>Gaming*</b></p>
+      <ul>
+          <li>Friday: N/A</li>
+          <li>Saturday: 9:30AM - 10:30 PM</li>
+          <li>Sunday: 9:00 AM - 5:00 PM</li>
+      </ul>
+      <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
+
+
       <h4 className="mb-3">Info & Policies</h4>
-      <Accordion className="mt-2">
+      <Accordion className="my-3">
         <Accordion.Item eventKey="0">
           <Accordion.Header>General Convention Guidelines</Accordion.Header>
           <Accordion.Body>
@@ -120,33 +158,17 @@ export const aboutConPage = {
         </Accordion.Item>
       </Accordion>
 
-    <h4 className="mt-3">Operating Hours</h4>
-    <p><b>General Con Hours</b></p>
-    <ul>
-        <li>Friday: N/A</li>
-        <li>Saturday: 9:00 AM - 11:00 PM</li>
-        <li>Sunday: 9:00 AM - 6:00 PM</li>
-    </ul>
-    <p><b>Registration</b></p>
-    <ul>
-        <li>Friday: 3:00 PM - 7:00 PM</li>
-        <li>Saturday: 9:00 AM - 5:00 PM</li>
-        <li>Sunday: 9:00 AM - 3:00 PM</li>
-    </ul>
-    <p><b>Artist's Alley/Vendors</b></p>
-    <ul>
-        <li>Friday: N/A</li>
-        <li>Saturday: 9:00 AM - 6:00 PM</li>
-        <li>Sunday: 9:00 AM - 5:30 PM</li>
-    </ul>
-    <p><b>Gaming*</b></p>
-    <ul>
-        <li>Friday: N/A</li>
-        <li>Saturday: 9:30AM - 10:30 PM</li>
-        <li>Sunday: 9:00 AM - 5:00 PM</li>
-    </ul>
-    <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
-
+      <h4>TouhouFest 2025 Convention Badges</h4>
+      <Row xs={2} md={3} lg={4} className="justify-content-center g-3">
+        <Col><Image src={fullweekend} rounded fluid/></Col>
+        <Col><Image src={saturday} rounded fluid/></Col>
+        <Col><Image src={sunday} rounded fluid/></Col>
+        <Col><Image src={staff} rounded fluid/></Col>
+        <Col><Image src={guest} rounded fluid/></Col>
+        <Col><Image src={performer} rounded fluid/></Col>
+        <Col><Image src={exhibitor} rounded fluid/></Col>
+        <Col><Image src={press} rounded fluid/></Col>
+      </Row>
     </>
   ),
 }
