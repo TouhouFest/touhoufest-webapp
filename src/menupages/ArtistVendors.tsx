@@ -257,7 +257,6 @@ export const artistVendorsPage = {
             <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
             <ul>
                 <li>Locations (see remarks on "Key Locations" page)</li>
-                <li>Community Tables</li>
             </ul>
         </WarningAlert>
         <h4>Location</h4>
