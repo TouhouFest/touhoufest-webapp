@@ -20,8 +20,6 @@ function MapModals(){
         <WarningAlert>
             <p>The below items are still <b>outdated</b>:</p>
             <ul>
-                <li>Finalized Main TouhouFest Map</li>
-                <li>Key Locations based off the Main TouhouFest Map (i.e. bulletins like <CircledBullets argument="1"/> <CircledBullets argument="2"/> etc.)</li>
                 <li>Gaming Hall Map</li>
             </ul>
         </WarningAlert>
@@ -38,57 +36,79 @@ function MapModals(){
                 <b>George Nakano Theatre</b>
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="1"/> Registration</li>
-                    <li><CircledBullets argument="2"/> Artist Alley</li>
+                    <li><CircledBullets argument="2"/> Gaming Hall</li>
+                    <li><CircledBullets argument="restroom"/> Restrooms</li>
+                </ul>
+
+                <b>Entry Plaza & Torino Plaza</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="3"/> Vendors Booth</li>
                 </ul>
 
                 <b>Entry Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="3"/> Vendors Booth</li>
-                    <li><CircledBullets argument="5"/> Cosplay Booths & Cosplay Repair</li>
-                    <li><CircledBullets argument="6"/> Info Booth | Lost and Found</li>
-                </ul>
-
-                <b>Garden Room B</b>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="4"/> Panels</li>
-                </ul>
-
-                <b>Pine Wind Garden</b>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="15"/> Cosplay Meetups</li>
+                    <li><CircledBullets argument="4"/> Info Booth</li>
                 </ul>
 
                 <b>Toyota Meeting Hall</b>
                 <ul className="list-unstyled">
-                    <li><span className="text-primary"><CircledBullets argument="9"/></span> Gaming Hall 1: Official Touhou Games</li>
-                </ul>
-            </Col>
-            <Col xs={12} md={6} lg={3}>
-                <b>Ken Miller Rec Center</b>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="10"/> Gaming Hall 2: Fan Games</li>
-                    <li><CircledBullets argument="11"/> Music Booths</li>
-                </ul>
-                
-                <b>Entry Foyer</b>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="12"/> Community Booths</li>
-                </ul>
-
-                <b>Assembly Hall</b>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="13"/> Assembly Hall</li>
+                    <li><CircledBullets argument="5"/> Artist Alley & Cospaly Booths</li>
+                    <li><CircledBullets argument="B"/> Gaming Ops</li>
+                    <li><CircledBullets argument="restroom"/> Restrooms</li>
                 </ul>
 
                 <b>Torino Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="7"/> Guest Booths</li>
-                    <li><CircledBullets argument="8"/> Main Stage</li>
+                    <li><CircledBullets argument="6"/> Guest Booths</li>
+                    <li><CircledBullets argument="7"/> Main Stage</li>
+                    <li><CircledBullets argument="8"/> Official TouhouFest Artists</li>
+                </ul>
+
+                <b>Ken Miller Rec Center</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="9"/> Arcade Cabinets</li>
+                </ul>
+
+            </Col>
+            <Col xs={12} md={6} lg={3}>
+
+                <b>Entry Foyer</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="10"/> Community Booths</li>
+                    <li><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</li>
+                    <li><CircledBullets argument="restroom"/> Restrooms</li>
+                </ul>
+
+                <b>Assembly Hall</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
+                </ul>
+
+                <b>Pine Wind Garden</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="12"/> Cosplay Meetups</li>
+                </ul>
+
+                <b>Children's Art Wing</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="13"/> Panels</li>
+                    <li><CircledBullets argument="restroom"/> Restrooms</li>
+                </ul>
+
+                <b>Drawing & Painting Studio</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait</li>
                 </ul>
 
                 <b>Front Circular Drive</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="14"/> Food Trucks</li>
+                    <li><CircledBullets argument="15"/> Food Trucks</li>
+                    <li><CircledBullets argument="16"/> Prop Check</li>
+                </ul>
+
+                <b>Garden Rooms</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="C"/> Staff Ops</li>
                 </ul>
 
                 <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> James Armstrong Theatre (TCAC) and Dance Studios (TCAC) aren't being used by TouhouFest events.</p>
