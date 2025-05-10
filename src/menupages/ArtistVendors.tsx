@@ -117,6 +117,9 @@ import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
 import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
 
+import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
+import daveandbusters from "./../images/artistalley/daveandbusters.jpg";
+
 import { neosanctum, maidacademy, suzukann } from "./../Utils";
 
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
@@ -198,72 +201,6 @@ let vendors = [
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
-let fanmusicgames = [
-    {
-        "name": "Neo Sanctum",
-        "image": neosanctum,
-        "role": "Fan Music",
-        "website": "https://neo-sanctum.com/home",
-        "description": "VENDOR",
-        "location": "Booth MC2"
-    },
-    {
-        "name": "Galaxian Recordings",
-        "image": galaxianrecordings,
-        "role": "Fan Music",
-        "website": "https://galaxianrecordings.bandcamp.com/",
-        "description": "VENDOR",
-        "location": "Booth MC3"
-    },
-    {
-        "name": "Twin Phoenix Interactive",
-        "image": twinphoenix,
-        "role": "Fangames",
-        "website": "https://twinphoenixinteractive.com/",
-        "description": "VENDOR",
-        "location": "Booth FG1"
-    },
-    {
-        "name": "Fire Land",
-        "image": placeholder,
-        "role": "Fangames",
-        "website": "",
-        "description": "",
-        "location": "Booth FG2"
-    },
-    {
-        "name": "crescentia",
-        "image": crescentia,
-        "role": "Fan Music",
-        "website": "https://soundcloud.com/crescentia",
-        "description": "",
-        "location": "Booth MC1"
-    },
-    {
-        "name": "NekoMofu Jinja",
-        "image": placeholder,
-        "website": "",
-        "description": "",
-        "location": "Booth MC4",
-        "role": "Fan Music"
-    },
-    {
-        "name": "AndrewFM",
-        "image": andrewfm,
-        "website": "https://eggzero.tumblr.com/",
-        "location": "Booth FG3",
-        "role": "Fangames"   
-    },
-    {
-        "name": "Touhou Game Dev",
-        "image": placeholder,
-        "website": "",
-        "location": "Booth FG4 ~ FG7",
-        "role": "Fangames"
-    }
-];
-fanmusicgames.sort((a,b) => a["location"].localeCompare(b["location"]));
-
 let plazatables = [
 {"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
 {"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
@@ -277,49 +214,12 @@ let plazatables = [
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let communitytables = [
-    {
-        "name": "Anime Los Angeles",
-        "image": animelosangeles,
-        "website": "https://animelosangeles.org/",
-        "location": "Booth FT1"
-    },
-    {
-        "name": "Bowers Museum",
-        "image": bowersmuseum,
-        "website": "https://www.bowers.org/",
-        "location": "Booth FT2",
-    },
-    {
-        "name": "Gensokyo Radio",
-        "image": gensokyoradio,
-        "website": "https://gensokyoradio.net/",
-        "location": "Booth FT3"
-    },
-    {
-        "name": "LA Idol Matsuri",
-        "image": idolmatsuri,
-        "website": "https://www.eventbrite.com/e/la-idol-matsuri-2024-tickets-785669607947",
-        "location": "Booth FT4"
-    },
-    {
-        "name": "Touhou: ONTJ",
-        "image": placeholder,
-        "website": "",
-        "location": "Booth FT5"
-    },
-    {
-        "name": "Rose City AniFest",
-        "image": rosecityanifest,
-        "website": "https://www.instagram.com/rosecityanifest/?hl=en",
-        "location": "Booth FT6"
-    },
-    {
-        "name": "Ronin-Expo",
-        "image": roninexpo,
-        "website": "https://www.ronin-expo.org/",
-        "location": "Booth FT7"
-    },
-
+{"name": "The Corps Dance Crew", "image": corpsdancecrew, "location": "Booth FT1 ~ FT2", "website": "https://x.com/TheCorpsDC", "role": ""},
+{"name": "Organized Touhou Networking in Japan", "image": placeholder, "location": "Booth FT3", "website": "https://twipla.jp/events/675392", "role": ""},
+{"name": "Bowers Museum", "image": bowersmuseum, "location": "Booth FT5 (Saturday)", "website": "https://www.bowers.org/", "role": ""},
+{"name": "Dave & Busters", "image": daveandbusters, "location": "Booth FT5 (Sunday)", "website": "https://www.daveandbusters.com/us/en/home", "role": ""},
+{"name": "Anime Los Angeles", "image": animelosangeles, "location": "Booth FT6", "website": "https://animelosangeles.org/", "role": ""},
+{"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "Booth FT7", "website": "https://www.la-idolmatsuri.org/", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -452,7 +352,7 @@ export const artistVendorsPage = {
             </>)}
        </Row>
 
-       <h4 className="mt-2">Music, Fangame, & Shrine Tables at Torino Plaza</h4>
+       <h4 className="mt-2">Community & Shrine Tables at Torino Plaza</h4>
        <h5>Booth Map</h5>
         <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
         <Row className="justify-content-center">
@@ -462,6 +362,7 @@ export const artistVendorsPage = {
         </Row>
        <h5>List of Participants</h5>
         <h6>Entry Foyer (Community Tables)</h6>
+        <p>Some booths may be empty.</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
              <Col>
@@ -476,24 +377,7 @@ export const artistVendorsPage = {
             </Col>
             </>)}
         </Row>
-       {/*
-       <h6 className="mt-2">Ken Miller Rec Center (Fangame & Music Tables)</h6>
-        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
-            {fanmusicgames.map((artist, i) => <>
-             <Col>
-                <Card>
-                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
-                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
-            </Col>
-            </>)}
-       </Row>
-       */}
+
        <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>

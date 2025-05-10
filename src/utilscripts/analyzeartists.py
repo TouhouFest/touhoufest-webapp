@@ -16,7 +16,7 @@ def generate_imports(imagename):
 
 if __name__ == "__main__":
     
-    name="shrinebooths"
+    name="commtables"
 
     df = pd.read_csv(f"{name}.csv").fillna("")
     
