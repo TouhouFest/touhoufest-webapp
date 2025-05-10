@@ -23,6 +23,15 @@ describe('EventDescription', () => {
         return () => void (globalThis.jest = _jest);
     });
 
+    test("day of week is rendered", async () => {
+        let eventdesc = <EventDescription show_var={true} hide_fxn={vi.fn()} event_package={{"daytext": "Friday, June 13", "uniqueID": 0}} evt_print={<></>}/>
+
+        render(eventdesc);
+
+        await waitFor(() => {
+            expect(screen.queryAllByText("Friday, June 13")).length.greaterThan(0);
+        });
+    });
 
     test("notification fires properly from eventdescription header", async () => {
         

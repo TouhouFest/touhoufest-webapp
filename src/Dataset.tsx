@@ -127,9 +127,10 @@ export default function Dataset(
   const [evtPrint, setEvtPrint] = useState(<></>);
   // const [availableDays, setAvailableDays] = useState([]);
 
-  function handleEventOnClick(index:number, evtbulk:JSX.Element) {
+  function handleEventOnClick(index:number, evtbulk:JSX.Element, daytext:string) {
     let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
     // let evt = toJSON(dataSet.loc({rows:[index]}))[0];
+    evt["daytext"] = daytext;
     setEventDetails(evt);
     setShowEventDescription(true);
     setEvtPrint(evtbulk);
@@ -363,7 +364,7 @@ export default function Dataset(
       output.push(
         <ListGroup.Item key={index} className="event-item">
           <Row>
-            <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk)}>
+            <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
               {eventbulk}
             </Col>
             <Col xs="2" className="text-center align-self-center">

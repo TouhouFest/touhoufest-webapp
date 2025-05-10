@@ -229,6 +229,7 @@ export const guestsPage = {
                     <Card.Img variant="top" src={suzukann}></Card.Img>
                     <Card.Body>
                         <Card.Title>Suzukannn</Card.Title>
+                        <Card.Subtitle className="mb-2">Pen Name: Suzuka Kyouda</Card.Subtitle>
                         <Card.Text>Suzukannn is a dedicated and very talented illustrator who draws a litany of Touhou artworks and fanworks. Her work has been featured as part of collaborations with a variety of big Touhou names such as BeatMARIO, <a href = "https://www.youtube.com/watch?v=jWvuUeUyyKU" target="_blank" rel="noreferrer">Shinra-Bansho</a>, and Reitaisai!</Card.Text>
                    </Card.Body>
                     <Card.Footer className="text-center small">
