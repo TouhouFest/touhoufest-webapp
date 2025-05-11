@@ -42,7 +42,7 @@ function MapModals(){
 
                 <b>Entry Plaza & Torino Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="3"/> Vendors Booth</li>
+                    <li><CircledBullets argument="3"/> Vendors Booths</li>
                 </ul>
 
                 <b>Entry Plaza</b>
@@ -119,39 +119,58 @@ function MapModals(){
         <Row>
             <Col xs={12} lg={6}>
                 <h4>Artist Alley Map</h4>
-                <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/>)</p>
+                <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths)</p>
                 <GlobalTransformWrapper src={artistalleymap} caption="Map of Artist Alley"/>
             </Col>
             <Col xs={12} lg={6}>
                 <h4>Vendors Map in Entry Plaza</h4>
                 <p>The entire below map is enclosed in the Entry Plaza. Nearby locations are also labeled. Summary of listed booths in Entry Plaza:</p>
-                <ul>
+                <ul className="list-unstyled">
                     <li><CircledBullets argument="3"/> Vendors Booths: Booths V01 ~ V08 and Booths V09 ~ V17</li>
                     <li><CircledBullets argument="4"/> Info Booth: Booths V09 & V10</li>
                 </ul>
                 <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
             </Col>
         </Row>
-        <Row>
-            <Col xs={12} lg={8}>
-                <h5>Torino Plaza Map</h5>
-                <p>The below map is enclosed within the Torino Plaza (<CircledBullets argument="7"/> and <CircledBullets argument="8"/>) and also shows locations of nearby areas at the convention.</p>
-                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza"/>
-            </Col>
-            <Col xs={12} lg={4}>
-                <p>Summary of listed booths in Torino Plaza:</p>
-                <ul>
-                    <li><b>FT1 ~ FT8</b>: <CircledBullets argument="12"/> Community Booths</li>
-                    <li><b>FG1 ~ FG7</b>: <CircledBullets argument="10"/> Fan Games</li>
-                    <li><b>MC1 ~ MC4</b>: <CircledBullets argument="11"/> Music Booths</li>
-                    <li><b>FB1 ~ FB3</b>: <CircledBullets argument="7"/> Guest Booths</li>
-                    <li><b>FB4 ~ FB8</b>: Shrine Tables</li>
+        <h5>Torino Plaza Map</h5>
+        <p>The below map is enclosed within the Torino Plaza and also shows locations of nearby areas at the convention. Summary of areas included below:</p>
+        <Row xs={1} md={2}>
+            <Col>
+                <b>Entry Plaza</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="3"/> Vendors Booths: Booths FB1 ~ FB10</li>
+                    <li><CircledBullets argument="6"/> Guest Booths</li>
+                    <li><CircledBullets argument="7"/> Main Stage</li>
+                    <li><CircledBullets argument="8"/> Official Touhou Artists</li>
                 </ul>
+
+                <b>Ken Miller Rec Center</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="9"/> Arcade Cabinets</li>
+                </ul>
+            </Col>
+            <Col>
+                <b>Entry Foyer</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="10"/> Community Booths: Booths FT1 ~ FT8</li>
+                    <li><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</li>
+                    <li><CircledBullets argument="restroom"/> Restrooms</li>
+                </ul>
+
+                <b>Assembly Hall</b>
+                <ul className="list-unstyled">
+                    <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
+                </ul>
+            </Col>
+        </Row>
+        <Row className="justify-content-center">
+            <Col xs={12} lg={8}>
+                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza"/>
             </Col>
         </Row>
 
         <h4>Gaming Hall Map</h4>
-        <p>The entire below map is enclosed in the Toyota Hall.</p>
+        <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/> Gaming Hall)</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={6}>
                 <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
