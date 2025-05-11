@@ -154,9 +154,7 @@ let artistlist = [
 {"name": "jellisstuf", "image": jellistuff, "location": "Booth E5", "website": "https://www.etsy.com/shop/JellisStuff", "description": ""},
 {"name": "Bark Snarl", "image": barksnarl, "location": "Booth E6", "website": "https://barksnarl.myshopify.com/", "description": ""},
 {"name": "Girutea", "image": girutea, "location": "Booth F1", "website": "https://girutea.storenvy.com/", "description": ""},
-// fix
 {"name": "Shrug Club", "image": shrugclub, "location": "Booth F2", "website": "https://x.com/shrugclub", "description": ""},
-
 {"name": "Feeya Art", "image": feeyaart, "location": "Booth F3", "website": "https://x.com/feeyaowo", "description": ""},
 {"name": "Melty Uchuu", "image": melty, "location": "Booth F4", "website": "https://meltyportfolio.carrd.co/", "description": ""},
 {"name": "Sailin' Yumemi", "image": placeholder, "location": "Booth F5", "website": "https://space.bilibili.com/280431373?plat_id=1&share_from=space&share_medium=iphone&share_plat=ios&share_session_id=0E66CBF3-AF77-43D1-A2DA-40E600B42856&share_source=COPY&share_tag=s_i&spmid=main.space.0.0&timestamp=1721227907&unique_k=eX9r7Ab", "description": ""},
