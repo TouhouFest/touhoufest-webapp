@@ -14,9 +14,16 @@ import Papa from 'papaparse';
 import { GenerateMockPapa } from './Dataset.test';
 import Dataset from '../Dataset';
 import { faBroom } from '@fortawesome/free-solid-svg-icons';
+import { mock } from 'node:test';
 
 describe("Notifications",() => {
- 
+
+    function mock_get_pending() {
+        LocalNotifications.getPending = vi.fn().mockImplementation(async () => {
+            return {notifications: []};
+        });
+    }
+
     // necessary to allow vitest fake timers to test properly with react-testing-library
     beforeAll(() => {
         const _jest = globalThis.jest;
@@ -30,6 +37,7 @@ describe("Notifications",() => {
     });
 
     test('stupid simple notifications', () => {
+        mock_get_pending();
         let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs()}/>
         render(notification);
         expect(screen.getByRole("img", {hidden: true})).toBeDefined();
@@ -37,7 +45,7 @@ describe("Notifications",() => {
     });
 
     test('failure toast fired on permissions denied', async () => {
-
+        mock_get_pending();
         Toast.show = vi.fn().mockReturnValue(undefined);
         LocalNotifications.checkPermissions = vi.fn().mockImplementation(
             async () => {
@@ -66,6 +74,7 @@ describe("Notifications",() => {
     });
 
     test('default notification modal appears when not set', async () => {
+        mock_get_pending();
         LocalNotifications.checkPermissions = vi.fn().mockImplementation(
             async () => {
                 return {display: 'prompt'}
@@ -87,7 +96,7 @@ describe("Notifications",() => {
     });
 
     test('isolated proper time selection', async () => {
-
+        mock_get_pending();
         // sanity check mocking timezone
         dayjs.extend(utc);
         dayjs.extend(timezone);
@@ -147,7 +156,7 @@ describe("Notifications",() => {
     });
 
     test("notifications schedule such that they correspond properly in device time", async () => {
-
+        mock_get_pending();
         let mockup:any[] = [
             {
                 "event_title":"test event 0",
