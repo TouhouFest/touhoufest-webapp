@@ -94,12 +94,6 @@ export function CircledBullets({argument}: {argument:string}){
         case '16':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa6, 6, "right-3")}</span>
             break;
-        case "A":
-            lettercomp = returnicon(faA);
-            break;
-        case "B":
-            lettercomp = returnicon(faB);
-            break;
         case "C":
             lettercomp = returnicon(faC);
             break;
