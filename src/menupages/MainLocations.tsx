@@ -14,6 +14,7 @@ import { Figure, Row, Col } from 'react-bootstrap';
 import panelroom from "./../images/panelroom.jpg";
 import con_banner from "./../con_banner.png";
 import childrensartwing from "./../images/childrensartwing.jpg";
+import drawpaint from "./../images/drawpaint.jpg";
 
 export const mainLocationsPage= {
   "header": (<><FontAwesomeIcon icon={faBuilding} fixedWidth></FontAwesomeIcon> Key Locations</>),
@@ -153,6 +154,15 @@ export const mainLocationsPage= {
         <ul className="list-unstyled">
             <li><CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait</li>
         </ul>
+        <Row className="justify-content-center">
+            <Col xs={12} sm={10} lg={8} className="text-center">
+                <Figure>
+                    <Figure.Image src={drawpaint} fluid rounded/>
+                    <Figure.Caption>Drawing & Painting Studio</Figure.Caption>
+                </Figure>
+            </Col>
+        </Row>
+
 
         <h4>Front Circular Drive</h4>
         <p>This is where the main entrance of the convention center is. It will have a sign that says "Torrance Cultural Arts Center". The following event spaces are located here:</p>
