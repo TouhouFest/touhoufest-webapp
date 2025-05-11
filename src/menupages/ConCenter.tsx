@@ -42,7 +42,7 @@ function MapModals(){
 
                 <b>Entry Plaza & Torino Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="3"/> Vendors Booths</li>
+                    <li><CircledBullets argument="3"/> Vendor Booths</li>
                 </ul>
 
                 <b>Entry Plaza</b>
@@ -126,7 +126,7 @@ function MapModals(){
                 <h4>Vendors Map in Entry Plaza</h4>
                 <p>The entire below map is enclosed in the Entry Plaza. Nearby locations are also labeled. Summary of listed booths in Entry Plaza:</p>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="3"/> Vendors Booths: Booths V01 ~ V08 and Booths V09 ~ V17</li>
+                    <li><CircledBullets argument="3"/> Vendor Booths: Booths V01 ~ V08 and Booths V09 ~ V17</li>
                     <li><CircledBullets argument="4"/> Info Booth: Booths V09 & V10</li>
                 </ul>
                 <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
@@ -138,7 +138,7 @@ function MapModals(){
             <Col>
                 <b>Entry Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="3"/> Vendors Booths: Booths FB1 ~ FB10</li>
+                    <li><CircledBullets argument="3"/> Vendor Booths: Booths FB1 ~ FB10</li>
                     <li><CircledBullets argument="6"/> Guest Booths</li>
                     <li><CircledBullets argument="7"/> Main Stage</li>
                     <li><CircledBullets argument="8"/> Official Touhou Artists</li>
