@@ -120,7 +120,7 @@ import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import daveandbusters from "./../images/artistalley/daveandbusters.jpg";
 
-import { neosanctum, maidacademy, suzukann } from "./../Utils";
+import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
 
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
@@ -253,25 +253,19 @@ export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
-        <WarningAlert>
-            <p>The following bulletins are <b>outdated</b> and need to be updated:</p>
-            <ul>
-                <li>Locations (see remarks on "Key Locations" page)</li>
-            </ul>
-        </WarningAlert>
         <h4>Location</h4>
-        <p>Artist Alley will be held at the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/>) behind registration and to the right of the Entry Plaza. Vendor Booths will be at the <b>Entry Plaza</b> (<CircledBullets argument="3"/>) in front of the Pine Wind Garden.</p>
+        <p>Artist Alley will be held at the <b>Toyota Meeting Hall</b>, (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths) next to the Torino Festival Plaza. Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza.</p>
         <Row xs={1} md={2}>
             <Col>
                 <Figure>
-                    <Figure.Image src={nakanotheatre} fluid rounded />
-                    <Figure.Caption>George Nakano Theatre</Figure.Caption>
+                    <Figure.Image src={toyota} fluid rounded />
+                    <Figure.Caption>Toyota Meeting Hall</Figure.Caption>
                 </Figure>
             </Col>
             <Col>
                 <Figure>
-                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-                    <Figure.Caption>Entry Plaza</Figure.Caption>
+                    <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
+                    <Figure.Caption>Torino Festival Plaza</Figure.Caption>
                 </Figure>
             </Col>
         </Row>
