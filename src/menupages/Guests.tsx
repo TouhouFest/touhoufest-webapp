@@ -79,18 +79,13 @@ export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & DJs</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
-        <WarningAlert>
-            <p>The below section are <b>outdated</b> and need to be updated:</p>
-            <ul>
-                <li>Location(s) (see remarks on "Key Locations" page)</li>
-            </ul>
-        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Events for the following guests will occur at the following locations:</p>
         <ul>
-            <li><b>Shihori, A-ONE, & Miko</b>: Assembly Hall (<CircledBullets argument="13"/>)</li>
-            <li><b>TAMUSIC & Miko</b>: Torino Plaza (<CircledBullets argument="8"/>)</li>
+            <li><b>Shihori, A-ONE, & Miko</b>: Assembly Hall (<CircledBullets argument="11"/> Theatre (Main Events))</li>
+            <li><b>TAMUSIC & Miko</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
         </ul>
+        <p>All Guests Booths are accessible also at the Torino Plaza. (<CircledBullets argument="6"/> Guest Booths)</p>
         <Row className="justify-content-center">
             <Col xs={12} className="text-center">
                 <Figure className="">
@@ -98,7 +93,7 @@ export const guestsPage = {
                     <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
                 </Figure>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} lg={8}>
                 <Figure>
                     <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
                     <Figure.Caption>Torino Plaza</Figure.Caption>

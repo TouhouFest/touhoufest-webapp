@@ -109,7 +109,7 @@ export const mainLocationsPage= {
         <h4>Assembly Hall</h4>
         <p>The Assembly Hall is the left-most building of the convention center and is left from the main stage. The following event spaces are located here:</p>
         <ul className="list-unstyled">
-            <li><CircledBullets argument="11"/> Assembly Hall</li>
+            <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
         </ul>
         <Row className="justify-content-center">
             <Col xs={12} sm={10} lg={8} className="text-center">
