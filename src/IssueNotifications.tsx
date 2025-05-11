@@ -140,7 +140,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
     // run after inspection of pending notifications is complete
     }).then(() => {
       // case 1: a pending notification was already found
-      if (foundNotification) {
+      if (foundNotification && bellType !== fasBell) {
         setBellType(fasBell);
       }
       // case 2: no pending notifications were found
@@ -164,7 +164,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
         }
       }
     });
-  }, [])
+  });
 
   // add listener for when any notification is fired off
   LocalNotifications.addListener('localNotificationReceived', checkNotificationFired);

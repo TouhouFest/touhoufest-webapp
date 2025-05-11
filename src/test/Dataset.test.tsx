@@ -376,6 +376,10 @@ describe("Dataset", () => {
             });
             expect(allicons.length).toBe(2);
 
+            LocalNotifications.getPending = vi.fn().mockImplementation(() => {
+                return {notifications: [{id: 0}]};
+            });
+
             userEvent.click(allicons[1]);
         })
         
