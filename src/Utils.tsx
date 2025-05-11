@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faCircle, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faC, faCircle, faCircleExclamation, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -37,7 +37,8 @@ export function CircledBullets({argument}: {argument:string}){
         return <FontAwesomeIcon icon={arg} color="white" fixedWidth transform={`shrink-${shrink} ${adds}`}/>;
     }
 
-    let lettercomp = returnicon(fa0) 
+    let lettercomp = returnicon(fa0);
+    let baseicon = faCircle;
     switch(argument){
         case 'A':
             lettercomp = returnicon(faA);
@@ -90,13 +91,29 @@ export function CircledBullets({argument}: {argument:string}){
         case '15':
             lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa5, 6, "right-3")}</span>
             break;
+        case '16':
+            lettercomp = <span>{returnicon(fa1, 6, "left-3")}{returnicon(fa6, 6, "right-3")}</span>
+            break;
+        case "A":
+            lettercomp = returnicon(faA);
+            break;
+        case "B":
+            lettercomp = returnicon(faB);
+            break;
+        case "C":
+            lettercomp = returnicon(faC);
+            break;
+        case "restroom":
+            lettercomp = returnicon(faRestroom);
+            baseicon = faSquare;
+            break;
         default:
             break;
     }
 
     return (<>
         <span className="fa-layers fa-fw">
-            <FontAwesomeIcon icon={faCircle} fixedWidth color="black"/>
+            <FontAwesomeIcon icon={baseicon} fixedWidth color="black"/>
             {lettercomp}    
         </span> 
     </>);

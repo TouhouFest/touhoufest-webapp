@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import {pinewindgarden, assemblyhall, entryplaza, placeholder, WarningAlert } from "../Utils";
+import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
@@ -26,14 +26,8 @@ export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
-        <WarningAlert>
-            <p>The below items are <b>outdated</b> and should be updated:</p>
-            <ul>
-                <li>Locations (see remarks in "Key Locations" page)</li>
-            </ul>
-        </WarningAlert>
         <h4>Location(s)</h4>
-        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="15"/>), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="13"/>). Cosplay booths and repair is located at the <b>Entry Plaza</b> (<CircledBullets argument="5"/>), connected to the Torino Festival Plaza (<CircledBullets argument="7"/>).</p>
+        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="12"/> Cosplay Meetups), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Theatre (Main Events)). Cosplay booths and repair is located at the <b>Toyota Meeting Hall</b> (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths), next to the Torino Festival Plaza.</p>
         <Row className="justify-content-center text-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -49,8 +43,8 @@ export const cosplayPage = {
             </Col>
             <Col xs={12} md={10} lg={8}>
                 <Figure>
-                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-                    <Figure.Caption>Entry Plaza</Figure.Caption>
+                    <Figure.Image src={toyota} fluid rounded></Figure.Image>
+                    <Figure.Caption>Toyota Meeting Hall</Figure.Caption>
                 </Figure>
             </Col>
         </Row>
