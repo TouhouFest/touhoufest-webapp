@@ -29,7 +29,6 @@ export const gamingPage = {
         <WarningAlert>
             <p>The below bulletins are <b>outdated</b> and need to be updated:</p>
             <ul>
-                <li>Tournament timeslots (for updating the schedule)</li>
                 <li>start.gg links for each tournament timeslot</li>
                 <li>Tournament Rules</li>
                 <li>Fangames & Arcade Games</li>
