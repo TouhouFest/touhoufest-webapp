@@ -27,6 +27,9 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   if (Object.keys(event_package).length !== 0){
     output = (
       <>
+
+        <p className="text-center">{event_package["daytext"]}</p>
+        <hr />
         {evt_print}
         <hr />
         <Markdown>{event_package["event_description"]}</Markdown>

@@ -8,13 +8,11 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
-import { toyota, kenmiller, WarningAlert } from "../Utils.js";
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
-import { CircledBullets, gamingmap } from '../Utils';
-import { useState } from 'react';
-import { Modal, Row, Col } from 'react-bootstrap';
+import { CircledBullets, gamingmap, nakanotheatre, kenmiller, WarningAlert } from '../Utils';
+import { Row, Col } from 'react-bootstrap';
 import {GlobalTransformWrapper} from './../GlobalTransformWrapper';
 
 import gaming from "./../images/gaming.jpg";
@@ -31,8 +29,6 @@ export const gamingPage = {
         <WarningAlert>
             <p>The below bulletins are <b>outdated</b> and need to be updated:</p>
             <ul>
-                <li>Locations (see remarks on "Key Locations" page)</li>
-                <li>Tournament timeslots (for updating the schedule)</li>
                 <li>start.gg links for each tournament timeslot</li>
                 <li>Tournament Rules</li>
                 <li>Fangames & Arcade Games</li>
@@ -40,12 +36,12 @@ export const gamingPage = {
             </ul>
         </WarningAlert>
         <h4>Location(s)</h4>
-        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>Toyota Meeting Hall</b>, (<span className="text-primary"><CircledBullets argument="9"/></span>) located to the right of the Torino Festival Plaza. Gaming events for Touhou <em>fangames</em> will take place at the <b>Ken Miller Rec Center</b>, (<CircledBullets argument="10"/>) to the left of the Torino Festival Plaza.</p>
+        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza.</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
-                    <Figure.Image src={toyota} fluid rounded></Figure.Image>
-                    <Figure.Caption>Toyota Meeting Hall</Figure.Caption>
+                    <Figure.Image src={nakanotheatre} fluid rounded></Figure.Image>
+                    <Figure.Caption>George Nakano Theatre</Figure.Caption>
                 </Figure>
             </Col>
             <Col xs={12} md={10} lg={8} className="text-center">

@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
-import {pinewindgarden, assemblyhall, entryplaza, placeholder, WarningAlert } from "../Utils";
+import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
@@ -26,14 +26,8 @@ export const cosplayPage = {
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
-        <WarningAlert>
-            <p>The below items are <b>outdated</b> and should be updated:</p>
-            <ul>
-                <li>Locations (see remarks in "Key Locations" page)</li>
-            </ul>
-        </WarningAlert>
         <h4>Location(s)</h4>
-        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="15"/>), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="13"/>). Cosplay booths and repair is located at the <b>Entry Plaza</b> (<CircledBullets argument="5"/>), connected to the Torino Festival Plaza (<CircledBullets argument="7"/>).</p>
+        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="12"/> Cosplay Meetups), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Theatre (Main Events)). Cosplay booths and repair is located at the <b>Toyota Meeting Hall</b> (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths), next to the Torino Festival Plaza.</p>
         <Row className="justify-content-center text-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -49,8 +43,8 @@ export const cosplayPage = {
             </Col>
             <Col xs={12} md={10} lg={8}>
                 <Figure>
-                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-                    <Figure.Caption>Entry Plaza</Figure.Caption>
+                    <Figure.Image src={toyota} fluid rounded></Figure.Image>
+                    <Figure.Caption>Toyota Meeting Hall</Figure.Caption>
                 </Figure>
             </Col>
         </Row>
@@ -161,13 +155,13 @@ export const cosplayPage = {
             </Accordion.Item>
         </Accordion>
 
-        <h4>Cosplay Meetups/Photoshoots</h4>
+        <h4 className="mt-3">Cosplay Meetups/Photoshoots</h4>
 
         <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
 
             <Accordion>
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>The Faithful Gods</Accordion.Header>
+                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH13, TH16, TH18)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="th10">
                             <Card.Body className="text-center">
@@ -246,12 +240,12 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>The Devil's Mansion</Accordion.Header>
+                    <Accordion.Header>The Devil's Mansion (TH06, Touhouvania)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th06">
                             <Card.Body className="text-center">
                                 <Card.Title>The Devil's Mansion</Card.Title>
-                                <Card.Text>Sunday, 12:00 PM - 1:00 PM</Card.Text>
+                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Touhou 6 &quot;Embodiment of Scarlet Devil&quot;</strong></p>
@@ -276,12 +270,12 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header>Netherworld</Accordion.Header>
+                    <Accordion.Header>Melodies in the Netherworld (TH07, TH09)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th07">
                             <Card.Body className="text-center">
-                                <Card.Title>Netherworld</Card.Title>
-                                <Card.Text>Saturday, 1:30 PM - 2:00 PM</Card.Text>
+                                <Card.Title>Melodies in the Netherworld</Card.Title>
+                                <Card.Text>Sunday, 9:30 AM - 10:30 AM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Touhou 7 &quot;Perfect Cherry Blossom&quot;</strong> </p>
@@ -320,7 +314,7 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
-                    <Accordion.Header>Go to hell!!</Accordion.Header>
+                    <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th15">
                             <Card.Body className="text-center">
@@ -401,7 +395,7 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
-                    <Accordion.Header>PC-98 Games</Accordion.Header>
+                    <Accordion.Header>PC-98 Games (TH01 ~ TH05)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 pc98">
                             <Card.Body className="text-center">
@@ -468,7 +462,7 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="5">
-                    <Accordion.Header>Lunar Landing in the Bamboo Forest</Accordion.Header>
+                    <Accordion.Header>Lunar Landing in the Bamboo Forest (TH08, TH15, TH14)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th08">
                             <Card.Body className="text-center">
@@ -527,12 +521,12 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="6">
-                    <Accordion.Header>Fighting Games</Accordion.Header>
+                    <Accordion.Header>Fighting Games (TH7.5, TH10.5, TH12.3, TH13.5, TH14.5, TH15.5)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 fight">
                             <Card.Body className="text-center">
                                 <Card.Title>Fighting Games</Card.Title>
-                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
+                                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
@@ -632,6 +626,27 @@ export const cosplayPage = {
                 </Accordion.Item>
             </Accordion>
 
+        <h5 className="mt-3">Other Photoshoots/Meet ups</h5>
+        <p>The below photoshoots are also available for those interested.</p>
+        <Row xs={1} md={2} lg={4} className="justify-content-center">
+            <Col>
+                <Card className="mt-2 pink-one">
+                    <Card.Body className="text-center">
+                        <Card.Title>Fangames Photoshoot</Card.Title>
+                        <Card.Text>Sunday, 12:00 PM - 12:30 PM</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card className="mt-2 purple-one">
+                    <Card.Body className="text-center">
+                        <Card.Title>Fumo Meetup</Card.Title>
+                        <Card.Text>Saturday, 3:00 PM - 4:00 PM</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
+
+        </Row>
 
         <h4 className="mt-2">Cosplay Repair</h4>
         <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner in the Entry Plaza.</p>
@@ -685,7 +700,7 @@ export const cosplayPage = {
             </Col>
         </Row>
 
-        <h5 className="mt-2">Awards & Prizes</h5>
+        <h5 className="mt-3">Awards & Prizes</h5>
         <p>Please note that the Exhibition Category is not eligible for awards.</p>
         <Row xs={1} lg={3} className="gy-3 justify-content-center">
             <Col >
@@ -729,7 +744,7 @@ export const cosplayPage = {
                 </Card>
             </Col>
         </Row>
-        <h5 className="mt-2">About the Cosplay Contest Judges</h5>
+        <h5 className="mt-3">About the Cosplay Contest Judges</h5>
         <Row xs={1} md={2} lg={4} className="gy-3">
             <Col>
                 <Card>
@@ -789,7 +804,7 @@ export const cosplayPage = {
                 </Card>
             </Col>
         </Row>
-        <h5 className="mt-2">Rules</h5>
+        <h5 className="mt-3">Rules</h5>
         <Accordion>
             <Accordion.Item eventKey="0">
                 <Accordion.Header>General Rules</Accordion.Header>
