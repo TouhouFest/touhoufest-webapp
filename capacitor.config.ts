@@ -22,7 +22,7 @@ const config: CapacitorConfig = {
   },
   ios: {
     scheme: "TouhouFest",
-    contentInset: "always"
+    // contentInset: "always"
   }
 };
 
