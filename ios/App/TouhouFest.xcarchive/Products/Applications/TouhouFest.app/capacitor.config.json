@@ -1,0 +1,24 @@
+{
+	"appId": "com.example.touhoufestwebapp",
+	"appName": "TouhouFest",
+	"webDir": "build",
+	"plugins": {
+		"LocalNotifications": {
+			"iconColor": "#D72640",
+			"smallIcon": "favicon"
+		},
+		"CapacitorCookies": {
+			"enabled": true
+		}
+	},
+	"android": {},
+	"ios": {
+		"scheme": "TouhouFest"
+	},
+	"packageClassList": [
+		"AppPlugin",
+		"LocalNotificationsPlugin",
+		"StatusBarPlugin",
+		"ToastPlugin"
+	]
+}
