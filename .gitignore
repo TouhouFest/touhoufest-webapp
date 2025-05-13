@@ -36,3 +36,5 @@ examples/*/playwright-report/
 examples/*/playwright/.cache/
 
 myenv
+
+ios/App/TouhouFest.xcarchive/
