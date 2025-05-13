@@ -19,6 +19,10 @@ const config: CapacitorConfig = {
       keystoreAlias: process.env.KEYSTOREALIAS,
       keystoreAliasPassword: process.env.KEYSTOREALIASPASSWORD
     }
+  },
+  ios: {
+    scheme: "TouhouFest",
+    contentInset: "always"
   }
 };
 
