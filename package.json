@@ -5,14 +5,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-
     "@capacitor/android": "^7.0.0",
     "@capacitor/app": "^7.0.0",
     "@capacitor/core": "^7.0.0",
     "@capacitor/ios": "^7.0.0",
     "@capacitor/local-notifications": "^7.0.0",
+    "@capacitor/status-bar": "^7.0.1",
     "@capacitor/toast": "^7.0.0",
-
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",

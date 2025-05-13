@@ -1,14 +1,14 @@
 PODS:
-  - Capacitor (6.2.0):
+  - Capacitor (7.2.0):
     - CapacitorCordova
-  - CapacitorApp (6.0.2):
+  - CapacitorApp (7.0.1):
     - Capacitor
-  - CapacitorCordova (6.2.0)
-  - CapacitorLocalNotifications (6.1.2):
+  - CapacitorCordova (7.2.0)
+  - CapacitorLocalNotifications (7.0.1):
     - Capacitor
-  - CapacitorStatusBar (6.0.2):
+  - CapacitorStatusBar (7.0.1):
     - Capacitor
-  - CapacitorToast (6.0.3):
+  - CapacitorToast (7.0.1):
     - Capacitor
 
 DEPENDENCIES:
@@ -34,13 +34,13 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/toast"
 
 SPEC CHECKSUMS:
-  Capacitor: 05d35014f4425b0740fc8776481f6a369ad071bf
-  CapacitorApp: e1e6b7d05e444d593ca16fd6d76f2b7c48b5aea7
-  CapacitorCordova: b33e7f4aa4ed105dd43283acdd940964374a87d9
-  CapacitorLocalNotifications: 65d718c32cbcb753697627bea76dd4336ef85dc2
-  CapacitorStatusBar: b16799a26320ffa52f6c8b01737d5a95bbb8f3eb
-  CapacitorToast: 325d1815e2c2b556257909df7ef1e25eb96cd0c5
+  Capacitor: 03bc7cbdde6a629a8b910a9d7d78c3cc7ed09ea7
+  CapacitorApp: febecbb9582cb353aed037e18ec765141f880fe9
+  CapacitorCordova: 5967b9ba03915ef1d585469d6e31f31dc49be96f
+  CapacitorLocalNotifications: c2212755b33d2513b8bb325096ce3a64d4039ae3
+  CapacitorStatusBar: 6e7af040d8fc4dd655999819625cae9c2d74c36f
+  CapacitorToast: ddfc4b36080dbe3634c9faf510b20f6ddcff9330
 
-PODFILE CHECKSUM: 621c24a99cd68c9596913726ac08a9cc1183a4bd
+PODFILE CHECKSUM: 749b4662cae1515b8607716c756a3582d55b14a8
 
 COCOAPODS: 1.16.2
