@@ -316,7 +316,7 @@ export const artistVendorsPage = {
             </>)}
         </Row>
 
-        <h4>Vendors</h4>
+        <h4 className="mt-3">Vendors</h4>
         <h5>Vendors Booth Map</h5>
         <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
 

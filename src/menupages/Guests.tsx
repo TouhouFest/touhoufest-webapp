@@ -83,7 +83,7 @@ export const guestsPage = {
         <p>Events for the following guests will occur at the following locations:</p>
         <ul>
             <li><b>Shihori, A-ONE, & Miko</b>: Assembly Hall (<CircledBullets argument="11"/> Theatre (Main Events))</li>
-            <li><b>TAMUSIC & Miko</b>: Torino Plaza (&nbsp;<CircledBullets argument="7"/> Main Stage)</li>
+            <li><b>TAMUSIC & Miko</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
         </ul>
         <p>All Guests Booths are accessible also at the Torino Plaza. (<CircledBullets argument="6"/> Guest Booths)</p>
         <Row className="justify-content-center">
