@@ -10,6 +10,9 @@ const config: CapacitorConfig = {
     LocalNotifications: {
       iconColor: "#D72640",
       smallIcon: "favicon"
+    },
+    CapacitorCookies: {
+      enabled: true
     }
   },
   android: {
