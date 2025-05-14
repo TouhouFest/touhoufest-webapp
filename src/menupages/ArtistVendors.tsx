@@ -224,32 +224,6 @@ let communitytables = [
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
-let official_artists = [
-    {
-        "name": <>Cloudie/Cookie&shy;tanuki&shy;art</>,
-        "image": cookie,
-        "location": "See Torino Plaza",
-        "website": "https://linktr.ee/cookietanuki",
-        "description": ""
-    },
-    {
-        "name": "FREEZE-EX",
-        "image": freezeex,
-        "location": "See Torino Plaza",
-        "website": "https://icecute.squarespace.com/",
-        "description": ""
-    },
-    {
-        "name": "Anazel",
-        "image": anazel,
-        "location": "Not at TF",
-        "website": "https://www.instagram.com/anazel_art/?hl=en",
-        "description": ""
-    }
-
-];
-
-
 export const artistVendorsPage = {
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
@@ -271,31 +245,11 @@ export const artistVendorsPage = {
             </Col>
         </Row>
 
-
-        <Row xs={1} lg={2}>
-            <Col>
-                <h4>Artist Alley</h4>
-                <h5>Official Artists</h5>
-
-                <Row xs={2} md={3} className="g-3 justify-content-center">
-                    {official_artists.map((artist, i) => <>
-                    <Col>
-                        <Card>
-                            <Card.Img variant="top" src={artist["image"]}></Card.Img>
-                            <ListGroup className="list-group-flush">
-                                <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                                <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                            </ListGroup>
-                            {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
-                        </Card>
-                    </Col>
-                    </>)}
-                </Row>
-                <h5 className="mt-3">Artist Alley Booth Map</h5>
-                <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. Lyrica Live corresponds to A1)</p>
-
-            </Col>
-            <Col>
+        <h4>Artist Alley</h4>
+        <h5 className="mt-3">Artist Alley Booth Map</h5>
+        <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. Lyrica Live corresponds to A1)</p>
+        <Row className="justify-content-center">
+            <Col xs={12} lg={8}>
                 <GlobalTransformWrapper src={artistalleymap} caption="Map of Artist Alley"/>
             </Col>
         </Row>

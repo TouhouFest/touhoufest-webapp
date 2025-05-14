@@ -7,9 +7,9 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo, faEarthAmericas, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
-import { Image, Accordion } from 'react-bootstrap';
+import { Image, Accordion, Card, ListGroup } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
 import { con_banner, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
@@ -23,6 +23,63 @@ import guest from "./../images/badges/guest.jpg";
 import performer from "./../images/badges/performer.jpg";
 import exhibitor from "./../images/badges/exhibitor.jpg";
 import press from "./../images/badges/press.jpg";
+
+import cookie from "./../images/artistalley/cookie.png";
+import freezeex from "./../images/artistalley/freezeex.png";
+import anazel from "./../images/artistalley/anazel.jpg";
+import carnelscorner from "./../images/artistalley/carnelscorner.jpg";
+import meltyuchuu from "./../images/artistalley/melty.jpg";
+import ckitten from "./../images/artistalley/ckitten.jpg";
+
+let official_artists = [
+    {
+        "name": <>Cloudie&shy;/Cookie&shy;tanuki&shy;art</>,
+        "image": cookie,
+        "location": "See Torino Plaza",
+        "website": "https://linktr.ee/cookietanuki",
+        "description": ""
+    },
+    {
+        "name": "FREEZE-EX",
+        "image": freezeex,
+        "location": "See Torino Plaza",
+        "website": "https://icecute.squarespace.com/",
+        "description": ""
+    },
+    {
+        "name": "Anazel",
+        "image": anazel,
+        "location": "Not at TF",
+        "website": "https://www.instagram.com/anazel_art/?hl=en",
+        "description": ""
+    },
+    {
+        "name": "CarnelsCorner",
+        "image": carnelscorner,
+        "location": "Not at TF",
+        "website": "https://twitter.com/CarnelsCorner",
+        "description": ""
+    }
+
+];
+
+let past_artists = [
+  {
+      "name": "MeltyUchuu",
+      "image": meltyuchuu,
+      "location": "2024 Badge Artist",
+      "website": "https://meltyuchuu.carrd.co/",
+      "description": ""
+  },
+  {
+      "name": <>Colorful&shy;Kitten</>,
+      "image": ckitten,
+      "location": "2023 Badge Artist",
+      "website": "https://linktr.ee/colorfulkitten_cosplay",
+      "description": ""
+  }
+];
+
 
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
@@ -169,6 +226,42 @@ export const aboutConPage = {
         <Col><Image src={exhibitor} rounded fluid/></Col>
         <Col><Image src={press} rounded fluid/></Col>
       </Row>
+
+      <h4 className="mt-3">Official Artists</h4>
+
+      <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
+          {official_artists.map((artist, i) => <>
+          <Col>
+              <Card>
+                  <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                  <ListGroup className="list-group-flush">
+                      <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                      {/*<ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>*/}
+                  </ListGroup>
+                  {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+              </Card>
+          </Col>
+          </>)}
+      </Row>
+
+      <h5 className="mt-3">Past Official TouhouFest Artists</h5>
+
+      <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
+          {past_artists.map((artist, i) => <>
+          <Col>
+              <Card>
+                  <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                  <ListGroup className="list-group-flush">
+                      <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                      <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                  </ListGroup>
+                  {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+              </Card>
+          </Col>
+          </>)}
+      </Row>
+
+
     </>
   ),
 }
