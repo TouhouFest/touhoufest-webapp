@@ -30,15 +30,6 @@ export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
-        <WarningAlert>
-            <p>The below bulletins are <b>outdated</b> and need to be updated:</p>
-            <ul>
-                <li>start.gg links for each tournament timeslot</li>
-                <li>Tournament Rules</li>
-                <li>Fangames & Arcade Games</li>
-                <li>Gaming Hall Map</li>
-            </ul>
-        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza.</p>
         <Row className="justify-content-center">
