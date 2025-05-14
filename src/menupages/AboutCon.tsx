@@ -30,12 +30,6 @@ export const aboutConPage = {
   "fluidImage": (<><Image src={con_banner} fluid /></>),
   "body": (
     <>
-      <WarningAlert>
-          <p>The following bulletins have <b>not</b> been confirmed yet:</p>
-          <ul>
-              <li>Gaming operating hours</li>
-          </ul>
-      </WarningAlert>
       <div className="text-center">
         <h3 className="display-6">Welcome to TouhouFest!</h3>
         <p className="lead">June 14th - 15th, 2025</p>
