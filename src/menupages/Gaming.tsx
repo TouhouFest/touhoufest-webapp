@@ -249,8 +249,5 @@ export const gamingPage = {
                 </Card>
             </Col>
         </Row>
-
-        <h5 className="mt-3">Tournament Rules</h5>
-
     </>)
 }
