@@ -68,7 +68,7 @@ let djs = [
         "website": "https://x.com/itsjonasw"
     },
     {
-        "name": "CorpsDanceCrew",
+        "name": "The Corps Dance Crew",
         "image": corpsdancecrew,
         "location": "Saturday",
         "website": "https://x.com/TheCorpsDC"

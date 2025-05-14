@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
@@ -22,19 +22,14 @@ import skyarena from "./../images/gaming/skyarena.jpg";
 import retrospective from "./../images/gaming/retrospective.png";
 import showcase from "./../images/gaming/showcase.png";
 
+import noetic from "./../images/gamingfolder/noetic.jpg";
+import tboddy from "./../images/gamingfolder/tboddy.jpg";
+import fireland from "./../images/gamingfolder/fireland.jpg";
+
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
-        <WarningAlert>
-            <p>The below bulletins are <b>outdated</b> and need to be updated:</p>
-            <ul>
-                <li>start.gg links for each tournament timeslot</li>
-                <li>Tournament Rules</li>
-                <li>Fangames & Arcade Games</li>
-                <li>Gaming Hall Map</li>
-            </ul>
-        </WarningAlert>
         <h4>Location(s)</h4>
         <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza.</p>
         <Row className="justify-content-center">
@@ -64,47 +59,53 @@ export const gamingPage = {
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
 
         <h5>Fangames</h5> 
-        <p>Below is a sampling of the fangames on the docket:</p>
+        <p>The below fangame devs will be available and will have playable demos at the Game Hall:</p>
 
         <Row xs={1} md={3} className="gy-3">
             <Col>
                 <Card>
-                    <Card.Img src={fracturedtransience} variant="top"/>
+                    <Card.Img src={noetic} variant="top"/>
                     <Card.Body className="text-center">
-                        <Card.Subtitle>Touhou Fractured Transience</Card.Subtitle>
-                        <Card.Text className="small">Fighting Game</Card.Text>
+                        <Card.Subtitle>Noetic Nightjar Studios</Card.Subtitle>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/2290860/Touhou_Fractured_Transience/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam (Early Access!)</Card.Link>
+                        <Card.Link className="small" href="http://noeticnightjar.com/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Img src={gensouskydrift} variant="top"/>
+                    <Card.Img src={tboddy} variant="top"/>
                     <Card.Body className="text-center">
-                        <Card.Subtitle>GENSOU Skydrift</Card.Subtitle>
-                        <Card.Text className="small">Racing Game</Card.Text>
+                        <Card.Subtitle>tboddy</Card.Subtitle>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/1065260/GENSOU_Skydrift/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
+                        <Card.Link className="small" href="https://tboddy.itch.io/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Img src={skyarena} variant="top"/>
+                    <Card.Img src={fireland} variant="top"/>
                     <Card.Body className="text-center">
-                        <Card.Subtitle>TOUHOU SKY ARENA MATSURI CLIMAX</Card.Subtitle>
-                        <Card.Text className="small">3D Danmaku Game</Card.Text>
+                        <Card.Subtitle>Fire Land</Card.Subtitle>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/1086860/TOUHOU_SKY_ARENA_MATSURI_CLIMAX/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
+                        <Card.Link className="small" href="https://store.steampowered.com/app/1825250/Touhou_Lensed_Night_Sky_Kaseigai/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
         </Row>
 
+        <h5>Arcade Cabinets</h5>
+        <p>A variety of different arcade cabinets and rhythm games will be available to play throughout TouhouFest. Below is a selection of some of the offerings:</p>
+        <ul>
+            <li>Dance Dance Revolution</li>
+            <li>Chunithm</li>
+            <li>Jubeat</li>
+        </ul>
+
+        {/*
         <h5 className="mt-2">Touhou Game Dev Fangames</h5>
         <p>The below itch.io collections -- composed of fangames made by a variety of aspiring developers -- will also be featured at TouhouFest and are for the most part playable.</p>
 
@@ -133,17 +134,19 @@ export const gamingPage = {
             </Col>
         </Row>
 
+        */}
+
         <h4 className="mt-2">Tournaments</h4>
-        <p>Tournaments are being arranged for the following games:</p>
+        <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg.</p>
         <ul>
-            <li>Touhou 12.3 Hisoutensoku</li>
-            <li>Touhou 19 Unfinished Dream of All Living Ghost</li>
-            <li>Touhou Rivals Workshop</li>
-            <li>Touhou Fractured Transience</li>
-            <li>Touhou 15.5 Antimony of Common Flowers</li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/overview/rules">Touhou 12.3 Hisoutensoku</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c/overview/rules">Touhou 19 Unfinished Dream of All Living Ghost</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/overview/rules">Touhou Rivals Workshop</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience/overview/rules">Touhou Fractured Transience</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf/overview/rules">Touhou 15.5 Antimony of Common Flowers</a></li>
         </ul>
         <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2024/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
-        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on April 25th, 2024.</p>
+        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on June 12th, 2025.</p>
 
         <h5>Prizes</h5>
         <Row xs={1} md={2}>
@@ -176,7 +179,8 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave A</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-19-udoalg/brackets/1488492/2247283" target="_blank">Touhou 19</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2643746" target="_blank">Touhou 9 PoFV (Rework Patch)</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2862655" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
                     </ListGroup>
 
                 </Card>
@@ -187,8 +191,8 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave B</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-19-udoalg/brackets/1488492/2296293" target="_blank">Touhou 19</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-12-3-hisoutensoku/brackets/1389325/2109926" target="_blank">Touhou Hisoutensoku</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643734" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2)</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2643738" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
                     </ListGroup>
 
                 </Card>
@@ -199,8 +203,8 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave C</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-12-3-hisoutensoku/brackets/1389325/2109927" target="_blank">Touhou Hisoutensoku</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-rivals-workshop-1v1/brackets/1389330/2109933" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2862657" target="_blank">Touhou 9 PoFV (Rework Patch)</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643735" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2)</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -210,7 +214,9 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave D</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-12-3-hisoutensoku/brackets/1389326/2109928" target="_blank">Touhou Hisoutensoku</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1949467/2862661" target="_blank">Touhou 9 PoFV (Rework Patch) Finals</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1949466/2862658" target="_blank">Touhou Rivals Workshop Finals</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2) Finals</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -220,7 +226,7 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave E</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-15-5-aocf/brackets/1389327/2109929" target="_blank">Touhou 15.5 AoCF</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf" target="_blank">Touhou 15.5 AoCF [Full Bracket]</Card.Link></ListGroup.Item>
                     </ListGroup>
 
                 </Card>
@@ -231,8 +237,7 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave F</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-fractured-transience-early-build-bracket/brackets?filter=%7B%22phaseId%22%3A1520894%2C%22perPage%22%3A2%7D" target="_blank">Touhou Fractured Transience</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-19-udoalg/brackets/1525803/2296294" target="_blank">Touhou 19</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c" target="_blank">Touhou 19 UDoALG (Balance Patch 1.10c) [Full Bracket]</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -242,12 +247,10 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave G</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-fractured-transience-early-build-bracket/brackets/1525804/2296296" target="_blank">Touhou Fractured Transience</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience" target="_blank">Touhou Fractured Transience [Full Bracket]</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
         </Row>
-
-
     </>)
 }
