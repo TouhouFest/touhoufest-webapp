@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationCircle, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Card, Figure, Image } from 'react-bootstrap';
 import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
@@ -21,6 +21,10 @@ import gensouskydrift from "./../images/gaming/gensouskydrift.jpg";
 import skyarena from "./../images/gaming/skyarena.jpg";
 import retrospective from "./../images/gaming/retrospective.png";
 import showcase from "./../images/gaming/showcase.png";
+
+import noetic from "./../images/gamingfolder/noetic.jpg";
+import tboddy from "./../images/gamingfolder/tboddy.jpg";
+import fireland from "./../images/gamingfolder/fireland.jpg";
 
 export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
@@ -64,47 +68,53 @@ export const gamingPage = {
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
 
         <h5>Fangames</h5> 
-        <p>Below is a sampling of the fangames on the docket:</p>
+        <p>The below fangame devs will be available and will have playable demos at the Game Hall:</p>
 
         <Row xs={1} md={3} className="gy-3">
             <Col>
                 <Card>
-                    <Card.Img src={fracturedtransience} variant="top"/>
+                    <Card.Img src={noetic} variant="top"/>
                     <Card.Body className="text-center">
-                        <Card.Subtitle>Touhou Fractured Transience</Card.Subtitle>
-                        <Card.Text className="small">Fighting Game</Card.Text>
+                        <Card.Subtitle>Noetic Nightjar Studios</Card.Subtitle>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/2290860/Touhou_Fractured_Transience/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam (Early Access!)</Card.Link>
+                        <Card.Link className="small" href="http://noeticnightjar.com/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Img src={gensouskydrift} variant="top"/>
+                    <Card.Img src={tboddy} variant="top"/>
                     <Card.Body className="text-center">
-                        <Card.Subtitle>GENSOU Skydrift</Card.Subtitle>
-                        <Card.Text className="small">Racing Game</Card.Text>
+                        <Card.Subtitle>tboddy</Card.Subtitle>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/1065260/GENSOU_Skydrift/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
+                        <Card.Link className="small" href="https://tboddy.itch.io/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
             <Col>
                 <Card className="">
-                    <Card.Img src={skyarena} variant="top"/>
+                    <Card.Img src={fireland} variant="top"/>
                     <Card.Body className="text-center">
-                        <Card.Subtitle>TOUHOU SKY ARENA MATSURI CLIMAX</Card.Subtitle>
-                        <Card.Text className="small">3D Danmaku Game</Card.Text>
+                        <Card.Subtitle>Fire Land</Card.Subtitle>
                     </Card.Body>
                     <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/1086860/TOUHOU_SKY_ARENA_MATSURI_CLIMAX/" target="_blank"><FontAwesomeIcon icon={faSteam}/> Steam</Card.Link>
+                        <Card.Link className="small" href="https://store.steampowered.com/app/1825250/Touhou_Lensed_Night_Sky_Kaseigai/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
                     </Card.Footer>
                 </Card>
             </Col>
         </Row>
 
+        <h5>Arcade Cabinets</h5>
+        <p>A variety of different arcade cabinets and rhythm games will be available to play throughout TouhouFest. Below is a selection of some of the offerings:</p>
+        <ul>
+            <li>Dance Dance Revolution</li>
+            <li>Chunithm</li>
+            <li>Jubeat</li>
+        </ul>
+
+        {/*
         <h5 className="mt-2">Touhou Game Dev Fangames</h5>
         <p>The below itch.io collections -- composed of fangames made by a variety of aspiring developers -- will also be featured at TouhouFest and are for the most part playable.</p>
 
@@ -132,6 +142,8 @@ export const gamingPage = {
                 </Card>
             </Col>
         </Row>
+
+        */}
 
         <h4 className="mt-2">Tournaments</h4>
         <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg.</p>
