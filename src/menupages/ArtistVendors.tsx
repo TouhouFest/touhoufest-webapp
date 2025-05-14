@@ -116,6 +116,8 @@ import mintchokuma from "./../images/artistalley/mintchokuma.jpg";
 import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
 import wudjadoo from "./../images/artistalley/wudjadoo.jpg";
+import eggu from "./../images/artistalley/eggu.jpg";
+import okamijy from "./../images/artistalley/okamijy.jpg";
 
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import daveandbusters from "./../images/artistalley/daveandbusters.jpg";
@@ -144,8 +146,8 @@ let artistlist = [
 
 {"name": <>MARLO&shy;WEMEMO</>, "image": MARLOWEMEMO, "location": "Booth C5", "website": "https://www.instagram.com/marlowememo/", "description": ""},
 
-{"name": "Eggu (Grillboss Co.)", "image": grillboss, "location": "Booth C6", "website": "https://egguv.carrd.co/", "description": ""},
-{"name": "Okamijy (Grillboss Co.)", "image": grillboss, "location": "Booth C6", "website": "https://okamijy.carrd.co/", "description": ""},
+{"name": "Eggu (Grillboss Co.)", "image": eggu, "location": "Booth C6", "website": "https://egguv.carrd.co/", "description": ""},
+{"name": "Okamijy (Grillboss Co.)", "image": okamijy, "location": "Booth C6", "website": "https://okamijy.carrd.co/", "description": ""},
 {"name": "Partyu", "image": partyu, "location": "Booth D1", "website": "https://twitter.com/_partyu", "description": ""},
 {"name": "Kureihii Art", "image": kurehii, "location": "Booth D2", "website": "https://www.instagram.com/kureihii/?hl=en", "description": ""},
 {"name": "quowl", "image": quowl, "location": "Booth D3", "website": "https://quowl.carrd.co/", "description": ""},
