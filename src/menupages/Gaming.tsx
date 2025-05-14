@@ -134,16 +134,16 @@ export const gamingPage = {
         </Row>
 
         <h4 className="mt-2">Tournaments</h4>
-        <p>Tournaments are being arranged for the following games:</p>
+        <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg.</p>
         <ul>
-            <li>Touhou 12.3 Hisoutensoku</li>
-            <li>Touhou 19 Unfinished Dream of All Living Ghost</li>
-            <li>Touhou Rivals Workshop</li>
-            <li>Touhou Fractured Transience</li>
-            <li>Touhou 15.5 Antimony of Common Flowers</li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/overview/rules">Touhou 12.3 Hisoutensoku</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c/overview/rules">Touhou 19 Unfinished Dream of All Living Ghost</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/overview/rules">Touhou Rivals Workshop</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience/overview/rules">Touhou Fractured Transience</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf/overview/rules">Touhou 15.5 Antimony of Common Flowers</a></li>
         </ul>
         <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2024/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
-        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on April 25th, 2024.</p>
+        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on June 12th, 2025.</p>
 
         <h5>Prizes</h5>
         <Row xs={1} md={2}>
@@ -248,6 +248,7 @@ export const gamingPage = {
             </Col>
         </Row>
 
+        <h5 className="mt-3">Tournament Rules</h5>
 
     </>)
 }
