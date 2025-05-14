@@ -176,7 +176,8 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave A</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-19-udoalg/brackets/1488492/2247283" target="_blank">Touhou 19</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2643746" target="_blank">Touhou 9 PoFV (Rework Patch)</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2862655" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
                     </ListGroup>
 
                 </Card>
@@ -187,8 +188,8 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave B</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-19-udoalg/brackets/1488492/2296293" target="_blank">Touhou 19</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-12-3-hisoutensoku/brackets/1389325/2109926" target="_blank">Touhou Hisoutensoku</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643734" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2)</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2643738" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
                     </ListGroup>
 
                 </Card>
@@ -199,8 +200,8 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave C</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-12-3-hisoutensoku/brackets/1389325/2109927" target="_blank">Touhou Hisoutensoku</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-rivals-workshop-1v1/brackets/1389330/2109933" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2862657" target="_blank">Touhou 9 PoFV (Rework Patch)</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643735" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2)</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -210,7 +211,9 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave D</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-12-3-hisoutensoku/brackets/1389326/2109928" target="_blank">Touhou Hisoutensoku</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1949467/2862661" target="_blank">Touhou 9 PoFV (Rework Patch) Finals</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1949466/2862658" target="_blank">Touhou Rivals Workshop Finals</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2) Finals</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -220,7 +223,7 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave E</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-15-5-aocf/brackets/1389327/2109929" target="_blank">Touhou 15.5 AoCF</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf" target="_blank">Touhou 15.5 AoCF [Full Bracket]</Card.Link></ListGroup.Item>
                     </ListGroup>
 
                 </Card>
@@ -231,8 +234,7 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave F</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-fractured-transience-early-build-bracket/brackets?filter=%7B%22phaseId%22%3A1520894%2C%22perPage%22%3A2%7D" target="_blank">Touhou Fractured Transience</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-19-udoalg/brackets/1525803/2296294" target="_blank">Touhou 19</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c" target="_blank">Touhou 19 UDoALG (Balance Patch 1.10c) [Full Bracket]</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -242,7 +244,7 @@ export const gamingPage = {
                         <Card.Title className="mb-0">Wave G</Card.Title>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2024/event/touhou-fractured-transience-early-build-bracket/brackets/1525804/2296296" target="_blank">Touhou Fractured Transience</Card.Link></ListGroup.Item>
+                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience" target="_blank">Touhou Fractured Transience [Full Bracket]</Card.Link></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
