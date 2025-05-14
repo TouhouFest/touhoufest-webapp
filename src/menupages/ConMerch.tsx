@@ -19,21 +19,21 @@ let pricelist = [
         "title": "TouhouFest 2025 Tote Bag",
         "description": "TouhouFest’s official 2025 exclusive tote bag featuring various Touhou Project characters, including Reimu Hakurei, Marisa Kirisame, Sanae Kochiya, Cirno, Reisen Udongein Inaba, and Youmu Konpaku!",
         "photo": totebag,
-        "notes": ""
+        "notes": "Artist: Cloudie"
     },
     {
         "price": "$40.00",
         "title": "TouhouFest Live 2025 Lightstick Freeze-Ex Ver. ",
         "description": "New to TouhouFest this year are exclusively branded lightsticks made in collaboration with Neon Shrine! Featuring artwork of Reimu Hakurei, cheer for your favorite performers with these lightsticks during TouhouFest Live 2025, where live performances will take place throughout the event!",
         "photo":lightstick_freeze,
-        "notes": "May be in short supply!"
+        "notes": "Artist: Freeze-Ex"
     },
     {
         "price": "$40.00",
         "title": "TouhouFest Live 2025 Lightstick CookieTanuki Ver. ",
         "description": "New to TouhouFest this year are exclusively branded lightsticks made in collaboration with Neon Shrine! Featuring artwork of various Touhou characters, cheer for your favorite performers with these lightsticks during TouhouFest Live 2025, where live performances will take place throughout the event!",
         "photo": lightstick_cloudie,
-        "notes": "May be in short supply!"
+        "notes": "Artist: Cloudie"
     },
     {
         "price": "$5.00",
@@ -47,7 +47,7 @@ let pricelist = [
         "title": "TouhouFest 2024 Marisa Button Pin ",
         "description": "TouhouFest’s official 2024 button pin featuring the character Marisa Kirisame!",
         "photo": marisapin,
-        "notes": ""
+        "notes": "Artist: Cloudie"
     },
     {
         "price": "$10.00",
@@ -61,14 +61,14 @@ let pricelist = [
         "title": "TouhouFest Reimu Poster ",
         "description": "A print of TouhouFest’s official artwork featuring the Touhou Project character, Reimu Hakurei! Choose between two sizes: 8 in. x 11 in. ($10.00) or 11 in. x 17 in. ($15.00)",
         "photo": reimuposter,
-        "notes": ""
+        "notes": "Artist: Cloudie"
     },
     {
         "price": "$15.00",
         "title": "TouhouFest 2024 Tote Bag",
         "description": "TouhouFest’s official tote bag featuring the Touhou Project character, Reimu Hakurei!",
         "photo": reimutote,
-        "notes": "May be in short supply!"
+        "notes": "Artist: Cloudie"
     },
     {
         "price": "$15.00",
