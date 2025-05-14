@@ -17,12 +17,6 @@ import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 function MapModals(){
 
     return (<>
-        <WarningAlert>
-            <p>The below items are still <b>outdated</b>:</p>
-            <ul>
-                <li>Gaming Hall Map</li>
-            </ul>
-        </WarningAlert>
         <p>Pinch to focus in/zoom on all maps as needed.</p>
 
         <h4>Main TouhouFest Map</h4>
