@@ -136,10 +136,14 @@ let artistlist = [
 {"name": "ASAZEi", "image": asazei, "location": "Booth B5", "website": "https://x.com/ASAZEi_art", "description": ""},
 {"name": <>Biscay&shy;Biscuits</>, "image": biscaybiscuits, "location": "Booth B6", "website": "https://www.instagram.com/themoondruid?igsh=NGVhN2U2NjQ0Yg==", "description": ""},
 {"name": "Juliana Egg", "image": julianaegg, "location": "Booth C1", "website": "instagram.com/juliana_egg", "description": ""},
-{"name": <>MARLO&shy;WEMEMO</>, "image": MARLOWEMEMO, "location": "Booth C2", "website": "https://www.instagram.com/marlowememo/", "description": ""},
+
+{"name": "NekoMofu Jinja", "image": nekomofu, "location": "Booth C2", "website": "https://www.instagram.com/schemanineko/", "description": ""},
+
 {"name": "limpachi", "image": limpachu, "location": "Booth C3", "website": "https://twitter.com/limpachu", "description": ""},
 {"name": <>Meiki</>, "image": meiki, "location": "Booth C4", "website": "https://sirmasterknight.carrd.co/", "description": ""},
-{"name": "NekoMofu Jinja", "image": nekomofu, "location": "Booth C5", "website": "https://www.instagram.com/schemanineko/", "description": ""},
+
+{"name": <>MARLO&shy;WEMEMO</>, "image": MARLOWEMEMO, "location": "Booth C5", "website": "https://www.instagram.com/marlowememo/", "description": ""},
+
 {"name": "Eggu (Grillboss Co.)", "image": grillboss, "location": "Booth C6", "website": "https://egguv.carrd.co/", "description": ""},
 {"name": "Okamijy (Grillboss Co.)", "image": grillboss, "location": "Booth C6", "website": "https://okamijy.carrd.co/", "description": ""},
 {"name": "Partyu", "image": partyu, "location": "Booth D1", "website": "https://twitter.com/_partyu", "description": ""},
