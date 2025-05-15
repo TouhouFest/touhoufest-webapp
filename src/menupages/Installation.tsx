@@ -18,7 +18,6 @@ import androidfirefox01 from "./../images/installation/androidfirefox01.jpg";
 import androidfirefox02 from "./../images/installation/androidfirefox02.jpg";
 import androidfirefox03 from "./../images/installation/androidfirefox03.jpg";
 import ios from "./../images/installation/ios.webp";
-import { WarningAlert } from '../Utils';
 
 export const installationPage = {
   "header": (<><FontAwesomeIcon icon={faDownload} fixedWidth></FontAwesomeIcon> Installation Options</>),
