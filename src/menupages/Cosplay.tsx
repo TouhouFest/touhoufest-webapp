@@ -648,7 +648,7 @@ export const cosplayPage = {
         </Row>
 
         <h4 className="mt-2">Cosplay Repair</h4>
-        <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner in the Entry Plaza.</p>
+        <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner at the Toyota Meeting Hall.</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
