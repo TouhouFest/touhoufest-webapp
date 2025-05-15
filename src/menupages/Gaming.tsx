@@ -9,18 +9,12 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Card, Figure, Image } from 'react-bootstrap';
-import { faItchIo, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { ListGroup } from 'react-bootstrap';
-import { CircledBullets, gamingmap, nakanotheatre, kenmiller, WarningAlert } from '../Utils';
+import { CircledBullets, gamingmap, nakanotheatre, kenmiller } from '../Utils';
 import { Row, Col } from 'react-bootstrap';
 import {GlobalTransformWrapper} from './../GlobalTransformWrapper';
 
 import gaming from "./../images/gaming.jpg";
-import fracturedtransience from "./../images/gaming/fracturedtransience.jpg";
-import gensouskydrift from "./../images/gaming/gensouskydrift.jpg";
-import skyarena from "./../images/gaming/skyarena.jpg";
-import retrospective from "./../images/gaming/retrospective.png";
-import showcase from "./../images/gaming/showcase.png";
 
 import noetic from "./../images/gamingfolder/noetic.jpg";
 import tboddy from "./../images/gamingfolder/tboddy.jpg";
