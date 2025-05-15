@@ -10,10 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
-import tokyostyle from "./../images/tokyostyle.webp";
-import brazilplate from "./../images/brazilplate.jpg";
-import orientalbreeze from "./../images/orientalbreeze.jpg";
-import noodsfoodtruck from "./../images/noodsfoodtruck.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
 
