@@ -160,7 +160,7 @@ export const cosplayPage = {
 
             <Accordion>
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH13, TH16, TH18)</Accordion.Header>
+                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH13, TH16, TH18, TH20)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="th10">
                             <Card.Body className="text-center">
@@ -235,6 +235,12 @@ export const cosplayPage = {
                             <li>Murasa</li>
                             <li>Yuyuko</li>
                             <li>Youmu</li>
+                        </ul>
+                        <p><strong>Touhou 20 &quot;Fossilized Wonders&quot;</strong></p>
+                        <ul>
+                            <li>Ubame</li>
+                            <li>Chimi</li>
+                            <li>Nareko</li>
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
