@@ -16,7 +16,6 @@ import { CircledBullets } from '../Utils';
 // const cosplaybanner = require('./../images/cosplaybanner.jpg');
 import cosplaybanner from "./../images/cosplaybanner.jpg";
 import medukitty from "./../images/medukitty.jpg";
-import violetreverie from "./../images/violetreverie.jpg";
 import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
