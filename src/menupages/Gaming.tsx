@@ -139,7 +139,7 @@ export const gamingPage = {
             <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience/overview/rules">Touhou Fractured Transience</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf/overview/rules">Touhou 15.5 Antimony of Common Flowers</a></li>
         </ul>
-        <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2024/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
+        <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2025/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
         <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on June 12th, 2025.</p>
 
         <h5>Prizes</h5>
