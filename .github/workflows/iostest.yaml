@@ -11,5 +11,5 @@ jobs:
       - name: Pull down repository 
         uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
-      - run: git pull
+      - run: git branch
  
