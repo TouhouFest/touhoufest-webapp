@@ -195,7 +195,7 @@ let plazatables = [
 {"name": "Kusoya / Yasoku", "image": kusoyayaoku2, "location": "Booth FB06", "website": "https://yasoku.us/", "role": "Festival Booth"},
 
 {"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB07", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
-{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://www.youtube.com/playlist?list=PLXE44dEbW3ZS5DwcanBS3p5KM3TAAyRMm", "role": "Vendor"},
+{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://ko-fi.com/icefairy/shop", "role": "Vendor"},
 {"name": "Maid Academy", "image": maidacademy, "location": "Booth FB09", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
 {"name": "Manga de Japanese", "image": mangadejapanese, "location": "Booth FB10", "website": "https://manga-de.com", "role": "Festival Booth"},
 ];
