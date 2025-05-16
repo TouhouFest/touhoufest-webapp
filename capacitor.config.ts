@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const config: CapacitorConfig = {
-  appId: 'com.example.touhoufestwebapp',
+  appId: 'com.touhou.touhoufestwebapp',
   appName: 'TouhouFest',
   webDir: 'build',
   plugins: {
