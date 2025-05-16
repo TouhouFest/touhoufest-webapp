@@ -9,6 +9,10 @@ jobs:
     runs-on: macos-latest
     steps:
       # pull down repository
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - run: brew install base64
       - name: Pull down repository 
         uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
