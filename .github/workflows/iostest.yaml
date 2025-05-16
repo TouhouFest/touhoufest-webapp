@@ -1,0 +1,15 @@
+name: Test deploy ios apps
+on: 
+  workflow_dispatch:
+jobs:
+  IOS-Deploy:
+    permissions:
+      contents: write
+    runs-on: macos-latest
+    steps:
+      # pull down repository
+      - name: Pull down repository 
+        uses: actions/checkout@v4
+      - run: cd ${{ github.workspace }}
+      - run: git pull
+ 
