@@ -9,11 +9,11 @@ jobs:
     runs-on: macos-latest
     steps:
       # pull down repository
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-      - run: brew install base64
-      - run: alias base64=/opt/homebrew/bin/base64
+      # - name: Set up Homebrew
+      #   id: set-up-homebrew
+      #   uses: Homebrew/actions/setup-homebrew@master
+      # - run: brew install base64
+      # - run: alias base64=/opt/homebrew/bin/base64
       - name: Pull down repository 
         uses: actions/checkout@v4
       - run: cd ${{ github.workspace }}
@@ -21,7 +21,7 @@ jobs:
       - run: npm ci
       # unlock repository using git crypt secrets
       - uses: flydiverny/setup-git-crypt@v4
-      - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di --decode > ~/key && git-crypt unlock ~/key
+      - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di > ~/key && git-crypt unlock ~/key
         env:
           GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
       - run: npm run build
