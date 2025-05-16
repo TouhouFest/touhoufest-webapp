@@ -22,6 +22,21 @@ import { conMerchPage } from "./menupages/ConMerch";
 
 import { Capacitor } from '@capacitor/core';
 
+import {Animation, StatusBar, Style} from '@capacitor/status-bar';
+
+// Display content under transparent status bar (Android only)
+StatusBar.setOverlaysWebView({ overlay: false });
+
+const setStatusBarStyleDark = async () => {
+  await StatusBar.setStyle({ style: Style.Dark });
+};
+setStatusBarStyleDark();
+
+const showStatusBar = async () => {
+  await StatusBar.show({animation: Animation.None});
+};
+showStatusBar();
+
 registerSW({ immediate: true })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

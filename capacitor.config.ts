@@ -10,6 +10,9 @@ const config: CapacitorConfig = {
     LocalNotifications: {
       iconColor: "#D72640",
       smallIcon: "favicon"
+    },
+    CapacitorCookies: {
+      enabled: true
     }
   },
   android: {
@@ -19,6 +22,10 @@ const config: CapacitorConfig = {
       keystoreAlias: process.env.KEYSTOREALIAS,
       keystoreAliasPassword: process.env.KEYSTOREALIASPASSWORD
     }
+  },
+  ios: {
+    scheme: "TouhouFest",
+    // contentInset: "always"
   }
 };
 
