@@ -1,6 +1,7 @@
 name: Test deploy ios apps
 on: 
   workflow_dispatch:
+  pull_request:
 jobs:
   IOS-Deploy:
     permissions:
