@@ -668,7 +668,7 @@ export const cosplayPage = {
         <ol>
             <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
             <ol type="a">
-                <li>Particpants in the <em>Craftsmanship</em> Category need to attend this event</li>
+                <li>This portion is specifically for <b>Cosplay Contest participants</b>.</li>
             </ol>
             <li><b>Seating</b>: 1:00 PM - 1:30 PM</li>
             <li><b>Cosplay Contest</b>: 1:30 PM - 3:00 PM</li>
