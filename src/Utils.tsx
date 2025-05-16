@@ -114,7 +114,7 @@ export function CircledBullets({argument}: {argument:string}){
 }
 
 // location imports 
-import con_banner from "./con_banner.png";
+import con_banner from "./con_banner.jpg";
 import toyota from "./images/toyota.jpg";
 import kenmiller from "./images/kenmiller.webp";
 import pinewindgarden from "./images/pinewindgarden.jpg";

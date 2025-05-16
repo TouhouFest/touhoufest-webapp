@@ -12,7 +12,7 @@ import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, t
 import { Figure, Row, Col } from 'react-bootstrap';
 
 import panelroom from "./../images/panelroom.jpg";
-import con_banner from "./../con_banner.png";
+import con_banner from "./../con_banner.jpg";
 import childrensartwing from "./../images/childrensartwing.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 
