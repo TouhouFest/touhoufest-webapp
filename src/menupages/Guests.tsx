@@ -31,7 +31,7 @@ import { neosanctum,suzukann } from '../Utils';
 let djs = [
     {
         "name": "AfterGlow",
-        "image": afterglow,
+        "image": placeholder,
         "website": "https://x.com/afterglowset",
         "description": "",
         "location": "Saturday"
