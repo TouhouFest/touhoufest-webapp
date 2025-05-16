@@ -13,40 +13,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
-import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import { CircledBullets, nakanotheatre, shihori, odyssey, tam, artistalleymap, vendorsmap, torinoplazamap, placeholder, WarningAlert } from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder} from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
-import marlo from "./../images/artistalley/MARLOWEMEMO.jpg";
-import rustyhermit from "./../images/artistalley/rustyhermit.jpg";
-import ckitten from "./../images/artistalley/ckitten.jpg";
-import kuriarty from "./../images/artistalley/kuriarty.jpg";
-import fred from "./../images/artistalley/fred.png";
-import agi from "./../images/artistalley/agi.png";
-import pumplin from "./../images/artistalley/pumpking.jpg";
-import xiaobbinc from "./../images/artistalley/xiaobb.avif";
-import essukaa from "./../images/artistalley/essukaa.webp";
-import anazel from "./../images/artistalley/anazel.jpg";
 import cookie from "./../images/artistalley/cookie.png";
 import freezeex from "./../images/artistalley/freezeex.png";
-import ruproject from "./../images/artistalley/2ruproject.png";
-import grapevines from "./../images/artistalley/grapevines.png";
-import brw from "./../images/artistalley/BRW.jpg";
-import galaxianrecordings from "./../images/artistalley/galaxianrecordings.png";
-import twinphoenix from "./../images/artistalley/TwinPhoenixInteractive.jpg";
-import izakaya from "./../images/artistalley/izakaya.jpg";
-import entryplaza from "./../images/entryplaza.jpg";
-import popumai from "./../images/artistalley/popumai.webp";
-import loveboxf from "./../images/artistalley/loveboxf.jpg";
-import underworldizakaya from "./../images/artistalley/underworldizakaya.jpg";
-import andrewfm from "./../images/artistalley/andrewfm.png";
 import animelosangeles from "./../images/artistalley/animelosangeles.jpg";
 import bowersmuseum from "./../images/artistalley/bowersmuseum.jpg";
-import gensokyoradio from "./../images/artistalley/gensokyoradio.jpg";
 import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
-import rosecityanifest from "./../images/artistalley/rosecityanifest.jpg";
-import roninexpo from "./../images/artistalley/roninexpo.png";
 
 import lyricalive from "./../images/artistalley/lyricalive.jpg";
 import gurugurumaru from "./../images/artistalley/gurugurumaru.jpg";
@@ -62,7 +36,6 @@ import MARLOWEMEMO from "./../images/artistalley/MARLOWEMEMO.jpg";
 import limpachu from "./../images/artistalley/limpachu.jpg";
 import meiki from "./../images/artistalley/meiki.jpg";
 import nekomofu from "./../images/artistalley/nekomofu.jpg";
-import grillboss from "./../images/artistalley/grillboss.jpg";
 import partyu from "./../images/artistalley/partyu.jpg";
 import kurehii from "./../images/artistalley/kurehii.jpg";
 import biscaybiscuits from "./../images/artistalley/biscaybiscuits.jpg";
@@ -103,7 +76,6 @@ import siliconcat from "./../images/artistalley/siliconcat.jpg";
 import matcha from "./../images/artistalley/matcha.jpg";
 import ace from "./../images/artistalley/ace.jpg";
 import ideafactory from "./../images/artistalley/ideafactory.jpg";
-import kotori from "./../images/artistalley/kotori.jpg";
 import fmanime from "./../images/artistalley/fmanime.jpg";
 import touhoufest from "./../images/artistalley/touhoufest.jpg";
 import kinocreations from "./../images/artistalley/kinocreations.jpg";
@@ -112,6 +84,7 @@ import whimsicalarchive from "./../images/artistalley/whimsicalarchive.jpg";
 import brainjuice from "./../images/artistalley/brainjuice.jpg";
 import sunameridrill from "./../images/artistalley/sunameridrill.jpg";
 import mintchokuma from "./../images/artistalley/mintchokuma.jpg";
+import nekopaws from "./../images/artistalley/nekopaws.jpg";
 
 import lemoncreme from "./../images/artistalley/lemoncreme.jpg";
 import youkaimountain from "./../images/artistalley/youkaimountain.jpg";
@@ -121,6 +94,11 @@ import okamijy from "./../images/artistalley/okamijy.jpg";
 
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import daveandbusters from "./../images/artistalley/daveandbusters.jpg";
+import organizedtouhounetworking from "./../images/artistalley/organizedtouhounetworking.jpg";
+import grandprix from "./../images/artistalley/grandprix.jpg";
+import kusoyayaoku1 from "./../images/artistalley/kusoyayasoku1.jpg";
+import kusoyayaoku2 from "./../images/artistalley/kusoyayasoku2.jpg";
+import mangadejapanese from "./../images/artistalley/mangadejapanese.jpg";
 
 import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
 
@@ -195,7 +173,7 @@ let vendors = [
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
 {"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
 {"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
-{"name": "Kotori's Shop by Y", "image": kotori, "location": "V07", "website": "https://www.instagram.com/kotoris_shop_by_y/", "role": "Merch"},
+{"name": "Neko Paws", "image": nekopaws, "location": "V07", "website": "https://nekopaw.com/", "role": "Merch"},
 {"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
 {"name": "TouhouFest Merch", "image": touhoufest, "location": "V09", "website": "https://www.touhoufest.org/store", "role": "Merch"},
 {"name": "TouhouFest Info Booth", "image": touhoufest, "location": "V10", "website": "https://schedule.touhoufest.org", "role": "Info"},
@@ -212,17 +190,20 @@ let plazatables = [
 {"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
 {"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
 {"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
-{"name": "Kusoya / Yasoku", "image": placeholder, "location": "Booth FB04", "website": "", "role": "Festival Booth"},
-{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB05", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
-{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB06", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
-{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB07", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
-{"name": "Edward Cadenza", "image": placeholder, "location": "Booth FB08 ~ FB10", "website": "", "role": "Festival Booth"},
+{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB04", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
+{"name": "Kusoya / Yasoku", "image": kusoyayaoku1, "location": "Booth FB05", "website": "https://yasoku.us/", "role": "Festival Booth"},
+{"name": "Kusoya / Yasoku", "image": kusoyayaoku2, "location": "Booth FB06", "website": "https://yasoku.us/", "role": "Festival Booth"},
+
+{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB07", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
+{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://www.youtube.com/playlist?list=PLXE44dEbW3ZS5DwcanBS3p5KM3TAAyRMm", "role": "Vendor"},
+{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB09", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
+{"name": "Manga de Japanese", "image": mangadejapanese, "location": "Booth FB10", "website": "https://manga-de.com", "role": "Festival Booth"},
 ];
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let communitytables = [
 {"name": "The Corps Dance Crew", "image": corpsdancecrew, "location": "Booth FT1 ~ FT2", "website": "https://x.com/TheCorpsDC", "role": ""},
-{"name": "Organized Touhou Networking in Japan", "image": placeholder, "location": "Booth FT3", "website": "https://twipla.jp/events/675392", "role": ""},
+{"name": "Organized Touhou Networking in Japan", "image": organizedtouhounetworking, "location": "Booth FT3", "website": "https://discord.gg/4uGwZEXXBN", "role": ""},
 {"name": "Bowers Museum", "image": bowersmuseum, "location": "Booth FT5 (Saturday)", "website": "https://www.bowers.org/", "role": ""},
 {"name": "Dave & Busters", "image": daveandbusters, "location": "Booth FT5 (Sunday)", "website": "https://www.daveandbusters.com/us/en/home", "role": ""},
 {"name": "Anime Los Angeles", "image": animelosangeles, "location": "Booth FT6", "website": "https://animelosangeles.org/", "role": ""},
@@ -300,7 +281,7 @@ export const artistVendorsPage = {
                         {/* TODO: add vendor locations + map once they become available */}
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Vendor Link</a></Card.Footer> : <></>}
                 </Card>
             </Col>
             </>)}
@@ -326,7 +307,7 @@ export const artistVendorsPage = {
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
                 </Card>
             </Col>
             </>)}

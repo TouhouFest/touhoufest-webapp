@@ -75,7 +75,7 @@ let pricelist = [
         "title": "TouhouFest 2024 Reimu and Marisa Poster",
         "description": "A print of TouhouFest’s official 2024 artwork featuring the Touhou Project characters, Reimu Hakurei and Marisa Kirisame!",
         "photo": tfestposter,
-        "notes": "Freeze-Ex"
+        "notes": "Artist: Freeze-Ex"
     },
 
 ];

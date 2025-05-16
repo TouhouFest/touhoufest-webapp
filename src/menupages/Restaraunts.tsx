@@ -10,29 +10,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
-import tokyostyle from "./../images/tokyostyle.webp";
-import brazilplate from "./../images/brazilplate.jpg";
-import orientalbreeze from "./../images/orientalbreeze.jpg";
-import noodsfoodtruck from "./../images/noodsfoodtruck.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
+import { maidacademy } from '../Utils';
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>
-        <h4>Food Trucks</h4>
-        <p>The below food trucks will be catering for TouhouFest for those interested. They will be located in the front entrance of TouhouFest, by the Circular Drive.</p> 
+        <h4>Food Options</h4>
+        <p>The below food trucks options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
 
         <Row className="justify-content-center">
 
         <Col xs={12} md={6} lg={true}>
 
         <Card className="mt-2">
-            <Card.Header className="text-center small">Japanese Food</Card.Header>
+            <Card.Header className="text-center small">Japanese Food Truck</Card.Header>
             <Card.Img src={okamoto} className="rounded-0"/>
             <Card.Body>
                 <Card.Title>Okamoto Kitchen</Card.Title>
+                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
                 <Card.Text>Okamoto Kitchen brings people to authentic, lesser known Japanese dishes like Chicken Nanban, Cheese, Mochi, and Classic Style Japanese Curry.</Card.Text>
                 <Card.Text>The vibrant Akiba-style decor and engaging customer service makes this food truck an experience you'll want to share with your friends!</Card.Text>
             </Card.Body>
@@ -46,10 +44,11 @@ export const restarauntsPage = {
 
         <Col xs={12} md={6} lg={true}>
         <Card className="mt-2">
-            <Card.Header className="text-center small">Poutine</Card.Header>
+            <Card.Header className="text-center small">Poutine Food Truck</Card.Header>
             <Card.Img src={poutinebrothers} className="rounded-0"/>
             <Card.Body>
                 <Card.Title>Poutine Brothers</Card.Title>
+                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
                 <Card.Text>Poutine Brothers will make their first appearance at this year's Touhoufest. They specialize in different styles of poutine. If you haven't had poutine before you're in for a treat. </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center small">
@@ -61,10 +60,11 @@ export const restarauntsPage = {
 
         <Col xs={12} md={6} lg={true}>
         <Card className="mt-2">
-            <Card.Header className="text-center small">Mexican Food</Card.Header>
+            <Card.Header className="text-center small">Mexican Food Truck</Card.Header>
             <Card.Img src={lupitastacos} className="rounded-0"/>
             <Card.Body>
                 <Card.Title>Lupitas Tacos</Card.Title>
+                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
                 <Card.Text>Lupitas Tacos will be returning again this year. They are known for their delicious Mexican cuisine. Be on the look out for their Touhoufest themed dishes. 
                 </Card.Text>
             </Card.Body>
@@ -74,6 +74,24 @@ export const restarauntsPage = {
             </Card.Footer>
         </Card>
         </Col>
+
+        <Col xs={12} md={6} lg={true}>
+        <Card className="mt-2">
+            <Card.Header className="text-center small">Snacks & Light Refreshments</Card.Header>
+            <Card.Img src={maidacademy} className="rounded-0"/>
+            <Card.Body>
+                <Card.Title>Maid Academy Cafe</Card.Title>
+                <Card.Subtitle className="mb-2">Location: Torino Plaza</Card.Subtitle>
+                <Card.Text>Maid Academy Cafe is one of vendors/performers and will also be selling a selection of light refreshments and drinks at their vendors booth located in Torino Plaza.
+                </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center small">
+                <Card.Link href="https://linktr.ee/maidacademy" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
+            </Card.Footer>
+        </Card>
+        </Col>
+
+
         </Row>
 
         <h4 className="mt-2">Other Options</h4>

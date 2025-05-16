@@ -16,7 +16,6 @@ import { CircledBullets } from '../Utils';
 // const cosplaybanner = require('./../images/cosplaybanner.jpg');
 import cosplaybanner from "./../images/cosplaybanner.jpg";
 import medukitty from "./../images/medukitty.jpg";
-import violetreverie from "./../images/violetreverie.jpg";
 import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
@@ -161,7 +160,7 @@ export const cosplayPage = {
 
             <Accordion>
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH13, TH16, TH18)</Accordion.Header>
+                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH13, TH16, TH18, TH20)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="th10">
                             <Card.Body className="text-center">
@@ -236,6 +235,12 @@ export const cosplayPage = {
                             <li>Murasa</li>
                             <li>Yuyuko</li>
                             <li>Youmu</li>
+                        </ul>
+                        <p><strong>Touhou 20 &quot;Fossilized Wonders&quot;</strong></p>
+                        <ul>
+                            <li>Ubame</li>
+                            <li>Chimi</li>
+                            <li>Nareko</li>
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -649,7 +654,7 @@ export const cosplayPage = {
         </Row>
 
         <h4 className="mt-2">Cosplay Repair</h4>
-        <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner in the Entry Plaza.</p>
+        <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner at the Toyota Meeting Hall.</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -663,7 +668,7 @@ export const cosplayPage = {
         <ol>
             <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
             <ol type="a">
-                <li>Particpants in the <em>Craftsmanship</em> Category need to attend this event</li>
+                <li>This portion is specifically for <b>Cosplay Contest participants</b>.</li>
             </ol>
             <li><b>Seating</b>: 1:00 PM - 1:30 PM</li>
             <li><b>Cosplay Contest</b>: 1:30 PM - 3:00 PM</li>

@@ -18,21 +18,14 @@ import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
 import { ListGroup } from 'react-bootstrap';
 
-import punderfullll from "./../images/punderfullll.jpg";
-// const punderfullll = require("./../images/punderfullll.jpg");
 import a_one from "./../images/a-one.png";
 import guestbanner from "./../images/guestbanner.jpg";
-import ryuko from "./../images/artistalley/ryuko.jpg";
 import bakkun from "./../images/artistalley/bakkun.jpg";
-import suzubrah from "./../images/artistalley/suzubrah.jpg";
-import coobie from "./../images/artistalley/coobie.jpg";
-import renko from "./../images/renko.jpg";
 import miko from "./../images/miko.jpg";
 import hojo from "./../images/hojo.jpg";
 import afterglow from "./../images/artistalley/afterglow.jpg";
 import yona from "./../images/artistalley/yona.jpg";
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
-import oyamada from "./../images/oyamada.jpg";
 import { neosanctum,suzukann } from '../Utils';
 
 let djs = [

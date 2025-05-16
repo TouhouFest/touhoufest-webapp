@@ -8,11 +8,11 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
-import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre, WarningAlert } from '../Utils';
+import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
 import { Figure, Row, Col } from 'react-bootstrap';
 
 import panelroom from "./../images/panelroom.jpg";
-import con_banner from "./../con_banner.png";
+import con_banner from "./../con_banner.jpg";
 import childrensartwing from "./../images/childrensartwing.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 
