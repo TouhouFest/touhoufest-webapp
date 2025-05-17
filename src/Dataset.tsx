@@ -197,7 +197,7 @@ export default function Dataset(
 
     return (
       <Row className="d-flex align-items-center justify-content-center flex-grow-1" id="infobody">
-        <Col md={3} lg={4} className="text-center opacity-75">
+        <Col md={6} lg={4} className="text-center opacity-75">
           <p className="small mb-1"><a href={source} target="blank" rel="noreferrer">Image Source</a></p>
           {(oppositeTheme !== faToriiGate) ? <Image src={noresults} fluid alt="Confused Reimu" rounded /> : <Image src={noresultsdark} fluid alt="Confused Marisa" rounded />}
           
