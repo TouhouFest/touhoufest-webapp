@@ -3,14 +3,20 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const config: CapacitorConfig = {
-  appId: 'com.example.touhoufestwebapp',
+  appId: 'com.touhou.touhoufestwebapp',
   appName: 'TouhouFest',
   webDir: 'build',
   plugins: {
     LocalNotifications: {
       iconColor: "#D72640",
       smallIcon: "favicon"
-    }
+    },
+    CapacitorCookies: {
+      enabled: true
+    },
+    EdgeToEdge: {
+      backgroundColor: "#000000"
+    },
   },
   android: {
     buildOptions: {
@@ -19,6 +25,10 @@ const config: CapacitorConfig = {
       keystoreAlias: process.env.KEYSTOREALIAS,
       keystoreAliasPassword: process.env.KEYSTOREALIASPASSWORD
     }
+  },
+  ios: {
+    scheme: "TouhouFest",
+    // contentInset: "always"
   }
 };
 
