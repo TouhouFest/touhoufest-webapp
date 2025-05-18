@@ -13,7 +13,10 @@ const config: CapacitorConfig = {
     },
     CapacitorCookies: {
       enabled: true
-    }
+    },
+    EdgeToEdge: {
+      backgroundColor: "#000000"
+    },
   },
   android: {
     buildOptions: {
