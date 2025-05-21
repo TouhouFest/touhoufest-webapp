@@ -632,7 +632,7 @@ export const cosplayPage = {
             </Accordion>
         <p className="mt-3">Those with any further questions related to cosplay events at TouhouFest are encouraged to visit either the <b>Cosplay Ambassadors</b> booth or the <b>Touhou Cosplay Guild</b> booth, both of which are located at the Toyota Meeting Hall.</p>
 
-        <h5>Other Photoshoots/Meet ups</h5>
+        <h5>Other Photoshoots/Meet Ups</h5>
         <p>The below photoshoots are also available for those interested.</p>
         <Row xs={1} md={2} lg={4} className="justify-content-center">
             <Col>
