@@ -125,12 +125,13 @@ export const aboutConPage = {
           <li>Saturday: 9:00 AM - 5:00 PM</li>
           <li>Sunday: 9:00 AM - 3:00 PM</li>
       </ul>
-      <p><b>Artist's Alley/Vendors</b></p>
+      <p><b>Artist's Alley/Vendors*</b></p>
       <ul>
           <li>Friday: N/A</li>
-          <li>Saturday: 9:00 AM - 6:00 PM</li>
-          <li>Sunday: 9:00 AM - 5:30 PM</li>
+          <li>Saturday: 10:00 AM - 6:00 PM</li>
+          <li>Sunday: 10:00 AM - 5:00 PM</li>
       </ul>
+      <p className="small">*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p>
       <p><b>Gaming*</b></p>
       <ul>
           <li>Friday: N/A</li>
