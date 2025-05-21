@@ -26,7 +26,7 @@ export const cosplayPage = {
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>
-        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="12"/> Cosplay Meetups), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Theatre (Main Events)). Cosplay booths and repair is located at the <b>Toyota Meeting Hall</b> (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths), next to the Torino Festival Plaza.</p>
+        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="12"/> Cosplay Meetups), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Theatre (Main Events)). Cosplay booths are located at the <b>Toyota Meeting Hall</b> (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths), next to the Torino Festival Plaza.</p>
         <Row className="justify-content-center text-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -630,8 +630,9 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
+        <p className="mt-3">Those with any further questions related to cosplay events at TouhouFest are encouraged to visit either the <b>Cosplay Ambassadors</b> booth or the <b>Touhou Cosplay Guild</b> booth, both of which are located at the Toyota Meeting Hall.</p>
 
-        <h5 className="mt-3">Other Photoshoots/Meet ups</h5>
+        <h5>Other Photoshoots/Meet ups</h5>
         <p>The below photoshoots are also available for those interested.</p>
         <Row xs={1} md={2} lg={4} className="justify-content-center">
             <Col>
@@ -653,6 +654,7 @@ export const cosplayPage = {
 
         </Row>
 
+        {/*
         <h4 className="mt-2">Cosplay Repair</h4>
         <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner at the Toyota Meeting Hall.</p>
         <Row className="justify-content-center">
@@ -663,7 +665,8 @@ export const cosplayPage = {
                 </Figure>
             </Col>
         </Row>
-        <h4>Cosplay Contest</h4>
+        */}
+        <h4 className='mt-2'>Cosplay Contest</h4>
         <h5>Itinerary</h5>
         <ol>
             <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
@@ -757,6 +760,7 @@ export const cosplayPage = {
                     <Card.Header className="text-center">Master of Ceremonies</Card.Header>
                     <Card.Body>
                         <Card.Title>Medukitty</Card.Title>
+                        <Card.Subtitle className="mb-2">Cosplay Ambassador</Card.Subtitle>
                         <Card.Text>I'm MeduKitty, a long time cosplayer and Touhou enthusiast who's thrilled to combine her two greatest passions!  I've been cosplaying from Touhou since 2018, and my favorite thing is making my costumes from scratch with as many details as I can fit into them.  I love our community so much and I can't wait to participate in TouhouFest with you all! </Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
@@ -772,6 +776,7 @@ export const cosplayPage = {
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Pumpking</Card.Title>
+                        <Card.Subtitle className="mb-2">Cosplay Ambassador</Card.Subtitle>
                         <Card.Text>Hi!! My name is Pumpking! I'm 24 years old (as of 2025) and got into Touhou in 2020 during Covid! I love to cosplay and especially pride myself in sharing cosplay designers and making shopping overseas more accessible for newcomers. I've started making my own stuff recently too. Thank you for having me!</Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
@@ -786,6 +791,7 @@ export const cosplayPage = {
                     <Card.Header className="text-center">Cosplay Judge</Card.Header>
                     <Card.Body>
                         <Card.Title>Mystical Lala</Card.Title>
+                        <Card.Subtitle className="mb-2">Cosplay Ambassador</Card.Subtitle>
                         <Card.Text>Hi I'm Lala! I'm just a girl who cosplays the characters she loves! I've been cosplaying since 2012, and I make, buy, alter cosplays! I love cosplaying mainly Touhou girls but I do stuff from other series as well. If you have any questions I can try to help! Anyone can cosplay as long as they have fun!</Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-center">
