@@ -7,8 +7,8 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { Card, Figure, Image } from 'react-bootstrap';
+import { faDice, faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { Alert, Card, Figure, Image } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
 import { CircledBullets, gamingmap, nakanotheatre, kenmiller } from '../Utils';
 import { Row, Col } from 'react-bootstrap';
@@ -19,13 +19,15 @@ import gaming from "./../images/gaming.jpg";
 import noetic from "./../images/gamingfolder/noetic.jpg";
 import tboddy from "./../images/gamingfolder/tboddy.jpg";
 import fireland from "./../images/gamingfolder/fireland.jpg";
+import danmaku from "./../images/danmaku.jpg";
+import drawpaint from "./../images/drawpaint.jpg";
 
 export const gamingPage = {
-    "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
+    "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming & Tabletop Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
         <h4>Location(s)</h4>
-        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza.</p>
+        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza. Tabletop Gaming is located in the <b>Drawing & Painting Studio</b> (<CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait) at the tail end of the Pine Wind Garden.</p>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -39,6 +41,12 @@ export const gamingPage = {
                     <Figure.Caption>Ken Miller Recreation Center</Figure.Caption>
                 </Figure>
             </Col>
+            <Col xs={12} sm={10} lg={8} className="text-center">
+                <Figure>
+                    <Figure.Image src={drawpaint} fluid rounded/>
+                    <Figure.Caption>Drawing & Painting Studio</Figure.Caption>
+                </Figure>
+            </Col>
         </Row>
 
         <h5>Gaming Hall Map</h5>
@@ -49,7 +57,17 @@ export const gamingPage = {
             </Col>
         </Row>
 
-        <h4>Free Play</h4> 
+        <h4>Tabletop Gaming</h4>
+        <p>TouhouFest is pleased to offer a dedicated section for tabletop gaming this year! Inside the <b>Drawing & Painting Studio</b> (<CircledBullets argument="14"/> Tabletop & Mystery Parafait) two tables are available for free-play, and two tables are reserved for games specifically for "<a href="https://danmaku.party/" target="_blank" rel="noreferrer">Danmaku!!</a>", the hit Touhou-themed tabletop card game. Feel free to stop by for some engaging tabletop gaming!</p>
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={6} className="text-center">
+                <Alert variant="success"><FontAwesomeIcon icon={faDice}/> Mystery Parafait will be selling Danmaku's biggest expansion yet, <b> Traditional Festival of Paradise</b> for the first time at TouhouFest!</Alert>
+
+                <Image src={danmaku} rounded fluid/>
+            </Col>
+        </Row>
+
+        <h4 className="mt-2">Free Play</h4> 
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
 
         <h5>Fangames</h5> 
@@ -138,7 +156,7 @@ export const gamingPage = {
             <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/overview/rules">Touhou Rivals Workshop</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience/overview/rules">Touhou Fractured Transience</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf/overview/rules">Touhou 15.5 Antimony of Common Flowers</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch"></a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch">Touhou 9 PoFV (Rework Patch)</a></li>
         </ul>
         <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2025/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
         <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on June 12th, 2025.</p>
@@ -146,16 +164,16 @@ export const gamingPage = {
         <h5>Prizes</h5>
         <Row xs={1} md={2}>
             <Col>
-                <Card>
-                    <Card.Body className="text-center gold-bg">
+                <Card className="rounded gold-bg">
+                    <Card.Body className="text-center">
                         <Card.Title>First Place (Per Each Bracket)</Card.Title>
                         <Card.Subtitle>Free TouhouFest 2025 Badge</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
-                <Card className="">
-                    <Card.Body className="text-center silver-bg">
+                <Card className="rounded silver-bg">
+                    <Card.Body className="text-center">
                         <Card.Title>Second Place (Per Each Bracket)</Card.Title>
                         <Card.Subtitle>Select Touhou-Themed Merch Giveaways</Card.Subtitle>
                     </Card.Body>
