@@ -8,8 +8,8 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpFromBracket, faDownload, faEllipsisVertical, faExclamationCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import { faAndroid, faChrome, faApple, faFirefoxBrowser } from '@fortawesome/free-brands-svg-icons';
-import { Image, Row, Col } from 'react-bootstrap';
+import { faAndroid, faChrome, faApple, faFirefoxBrowser, faGooglePlay, faAppStoreIos } from '@fortawesome/free-brands-svg-icons';
+import { Image, Row, Col, Card, Button } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 import androidchrome01 from "./../images/installation/androidchrome01.jpg";
 import androidchrome02 from "./../images/installation/androidchrome02.jpg";
@@ -25,7 +25,26 @@ export const installationPage = {
   "body": (
     <>
       <p>For those wishing to use this schedule in a downloaded offline fashion, a number of options exist depending on your platform.</p>
-      <h4>Progressive Web Apps</h4>
+      <h4>Mobile Apps</h4>
+      <p>TouhouFest is pleased to offer this application as a mobile app straight from either Google Play or Apple's App Store! For those using either Android or iOS devices respectively, please select either of the below two links to be redirected to your respective app store.</p>
+      <Row xs={1} md={3} lg={4} className="text-center justify-content-center g-2">
+        <Col>
+          <a href="https://play.google.com/store/apps/details?id=com.touhoufest.touhoufestwebapp&pli=1" target="_blank" rel="noreferrer"><Card>
+            <Card.Body>
+              <Card.Title className="mb-0"><FontAwesomeIcon icon={faGooglePlay}/> Google Play</Card.Title>
+            </Card.Body>
+          </Card></a>
+        </Col>
+        <Col>
+          <a href="https://apps.apple.com/us/app/touhoufest/id6746074989" target="_blank" rel="noreferrer"><Card>
+            <Card.Body>
+              <Card.Title className="mb-0"><FontAwesomeIcon icon={faAppStoreIos}/> Apple App Store</Card.Title>
+            </Card.Body>
+          </Card></a>
+        </Col>
+      </Row>
+
+      <h4 className="mt-3">Progressive Web Apps</h4>
       <p>Depending on your phone's operating system, you may be able to download this website onto your home screen as a semi-standalone application right from your browser. The below instructions may be helpful:</p>
       <p className="small"><FontAwesomeIcon icon={faInfoCircle}/> If you encounter issues with the website or downloaded app, it may help to re-fresh, re-open the tab, close and re-open the browser, and/or re-install it.</p>
       <h5><FontAwesomeIcon icon={faAndroid}/> Android</h5>
