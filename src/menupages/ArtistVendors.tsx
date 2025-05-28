@@ -100,6 +100,8 @@ import kusoyayaoku1 from "./../images/artistalley/kusoyayasoku1.jpg";
 import kusoyayaoku2 from "./../images/artistalley/kusoyayasoku2.jpg";
 import mangadejapanese from "./../images/artistalley/mangadejapanese.jpg";
 
+import hobbysociety from "./../images/artistalley/hobbysociety.jpg";
+
 import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
 
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
@@ -171,7 +173,7 @@ let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
 {"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
-{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
+{"name": "Touhou Hobby Society", "image": hobbysociety, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
 {"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
 {"name": "Neko Paws", "image": nekopaws, "location": "V07", "website": "https://nekopaw.com/", "role": "Merch"},
 {"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
