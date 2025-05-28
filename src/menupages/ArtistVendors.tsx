@@ -158,7 +158,7 @@ let artistlist = [
 {"name": "remirii", "image": remirii, "location": "Booth H3", "website": "https://remirii-portfolio.weebly.com/illustrations.html", "description": ""},
 {"name": "G8KB", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
 {"name": "LinnyUwU", "image": linnyuwu, "location": "Booth H5", "website": "https://x.com/LinnyUwU", "description": ""},
-{"name": <>mintcho&shy;kuma</>, "image": mintchokuma, "location": "Booth H6", "website": "https://x.com/mintchokuma", "description": ""},
+{"name": <>mintcho&shy;kuma</>, "image": mintchokuma, "location": "Booth H6", "website": "https://bsky.app/profile/mintchokuma.bsky.social", "description": ""},
 {"name": <>mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
 {"name": "Vampy Land", "image": vampyland, "location": "Booth H7", "website": "https://vampy.land/portfolio", "description": ""},
 {"name": "Chenna Kitty", "image": chennakitty, "location": "Booth H8", "website": "https://chennakitty.carrd.co/ ", "description": ""},
