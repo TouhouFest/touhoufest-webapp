@@ -28,7 +28,7 @@ function MaidCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
         <Carousel.Item>
             <Image src={mainmenu} fluid rounded/>
         </Carousel.Item>
