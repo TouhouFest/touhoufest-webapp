@@ -222,7 +222,7 @@ export const aboutConPage = {
         <Col><Image src={press} rounded fluid/></Col>
       </Row>
 
-      <h4 className="mt-3">Official Artists</h4>
+      <h4 className="mt-3">TouhouFest 2025 Official Artists</h4>
 
       <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
           {official_artists.map((artist, i) => <>
