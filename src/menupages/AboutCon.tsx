@@ -31,6 +31,9 @@ import carnelscorner from "./../images/artistalley/carnelscorner.jpg";
 import meltyuchuu from "./../images/artistalley/melty.jpg";
 import ckitten from "./../images/artistalley/ckitten.jpg";
 
+import checkin01 from "./../images/checkin/checkin01.png";
+import checkin02 from "./../images/checkin/checkin02.png";
+
 let official_artists = [
     {
         "name": <>Cloudie&shy;/Cookie&shy;tanuki&shy;art</>,
@@ -111,6 +114,25 @@ export const aboutConPage = {
       <p className="mt-3">
         A Touhou fan event being held on June 14th - 15th, 2025, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
+
+      <h4>Instructions for Checking In Using QR Code</h4>
+      <p>TouhouFest tickets have now been updated to contain a <b> QR Code</b> for faster checkin! To pull it up, please follow these instructions:</p>
+      <ol>
+        <li><a href="https://touhoufest.checkoutpage.com/portal" target="_blank" rel="noreferrer">Enter the TouhouFest Checkoutpage portal by clicking on this link.</a> You should be greeted with a webpage containing the below content:</li>
+        <Row className="justify-content-center my-3">
+          <Col xs={12} md={8} lg={5}>
+            <Image src={checkin01} fluid rounded/>
+          </Col>
+        </Row>
+        <li>Enter your email address used to purchase a badge and click on the "Send login link" button.</li>
+        <li>A link will be sent to your email address. You'll want to open that link that'll lead to your purchase information. You should be greeted with a webpage containing the below content:</li>
+        <Row className="justify-content-center my-3">
+          <Col xs={12} md={8} lg={5}>
+            <Image src={checkin02} fluid rounded/>
+          </Col>
+        </Row>
+        <li>Click on the TouhouFest Event icon. This will lead you to your ticket PDF containing your QR code.</li>
+      </ol>
 
       <h4 className="mt-3">Operating Hours</h4>
       <p><b>General Con Hours</b></p>
@@ -222,7 +244,7 @@ export const aboutConPage = {
         <Col><Image src={press} rounded fluid/></Col>
       </Row>
 
-      <h4 className="mt-3">Official Artists</h4>
+      <h4 className="mt-3">TouhouFest 2025 Official Artists</h4>
 
       <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
           {official_artists.map((artist, i) => <>

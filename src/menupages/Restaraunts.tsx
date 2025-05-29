@@ -8,18 +8,49 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, Carousel, Image } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
 import { maidacademy } from '../Utils';
+
+import mainmenu from "./../images/maidacademymenu/mainmenu.jpg";
+import entry01 from "./../images/maidacademymenu/entry01.jpg";
+import entry02 from "./../images/maidacademymenu/entry02.jpg";
+import entry03 from "./../images/maidacademymenu/entry03.jpg";
+import { useState } from 'react';
+
+function MaidCarousel() {
+    const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex:number) => {
+    setIndex(selectedIndex);
+  };
+
+  return (
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+        <Carousel.Item>
+            <Image src={mainmenu} fluid rounded/>
+        </Carousel.Item>
+        <Carousel.Item>
+            <Image src={entry01} fluid rounded/>
+        </Carousel.Item>
+        <Carousel.Item>
+            <Image src={entry02} fluid rounded/>
+        </Carousel.Item>
+        <Carousel.Item>
+            <Image src={entry03} fluid rounded/>
+        </Carousel.Item>
+    </Carousel>
+  );
+}
 
 export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>
         <h4>Food Options</h4>
-        <p>The below food trucks options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
+        <p>The below food options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
 
         <Row className="justify-content-center">
 
@@ -90,11 +121,17 @@ export const restarauntsPage = {
             </Card.Footer>
         </Card>
         </Col>
-
-
         </Row>
 
-        <h4 className="mt-2">Other Options</h4>
+        <h5 className="my-3">Maid Academy Food Menu</h5>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <MaidCarousel />
+            </Col>
+        </Row>
+
+        <h4 className="mt-3">Other Options</h4>
         <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
 
     </>),

@@ -160,7 +160,7 @@ export const cosplayPage = {
 
             <Accordion>
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH13, TH16, TH18, TH20)</Accordion.Header>
+                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH12.5, TH13, TH16, TH18, TH20)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="th10">
                             <Card.Body className="text-center">
@@ -181,6 +181,7 @@ export const cosplayPage = {
                             <li>Nitori</li>
                             <li>Momiji</li>
                             <li>Aya</li>
+                            <li>Sanae</li>
                             <li>Kanako</li>
                             <li>Suwako</li>
                         </ul>
@@ -195,16 +196,50 @@ export const cosplayPage = {
                             <li>Byakuren</li>
                             <li>Nue</li>
                         </ul>
+                        <p><b>Touhou 12.5 "Double Spoiler"</b></p>
+                        <ul>
+                            <li>Aya</li>
+                            <li>Hatate</li>
+                            <li>Aki</li>
+                            <li>Parsee</li>
+                            <li>Yamame</li>
+                            <li>Nitori</li>
+                            <li>Ichirin</li>
+                            <li>Yuugi</li>
+                            <li>Shou</li>
+                            <li>Rin</li>
+                            <li>Satori</li>
+                            <li>Tenshi</li>
+                            <li>Kanako</li>
+                            <li>Byakuren</li>
+                            <li>Reimu</li>
+                            <li>Shizuha</li>
+                            <li>Hina</li>
+                            <li>Kogasa</li>
+                            <li>Momiji</li>
+                            <li>Murasa</li>
+                            <li>Suika</li>
+                            <li>Nazrin</li>
+                            <li>Utsuho</li>
+                            <li>Iku</li>
+                            <li>Suwako</li>
+                            <li>Nue</li>
+                            <li>Marisa</li>
+                            <li>Kitsume</li>
+                            <li>Sanae</li>
+                        </ul>
                         <p><strong>Touhou 13 &quot;Ten Desires&quot;</strong></p>
                         <ul>
                             <li>Sanae</li>
                             <li>Youmu</li>
                             <li>Yuyuko</li>
+                            <li>Kyouko</li>
                             <li>Kogasa</li>
                             <li>Yoshika</li>
                             <li>Seiga</li>
                             <li>Tojiko</li>
                             <li>Futo</li>
+                            <li>Miko</li>
                             <li>Nue</li>
                             <li>Mamizou</li>
                         </ul>
@@ -226,15 +261,12 @@ export const cosplayPage = {
                             <li>Sanae</li>
                             <li>Mike</li>
                             <li>Takane</li>
-                            <li>Sanyo</li>
+                            <li>Sannyo</li>
                             <li>Misumaru</li>
                             <li>Tsukasa</li>
                             <li>Megumu</li>
                             <li>Chimata</li>
                             <li>Momoyo</li>
-                            <li>Murasa</li>
-                            <li>Yuyuko</li>
-                            <li>Youmu</li>
                         </ul>
                         <p><strong>Touhou 20 &quot;Fossilized Wonders&quot;</strong></p>
                         <ul>
@@ -245,7 +277,7 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>The Devil's Mansion (TH06, Touhouvania)</Accordion.Header>
+                    <Accordion.Header>The Devil's Mansion (TH06, Touhouvania, TH12.8)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th06">
                             <Card.Body className="text-center">
@@ -272,10 +304,19 @@ export const cosplayPage = {
                         <ul>
                             <li>All costumes and designs featured</li>
                         </ul>
+                        <p><b>Touhou 12.8 "Great Fairy Wars"</b></p>
+                        <ul>
+                            <li>Lily White & Lily Black</li>
+                            <li>Daiyousei</li>
+                            <li>Star Sapphire</li>
+                            <li>Luna Child</li>
+                            <li>Sunny Milk</li>
+                            <li>Marisa</li>
+                        </ul>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header>Melodies in the Netherworld (TH07, TH09)</Accordion.Header>
+                    <Accordion.Header>Melodies in the Netherworld (TH07, TH09, Hifuu Club)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th07">
                             <Card.Body className="text-center">
@@ -316,10 +357,16 @@ export const cosplayPage = {
                             <li>Komachi</li>
                             <li>Eiki</li>
                         </ul>
+                        <p><b>Hifuu Club</b></p>
+                        <ul>
+                            <li>Renko</li>
+                            <li>Maribel</li>
+                            <li>Sumireko</li>
+                        </ul>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
-                    <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19)</Accordion.Header>
+                    <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19, FDS)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th15">
                             <Card.Body className="text-center">
@@ -345,8 +392,8 @@ export const cosplayPage = {
                             <li>Parsee</li>
                             <li>Yuugi</li>
                             <li>Satori</li>
-                            <li>Orin</li>
-                            <li>Okuu</li>
+                            <li>Rin</li>
+                            <li>Utsuho</li>
                             <li>Sanae</li>
                             <li>Koishi</li>
                             <li>Kanako</li>
@@ -362,6 +409,7 @@ export const cosplayPage = {
                             <li>Mayumi</li>
                             <li>Keiki</li>
                             <li>Saki</li>
+                            <li>Yumm</li>
                         </ul>
                         <p><strong>Touhou 17.5 &quot;Gouyoku Ibun&quot;</strong></p>
                         <ul>
@@ -396,6 +444,38 @@ export const cosplayPage = {
                             <li>Chiyari</li>
                             <li>Hisami</li>
                             <li>Zanmu</li>
+                        </ul>
+                        <p><b>Foul Detective Satori</b> (Manga)</p>
+                        <ul>
+                            <li>Reimu</li>
+                            <li>Patchouli</li>
+                            <li>Marisa</li>
+                            <li>Sakuya</li>
+                            <li>Meiling</li>
+                            <li>Orin</li>
+                            <li>Remilia</li>
+                            <li>Satori</li>
+                            <li>Flandre</li>
+                            <li>Youmu</li>
+                            <li>Yuyuko</li>
+                            <li>Yukari</li>
+                            <li>Ran</li>
+                            <li>Chen</li>
+                            <li>Mizuchi</li>
+                            <li>Aya</li>
+                            <li>Sanae</li>
+                            <li>Kanako</li>
+                            <li>Nitori</li>
+                            <li>Suwako</li>
+                            <li>Hina</li>
+                            <li>Hatate</li>
+                            <li>Kyouko</li>
+                            <li>Shou</li>
+                            <li>Nazrin</li>
+                            <li>Ichirin</li>
+                            <li>Byakuren</li>
+                            <li>Kogasa</li>
+                            <li>Yuugi</li>
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -467,7 +547,7 @@ export const cosplayPage = {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="5">
-                    <Accordion.Header>Lunar Landing in the Bamboo Forest (TH08, TH15, TH14)</Accordion.Header>
+                    <Accordion.Header>Lunar Landing in the Bamboo Forest (TH08, TH15, TH14, SSiB, FS, LE)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th08">
                             <Card.Body className="text-center">
@@ -523,6 +603,67 @@ export const cosplayPage = {
                             <li>Hecatia</li>
                             <li>Raiko</li>
                         </ul>
+                        <p><b>Silent Sinner in Blue</b></p>
+                        <ul>
+                            <li>Yukari</li>
+                            <li>Reisen</li>
+                            <li>Tewi</li>
+                            <li>Kaguya</li>
+                            <li>Eirin</li>
+                            <li>Ran</li>
+                            <li>Remilia</li>
+                            <li>Sakuya</li>
+                            <li>Patchouli</li>
+                            <li>Rinnosuke</li>
+                            <li>Youmu</li>
+                            <li>Yuyuko</li>
+                            <li>Toyohime</li>
+                            <li>Yorihime</li>
+                            <li>Aya</li>
+                        </ul>
+                        <p><b>Forbidden Scrollery</b></p>
+                        <ul>
+                            <li>Kosuzu</li>
+                            <li>Akyuu</li>
+                            <li>Sakuya</li>
+                            <li>Mamizou</li>
+                            <li>Remilia</li>
+                            <li>Kokoro</li>
+                            <li>Shinmyoumaru</li>
+                            <li>Nitori</li>
+                            <li>Reisen</li>
+                            <li>Sanae</li>
+                            <li>Rinnosuke</li>
+                            <li>Nue</li>
+                            <li>Aya</li>
+                            <li>Byakuren</li>
+                            <li>Yukari</li>
+                            <li>Fortune Teller (RIP 😭)</li>
+                        </ul>
+                        <p><b>Lotus Eaters</b></p>
+                        <ul>
+                            <li>Suika</li>
+                            <li>Miyoi</li>
+                            <li>Sakuya</li>
+                            <li>Youmu</li>
+                            <li>Mamizou</li>
+                            <li>Aya</li>
+                            <li>Komachi</li>
+                            <li>Kanako</li>
+                            <li>Sanae</li>
+                            <li>Byakuren</li>
+                            <li>Nitori</li>
+                            <li>Okina</li>
+                            <li>Sannyo</li>
+                            <li>Yuugi</li>
+                            <li>Chimata</li>
+                            <li>Megumu</li>
+                            <li>Rin</li>
+                            <li>Miko</li>
+                            <li>Futo</li>
+                            <li>Son Biten</li>
+                            <li>Joon</li>
+                        </ul>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="6">
@@ -568,6 +709,7 @@ export const cosplayPage = {
                             <li>Tenshi</li>
                         </ul>
                         <p><strong>Touhou 12.3 &quot;Hisoutensoku&quot;</strong></p>
+                        <p><b>Note!</b> All characters from Touhou 10.5 are also included here!</p>
                         <ul>
                             <li>Sanae</li>
                             <li>Cirno</li>
@@ -602,7 +744,7 @@ export const cosplayPage = {
                             <li>Kokoro</li>
                             <li>Mokou</li>
                             <li>Kasen</li>
-                            <li>Sukun</li>
+                            <li>Sukuna</li>
                             <li>Sumireko</li>
                             <li>Reisen</li>
                         </ul>

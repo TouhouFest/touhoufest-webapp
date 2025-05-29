@@ -223,3 +223,21 @@ pwa-toast{
 .filter-indicator {
   color: rgb(60, 179, 113) !important;
 }
+
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-next-icon {
+  padding: 1em;
+}
+
+.carousel-indicators, .carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: rgba(128,128,128,0.6);
+  opacity: 1;
+  border-radius: 3px;
+}
+
+.nobr {
+  white-space: nowrap;
+}

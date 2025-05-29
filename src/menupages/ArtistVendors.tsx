@@ -100,6 +100,8 @@ import kusoyayaoku1 from "./../images/artistalley/kusoyayasoku1.jpg";
 import kusoyayaoku2 from "./../images/artistalley/kusoyayasoku2.jpg";
 import mangadejapanese from "./../images/artistalley/mangadejapanese.jpg";
 
+import hobbysociety from "./../images/artistalley/hobbysociety.jpg";
+
 import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
 
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
@@ -158,7 +160,7 @@ let artistlist = [
 {"name": "remirii", "image": remirii, "location": "Booth H3", "website": "https://remirii-portfolio.weebly.com/illustrations.html", "description": ""},
 {"name": "G8KB", "image": g8kp, "location": "Booth H4", "website": "https://g8kp.carrd.co/#portfolio", "description": ""},
 {"name": "LinnyUwU", "image": linnyuwu, "location": "Booth H5", "website": "https://x.com/LinnyUwU", "description": ""},
-{"name": <>mintcho&shy;kuma</>, "image": mintchokuma, "location": "Booth H6", "website": "https://x.com/mintchokuma", "description": ""},
+{"name": <>mintcho&shy;kuma</>, "image": mintchokuma, "location": "Booth H6", "website": "https://bsky.app/profile/mintchokuma.bsky.social", "description": ""},
 {"name": <>mcsquiddies</>, "image": emby, "location": "Booth H6", "website": "https://x.com/mcsquiddies", "description": ""},
 {"name": "Vampy Land", "image": vampyland, "location": "Booth H7", "website": "https://vampy.land/portfolio", "description": ""},
 {"name": "Chenna Kitty", "image": chennakitty, "location": "Booth H8", "website": "https://chennakitty.carrd.co/ ", "description": ""},
@@ -171,7 +173,7 @@ let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
 {"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
-{"name": "Touhou Hobby Society", "image": placeholder, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
+{"name": "Touhou Hobby Society", "image": hobbysociety, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
 {"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
 {"name": "Neko Paws", "image": nekopaws, "location": "V07", "website": "https://nekopaw.com/", "role": "Merch"},
 {"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
@@ -195,7 +197,7 @@ let plazatables = [
 {"name": "Kusoya / Yasoku", "image": kusoyayaoku2, "location": "Booth FB06", "website": "https://yasoku.us/", "role": "Festival Booth"},
 
 {"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB07", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
-{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://ko-fi.com/icefairy/shop", "role": "Vendor"},
+{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://ko-fi.com/richardeffendi/shop", "role": "Vendor"},
 {"name": "Maid Academy", "image": maidacademy, "location": "Booth FB09", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
 {"name": "Manga de Japanese", "image": mangadejapanese, "location": "Booth FB10", "website": "https://manga-de.com", "role": "Festival Booth"},
 ];
