@@ -50,7 +50,7 @@ export const restarauntsPage = {
     "fluidImage": (<></>),
     "body": (<>
         <h4>Food Options</h4>
-        <p>The below food trucks options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
+        <p>The below food options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
 
         <Row className="justify-content-center">
 
