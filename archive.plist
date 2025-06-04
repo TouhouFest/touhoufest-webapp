@@ -7,7 +7,7 @@
 <key>provisioningProfiles</key>
 <dict>
     <key>place.appreciation.jar</key>
-    <string>Deploy GitHub</string>
+    <string>githubactionprovision</string>
 </dict>
 </dict>
 </plist>
