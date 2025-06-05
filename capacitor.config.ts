@@ -30,7 +30,7 @@ const config: CapacitorConfig = {
     scheme: "TouhouFest",
     // contentInset: "always"
     buildOptions: {
-      provisioningProfile: "./archive.plist"
+      provisioningProfile: "githubactionprovision"
     }
   }
 };
