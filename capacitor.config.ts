@@ -29,6 +29,9 @@ const config: CapacitorConfig = {
   ios: {
     scheme: "TouhouFest",
     // contentInset: "always"
+    buildOptions: {
+      provisioningProfile: "./archive.plist"
+    }
   }
 };
 
