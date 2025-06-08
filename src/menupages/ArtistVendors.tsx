@@ -128,7 +128,7 @@ let artistlist = [
 
 {"name": "Eggu (Grillboss Co.)", "image": eggu, "location": "Booth C6", "website": "https://egguv.carrd.co/", "description": ""},
 {"name": "Okamijy (Grillboss Co.)", "image": okamijy, "location": "Booth C6", "website": "https://okamijy.carrd.co/", "description": ""},
-{"name": "Partyu", "image": partyu, "location": "Booth D1", "website": "https://twitter.com/_partyu", "description": ""},
+{"name": "Partyu", "image": partyu, "location": "Booth D1", "website": "https://partyu.art", "description": ""},
 {"name": "Kureihii Art", "image": kurehii, "location": "Booth D2", "website": "https://www.instagram.com/kureihii/?hl=en", "description": ""},
 {"name": "quowl", "image": quowl, "location": "Booth D3", "website": "https://quowl.carrd.co/", "description": ""},
 {"name": "Panchamon", "image": panchamon, "location": "Booth D4", "website": "https://bsky.app/profile/panchamon.bsky.social", "description": ""},
