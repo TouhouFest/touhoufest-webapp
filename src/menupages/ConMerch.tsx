@@ -13,6 +13,9 @@ import reimutote from "./../images/conmerch/reimutote.png";
 import tfestposter from "./../images/conmerch/tfestposter.png";
 import { entryplaza } from '../Utils';
 
+import merchlisting from "./../images/merchlisting.png";
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
+
 let pricelist = [
     {
         "price": "$15.00",
@@ -94,7 +97,16 @@ export const conMerchPage= {
                 </Figure>
             </Col>
         </Row>
-        <h4>Items</h4>
+
+        <h4 className="mb-3">2025 Con Merch Listing</h4>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10}>
+                <GlobalTransformWrapper src={merchlisting} caption="2025 Merch Listing"/>
+            </Col>
+        </Row>
+
+        <h4>General Item Listing</h4>
         <Row xs={1} md={2} lg={4} className="justify-content-center g-3">
             {pricelist.map((item, i) => <>
             <Col>
