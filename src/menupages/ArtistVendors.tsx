@@ -188,7 +188,7 @@ vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let plazatables = [
 {"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
-{"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
+//{"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
 {"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
 {"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB04", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
 {"name": "Kusoya / Yasoku", "image": kusoyayaoku1, "location": "Booth FB05", "website": "https://yasoku.us/", "role": "Festival Booth"},
