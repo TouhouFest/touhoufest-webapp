@@ -168,7 +168,7 @@ let artistlist = [
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let vendors = [
-{"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://siliconcat.tumblr.com/tagged/my%20art", "role": "Artist"},
+{"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://linktr.ee/siliconcat", "role": "Artist"},
 {"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
 {"name": "Touhou Hobby Society", "image": hobbysociety, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
