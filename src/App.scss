@@ -55,11 +55,13 @@ body {
   scroll-margin-top: 56px;
 }
 
+$reimu-red: #AD0000;
+$darker-reimu-red: #800000;
 
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
   .day-indicator{
-    background-color: #ff5959;
+    background-color: $reimu-red; // #ff5959;
     color: #FFF9EE;
   }
 
@@ -80,12 +82,12 @@ body {
   }
 
   .nav-fill {
-    background-color: #ff4242 !important;
+    background-color: $darker-reimu-red !important;
   }
 
   .offcanvas-header {
     color: #FFF9EE;
-    background-color: #D72640;
+    background-color: $reimu-red;
   }
 
   .offcanvas-body {
