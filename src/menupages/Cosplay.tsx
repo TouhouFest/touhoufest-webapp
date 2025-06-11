@@ -160,6 +160,345 @@ export const cosplayPage = {
 
             <Accordion>
                 <Accordion.Item eventKey="0">
+                    <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19, FDS)</Accordion.Header>
+                    <Accordion.Body>
+                        <Card className="mt-2 th15">
+                            <Card.Body className="text-center">
+                                <Card.Title>Go to hell!!</Card.Title>
+                                <Card.Text>Saturday, 10:00 AM - 11:00 AM</Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <p className="mt-2"><strong>Protagonists</strong></p>
+                        <ul>
+                            <li>Reimu</li>
+                            <li>Marisa</li>
+                        </ul>
+                        <p><strong>Touhou 11 &quot;Subterranean Animism&quot;</strong></p>
+                        <ul>
+                            <li>Alice</li>
+                            <li>Nitori</li>
+                            <li>Patchouli</li>
+                            <li>Suika</li>
+                            <li>Yukari</li>
+                            <li>Aya</li>
+                            <li>Kisume</li>
+                            <li>Yamame</li>
+                            <li>Parsee</li>
+                            <li>Yuugi</li>
+                            <li>Satori</li>
+                            <li>Rin</li>
+                            <li>Utsuho</li>
+                            <li>Sanae</li>
+                            <li>Koishi</li>
+                            <li>Kanako</li>
+                            <li>Suwako</li>
+                        </ul>
+                        <p><strong>Touhou 17 &quot;Wily Beast and Weakest Creature&quot;</strong></p>
+                        <ul>
+                            <li>Youmu</li>
+                            <li>Eika</li>
+                            <li>Urumi</li>
+                            <li>Kutaka</li>
+                            <li>Yachie</li>
+                            <li>Mayumi</li>
+                            <li>Keiki</li>
+                            <li>Saki</li>
+                            <li>Yumm</li>
+                        </ul>
+                        <p><strong>Touhou 17.5 &quot;Gouyoku Ibun&quot;</strong></p>
+                        <ul>
+                            <li>Kanako</li>
+                            <li>Murasa</li>
+                            <li>Jo&#39;on &amp; Shion</li>
+                            <li>Flandre</li>
+                            <li>Okina</li>
+                            <li>Yamame</li>
+                            <li>Kogasa</li>
+                            <li>Yuugi</li>
+                            <li>Okuu</li>
+                            <li>Kutaka</li>
+                            <li>Yuuma</li>
+                        </ul>
+                        <p><strong>Touhou 19 &quot;Unfinished Dream of All Living Ghost&quot;</strong></p>
+                        <ul>
+                            <li>Sanae</li>
+                            <li>Ran</li>
+                            <li>Aunn</li>
+                            <li>Nazrin</li>
+                            <li>Seiran</li>
+                            <li>Rin</li>
+                            <li>Tsukasa</li>
+                            <li>Mamizou</li>
+                            <li>Yachie</li>
+                            <li>Saki</li>
+                            <li>Yuuma</li>
+                            <li>Suika</li>
+                            <li>Son Biten</li>
+                            <li>Enoko</li>
+                            <li>Chiyari</li>
+                            <li>Hisami</li>
+                            <li>Zanmu</li>
+                        </ul>
+                        <p><b>Foul Detective Satori</b> (Manga)</p>
+                        <ul>
+                            <li>Reimu</li>
+                            <li>Patchouli</li>
+                            <li>Marisa</li>
+                            <li>Sakuya</li>
+                            <li>Meiling</li>
+                            <li>Orin</li>
+                            <li>Remilia</li>
+                            <li>Satori</li>
+                            <li>Flandre</li>
+                            <li>Youmu</li>
+                            <li>Yuyuko</li>
+                            <li>Yukari</li>
+                            <li>Ran</li>
+                            <li>Chen</li>
+                            <li>Mizuchi</li>
+                            <li>Aya</li>
+                            <li>Sanae</li>
+                            <li>Kanako</li>
+                            <li>Nitori</li>
+                            <li>Suwako</li>
+                            <li>Hina</li>
+                            <li>Hatate</li>
+                            <li>Kyouko</li>
+                            <li>Shou</li>
+                            <li>Nazrin</li>
+                            <li>Ichirin</li>
+                            <li>Byakuren</li>
+                            <li>Kogasa</li>
+                            <li>Yuugi</li>
+                        </ul>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                    <Accordion.Header>Fighting Games (TH7.5, TH10.5, TH12.3, TH13.5, TH14.5, TH15.5)</Accordion.Header>
+                    <Accordion.Body>
+                        <Card className="mt-2 fight">
+                            <Card.Body className="text-center">
+                                <Card.Title>Fighting Games</Card.Title>
+                                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <p className="mt-2"><strong>Main Protagonists</strong></p>
+                        <ul>
+                            <li>Reimu</li>
+                            <li>Marisa</li>
+                        </ul>
+                        <p><strong>Touhou 7.5 &quot;Immaterial and Missing Power&quot;</strong></p>
+                        <ul>
+                            <li>Sakuya</li>
+                            <li>Alice</li>
+                            <li>Patchouli</li>
+                            <li>Youmu</li>
+                            <li>Remilia</li>
+                            <li>Yuyuko</li>
+                            <li>Yukari</li>
+                            <li>Suika</li>
+                            <li>Meiling</li>
+                        </ul>
+                        <p><strong>Touhou 10.5 &quot;Scarlet Weather Rhapsody&quot;</strong></p>
+                        <ul>
+                            <li>Sakuya</li>
+                            <li>Alice</li>
+                            <li>Patchouli</li>
+                            <li>Youmu</li>
+                            <li>Remilia</li>
+                            <li>Yuyuko</li>
+                            <li>Yukari</li>
+                            <li>Reisen</li>
+                            <li>Suika</li>
+                            <li>Aya</li>
+                            <li>Komachi</li>
+                            <li>Iku</li>
+                            <li>Tenshi</li>
+                        </ul>
+                        <p><strong>Touhou 12.3 &quot;Hisoutensoku&quot;</strong></p>
+                        <p><b>Note!</b> All characters from Touhou 10.5 are also included here!</p>
+                        <ul>
+                            <li>Sanae</li>
+                            <li>Cirno</li>
+                            <li>Meiling</li>
+                            <li>Alice</li>
+                            <li>Patchouli</li>
+                            <li>Okuu</li>
+                            <li>Suwako</li>
+                            <li>Hisoutensoku</li>
+                            <li>Goliath Doll</li>
+                        </ul>
+                        <p><strong>Touhou 13.5 &quot;Hopeless Masquerade&quot;</strong></p>
+                        <ul>
+                            <li>Ichirn &amp; Unzan</li>
+                            <li>Byakuren</li>
+                            <li>Futo</li>
+                            <li>Miko</li>
+                            <li>Nitori</li>
+                            <li>Koishi</li>
+                            <li>Mamizou</li>
+                            <li>Kokoro</li>
+                        </ul>
+                        <p><strong>Touhou 14.5 &quot;Urban Legend in Limbo&quot;</strong></p>
+                        <ul>
+                            <li>Ichiran &amp; Unzan</li>
+                            <li>Byakuren</li>
+                            <li>Futo</li>
+                            <li>Miko</li>
+                            <li>Nitori</li>
+                            <li>Koishi</li>
+                            <li>Mamizou</li>
+                            <li>Kokoro</li>
+                            <li>Mokou</li>
+                            <li>Kasen</li>
+                            <li>Sukuna</li>
+                            <li>Sumireko</li>
+                            <li>Reisen</li>
+                        </ul>
+                        <p><strong>Touhou 15.5 &quot;Antimony of Common Flowers&quot;</strong></p>
+                        <ul>
+                            <li>Ichiran &amp; Unzan</li>
+                            <li>Byakuren</li>
+                            <li>Futo</li>
+                            <li>Miko</li>
+                            <li>Nitori</li>
+                            <li>Koishi</li>
+                            <li>Mamizou</li>
+                            <li>Kokoro</li>
+                            <li>Mokou</li>
+                            <li>Kasen</li>
+                            <li>Sukuna</li>
+                            <li>Sumireko</li>
+                            <li>Reisen</li>
+                            <li>Doremy</li>
+                            <li>Tenshi</li>
+                            <li>Yukari</li>
+                            <li>Jo&#39;on</li>
+                            <li>Shion</li>
+                        </ul>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header>Lunar Landing in the Bamboo Forest (TH08, TH14, TH15, SSiB, FS, LE)</Accordion.Header>
+                    <Accordion.Body>
+                        <Card className="mt-2 th08">
+                            <Card.Body className="text-center">
+                                <Card.Title>Lunar Landing in the Bamboo Forest</Card.Title>
+                                <Card.Text>Saturday, 4:30 PM - 5:30 PM</Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <p className="mt-2"><strong>Main Protagonists</strong></p>
+                        <ul>
+                            <li>Reimu</li>
+                            <li>Marisa</li>
+                        </ul>
+                        <p><strong>Touhou 8 &quot;Imperishable Night&quot;</strong></p>
+                        <ul>
+                            <li>Yukari</li>
+                            <li>Alice</li>
+                            <li>Remilia</li>
+                            <li>Sakuya</li>
+                            <li>Yuyuko</li>
+                            <li>Youmu</li>
+                            <li>Wriggle</li>
+                            <li>Mystia</li>
+                            <li>Keine</li>
+                            <li>Tewi</li>
+                            <li>Reisen</li>
+                            <li>Eirin</li>
+                            <li>Kaguya</li>
+                            <li>Mokou</li>
+                        </ul>
+                        <p><strong>Touhou 14 &quot;Double Dealing Character&quot;</strong></p>
+                        <ul>
+                            <li>Cirno</li>
+                            <li>Wakasagahime</li>
+                            <li>Sekibanki</li>
+                            <li>Kagerou</li>
+                            <li>Benben &amp; Yatsuhashi</li>
+                            <li>Seija</li>
+                            <li>Sukuna</li>
+                            <li>Raiko</li>
+                            <li>Mokou</li>
+                            <li>Hecatia</li>
+                            <li>Raiko</li>
+                        </ul>
+                        <p><strong>Touhou 15 &quot;Legacy of Lunatic Kingdom&quot;</strong></p>
+                        <ul>
+                            <li>Sanae</li>
+                            <li>Reisen</li>
+                            <li>Seiran</li>
+                            <li>Ringo</li>
+                            <li>Doremy</li>
+                            <li>Sagume</li>
+                            <li>Clownpiece</li>
+                            <li>Junko</li>
+                            <li>Hecatia</li>
+                        </ul>
+                        <p><b>Silent Sinner in Blue</b></p>
+                        <ul>
+                            <li>Yukari</li>
+                            <li>Reisen</li>
+                            <li>Tewi</li>
+                            <li>Kaguya</li>
+                            <li>Eirin</li>
+                            <li>Ran</li>
+                            <li>Remilia</li>
+                            <li>Sakuya</li>
+                            <li>Patchouli</li>
+                            <li>Rinnosuke</li>
+                            <li>Youmu</li>
+                            <li>Yuyuko</li>
+                            <li>Toyohime</li>
+                            <li>Yorihime</li>
+                            <li>Aya</li>
+                        </ul>
+                        <p><b>Forbidden Scrollery</b></p>
+                        <ul>
+                            <li>Kosuzu</li>
+                            <li>Akyuu</li>
+                            <li>Sakuya</li>
+                            <li>Mamizou</li>
+                            <li>Remilia</li>
+                            <li>Kokoro</li>
+                            <li>Shinmyoumaru</li>
+                            <li>Nitori</li>
+                            <li>Reisen</li>
+                            <li>Sanae</li>
+                            <li>Rinnosuke</li>
+                            <li>Nue</li>
+                            <li>Aya</li>
+                            <li>Byakuren</li>
+                            <li>Yukari</li>
+                            <li>Fortune Teller (RIP 😭)</li>
+                        </ul>
+                        <p><b>Lotus Eaters</b></p>
+                        <ul>
+                            <li>Suika</li>
+                            <li>Miyoi</li>
+                            <li>Sakuya</li>
+                            <li>Youmu</li>
+                            <li>Mamizou</li>
+                            <li>Aya</li>
+                            <li>Komachi</li>
+                            <li>Kanako</li>
+                            <li>Sanae</li>
+                            <li>Byakuren</li>
+                            <li>Nitori</li>
+                            <li>Okina</li>
+                            <li>Sannyo</li>
+                            <li>Yuugi</li>
+                            <li>Chimata</li>
+                            <li>Megumu</li>
+                            <li>Rin</li>
+                            <li>Miko</li>
+                            <li>Futo</li>
+                            <li>Son Biten</li>
+                            <li>Joon</li>
+                        </ul>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="3">
                     <Accordion.Header>The Faithful Gods (TH10, TH12, TH12.5, TH13, TH16, TH18, TH20)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="th10">
@@ -276,46 +615,7 @@ export const cosplayPage = {
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                    <Accordion.Header>The Devil's Mansion (TH06, Touhouvania, TH12.8)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th06">
-                            <Card.Body className="text-center">
-                                <Card.Title>The Devil's Mansion</Card.Title>
-                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Touhou 6 &quot;Embodiment of Scarlet Devil&quot;</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                            <li>Rumia</li>
-                            <li>Daiyousei</li>
-                            <li>Cirno</li>
-                            <li>Meiling</li>
-                            <li>Koakuma</li>
-                            <li>Patchouli</li>
-                            <li>Sakuya</li>
-                            <li>Remilia</li>
-                            <li>Flandre</li>
-                            <li>Rin Satsuki</li>
-                        </ul>
-                        <p><strong>Touhouvania / Koumanjou Densetsu 1 &amp; 2</strong></p>
-                        <ul>
-                            <li>All costumes and designs featured</li>
-                        </ul>
-                        <p><b>Touhou 12.8 "Great Fairy Wars"</b></p>
-                        <ul>
-                            <li>Lily White & Lily Black</li>
-                            <li>Daiyousei</li>
-                            <li>Star Sapphire</li>
-                            <li>Luna Child</li>
-                            <li>Sunny Milk</li>
-                            <li>Marisa</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="2">
+                <Accordion.Item eventKey="4">
                     <Accordion.Header>Melodies in the Netherworld (TH07, TH09, Hifuu Club)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 th07">
@@ -365,121 +665,7 @@ export const cosplayPage = {
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="3">
-                    <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19, FDS)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th15">
-                            <Card.Body className="text-center">
-                                <Card.Title>Go to hell!!</Card.Title>
-                                <Card.Text>Saturday, 10:00 AM - 11:00 AM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 11 &quot;Subterranean Animism&quot;</strong></p>
-                        <ul>
-                            <li>Alice</li>
-                            <li>Nitori</li>
-                            <li>Patchouli</li>
-                            <li>Suika</li>
-                            <li>Yukari</li>
-                            <li>Aya</li>
-                            <li>Kisume</li>
-                            <li>Yamame</li>
-                            <li>Parsee</li>
-                            <li>Yuugi</li>
-                            <li>Satori</li>
-                            <li>Rin</li>
-                            <li>Utsuho</li>
-                            <li>Sanae</li>
-                            <li>Koishi</li>
-                            <li>Kanako</li>
-                            <li>Suwako</li>
-                        </ul>
-                        <p><strong>Touhou 17 &quot;Wily Beast and Weakest Creature&quot;</strong></p>
-                        <ul>
-                            <li>Youmu</li>
-                            <li>Eika</li>
-                            <li>Urumi</li>
-                            <li>Kutaka</li>
-                            <li>Yachie</li>
-                            <li>Mayumi</li>
-                            <li>Keiki</li>
-                            <li>Saki</li>
-                            <li>Yumm</li>
-                        </ul>
-                        <p><strong>Touhou 17.5 &quot;Gouyoku Ibun&quot;</strong></p>
-                        <ul>
-                            <li>Kanako</li>
-                            <li>Murasa</li>
-                            <li>Jo&#39;on &amp; Shion</li>
-                            <li>Flandre</li>
-                            <li>Okina</li>
-                            <li>Yamame</li>
-                            <li>Kogasa</li>
-                            <li>Yuugi</li>
-                            <li>Okuu</li>
-                            <li>Kutaka</li>
-                            <li>Yuuma</li>
-                        </ul>
-                        <p><strong>Touhou 19 &quot;Unfinished Dream of All Living Ghost&quot;</strong></p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Ran</li>
-                            <li>Aunn</li>
-                            <li>Nazrin</li>
-                            <li>Seiran</li>
-                            <li>Rin</li>
-                            <li>Tsukasa</li>
-                            <li>Mamizou</li>
-                            <li>Yachie</li>
-                            <li>Saki</li>
-                            <li>Yuuma</li>
-                            <li>Suika</li>
-                            <li>Son Biten</li>
-                            <li>Enoko</li>
-                            <li>Chiyari</li>
-                            <li>Hisami</li>
-                            <li>Zanmu</li>
-                        </ul>
-                        <p><b>Foul Detective Satori</b> (Manga)</p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Patchouli</li>
-                            <li>Marisa</li>
-                            <li>Sakuya</li>
-                            <li>Meiling</li>
-                            <li>Orin</li>
-                            <li>Remilia</li>
-                            <li>Satori</li>
-                            <li>Flandre</li>
-                            <li>Youmu</li>
-                            <li>Yuyuko</li>
-                            <li>Yukari</li>
-                            <li>Ran</li>
-                            <li>Chen</li>
-                            <li>Mizuchi</li>
-                            <li>Aya</li>
-                            <li>Sanae</li>
-                            <li>Kanako</li>
-                            <li>Nitori</li>
-                            <li>Suwako</li>
-                            <li>Hina</li>
-                            <li>Hatate</li>
-                            <li>Kyouko</li>
-                            <li>Shou</li>
-                            <li>Nazrin</li>
-                            <li>Ichirin</li>
-                            <li>Byakuren</li>
-                            <li>Kogasa</li>
-                            <li>Yuugi</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="4">
+                <Accordion.Item eventKey="5">
                     <Accordion.Header>PC-98 Games (TH01 ~ TH05)</Accordion.Header>
                     <Accordion.Body>
                         <Card className="mt-2 pc98">
@@ -546,228 +732,42 @@ export const cosplayPage = {
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="5">
-                    <Accordion.Header>Lunar Landing in the Bamboo Forest (TH08, TH15, TH14, SSiB, FS, LE)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th08">
-                            <Card.Body className="text-center">
-                                <Card.Title>Lunar Landing in the Bamboo Forest</Card.Title>
-                                <Card.Text>Saturday, 4:30 PM - 5:30 PM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Main Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 8 &quot;Imperishable Night&quot;</strong></p>
-                        <ul>
-                            <li>Yukari</li>
-                            <li>Alice</li>
-                            <li>Remilia</li>
-                            <li>Sakuya</li>
-                            <li>Yuyuko</li>
-                            <li>Youmu</li>
-                            <li>Wriggle</li>
-                            <li>Mystia</li>
-                            <li>Keine</li>
-                            <li>Tewi</li>
-                            <li>Reisen</li>
-                            <li>Eirin</li>
-                            <li>Kaguya</li>
-                            <li>Mokou</li>
-                        </ul>
-                        <p><strong>Touhou 15 &quot;Legacy of Lunatic Kingdom&quot;</strong></p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Reisen</li>
-                            <li>Seiran</li>
-                            <li>Ringo</li>
-                            <li>Doremy</li>
-                            <li>Sagume</li>
-                            <li>Clownpiece</li>
-                            <li>Junko</li>
-                            <li>Hecatia</li>
-                        </ul>
-                        <p><strong>Touhou 14 &quot;Double Dealing Character&quot;</strong></p>
-                        <ul>
-                            <li>Cirno</li>
-                            <li>Wakasagahime</li>
-                            <li>Sekibanki</li>
-                            <li>Kagerou</li>
-                            <li>Benben &amp; Yatsuhashi</li>
-                            <li>Seija</li>
-                            <li>Sukuna</li>
-                            <li>Raiko</li>
-                            <li>Mokou</li>
-                            <li>Hecatia</li>
-                            <li>Raiko</li>
-                        </ul>
-                        <p><b>Silent Sinner in Blue</b></p>
-                        <ul>
-                            <li>Yukari</li>
-                            <li>Reisen</li>
-                            <li>Tewi</li>
-                            <li>Kaguya</li>
-                            <li>Eirin</li>
-                            <li>Ran</li>
-                            <li>Remilia</li>
-                            <li>Sakuya</li>
-                            <li>Patchouli</li>
-                            <li>Rinnosuke</li>
-                            <li>Youmu</li>
-                            <li>Yuyuko</li>
-                            <li>Toyohime</li>
-                            <li>Yorihime</li>
-                            <li>Aya</li>
-                        </ul>
-                        <p><b>Forbidden Scrollery</b></p>
-                        <ul>
-                            <li>Kosuzu</li>
-                            <li>Akyuu</li>
-                            <li>Sakuya</li>
-                            <li>Mamizou</li>
-                            <li>Remilia</li>
-                            <li>Kokoro</li>
-                            <li>Shinmyoumaru</li>
-                            <li>Nitori</li>
-                            <li>Reisen</li>
-                            <li>Sanae</li>
-                            <li>Rinnosuke</li>
-                            <li>Nue</li>
-                            <li>Aya</li>
-                            <li>Byakuren</li>
-                            <li>Yukari</li>
-                            <li>Fortune Teller (RIP 😭)</li>
-                        </ul>
-                        <p><b>Lotus Eaters</b></p>
-                        <ul>
-                            <li>Suika</li>
-                            <li>Miyoi</li>
-                            <li>Sakuya</li>
-                            <li>Youmu</li>
-                            <li>Mamizou</li>
-                            <li>Aya</li>
-                            <li>Komachi</li>
-                            <li>Kanako</li>
-                            <li>Sanae</li>
-                            <li>Byakuren</li>
-                            <li>Nitori</li>
-                            <li>Okina</li>
-                            <li>Sannyo</li>
-                            <li>Yuugi</li>
-                            <li>Chimata</li>
-                            <li>Megumu</li>
-                            <li>Rin</li>
-                            <li>Miko</li>
-                            <li>Futo</li>
-                            <li>Son Biten</li>
-                            <li>Joon</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
                 <Accordion.Item eventKey="6">
-                    <Accordion.Header>Fighting Games (TH7.5, TH10.5, TH12.3, TH13.5, TH14.5, TH15.5)</Accordion.Header>
+                    <Accordion.Header>The Devil's Mansion (TH06, Touhouvania, TH12.8)</Accordion.Header>
                     <Accordion.Body>
-                        <Card className="mt-2 fight">
+                        <Card className="mt-2 th06">
                             <Card.Body className="text-center">
-                                <Card.Title>Fighting Games</Card.Title>
-                                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
+                                <Card.Title>The Devil's Mansion</Card.Title>
+                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
                             </Card.Body>
                         </Card>
-                        <p className="mt-2"><strong>Main Protagonists</strong></p>
+                        <p className="mt-2"><strong>Touhou 6 &quot;Embodiment of Scarlet Devil&quot;</strong></p>
                         <ul>
                             <li>Reimu</li>
                             <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 7.5 &quot;Immaterial and Missing Power&quot;</strong></p>
-                        <ul>
-                            <li>Sakuya</li>
-                            <li>Alice</li>
-                            <li>Patchouli</li>
-                            <li>Youmu</li>
-                            <li>Remilia</li>
-                            <li>Yuyuko</li>
-                            <li>Yukari</li>
-                            <li>Suika</li>
-                            <li>Meiling</li>
-                        </ul>
-                        <p><strong>Touhou 10.5 &quot;Scarlet Weather Rhapsody&quot;</strong></p>
-                        <ul>
-                            <li>Sakuya</li>
-                            <li>Alice</li>
-                            <li>Patchouli</li>
-                            <li>Youmu</li>
-                            <li>Remilia</li>
-                            <li>Yuyuko</li>
-                            <li>Yukari</li>
-                            <li>Reisen</li>
-                            <li>Suika</li>
-                            <li>Aya</li>
-                            <li>Komachi</li>
-                            <li>Iku</li>
-                            <li>Tenshi</li>
-                        </ul>
-                        <p><strong>Touhou 12.3 &quot;Hisoutensoku&quot;</strong></p>
-                        <p><b>Note!</b> All characters from Touhou 10.5 are also included here!</p>
-                        <ul>
-                            <li>Sanae</li>
+                            <li>Rumia</li>
+                            <li>Daiyousei</li>
                             <li>Cirno</li>
                             <li>Meiling</li>
-                            <li>Alice</li>
+                            <li>Koakuma</li>
                             <li>Patchouli</li>
-                            <li>Okuu</li>
-                            <li>Suwako</li>
-                            <li>Hisoutensoku</li>
-                            <li>Goliath Doll</li>
+                            <li>Sakuya</li>
+                            <li>Remilia</li>
+                            <li>Flandre</li>
+                            <li>Rin Satsuki</li>
                         </ul>
-                        <p><strong>Touhou 13.5 &quot;Hopeless Masquerade&quot;</strong></p>
+                        <p><strong>Touhouvania / Koumanjou Densetsu 1 &amp; 2</strong></p>
                         <ul>
-                            <li>Ichirn &amp; Unzan</li>
-                            <li>Byakuren</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nitori</li>
-                            <li>Koishi</li>
-                            <li>Mamizou</li>
-                            <li>Kokoro</li>
+                            <li>All costumes and designs featured</li>
                         </ul>
-                        <p><strong>Touhou 14.5 &quot;Urban Legend in Limbo&quot;</strong></p>
+                        <p><b>Touhou 12.8 "Great Fairy Wars"</b></p>
                         <ul>
-                            <li>Ichiran &amp; Unzan</li>
-                            <li>Byakuren</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nitori</li>
-                            <li>Koishi</li>
-                            <li>Mamizou</li>
-                            <li>Kokoro</li>
-                            <li>Mokou</li>
-                            <li>Kasen</li>
-                            <li>Sukuna</li>
-                            <li>Sumireko</li>
-                            <li>Reisen</li>
-                        </ul>
-                        <p><strong>Touhou 15.5 &quot;Antimony of Common Flowers&quot;</strong></p>
-                        <ul>
-                            <li>Ichiran &amp; Unzan</li>
-                            <li>Byakuren</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nitori</li>
-                            <li>Koishi</li>
-                            <li>Mamizou</li>
-                            <li>Kokoro</li>
-                            <li>Mokou</li>
-                            <li>Kasen</li>
-                            <li>Sukuna</li>
-                            <li>Sumireko</li>
-                            <li>Reisen</li>
-                            <li>Doremy</li>
-                            <li>Tenshi</li>
-                            <li>Yukari</li>
-                            <li>Jo&#39;on</li>
-                            <li>Shion</li>
+                            <li>Lily White & Lily Black</li>
+                            <li>Daiyousei</li>
+                            <li>Star Sapphire</li>
+                            <li>Luna Child</li>
+                            <li>Sunny Milk</li>
+                            <li>Marisa</li>
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -778,14 +778,6 @@ export const cosplayPage = {
         <p>The below photoshoots are also available for those interested.</p>
         <Row xs={1} md={2} lg={4} className="justify-content-center">
             <Col>
-                <Card className="mt-2 pink-one">
-                    <Card.Body className="text-center">
-                        <Card.Title>Fangames Photoshoot</Card.Title>
-                        <Card.Text>Sunday, 12:00 PM - 12:30 PM</Card.Text>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
                 <Card className="mt-2 purple-one">
                     <Card.Body className="text-center">
                         <Card.Title>Fumo Meetup</Card.Title>
@@ -793,7 +785,14 @@ export const cosplayPage = {
                     </Card.Body>
                 </Card>
             </Col>
-
+            <Col>
+                <Card className="mt-2 pink-one">
+                    <Card.Body className="text-center">
+                        <Card.Title>Fangames Photoshoot</Card.Title>
+                        <Card.Text>Sunday, 12:00 PM - 12:30 PM</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
         </Row>
 
         {/*
