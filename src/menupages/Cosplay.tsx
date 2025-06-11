@@ -165,7 +165,7 @@ export const cosplayPage = {
                         <Card className="th10">
                             <Card.Body className="text-center">
                                 <Card.Title>The Faithful Gods</Card.Title>
-                                <Card.Text>Saturday, 5:00 PM - 6:30 PM</Card.Text>
+                                <Card.Text>Saturday, 5:30 PM - 6:30 PM</Card.Text>
                             </Card.Body>
                         </Card>
                         <p className="mt-2"><strong>Main Protagonists</strong></p>
