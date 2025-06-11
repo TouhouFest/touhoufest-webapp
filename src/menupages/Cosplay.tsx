@@ -864,7 +864,7 @@ export const cosplayPage = {
                 <Card className="">
                     <Card.Body className="text-center silver-bg rounded">
                         <Card.Title>Runner-up Best Craftsmanship</Card.Title>
-                        <Card.Subtitle>Medal</Card.Subtitle>
+                        <Card.Subtitle>Commemorative Medal</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
@@ -880,7 +880,7 @@ export const cosplayPage = {
                 <Card className="">
                     <Card.Body className="text-center silver-bg rounded">
                         <Card.Title>Runner-up Best Performance</Card.Title>
-                        <Card.Subtitle>Medal</Card.Subtitle>
+                        <Card.Subtitle>Commemorative Medal</Card.Subtitle>
                     </Card.Body>
                 </Card>
             </Col>
