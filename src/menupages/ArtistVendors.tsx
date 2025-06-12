@@ -204,7 +204,7 @@ plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 let communitytables = [
 {"name": "The Corps Dance Crew", "image": corpsdancecrew, "location": "Booth FT1 ~ FT2", "website": "https://x.com/TheCorpsDC", "role": ""},
 {"name": "Organized Touhou Networking in Japan", "image": organizedtouhounetworking, "location": "Booth FT3", "website": "https://discord.gg/4uGwZEXXBN", "role": ""},
-{"name": "Bowers Museum", "image": bowersmuseum, "location": "Booth FT5 (Saturday)", "website": "https://www.bowers.org/", "role": ""},
+// {"name": "Bowers Museum", "image": bowersmuseum, "location": "Booth FT5 (Saturday)", "website": "https://www.bowers.org/", "role": ""},
 {"name": "Dave & Busters", "image": daveandbusters, "location": "Booth FT5 (Sunday)", "website": "https://www.daveandbusters.com/us/en/home", "role": ""},
 {"name": "Anime Los Angeles", "image": animelosangeles, "location": "Booth FT6", "website": "https://animelosangeles.org/", "role": ""},
 {"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "Booth FT7", "website": "https://www.la-idolmatsuri.org/", "role": ""},
