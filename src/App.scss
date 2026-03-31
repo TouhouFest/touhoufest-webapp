@@ -1,3 +1,63 @@
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+body {
+  font-family: 'Open-Sans';
+}
+
+h4, h5, h6 {
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+button {
+  font-family: 'Poppins' !important;
+  font-weight: 500 !important;
+}
+
 .aqua {background-color: aqua !important; color:black !important}
 .purple {background-color: purple !important;color:white !important}
 .fuchsia {background-color: #ff77d2 !important;color:black !important}
