@@ -366,6 +366,7 @@ export default function Dataset(
           <Row>
             <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
               {eventbulk}
+              {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
             </Col>
             <Col xs="2" className="text-center align-self-center">
               <Stack gap={3}>
