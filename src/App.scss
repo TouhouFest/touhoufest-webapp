@@ -123,7 +123,7 @@ $readable-red: #BF3444;
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
   
-  h4 {
+  .event-item h4 {
     color: $readable-red;
   }
 
@@ -281,8 +281,12 @@ $readable-red: #BF3444;
 }
 
 .newtimes {
-  background-color: #ffff99;
-  color: black;
+  background-color: $readable-red;
+  color: white;
+  padding: 1.25em;
+  border-radius: 0px 10px 10px 0px;
+  border-right: 20px solid transparent!important;
+  border-image: url(gohei_border.svg) 2 repeat;
 }
 
 pwa-toast{

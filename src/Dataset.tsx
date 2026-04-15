@@ -329,7 +329,7 @@ export default function Dataset(
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <><ListGroup.Item className="text-center small newtimes">{floortime.format("h:mm A")}</ListGroup.Item></>
+          <><ListGroup.Item className="newtimes"><h4 className="mb-0">{floortime.format("h:mm A")}</h4></ListGroup.Item></>
         );
         hourfxn = floortime;
       }
