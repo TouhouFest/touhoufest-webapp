@@ -83,8 +83,8 @@ describe("Dataset", () => {
         render(dataset);
         await waitFor(() => {
             // todo: adjust output of papa.parse to maybe call complete function?
-            expect(screen.getByText(`Toyota Hall, 3/2 10:35 PM - 4/26 11:30 PM`)).toBeDefined();
-            expect(screen.getByText(`All, 3/2 10:35 PM - 4/6 11:30 PM`)).toBeDefined();
+            expect(screen.getByText(new RegExp("Toyota Hall | 3/2 10:35 PM - 4/26 11:30 PM"))).toBeDefined();
+            expect(screen.getByText(new RegExp("All | 3/2 10:35 PM - 4/6 11:30 PM"))).toBeDefined();
         });
     });
 
@@ -114,7 +114,7 @@ describe("Dataset", () => {
 
         // expectation: time should print exactly
         await waitFor(() => {
-            expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
+            expect(screen.getByText(new RegExp(`All | 7:35 PM - 8:30 PM`))).toBeDefined();
         });
 
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
@@ -145,14 +145,15 @@ describe("Dataset", () => {
         render(dataset);
 
         await waitFor(() => {
-            expect(screen.getByText(`All, 9:35 PM - 10:30 PM`)).toBeDefined();
+            expect(screen.getByText(new RegExp(`All | 9:35 PM - 10:30 PM`))).toBeDefined();
         });
 
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
     });
 
     test("show PST times in JST timezone", async () => {
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, null));
+        const getItemTest = localStorage.getItem.mockImplementation((input) => mockGetItemImplementation(input, null));
+        // const getItemTest = (vi.spyOn(Storage.prototype, "getItem")).mockImplementation((input) => mockGetItemImplementation(input, null));
         // sanity check mocking timezone
         dayjs.extend(utc);
         dayjs.extend(timezone);
@@ -178,12 +179,12 @@ describe("Dataset", () => {
         await waitFor(() => {
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
             expect(screen.getAllByText(`Sunday, March 2`).length).greaterThan(0);
-            expect(screen.getByText(`All, 7:35 PM - 8:30 PM`)).toBeDefined();
+            expect(screen.getByText(new RegExp(`All | 7:35 PM - 8:30 PM`))).toBeDefined();
         });
     });
 
     test("times with different tz-aware dates show on device mode", async () => {
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
+        const getItemTest = localStorage.getItem.mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
         // sanity check mocking timezone
         dayjs.extend(utc);
         dayjs.extend(timezone);

@@ -23,7 +23,7 @@ describe("Settings", () => {
     });
 
     test("con tz selects use device timezone when checked", async () => {
-        const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockReturnValue();
+        const setItemTest = localStorage.setItem.mockReturnValue();
         Toast.show = vi.fn().mockReturnValue(undefined);
         let element:JSX.Element = <>
             <MenuPage show_var={() => {return true}} hide_fxn={vi.fn()} idx={0}>
@@ -48,7 +48,7 @@ describe("Settings", () => {
 
     test("con tz selects use con timezone when not checked", async () => {
         Toast.show = vi.fn().mockReturnValue(undefined);
-        const setItemTest = vi.spyOn(Storage.prototype, "setItem").mockReturnValue();
+        const setItemTest = localStorage.setItem.mockReturnValue();
         let element:JSX.Element = <>
             <MenuPage show_var={() => {return true}} hide_fxn={vi.fn()} idx={0}>
                 <MenuPage.Header >{settingsPage["header"]}</MenuPage.Header>
@@ -70,7 +70,7 @@ describe("Settings", () => {
 
     test("con tz searches for nativetimetype settings on start", async () => {
         
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(null);
+        const getItemTest = localStorage.getItem.mockReturnValue(null);
 
         let element:JSX.Element = <>
             <MenuPage show_var={() => {return true}} hide_fxn={vi.fn()} idx={0}>
@@ -86,7 +86,7 @@ describe("Settings", () => {
     });
 
     test("con tz checks nativetimetype automatically if already filled", async () => {
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((key) => {
+        const getItemTest = localStorage.getItem.mockImplementation((key) => {
             if(key === NATIVETIMETYPE) {return USEDEVICETZ;}
             else{return null;}
         });
