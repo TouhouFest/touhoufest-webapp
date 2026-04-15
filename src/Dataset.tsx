@@ -351,7 +351,7 @@ export default function Dataset(
       let eventbulk = (<>
         <h4 className="mb-1">{elem["event_title"]} </h4>
 
-        <p className="mb-1">{elem["event_room"]}, {startstr} - {endstr}</p>
+        <p className="mb-1"><b>{elem["event_room"]} | {startstr} - {endstr}</b></p>
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {
             return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
