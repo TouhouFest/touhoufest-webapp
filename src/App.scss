@@ -118,8 +118,15 @@ body {
 $reimu-red: #AD0000;
 $darker-reimu-red: #800000;
 
+$readable-red: #BF3444;
+
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
+  
+  h4 {
+    color: $readable-red;
+  }
+
   .day-indicator{
     background-color: $reimu-red; // #ff5959;
     color: #FFF9EE;
@@ -134,11 +141,11 @@ $darker-reimu-red: #800000;
   }
 
   .event-item{
-    background-color: #FFF9EE;
+    background-color: #FBF7EB;
   }
 
   body{
-    background-color: #FFF9EE;
+    background-color: #FBF7EB;
   }
 
   .nav-fill {
