@@ -19,6 +19,8 @@ import touhoufest from "./images/touhoufest.jpg";
 import touhoufest_dark from "./images/touhoufest_dark.jpg";
 import { Stack } from 'react-bootstrap';
 
+import { faStar } from '@fortawesome/free-regular-svg-icons';
+
 function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) {
 
   // indicator for home, bookmarks, filtering
@@ -103,6 +105,10 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     else {
       newmode = type;
     }
+
+    if (oldmode === "bookmarks" && type === oldmode) {
+      newmode = "home";
+    } 
 
     setMode(newmode);
 
@@ -253,7 +259,10 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
           <Nav.Item onClick={() => handleRoleChange("bookmarks")}>
             <Nav.Link eventKey="bookmarks">
               <Stack>
-                <FontAwesomeIcon icon={fasStar} className="fa-2x"></FontAwesomeIcon> Starred
+                {mode === "bookmarks" ? 
+                  <FontAwesomeIcon icon={fasStar} className="fa-2x starred-active" /> 
+                  : <FontAwesomeIcon icon={faStar} className="fa-2x" />
+                } Starred
               </Stack>
             </Nav.Link>
           </Nav.Item>

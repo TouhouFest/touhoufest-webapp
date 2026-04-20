@@ -119,6 +119,7 @@ $reimu-red: #AD0000;
 $darker-reimu-red: #800000;
 
 $readable-red: #BF3444;
+$parchment: #FBF7EB;
 
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
@@ -141,15 +142,20 @@ $readable-red: #BF3444;
   }
 
   .event-item{
-    background-color: #FBF7EB;
+    background-color: $parchment;
   }
 
   body{
-    background-color: #FBF7EB;
+    background-color: $parchment;
   }
 
   .nav-fill {
-    background-color: $darker-reimu-red !important;
+    border-top: 3px solid $readable-red;
+    background-color: $parchment !important;
+  }
+
+  .nav-fill .nav-link {
+    color: black !important;
   }
 
   .offcanvas-header {
@@ -197,7 +203,11 @@ $readable-red: #BF3444;
 
 
 .nav-fill .nav-item > .active {
-  color: #f5ec42;
+  // background-color: #f5ec42 !important;
+}
+
+.starred-active {
+  // color: #f5ec42 !important;
 }
 
 .nav-fill .nav-item > :not(.active) {
