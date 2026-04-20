@@ -284,9 +284,8 @@ $readable-red: #BF3444;
   background-color: $readable-red;
   color: white;
   padding: 1.25em;
-  border-radius: 0px 10px 10px 0px;
-  border-right: 20px solid transparent!important;
-  border-image: url(gohei_border.svg) 2 repeat;
+  border-radius: 0px 10px 10px 0px !important;
+  border: 0px;
 }
 
 pwa-toast{
@@ -313,4 +312,9 @@ pwa-toast{
 
 .nobr {
   white-space: nowrap;
+}
+
+// gohei border crap
+.filter-shadow {
+  filter: drop-shadow(8px 0px 10px gray);
 }
