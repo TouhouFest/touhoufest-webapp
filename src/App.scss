@@ -42,8 +42,6 @@
   font-style: italic;
 }
 
-
-
 body {
   font-family: 'Open-Sans';
 }
@@ -309,4 +307,9 @@ pwa-toast{
 
 .nobr {
   white-space: nowrap;
+}
+
+.badge {
+  font-size: 1rem;
+  font-weight: 400;
 }
