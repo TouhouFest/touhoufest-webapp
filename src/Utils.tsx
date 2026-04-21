@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faC, faCircle, faCircleExclamation, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faC, faCircle, faCircleExclamation, faGamepad, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -155,8 +155,8 @@ export function WarningAlert({children}:{children:any}) {
     </>);
 }
 
-import {Badge} from 'react-bootstrap';
+import {Badge, Image} from 'react-bootstrap';
 
-export function EventTypeGenerator({colorClassName, text, img}: {colorClassName:string, text:string, img:string}) {
-    return (<><Badge pill className={colorClassName + ' me-1'}>{text}</Badge></>);
+export function EventTypeGenerator({colorClassName, text}: {colorClassName:string, text:string}) {
+    return (<><Badge pill className={colorClassName + ' me-1'}>{<FontAwesomeIcon icon={faGamepad}/>} {text}</Badge></>);
 }

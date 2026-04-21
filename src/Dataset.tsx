@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE, EventTypeGenerator} from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -354,7 +354,8 @@ export default function Dataset(
         <p className="mb-1"><b>{elem["event_room"]} | {startstr} - {endstr}</b></p>
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {
-            return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
+            return <EventTypeGenerator colorClassName={color} text={splitevt[idx]} />;
+            // return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
           })}
           <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
         </span></p>
