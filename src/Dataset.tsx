@@ -20,6 +20,8 @@ import events from './events.csv';
 import noresults from './noresults.jpg';
 import noresultsdark from "./noresults-dark.jpg";
 import Stack from "react-bootstrap/Stack";
+import gohei_border from "./gohei_border.svg";
+import hakurei_border from "./hakurei_border.svg";
 import { faToriiGate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 dayjs.extend(customParseFormat);
@@ -329,7 +331,18 @@ export default function Dataset(
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <><ListGroup.Item className="text-center small newtimes">{floortime.format("h:mm A")}</ListGroup.Item></>
+          <Row className="g-0">
+            <Col>
+              <ListGroup.Item className="newtimes">
+                <h4 className="mb-0">{floortime.format("h:mm A")}</h4>
+              </ListGroup.Item>
+            </Col>
+            <Col xs="auto" className="newtimes-filler text-center">
+              <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
+            </Col>
+            <Col xs="1" className="newtimes-end"></Col>
+            <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow" fluid/></Col>
+          </Row>
         );
         hourfxn = floortime;
       }
