@@ -280,14 +280,25 @@ $readable-red: #BF3444;
   display: none;
 }
 
+// set of css styles for the reimu gohei bar
 .newtimes {
   background-color: $readable-red;
   color: white;
   padding: 1.25em;
+  border: 0px;
+}
+
+.newtimes-filler {
+  background-color: $readable-red;
+}
+
+.newtimes-end {
+  background-color: $readable-red;
   border-radius: 0px 10px 10px 0px !important;
   border: 0px;
 }
 
+// rest continues
 pwa-toast{
   z-index:9999;
 }
