@@ -295,10 +295,6 @@ export default function Dataset(
       let index:number = elem["uniqueID" as keyof EventListing];
       let splitevt = elem["event_type"].split(".");
     
-      // compute event type badge styling
-      let event_indexes = splitevt.map(evt => event_types.findIndex((elm) => {return elm === evt;}))
-      let css_classes = event_indexes.map((idx) => colors[idx]);
-
       // compute time display
       let startjs = dayjs(elem["combinedStart" as keyof EventListing]);
       let endjs = dayjs(elem["combinedEnd" as keyof EventListing]);
@@ -353,9 +349,8 @@ export default function Dataset(
 
         <p className="mb-1"><b>{elem["event_room"]} | {startstr} - {endstr}</b></p>
         <p className="mb-1"><span>
-          {css_classes.map((color, idx) => {
-            return <EventTypeGenerator colorClassName={color} text={splitevt[idx]} />;
-            // return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
+          {splitevt.map((evt) => {
+            return <EventTypeGenerator colorClassName={evt.replace(" ","_")} text={evt} />;
           })}
           <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
         </span></p>
