@@ -120,8 +120,8 @@ interface EventListing {
 }
 
 export default function Dataset(
-  { mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription}: 
-  { mode:string, param_fxn:Function, appliedFilters:any, changeDays:Function, oppositeTheme:IconDefinition, showEventDescription:boolean, setShowEventDescription:Function}
+  { mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription, selectedDay}: 
+  { mode:string, param_fxn:Function, appliedFilters:any, changeDays:Function, oppositeTheme:IconDefinition, showEventDescription:boolean, setShowEventDescription:Function, selectedDay:string}
 ) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
@@ -233,6 +233,12 @@ export default function Dataset(
     let event_types = uniqueColumn(dataSet.get('event_type').map((elm) => elm.split(".")).flat(1)).sort();
 
     let displayData = dataSet;
+
+    if(selectedDay !== "All Days") {
+      let result = displayData.get("event_start_day").map((daystr) => daystr.split("/")[1] === selectedDay.split("/")[1]);
+      displayData = displayData.loc({rows: result});
+    }
+
     if (mode === "bookmarks") {
       let cookie_list = get_cookie_list();
       cookie_list = cookie_list.map(Number);
@@ -313,16 +319,17 @@ export default function Dataset(
       }
 
       // we've moved onto a new set of days, we need to add a new day indicator
-      if (daynum === -1 || startjs.date() !== daynum) {
+      if (selectedDay === "All Days" && (daynum === -1 || startjs.date() !== daynum)) {
         daynum = startjs.date();
         let formatted_start = startjs.format("dddd, MMMM D").toString();
         // the number of events preceding the day indicator are enscribed into the classname
+        // output.push(
+        //   <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
+        // );
+        // add the class "sticky-top2 to re-enable sticky indicators"
         output.push(
-          <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
-        );
-        output.push(
-          <ListGroup.Item key={formatted_start} className={"text-center sticky-top2 day-indicator events-" + num_evts_ctr} >
-            <p className="mb-0"><b>{formatted_start}</b></p>
+          <ListGroup.Item key={formatted_start} className={"text-center day-indicator events-" + num_evts_ctr} >
+            <h2 className="mb-0">{formatted_start}</h2>
           </ListGroup.Item>
         );
         num_evts_ctr = 0;

@@ -131,13 +131,6 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     }
   }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
 
-  // decomissioned with usage of fragments instead
-  // function handleDaySelect(day) {
-  //   console.log(day);
-  //   setSummonDayScoll(summonDayScroll + 1);
-  //   setActiveDayIndex(availableDays.indexOf(day));
-  // }
-
   let menunavs = [];
   let menupages = [];
 
@@ -160,31 +153,10 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     window.scrollTo({ top: scrollSettings[mode], behavior:  'instant' });
   }, [mode]);
 
-  // this method runs whenever the day adjustor is selected
-  // each of the day idnicators are polled for the number of events preceding it
-  // (as it was inscribed into the classname)
-  // then a rough scroll amount is calculated and we jump to that position
-  // NOTE: decommissioned now that href fragments are in-place
-  // useEffect(() => {
-  //   if (availableDays.length > 0 && summonDayScroll > 0) {
-  //     let total_evts = 0;
-  //     for(const num in [...Array(activeDayIndex+1).keys()]){
-  //       try {
-  //         let clslist = [...document.getElementById(availableDays[num]).classList];
-  //         let num_evts = clslist.filter((cls) => cls.includes("events"))[0].split("-")[1];
-  //         total_evts += Number(num_evts);
-  //       } catch(e) {
-
-  //       }
-  //     }
-  //     let total_scroll = 130 * total_evts + 42 * activeDayIndex;
-  //     window.scrollTo(0, total_scroll);
-  //   }
-  // }, [summonDayScroll]);
 
   let rendered_days = availableDays.map((day) => {
     // onClick={() => { handleDaySelect(day)}
-    return (<NavDropdown.Item href={'#'+day}>{day}</NavDropdown.Item>);
+    return (<NavDropdown.Item onClick={() => {setSelectedDay(day)}}>{day}</NavDropdown.Item>);
   });
 
   function returnFilterIndicator() : JSX.Element {
@@ -193,6 +165,8 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
       {filter_active ? <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/> : <></>}
     </span>);
   }
+
+  let [selectedDay, setSelectedDay] = useState("All Days");
 
   // bg="light" data-bs-theme="light"
   return (
@@ -205,8 +179,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
-              <NavDropdown title={<><FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon> Days</>} id="day-dropdown-widget">
+              <NavDropdown title={<><FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon> {selectedDay}</>} id="day-dropdown-widget">
                 { rendered_days }
+                <NavDropdown.Item onClick={() => {setSelectedDay("All Days")}}>All Days</NavDropdown.Item>
               </NavDropdown>
             </Navbar.Brand>
             <MainMenuOffcanvas 
@@ -237,7 +212,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
               appliedFilters={appliedFilters} 
               changeDays={setAvailableDays} 
               oppositeTheme={oppositecolorState}
-              showEventDescription={showEventDescription} setShowEventDescription={setShowEventDescription}></Dataset>
+              showEventDescription={showEventDescription} setShowEventDescription={setShowEventDescription}
+              selectedDay={selectedDay} 
+            ></Dataset>
           </div>
         </Container>
         <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
