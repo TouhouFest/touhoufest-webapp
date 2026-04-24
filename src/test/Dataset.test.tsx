@@ -79,7 +79,7 @@ describe("Dataset", () => {
         // const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
 
         Papa.parse = GenerateMockPapa(mockup);
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
         await waitFor(() => {
             // todo: adjust output of papa.parse to maybe call complete function?
@@ -109,7 +109,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
 
         // expectation: time should print exactly
@@ -141,7 +141,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
 
         await waitFor(() => {
@@ -172,7 +172,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
 
         // expectation: time should print PST times because flag set to show in con timezone
@@ -203,7 +203,7 @@ describe("Dataset", () => {
             "event_type": "Convention",
             "event_age_limit": ""
         }]); 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
 
         // expectation: time should print PST times because flag set to show in con timezone
@@ -266,7 +266,7 @@ describe("Dataset", () => {
             },
         ]); 
 
-        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="home" param_fxn={vi.fn()} appliedFilters={vi.fn()} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
 
         // expectation: time should print PST times because flag set to show in con timezone
@@ -291,7 +291,7 @@ describe("Dataset", () => {
             },
        ]); 
 
-        let dataset = <Dataset mode="filter" param_fxn={vi.fn()} appliedFilters={{"search_query":"test", "event_types":[], "room_list":[]}} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} />
+        let dataset = <Dataset mode="filter" param_fxn={vi.fn()} appliedFilters={{"search_query":"test", "event_types":[], "room_list":[]}} changeDays={vi.fn()} oppositeTheme={faBroom} showEventDescription={false} setShowEventDescription={vi.fn()} selectedDay="All Days"/>
         render(dataset);
 
         // expectation: time should print PST times because flag set to show in con timezone

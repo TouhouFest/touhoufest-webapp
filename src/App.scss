@@ -193,6 +193,16 @@ $dark-gohei-header-bkgnd: #5683CB;
 
 [data-bs-theme="dark"] {
 
+  .day-indicator{
+    background-color: $dark-gohei-header-bkgnd; // #ff5959;
+    color: #FFF9EE;
+    padding: 3em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+  }
+
+
   .event-item h4 {
     color: $brand-red;
   }
@@ -203,11 +213,6 @@ $dark-gohei-header-bkgnd: #5683CB;
 
   #filter-widget a, #day-dropdown-widget {
     color: #FFF7F7 !important;
-  }
-
-  .day-indicator{
-    background-color:#1f0c00;
-    color: #FFF9EE;
   }
 
   .nav-fill {
