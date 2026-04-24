@@ -118,7 +118,11 @@ body {
 $reimu-red: #AD0000;
 $darker-reimu-red: #800000;
 
+// new colors
 $readable-red: #BF3444;
+$brand-red: #FF4949;
+
+$dark-gohei-header-bkgnd: #5683CB;
 
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
@@ -161,11 +165,33 @@ $readable-red: #BF3444;
     background-color: #E6E4E8;
     color: #372E45;
   }
+  // set of css styles for the reimu gohei bar
+  .newtimes {
+    background-color: $readable-red;
+    color: white;
+    padding: 1.25em;
+    border: 0px;
+  }
+
+  .newtimes-filler {
+    background-color: $readable-red;
+  }
+
+  .newtimes-end {
+    background-color: $readable-red;
+    border-radius: 0px 10px 10px 0px !important;
+    border: 0px;
+  }
 
 
 }
 
 [data-bs-theme="dark"] {
+
+  .event-item h4 {
+    color: $brand-red;
+  }
+
   #main-navbar {
     background-color: #3B3249 !important;
   }
@@ -191,6 +217,23 @@ $readable-red: #BF3444;
   .offcanvas-body {
     color: #E6E4E8;
     background-color: #372E45;
+  }
+  // set of css styles for the reimu gohei bar
+  .newtimes {
+    background-color: $dark-gohei-header-bkgnd;
+    color: white;
+    padding: 1.25em;
+    border: 0px;
+  }
+
+  .newtimes-filler {
+    background-color: $dark-gohei-header-bkgnd;
+  }
+
+  .newtimes-end {
+    background-color: $dark-gohei-header-bkgnd;
+    border-radius: 0px 10px 10px 0px !important;
+    border: 0px;
   }
 
 }
@@ -280,23 +323,6 @@ $readable-red: #BF3444;
   display: none;
 }
 
-// set of css styles for the reimu gohei bar
-.newtimes {
-  background-color: $readable-red;
-  color: white;
-  padding: 1.25em;
-  border: 0px;
-}
-
-.newtimes-filler {
-  background-color: $readable-red;
-}
-
-.newtimes-end {
-  background-color: $readable-red;
-  border-radius: 0px 10px 10px 0px !important;
-  border: 0px;
-}
 
 // rest continues
 pwa-toast{
