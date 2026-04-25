@@ -168,7 +168,7 @@ export default function Dataset(
         // console.log(params);
 
         let days = newdata.apply((row:EventListing) => {
-          return dayjs(row["combinedStart" as keyof EventListing]).format("ddd, M/D").toString();
+          return dayjs(row["combinedStart" as keyof EventListing]).format("dddd, M/D").toString();
         });
         days = uniqueColumn(days);
         changeDays(days);
