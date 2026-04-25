@@ -121,6 +121,7 @@ $darker-reimu-red: #800000;
 // new colors
 $readable-red: #BF3444;
 $brand-red: #FF4949;
+$color-dark: #2E2A31;
 
 $dark-gohei-header-bkgnd: #5683CB;
 $parchment: #FBF7EB;
@@ -163,11 +164,11 @@ $parchment: #FBF7EB;
   }
 
   .event-item{
-    background-color: #FBF7EB;
+    background-color: $parchment;
   }
 
   body{
-    background-color: #FBF7EB;
+    background-color: $parchment;
   }
 
   .nav-fill {
@@ -223,7 +224,16 @@ $parchment: #FBF7EB;
   }
 
   #main-navbar {
-    background-color: #3B3249 !important;
+    background-color: $color-dark !important;
+    border-bottom: 2px solid $parchment;
+  }
+
+  body {
+    background-color: $color-dark;
+  }
+
+  .event-item {
+    background-color: $color-dark;
   }
 
   #filter-widget a, #day-dropdown-widget {
@@ -249,6 +259,7 @@ $parchment: #FBF7EB;
     color: white;
     padding: 1.25em;
     border: 0px;
+    border-radius: 10px 0px 0px 10px;
   }
 
   .newtimes-filler {
