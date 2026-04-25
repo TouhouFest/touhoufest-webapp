@@ -168,7 +168,7 @@ export default function Dataset(
         // console.log(params);
 
         let days = newdata.apply((row:EventListing) => {
-          return dayjs(row["combinedStart" as keyof EventListing]).format("ddd, M/D").toString();
+          return dayjs(row["combinedStart" as keyof EventListing]).format("dddd, M/D").toString();
         });
         days = uniqueColumn(days);
         changeDays(days);
@@ -338,7 +338,7 @@ export default function Dataset(
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <Row className="g-0">
+          <Row className="g-0 my-2">
             <Col>
               <ListGroup.Item className="newtimes">
                 <h4 className="mb-0">{floortime.format("h:mm A")}</h4>
