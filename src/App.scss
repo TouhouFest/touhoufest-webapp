@@ -112,7 +112,7 @@ body {
 }
 
 .anchorpoint {
-  scroll-margin-top: 56px;
+  scroll-margin-top: 70px;
 }
 
 $reimu-red: #AD0000;
@@ -123,10 +123,19 @@ $readable-red: #BF3444;
 $brand-red: #FF4949;
 
 $dark-gohei-header-bkgnd: #5683CB;
+$parchment: #FBF7EB;
+
+#day-dropdown-widget {
+  font-family: 'Poppins';
+}
+
+.dropdown-menu {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
-  
+ 
   .event-item h4 {
     color: $readable-red;
   }
@@ -141,10 +150,15 @@ $dark-gohei-header-bkgnd: #5683CB;
   }
 
   #main-navbar {
-    background-color: #FFF7F7 !important;
+    background-color: $parchment !important;
+    border-bottom: 2px solid $readable-red;
   }
 
-  #filter-widget a, #day-dropdown-widget {
+  #day-dropdown-widget {
+    color: $readable-red !important;
+  }
+
+  #filter-widget a {
     color: #3B3249 !important;
   }
 
@@ -180,6 +194,7 @@ $dark-gohei-header-bkgnd: #5683CB;
 
   .newtimes-filler {
     background-color: $readable-red;
+    color: white;
   }
 
   .newtimes-end {

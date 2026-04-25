@@ -46,6 +46,8 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
 
   const [showEventDescription, setShowEventDescription] = useState(false);
 
+  let [selectedDay, setSelectedDay] = useState("All Days");
+
   // state variables/functions for setting color theme
   // (i cant beievei its this much typescript all for changing the color theme :skull:)
   const [oppositecolorState, setOppositeColorState] = useState(getColorState());
@@ -156,7 +158,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
 
   let rendered_days = availableDays.map((day) => {
     // onClick={() => { handleDaySelect(day)}
-    return (<NavDropdown.Item onClick={() => {setSelectedDay(day)}}>{day}</NavDropdown.Item>);
+    return (<NavDropdown.Item className={selectedDay === day ? "newtimes-filler" : ""} onClick={() => {setSelectedDay(day)}}>{day}</NavDropdown.Item>);
   });
 
   function returnFilterIndicator() : JSX.Element {
@@ -166,7 +168,6 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     </span>);
   }
 
-  let [selectedDay, setSelectedDay] = useState("All Days");
 
   // bg="light" data-bs-theme="light"
   return (
@@ -179,9 +180,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
-              <NavDropdown title={<><FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon> {selectedDay}</>} id="day-dropdown-widget">
+              <NavDropdown title={selectedDay} id="day-dropdown-widget">
                 { rendered_days }
-                <NavDropdown.Item onClick={() => {setSelectedDay("All Days")}}>All Days</NavDropdown.Item>
+                <NavDropdown.Item className={selectedDay === "All Days" ? "newtimes-filler" : ""} onClick={() => {setSelectedDay("All Days")}}>All Days</NavDropdown.Item>
               </NavDropdown>
             </Navbar.Brand>
             <MainMenuOffcanvas 
