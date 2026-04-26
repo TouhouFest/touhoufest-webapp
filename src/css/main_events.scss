@@ -27,10 +27,23 @@
   display: none;
 }
 
+.vr {
+  border-left: 3px dashed white !important;
+  background-color: transparent;
+  opacity: 1;
+}
+
+#dataset .list-group-item {
+  border: 0px;
+}
 
 // css for primary list of events
 [data-bs-theme="light"] { 
- 
+
+  .vr {
+    border-left: 3px dashed declared_colors.$color-dark !important;
+  }
+
   .event-item h4 {
     color: declared_colors.$readable-red;
   }
