@@ -1,4 +1,5 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Modal from 'react-bootstrap/Modal';
 import Bookmark from './Bookmark';
 import Markdown from 'marked-react';
 import {App} from '@capacitor/app';
@@ -30,7 +31,8 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
 
         <p className="text-center">{event_package["daytext"]}</p>
         <hr />
-        {evt_print}
+        {/* {evt_print} */}
+        <h3>{event_package["event_title"]}</h3>
         <hr />
         <Markdown>{event_package["event_description"]}</Markdown>
       </>
@@ -38,14 +40,14 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   }
 
   return (
-    <Offcanvas show={show_var} onHide={handleHide}>
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title className="align-middle">Event Details <Bookmark index={event_package["uniqueID"]}></Bookmark></Offcanvas.Title>
-      </Offcanvas.Header>
-      <Offcanvas.Body>
+    <Modal show={show_var} onHide={handleHide} centered scrollable>
+      <Modal.Header closeButton>
+        <Modal.Title className="align-middle">Event Details <Bookmark index={event_package["uniqueID"]}></Bookmark></Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
         {output}
-      </Offcanvas.Body>
-    </Offcanvas>
+      </Modal.Body>
+    </Modal>
   );
 }
 
