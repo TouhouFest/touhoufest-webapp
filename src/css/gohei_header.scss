@@ -2,6 +2,10 @@
 
 @use 'declared_colors';
 
+// gohei border crap
+.filter-shadow {
+  filter: drop-shadow(8px 0px 10px gray);
+}
 [data-bs-theme="light"] {
 
   // set of css styles for the reimu gohei bar

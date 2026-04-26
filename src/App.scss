@@ -2,6 +2,7 @@
 @use 'css/declared_colors';
 @use 'css/gohei_header';
 @use 'css/main_events';
+@use 'css/navbar';
 
 .aqua {background-color: aqua !important; color:black !important}
 .purple {background-color: purple !important;color:white !important}
@@ -50,30 +51,8 @@ body {
   }
 } 
 
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    box-shadow: none;
-}
-
-.anchorpoint {
-  scroll-margin-top: 70px;
-}
-
-#day-dropdown-widget {
-  font-family: 'Poppins';
-}
-
-.dropdown-menu {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
-  #main-navbar {
-    background-color: declared_colors.$parchment !important;
-    border-bottom: 2px solid declared_colors.$readable-red;
-  }
 
   #day-dropdown-widget {
     color: declared_colors.$readable-red !important;
@@ -103,15 +82,10 @@ body {
 }
 
 [data-bs-theme="dark"] {
-  #main-navbar {
-    background-color: declared_colors.$color-dark !important;
-    border-bottom: 2px solid declared_colors.$parchment;
-  }
 
   body {
     background-color: declared_colors.$color-dark;
   }
-
 
   #filter-widget a, #day-dropdown-widget {
     color: #FFF7F7 !important;
@@ -243,9 +217,4 @@ pwa-toast{
 
 .nobr {
   white-space: nowrap;
-}
-
-// gohei border crap
-.filter-shadow {
-  filter: drop-shadow(8px 0px 10px gray);
 }

@@ -1,0 +1,36 @@
+@use 'declared_colors';
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    box-shadow: none;
+}
+
+.anchorpoint {
+  scroll-margin-top: 70px;
+}
+
+#day-dropdown-widget {
+  font-family: 'Poppins';
+}
+
+.dropdown-menu {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+[data-bs-theme="light"] { 
+  #main-navbar {
+    background-color: declared_colors.$parchment !important;
+    border-bottom: 2px solid declared_colors.$readable-red;
+  }
+
+}
+
+[data-bs-theme="dark"] { 
+  #main-navbar {
+    background-color: declared_colors.$color-dark !important;
+    border-bottom: 2px solid declared_colors.$parchment;
+  }
+
+}
