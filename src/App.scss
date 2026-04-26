@@ -1,85 +1,12 @@
-@font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins/Poppins-Regular.ttf);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins/Poppins-Bold.ttf);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins/Poppins-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
-  font-weight: 700;
-  font-style: italic;
-}
-
-
-
-body {
-  font-family: 'Open-Sans';
-}
-
-h2, h4, h5, h6 {
-  font-family: 'Poppins';
-  font-weight: bold;
-}
-
-button {
-  font-family: 'Poppins' !important;
-  font-weight: 500 !important;
-}
-
-.aqua {background-color: aqua !important; color:black !important}
-.purple {background-color: purple !important;color:white !important}
-.fuchsia {background-color: #ff77d2 !important;color:black !important}
-.green {background-color: green !important;color:white !important}
-.lime {background-color: lime !important;color:black!important}
-.olive {background-color: #9cd21e !important;color:black !important}
-.yellow {background-color: yellow !important;color:black !important}
-.navy {background-color: navy !important;color:white !important}
-.blue {background-color: blue !important;color:white !important}
-.teal {background-color: teal !important;color:white !important}
-.black {background-color: black !important;color:white !important}
-.silver {background-color: #c0c0c0 !important;color:black !important}
-.gray {background-color: #ffa032 !important;color:black !important}
+@use 'css/font_declarations';
+@use 'css/declared_colors';
+@use 'css/gohei_header';
+@use 'css/main_events';
+@use 'css/navbar';
+@use 'css/modal_styling.scss';
 
 .eventDescription {
   white-space: pre-line;
-}
-
-/* manually adjust the height of navbar and footer as fix to floating footer problem */
-#dataset{
-  min-height: calc(100vh - 56px - 40px);
-  display: flex;
 }
 
 html {
@@ -95,148 +22,40 @@ body {
   border-radius: 50px;
 }
 
-/*code to push date indicators below the navbar*/
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sticky-top2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 56px;
-    z-index: 1019;
-  }
-} 
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    box-shadow: none;
-}
-
-.anchorpoint {
-  scroll-margin-top: 70px;
-}
-
-$reimu-red: #AD0000;
-$darker-reimu-red: #800000;
-
-// new colors
-$readable-red: #BF3444;
-$brand-red: #FF4949;
-$color-dark: #2E2A31;
-
-$dark-gohei-header-bkgnd: #5683CB;
-$parchment: #FBF7EB;
-
-#day-dropdown-widget {
-  font-family: 'Poppins';
-}
-
-.dropdown-menu {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
- 
-  .event-item h4 {
-    color: $readable-red;
-  }
 
-  .day-indicator{
-    background-color: $readable-red; // #ff5959;
-    color: #FFF9EE;
-    padding: 3em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    border-radius: 10px;
-  }
-
-  #main-navbar {
-    background-color: $parchment !important;
-    border-bottom: 2px solid $readable-red;
-  }
-
-  #day-dropdown-widget {
-    color: $readable-red !important;
-  }
 
   #filter-widget a {
     color: #3B3249 !important;
   }
-
-  .event-item{
-    background-color: $parchment;
-  }
-
   body{
-    background-color: $parchment;
+    background-color: declared_colors.$parchment;
   }
 
   .nav-fill {
-    background-color: $darker-reimu-red !important;
+    background-color: declared_colors.$darker-reimu-red !important;
   }
 
   .offcanvas-header {
     color: #FFF9EE;
-    background-color: $reimu-red;
+    background-color: declared_colors.$reimu-red;
   }
 
   .offcanvas-body {
     background-color: #E6E4E8;
     color: #372E45;
   }
-  // set of css styles for the reimu gohei bar
-  .newtimes {
-    background-color: $readable-red;
-    color: white;
-    padding: 1.25em;
-    border: 0px;
-    border-radius: 10px 0px 0px 10px;
-  }
-
-  .newtimes-filler {
-    background-color: $readable-red;
-    color: white;
-  }
-
-  .newtimes-end {
-    background-color: $readable-red;
-    border-radius: 0px 10px 10px 0px !important;
-    border: 0px;
-  }
-
 
 }
 
 [data-bs-theme="dark"] {
 
-  .day-indicator{
-    background-color: $dark-gohei-header-bkgnd; // #ff5959;
-    color: #FFF9EE;
-    padding: 3em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    border-radius: 10px;
-  }
-
-
-  .event-item h4 {
-    color: $brand-red;
-  }
-
-  #main-navbar {
-    background-color: $color-dark !important;
-    border-bottom: 2px solid $parchment;
-  }
-
   body {
-    background-color: $color-dark;
+    background-color: declared_colors.$color-dark;
   }
 
-  .event-item {
-    background-color: $color-dark;
-  }
-
-  #filter-widget a, #day-dropdown-widget {
+  #filter-widget a {
     color: #FFF7F7 !important;
   }
 
@@ -253,25 +72,6 @@ $parchment: #FBF7EB;
     color: #E6E4E8;
     background-color: #372E45;
   }
-  // set of css styles for the reimu gohei bar
-  .newtimes {
-    background-color: $dark-gohei-header-bkgnd;
-    color: white;
-    padding: 1.25em;
-    border: 0px;
-    border-radius: 10px 0px 0px 10px;
-  }
-
-  .newtimes-filler {
-    background-color: $dark-gohei-header-bkgnd;
-  }
-
-  .newtimes-end {
-    background-color: $dark-gohei-header-bkgnd;
-    border-radius: 0px 10px 10px 0px !important;
-    border: 0px;
-  }
-
 }
 
 
@@ -355,10 +155,6 @@ $parchment: #FBF7EB;
   color: white;
 }
 
-.event-item .datedisplay {
-  display: none;
-}
-
 
 // rest continues
 pwa-toast{
@@ -385,9 +181,4 @@ pwa-toast{
 
 .nobr {
   white-space: nowrap;
-}
-
-// gohei border crap
-.filter-shadow {
-  filter: drop-shadow(8px 0px 10px gray);
 }

@@ -126,10 +126,10 @@ export default function Dataset(
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
   const [eventDetails, setEventDetails] = useState({});
-  const [evtPrint, setEvtPrint] = useState(<></>);
+  const [evtPrint, setEvtPrint] = useState([<></>]);
   // const [availableDays, setAvailableDays] = useState([]);
 
-  function handleEventOnClick(index:number, evtbulk:JSX.Element, daytext:string) {
+  function handleEventOnClick(index:number, evtbulk:JSX.Element[], daytext:string) {
     let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
     // let evt = toJSON(dataSet.loc({rows:[index]}))[0];
     evt["daytext"] = daytext;
@@ -368,24 +368,29 @@ export default function Dataset(
 
       // <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
 
-      let eventbulk = (<>
-        <h4 className="mb-1">{elem["event_title"]} </h4>
-
-        <p className="mb-1"><b>{elem["event_room"]} | {startstr} - {endstr}</b></p>
+      let eventbulk = [
+        (<>{startstr} - {endstr}</>),
+        <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="4x"/>,
         <p className="mb-1"><span>
           {css_classes.map((color, idx) => {
             return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
           })}
           <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
         </span></p>
-      </>);
+
+      ];
 
       // generate event listing
       output.push(
         <ListGroup.Item key={index} className="event-item">
           <Row>
             <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
-              {eventbulk}
+
+              <h4 className="mb-1">{elem["event_title"]} </h4>
+
+              <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
+              {eventbulk[2]}
+
               {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
             </Col>
             <Col xs="2" className="text-center align-self-center">
