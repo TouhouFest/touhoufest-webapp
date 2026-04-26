@@ -1,0 +1,52 @@
+// css for the gohei header crud
+
+@use 'declared_colors';
+
+[data-bs-theme="light"] {
+
+  // set of css styles for the reimu gohei bar
+  .newtimes {
+    background-color: declared_colors.$readable-red;
+    color: white;
+    padding: 1.25em;
+    border: 0px;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .newtimes-filler {
+    background-color: declared_colors.$readable-red;
+    color: white;
+  }
+
+  .newtimes-end {
+    background-color: declared_colors.$readable-red;
+    border-radius: 0px 10px 10px 0px !important;
+    border: 0px;
+  }
+
+
+}
+
+
+[data-bs-theme="dark"] {
+  // set of css styles for the reimu gohei bar
+  .newtimes {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+    color: white;
+    padding: 1.25em;
+    border: 0px;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .newtimes-filler {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+  .newtimes-end {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+    border-radius: 0px 10px 10px 0px !important;
+    border: 0px;
+  }
+
+
+}
