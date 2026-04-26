@@ -59,7 +59,11 @@ body {
 
 
 .nav-fill .nav-item > .active {
-  color: #f5ec42;
+  // background-color: #f5ec42 !important;
+}
+
+.starred-active {
+  // color: #f5ec42 !important;
 }
 
 .nav-fill .nav-item > :not(.active) {
