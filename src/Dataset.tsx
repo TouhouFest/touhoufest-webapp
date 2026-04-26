@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE, EventTypeGenerator} from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -303,10 +303,6 @@ export default function Dataset(
       let index:number = elem["uniqueID" as keyof EventListing];
       let splitevt = elem["event_type"].split(".");
     
-      // compute event type badge styling
-      let event_indexes = splitevt.map(evt => event_types.findIndex((elm) => {return elm === evt;}))
-      let css_classes = event_indexes.map((idx) => colors[idx]);
-
       // compute time display
       let startjs = dayjs(elem["combinedStart" as keyof EventListing]);
       let endjs = dayjs(elem["combinedEnd" as keyof EventListing]);
@@ -372,8 +368,8 @@ export default function Dataset(
         (<>{startstr} - {endstr}</>),
         <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="4x"/>,
         <p className="mb-1"><span>
-          {css_classes.map((color, idx) => {
-            return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
+          {splitevt.map((evt) => {
+            return <EventTypeGenerator colorClassName={evt.replace(" ","_")} text={evt} />;
           })}
           <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
         </span></p>
