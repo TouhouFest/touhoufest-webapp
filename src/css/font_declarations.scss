@@ -1,0 +1,62 @@
+// declare custom fonts
+// assign fonts to NATIVE elements only 
+// class-level and id-level font assignment to be handled in separate files
+
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Open-Sans;
+  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Open-Sans';
+}
+
+h2, h4, h5, h6 {
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+button {
+  font-family: 'Poppins' !important;
+  font-weight: 500 !important;
+}
+
