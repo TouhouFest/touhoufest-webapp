@@ -82,11 +82,6 @@ body {
   #filter-widget a {
     color: #3B3249 !important;
   }
-
-  .event-item{
-    background-color: declared_colors.$parchment;
-  }
-
   body{
     background-color: declared_colors.$parchment;
   }
@@ -117,9 +112,6 @@ body {
     background-color: declared_colors.$color-dark;
   }
 
-  .event-item {
-    background-color: declared_colors.$color-dark;
-  }
 
   #filter-widget a, #day-dropdown-widget {
     color: #FFF7F7 !important;
