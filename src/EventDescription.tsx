@@ -36,6 +36,8 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
         {/* TODO: add event types here following the new UI spec */}
 
         <Markdown>{event_package["event_description"]}</Markdown>
+
+        <hr />
       </>
     );
   }

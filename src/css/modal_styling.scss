@@ -4,6 +4,12 @@
     .modal-content h3 {
         color: declared_colors.$readable_red;
     }
+
+    .modal-content hr {
+        border-top: dashed 3px declared_colors.$readable-red !important;
+        opacity: 1;
+
+    }
 }
 [data-bs-theme="dark"] {
     .modal-content h3 {
