@@ -4,6 +4,7 @@
 @use 'css/main_events';
 @use 'css/navbar';
 @use 'css/modal_styling.scss';
+@use 'css/offcanvas.scss';
 
 .eventDescription {
   white-space: pre-line;
@@ -37,15 +38,6 @@ body {
     background-color: declared_colors.$darker-reimu-red !important;
   }
 
-  .offcanvas-header {
-    color: #FFF9EE;
-    background-color: declared_colors.$reimu-red;
-  }
-
-  .offcanvas-body {
-    background-color: #E6E4E8;
-    color: #372E45;
-  }
 
 }
 
@@ -63,15 +55,6 @@ body {
     background-color: #372E45 !important;
   }
 
-  .offcanvas-header {
-    color: #FFF9EE;
-    background-color: #16001f;
-  }
-
-  .offcanvas-body {
-    color: #E6E4E8;
-    background-color: #372E45;
-  }
 }
 
 
@@ -81,17 +64,6 @@ body {
 
 .nav-fill .nav-item > :not(.active) {
   color: white;
-}
-
-
-.offcanvas-title {
-  font-weight: bold;
-}
-
-.offcanvas-header > .btn-close, .offcanvas-header > .btn-close:hover{
-  filter: brightness(0%) invert(100%) !important;
-  color: white !important;
-  opacity: 1;
 }
 
 

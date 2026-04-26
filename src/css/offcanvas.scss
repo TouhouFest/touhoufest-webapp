@@ -1,0 +1,60 @@
+@use 'declared_colors';
+
+.offcanvas-title {
+  font-weight: bold;
+}
+
+.offcanvas-header > .btn-close, .offcanvas-header > .btn-close:hover{
+  filter: brightness(0%) invert(100%) !important;
+  color: white !important;
+  opacity: 1;
+}
+
+.offcanvas-body .nav-link {
+    padding-left: 1em;
+}
+
+.menu-selected {
+    font-family: 'Poppins';
+    font-weight: bold;
+    border-radius: 10px;
+    color: declared_colors.$parchment;
+}
+
+[data-bs-theme="light"] { 
+  .offcanvas-header {
+    color: #FFF9EE;
+    background-color: declared_colors.$readable-red;
+    font-family: 'Poppins';
+  }
+
+  .offcanvas-body {
+    background-color: declared_colors.$pale-yellow;
+    color: #372E45;
+  }
+
+  .menu-selected {
+    background-color: declared_colors.$readable-red;
+  }
+
+}
+
+
+[data-bs-theme="dark"] { 
+  .offcanvas-header {
+    color: #FFF9EE;
+    background-color: #16001f;
+    font-family: 'Poppins';
+  }
+
+  .offcanvas-body {
+    color: #E6E4E8;
+    background-color: #372E45;
+  }
+
+  .menu-selected {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+
+}

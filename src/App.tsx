@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
 import Dataset from "./Dataset";
@@ -136,8 +136,11 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
   let menunavs = [];
   let menupages = [];
 
+  // NOTE: logic for determining selected item is a PLACEHOLDER until react router is in-place
+  let selected_page = 3;
+
   for (const [i, entry] of menupagedata.entries()) {
-    menunavs.push(<Nav.Link href="#action1" onClick={() => changeMenuPageState(i, true)} key={i}>{entry["header"]}</Nav.Link>);
+    menunavs.push(<Nav.Link className={i === selected_page ? "menu-selected" : ""} href="#action1" onClick={() => changeMenuPageState(i, true)} key={i}>{entry["header"]} <FontAwesomeIcon icon={faAngleRight} className="ms-2"/></Nav.Link>);
     menupages.push(
       <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
         <MenuPage.Header >{entry["header"]}</MenuPage.Header>

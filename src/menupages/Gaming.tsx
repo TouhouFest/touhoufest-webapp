@@ -23,7 +23,7 @@ import danmaku from "./../images/danmaku.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 
 export const gamingPage = {
-    "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming & Tabletop Gaming</>),
+    "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
         <h4>Location(s)</h4>
