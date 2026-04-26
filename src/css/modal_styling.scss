@@ -15,4 +15,11 @@
     .modal-content h3 {
         color: declared_colors.$brand-red;
     }
+
+    .modal-content hr {
+        border-top: dashed 3px declared_colors.$dark-gohei-header-bkgnd !important;
+        opacity: 1;
+
+    }
+
 }
