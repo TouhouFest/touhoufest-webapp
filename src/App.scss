@@ -22,12 +22,6 @@
   white-space: pre-line;
 }
 
-/* manually adjust the height of navbar and footer as fix to floating footer problem */
-#dataset{
-  min-height: calc(100vh - 56px - 40px);
-  display: flex;
-}
-
 html {
   height: 100%;
 }
@@ -41,22 +35,9 @@ body {
   border-radius: 50px;
 }
 
-/*code to push date indicators below the navbar*/
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sticky-top2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 56px;
-    z-index: 1019;
-  }
-} 
-
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
 
-  #day-dropdown-widget {
-    color: declared_colors.$readable-red !important;
-  }
 
   #filter-widget a {
     color: #3B3249 !important;
@@ -87,7 +68,7 @@ body {
     background-color: declared_colors.$color-dark;
   }
 
-  #filter-widget a, #day-dropdown-widget {
+  #filter-widget a {
     color: #FFF7F7 !important;
   }
 
@@ -185,10 +166,6 @@ body {
 .fight {
   background: linear-gradient(135deg, #1c73ff 0%,#ffa221 100%);
   color: white;
-}
-
-.event-item .datedisplay {
-  display: none;
 }
 
 

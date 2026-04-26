@@ -25,12 +25,21 @@
     border-bottom: 2px solid declared_colors.$readable-red;
   }
 
+  #day-dropdown-widget {
+    color: declared_colors.$readable-red !important;
+  }
+
+
 }
 
 [data-bs-theme="dark"] { 
   #main-navbar {
     background-color: declared_colors.$color-dark !important;
     border-bottom: 2px solid declared_colors.$parchment;
+  }
+
+  #day-dropdown-widget {
+    color: #FFF7F7 !important;
   }
 
 }
