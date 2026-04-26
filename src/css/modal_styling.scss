@@ -1,0 +1,12 @@
+@use 'declared_colors';
+
+[data-bs-theme="light"] {
+    .modal-content h3 {
+        color: declared_colors.$readable_red;
+    }
+}
+[data-bs-theme="dark"] {
+    .modal-content h3 {
+        color: declared_colors.$brand-red;
+    }
+}

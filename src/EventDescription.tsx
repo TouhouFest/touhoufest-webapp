@@ -28,12 +28,13 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   if (Object.keys(event_package).length !== 0){
     output = (
       <>
+        <h3><b>{event_package["event_title"]}</b></h3>
+        <ul className="list-unstyled">
+          <li><b>{event_package["daytext"]} | {evt_print}</b></li>
+          <li><b>{event_package["event_room"]}</b></li>
+        </ul>
+        {/* TODO: add event types here following the new UI spec */}
 
-        <p className="text-center">{event_package["daytext"]}</p>
-        <hr />
-        {/* {evt_print} */}
-        <h3>{event_package["event_title"]}</h3>
-        <hr />
         <Markdown>{event_package["event_description"]}</Markdown>
       </>
     );
