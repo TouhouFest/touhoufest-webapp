@@ -1,85 +1,13 @@
-@font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins/Poppins-Regular.ttf);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins/Poppins-Bold.ttf);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins/Poppins-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-VariableFont_wdth,wght.ttf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Open-Sans;
-  src: url('fonts/open_sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
-  font-weight: 700;
-  font-style: italic;
-}
-
-
-
-body {
-  font-family: 'Open-Sans';
-}
-
-h4, h5, h6 {
-  font-family: 'Poppins';
-  font-weight: bold;
-}
-
-button {
-  font-family: 'Poppins' !important;
-  font-weight: 500 !important;
-}
-
-.aqua {background-color: aqua !important; color:black !important}
-.purple {background-color: purple !important;color:white !important}
-.fuchsia {background-color: #ff77d2 !important;color:black !important}
-.green {background-color: green !important;color:white !important}
-.lime {background-color: lime !important;color:black!important}
-.olive {background-color: #9cd21e !important;color:black !important}
-.yellow {background-color: yellow !important;color:black !important}
-.navy {background-color: navy !important;color:white !important}
-.blue {background-color: blue !important;color:white !important}
-.teal {background-color: teal !important;color:white !important}
-.black {background-color: black !important;color:white !important}
-.silver {background-color: #c0c0c0 !important;color:black !important}
-.gray {background-color: #ffa032 !important;color:black !important}
+@use 'css/font_declarations';
+@use 'css/declared_colors';
+@use 'css/gohei_header';
+@use 'css/main_events';
+@use 'css/navbar';
+@use 'css/modal_styling.scss';
+@use 'css/offcanvas.scss';
 
 .eventDescription {
   white-space: pre-line;
-}
-
-/* manually adjust the height of navbar and footer as fix to floating footer problem */
-#dataset{
-  min-height: calc(100vh - 56px - 40px);
-  display: flex;
 }
 
 html {
@@ -95,108 +23,36 @@ body {
   border-radius: 50px;
 }
 
-/*code to push date indicators below the navbar*/
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sticky-top2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 56px;
-    z-index: 1019;
-  }
-} 
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    box-shadow: none;
-}
-
-.anchorpoint {
-  scroll-margin-top: 56px;
-}
-
-$reimu-red: #AD0000;
-$darker-reimu-red: #800000;
-
-$readable-red: #BF3444;
-$parchment: #FBF7EB;
-
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
-  
-  h4 {
-    color: $readable-red;
-  }
 
-  .day-indicator{
-    background-color: $reimu-red; // #ff5959;
-    color: #FFF9EE;
-  }
 
-  #main-navbar {
-    background-color: #FFF7F7 !important;
-  }
-
-  #filter-widget a, #day-dropdown-widget {
+  #filter-widget a {
     color: #3B3249 !important;
   }
-
-  .event-item{
-    background-color: $parchment;
-  }
-
   body{
-    background-color: $parchment;
+    background-color: declared_colors.$parchment;
   }
 
   .nav-fill {
-    border-top: 3px solid $readable-red;
-    background-color: $parchment !important;
-  }
-
-  .nav-fill .nav-link {
-    color: black !important;
-  }
-
-  .offcanvas-header {
-    color: #FFF9EE;
-    background-color: $reimu-red;
-  }
-
-  .offcanvas-body {
-    background-color: #E6E4E8;
-    color: #372E45;
+    background-color: declared_colors.$darker-reimu-red !important;
   }
 
 
 }
 
 [data-bs-theme="dark"] {
-  #main-navbar {
-    background-color: #3B3249 !important;
+
+  body {
+    background-color: declared_colors.$color-dark;
   }
 
-  #filter-widget a, #day-dropdown-widget {
+  #filter-widget a {
     color: #FFF7F7 !important;
-  }
-
-  .day-indicator{
-    background-color:#1f0c00;
-    color: #FFF9EE;
   }
 
   .nav-fill {
     background-color: #372E45 !important;
-  }
-
-  .offcanvas-header {
-    color: #FFF9EE;
-    background-color: #16001f;
-  }
-
-  .offcanvas-body {
-    color: #E6E4E8;
-    background-color: #372E45;
   }
 
 }
@@ -212,17 +68,6 @@ $parchment: #FBF7EB;
 
 .nav-fill .nav-item > :not(.active) {
   color: white;
-}
-
-
-.offcanvas-title {
-  font-weight: bold;
-}
-
-.offcanvas-header > .btn-close, .offcanvas-header > .btn-close:hover{
-  filter: brightness(0%) invert(100%) !important;
-  color: white !important;
-  opacity: 1;
 }
 
 
@@ -286,15 +131,8 @@ $parchment: #FBF7EB;
   color: white;
 }
 
-.event-item .datedisplay {
-  display: none;
-}
 
-.newtimes {
-  background-color: #ffff99;
-  color: black;
-}
-
+// rest continues
 pwa-toast{
   z-index:9999;
 }
@@ -319,4 +157,56 @@ pwa-toast{
 
 .nobr {
   white-space: nowrap;
+}
+
+.badge {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+.Con_Ops {
+  background-color: #CBCBD2 !important;
+}
+
+.Gaming {
+
+  background-color:#12874D !important; 
+}
+
+.Cosplay {
+
+  background-color: #6B6DE6 !important;
+}
+
+.Performance {
+
+  background-color: #DC1E93 !important;
+}
+
+.Music {
+
+  background-color: #CD4756 !important;
+}
+
+.Photoshoot {
+
+  background-color: #D17010 !important;
+
+}
+
+.Screening {
+
+  background-color: #377E8B !important;
+
+}
+
+.Guest {
+
+  background-color: #B435DE !important;
+}
+
+.Panels {
+
+  background-color: #A96062 !important;
 }

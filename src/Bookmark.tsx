@@ -4,7 +4,7 @@ import { COOKIE_NAME, get_cookie_list, cookies, cookie_parameters } from "./Util
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
-export default function Bookmark({index}: {index:number}) {
+export default function Bookmark({index, icon_size="lg"}: {index:number, icon_size:string}) {
   const [starType, setStarType] = useState(faStar);
 
 
@@ -32,6 +32,5 @@ export default function Bookmark({index}: {index:number}) {
     }
   })
 
-
-  return (<FontAwesomeIcon onClick = {handleOnClick} icon={starType} size="lg" />);
+  return (<FontAwesomeIcon onClick = {handleOnClick} icon={starType} size={icon_size} />);
 }

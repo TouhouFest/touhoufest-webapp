@@ -1,0 +1,77 @@
+@use 'declared_colors';
+
+.day-indicator {
+    padding: 3em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 10px !important;
+}
+
+/* manually adjust the height of navbar and footer as fix to floating footer problem */
+#dataset{
+  min-height: calc(100vh - 56px - 40px);
+  display: flex;
+}
+
+/*code to push date indicators below the navbar*/
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sticky-top2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 56px;
+    z-index: 1019;
+  }
+} 
+
+.event-item .datedisplay {
+  display: none;
+}
+
+.vr {
+  border-left: 3px dashed white !important;
+  background-color: transparent;
+  opacity: 1;
+}
+
+#dataset .list-group-item {
+  border: 0px;
+}
+
+// css for primary list of events
+[data-bs-theme="light"] { 
+
+  .vr {
+    border-left: 3px dashed declared_colors.$color-dark !important;
+  }
+
+  .event-item h4 {
+    color: declared_colors.$readable-red;
+  }
+
+  .day-indicator{
+    background-color: declared_colors.$readable-red; // #ff5959;
+    color: #FFF9EE;
+  }
+
+  .event-item{
+    background-color: declared_colors.$parchment;
+  }
+
+}
+
+[data-bs-theme="dark"] {
+
+  .event-item h4 {
+    color: declared_colors.$brand-red;
+  }
+
+  .day-indicator{
+    background-color: declared_colors.$dark-gohei-header-bkgnd; // #ff5959;
+    color: #FFF9EE;
+  }
+
+  .event-item {
+    background-color: declared_colors.$color-dark;
+  }
+
+}

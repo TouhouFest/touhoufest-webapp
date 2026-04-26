@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE } from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE, EventTypeGenerator} from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -20,6 +20,8 @@ import events from './events.csv';
 import noresults from './noresults.jpg';
 import noresultsdark from "./noresults-dark.jpg";
 import Stack from "react-bootstrap/Stack";
+import gohei_border from "./gohei_border.svg";
+import hakurei_border from "./hakurei_border.svg";
 import { faToriiGate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 dayjs.extend(customParseFormat);
@@ -118,16 +120,16 @@ interface EventListing {
 }
 
 export default function Dataset(
-  { mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription}: 
-  { mode:string, param_fxn:Function, appliedFilters:any, changeDays:Function, oppositeTheme:IconDefinition, showEventDescription:boolean, setShowEventDescription:Function}
+  { mode, param_fxn, appliedFilters, changeDays, oppositeTheme, showEventDescription, setShowEventDescription, selectedDay}: 
+  { mode:string, param_fxn:Function, appliedFilters:any, changeDays:Function, oppositeTheme:IconDefinition, showEventDescription:boolean, setShowEventDescription:Function, selectedDay:string}
 ) {
   const [dataSet, setDataSet] = useState(new SPDataFrame([]));
   const [dataUpdated, setDataUpdated] = useState(false);
   const [eventDetails, setEventDetails] = useState({});
-  const [evtPrint, setEvtPrint] = useState(<></>);
+  const [evtPrint, setEvtPrint] = useState([<></>]);
   // const [availableDays, setAvailableDays] = useState([]);
 
-  function handleEventOnClick(index:number, evtbulk:JSX.Element, daytext:string) {
+  function handleEventOnClick(index:number, evtbulk:JSX.Element[], daytext:string) {
     let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
     // let evt = toJSON(dataSet.loc({rows:[index]}))[0];
     evt["daytext"] = daytext;
@@ -166,7 +168,7 @@ export default function Dataset(
         // console.log(params);
 
         let days = newdata.apply((row:EventListing) => {
-          return dayjs(row["combinedStart" as keyof EventListing]).format("ddd, M/D").toString();
+          return dayjs(row["combinedStart" as keyof EventListing]).format("dddd, M/D").toString();
         });
         days = uniqueColumn(days);
         changeDays(days);
@@ -231,6 +233,12 @@ export default function Dataset(
     let event_types = uniqueColumn(dataSet.get('event_type').map((elm) => elm.split(".")).flat(1)).sort();
 
     let displayData = dataSet;
+
+    if(selectedDay !== "All Days") {
+      let result = displayData.get("event_start_day").map((daystr) => daystr.split("/")[1] === selectedDay.split("/")[1]);
+      displayData = displayData.loc({rows: result});
+    }
+
     if (mode === "bookmarks") {
       let cookie_list = get_cookie_list();
       cookie_list = cookie_list.map(Number);
@@ -295,10 +303,6 @@ export default function Dataset(
       let index:number = elem["uniqueID" as keyof EventListing];
       let splitevt = elem["event_type"].split(".");
     
-      // compute event type badge styling
-      let event_indexes = splitevt.map(evt => event_types.findIndex((elm) => {return elm === evt;}))
-      let css_classes = event_indexes.map((idx) => colors[idx]);
-
       // compute time display
       let startjs = dayjs(elem["combinedStart" as keyof EventListing]);
       let endjs = dayjs(elem["combinedEnd" as keyof EventListing]);
@@ -311,16 +315,17 @@ export default function Dataset(
       }
 
       // we've moved onto a new set of days, we need to add a new day indicator
-      if (daynum === -1 || startjs.date() !== daynum) {
+      if (selectedDay === "All Days" && (daynum === -1 || startjs.date() !== daynum)) {
         daynum = startjs.date();
         let formatted_start = startjs.format("dddd, MMMM D").toString();
         // the number of events preceding the day indicator are enscribed into the classname
+        // output.push(
+        //   <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
+        // );
+        // add the class "sticky-top2 to re-enable sticky indicators"
         output.push(
-          <div id={startjs.format("ddd, M/D").toString()} className="anchorpoint"></div>
-        );
-        output.push(
-          <ListGroup.Item key={formatted_start} className={"text-center sticky-top2 day-indicator events-" + num_evts_ctr} >
-            <p className="mb-0"><b>{formatted_start}</b></p>
+          <ListGroup.Item key={formatted_start} className={"text-center day-indicator events-" + num_evts_ctr} >
+            <h2 className="mb-0">{formatted_start}</h2>
           </ListGroup.Item>
         );
         num_evts_ctr = 0;
@@ -329,7 +334,18 @@ export default function Dataset(
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <><ListGroup.Item className="text-center small newtimes">{floortime.format("h:mm A")}</ListGroup.Item></>
+          <Row className="g-0 my-2">
+            <Col>
+              <ListGroup.Item className="newtimes">
+                <h4 className="mb-0">{floortime.format("h:mm A")}</h4>
+              </ListGroup.Item>
+            </Col>
+            <Col xs="auto" className="newtimes-filler text-center">
+              <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
+            </Col>
+            <Col xs="1" className="newtimes-end"></Col>
+            <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow" fluid/></Col>
+          </Row>
         );
         hourfxn = floortime;
       }
@@ -348,25 +364,35 @@ export default function Dataset(
 
       // <p className="mb-1 datedisplay">{dayjs(elem['combinedStart']).format("dddd, MMMM D").toString()}</p>
 
-      let eventbulk = (<>
-        <h4 className="mb-1">{elem["event_title"]} </h4>
-
-        <p className="mb-1"><b>{elem["event_room"]} | {startstr} - {endstr}</b></p>
+      let eventbulk = [
+        (<>{startstr} - {endstr}</>),
+        <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="4x"/>,
         <p className="mb-1"><span>
-          {css_classes.map((color, idx) => {
-            return (<><Badge pill className={color + ' me-1'}>{splitevt[idx]}</Badge></>);
+          {splitevt.map((evt) => {
+            return <EventTypeGenerator colorClassName={evt.replace(" ","_")} text={evt} />;
           })}
           <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
         </span></p>
-      </>);
+
+      ];
 
       // generate event listing
       output.push(
         <ListGroup.Item key={index} className="event-item">
           <Row>
             <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
-              {eventbulk}
-              {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
+
+              <h4 className="mb-1">{elem["event_title"]} </h4>
+              <Stack direction="horizontal" gap={3}>
+                <div className="vr"></div>
+                <div>
+                  <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
+                  {eventbulk[2]}
+
+                  {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
+                </div>
+              </Stack>
+
             </Col>
             <Col xs="2" className="text-center align-self-center">
               <Stack gap={3}>
