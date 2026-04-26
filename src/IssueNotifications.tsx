@@ -9,7 +9,7 @@ import DefaultNoficationModal from './DefaultNotificationModal';
 import { DEFAULTNOTIFY } from './Utils';
 
 // todo: optionally switch to push notifications if louder notifications are requested
-export default function IssueNotifications({index, title, start_ts}: {index:number, title:string, start_ts:dayjs.Dayjs}) {
+export default function IssueNotifications({index, title, start_ts, icon_size="lg"}: {index:number, title:string, start_ts:dayjs.Dayjs, icon_size:string}) {
 
   const [bellType, setBellType] = useState(defaultState());
   const NOTIFYNAME:string = "NOTIFY";
@@ -172,7 +172,7 @@ export default function IssueNotifications({index, title, start_ts}: {index:numb
   return (
     <>
       <DefaultNoficationModal show={showModal} changeState={setShowModal} callBackNotify = {issueNotification}/>
-      <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size="lg"/>
+      <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size={icon_size}/>
     </>
   );
 }
