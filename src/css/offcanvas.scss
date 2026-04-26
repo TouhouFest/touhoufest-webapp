@@ -1,0 +1,39 @@
+@use 'declared_colors';
+
+.offcanvas-title {
+  font-weight: bold;
+}
+
+.offcanvas-header > .btn-close, .offcanvas-header > .btn-close:hover{
+  filter: brightness(0%) invert(100%) !important;
+  color: white !important;
+  opacity: 1;
+}
+
+[data-bs-theme="light"] { 
+  .offcanvas-header {
+    color: #FFF9EE;
+    background-color: declared_colors.$reimu-red;
+    font-family: 'Poppins';
+  }
+
+  .offcanvas-body {
+    background-color: declared_colors.$pale-yellow;
+    color: #372E45;
+  }
+
+}
+
+
+[data-bs-theme="dark"] { 
+  .offcanvas-header {
+    color: #FFF9EE;
+    background-color: #16001f;
+  }
+
+  .offcanvas-body {
+    color: #E6E4E8;
+    background-color: #372E45;
+  }
+
+}
