@@ -8,7 +8,9 @@ export default function Bookmark({index, icon_size="lg"}: {index:number, icon_si
   const [starType, setStarType] = useState(faStar);
 
 
-  function handleOnClick(){
+  function handleOnClick(event:React.MouseEvent){
+
+    event.stopPropagation();
     let current_cookie_list = get_cookie_list();
     if(starType === faStar){ // add cookie
       current_cookie_list.push(index);
@@ -32,5 +34,5 @@ export default function Bookmark({index, icon_size="lg"}: {index:number, icon_si
     }
   })
 
-  return (<FontAwesomeIcon onClick = {handleOnClick} icon={starType} size={icon_size} />);
+  return (<FontAwesomeIcon onClick = {(e) => handleOnClick(e)} icon={starType} size={icon_size} />);
 }
