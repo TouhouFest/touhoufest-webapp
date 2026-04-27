@@ -78,7 +78,8 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
     });
   }
 
-  function onTriggerFunction() {
+  function onTriggerFunction(e: React.MouseEvent) {
+    e.stopPropagation();
     // disable notifications if the event has already started
     if(bellType === faBellSlash) {
         Toast.show({
@@ -172,7 +173,7 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
   return (
     <>
       <DefaultNoficationModal show={showModal} changeState={setShowModal} callBackNotify = {issueNotification}/>
-      <FontAwesomeIcon onClick={() => onTriggerFunction()} icon={bellType} size={icon_size}/>
+      <FontAwesomeIcon onClick={(e) => onTriggerFunction(e)} icon={bellType} size={icon_size}/>
     </>
   );
 }

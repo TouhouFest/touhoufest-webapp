@@ -378,13 +378,13 @@ export default function Dataset(
 
       // generate event listing
       output.push(
-        <ListGroup.Item key={index} className="event-item">
+        <ListGroup.Item key={index} className="event-item" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
 
-          <h4 onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())} className="mb-1">{elem["event_title"]} </h4>
+          <h4  className="mb-1">{elem["event_title"]} </h4>
           <Stack direction="horizontal" gap={3}>
-            <div onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())} className="vr"></div>
+            <div  className="vr"></div>
             <div>
-              <div onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
+              <div >
                 <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
                 {eventbulk[2]}
 
