@@ -379,28 +379,24 @@ export default function Dataset(
       // generate event listing
       output.push(
         <ListGroup.Item key={index} className="event-item">
-          <Row>
-            <Col xs="10" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
 
-              <h4 className="mb-1">{elem["event_title"]} </h4>
-              <Stack direction="horizontal" gap={3}>
-                <div className="vr"></div>
-                <div>
-                  <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
-                  {eventbulk[2]}
+          <h4 onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())} className="mb-1">{elem["event_title"]} </h4>
+          <Stack direction="horizontal" gap={3}>
+            <div onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())} className="vr"></div>
+            <div>
+              <div onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
+                <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
+                {eventbulk[2]}
 
-                  {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
-                </div>
+                {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
+              </div>
+              <Stack direction = "horizontal" gap={4} className="event-icons-group">
+                <Bookmark index={index} icon_size="2x" />
+                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="2x"/>
               </Stack>
+            </div>
+          </Stack>
 
-            </Col>
-            <Col xs="2" className="text-center align-self-center">
-              <Stack gap={3}>
-                <Bookmark index={index}></Bookmark>
-                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs}/>
-              </Stack>
-            </Col>
-          </Row>
         </ListGroup.Item>
       );
     });
