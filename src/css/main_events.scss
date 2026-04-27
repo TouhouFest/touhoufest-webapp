@@ -37,6 +37,16 @@
   border: 0px;
 }
 
+.event-icons-group {
+  display: inline-flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 100px;
+  margin-top: 0.5rem;
+}
+
 // css for primary list of events
 [data-bs-theme="light"] { 
 
@@ -57,6 +67,11 @@
     background-color: declared_colors.$parchment;
   }
 
+  .event-icons-group {
+    background-color: declared_colors.$pink;
+  }
+
+
 }
 
 [data-bs-theme="dark"] {
@@ -72,6 +87,9 @@
 
   .event-item {
     background-color: declared_colors.$color-dark;
+  }
+  .event-icons-group {
+    background-color: declared_colors.$dark-marisa-color;
   }
 
 }

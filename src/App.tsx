@@ -17,6 +17,9 @@ import {App as CapacitorApp} from '@capacitor/app';
 
 import touhoufest from "./images/touhoufest.jpg";
 import touhoufest_dark from "./images/touhoufest_dark.jpg";
+import { Stack } from 'react-bootstrap';
+
+import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) {
 
@@ -105,6 +108,10 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
       newmode = type;
     }
 
+    if (oldmode === "bookmarks" && type === oldmode) {
+      newmode = "home";
+    } 
+
     setMode(newmode);
 
     let numActiveFilters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
@@ -165,7 +172,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
   });
 
   function returnFilterIndicator() : JSX.Element {
-    return (<span className="fa-layers fa-fw">
+    return (<span className="fa-layers fa-fw fa-2x">
       <FontAwesomeIcon icon={faFilter}/>
       {filter_active ? <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/> : <></>}
     </span>);
@@ -223,13 +230,30 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
         </Container>
         <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
           <Nav.Item onClick={() => handleRoleChange("home")}>
-            <Nav.Link eventKey="home"><FontAwesomeIcon icon={faBook}></FontAwesomeIcon> Events</Nav.Link>
+            <Nav.Link eventKey="home">
+              <Stack>
+                <div><FontAwesomeIcon icon={faBook} className="fa-2x"></FontAwesomeIcon></div>
+                <div>Events</div>
+              </Stack>
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item onClick={() => handleRoleChange("bookmarks")}>
-            <Nav.Link eventKey="bookmarks"><FontAwesomeIcon icon={fasStar}></FontAwesomeIcon> Starred</Nav.Link>
+            <Nav.Link eventKey="bookmarks">
+              <Stack>
+                {mode === "bookmarks" ? 
+                  <FontAwesomeIcon icon={fasStar} className="fa-2x starred-active" /> 
+                  : <FontAwesomeIcon icon={faStar} className="fa-2x" />
+                } Starred
+              </Stack>
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item onClick={() => handleRoleChange("filterView")}>
-            <Nav.Link eventKey="filter">{returnFilterIndicator()}Filters</Nav.Link>
+            <Nav.Link eventKey="filter">
+              <Stack>
+                <div>{returnFilterIndicator()}</div>
+                <div>Filters</div>
+              </Stack>
+            </Nav.Link>
           </Nav.Item>
         </Nav>
       </div>
