@@ -105,18 +105,18 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
 
     let newmode = "";
     // case 1: applying filters for the first time
-    if (oldmode !== "filterView" && type === "filterView" && !wereFiltersApplied()) {
+    if (oldmode !== "filter" && type === "filterView" && !wereFiltersApplied()) {
       setshowFilterPane(true);
-      newmode = oldmode;
+      newmode = "filter";
     }
     // case 2: moving to filters page, and filters were applied
-    else if (oldmode !== "filterView" && type === "filterView" && wereFiltersApplied()) {
-      newmode = "filterView";
+    else if (oldmode !== "filter" && type === "filterView") {
+      newmode = "filter";
     }
     // case 3: already on filters page, tapping again to edit
-    else if(oldmode === "filterView" && type === "filterView" && wereFiltersApplied()) {
+    else if(oldmode === "filter" && type === "filterView") {
       setshowFilterPane(true);
-      newmode = "home";
+      newmode = oldmode;
     }
     // case 4: already on bookmarks, tapping again to exit
     else if (oldmode === "bookmarks" && type === oldmode) {
@@ -278,11 +278,11 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <Nav.Link eventKey="filter">
               <Stack>
                 <div>{returnFilterIndicator()}</div>
-                <div>{wereFiltersApplied() ? (mode === "filterView" ? "Edit Filters": "View Filters") : "Add Filters"}</div>
+                <div>{wereFiltersApplied() ? (mode === "filter" ? "Edit Filters": "View Filters") : "Add Filters"}</div>
               </Stack>
             </Nav.Link>
           </Nav.Item>
-          {wereFiltersApplied() && mode === "filterView" &&
+          {mode === "filter" &&
           <Nav.Item onClick={() => handleRoleChange("home")}>
             <Nav.Link eventKey="home">
               <Stack>
