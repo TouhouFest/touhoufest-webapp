@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
@@ -123,20 +123,20 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
   // }
 
   return (
-    <Offcanvas show={show_var} onHide={handleHide} placement={"end"}>
-      <Offcanvas.Header closeButton closeVariant='white'>
-        <Offcanvas.Title>Filter Options</Offcanvas.Title>
-      </Offcanvas.Header>
-      <Offcanvas.Body>
+    <Modal show={show_var} onHide={handleHide} placement={"end"} centered scrollable>
+      <Modal.Header closeButton closeVariant='white'>
+        <Modal.Title>Filter Options</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
 
         {/* onReset={handleReset} */}
         <Form onSubmit={handleSubmit} onKeyDown={disableEnter} id="filterForm">
           <Form.Group>
-            <Form.Label>Search Events</Form.Label>
-            <InputGroup className="mb-3">
-              <InputGroup.Text id="searchbar"><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon></InputGroup.Text>
+            <Form.Label>Search programming</Form.Label>
+            <InputGroup className="mb-3" id="filter-searchgroup">
+              <InputGroup.Text id="searchbar"><FontAwesomeIcon icon={faMagnifyingGlass} /></InputGroup.Text>
               <Form.Control type="search" aria-label="Default" aria-describedby="searchbar" id="searchtext" defaultValue={stack["search_query"]}></Form.Control>
-              <InputGroup.Text onClick={clearText}><FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon></InputGroup.Text>
+              <InputGroup.Text id="searchend" onClick={clearText}><FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon></InputGroup.Text>
             </InputGroup>
           </Form.Group>
           <Accordion alwaysOpen className="open">
@@ -161,7 +161,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
           {/*<Button variant="secondary" type="reset" className="mt-3 mx-2">Clear Filters</Button>*/}
         </Form>
 
-      </Offcanvas.Body>
-    </Offcanvas>
+      </Modal.Body>
+    </Modal>
   );
 }
