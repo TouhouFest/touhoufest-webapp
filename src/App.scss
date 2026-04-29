@@ -6,6 +6,7 @@
 @use 'css/modal_styling.scss';
 @use 'css/offcanvas.scss';
 @use 'css/bottom_bar.scss';
+@use 'css/filter_options.scss';
 
 .eventDescription {
   white-space: pre-line;
@@ -24,17 +25,6 @@ body {
   border-radius: 50px;
 }
 
-#filter-searchgroup #searchbar{
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-#filter-searchgroup #searchend {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-
 
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
@@ -46,24 +36,6 @@ body {
   body{
     background-color: declared_colors.$parchment;
   }
-
-  #filter-searchgroup #searchbar{
-    border-left: 2px solid declared_colors.$readable_red;
-    border-top: 2px solid declared_colors.$readable_red;
-    border-bottom: 2px solid declared_colors.$readable_red;
-  }
-
-  #filter-searchgroup #searchend {
-    border-right: 2px solid declared_colors.$readable_red;
-    border-top: 2px solid declared_colors.$readable_red;
-    border-bottom: 2px solid declared_colors.$readable_red;
-  }
-
-  #filter-searchgroup #searchtext {
-    border-top: 2px solid declared_colors.$readable_red;
-    border-bottom: 2px solid declared_colors.$readable_red;
-  }
-
 }
 
 [data-bs-theme="dark"] {
@@ -76,22 +48,6 @@ body {
     color: #FFF7F7 !important;
   }
 
-  #filter-searchgroup #searchbar{
-    border-left: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-    border-top: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-    border-bottom: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-  }
-
-  #filter-searchgroup #searchend {
-    border-right: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-    border-top: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-    border-bottom: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-  }
-
-  #filter-searchgroup #searchtext {
-    border-top: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-    border-bottom: 2px solid declared_colors.$dark-gohei-header-bkgnd;
-  }
 }
 
 .pink-one {

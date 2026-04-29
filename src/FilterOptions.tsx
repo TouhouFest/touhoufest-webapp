@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -157,7 +157,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          <div className="text-center"><Button type="submit" className = "mt-3 submitbutton">Submit</Button></div>
+          <div className="text-center"><Button type="submit" className = "mt-3 submitbutton">Apply <FontAwesomeIcon icon={faAngleRight}/></Button></div>
           {/*<Button variant="secondary" type="reset" className="mt-3 mx-2">Clear Filters</Button>*/}
         </Form>
 
