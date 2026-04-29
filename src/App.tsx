@@ -255,7 +255,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             ></Dataset>
           </div>
         </Container>
-        <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
+        <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2 bottom-bar">
           {/*<Nav.Item onClick={() => handleRoleChange("home")}>
             <Nav.Link eventKey="home">
               <Stack>
