@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight, faFilterCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
 import Dataset from "./Dataset";
@@ -33,6 +33,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
 
   // keep track of query status
   const [appliedFilters, setAppliedFilters] = useState({ "event_types": [], "room_list": [], "search_query": "" });
+  function wereFiltersApplied() {
+    return appliedFilters["event_types"].length > 0 || appliedFilters["room_list"].length > 0 || appliedFilters["search_query"] !== "";
+  }
 
   // keep track of opened/closed status of menu pages
   const [menupagebools, setMenuPages] = useState(Array(menupagedata.length).fill(false));
@@ -101,24 +104,48 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
     // window.scrollTo(0,changedScroll[oldmode]);
 
     let newmode = "";
-    if (type === "filterView") {
-      newmode = "filter";
+    // case 1: applying filters for the first time
+    if (oldmode !== "filterView" && type === "filterView" && !wereFiltersApplied()) {
+      setshowFilterPane(true);
+      newmode = oldmode;
     }
+    // case 2: moving to filters page, and filters were applied
+    else if (oldmode !== "filterView" && type === "filterView" && wereFiltersApplied()) {
+      newmode = "filterView";
+    }
+    // case 3: already on filters page, tapping again to edit
+    else if(oldmode === "filterView" && type === "filterView" && wereFiltersApplied()) {
+      setshowFilterPane(true);
+      newmode = "home";
+    }
+    // case 4: already on bookmarks, tapping again to exit
+    else if (oldmode === "bookmarks" && type === oldmode) {
+      newmode = "home";
+    } 
+    // case 5: everything else
     else {
       newmode = type;
     }
 
-    if (oldmode === "bookmarks" && type === oldmode) {
-      newmode = "home";
-    } 
+
+    // if (type === "filterView" && wereFiltersApplied()) {
+    //   newmode = "filter";
+    // }
+    // else if(type === "filterView") {
+    //   newmode = oldmode;
+    // }
+    // else {
+    //   newmode = type;
+    // }
+
 
     setMode(newmode);
 
-    let numActiveFilters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
-    if (type === "filterView" && numActiveFilters === 0 && appliedFilters["search_query"] === "") {
-      setshowFilterPane(true);
-    }
-    else if (type === "filter") { setshowFilterPane(true); }
+    // let numActiveFilters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
+    // if (type === "filterView" && numActiveFilters === 0 && appliedFilters["search_query"] === "") {
+    //   setshowFilterPane(true);
+    // }
+    // else if (type === "filter") { setshowFilterPane(true); }
 
   }
 
@@ -173,7 +200,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
 
   function returnFilterIndicator() : JSX.Element {
     return (<span className="fa-layers fa-fw fa-2x">
-      <FontAwesomeIcon icon={faFilter}/>
+      <FontAwesomeIcon icon={faFilter} className={mode === "filterView" ? "starred-active" : ""}/>
       {filter_active ? <FontAwesomeIcon icon={faCircle} transform="shrink-7 right-6 up-6" className="filter-indicator"/> : <></>}
     </span>);
   }
@@ -229,14 +256,14 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
           </div>
         </Container>
         <Nav fill defaultActiveKey="home" activeKey={mode} className="sticky-bottom bg-white shadow-lg mt-2">
-          <Nav.Item onClick={() => handleRoleChange("home")}>
+          {/*<Nav.Item onClick={() => handleRoleChange("home")}>
             <Nav.Link eventKey="home">
               <Stack>
                 <div><FontAwesomeIcon icon={faBook} className="fa-2x"></FontAwesomeIcon></div>
                 <div>Events</div>
               </Stack>
             </Nav.Link>
-          </Nav.Item>
+          </Nav.Item> */}
           <Nav.Item onClick={() => handleRoleChange("bookmarks")}>
             <Nav.Link eventKey="bookmarks">
               <Stack>
@@ -251,10 +278,20 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
             <Nav.Link eventKey="filter">
               <Stack>
                 <div>{returnFilterIndicator()}</div>
-                <div>Filters</div>
+                <div>{wereFiltersApplied() ? (mode === "filterView" ? "Edit Filters": "View Filters") : "Add Filters"}</div>
               </Stack>
             </Nav.Link>
           </Nav.Item>
+          {wereFiltersApplied() && mode === "filterView" &&
+          <Nav.Item onClick={() => handleRoleChange("home")}>
+            <Nav.Link eventKey="home">
+              <Stack>
+                <div><FontAwesomeIcon icon={faFilterCircleXmark} className="fa-2x"></FontAwesomeIcon></div>
+                <div>Clear Filters</div>
+              </Stack>
+            </Nav.Link>
+          </Nav.Item>
+          }
         </Nav>
       </div>
       {menupages}
