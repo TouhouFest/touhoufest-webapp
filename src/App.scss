@@ -5,6 +5,7 @@
 @use 'css/navbar';
 @use 'css/modal_styling.scss';
 @use 'css/offcanvas.scss';
+@use 'css/bottom_bar.scss';
 
 .eventDescription {
   white-space: pre-line;
@@ -34,10 +35,6 @@ body {
     background-color: declared_colors.$parchment;
   }
 
-  .nav-fill {
-    background-color: declared_colors.$darker-reimu-red !important;
-  }
-
 
 }
 
@@ -50,26 +47,7 @@ body {
   #filter-widget a {
     color: #FFF7F7 !important;
   }
-
-  .nav-fill {
-    background-color: #372E45 !important;
-  }
-
 }
-
-
-.nav-fill .nav-item > .active {
-  // background-color: #f5ec42 !important;
-}
-
-.starred-active {
-  // color: #f5ec42 !important;
-}
-
-.nav-fill .nav-item > :not(.active) {
-  color: white;
-}
-
 
 .pink-one {
   background-color: #ffbdf8 !important;

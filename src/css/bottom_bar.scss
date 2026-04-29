@@ -1,0 +1,53 @@
+@use 'declared_colors';
+
+.bottom-bar {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+[data-bs-theme="light"] {
+  .nav-fill {
+    background-color: declared_colors.$parchment !important;
+  }
+
+  .bottom-bar {
+    border-top: 3px solid declared_colors.$readable-red;
+  }
+
+  .nav-fill .nav-item > :not(.active) {
+    color: black;
+  }
+
+  .nav-fill .nav-item > .active {
+    color: declared_colors.$brand-red !important;
+  }
+
+  .starred-active {
+    color: declared_colors.$brand_red !important;
+  }
+
+
+
+}
+[data-bs-theme="dark"] {
+  .nav-fill {
+    background-color: declared_colors.$color-dark !important;
+  }
+
+  .bottom-bar {
+    border-top: 3px solid declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+  .nav-fill .nav-item > :not(.active) {
+    color: white;
+  }
+
+  .nav-fill .nav-item > .active {
+    color: #f5ec42 !important;
+  }
+
+  .starred-active {
+    color: #f5ec42 !important;
+  }
+
+
+}
