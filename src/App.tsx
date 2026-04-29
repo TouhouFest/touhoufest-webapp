@@ -127,25 +127,7 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
       newmode = type;
     }
 
-
-    // if (type === "filterView" && wereFiltersApplied()) {
-    //   newmode = "filter";
-    // }
-    // else if(type === "filterView") {
-    //   newmode = oldmode;
-    // }
-    // else {
-    //   newmode = type;
-    // }
-
-
     setMode(newmode);
-
-    // let numActiveFilters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
-    // if (type === "filterView" && numActiveFilters === 0 && appliedFilters["search_query"] === "") {
-    //   setshowFilterPane(true);
-    // }
-    // else if (type === "filter") { setshowFilterPane(true); }
 
   }
 
