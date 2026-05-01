@@ -15,6 +15,19 @@
     border-radius: 50px;
 }
 
+#filterForm .form-check .form-check-input {
+  display: none;
+}
+
+#filterForm .form-check-label > .badge {
+  border: 3px solid currentColor;
+  transition: border 1s;
+}
+
+#filterForm .form-check-input:checked ~ .form-check-label > .badge {
+  border: 3px dashed currentColor !important;
+}
+
 [data-bs-theme="light"] {
 
   #filter-searchgroup #searchbar{

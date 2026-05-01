@@ -102,7 +102,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
       let styled_elem = <EventTypeGenerator text={elem}/>
       let defaultChecked = stack["event_types"].includes(elem);
       // eventtypes.push(<Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={elem} onClick={() => foo(elem, "event_types")}></Form.Check>);
-      eventtypes.push(<Col className="my-1"><Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={styled_elem}></Form.Check></Col>);
+      eventtypes.push(<Col className="my-1"><Form.Check className="ps-0" defaultChecked={defaultChecked} type="checkbox" id={elem} label={styled_elem}></Form.Check></Col>);
     }
 
     for (const elem of filterOptions["room_list"]) {
