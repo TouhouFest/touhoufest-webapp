@@ -369,7 +369,7 @@ export default function Dataset(
         <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="4x"/>,
         <p className="mb-1"><span>
           {splitevt.map((evt) => {
-            return <EventTypeGenerator colorClassName={evt.replace(" ","_")} text={evt} />;
+            return <EventTypeGenerator text={evt} />;
           })}
           <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
         </span></p>

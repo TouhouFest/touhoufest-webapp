@@ -157,6 +157,6 @@ export function WarningAlert({children}:{children:any}) {
 
 import {Badge, Image} from 'react-bootstrap';
 
-export function EventTypeGenerator({colorClassName, text}: {colorClassName:string, text:string}) {
-    return (<><Badge pill className={colorClassName + ' me-1'}>{/*<FontAwesomeIcon icon={faGamepad}/>*/}{text}</Badge></>);
+export function EventTypeGenerator({text}: {text:string}) {
+    return (<><Badge pill className={text.replace(" ","_")+ ' me-1'}>{/*<FontAwesomeIcon icon={faGamepad}/>*/}{text}</Badge></>);
 }
