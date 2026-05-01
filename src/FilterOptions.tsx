@@ -8,6 +8,8 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { App } from '@capacitor/app';
+import { EventTypeGenerator } from './Utils';
+import { Col, Row } from 'react-bootstrap';
 
 export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOptions}: {show_var:boolean, hide_fxn:Function, param_fxn:Function, filterOptions:any}) {
 
@@ -97,9 +99,10 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
   let rooms = [];
   if(Object.keys(filterOptions).length !== 0){
     for(const elem of filterOptions["event_types"]) {
+      let styled_elem = <EventTypeGenerator text={elem}/>
       let defaultChecked = stack["event_types"].includes(elem);
       // eventtypes.push(<Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={elem} onClick={() => foo(elem, "event_types")}></Form.Check>);
-      eventtypes.push(<Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={elem}></Form.Check>);
+      eventtypes.push(<Col className="my-1"><Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={styled_elem}></Form.Check></Col>);
     }
 
     for (const elem of filterOptions["room_list"]) {
@@ -144,7 +147,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
               <Accordion.Header>Filter by Room</Accordion.Header>
               <Accordion.Body>
                 <Form.Group>
-                  {rooms}
+                    {rooms}
                 </Form.Group>
               </Accordion.Body>
             </Accordion.Item>
@@ -152,7 +155,9 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
               <Accordion.Header>Filter by Event Type</Accordion.Header>
               <Accordion.Body>
                 <Form.Group>
+                  <Row xs={2}>
                   {eventtypes}
+                  </Row>
                 </Form.Group>
               </Accordion.Body>
             </Accordion.Item>
