@@ -124,7 +124,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
 
   return (
     <Modal show={show_var} onHide={handleHide} placement={"end"} centered scrollable>
-      <Modal.Header closeButton closeVariant='white'>
+      <Modal.Header closeButton>
         <Modal.Title>Filter Options</Modal.Title>
       </Modal.Header>
       <Modal.Body>
