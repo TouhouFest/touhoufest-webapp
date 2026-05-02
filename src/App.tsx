@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight, faFilterCircleXmark, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight, faFilterCircleXmark, faBars, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
 import Dataset from "./Dataset";
@@ -195,7 +195,9 @@ function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Elem
 
         <Navbar collapseOnSelect expand={false} className="sticky-top mb-0 shadow-sm"  id="main-navbar" onSelect={() => setShowMainMenu(false)}>
           <Container fluid>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} onClick={() => setShowMainMenu(true)}/>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} onClick={() => setShowMainMenu(true)} className="border-0">
+              <FontAwesomeIcon icon={faBars} className='fa-2x'/>
+            </Navbar.Toggle>
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
