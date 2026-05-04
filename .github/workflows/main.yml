@@ -92,7 +92,7 @@ jobs:
     permissions:
       contents: write
     # if apple starts complaining about bad xcode, upgrade the macos version
-    runs-on: macos-15
+    runs-on: macos-26
     needs: [Android-Deploy]
     steps:
       #pull down repository

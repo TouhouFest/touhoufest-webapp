@@ -34,12 +34,12 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/toast"
 
 SPEC CHECKSUMS:
-  Capacitor: 9251cf0e689bfcc0f8ddc9bae2267108019d9de0
-  CapacitorApp: 6b89831465d6bc99bc89779b1b7f5327e33011ce
+  Capacitor: 6e644e9e3369368ac601c77a0fad57f34b78aaa6
+  CapacitorApp: f01a913211780e0718dae9750442c3e23f96e106
   CapacitorCordova: f163aa2e84b79efc54d6a75b305bc7e05fb80c5d
-  CapacitorLocalNotifications: ae0b5008877d68731d693156fe21d786d30a4feb
-  CapacitorStatusBar: b4bdcf487553983ffc68d81dfe1668bacb48252f
-  CapacitorToast: 66b36ba774875ddfe9863efd1bf1e9a968fcc732
+  CapacitorLocalNotifications: 2e3f5b717ec9cd2bd64d93c99a9470941e1c80be
+  CapacitorStatusBar: 6de542f202c0dd3f9d0a73b240d4c9d3dddc49b4
+  CapacitorToast: 72753efca4a9725a312109418e6d04559ac05e10
 
 PODFILE CHECKSUM: 749b4662cae1515b8607716c756a3582d55b14a8
 
