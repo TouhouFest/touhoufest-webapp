@@ -20,12 +20,31 @@
 }
 
 #filterForm .form-check-label > .badge {
-  border: 3px solid currentColor;
-  transition: border 1s;
+  border: 3px solid white;
+}
+
+#filterForm .form-check-label > .badge:after{
+  content: '\2b';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0.25rem;
 }
 
 #filterForm .form-check-input:checked ~ .form-check-label > .badge {
   border: 3px dashed currentColor !important;
+}
+
+#filterForm .form-check-input:checked ~ .form-check-label > .badge:after { 
+  content: '\f068';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0.25rem;
 }
 
 [data-bs-theme="light"] {
