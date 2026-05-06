@@ -102,7 +102,7 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
       let styled_elem = <EventTypeGenerator text={elem}/>
       let defaultChecked = stack["event_types"].includes(elem);
       // eventtypes.push(<Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={elem} onClick={() => foo(elem, "event_types")}></Form.Check>);
-      eventtypes.push(<Col className="my-1"><Form.Check className="ps-0" defaultChecked={defaultChecked} type="checkbox" id={elem} label={styled_elem}></Form.Check></Col>);
+      eventtypes.push(<Col xs="auto" className="my-1"><Form.Check className="ps-0" defaultChecked={defaultChecked} type="checkbox" id={elem} label={styled_elem}></Form.Check></Col>);
     }
 
     for (const elem of filterOptions["room_list"]) {
@@ -143,28 +143,21 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
               <InputGroup.Text id="searchend" onClick={clearText}><FontAwesomeIcon icon={faCircleXmark}></FontAwesomeIcon></InputGroup.Text>
             </InputGroup>
           </Form.Group>
-          <Accordion alwaysOpen className="open">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>Filter by Room</Accordion.Header>
-              <Accordion.Body>
-                <Form.Group id="roomselect">
-                    <Row>
-                      {rooms}
-                    </Row>
-                </Form.Group>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>Filter by Event Type</Accordion.Header>
-              <Accordion.Body>
-                <Form.Group>
-                  <Row xs={2}>
-                  {eventtypes}
-                  </Row>
-                </Form.Group>
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
+
+          <p>or filter by location</p>
+          <Form.Group id="roomselect">
+              <Row className="gx-3">
+                {rooms}
+              </Row>
+          </Form.Group>
+
+          <p className="mt-3">or filter by type</p>
+          <Form.Group>
+            <Row className="gx-1">
+            {eventtypes}
+            </Row>
+          </Form.Group>
+
           <div className="text-center"><Button type="submit" className = "mt-3 submitbutton">Apply <FontAwesomeIcon icon={faAngleRight}/></Button></div>
           {/*<Button variant="secondary" type="reset" className="mt-3 mx-2">Clear Filters</Button>*/}
         </Form>
