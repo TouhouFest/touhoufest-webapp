@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Modal from 'react-bootstrap/Modal';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { faAngleRight, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faLocationDot, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -107,8 +107,9 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
 
     for (const elem of filterOptions["room_list"]) {
       let defaultChecked = stack["room_list"].includes(elem);
+      let styled_elem = <><FontAwesomeIcon icon={faLocationDot}/> {elem}</>
       // rooms.push(<Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={elem} onClick={() => foo(elem, "room_list")}></Form.Check>);
-      rooms.push(<Form.Check defaultChecked={defaultChecked} type="checkbox" id={elem} label={elem}></Form.Check>);
+      rooms.push(<Col xs="auto" className="my-1"><Form.Check className="ps-0" defaultChecked={defaultChecked} type="checkbox" id={elem} label={styled_elem}></Form.Check></Col>);
     }
   }
 
@@ -146,8 +147,10 @@ export default function FilterOptions({show_var, hide_fxn, param_fxn, filterOpti
             <Accordion.Item eventKey="0">
               <Accordion.Header>Filter by Room</Accordion.Header>
               <Accordion.Body>
-                <Form.Group>
-                    {rooms}
+                <Form.Group id="roomselect">
+                    <Row>
+                      {rooms}
+                    </Row>
                 </Form.Group>
               </Accordion.Body>
             </Accordion.Item>
