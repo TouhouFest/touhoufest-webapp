@@ -1,0 +1,125 @@
+@use 'declared_colors';
+
+#filter-searchgroup #searchbar{
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#filter-searchgroup #searchend {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.submitbutton {
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 50px;
+}
+
+#filterForm .form-check .form-check-input {
+  display: none;
+}
+
+
+#filterForm .form-check-label > .badge:after{
+  content: '\2b';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0.25rem;
+}
+
+#filterForm .form-check-label > .badge {
+  border: 6px solid var(--bs-modal-bg);
+}
+
+#filterForm .form-check-input:checked ~ .form-check-label > .badge {
+  border: 6px double var(--bs-modal-bg) !important;
+}
+
+#filterForm .form-check-input:checked ~ .form-check-label > .badge:after { 
+  content: '\f068';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0.25rem;
+}
+
+#roomselect label {
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+
+[data-bs-theme="light"] {
+
+  #roomselect .form-check-input:checked ~ label {
+    background-color: declared_colors.$readable-red;
+    border-color: declared_colors.$readable-red;
+    color: white;
+  }
+
+  #filter-searchgroup #searchbar{
+    border-left: 2px solid declared_colors.$readable_red;
+    border-top: 2px solid declared_colors.$readable_red;
+    border-bottom: 2px solid declared_colors.$readable_red;
+  }
+
+  #filter-searchgroup #searchend {
+    border-right: 2px solid declared_colors.$readable_red;
+    border-top: 2px solid declared_colors.$readable_red;
+    border-bottom: 2px solid declared_colors.$readable_red;
+  }
+
+  #filter-searchgroup #searchtext {
+    border-top: 2px solid declared_colors.$readable_red;
+    border-bottom: 2px solid declared_colors.$readable_red;
+  }
+
+  .submitbutton {
+    background-color: declared_colors.$readable_red;
+    border-color: declared_colors.$readable-red;
+  }
+
+}
+[data-bs-theme="dark"] {
+
+
+  #roomselect label { 
+    border-color: white;
+  }
+
+  #roomselect .form-check-input:checked ~ label {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+    border-color: declared_colors.$dark-gohei-header-bkgnd;
+    color: white;
+  }
+
+
+  #filter-searchgroup #searchbar{
+    border-left: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+    border-top: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+    border-bottom: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+  #filter-searchgroup #searchend {
+    border-right: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+    border-top: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+    border-bottom: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+  #filter-searchgroup #searchtext {
+    border-top: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+    border-bottom: 2px solid declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+  .submitbutton {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+    border-color: declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+}

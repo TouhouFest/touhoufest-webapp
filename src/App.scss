@@ -6,6 +6,7 @@
 @use 'css/modal_styling.scss';
 @use 'css/offcanvas.scss';
 @use 'css/bottom_bar.scss';
+@use 'css/filter_options.scss';
 
 .eventDescription {
   white-space: pre-line;
@@ -24,6 +25,7 @@ body {
   border-radius: 50px;
 }
 
+
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
 
@@ -34,8 +36,6 @@ body {
   body{
     background-color: declared_colors.$parchment;
   }
-
-
 }
 
 [data-bs-theme="dark"] {
@@ -47,6 +47,7 @@ body {
   #filter-widget a {
     color: #FFF7F7 !important;
   }
+
 }
 
 .pink-one {

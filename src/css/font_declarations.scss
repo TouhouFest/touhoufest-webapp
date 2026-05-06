@@ -3,6 +3,12 @@
 // class-level and id-level font assignment to be handled in separate files
 
 @font-face {
+  font-family: "Font Awesome 6 Free";
+  src: url('../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf');
+  font-weight: 900;
+}
+
+@font-face {
   font-family: Poppins;
   src: url(fonts/poppins/Poppins-Regular.ttf);
   font-weight: 400;
