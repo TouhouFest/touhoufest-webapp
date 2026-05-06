@@ -174,6 +174,7 @@ function MapModals(){
 }
 
 export const conCenterPage = {
+    "codename": "concenter",
     "header": (<><FontAwesomeIcon icon={faMapLocationDot} fixedWidth></FontAwesomeIcon> Convention Maps</>),
     "fluidImage": (<></>),
     "body": (<><MapModals></MapModals></>)

@@ -17,6 +17,7 @@ import childrensartwing from "./../images/childrensartwing.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 
 export const mainLocationsPage= {
+  "codename": "mainlocations",
   "header": (<><FontAwesomeIcon icon={faBuilding} fixedWidth></FontAwesomeIcon> Key Locations</>),
   "fluidImage": (<></>),
   "body": (

@@ -84,6 +84,7 @@ let pricelist = [
 ];
 
 export const conMerchPage= {
+    "codename": "conmerch",
     "header": (<><FontAwesomeIcon icon={faBagShopping} fixedWidth></FontAwesomeIcon> Con Merch</>),
     "fluidImage": (<></>),
     "body": (<>
