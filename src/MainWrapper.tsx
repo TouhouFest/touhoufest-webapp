@@ -207,10 +207,12 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
+              {activeMenuKey === "dataset" &&
               <NavDropdown title={selectedDay} id="day-dropdown-widget">
                 { rendered_days }
                 <NavDropdown.Item className={selectedDay === "All Days" ? "newtimes-filler" : ""} onClick={() => {setSelectedDay("All Days")}}>All Days</NavDropdown.Item>
               </NavDropdown>
+              }
             </Navbar.Brand>
             <MainMenuOffcanvas 
               mainIcon={<FontAwesomeIcon icon={grabTrueColorState(oppositecolorState)} fixedWidth/>} 
