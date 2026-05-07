@@ -20,7 +20,7 @@ import touhoufest_dark from "./images/touhoufest_dark.jpg";
 import { Stack } from 'react-bootstrap';
 
 import { faStar } from '@fortawesome/free-regular-svg-icons';
-import { Outlet } from 'react-router';
+import { Link, Outlet } from 'react-router';
 
 
 function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) { 
@@ -158,7 +158,7 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
   let selected_page = 3;
 
   for (const [i, entry] of menupagedata.entries()) {
-    menunavs.push(<Nav.Link className={i === selected_page ? "menu-selected" : ""} href="#action1" onClick={() => changeMenuPageState(i, true)} key={i}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
+    menunavs.push(<Nav.Link onClick={() => setShowMainMenu(false)} className={i === selected_page ? "menu-selected" : ""} to={"/" + entry["codename"]} key={i} as={Link}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
     menupages.push(
       <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
         <MenuPage.Header >{entry["header"]}</MenuPage.Header>
