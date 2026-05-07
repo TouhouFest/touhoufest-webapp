@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight, faFilterCircleXmark, faBars, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faFilter, faBook, faHeart, faCheck, faMagnifyingGlass, faCalendarDays, faComment, IconDefinition, faToriiGate, faBroom, faCircle, faAngleRight, faFilterCircleXmark, faBars, faChevronRight, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import FilterOptions from "./FilterOptions"
 import MenuPage from "./MenuPage"
 import Dataset from "./Dataset";
@@ -158,7 +158,7 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
     setShowMainMenu(false);
   }
 
-  let menunavs = [<Nav.Link onClick={() => setActiveMenuItem("dataset")} className={activeMenuKey === "dataset" ? "menu-selected" : ""} to={"/"} eventKey={"dataset"} as={Link}>Schedule <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>];
+  let menunavs = [<Nav.Link onClick={() => setActiveMenuItem("dataset")} className={activeMenuKey === "dataset" ? "menu-selected" : ""} to={"/"} eventKey={"dataset"} as={Link}><FontAwesomeIcon icon={faBookOpen} fixedWidth/> Schedule <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>];
                         
   let menupages = [];
 
