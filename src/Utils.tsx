@@ -164,8 +164,8 @@ export function EventTypeGenerator({text}: {text:string}) {
 import gohei_border from "./gohei_border.svg";
 import hakurei_border from "./hakurei_border.svg";
 
-export function MakeGoheiHeader({content} : {content:JSX.Element | string}) {
-    return (          <Row className="g-0 my-2">
+export function MakeGoheiHeader({content, vertical_margin=true} : {content:JSX.Element | string, vertical_margin:boolean}) {
+    return (          <Row className={"g-0 " + (vertical_margin ? "my-2" : "")}>
             <Col>
               <ListGroup.Item className="newtimes">
                 <h4 className="mb-0">{content}</h4>
