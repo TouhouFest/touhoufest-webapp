@@ -151,14 +151,22 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
     }
   }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
 
-  let menunavs = [];
+  const [activeMenuKey, setActiveMenuKey] = useState("dataset");
+
+  function setActiveMenuItem(codename:string) {
+    setActiveMenuKey(codename);
+    setShowMainMenu(false);
+  }
+
+  let menunavs = [<Nav.Link onClick={() => setActiveMenuItem("dataset")} className={activeMenuKey === "dataset" ? "menu-selected" : ""} to={"/"} eventKey={"dataset"} as={Link}>Schedule <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>];
+                        
   let menupages = [];
 
   // NOTE: logic for determining selected item is a PLACEHOLDER until react router is in-place
   let selected_page = 3;
 
   for (const [i, entry] of menupagedata.entries()) {
-    menunavs.push(<Nav.Link onClick={() => setShowMainMenu(false)} className={i === selected_page ? "menu-selected" : ""} to={"/" + entry["codename"]} key={i} as={Link}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
+    menunavs.push(<Nav.Link onClick={() => setActiveMenuItem(entry["codename"])} className={activeMenuKey === entry["codename"] ? "menu-selected" : ""} to={"/" + entry["codename"]} eventKey={entry["codename"]} as={Link}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
     menupages.push(
       <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
         <MenuPage.Header >{entry["header"]}</MenuPage.Header>
