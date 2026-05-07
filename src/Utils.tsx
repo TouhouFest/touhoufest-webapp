@@ -175,7 +175,7 @@ export function MakeGoheiHeader({content} : {content:JSX.Element | string}) {
               <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
             </Col>
             <Col xs="1" className="newtimes-end"></Col>
-            <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow" /></Col>
+            <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
           </Row>
 );
 }
