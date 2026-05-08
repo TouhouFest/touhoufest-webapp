@@ -26,24 +26,24 @@ import { Link, Outlet } from 'react-router';
 function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) { 
 
   // indicator for home, bookmarks, filtering
-  const [mode, setMode] = useState("home");
-  const [filterOptions, setFilterOptions] = useState({});
+  // const [mode, setMode] = useState("home");
+  // const [filterOptions, setFilterOptions] = useState({});
 
   // show/dont show filter
-  const [showFilterPane, setshowFilterPane] = useState(false);
-  const handleFilterPaneOnHide = () => setshowFilterPane(false);
+  // const [showFilterPane, setshowFilterPane] = useState(false);
+  // const handleFilterPaneOnHide = () => setshowFilterPane(false);
 
   // keep track of query status
-  const [appliedFilters, setAppliedFilters] = useState({ "event_types": [], "room_list": [], "search_query": "" });
-  function wereFiltersApplied() {
-    return appliedFilters["event_types"].length > 0 || appliedFilters["room_list"].length > 0 || appliedFilters["search_query"] !== "";
-  }
+  // const [appliedFilters, setAppliedFilters] = useState({ "event_types": [], "room_list": [], "search_query": "" });
+  // function wereFiltersApplied() {
+  //   return appliedFilters["event_types"].length > 0 || appliedFilters["room_list"].length > 0 || appliedFilters["search_query"] !== "";
+  // }
 
   // keep track of opened/closed status of menu pages
-  const [menupagebools, setMenuPages] = useState(Array(menupagedata.length).fill(false));
+  // const [menupagebools, setMenuPages] = useState(Array(menupagedata.length).fill(false));
 
-  let initScrollSettings:Record<string,number> = { "home": 0, "bookmarks": 0, "filter": 0 };
-  const [scrollSettings, setScrollSettings] = useState(initScrollSettings);
+  // let initScrollSettings:Record<string,number> = { "home": 0, "bookmarks": 0, "filter": 0 };
+  // const [scrollSettings, setScrollSettings] = useState(initScrollSettings);
 
   const [availableDays, setAvailableDays] = useState([]);
   // decomissioned with fragments inplace instead
@@ -52,9 +52,9 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
 
   const [showMainMenu, setShowMainMenu] = useState(false);
 
-  const [showEventDescription, setShowEventDescription] = useState(false);
+  // const [showEventDescription, setShowEventDescription] = useState(false);
 
-  let [selectedDay, setSelectedDay] = useState("All Days");
+  const [selectedDay, setSelectedDay] = useState("All Days");
 
   // state variables/functions for setting color theme
   // (i cant beievei its this much typescript all for changing the color theme :skull:)
@@ -85,12 +85,12 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
     else{ return faToriiGate;}
   }
 
-  function changeMenuPageState(idx:number, isDisplayed:boolean) {
-    let newstate = [...menupagebools];
-    newstate[idx] = isDisplayed;
-    setMenuPages(newstate);
-  }
-  function getMenuState(idx:number) { return menupagebools[idx]; }
+  // function changeMenuPageState(idx:number, isDisplayed:boolean) {
+  //   let newstate = [...menupagebools];
+  //   newstate[idx] = isDisplayed;
+  //   setMenuPages(newstate);
+  // }
+  // function getMenuState(idx:number) { return menupagebools[idx]; }
 
   // function handleRoleChange(type:string) {
 
@@ -143,13 +143,13 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
   // }
 
   // TODO: need to figure how to avoid prematurely closing the app
-  useEffect(() => {
-    if(showFilterPane === false && showMainMenu === false && menupagebools.every(v => !v) && showEventDescription === false ) {
-      CapacitorApp.addListener('backButton', () => {
-        CapacitorApp.exitApp();
-      })
-    }
-  }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
+  // useEffect(() => {
+  //   if(showFilterPane === false && showMainMenu === false && menupagebools.every(v => !v) && showEventDescription === false ) {
+  //     CapacitorApp.addListener('backButton', () => {
+  //       CapacitorApp.exitApp();
+  //     })
+  //   }
+  // }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
 
   const [activeMenuKey, setActiveMenuKey] = useState("dataset");
 
@@ -160,29 +160,26 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
 
   let menunavs = [<Nav.Link onClick={() => setActiveMenuItem("dataset")} className={activeMenuKey === "dataset" ? "menu-selected" : ""} to={"/"} eventKey={"dataset"} as={Link}><FontAwesomeIcon icon={faBookOpen} fixedWidth/> Schedule <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>];
                         
-  let menupages = [];
-
-  // NOTE: logic for determining selected item is a PLACEHOLDER until react router is in-place
-  let selected_page = 3;
+  // let menupages = [];
 
   for (const [i, entry] of menupagedata.entries()) {
     menunavs.push(<Nav.Link onClick={() => setActiveMenuItem(entry["codename"])} className={activeMenuKey === entry["codename"] ? "menu-selected" : ""} to={"/" + entry["codename"]} eventKey={entry["codename"]} as={Link}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
-    menupages.push(
-      <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
-        <MenuPage.Header >{entry["header"]}</MenuPage.Header>
-        <MenuPage.Body fluidImage={entry["fluidImage"]} mainText={entry["body"]}></MenuPage.Body>
-      </MenuPage>
-    );
+    // menupages.push(
+    //   <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
+    //     <MenuPage.Header >{entry["header"]}</MenuPage.Header>
+    //     <MenuPage.Body fluidImage={entry["fluidImage"]} mainText={entry["body"]}></MenuPage.Body>
+    //   </MenuPage>
+    // );
   }
 
   // let filterclass = "hasFilters p-1 me-2 align-items-center";
-  let num_filters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
-  let filter_active:boolean = !(num_filters === 0 && appliedFilters["search_query"] === "");
+  // let num_filters = appliedFilters["event_types"].length + appliedFilters["room_list"].length;
+  // let filter_active:boolean = !(num_filters === 0 && appliedFilters["search_query"] === "");
 
-  // this useeffect runs whenever mode changes, and after the display set is repopulated
-  useEffect(() => {
-    window.scrollTo({ top: scrollSettings[mode], behavior:  'instant' });
-  }, [mode]);
+  // // this useeffect runs whenever mode changes, and after the display set is repopulated
+  // useEffect(() => {
+  //   window.scrollTo({ top: scrollSettings[mode], behavior:  'instant' });
+  // }, [mode]);
 
 
   let rendered_days = availableDays.map((day) => {
@@ -236,7 +233,7 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
         <Outlet context={[availableDays, setAvailableDays, selectedDay, setSelectedDay]}/>
 
     </div>
-    {menupages}
+    {/* menupages */}
     </>;
 }
 
