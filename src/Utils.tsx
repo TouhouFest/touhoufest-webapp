@@ -164,18 +164,19 @@ export function EventTypeGenerator({text}: {text:string}) {
 import gohei_border from "./gohei_border.svg";
 import hakurei_border from "./hakurei_border.svg";
 
-export function MakeGoheiHeader({content, vertical_margin=true} : {content:JSX.Element | string, vertical_margin:boolean}) {
-    return (          <Row className={"g-0 " + (vertical_margin ? "my-2" : "")}>
-            <Col>
-              <ListGroup.Item className="newtimes">
-                <h4 className="mb-0">{content}</h4>
-              </ListGroup.Item>
-            </Col>
-            <Col xs="auto" className="newtimes-filler text-center">
-              <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
-            </Col>
-            <Col xs="1" className="newtimes-end"></Col>
-            <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
-          </Row>
+export function MakeGoheiHeader({content, vertical_margin=true} : {content:JSX.Element | string, vertical_margin?:boolean}) {
+    return (          
+    <Row className={"g-0 " + (vertical_margin ? "my-2" : "")}>
+      <Col>
+        <ListGroup.Item className="newtimes">
+          <h4 className="mb-0">{content}</h4>
+        </ListGroup.Item>
+      </Col>
+      <Col xs="auto" className="newtimes-filler text-center">
+        <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
+      </Col>
+      <Col xs="1" className="newtimes-end"></Col>
+      <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
+    </Row>
 );
 }
