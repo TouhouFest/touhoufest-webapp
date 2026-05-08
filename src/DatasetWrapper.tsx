@@ -149,11 +149,8 @@ function DatasetWrapper() {
   //   }
   // }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
 
-  let menunavs = [];
-  let menupages = [];
-
-  // NOTE: logic for determining selected item is a PLACEHOLDER until react router is in-place
-  let selected_page = 3;
+  // let menunavs = [];
+  // let menupages = [];
 
   // for (const [i, entry] of menupagedata.entries()) {
   //   menunavs.push(<Nav.Link className={i === selected_page ? "menu-selected" : ""} href="#action1" onClick={() => changeMenuPageState(i, true)} key={i}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);

@@ -55,12 +55,27 @@ menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, mainLocationsPa
 
 let menuheader = (<>TouhouFest 2025</>);
 
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
 // Call the element loader before the render call
 defineCustomElements(window);
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <App menupagedata={menupagedata} menuheader={menuheader}/>
     </BrowserRouter>
   </React.StrictMode>
