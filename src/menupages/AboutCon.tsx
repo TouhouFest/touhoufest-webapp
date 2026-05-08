@@ -15,6 +15,8 @@ import { con_banner, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import touhoufest from "./../images/touhoufest.jpg";
+
 import fullweekend from "./../images/badges/fullweekend.jpg";
 import saturday from "./../images/badges/saturday.jpg";
 import sunday from "./../images/badges/sunday.jpg";
@@ -88,12 +90,12 @@ let past_artists = [
 export const aboutConPage = { 
   "codename": "about",
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
-  "fluidImage": (<><Image src={con_banner} fluid /></>),
+  "fluidImage": (<><Image src={touhoufest} fluid /></>),
   "body": (
     <>
       <div className="text-center">
         <h3 className="display-6">Welcome to TouhouFest!</h3>
-        <p className="lead">June 14th - 15th, 2025</p>
+        <p className="lead">June 20th - 21st, 2026</p>
       </div>
       <Row className="text-center">
         <Col><a href="https://discord.com/invite/touhoufest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
@@ -113,7 +115,7 @@ export const aboutConPage = {
         <p className="small mb-0"><a href="https://www.google.com/maps?ll=33.839401,-118.343938&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=13781372703427135255" target="_blank" rel="noreferrer">Google Maps Link (if embed isn't working)</a></p>
       </div>
       <p className="mt-3">
-        A Touhou fan event being held on June 14th - 15th, 2025, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
+        A Touhou Project-themed fan event being held on June 20st - 21st, 2026, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
 
       <h4>Instructions for Checking In Using QR Code</h4>
