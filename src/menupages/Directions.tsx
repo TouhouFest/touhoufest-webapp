@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 export const directionsPage = {
+    "codename": "directions",
     "header": (<><FontAwesomeIcon icon={faLocationDot} fixedWidth></FontAwesomeIcon> Directions</>),
     "fluidImage": (<></>),
     "body": (<>test</>),

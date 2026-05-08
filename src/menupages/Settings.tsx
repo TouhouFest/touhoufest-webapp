@@ -96,6 +96,7 @@ function TimezoneSettings() {
 }
 
 export const settingsPage = {
+    "codename": "settings",
     "header": (<><FontAwesomeIcon icon={faGear} fixedWidth></FontAwesomeIcon> Settings/FAQ</>),
     "fluidImage": (<></>),
     "body": (<>

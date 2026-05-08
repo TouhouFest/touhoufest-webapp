@@ -20,6 +20,7 @@ import androidfirefox03 from "./../images/installation/androidfirefox03.jpg";
 import ios from "./../images/installation/ios.webp";
 
 export const installationPage = {
+  "codename": "installation",
   "header": (<><FontAwesomeIcon icon={faDownload} fixedWidth></FontAwesomeIcon> Installation Options</>),
   "fluidImage": (<></>),
   "body": (

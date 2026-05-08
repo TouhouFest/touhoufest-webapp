@@ -25,6 +25,8 @@ import { Capacitor } from '@capacitor/core';
 
 import {Animation, StatusBar, Style} from '@capacitor/status-bar';
 
+import { BrowserRouter } from "react-router";
+
 // Display content under transparent status bar (Android only)
 StatusBar.setOverlaysWebView({ overlay: false });
 
@@ -53,12 +55,29 @@ menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, mainLocationsPa
 
 let menuheader = (<>TouhouFest 2025</>);
 
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
 // Call the element loader before the render call
 defineCustomElements(window);
 
 root.render(
   <React.StrictMode>
-    <App menupagedata={menupagedata} menuheader={menuheader}/>
+    <BrowserRouter>
+      <ScrollToTop />
+      <App menupagedata={menupagedata} menuheader={menuheader}/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -22,6 +22,7 @@ import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
 
 export const cosplayPage = {
+    "codename": "cosplay",
     "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>

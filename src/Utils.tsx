@@ -134,7 +134,7 @@ import maidacademy from "./images/artistalley/maidacademy.webp";
 
 import neosanctum from "./images/artistalley/neosanctum.jpg";
 import suzukann from "./images/suzukann.jpg";
-import { Alert } from 'react-bootstrap';
+import { Alert, Col, ListGroup, Row } from 'react-bootstrap';
 
 export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap, neosanctum, maidacademy, suzukann};
 
@@ -159,4 +159,24 @@ import {Badge, Image} from 'react-bootstrap';
 
 export function EventTypeGenerator({text}: {text:string}) {
     return (<><Badge pill className={text.replace(" ","_")+ ' me-1'}>{/*<FontAwesomeIcon icon={faGamepad}/>*/}{text}</Badge></>);
+}
+
+import gohei_border from "./gohei_border.svg";
+import hakurei_border from "./hakurei_border.svg";
+
+export function MakeGoheiHeader({content, vertical_margin=true, larger_header=false} : {content:JSX.Element | string, vertical_margin?:boolean, larger_header?:boolean}) {
+    return (          
+    <Row className={"g-0 " + (vertical_margin ? "my-2" : "")}>
+      <Col>
+        <ListGroup.Item className="newtimes">
+          {larger_header ? <h2 className="mb-0">{content}</h2> : <h4 className="mb-0">{content}</h4>}
+        </ListGroup.Item>
+      </Col>
+      <Col xs="auto" className="newtimes-filler text-center">
+        <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
+      </Col>
+      <Col xs="1" className="newtimes-end"></Col>
+      <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
+    </Row>
+);
 }

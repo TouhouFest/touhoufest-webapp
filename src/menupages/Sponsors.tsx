@@ -15,6 +15,7 @@ import murasaki02 from "./../images/sponsors/murasaki/murasaki02.jpg";
 import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const sponsorsPage = {
+    "codename":"sponsors",
     "header": (<><FontAwesomeIcon icon={faFire} fixedWidth></FontAwesomeIcon> Sponsors</>),
     "fluidImage": (<></>),
     "body": (<>

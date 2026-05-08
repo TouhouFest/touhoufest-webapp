@@ -46,6 +46,7 @@ function MaidCarousel() {
 }
 
 export const restarauntsPage = {
+    "codename": "restaraunts",
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>

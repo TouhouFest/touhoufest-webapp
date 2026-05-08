@@ -1,10 +1,11 @@
 import { Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image } from "react-bootstrap";
-import { faAngleRight, faArrowUpRightFromSquare, faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faArrowUpRightFromSquare, faChevronRight, faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
 import { App } from "@capacitor/app";
+import { Link } from "react-router";
 
 export default function MainMenuOffcanvas({ mainIcon, menuheader, touhoufest, menunavs, darkModeSelector, showMainMenu, setShowMainMenu }: { mainIcon: JSX.Element, menuheader: JSX.Element | JSX.Element[], touhoufest: any, menunavs: JSX.Element[], darkModeSelector: JSX.Element, showMainMenu: boolean, setShowMainMenu: Function }) {
 

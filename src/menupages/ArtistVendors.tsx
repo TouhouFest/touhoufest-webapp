@@ -212,6 +212,7 @@ let communitytables = [
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 export const artistVendorsPage = {
+    "codename": "artistsvendors",
     "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>

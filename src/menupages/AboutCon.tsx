@@ -86,6 +86,7 @@ let past_artists = [
 
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
+  "codename": "about",
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
   "fluidImage": (<><Image src={con_banner} fluid /></>),
   "body": (

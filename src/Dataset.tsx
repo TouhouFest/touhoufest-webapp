@@ -9,7 +9,7 @@ import EventDescription from './EventDescription';
 import { useEffect, useState } from 'react';
 import Bookmark from "./Bookmark";
 import { ListGroup } from 'react-bootstrap';
-import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE, EventTypeGenerator} from "./Utils"
+import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE, EventTypeGenerator, MakeGoheiHeader} from "./Utils"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
@@ -334,18 +334,7 @@ export default function Dataset(
       let floortime = startjs.minute(0);
       if(hourfxn === null || hourfxn.diff(floortime) !== 0){
         output.push(
-          <Row className="g-0 my-2">
-            <Col>
-              <ListGroup.Item className="newtimes">
-                <h4 className="mb-0">{floortime.format("h:mm A")}</h4>
-              </ListGroup.Item>
-            </Col>
-            <Col xs="auto" className="newtimes-filler text-center">
-              <Image src={hakurei_border} className="h-100 w-auto mx-auto"/>
-            </Col>
-            <Col xs="1" className="newtimes-end"></Col>
-            <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow" fluid/></Col>
-          </Row>
+          <MakeGoheiHeader content={floortime.format("h:mm A")}/>
         );
         hourfxn = floortime;
       }
