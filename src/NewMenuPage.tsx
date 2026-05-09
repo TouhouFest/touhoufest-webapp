@@ -7,7 +7,9 @@ function NewMenuPage({content}:{content:Record<string, JSX.Element>}) {
 
             <div className="text-center">{content["fluidImage"]}</div>
             <div className="p-3">
-                <div className="mb-2"><MakeGoheiHeader content={content["header"]} vertical_margin={false} larger_header={true}/></div>
+                {!("displayTitle" in content) && 
+                    <div className="mb-2"><MakeGoheiHeader content={content["header"]} vertical_margin={false} larger_header={true}/></div>
+                }
                 {content["body"]}
             </div>
         </Container>
