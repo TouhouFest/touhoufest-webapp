@@ -142,28 +142,28 @@ export const aboutConPage = {
       <h4 className="mt-3">Operating Hours</h4>
       <p><b>General Con Hours</b></p>
       <ul>
-          <li>Friday: N/A</li>
-          <li>Saturday: 9:00 AM - 11:00 PM</li>
-          <li>Sunday: 9:00 AM - 6:00 PM</li>
+          <li>Friday: 3:00 PM - 8:00 PM</li>
+          <li>Saturday: 9:00 AM - 10:00 PM</li>
+          <li>Sunday: 8:00 AM - 6:00 PM</li>
       </ul>
       <p><b>Registration</b></p>
       <ul>
-          <li>Friday: 3:00 PM - 7:00 PM</li>
+          <li>Friday: 3:00 PM - 8:00 PM</li>
           <li>Saturday: 9:00 AM - 5:00 PM</li>
           <li>Sunday: 9:00 AM - 3:00 PM</li>
       </ul>
       <p><b>Artist's Alley/Vendors*</b></p>
       <ul>
           <li>Friday: N/A</li>
-          <li>Saturday: 10:00 AM - 6:00 PM</li>
-          <li>Sunday: 10:00 AM - 5:00 PM</li>
+          <li>Saturday: 10:30 AM - 6:00 PM</li>
+          <li>Sunday: 9:00 AM - 4:00 PM</li>
       </ul>
       <p className="small">*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p>
       <p><b>Gaming*</b></p>
       <ul>
           <li>Friday: N/A</li>
           <li>Saturday: 9:30AM - 10:30 PM</li>
-          <li>Sunday: 9:00 AM - 5:00 PM</li>
+          <li>Sunday: 8:30 AM - 5:00 PM</li>
       </ul>
       <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
 
