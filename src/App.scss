@@ -36,6 +36,10 @@ body {
   body{
     background-color: declared_colors.$parchment;
   }
+
+  .display-dark {
+    display: none;
+}
 }
 
 [data-bs-theme="dark"] {
@@ -47,6 +51,10 @@ body {
   #filter-widget a {
     color: #FFF7F7 !important;
   }
+
+  .display-light {
+    display: none;
+}
 
 }
 

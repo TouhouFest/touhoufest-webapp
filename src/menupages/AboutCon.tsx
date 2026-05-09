@@ -91,7 +91,7 @@ let past_artists = [
 export const aboutConPage = { 
   "codename": "about",
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
-  "fluidImage": (<><Image src={getColorState() === faToriiGate ? touhoufest_dark : touhoufest} fluid /></>),
+  "fluidImage": (<><Image className="display-dark" src={touhoufest_dark} fluid /><Image className="display-light" src={touhoufest} fluid /></>),
   "body": (
     <>
       <div className="text-center">
