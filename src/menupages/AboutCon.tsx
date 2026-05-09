@@ -7,15 +7,16 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo, faEarthAmericas, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faBroom, faCircleInfo, faEarthAmericas, faGlobeAmericas, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
 import { Image, Accordion, Card, ListGroup } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
-import { con_banner, WarningAlert } from "../Utils";
+import { con_banner, getColorState, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import touhoufest from "./../images/touhoufest.jpg";
+import touhoufest_dark from "./../images/touhoufest_dark.jpg";
 
 import fullweekend from "./../images/badges/fullweekend.jpg";
 import saturday from "./../images/badges/saturday.jpg";
@@ -90,7 +91,7 @@ let past_artists = [
 export const aboutConPage = { 
   "codename": "about",
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
-  "fluidImage": (<><Image src={touhoufest} fluid /></>),
+  "fluidImage": (<><Image src={getColorState() === faToriiGate ? touhoufest_dark : touhoufest} fluid /></>),
   "body": (
     <>
       <div className="text-center">

@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faC, faCircle, faCircleExclamation, faGamepad, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faBroom, faC, faCircle, faCircleExclamation, faGamepad, faRestroom, faSquare, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -179,4 +179,26 @@ export function MakeGoheiHeader({content, vertical_margin=true, larger_header=fa
       <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
     </Row>
 );
+}
+
+export function getColorState() {
+    let status:string|null = localStorage.getItem(COLORSTATUS);
+    if(status === null ){
+    if((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-bs-theme','dark');
+        return faToriiGate;
+    }
+    else {
+        document.documentElement.setAttribute('data-bs-theme','light');
+        return faBroom;
+    }
+    }
+    if(status === "light") {
+    document.documentElement.setAttribute('data-bs-theme','light');
+    return faBroom;
+    }
+    else {
+    document.documentElement.setAttribute('data-bs-theme','dark');
+    return faToriiGate;
+    }
 }

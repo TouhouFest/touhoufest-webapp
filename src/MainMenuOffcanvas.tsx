@@ -38,7 +38,8 @@ export default function MainMenuOffcanvas({ mainIcon, menuheader, touhoufest, me
                 </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="p-0">
-                <Image src={touhoufest} fluid />
+                {/* re-enable the below if you want the image thingy in the menu again */}
+                {/* <Image src={touhoufest} fluid /> */}
                 <div className="p-3">
                     <Nav className="justify-content-end flex-grow-1 pe-3 fs-5">
                         {menunavs}
