@@ -121,7 +121,7 @@ export const aboutConPage = {
       </p>
 
       <h4>Instructions for Checking In Using QR Code</h4>
-      <p>TouhouFest tickets have now been updated to contain a <b> QR Code</b> for faster checkin! To pull it up, please follow these instructions:</p>
+      <p>TouhouFest tickets contain a <b> QR Code</b> for faster checkin. It should have been sent directly to your email address along with your ticket; but in case you don't have it handy, please follow these instructions to pull up your ticket's QR Code:</p>
       <ol>
         <li><a href="https://touhoufest.checkoutpage.com/portal" target="_blank" rel="noreferrer">Enter the TouhouFest Checkoutpage portal by clicking on this link.</a> You should be greeted with a webpage containing the below content:</li>
         <Row className="justify-content-center my-3">
@@ -237,6 +237,7 @@ export const aboutConPage = {
         </Accordion.Item>
       </Accordion>
 
+      {/* removed until requested by touhoufest staff
       <h4>TouhouFest 2025 Convention Badges</h4>
       <Row xs={2} md={3} lg={4} className="justify-content-center g-3">
         <Col><Image src={fullweekend} rounded fluid/></Col>
@@ -248,6 +249,8 @@ export const aboutConPage = {
         <Col><Image src={exhibitor} rounded fluid/></Col>
         <Col><Image src={press} rounded fluid/></Col>
       </Row>
+
+      */}
 
       <h4 className="mt-3">TouhouFest 2025 Official Artists</h4>
 
@@ -266,6 +269,7 @@ export const aboutConPage = {
           </>)}
       </Row>
 
+      {/*
       <h5 className="mt-3">Past Official TouhouFest Artists</h5>
 
       <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
@@ -282,7 +286,7 @@ export const aboutConPage = {
           </Col>
           </>)}
       </Row>
-
+      */}
 
     </>
   ),
