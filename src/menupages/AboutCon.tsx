@@ -37,7 +37,19 @@ import ckitten from "./../images/artistalley/ckitten.jpg";
 import checkin01 from "./../images/checkin/checkin01.png";
 import checkin02 from "./../images/checkin/checkin02.png";
 
+import hoshibako from "./../images/artistalley/hoshibako.jpg";
+
 let official_artists = [
+    {
+        "name": <>HoskibakoWorks</>,
+        "image": hoshibako,
+        "location": "See Torino Plaza",
+        "website": "https://hoshibako.thebase.in/",
+        "description": ""
+    }
+]
+
+let old_official_artists = [
     {
         "name": <>Cloudie&shy;/Cookie&shy;tanuki&shy;art</>,
         "image": cookie,
@@ -252,7 +264,7 @@ export const aboutConPage = {
 
       */}
 
-      <h4 className="mt-3">TouhouFest 2025 Official Artists</h4>
+      <h4 className="mt-3">TouhouFest 2026 Official Artist</h4>
 
       <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
           {official_artists.map((artist, i) => <>
