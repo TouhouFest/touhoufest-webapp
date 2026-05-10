@@ -11,6 +11,7 @@ import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortaweso
 import { Card, Row, Col, Carousel, Image } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
+import thefixonwheels from "./../images/thefixonwheels.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
 import { maidacademy } from '../Utils';
 
@@ -50,7 +51,6 @@ export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>
-        <h4>Food Options</h4>
         <p>The below food options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
 
         <Row className="justify-content-center">
@@ -76,33 +76,16 @@ export const restarauntsPage = {
 
         <Col xs={12} md={6} lg={true}>
         <Card className="mt-2">
-            <Card.Header className="text-center small">Poutine Food Truck</Card.Header>
-            <Card.Img src={poutinebrothers} className="rounded-0"/>
+            <Card.Header className="text-center small">Burger Food Truck</Card.Header>
+            <Card.Img src={thefixonwheels} className="rounded-0"/>
             <Card.Body>
-                <Card.Title>Poutine Brothers</Card.Title>
+                <Card.Title>The Fix on Wheels</Card.Title>
                 <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
-                <Card.Text>Poutine Brothers will make their first appearance at this year's Touhoufest. They specialize in different styles of poutine. If you haven't had poutine before you're in for a treat. </Card.Text>
+                <Card.Text>The Fix on Wheels started as a way to bring the amazing food of The Fix Burger in Silver Lake to other neighborhoods in the greater Los Angeles area.</Card.Text>
             </Card.Body>
             <Card.Footer className="text-center small">
-                <Card.Link href="https://poutinebrothers.com/" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-                <Card.Link href="https://static1.squarespace.com/static/6232a315838eac42a1d9696c/t/678888d8ce614b2156b4f6ee/1737001177635/Poutine+Brothers+Website.pdf" target="_blank"><FontAwesomeIcon icon={faUtensils}/> Menu</Card.Link>
-            </Card.Footer>
-        </Card>
-        </Col>
-
-        <Col xs={12} md={6} lg={true}>
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Mexican Food Truck</Card.Header>
-            <Card.Img src={lupitastacos} className="rounded-0"/>
-            <Card.Body>
-                <Card.Title>Lupitas Tacos</Card.Title>
-                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
-                <Card.Text>Lupitas Tacos will be returning again this year. They are known for their delicious Mexican cuisine. Be on the look out for their Touhoufest themed dishes. 
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://www.instagram.com/lupitastacos/?hl=en" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-                <Card.Link href="https://www.bestfoodtrucks.com/truck/lupita-s-tacos/menu" target="_blank"><FontAwesomeIcon icon={faPepperHot}/> Menu</Card.Link>
+                <Card.Link href="https://www.yelp.com/biz/the-fix-on-wheels-los-angeles?dd_referrer=" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
+                <Card.Link href="https://thefixonwheels.com/menu/" target="_blank"><FontAwesomeIcon icon={faUtensils}/> Menu</Card.Link>
             </Card.Footer>
         </Card>
         </Col>
