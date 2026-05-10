@@ -160,9 +160,9 @@ export const aboutConPage = {
       </ul>
       <p><b>Registration</b></p>
       <ul>
-          <li>Friday: 3:00 PM - 8:00 PM</li>
-          <li>Saturday: 9:00 AM - 5:00 PM</li>
-          <li>Sunday: 9:00 AM - 3:00 PM</li>
+          <li>Friday: 3:00 PM - 7:00 PM</li>
+          <li>Saturday: 9:00 AM - 6:00 PM</li>
+          <li>Sunday: 9:00 AM - 4:00 PM</li>
       </ul>
       <p><b>Artist's Alley/Vendors*</b></p>
       <ul>
@@ -174,8 +174,8 @@ export const aboutConPage = {
       <p><b>Gaming*</b></p>
       <ul>
           <li>Friday: N/A</li>
-          <li>Saturday: 9:30AM - 10:30 PM</li>
-          <li>Sunday: 8:30 AM - 5:00 PM</li>
+          <li>Saturday: 9:00AM - 10:30 PM</li>
+          <li>Sunday: 9:00 AM - 5:00 PM</li>
       </ul>
       <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
 
