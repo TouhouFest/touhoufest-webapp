@@ -7,13 +7,16 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleInfo, faEarthAmericas, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faBroom, faCircleInfo, faEarthAmericas, faGlobeAmericas, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
 import { Image, Accordion, Card, ListGroup } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
-import { con_banner, WarningAlert } from "../Utils";
+import { con_banner, getColorState, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import touhoufest from "./../images/touhoufest.jpg";
+import touhoufest_dark from "./../images/touhoufest_dark.jpg";
 
 import fullweekend from "./../images/badges/fullweekend.jpg";
 import saturday from "./../images/badges/saturday.jpg";
@@ -34,7 +37,19 @@ import ckitten from "./../images/artistalley/ckitten.jpg";
 import checkin01 from "./../images/checkin/checkin01.png";
 import checkin02 from "./../images/checkin/checkin02.png";
 
+import hoshibako from "./../images/artistalley/hoshibako.jpg";
+
 let official_artists = [
+    {
+        "name": <>HoskibakoWorks</>,
+        "image": hoshibako,
+        "location": "See Torino Plaza",
+        "website": "https://hoshibako.thebase.in/",
+        "description": ""
+    }
+]
+
+let old_official_artists = [
     {
         "name": <>Cloudie&shy;/Cookie&shy;tanuki&shy;art</>,
         "image": cookie,
@@ -86,14 +101,15 @@ let past_artists = [
 
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
+  "displayTitle": false,
   "codename": "about",
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
-  "fluidImage": (<><Image src={con_banner} fluid /></>),
+  "fluidImage": (<><Image className="display-dark" src={touhoufest_dark} fluid /><Image className="display-light" src={touhoufest} fluid /></>),
   "body": (
     <>
       <div className="text-center">
         <h3 className="display-6">Welcome to TouhouFest!</h3>
-        <p className="lead">June 14th - 15th, 2025</p>
+        <p className="lead">June 20th - 21st, 2026</p>
       </div>
       <Row className="text-center">
         <Col><a href="https://discord.com/invite/touhoufest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
@@ -113,11 +129,11 @@ export const aboutConPage = {
         <p className="small mb-0"><a href="https://www.google.com/maps?ll=33.839401,-118.343938&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=13781372703427135255" target="_blank" rel="noreferrer">Google Maps Link (if embed isn't working)</a></p>
       </div>
       <p className="mt-3">
-        A Touhou fan event being held on June 14th - 15th, 2025, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
+        A Touhou Project-themed fan event being held on June 20st - 21st, 2026, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
 
       <h4>Instructions for Checking In Using QR Code</h4>
-      <p>TouhouFest tickets have now been updated to contain a <b> QR Code</b> for faster checkin! To pull it up, please follow these instructions:</p>
+      <p>TouhouFest tickets contain a <b> QR Code</b> for faster checkin. It should have been sent directly to your email address along with your ticket; but in case you don't have it handy, please follow these instructions to pull up your ticket's QR Code:</p>
       <ol>
         <li><a href="https://touhoufest.checkoutpage.com/portal" target="_blank" rel="noreferrer">Enter the TouhouFest Checkoutpage portal by clicking on this link.</a> You should be greeted with a webpage containing the below content:</li>
         <Row className="justify-content-center my-3">
@@ -138,27 +154,27 @@ export const aboutConPage = {
       <h4 className="mt-3">Operating Hours</h4>
       <p><b>General Con Hours</b></p>
       <ul>
-          <li>Friday: N/A</li>
-          <li>Saturday: 9:00 AM - 11:00 PM</li>
-          <li>Sunday: 9:00 AM - 6:00 PM</li>
+          <li>Friday: 3:00 PM - 8:00 PM</li>
+          <li>Saturday: 9:00 AM - 10:00 PM</li>
+          <li>Sunday: 8:00 AM - 6:00 PM</li>
       </ul>
       <p><b>Registration</b></p>
       <ul>
           <li>Friday: 3:00 PM - 7:00 PM</li>
-          <li>Saturday: 9:00 AM - 5:00 PM</li>
-          <li>Sunday: 9:00 AM - 3:00 PM</li>
+          <li>Saturday: 9:00 AM - 6:00 PM</li>
+          <li>Sunday: 9:00 AM - 4:00 PM</li>
       </ul>
       <p><b>Artist's Alley/Vendors*</b></p>
       <ul>
           <li>Friday: N/A</li>
-          <li>Saturday: 10:00 AM - 6:00 PM</li>
-          <li>Sunday: 10:00 AM - 5:00 PM</li>
+          <li>Saturday: 10:30 AM - 6:00 PM</li>
+          <li>Sunday: 9:00 AM - 4:00 PM</li>
       </ul>
       <p className="small">*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p>
       <p><b>Gaming*</b></p>
       <ul>
           <li>Friday: N/A</li>
-          <li>Saturday: 9:30AM - 10:30 PM</li>
+          <li>Saturday: 9:00AM - 9:00 PM</li>
           <li>Sunday: 9:00 AM - 5:00 PM</li>
       </ul>
       <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
@@ -233,6 +249,7 @@ export const aboutConPage = {
         </Accordion.Item>
       </Accordion>
 
+      {/* removed until requested by touhoufest staff
       <h4>TouhouFest 2025 Convention Badges</h4>
       <Row xs={2} md={3} lg={4} className="justify-content-center g-3">
         <Col><Image src={fullweekend} rounded fluid/></Col>
@@ -245,7 +262,9 @@ export const aboutConPage = {
         <Col><Image src={press} rounded fluid/></Col>
       </Row>
 
-      <h4 className="mt-3">TouhouFest 2025 Official Artists</h4>
+      */}
+
+      <h4 className="mt-3">TouhouFest 2026 Official Artist</h4>
 
       <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
           {official_artists.map((artist, i) => <>
@@ -262,6 +281,7 @@ export const aboutConPage = {
           </>)}
       </Row>
 
+      {/*
       <h5 className="mt-3">Past Official TouhouFest Artists</h5>
 
       <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
@@ -278,7 +298,7 @@ export const aboutConPage = {
           </Col>
           </>)}
       </Row>
-
+      */}
 
     </>
   ),
