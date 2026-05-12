@@ -11,8 +11,9 @@ import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortaweso
 import { Card, Row, Col, Carousel, Image } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
+import thefixonwheels from "./../images/thefixonwheels.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
-import { maidacademy } from '../Utils';
+import MakeGenericCard, { maidacademy } from '../Utils';
 
 import mainmenu from "./../images/maidacademymenu/mainmenu.jpg";
 import entry01 from "./../images/maidacademymenu/entry01.jpg";
@@ -50,77 +51,42 @@ export const restarauntsPage = {
     "header": (<><FontAwesomeIcon icon={faUtensils} fixedWidth></FontAwesomeIcon> Food</>),
     "fluidImage": (<></>),
     "body": (<>
-        <h4>Food Options</h4>
         <p>The below food options are available TouhouFest for those interested. Locations are indicated for each food option.</p> 
+
 
         <Row className="justify-content-center">
 
         <Col xs={12} md={6} lg={true}>
-
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Japanese Food Truck</Card.Header>
-            <Card.Img src={okamoto} className="rounded-0"/>
-            <Card.Body>
-                <Card.Title>Okamoto Kitchen</Card.Title>
-                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
-                <Card.Text>Okamoto Kitchen brings people to authentic, lesser known Japanese dishes like Chicken Nanban, Cheese, Mochi, and Classic Style Japanese Curry.</Card.Text>
-                <Card.Text>The vibrant Akiba-style decor and engaging customer service makes this food truck an experience you'll want to share with your friends!</Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://okamotokitchen.com/#" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-                <Card.Link href="https://okamotokitchen.com/TakeOutMenu_Current.pdf" target="_blank"><FontAwesomeIcon icon={faBowlFood}/> Menu</Card.Link>
-            </Card.Footer>
-        </Card>
-
+            <MakeGenericCard subtitle="Japanese Food Truck" title="Okamoto Kitchen" picture={okamoto} location="Front Circular Drive" links={
+                [
+                    {"link": "https://okamotokitchen.com/#", "title": <><FontAwesomeIcon icon={faGlobeAmericas}/> Website</>}, 
+                    {"link": "https://okamotokitchen.com/TakeOutMenu_Current.pdf", "title": <><FontAwesomeIcon icon={faBowlFood}/> Menu</>}
+                ]
+            }>
+                <p>Okamoto Kitchen brings people to authentic, lesser known Japanese dishes like Chicken Nanban, Cheese, Mochi, and Classic Style Japanese Curry.</p>
+                <p>The vibrant Akiba-style decor and engaging customer service makes this food truck an experience you'll want to share with your friends!</p>
+            </MakeGenericCard>
         </Col>
 
         <Col xs={12} md={6} lg={true}>
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Poutine Food Truck</Card.Header>
-            <Card.Img src={poutinebrothers} className="rounded-0"/>
-            <Card.Body>
-                <Card.Title>Poutine Brothers</Card.Title>
-                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
-                <Card.Text>Poutine Brothers will make their first appearance at this year's Touhoufest. They specialize in different styles of poutine. If you haven't had poutine before you're in for a treat. </Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://poutinebrothers.com/" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-                <Card.Link href="https://static1.squarespace.com/static/6232a315838eac42a1d9696c/t/678888d8ce614b2156b4f6ee/1737001177635/Poutine+Brothers+Website.pdf" target="_blank"><FontAwesomeIcon icon={faUtensils}/> Menu</Card.Link>
-            </Card.Footer>
-        </Card>
-        </Col>
+            <MakeGenericCard subtitle="Burger Food Truck" title="The Fix on Wheels" picture={thefixonwheels} location="Front Circular Drive" links={
+                [
+                    {"link": "https://www.yelp.com/biz/the-fix-on-wheels-los-angeles?dd_referrer=", "title": <><FontAwesomeIcon icon={faGlobeAmericas}/> Website</>}, 
+                    {"link": "https://thefixonwheels.com/menu/", "title": <><FontAwesomeIcon icon={faUtensils}/> Menu</>}
+                ]
+            }>
+                <p>The Fix on Wheels started as a way to bring the amazing food of The Fix Burger in Silver Lake to other neighborhoods in the greater Los Angeles area.</p>
+            </MakeGenericCard>
+       </Col>
 
         <Col xs={12} md={6} lg={true}>
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Mexican Food Truck</Card.Header>
-            <Card.Img src={lupitastacos} className="rounded-0"/>
-            <Card.Body>
-                <Card.Title>Lupitas Tacos</Card.Title>
-                <Card.Subtitle className="mb-2">Location: Circular Drive</Card.Subtitle>
-                <Card.Text>Lupitas Tacos will be returning again this year. They are known for their delicious Mexican cuisine. Be on the look out for their Touhoufest themed dishes. 
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://www.instagram.com/lupitastacos/?hl=en" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-                <Card.Link href="https://www.bestfoodtrucks.com/truck/lupita-s-tacos/menu" target="_blank"><FontAwesomeIcon icon={faPepperHot}/> Menu</Card.Link>
-            </Card.Footer>
-        </Card>
-        </Col>
-
-        <Col xs={12} md={6} lg={true}>
-        <Card className="mt-2">
-            <Card.Header className="text-center small">Snacks & Light Refreshments</Card.Header>
-            <Card.Img src={maidacademy} className="rounded-0"/>
-            <Card.Body>
-                <Card.Title>Maid Academy Cafe</Card.Title>
-                <Card.Subtitle className="mb-2">Location: Torino Plaza</Card.Subtitle>
-                <Card.Text>Maid Academy Cafe is one of vendors/performers and will also be selling a selection of light refreshments and drinks at their vendors booth located in Torino Plaza.
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer className="text-center small">
-                <Card.Link href="https://linktr.ee/maidacademy" target="_blank"><FontAwesomeIcon icon={faGlobeAmericas}/> Link</Card.Link>
-            </Card.Footer>
-        </Card>
+            <MakeGenericCard subtitle='Snacks & Light Refreshments' title="Maid Academy Cafe" location='Torino Plaza' picture={maidacademy} links={
+                [
+                        {"link": "https://linktr.ee/maidacademy", "title": <><FontAwesomeIcon icon={faGlobeAmericas}/> Website</>}, 
+                ]
+            }>
+                <p>Maid Academy Cafe is one of vendors/performers and will also be selling a selection of light refreshments and drinks at their vendors booth located in Torino Plaza.</p>
+            </MakeGenericCard>
         </Col>
         </Row>
 
