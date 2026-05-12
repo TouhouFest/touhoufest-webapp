@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faC, faCircle, faCircleExclamation, faGamepad, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faB, faC, faCaretRight, faCircle, faCircleExclamation, faGamepad, faLocationDot, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -179,4 +179,22 @@ export function MakeGoheiHeader({content, vertical_margin=true, larger_header=fa
       <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
     </Row>
 );
+}
+
+export default function MakeGenericCard({subtitle,title,picture,location,rooms,links, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:string[], links?:Record<string,JSX.Element | string>[], children:any}) {
+    return (<>
+        {subtitle && <h6>{subtitle}</h6>}
+        <h4>{title}</h4>
+        <Image src={picture} fluid rounded/>
+        {location && <p className="mt-3"><span className="location-styling"><FontAwesomeIcon icon={faLocationDot}/> {location}</span></p>}
+        {children}
+        {rooms && <p>{rooms.map((room) => <span>{room}</span>)}</p>}
+        <Row>
+            {links && links.map(
+                (link) => <Col className="text-center"><h5 className="fw-normal"><a className="text-decoration-none text-reset" href={link["link"]} target="_blank">{link["title"]} <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5></Col>
+            )}
+        </Row>
+
+        <hr />
+    </>);
 }
