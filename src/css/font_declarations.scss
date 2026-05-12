@@ -2,9 +2,11 @@
 // assign fonts to NATIVE elements only 
 // class-level and id-level font assignment to be handled in separate files
 
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @font-face {
   font-family: "Font Awesome 6 Free";
-  src: url('../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf');
+  src: url(fonts/fa-solid-900.ttf);
   font-weight: 900;
 }
 
