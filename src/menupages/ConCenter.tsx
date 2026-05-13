@@ -62,7 +62,7 @@ let map_select = [
             </Col>
             <Col xs={12} md={6}>
 
-                <b>Entry Foyer</b>
+                <b>Entry Foyer (Ken Miller Rec Center)</b>
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="10"/> Community Booths</li>
                     <li><CircledBullets argument="restroom"/> Restrooms</li>
@@ -145,10 +145,9 @@ let map_select = [
                 </ul>
             </Col>
             <Col>
-                <b>Entry Foyer</b>
+                <b>Entry Foyer (Ken Miller Rec Center)</b>
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="10"/> Community Booths: Booths FT1 ~ FT8</li>
-                    <li><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</li>
                     <li><CircledBullets argument="restroom"/> Restrooms</li>
                 </ul>
 
