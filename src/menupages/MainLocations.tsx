@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
-import { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
+import MakeGenericCard, { CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
 import { Figure, Row, Col } from 'react-bootstrap';
 
 import panelroom from "./../images/panelroom.jpg";
@@ -16,185 +16,123 @@ import con_banner from "./../con_banner.jpg";
 import childrensartwing from "./../images/childrensartwing.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 
+let roomlist = [
+    {
+        "title": "George Nakano Theatre",
+        "picture": nakanotheatre,
+        "rooms": [
+            <><CircledBullets argument="1"/> Registration</>,
+            <><CircledBullets argument="2"/> Gaming Hall</>,
+            <><CircledBullets argument="restroom"/> Restrooms</>
+        ],
+        "content": <p>The George Nakano Theatre is the right-most building of the convention. The following event spaces are located here:</p>
+    },
+    {
+        "title": "Entry Plaza",
+        "picture": entryplaza,
+        "rooms": [
+            <><CircledBullets argument="3"/> Vendor Booths</>,
+            <><CircledBullets argument="4"/> Info Booth</>
+        ],
+        "content": <p>The Entry Plaza is the the first major area of TouhouFest that you will encounter if you enter via the main entrance. The following event spaces are hosted here:</p>
+    },
+    {
+        "title": "Toyota Hall",
+        "picture": toyota,
+        "rooms": [
+            <><CircledBullets argument="5"/> Artist Alley & Cosplay Booths</>,
+            <><CircledBullets argument="B"/> Gaming Ops</>,
+            <><CircledBullets argument="restroom"/> Restrooms</>
+        ],
+        "content": <p>The Toyota Meeting Hall is to the immediate left of the main entrance (facing towards it) and to the left of stage (facing away from it). The following event spaces are located here:</p>
+    },
+    {
+        "title": "Torino Plaza",
+        "picture": nakanotheatre,
+        "rooms": [
+            <><CircledBullets argument="3"/> Vendor Booths</>,
+            <><CircledBullets argument="6"/> Guest Booths</>,
+            <><CircledBullets argument="7"/> Main Stage</>,
+            <><CircledBullets argument="8"/> Official TouhouFest Artists</>
+        ],
+        "content": <p>The Torino Plaza is the main congregation area of the con and is surrounded by the Assembly Hall, Entry Foyer, Ken Miller Rec Center, and the Toyota Hall. With the massive stage towards the rear, it should be easy to spot. The following event spaces are located here:</p>
+    },
+    {
+        "title": "Entry Foyer",
+        "picture": kenmiller,
+        "rooms": [
+            <><CircledBullets argument="10"/> Community Booths</>,
+            <><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</>
+
+        ],
+        "content": <p>The Entry Foyer is the exterior of the Ken Miller Rec Center, namely the room with the alternate exit leading out of the convention. The following event spaces are located here:</p>
+    },
+    {
+        "title": "Assembly Hall",
+        "picture": assemblyhall,
+        "rooms": [
+            <><CircledBullets argument="11"/> Theatre (Main Events)</>
+        ],
+        "content": <p>The Assembly Hall is the left-most building of the convention center and is left from the main stage. The following event spaces are located here:</p>
+    },
+    {
+        "title": "Pine Wind Garden",
+        "picture": pinewindgarden,
+        "rooms": [
+            <><CircledBullets argument="12"/> Cosplay Meetups</>
+        ],
+        "content": <p>The Pine Wind Garden is the rearmost space in the convention. With all the lush plants and decoration it should not be too hard to miss. The following event spaces are located here:</p>
+    },
+    {
+        "title": "Children's Art Wing",
+        "picture": nakanotheatre,
+        "rooms": [
+            <><CircledBullets argument="13"/> Panels</>,
+            <><CircledBullets argument="restroom"/> Restrooms</>
+
+        ],
+        "content": <p>The Children's Art Wing is located just to the left of the Pine Wind Garden. The below event spaces are located here:</p>
+    },
+    {
+        "title": "Drawing & Painting Studio",
+        "picture": drawpaint,
+        "rooms": [
+            <><CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait</>
+        ],
+        "content": <p>The Drawing and Painting Studio is the nothernmost area of the conventino, just behind the Pine Wind Garden and the Children's Art Wing. Events held here:</p>
+    },
+    {
+        "title": "Front Circular Drive",
+        "picture": con_banner,
+        "rooms": [
+            <><CircledBullets argument="15"/> Food Trucks</>,
+            <><CircledBullets argument="16"/> Prop Check</>
+        ],
+        "content": <p>This is where the main entrance of the convention center is. It will have a sign that says "Torrance Cultural Arts Center". The following event spaces are located here:</p>
+    },
+    {
+        "title": "Garden Room B",
+        "picture": panelroom,
+        "rooms": [
+            <><CircledBullets argument="C"/> Staff Ops</>
+        ],
+        "content": <p>Garden Room B is located towards the rear of the convention center, in front of the Pine Wind Garden and behind the Torino Plaza. The following event spaces are located here:</p>
+    },
+]
+
 export const mainLocationsPage= {
   "codename": "mainlocations",
   "header": (<><FontAwesomeIcon icon={faBuilding} fixedWidth></FontAwesomeIcon> Key Locations</>),
   "fluidImage": (<></>),
   "body": (
     <>
-        <h4>George Nakano Theatre</h4>
-        <p>The George Nakano Theatre is the right-most building of the convention. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="1"/> Registration</li>
-            <li><CircledBullets argument="2"/> Gaming Hall</li>
-            <li><CircledBullets argument="restroom"/> Restrooms</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8}>
-                <Figure>
-                    <Figure.Image src={nakanotheatre} fluid rounded></Figure.Image>
-                    <Figure.Caption>George Nakano Theatre</Figure.Caption>
-                </Figure>
-            </Col>
+        <Row xs="1" md="2">
+            {roomlist.map((room) => {return (
+                <Col>
+                    <MakeGenericCard title={room["title"]} picture={room["picture"]} rooms={room["rooms"]}>{room["content"]}</MakeGenericCard>     
+                </Col>
+            )})}
         </Row>
-
-        <h4>Entry Plaza</h4>
-        <p>The Entry Plaza is the the first major area of TouhouFest that you will encounter if you enter via the main entrance. The following event spaces are hosted here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="3"/> Vendor Booths</li>
-            <li><CircledBullets argument="4"/> Info Booth</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8}>
-                <Figure>
-                    <Figure.Image src={entryplaza} fluid rounded></Figure.Image>
-                    <Figure.Caption>Entry Plaza (when entering from the Nakano Theatre entrance)</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Toyota Hall</h4>
-        <p>The Toyota Meeting Hall is to the immediate left of the main entrance (facing towards it) and to the left of stage (facing away from it). The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="5"/> Artist Alley & Cosplay Booths</li>
-            <li><CircledBullets argument="B"/> Gaming Ops</li>
-            <li><CircledBullets argument="restroom"/> Restrooms</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8}>
-                <Figure>
-                    <Figure.Image src={toyota} fluid rounded></Figure.Image>
-                    <Figure.Caption>Toyota Meeting Hall</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Torino Plaza</h4>
-        <p>The Torino Plaza is the main congregation area of the con and is surrounded by the Assembly Hall, Entry Foyer, Ken Miller Rec Center, and the Toyota Hall. With the massive stage towards the rear, it should be easy to spot. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="3"/> Vendor Booths</li>
-            <li><CircledBullets argument="6"/> Guest Booths</li>
-            <li><CircledBullets argument="7"/> Main Stage</li>
-            <li><CircledBullets argument="8"/> Official TouhouFest Artists</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={torinoplaza} fluid rounded></Figure.Image>
-                    <Figure.Caption>Torino Plaza</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Ken Miller Rec Center</h4>
-        <p>The Ken Miller Rec Center rooms are the ones directly facing the main stage. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="9"/> Arcade Cabinets</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={kenmiller} fluid rounded/>
-                    <Figure.Caption>Ken Miller Recreation Center</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Entry Foyer</h4>
-        <p>The Entry Foyer is the exterior of the Ken Miller Rec Center, namely the room with the alternate exit leading out of the convention. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="10"/> Community Booths</li>
-            <li><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</li>
-        </ul>
-
-        <h4>Assembly Hall</h4>
-        <p>The Assembly Hall is the left-most building of the convention center and is left from the main stage. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={assemblyhall} fluid rounded></Figure.Image>
-                    <Figure.Caption>Assembly Hall (furniture may be adjusted depending on the event)</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Pine Wind Garden</h4>
-        <p>The Pine Wind Garden is the rearmost space in the convention. With all the lush plants and decoration it should not be too hard to miss. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="12"/> Cosplay Meetups</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={pinewindgarden} fluid rounded/>
-                    <Figure.Caption>Pine Wind Garden</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Children's Art Wing</h4>
-        <p>The Children's Art Wing is located just to the left of the Pine Wind Garden. The below event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="13"/> Panels</li>
-            <li><CircledBullets argument="restroom"/> Restrooms</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={childrensartwing} fluid rounded/>
-                    <Figure.Caption>Children's Art Wing</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Drawing & Painting Studio</h4>
-        <p>The Drawing and Painting Studio is the nothernmost area of the conventino, just behind the Pine Wind Garden and the Children's Art Wing. Events held here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={drawpaint} fluid rounded/>
-                    <Figure.Caption>Drawing & Painting Studio</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-
-        <h4>Front Circular Drive</h4>
-        <p>This is where the main entrance of the convention center is. It will have a sign that says "Torrance Cultural Arts Center". The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="15"/> Food Trucks</li>
-            <li><CircledBullets argument="16"/> Prop Check</li>
-        </ul>
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8}>
-                <Figure>
-                    <Figure.Image src={con_banner} fluid rounded/>
-                    <Figure.Caption>Front Circular Drive</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-        <h4>Garden Room B</h4>
-        <p>Garden Room B is located towards the rear of the convention center, in front of the Pine Wind Garden and behind the Torino Plaza. The following event spaces are located here:</p>
-        <ul className="list-unstyled">
-            <li><CircledBullets argument="C"/> Staff Ops</li>
-        </ul>
-
-        <Row className="justify-content-center">
-            <Col xs={12} sm={10} lg={8} className="text-center">
-                <Figure>
-                    <Figure.Image src={panelroom} fluid rounded></Figure.Image>
-                    <Figure.Caption>Garden Room B</Figure.Caption>
-                </Figure>
-            </Col>
-        </Row>
-
-   </>
+  </>
   ),
 }

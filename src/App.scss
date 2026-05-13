@@ -37,6 +37,13 @@ hr {
   opacity: 1;
 }
 
+.room-badge {
+  background-color: declared_colors.$readable-red;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border-radius: 50px;
+  color: white;
+}
+
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
 
