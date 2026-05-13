@@ -107,7 +107,7 @@ let map_select = [
     {
         "src": artistalleymap,
         "caption": "Map of Artist Alley",
-        "content": <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths)</p>,
+        "content": <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley)</p>,
         "title": "Artist Alley",
         "location_name": "Toyota Meeting Hall"
     },
@@ -135,8 +135,8 @@ let map_select = [
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="3"/> Vendor Booths: Booths FB1 ~ FB10</li>
                     <li><CircledBullets argument="6"/> Guest Booths</li>
-                    <li><CircledBullets argument="7"/> Main Stage</li>
-                    <li><CircledBullets argument="8"/> Official Touhou Artists</li>
+                    <li><CircledBullets argument="7"/> Torino Plaza Stage</li>
+                    <li><CircledBullets argument="8"/> Official TouhouFest Artists</li>
                 </ul>
 
                 <b>Ken Miller Rec Center</b>
@@ -153,7 +153,7 @@ let map_select = [
 
                 <b>Assembly Hall</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
+                    <li><CircledBullets argument="11"/> Cosplay Exhibition, Fan Games</li>
                 </ul>
             </Col>
         </Row>
