@@ -8,7 +8,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
-import {MakeGenericCard, CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre } from '../Utils';
+import {MakeGenericCard, CircledBullets, torinoplaza, assemblyhall, kenmiller, pinewindgarden, toyota, entryplaza, nakanotheatre, jamesarmstrongtheater } from '../Utils';
 import { Figure, Row, Col } from 'react-bootstrap';
 
 import panelroom from "./../images/panelroom.jpg";
@@ -53,6 +53,14 @@ let roomlist = [
             <><CircledBullets argument="6"/> Guest Booths</>,
             <><CircledBullets argument="7"/> Torino Plaza Stage</>,
             <><CircledBullets argument="8"/> Official TouhouFest Artists</>
+        ],
+        "content": <p>The Torino Plaza is the main congregation area of the con and is surrounded by the Assembly Hall, Entry Foyer, Ken Miller Rec Center, and the Toyota Hall. With the massive stage towards the rear, it should be easy to spot. The following event spaces are located here:</p>
+    },
+    {
+        "title": "James Armstrong Theater",
+        "picture": jamesarmstrongtheater,
+        "rooms": [
+            <><CircledBullets argument="9"/> James Armstrong Theater (Sat.)</>
         ],
         "content": <p>The Torino Plaza is the main congregation area of the con and is surrounded by the Assembly Hall, Entry Foyer, Ken Miller Rec Center, and the Toyota Hall. With the massive stage towards the rear, it should be easy to spot. The following event spaces are located here:</p>
     },
