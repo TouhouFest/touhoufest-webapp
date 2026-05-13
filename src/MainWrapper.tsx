@@ -11,7 +11,7 @@ import Dataset from "./Dataset";
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import DarkModeSelector from './DarkModeSelector';
-import { COLORSTATUS } from './Utils';
+import { COLORSTATUS, getColorState } from './Utils';
 import MainMenuOffcanvas from './MainMenuOffcanvas';
 import {App as CapacitorApp} from '@capacitor/app';
 
@@ -59,27 +59,7 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
   // state variables/functions for setting color theme
   // (i cant beievei its this much typescript all for changing the color theme :skull:)
   const [oppositecolorState, setOppositeColorState] = useState(getColorState());
-  function getColorState() {
-      let status:string|null = localStorage.getItem(COLORSTATUS);
-      if(status === null ){
-        if((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.setAttribute('data-bs-theme','dark');
-          return faToriiGate;
-        }
-        else {
-          document.documentElement.setAttribute('data-bs-theme','light');
-          return faBroom;
-        }
-      }
-      if(status === "light") {
-        document.documentElement.setAttribute('data-bs-theme','light');
-        return faBroom;
-      }
-      else {
-        document.documentElement.setAttribute('data-bs-theme','dark');
-        return faToriiGate;
-      }
-  }
+
   function grabTrueColorState(input:IconDefinition) {
     if(input === faToriiGate) {return faBroom;}
     else{ return faToriiGate;}
