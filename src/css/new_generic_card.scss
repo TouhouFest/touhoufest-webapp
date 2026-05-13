@@ -1,0 +1,59 @@
+@use 'declared_colors.scss';
+
+.location-styling {
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+hr {
+  border: 3px dashed declared_colors.$readable-red;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.room-badge {
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border-radius: 50px;
+
+  .fa-layers .fa-circle, .fa-square {
+        color: white;
+        }
+
+}
+
+[data-bs-theme="light"] {
+    .room-badge {
+    background-color: declared_colors.$readable-red;
+    color: white;
+
+    .fa-layers {
+        svg:not(.fa-circle,.fa-square) {
+        color: declared_colors.$readable-red;
+        }
+
+    }
+    }
+}
+[data-bs-theme="dark"] {
+    .room-badge {
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+    color: white;
+
+    .fa-layers {
+        svg:not(.fa-circle,.fa-square) {
+        color: declared_colors.$dark-gohei-header-bkgnd;
+        }
+
+    }
+    }
+  .location-styling {
+    border: 1px solid white;
+  }
+
+  hr {
+    border: 3px dashed declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+
+}

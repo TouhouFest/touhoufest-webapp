@@ -7,6 +7,7 @@
 @use 'css/offcanvas.scss';
 @use 'css/bottom_bar.scss';
 @use 'css/filter_options.scss';
+@use 'css/new_generic_card.scss';
 
 .eventDescription {
   white-space: pre-line;
@@ -25,25 +26,6 @@ body {
   border-radius: 50px;
 }
 
-.location-styling {
-  border-radius: 50px;
-  border: 1px solid black;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-}
-
-hr {
-  border: 3px dashed declared_colors.$readable-red;
-  background-color: transparent;
-  opacity: 1;
-}
-
-.room-badge {
-  background-color: declared_colors.$readable-red;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-  border-radius: 50px;
-  color: white;
-}
-
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
 
@@ -58,13 +40,6 @@ hr {
 
 [data-bs-theme="dark"] {
 
-  .location-styling {
-    border: 1px solid white;
-  }
-
-  hr {
-    border: 3px dashed declared_colors.$dark-gohei-header-bkgnd;
-  }
 
   body {
     background-color: declared_colors.$color-dark;
