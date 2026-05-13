@@ -181,19 +181,21 @@ export function MakeGoheiHeader({content, vertical_margin=true, larger_header=fa
 );
 }
 
-export default function MakeGenericCard({subtitle,title,picture,location,rooms,links, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:string[], links?:Record<string,JSX.Element | string>[], children:any}) {
+export default function MakeGenericCard({subtitle,title,picture,location,rooms,links, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:JSX.Element[], links?:Record<string,JSX.Element | string>[], children:any}) {
     return (<>
         {subtitle && <h6>{subtitle}</h6>}
         <h4>{title}</h4>
-        <Image src={picture} fluid rounded/>
-        {location && <p className="mt-3"><span className="location-styling"><FontAwesomeIcon icon={faLocationDot}/> {location}</span></p>}
+        <Image src={picture} fluid rounded className="mb-3"/>
+        {location && <p><span className="location-styling"><FontAwesomeIcon icon={faLocationDot}/> {location}</span></p>}
         {children}
-        {rooms && <p>{rooms.map((room) => <span>{room}</span>)}</p>}
-        <Row>
-            {links && links.map(
+        {rooms && <Row className="gx-2 gy-3">
+            {rooms.map((room) => <Col xs="auto"><span className="room-badge">{room}</span></Col>)}
+        </Row>}
+        {links && <Row>
+            {links.map(
                 (link) => <Col className="text-center"><h5 className="fw-normal"><a className="text-decoration-none text-reset" href={link["link"]} target="_blank">{link["title"]} <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5></Col>
             )}
-        </Row>
+        </Row>}
 
         <hr />
     </>);
