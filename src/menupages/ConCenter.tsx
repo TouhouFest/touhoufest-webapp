@@ -19,72 +19,9 @@ let map_select = [
     {
         "src": touhoufest_map,
         "caption": "Map of the main areas of TouhouFest",
-        "content": <>test</>,
-        "title": "Event",
-        "location_name": "Torrance Cultural Arts Center"
-    },
-    {
-        "src": artistalleymap,
-        "caption": "Map of Artist Alley",
-        "content": <>test</>,
-        "title": "Artist Alley",
-        "location_name": "Toyota Meeting Hall"
-    },
-    {
-        "src": vendorsmap,
-        "caption": "Map of Vendors",
-        "content": <>test</>,
-        "title": "Vendors Map in Entry Plaza",
-        "location_name": "Entry Plaza"
-    },
-    {
-        "src": torinoplazamap,
-        "caption": "Map of Vendors at Torino Plaza",
-        "content": <>test</>,
-        "title": "Torino Plaza Map",
-        "location_name": "Torino Plaza"
-    },
-    {
-        "src": gamingmap,
-        "caption": "Map of Gaming at Toyota Hall",
-        "content": <>test</>,
-        "title": "Gaming Hall Map",
-        "location_name": "Toyota Hall"
-    }
-];
-
-function MapModals(){
-
-    const [selectedMap, setSelectedMap] = useState(0);
-
-    return (<>
-        <p>Pinch to focus in/zoom on all maps as needed.</p>
-
-        <p>View Map:</p>
-
-        <Form.Select aria-label="map-select">
-            {map_select.map((map, idx) => <option onClick={(e) => setSelectedMap(e.target.value)} value={idx}>{map["title"]}</option>)}
-        </Form.Select>
-
-        <h4 className="mt-3">{map_select[selectedMap]["title"]}</h4>
-        <Row className="justify-content-center">
-            <Col xs={12} md={10} className="text-center">
-                <GlobalTransformWrapper src={map_select[selectedMap]["src"]} caption={map_select[selectedMap]["caption"]}/>
-            </Col>
-        </Row>
-
-        <p className="text-center">{<MakeLocationBadge location={map_select[selectedMap]["location_name"]}/>}</p>
-
-        <h4>Map Details</h4>
-
-        {map_select[selectedMap]["content"]}
-
-        <h4>Main TouhouFest Map</h4>
-        <Row>
-            <Col xs={12} lg={6}>
-                <GlobalTransformWrapper src={touhoufest_map} caption="Map of the main areas of TouhouFest"/>
-            </Col>
-            <Col xs={12} md={6} lg={3}>
+        "content": (
+            <Row>
+            <Col xs={12} md={6}>
                 <p>See below for convention spaces/buildings and map locations:</p>
 
                 <b>George Nakano Theatre</b>
@@ -124,7 +61,7 @@ function MapModals(){
                 </ul>
 
             </Col>
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} md={6}>
 
                 <b>Entry Foyer</b>
                 <ul className="list-unstyled">
@@ -168,25 +105,36 @@ function MapModals(){
                 <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> Any buildings/areas not explicitly listed above are <b>not</b> being used by TouhouFest, and should be considered off-limits.</p>
 
             </Col>
-        </Row>
 
-        <Row>
-            <Col xs={12} lg={6}>
-                <h4>Artist Alley Map</h4>
-                <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths)</p>
-                <GlobalTransformWrapper src={artistalleymap} caption="Map of Artist Alley"/>
-            </Col>
-            <Col xs={12} lg={6}>
-                <h4>Vendors Map in Entry Plaza</h4>
-                <p>The entire below map is enclosed in the Entry Plaza. Nearby locations are also labeled. Summary of listed booths in Entry Plaza:</p>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="3"/> Vendor Booths: Booths V01 ~ V08 and Booths V09 ~ V17</li>
-                    <li><CircledBullets argument="4"/> Info Booth: Booths V09 & V10</li>
-                </ul>
-                <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
-            </Col>
-        </Row>
-        <h5>Torino Plaza Map</h5>
+            </Row>
+        ),
+        "title": "Event",
+        "location_name": "Torrance Cultural Arts Center"
+    },
+    {
+        "src": artistalleymap,
+        "caption": "Map of Artist Alley",
+        "content": <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths)</p>,
+        "title": "Artist Alley",
+        "location_name": "Toyota Meeting Hall"
+    },
+    {
+        "src": vendorsmap,
+        "caption": "Map of Vendors",
+        "content": (<>
+            <p>The entire below map is enclosed in the Entry Plaza. Nearby locations are also labeled. Summary of listed booths in Entry Plaza:</p>
+            <ul className="list-unstyled">
+                <li><CircledBullets argument="3"/> Vendor Booths: Booths V01 ~ V08 and Booths V09 ~ V17</li>
+                <li><CircledBullets argument="4"/> Info Booth: Booths V09 & V10</li>
+            </ul>
+        </>),
+        "title": "Vendors Map in Entry Plaza",
+        "location_name": "Entry Plaza"
+    },
+    {
+        "src": torinoplazamap,
+        "caption": "Map of Vendors at Torino Plaza",
+        "content": (<>
         <p>The below map is enclosed within the Torino Plaza and also shows locations of nearby areas at the convention. Summary of areas included below:</p>
         <Row xs={1} md={2}>
             <Col>
@@ -217,19 +165,45 @@ function MapModals(){
                 </ul>
             </Col>
         </Row>
+
+        </>),
+        "title": "Torino Plaza Map",
+        "location_name": "Torino Plaza"
+    },
+    {
+        "src": gamingmap,
+        "caption": "Map of Gaming at Toyota Hall",
+        "content": <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/> Gaming Hall)</p>,
+        "title": "Gaming Hall Map",
+        "location_name": "Toyota Hall"
+    }
+];
+
+function MapModals(){
+
+    const [selectedMap, setSelectedMap] = useState(0);
+
+    return (<>
+        <p>Pinch to focus in/zoom on all maps as needed.</p>
+
+        <p>View Map:</p>
+
+        <Form.Select aria-label="map-select">
+            {map_select.map((map, idx) => <option onClick={(e) => setSelectedMap(e.target.value)} value={idx}>{map["title"]}</option>)}
+        </Form.Select>
+
+        <h4 className="mt-3">{map_select[selectedMap]["title"]}</h4>
         <Row className="justify-content-center">
-            <Col xs={12} lg={8}>
-                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza"/>
+            <Col xs={12} md={10} className="text-center">
+                <GlobalTransformWrapper src={map_select[selectedMap]["src"]} caption={map_select[selectedMap]["caption"]}/>
             </Col>
         </Row>
 
-        <h4>Gaming Hall Map</h4>
-        <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/> Gaming Hall)</p>
-        <Row className="justify-content-center">
-            <Col xs={12} md={10} lg={6}>
-                <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
-            </Col>
-        </Row>
+        <p className="text-center">{<MakeLocationBadge location={map_select[selectedMap]["location_name"]}/>}</p>
+
+        <h4>Map Details</h4>
+
+        {map_select[selectedMap]["content"]}
     </>);
 }
 
