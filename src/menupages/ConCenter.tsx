@@ -8,16 +8,55 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faCircleInfo} from '@fortawesome/free-solid-svg-icons';
-import { Row, Col } from 'react-bootstrap';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap, WarningAlert } from '../Utils';
+import { Row, Col, Dropdown, Form } from 'react-bootstrap';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, gamingmap, WarningAlert, MakeLocationBadge } from '../Utils';
 import touhoufest_map from "./../images/touhoufest_map.png";
 
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
+import { useState } from 'react';
+
+let map_select = [
+    {
+        "src": touhoufest_map,
+        "caption": "Map of the main areas of TouhouFest",
+        "content": <>test</>,
+        "title": "Event",
+        "location_name": "Torrance Cultural Arts Center"
+    },
+    {
+        "src": artistalleymap,
+        "caption": "Map of Artist Alley",
+        "content": <>test</>,
+        "title": "Artist Alley",
+        "location_name": "Toyota Meeting Hall"
+    }
+];
 
 function MapModals(){
 
+    const [selectedMap, setSelectedMap] = useState(0);
+
     return (<>
         <p>Pinch to focus in/zoom on all maps as needed.</p>
+
+        <p>View Map:</p>
+
+        <Form.Select aria-label="mao-select">
+            {map_select.map((map, idx) => <option onClick={(e) => setSelectedMap(e.target.value)} value={idx}>{map["title"]}</option>)}
+        </Form.Select>
+
+        <h4 className="mt-3">{map_select[selectedMap]["title"]}</h4>
+        <Row className="justify-content-center">
+            <Col xs={12} md={10}>
+                <GlobalTransformWrapper src={map_select[selectedMap]["src"]} caption="Map of Artist Alley"/>
+            </Col>
+        </Row>
+
+        <p className="text-center">{<MakeLocationBadge location={map_select[selectedMap]["location_name"]}/>}</p>
+
+        <h4>Map Details</h4>
+
+        {map_select[selectedMap]["content"]}
 
         <h4>Main TouhouFest Map</h4>
         <Row>

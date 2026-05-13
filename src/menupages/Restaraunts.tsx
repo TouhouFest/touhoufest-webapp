@@ -13,7 +13,7 @@ import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
 import thefixonwheels from "./../images/thefixonwheels.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
-import MakeGenericCard, { maidacademy } from '../Utils';
+import {MakeGenericCard, maidacademy } from '../Utils';
 
 import mainmenu from "./../images/maidacademymenu/mainmenu.jpg";
 import entry01 from "./../images/maidacademymenu/entry01.jpg";
