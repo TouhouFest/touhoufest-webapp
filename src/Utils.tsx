@@ -1,5 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faB, faC, faCaretRight, faCircle, faCircleExclamation, faGamepad, faLocationDot, faRestroom, faSquare } from '@fortawesome/free-solid-svg-icons';
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faB, faBroom, faC, faCircle, faCircleExclamation, faGamepad, faRestroom, faSquare, faToriiGate } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faB, faBroom, faC, faCaretRight, faCircle, faCircleExclamation, faGamepad, faLocationDot, faRestroom, faSquare, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -205,6 +204,8 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, ch
 
         <hr />
     </>);
+}
+
 export function getColorState() {
     let status:string|null = localStorage.getItem(COLORSTATUS);
     if(status === null ){
@@ -225,4 +226,5 @@ export function getColorState() {
     document.documentElement.setAttribute('data-bs-theme','dark');
     return faToriiGate;
     }
+
 }
