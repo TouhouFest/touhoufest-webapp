@@ -29,6 +29,27 @@ let map_select = [
         "content": <>test</>,
         "title": "Artist Alley",
         "location_name": "Toyota Meeting Hall"
+    },
+    {
+        "src": vendorsmap,
+        "caption": "Map of Vendors",
+        "content": <>test</>,
+        "title": "Vendors Map in Entry Plaza",
+        "location_name": "Entry Plaza"
+    },
+    {
+        "src": torinoplazamap,
+        "caption": "Map of Vendors at Torino Plaza",
+        "content": <>test</>,
+        "title": "Torino Plaza Map",
+        "location_name": "Torino Plaza"
+    },
+    {
+        "src": gamingmap,
+        "caption": "Map of Gaming at Toyota Hall",
+        "content": <>test</>,
+        "title": "Gaming Hall Map",
+        "location_name": "Toyota Hall"
     }
 ];
 
@@ -41,14 +62,14 @@ function MapModals(){
 
         <p>View Map:</p>
 
-        <Form.Select aria-label="mao-select">
+        <Form.Select aria-label="map-select">
             {map_select.map((map, idx) => <option onClick={(e) => setSelectedMap(e.target.value)} value={idx}>{map["title"]}</option>)}
         </Form.Select>
 
         <h4 className="mt-3">{map_select[selectedMap]["title"]}</h4>
         <Row className="justify-content-center">
-            <Col xs={12} md={10}>
-                <GlobalTransformWrapper src={map_select[selectedMap]["src"]} caption="Map of Artist Alley"/>
+            <Col xs={12} md={10} className="text-center">
+                <GlobalTransformWrapper src={map_select[selectedMap]["src"]} caption={map_select[selectedMap]["caption"]}/>
             </Col>
         </Row>
 
