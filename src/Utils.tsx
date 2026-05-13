@@ -131,12 +131,13 @@ import vendorsmap from "./images/vendorsmap.png";
 import torinoplazamap from "./images/torinoplazamap.png";
 import gamingmap from "./images/gamingmap.jpg";
 import maidacademy from "./images/artistalley/maidacademy.webp";
+import jamesarmstrongtheater from "./images/james_armstrong_theater.jpg";
 
 import neosanctum from "./images/artistalley/neosanctum.jpg";
 import suzukann from "./images/suzukann.jpg";
 import { Alert, Col, ListGroup, Row } from 'react-bootstrap';
 
-export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap, neosanctum, maidacademy, suzukann};
+export {con_banner, toyota, kenmiller, pinewindgarden, assemblyhall, entryplaza, torinoplaza, nakanotheatre, odyssey, shihori, tam, placeholder, artistalleymap, vendorsmap, torinoplazamap, gamingmap, neosanctum, maidacademy, suzukann, jamesarmstrongtheater};
 
 export const DEFAULTNOTIFY:string = "DEFAULTNOTIFY";
 
