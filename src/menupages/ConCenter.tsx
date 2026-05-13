@@ -38,41 +38,39 @@ let map_select = [
 
                 <b>Entry Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="4"/> Info Booth</li>
+                    <li><CircledBullets argument="4"/> Guest Booths</li>
                 </ul>
 
                 <b>Toyota Meeting Hall</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="5"/> Artist Alley & Cosplay Booths</li>
-                    <li><CircledBullets argument="B"/> Gaming Ops</li>
+                    <li><CircledBullets argument="5"/> Artist Alley</li>
                     <li><CircledBullets argument="restroom"/> Restrooms</li>
                 </ul>
 
                 <b>Torino Plaza</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="6"/> Guest Booths</li>
-                    <li><CircledBullets argument="7"/> Main Stage</li>
+                    <li><CircledBullets argument="6"/> Food Court/Maid Cafe</li>
+                    <li><CircledBullets argument="7"/> Torino Plaza Stage</li>
                     <li><CircledBullets argument="8"/> Official TouhouFest Artists</li>
                 </ul>
 
-                <b>Ken Miller Rec Center</b>
+                <b>James Armstrong Theater</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="9"/> Arcade Cabinets</li>
+                    <li><CircledBullets argument="9"/> James Armstrong Theater (Sat.)</li>
                 </ul>
 
             </Col>
             <Col xs={12} md={6}>
 
-                <b>Entry Foyer</b>
+                <b>Entry Foyer (Ken Miller Rec Center)</b>
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="10"/> Community Booths</li>
-                    <li><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</li>
                     <li><CircledBullets argument="restroom"/> Restrooms</li>
                 </ul>
 
                 <b>Assembly Hall</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
+                    <li><CircledBullets argument="11"/> Cosplay Exhibition, Fan Games</li>
                 </ul>
 
                 <b>Pine Wind Garden</b>
@@ -82,24 +80,19 @@ let map_select = [
 
                 <b>Children's Art Wing</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="13"/> Panels</li>
+                    <li><CircledBullets argument="13"/> Panels 1</li>
                     <li><CircledBullets argument="restroom"/> Restrooms</li>
                 </ul>
 
                 <b>Drawing & Painting Studio</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait</li>
+                    <li><CircledBullets argument="14"/> Panels 2</li>
                 </ul>
 
                 <b>Front Circular Drive</b>
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="15"/> Food Trucks</li>
                     <li><CircledBullets argument="16"/> Prop Check</li>
-                </ul>
-
-                <b>Garden Rooms</b>
-                <ul className="list-unstyled">
-                    <li><CircledBullets argument="C"/> Staff Ops</li>
                 </ul>
 
                 <p className="small"><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> Any buildings/areas not explicitly listed above are <b>not</b> being used by TouhouFest, and should be considered off-limits.</p>
@@ -114,7 +107,7 @@ let map_select = [
     {
         "src": artistalleymap,
         "caption": "Map of Artist Alley",
-        "content": <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths)</p>,
+        "content": <p>The entire below map is enclosed in the Toyota Meeting Hall. (<CircledBullets argument="5"/> Artist Alley)</p>,
         "title": "Artist Alley",
         "location_name": "Toyota Meeting Hall"
     },
@@ -124,8 +117,8 @@ let map_select = [
         "content": (<>
             <p>The entire below map is enclosed in the Entry Plaza. Nearby locations are also labeled. Summary of listed booths in Entry Plaza:</p>
             <ul className="list-unstyled">
-                <li><CircledBullets argument="3"/> Vendor Booths: Booths V01 ~ V08 and Booths V09 ~ V17</li>
-                <li><CircledBullets argument="4"/> Info Booth: Booths V09 & V10</li>
+                <li><CircledBullets argument="3"/> Vendor Booths: Booths V1 ~ V6, V9 ~ V12, V15</li>
+                <li><CircledBullets argument="4"/> Guest Booths: Booths V7, V8, V13, V14</li>
             </ul>
         </>),
         "title": "Entry Plaza (Vendors)",
@@ -142,8 +135,8 @@ let map_select = [
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="3"/> Vendor Booths: Booths FB1 ~ FB10</li>
                     <li><CircledBullets argument="6"/> Guest Booths</li>
-                    <li><CircledBullets argument="7"/> Main Stage</li>
-                    <li><CircledBullets argument="8"/> Official Touhou Artists</li>
+                    <li><CircledBullets argument="7"/> Torino Plaza Stage</li>
+                    <li><CircledBullets argument="8"/> Official TouhouFest Artists</li>
                 </ul>
 
                 <b>Ken Miller Rec Center</b>
@@ -152,16 +145,15 @@ let map_select = [
                 </ul>
             </Col>
             <Col>
-                <b>Entry Foyer</b>
+                <b>Entry Foyer (Ken Miller Rec Center)</b>
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="10"/> Community Booths: Booths FT1 ~ FT8</li>
-                    <li><CircledBullets argument="A"/> Maid Academy Ops & Kitchen</li>
                     <li><CircledBullets argument="restroom"/> Restrooms</li>
                 </ul>
 
                 <b>Assembly Hall</b>
                 <ul className="list-unstyled">
-                    <li><CircledBullets argument="11"/> Theatre (Main Events)</li>
+                    <li><CircledBullets argument="11"/> Cosplay Exhibition, Fan Games</li>
                 </ul>
             </Col>
         </Row>
