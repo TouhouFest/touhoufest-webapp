@@ -128,7 +128,7 @@ let map_select = [
                 <li><CircledBullets argument="4"/> Info Booth: Booths V09 & V10</li>
             </ul>
         </>),
-        "title": "Vendors Map in Entry Plaza",
+        "title": "Entry Plaza (Vendors)",
         "location_name": "Entry Plaza"
     },
     {
@@ -167,14 +167,14 @@ let map_select = [
         </Row>
 
         </>),
-        "title": "Torino Plaza Map",
+        "title": "Torino Plaza (Vendors & Misc)",
         "location_name": "Torino Plaza"
     },
     {
         "src": gamingmap,
         "caption": "Map of Gaming at Toyota Hall",
         "content": <p>The entire below map is enclosed in the George Nakano Theatre. (<CircledBullets argument="2"/> Gaming Hall)</p>,
-        "title": "Gaming Hall Map",
+        "title": "Gaming Hall",
         "location_name": "Toyota Hall"
     }
 ];
