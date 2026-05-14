@@ -12,7 +12,6 @@ import { guestsPage } from './menupages/Guests';
 import { gamingPage } from "./menupages/Gaming";
 import { artistVendorsPage } from './menupages/ArtistVendors';
 import { cosplayPage } from './menupages/Cosplay';
-import { mainLocationsPage } from './menupages/MainLocations';
 import { installationPage } from './menupages/Installation';
 import { restarauntsPage } from './menupages/Restaraunts';
 import { settingsPage } from './menupages/Settings'
@@ -51,7 +50,7 @@ if(!Capacitor.isNativePlatform() && Capacitor.getPlatform() == 'web') {
   menupagedata = menupagedata.concat([installationPage]);
 }
 
-menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, mainLocationsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ]);
+menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ]);
 
 let menuheader = (<>TouhouFest 2025</>);
 
