@@ -216,7 +216,7 @@ export const aboutConPage = {
       <hr className="my-4"/>
 
       <ol start={4}>
-        <h5><li>Click on the TouhouFest Event icon</li></h5>
+        <h5><li>Click on "Event bookings", then "Download tickets"</li></h5>
       </ol>
 
       <p>This will lead you to your ticket PDF containing your QR code.</p>
