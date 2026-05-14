@@ -315,6 +315,14 @@ export const aboutConPage = {
           </>)}
       </Row>
 
+      <MakeGoheiHeader content="Feedback Form" />
+
+      <p>We’d love to hear your feedback! If you have any, please use the Google Forms link below:</p>
+
+      <div className="text-center">
+        <Button className="submitbutton" href="https://docs.google.com/forms/d/e/1FAIpQLSeQlHDqopPY3Aw9hGe2AfEcD897pmVBKNKgjpz9Hb3sFp9hiA/viewform?usp=dialog" target="_blank" rel="noreferrer">View form <FontAwesomeIcon icon={faAngleRight} fixedWidth/></Button>
+      </div>
+
       {/*
       <h5 className="mt-3">Past Official TouhouFest Artists</h5>
 
