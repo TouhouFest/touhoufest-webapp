@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faBroom, faCircleInfo, faEarthAmericas, faGlobeAmericas, faToriiGate } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowUpRightFromSquare, faBroom, faCircleInfo, faEarthAmericas, faGlobeAmericas, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
 import { Image, Accordion, Card, ListGroup, Button, Table } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
@@ -163,28 +163,69 @@ export const aboutConPage = {
         A Touhou Project-themed fan event being held on June 20st - 21st, 2026, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
 
-      <h4>Instructions for Checking In Using QR Code</h4>
+      <MakeGoheiHeader content="Instructions for Checking In Using QR Code"/>
+
       <p>TouhouFest tickets contain a <b> QR Code</b> for faster checkin. It should have been sent directly to your email address along with your ticket; but in case you don't have it handy, please follow these instructions to pull up your ticket's QR Code:</p>
-      <ol>
-        <li><a href="https://touhoufest.checkoutpage.com/portal" target="_blank" rel="noreferrer">Enter the TouhouFest Checkoutpage portal by clicking on this link.</a> You should be greeted with a webpage containing the below content:</li>
-        <Row className="justify-content-center my-3">
-          <Col xs={12} md={8} lg={5}>
-            <Image src={checkin01} fluid rounded/>
-          </Col>
-        </Row>
-        <li>Enter your email address used to purchase a badge and click on the "Send login link" button.</li>
-        <li>A link will be sent to your email address. You'll want to open that link that'll lead to your purchase information. You should be greeted with a webpage containing the below content:</li>
-        <Row className="justify-content-center my-3">
-          <Col xs={12} md={8} lg={5}>
-            <Image src={checkin02} fluid rounded/>
-          </Col>
-        </Row>
-        <li>Click on the TouhouFest Event icon. This will lead you to your ticket PDF containing your QR code.</li>
+
+      <ol start={1}>
+        <h5><li>Enter the TouhouFest Checkoutpage portal</li></h5>
       </ol>
+
+      <Row className="justify-content-center mb-3">
+        <Col xs="auto" className="align-self-center">
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare}/>
+        </Col>
+        <Col xs md="auto">
+          <h5 className="fw-normal mb-0"><a href="https://touhoufest.checkoutpage.com/portal" target="_blank" rel="noreferrer" className="text-reset">Use this link to go to the TouhouFest Checkout Page portal</a></h5>
+        </Col>
+        <Col xs="auto" className="align-self-center">
+          <FontAwesomeIcon icon={faAngleRight}/>
+        </Col>
+      </Row>
+
+      <p>You should be greeted with a webpage containing the below content:</p>
+
+      <Row className="justify-content-center my-3">
+        <Col xs={12} md={8} lg={5}>
+          <Image src={checkin01} fluid rounded/>
+        </Col>
+      </Row>
+
+      <hr className="my-4"/>
+
+      <ol start={2}>
+        <h5><li>Enter your email address</li></h5>
+      </ol>
+
+      <p>Enter the email adress that was used to purchase your badge and click on the "Send login link" button.</p>
+
+      <hr className="my-4"/>
+
+      <ol start={3}>
+        <h5><li>Check your email</li></h5>
+      </ol>
+
+      <p>A link will be sent to your email address. You'll want to open that link that'll lead to your purchase information. You should be greeted with a webpage containing the below content:</p>
+
+      <Row className="justify-content-center my-3">
+        <Col xs={12} md={8} lg={5}>
+          <Image src={checkin02} fluid rounded/>
+        </Col>
+      </Row>
+
+      <hr className="my-4"/>
+
+      <ol start={4}>
+        <h5><li>Click on the TouhouFest Event icon</li></h5>
+      </ol>
+
+      <p>This will lead you to your ticket PDF containing your QR code.</p>
+
+      <hr className="my-4"/>
 
       <MakeGoheiHeader content="Operating Hours"/>
 
-      <Row xs={1} md={4} className="mt-3">
+      <Row xs={1} md={2} lg={4} className="mt-3">
         
         {operating_hours.map((section) => <Col>
           <h4>{section["title"]}</h4>
