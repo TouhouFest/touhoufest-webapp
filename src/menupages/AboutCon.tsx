@@ -153,8 +153,9 @@ export const aboutConPage = {
 
       <MakeGoheiHeader content="Operating Hours"/>
 
-      <Row xs={1} md={2}>
+      <Row xs={1} md={2} className="mt-3">
         <Col>
+          <h4>General Con Hours</h4>
           <Table>
             <thead>
                 <tr>
@@ -179,6 +180,7 @@ export const aboutConPage = {
           </Table>      
         </Col>
         <Col>
+          <h4>Registration</h4>
           <Table>
             <thead>
                 <tr>
