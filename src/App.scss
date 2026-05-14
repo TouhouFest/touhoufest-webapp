@@ -26,6 +26,23 @@ body {
   border-radius: 50px;
 }
 
+thead th {
+  background-color: declared_colors.$readable_red !important;
+  color: white !important;
+}
+
+th, td {
+  padding: 1rem !important;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px; /* Adjust radius as needed */
+  border: 1px solid black; /* Table border */
+  overflow: hidden; /* Ensures content doesn't bleed out of corners */
+}
+
 /* TODO: implement more fancy theme setup with Sass */
 [data-bs-theme="light"] {
 

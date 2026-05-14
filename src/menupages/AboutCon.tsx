@@ -98,6 +98,37 @@ let past_artists = [
   }
 ];
 
+let operating_hours = [
+  {
+    "title": "General Con Hours",
+    "friday": "3:00 PM - 8:00 PM",
+    "saturday": "9:00 AM - 10:00 PM",
+    "sunday": "8:00 AM - 6:00 PM",
+    "remark": ""
+  },
+  {
+    "title": "Registration",
+    "friday": "3:00 PM - 7:00 PM",
+    "saturday": "9:00 AM - 6:00 PM",
+    "sunday": "9:00 AM - 4:00 PM",
+    "remark": ""
+  },
+  {
+    "title": "Artist Alley/Vendors*",
+    "friday": "Not Open",
+    "saturday": "10:30 AM - 6:00 PM",
+    "sunday": "9:00 AM - 4:00 PM",
+    "remark": "*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM."
+  },
+  {
+    "title": "Gaming Hall*",
+    "friday": "Not Open",
+    "saturday": "9:00 AM - 9:00 PM",
+    "sunday": "9:00 AM - 5:00 PM",
+    "remark": "*Note: Gaming may be either Freeplay or Tournament depending on the schedule"
+  },
+
+];
 
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
@@ -153,10 +184,11 @@ export const aboutConPage = {
 
       <MakeGoheiHeader content="Operating Hours"/>
 
-      <Row xs={1} md={2} className="mt-3">
-        <Col>
-          <h4>General Con Hours</h4>
-          <Table>
+      <Row xs={1} md={4} className="mt-3">
+        
+        {operating_hours.map((section) => <Col>
+          <h4>{section["title"]}</h4>
+          <Table className="w-auto mx-auto">
             <thead>
                 <tr>
                   <th>Day</th>
@@ -166,73 +198,21 @@ export const aboutConPage = {
             <tbody>
               <tr>
                 <td>Friday</td>
-                <td>3:00PM - 8:00PM</td>
+                <td>{section["friday"]}</td>
               </tr>
               <tr>
-                <td>Friday</td>
-                <td>3:00PM - 8:00PM</td>
+                <td>Saturday</td>
+                <td>{section["saturday"]}</td>
               </tr>
               <tr>
-                <td>Friday</td>
-                <td>3:00PM - 8:00PM</td>
+                <td>Sunday</td>
+                <td>{section["sunday"]}</td>
               </tr>
             </tbody>
-          </Table>      
-        </Col>
-        <Col>
-          <h4>Registration</h4>
-          <Table>
-            <thead>
-                <tr>
-                  <th>Day</th>
-                  <th>Times</th>
-                </tr>
-            </thead>  
-            <tbody>
-              <tr>
-                <td>Friday</td>
-                <td>3:00PM - 8:00PM</td>
-              </tr>
-              <tr>
-                <td>Friday</td>
-                <td>3:00PM - 8:00PM</td>
-              </tr>
-              <tr>
-                <td>Friday</td>
-                <td>3:00PM - 8:00PM</td>
-              </tr>
-            </tbody>
-          </Table>      
-        </Col>
+          </Table>
+          {section["remark"] !== "" && <p className="small">{section["remark"]}</p>}
+        </Col>)}
       </Row>
-
-      <p><b>General Con Hours</b></p>
-      <ul>
-          <li>Friday: 3:00 PM - 8:00 PM</li>
-          <li>Saturday: 9:00 AM - 10:00 PM</li>
-          <li>Sunday: 8:00 AM - 6:00 PM</li>
-      </ul>
-      <p><b>Registration</b></p>
-      <ul>
-          <li>Friday: 3:00 PM - 7:00 PM</li>
-          <li>Saturday: 9:00 AM - 6:00 PM</li>
-          <li>Sunday: 9:00 AM - 4:00 PM</li>
-      </ul>
-      <p><b>Artist's Alley/Vendors*</b></p>
-      <ul>
-          <li>Friday: N/A</li>
-          <li>Saturday: 10:30 AM - 6:00 PM</li>
-          <li>Sunday: 9:00 AM - 4:00 PM</li>
-      </ul>
-      <p className="small">*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p>
-      <p><b>Gaming*</b></p>
-      <ul>
-          <li>Friday: N/A</li>
-          <li>Saturday: 9:00AM - 9:00 PM</li>
-          <li>Sunday: 9:00 AM - 5:00 PM</li>
-      </ul>
-      <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
-
 
       <h4 className="mb-3">Info & Policies</h4>
       <Accordion className="my-3">
