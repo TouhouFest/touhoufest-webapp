@@ -214,7 +214,8 @@ export const aboutConPage = {
         </Col>)}
       </Row>
 
-      <h4 className="mb-3">Info & Policies</h4>
+      <MakeGoheiHeader content="Info & Policies"/>
+
       <Accordion className="my-3">
         <Accordion.Item eventKey="0">
           <Accordion.Header>General Convention Guidelines</Accordion.Header>
@@ -298,21 +299,21 @@ export const aboutConPage = {
 
       */}
 
-      <h4 className="mt-3">TouhouFest 2026 Official Artist</h4>
+      <MakeGoheiHeader content="TouhouFest 2026 Official Artist"/>
 
-      <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
-          {official_artists.map((artist, i) => <>
-          <Col>
-              <Card>
-                  <Card.Img variant="top" src={artist["image"]}></Card.Img>
-                  <ListGroup className="list-group-flush">
-                      <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                      {/*<ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>*/}
-                  </ListGroup>
-                  {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
-              </Card>
-          </Col>
-          </>)}
+      <Row className="justify-content-center">
+        <Col xs={12} md={10} lg={8}>
+          <MakeGenericCard title="Hoshibako Works" picture={hoshibako} links={
+            [
+              {
+                "link": "https://hoshibako.thebase.in/",
+                "title": "Artist Website"
+              }
+            ]
+          }>
+            <p>HoshibakoWorks is a fashion brand based in Japan specializing in clothing, hats, and accessories that capture the essence of a tiny universe nestled in a jewelry box overflowing with stardust. HoshibakoWorks has done several official collaborations with popular series, including Touhou Project, which will be available at TouhouFest.</p>
+          </MakeGenericCard>
+        </Col>
       </Row>
 
       <MakeGoheiHeader content="Feedback Form" />
