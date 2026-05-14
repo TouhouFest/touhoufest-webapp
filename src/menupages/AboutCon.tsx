@@ -9,9 +9,9 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faBroom, faCircleInfo, faEarthAmericas, faGlobeAmericas, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky } from '@fortawesome/free-brands-svg-icons';
-import { Image, Accordion, Card, ListGroup, Button } from 'react-bootstrap';
+import { Image, Accordion, Card, ListGroup, Button, Table } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
-import { con_banner, getColorState, WarningAlert } from "../Utils";
+import { con_banner, getColorState, MakeGenericCard, MakeGoheiHeader, WarningAlert } from "../Utils";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -151,7 +151,59 @@ export const aboutConPage = {
         <li>Click on the TouhouFest Event icon. This will lead you to your ticket PDF containing your QR code.</li>
       </ol>
 
-      <h4 className="mt-3">Operating Hours</h4>
+      <MakeGoheiHeader content="Operating Hours"/>
+
+      <Row xs={1} md={2}>
+        <Col>
+          <Table>
+            <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Times</th>
+                </tr>
+            </thead>  
+            <tbody>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 8:00PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 8:00PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 8:00PM</td>
+              </tr>
+            </tbody>
+          </Table>      
+        </Col>
+        <Col>
+          <Table>
+            <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Times</th>
+                </tr>
+            </thead>  
+            <tbody>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 8:00PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 8:00PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 8:00PM</td>
+              </tr>
+            </tbody>
+          </Table>      
+        </Col>
+      </Row>
+
       <p><b>General Con Hours</b></p>
       <ul>
           <li>Friday: 3:00 PM - 8:00 PM</li>
