@@ -165,8 +165,10 @@ export function EventTypeGenerator({text}: {text:string}) {
 import gohei_border from "./gohei_border.svg";
 import hakurei_border from "./hakurei_border.svg";
 
-export function MakeGoheiHeader({content, vertical_margin=true, larger_header=false} : {content:JSX.Element | string, vertical_margin?:boolean, larger_header?:boolean}) {
+export function MakeGoheiHeader({content, vertical_margin=true, larger_header=false, fragment_id=""} : {content:JSX.Element | string, vertical_margin?:boolean, larger_header?:boolean, fragment_id?:string}) {
     return (          
+    <>
+    {fragment_id !== "" ? <div id={fragment_id} className="fragment-scroll"/> : <></>}
     <Row className={"g-0 " + (vertical_margin ? "my-2" : "")}>
       <Col>
         <ListGroup.Item className="newtimes">
@@ -179,6 +181,7 @@ export function MakeGoheiHeader({content, vertical_margin=true, larger_header=fa
       <Col xs="1" className="newtimes-end"></Col>
       <Col xs="auto"><Image src={gohei_border} className="h-100 filter-shadow object-fit-cover w-100" /></Col>
     </Row>
+    </>
 );
 }
 

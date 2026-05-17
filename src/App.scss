@@ -10,6 +10,10 @@
 @use 'css/new_generic_card.scss';
 @use 'css/table_styling.scss';
 
+.fragment-scroll {
+  scroll-margin-top: 80px;
+}
+
 .eventDescription {
   white-space: pre-line;
 }

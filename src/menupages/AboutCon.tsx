@@ -134,6 +134,28 @@ let operating_hours = [
 export const aboutConPage = { 
   "displayTitle": false,
   "codename": "about",
+  "jumplinks": [
+    {
+      "title": "Instructions for Checking In",
+      "fragment_id": "checkoutpage",
+    },
+    {
+      "title": "Operating Hours",
+      "fragment_id": "operating_hours",
+    },
+    {
+      "title": "Info and Policies",
+      "fragment_id": "info_policies"
+    },
+    {
+      "title": "Official Artist",
+      "fragment_id": "artist"
+    },
+    {
+      "title": "Event Feedback Form",
+      "fragment_id": "feedback"
+    }
+  ],
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
   "fluidImage": (<><Image className="display-dark" src={touhoufest_dark} fluid /><Image className="display-light" src={touhoufest} fluid /></>),
   "body": (
@@ -163,7 +185,7 @@ export const aboutConPage = {
         A Touhou Project-themed fan event being held on June 20st - 21st, 2026, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
 
-      <MakeGoheiHeader content="Instructions for Checking In Using QR Code"/>
+      <MakeGoheiHeader content="Instructions for Checking In Using QR Code" fragment_id='checkoutpage'/>
 
       <p>TouhouFest tickets contain a <b> QR Code</b> for faster checkin. It should have been sent directly to your email address along with your ticket; but in case you don't have it handy, please follow these instructions to pull up your ticket's QR Code:</p>
 
@@ -223,7 +245,7 @@ export const aboutConPage = {
 
       <hr className="my-4"/>
 
-      <MakeGoheiHeader content="Operating Hours"/>
+      <MakeGoheiHeader content="Operating Hours" fragment_id='operating_hours'/>
 
       <Row xs={1} md={2} lg={4} className="mt-3">
         
@@ -255,7 +277,7 @@ export const aboutConPage = {
         </Col>)}
       </Row>
 
-      <MakeGoheiHeader content="Info & Policies"/>
+      <MakeGoheiHeader content="Info & Policies" fragment_id='info_policies'/>
 
       <Accordion className="my-3">
         <Accordion.Item eventKey="0">
@@ -340,7 +362,7 @@ export const aboutConPage = {
 
       */}
 
-      <MakeGoheiHeader content="TouhouFest 2026 Official Artist"/>
+      <MakeGoheiHeader content="TouhouFest 2026 Official Artist" fragment_id='artist'/>
 
       <Row className="justify-content-center">
         <Col xs={12} md={10} lg={8}>
@@ -357,7 +379,7 @@ export const aboutConPage = {
         </Col>
       </Row>
 
-      <MakeGoheiHeader content="Feedback Form" />
+      <MakeGoheiHeader content="Feedback Form" fragment_id='feedback'/>
 
       <p>We’d love to hear your feedback! If you have any, please use the Google Forms link below:</p>
 
