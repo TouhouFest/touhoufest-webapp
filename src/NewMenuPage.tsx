@@ -18,6 +18,7 @@ function NewMenuPage({content}:{content:Record<string, JSX.Element>}) {
                     {content["jumplinks"].map((fragment) => {return <>
                         <h5 className="fw-normal"><a href={`#${fragment["fragment_id"]}`} className="text-reset">{fragment["title"]} <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5>
                     </>})}
+                    <div className="mb-3"></div>
                 </>}
 
                 {content["body"]}
