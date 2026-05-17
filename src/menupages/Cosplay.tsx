@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCameraRetro, faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
-import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
+import { Accordion, Card, Figure, Image, Row, Col, ListGroup } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
@@ -90,6 +90,13 @@ export const cosplayPage = {
         <div className="text-center my-4"><MakeLocationBadge location="Pine Wind Garden"/></div>
 
         <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below as follows:</p>
+
+        <ListGroup className='mb-3'>
+            <ListGroup.Item>foobar</ListGroup.Item>
+            <ListGroup.Item>foobar</ListGroup.Item>
+            <ListGroup.Item>foobar</ListGroup.Item>
+            <ListGroup.Item>foobar</ListGroup.Item>
+        </ListGroup>
 
             <Accordion>
                 <Accordion.Item eventKey="0">
