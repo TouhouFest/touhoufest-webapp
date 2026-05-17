@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
+import { faCameraRetro, faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -23,11 +23,45 @@ import mysticallala from "./../images/mysticallala.jpg";
 
 export const cosplayPage = {
     "codename": "cosplay",
-    "header": (<><FontAwesomeIcon icon={faCameraRetro} fixedWidth></FontAwesomeIcon> Cosplay</>),
+    "jumplinks": [
+        {
+        "title": "Cosplay Meetups",
+        "fragment_id": "cosplaymeetups",
+        },
+        {
+        "title": "Other Photoshoots",
+        "fragment_id": "otherphotoshoots",
+        },
+        {
+        "title": "Cosplay Workshop",
+        "fragment_id": "cosplayworkshop"
+        },
+        {
+        "title": "Cosplay Contest",
+        "fragment_id": "cosplaycontest"
+        },
+        {
+        "title": "Cosplay Guests",
+        "fragment_id": "cosplayguests"
+        },
+        {
+        "title": "Cosplay Rules",
+        "fragment_id": "cosplayrules"
+        }
+    ],
+    "header": (<><FontAwesomeIcon icon={faHatWizard} fixedWidth></FontAwesomeIcon> Cosplay</>),
     "fluidImage": (<Image src={cosplaybanner} fluid />),
     "body": (<>
-        <h4>Location(s)</h4>
-        <p>Photoshoots will take place at the <b>Pine Wind Garden</b> (<CircledBullets argument="12"/> Cosplay Meetups), a beautiful Japanese-style garden ripe with photogenic spots. Cosplay Contest-related events will take place at the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Theatre (Main Events)). Cosplay booths are located at the <b>Toyota Meeting Hall</b> (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths), next to the Torino Festival Plaza.</p>
+        <h4>Locations</h4>
+        <ul>
+            <li><b>Photoshoots/Meetups</b>: Pine Wind Garden (<CircledBullets argument="12"/> Cosplay Meetups)</li>
+            <li><b>Cosplay Contest</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
+            <li><b>Cosplay Contest</b> PJudging: Torino Plaza</li>
+            <li><b>Cosplay Exhibition</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Exhibition)</li>
+            <li><b>Cosplay Workshops</b>: Children's Art Wing (<CircledBullets argument='13'/> Panels 1)</li>
+            <li><b>Solo Photoshoots</b>: Drawing and Painting Studio (<CircledBullets argument='14'/> Panels 2)</li>
+        </ul>
+        {/* can be re-enabled by request
         <Row className="justify-content-center text-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -48,6 +82,8 @@ export const cosplayPage = {
                 </Figure>
             </Col>
         </Row>
+
+        */}
 
         <h4>Cosplay Rules</h4>
         <p>TouhouFest celebrates the creativity of cosplayers and encourage everyone to cosplay whomever they wish regardless of size, gender, age, religion, shape, color, or even species. Cosplay is all about having fun and creativity!</p>
