@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCameraRetro, faHatWizard } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faCameraRetro, faHatWizard, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -20,6 +20,7 @@ import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 export const cosplayPage = {
     "codename": "cosplay",
@@ -56,7 +57,7 @@ export const cosplayPage = {
         <ul>
             <li><b>Cosplay Meetups</b>: Pine Wind Garden (<CircledBullets argument="12"/> Cosplay Meetups)</li>
             <li><b>Cosplay Contest</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
-            <li><b>Cosplay Contest</b> PJudging: Torino Plaza</li>
+            <li><b>Cosplay Contest</b> Pre-Judging: Torino Plaza</li>
             <li><b>Cosplay Exhibition</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Exhibition)</li>
             <li><b>Cosplay Workshops</b>: Children's Art Wing (<CircledBullets argument='13'/> Panels 1)</li>
             <li><b>Solo Photoshoots</b>: Drawing and Painting Studio (<CircledBullets argument='14'/> Panels 2)</li>
@@ -92,10 +93,20 @@ export const cosplayPage = {
         <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below as follows:</p>
 
         <ListGroup className='mb-3'>
-            <ListGroup.Item>foobar</ListGroup.Item>
-            <ListGroup.Item>foobar</ListGroup.Item>
-            <ListGroup.Item>foobar</ListGroup.Item>
-            <ListGroup.Item>foobar</ListGroup.Item>
+            <ListGroup.Item>
+                <h5 className="mb-1">Youkai Mountain</h5>
+                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>Saturday | 12:00PM - 1:00 PM</b></p>
+                <h6 className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</h6>
+                <p className="mb-1">TH10, TH16, TH18, Tengu</p>
+                <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+            </ListGroup.Item>
+            <ListGroup.Item>
+                <h5 className="mb-1">Youkai Mountain</h5>
+                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>Saturday | 12:00PM - 1:00 PM</b></p>
+                <h6 className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</h6>
+                <p className="mb-1">TH10, TH16, TH18, Tengu</p>
+                <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+            </ListGroup.Item>
         </ListGroup>
 
             <Accordion>
