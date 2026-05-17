@@ -168,7 +168,7 @@ import hakurei_border from "./hakurei_border.svg";
 export function MakeGoheiHeader({content, vertical_margin=true, larger_header=false, fragment_id=""} : {content:JSX.Element | string, vertical_margin?:boolean, larger_header?:boolean, fragment_id?:string}) {
     return (          
     <>
-    {fragment_id !== "" ? <div id={fragment_id}/> : <></>}
+    {fragment_id !== "" ? <div id={fragment_id} className="fragment-scroll"/> : <></>}
     <Row className={"g-0 " + (vertical_margin ? "my-2" : "")}>
       <Col>
         <ListGroup.Item className="newtimes">
