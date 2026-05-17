@@ -163,7 +163,7 @@ export const aboutConPage = {
         A Touhou Project-themed fan event being held on June 20st - 21st, 2026, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
       </p>
 
-      <MakeGoheiHeader content="Instructions for Checking In Using QR Code"/>
+      <MakeGoheiHeader content="Instructions for Checking In Using QR Code" fragment_id='qrcodecheckin'/>
 
       <p>TouhouFest tickets contain a <b> QR Code</b> for faster checkin. It should have been sent directly to your email address along with your ticket; but in case you don't have it handy, please follow these instructions to pull up your ticket's QR Code:</p>
 
