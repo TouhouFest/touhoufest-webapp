@@ -22,6 +22,8 @@ import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
+import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
+
 export const cosplayPage = {
     "codename": "cosplay",
     "jumplinks": [
@@ -88,27 +90,36 @@ export const cosplayPage = {
 
         <MakeGoheiHeader content="Cosplay Meetups" fragment_id='cosplaymeetups'/>
 
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={6}>
+                <Image src={cosplaymeetupscover} rounded fluid/>
+            </Col>
+        </Row>
+
         <div className="text-center my-4"><MakeLocationBadge location="Pine Wind Garden"/></div>
 
-        <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below as follows:</p>
+        <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below. To view a particular day's meetups, tap on the appropriate day in the selector. ("Fri", "Sat", "Sun")</p>
 
-        <ListGroup className='mb-3'>
-            <ListGroup.Item>
-                <h5 className="mb-1">Youkai Mountain</h5>
-                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>Saturday | 12:00PM - 1:00 PM</b></p>
-                <h6 className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</h6>
-                <p className="mb-1">TH10, TH16, TH18, Tengu</p>
-                <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
-            </ListGroup.Item>
-            <ListGroup.Item>
-                <h5 className="mb-1">Youkai Mountain</h5>
-                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>Saturday | 12:00PM - 1:00 PM</b></p>
-                <h6 className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</h6>
-                <p className="mb-1">TH10, TH16, TH18, Tengu</p>
-                <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
-            </ListGroup.Item>
-        </ListGroup>
-
+        <Row className="justify-content-center">
+            <Col xs={12} lg={8}>
+                <ListGroup className='mb-3 thfest-listgroup'>
+                    <ListGroup.Item>
+                        <h5 className="mb-1">Youkai Mountain</h5>
+                        <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>Saturday | 12:00PM - 1:00 PM</b></p>
+                        <b className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</b>
+                        <p className="mb-1">TH10, TH16, TH18, Tengu</p>
+                        <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        <h5 className="mb-1">Youkai Mountain</h5>
+                        <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>Saturday | 12:00PM - 1:00 PM</b></p>
+                        <p className="mb-0"><b><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</b></p>
+                        <p className="mb-1">TH10, TH16, TH18, Tengu</p>
+                        <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                    </ListGroup.Item>
+                </ListGroup>
+            </Col>
+        </Row>
             <Accordion>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19, FDS)</Accordion.Header>
