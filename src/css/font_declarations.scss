@@ -1,7 +1,7 @@
 // declare custom fonts
 // assign fonts to NATIVE elements only 
 // class-level and id-level font assignment to be handled in separate files
-
+@use 'declared_colors.scss';
 
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @font-face {
@@ -66,5 +66,18 @@ h1, h2, h3, h4, h5, h6 {
 button {
   font-family: 'Poppins' !important;
   font-weight: 500 !important;
+}
+
+
+[data-bs-theme="light"] {
+  h1, h2, h3, h4, h5, h6 {
+    color: declared_colors.$readable-red;
+  }
+}
+[data-bs-theme="dark"] {
+
+  h1, h2, h3, h4, h5, h6 {
+    color: declared_colors.$highlight-text;
+  }
 }
 
