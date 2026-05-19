@@ -29,7 +29,7 @@ import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
 
-function CosplayMeetupListing({type}: {type:string}) {
+function CosplayMeetupListing({type, includeFriday=false}: {type:string, includeFriday?:boolean}) {
     
         const [showEventDescription, setShowEventDescription] = useState(false);
         const [eventDetails, setEventDetails] = useState({});
@@ -73,9 +73,11 @@ function CosplayMeetupListing({type}: {type:string}) {
                 <ListGroup className='mb-3 thfest-listgroup'>
                     <ListGroup.Item className="p-0">
                         <Nav fill variant="pills" defaultActiveKey="sat">
-                            <Nav.Item onClick={() => setActiveDay("Friday")}>
-                                <Nav.Link className="rounded-bottom-0 rounded-end-0 fw-bold" eventKey="fri">Fri</Nav.Link>
-                            </Nav.Item>
+                            {includeFriday && 
+                                <Nav.Item onClick={() => setActiveDay("Friday")}>
+                                    <Nav.Link className="rounded-bottom-0 rounded-end-0 fw-bold" eventKey="fri">Fri</Nav.Link>
+                                </Nav.Item>
+                            }
                             <Nav.Item onClick={() => setActiveDay("Saturday")}>
                                 <Nav.Link className="rounded-0 fw-bold" eventKey="sat">Sat</Nav.Link>
                             </Nav.Item>
