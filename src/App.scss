@@ -44,7 +44,18 @@ body {
 
   .display-dark {
     display: none;
-}
+  }
+
+  .thfest-listgroup .list-group-item {
+    background-color: declared_colors.$parchment;
+    border-color: declared_colors.$readable_red;
+  }
+
+  .thfest-listgroup .nav-fill .nav-item > .active {
+    color: white !important;
+    background-color: declared_colors.$readable_red;
+  }
+
 }
 
 [data-bs-theme="dark"] {
@@ -60,7 +71,19 @@ body {
 
   .display-light {
     display: none;
-}
+  }
+
+  .thfest-listgroup .list-group-item {
+    background-color: declared_colors.$color-dark;
+    border-color: declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+  .thfest-listgroup .nav-fill .nav-item > .active {
+    color: white !important;
+    background-color: declared_colors.$dark-gohei-header-bkgnd;
+  }
+
+
 
 }
 

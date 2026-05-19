@@ -60,7 +60,9 @@
 
   .day-indicator{
     background-color: declared_colors.$readable-red; // #ff5959;
-    color: #FFF9EE;
+    h1,h2,h3,h4,h5,h6 {
+      color: #FFF9EE;
+    }
   }
 
   .event-item{
@@ -82,7 +84,9 @@
 
   .day-indicator{
     background-color: declared_colors.$dark-gohei-header-bkgnd; // #ff5959;
-    color: #FFF9EE;
+    h1,h2,h3,h4,h5,h6 {
+      color: #FFF9EE;
+    }
   }
 
   .event-item {

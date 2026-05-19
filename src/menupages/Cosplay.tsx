@@ -7,9 +7,9 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCameraRetro, faHatWizard } from '@fortawesome/free-solid-svg-icons';
-import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota } from "../Utils";
-import { Accordion, Card, Figure, Image, Row, Col } from 'react-bootstrap';
+import { faAngleRight, faCameraRetro, faHatWizard, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
+import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
@@ -20,6 +20,86 @@ import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+
+import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
+
+import cosplaymeetups from "./cosplaymeetups.json";
+import EventDescription from './../EventDescription';
+import { useState } from 'react';
+import Markdown from 'marked-react';
+
+function CosplayMeetupListing({type, includeFriday=false}: {type:string, includeFriday?:boolean}) {
+    
+        const [showEventDescription, setShowEventDescription] = useState(false);
+        const [eventDetails, setEventDetails] = useState({});
+        const [activeDay, setActiveDay] = useState("Saturday");
+
+        const handleEventOnHide = () => setShowEventDescription(false);
+
+        function handleEventOnClick(index:number) {
+            let evt = cosplaymeetups[index];
+            setEventDetails(evt);
+            setShowEventDescription(true);
+        }
+
+        function ReturnCosplayHeader({meetup}: {meetup:any}) {
+            return <>
+                <h5 className="mb-1">{meetup["event_title"]}</h5>
+                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>{meetup["event_day"]} | {meetup["event_start_time"]} - {meetup["event_end_time"]}</b></p>
+                <b className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</b>
+                <p className="mb-1">{meetup["event_subtitle"]}</p>
+            </>;
+        }
+
+        
+        return <>
+
+        <Modal show={showEventDescription} onHide={handleEventOnHide} centered scrollable>
+            <Modal.Header closeButton>
+                <Modal.Title className="align-middle"></Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <ReturnCosplayHeader meetup={eventDetails}/>
+
+                <hr />
+
+                <Markdown>{eventDetails["event_description"]}</Markdown>
+            </Modal.Body>
+        </Modal>
+
+        <Row className="justify-content-center">
+            <Col xs={12} lg={8}>
+                <ListGroup className='mb-3 thfest-listgroup'>
+                    <ListGroup.Item className="p-0">
+                        <Nav fill variant="pills" defaultActiveKey="sat">
+                            {includeFriday && 
+                                <Nav.Item onClick={() => setActiveDay("Friday")}>
+                                    <Nav.Link className="rounded-bottom-0 rounded-end-0 fw-bold" eventKey="fri">Fri</Nav.Link>
+                                </Nav.Item>
+                            }
+                            <Nav.Item onClick={() => setActiveDay("Saturday")}>
+                                <Nav.Link className="rounded-0 fw-bold" eventKey="sat">Sat</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item onClick={() => setActiveDay("Sunday")}>
+                                <Nav.Link className="rounded-start-0 rounded-bottom-0 fw-bold"eventKey="sun">Sun</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </ListGroup.Item>
+
+                    {cosplaymeetups.map((meetup, idx) => {
+                        return meetup["meetup_type"] === type && meetup["event_day"] === activeDay ? <>
+                        <ListGroup.Item onClick={() => handleEventOnClick(idx)}>
+                            <ReturnCosplayHeader meetup={meetup}/>
+                            <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                        </ListGroup.Item>
+                        </> : <></>;
+                    })}
+                </ListGroup>
+            </Col>
+        </Row>
+        </>;
+}
 
 export const cosplayPage = {
     "codename": "cosplay",
@@ -54,9 +134,9 @@ export const cosplayPage = {
     "body": (<>
         <h4>Locations</h4>
         <ul>
-            <li><b>Photoshoots/Meetups</b>: Pine Wind Garden (<CircledBullets argument="12"/> Cosplay Meetups)</li>
+            <li><b>Cosplay Meetups</b>: Pine Wind Garden (<CircledBullets argument="12"/> Cosplay Meetups)</li>
             <li><b>Cosplay Contest</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
-            <li><b>Cosplay Contest</b> PJudging: Torino Plaza</li>
+            <li><b>Cosplay Contest Pre-Judging</b>: Torino Plaza</li>
             <li><b>Cosplay Exhibition</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Exhibition)</li>
             <li><b>Cosplay Workshops</b>: Children's Art Wing (<CircledBullets argument='13'/> Panels 1)</li>
             <li><b>Solo Photoshoots</b>: Drawing and Painting Studio (<CircledBullets argument='14'/> Panels 2)</li>
@@ -85,732 +165,20 @@ export const cosplayPage = {
 
         */}
 
-        <h4>Cosplay Rules</h4>
-        <p>TouhouFest celebrates the creativity of cosplayers and encourage everyone to cosplay whomever they wish regardless of size, gender, age, religion, shape, color, or even species. Cosplay is all about having fun and creativity!</p>
-        <Accordion className="my-2">
-            <Accordion.Item eventKey="0">
-                <Accordion.Header>Cosplay Guidelines</Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li>No bare feet, some form of foot covering must be worn.</li>
+        <MakeGoheiHeader content="Cosplay Meetups" fragment_id='cosplaymeetups'/>
 
-                        <li>No hateful imagery should be included in cosplay for any reason. Cosplays must not be worn to agitate or intentionally offend other attendees.</li>
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={6}>
+                <Image src={cosplaymeetupscover} rounded fluid/>
+            </Col>
+        </Row>
 
-                        <ul>
-                            <li>Examples include Nazi/SS imagery, KKK imagery, blackface, etc</li>
-                        </ul>
+        <div className="text-center my-4"><MakeLocationBadge location="Pine Wind Garden"/></div>
 
-                        <li>Costumes should not obstruct or impede the flow of traffic or entryway.</li>
+        <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below. To view a particular day's meetups, tap on the appropriate day in the selector. ("Fri", "Sat", "Sun")</p>
 
-                        <li>No excessively shedding props or costumes (Use of glitter, feathers, etc).</li>
-
-                        <li>No blades or metal props. PVC and wood are fine!</li>
-
-                        <li>Props must measure less than 6 feet in any arbitrary direction at rest. Expandable props and costumes can be extended temporarily for pictures or photoshoots, provided doing so does not interfere with traffic flow.</li>
-
-                        <li>Costume and clothing should not expose the body in such a way as to be deemed indecent exposure. Private parts must be covered in an opaque material that will not slip or have gaps.</li>
-
-                        <li>Males wearing tight-fitting costumes are required to wear a dance belt.</li>
-
-                        <li>Costumes or props that offer extra mobility (i.e. skates, skateboards, in line skates, scooter, or bikes) can be used for display purposes only. They cannot be ridden around.</li>
-
-                        <li>Vintage, historical, any non current uniform and any military or police-style costumes may be address at the convention’s discretion.</li>
-
-                        <li>Any weapons props must be taken to a prop check to be checked and tagged.</li>
-
-                    </ul>
-
-                    <p>Attendees should understand and agree that, for their safety and the safety of everyone at TouhouFest, we have the absolute and immediate discretion and right to inspect your costumes, prop weapons, and any other items you bring to the Event. Because your safety and the safety of every attendee is of the utmost importance.</p>
-
-                    <p>TouhouFest reserves the right to modify and/or update this policy at any time in their sole discretion and without prior notice.</p>
-
-                </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-                <Accordion.Header>Props & Peace Bonding</Accordion.Header>
-                <Accordion.Body>
-                    <p>Prop weapons must be submitted to “Weapons Check” for Peace Bonding. TouhouFest has the sole discretion to approve prop weapons. Please visit us at one of our Weapons Check booths during the Event. TouhouFest Weapons Check booth locations shall be designated in the programs and on signs.</p>
-                    <p>We may revoke your Peace Bond at any time in our sole discretion. Behavior which will warrant revocation of your Peace Bond includes:</p>
-                    <ul>
-                        <li>Brandishing an item in an inappropriate fashion, such as play-fighting or swinging the prop around</li>
-                        <li>Causing complaints from other attendees of the Event</li>
-                        <li>Tampering or altering of the Peace Bond</li>
-                    </ul>
-                    <h5>Prop Weapons</h5>
-                    <p>Prop weapons are inoperable weapons that support the overall look of your costume or character. For example, plastic Airsoft guns, Nerf guns, water guns, dart guns, disc guns, pellet guns, and cap guns are prop weapons.</p>
-                    <h5>Peace Bonding Rules</h5>
-                    <p>If a prop weapon is, or was, at any time capable of firing anything, it must be rendered permanently inoperable in order to qualify for Peace Bonding. You can do this by, for example, permanently plugging the barrel with glue, caulk, or any non-removable substance and hot gluing all moving components of the prop in place. You must be able to prove that the prop weapon is permanently inoperable upon inspection.</p>
-                    <p>In addition, to qualify for Peace Bonding, your prop weapon must meet the following criteria:</p>
-                    <ul>
-                        <li>All bladed props, prop firearms and prop knives cannot contain metal, have metal components, or have metal-based paints on them.</li>
-                        <ul>
-                            <li>Note: Lightsabers with metal hilts are allowed.</li>
-                        </ul>
-                        <li>Prop explosives or ammunition cannot be made out of metal.</li>
-                        <li>All swords and bladed prop weapons must adhere to the following rules:</li>
-                        <ul>
-                            <li>They cannot be made out of metal</li>
-                            <li>If your non-metal blade has a sharp edge or pointed tip, it must be anchored to a hard sheath for the duration of the Event</li>
-                            <li>If you do not have a hard sheath, your non-metal blade must have a blunt edge and blunt tip</li>
-                        </ul>
-                        <li>All prop bows must be unstrung or have a low-tensile thread with no draw weight and be incapable of shooting.</li>
-                        <li>All prop arrows must have blunt non-metal tips.</li>
-                        <li>Metal chains are not permitted unless it is for cosplay and affixed to a piece of clothing and/or armor.</li>
-                    </ul>
-                    <p>If your prop weapon is a toy, look-alike, or imitation firearm, then federal regulations (<a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-II/subchapter-H/part-272/section-272.3" rel="noreferrer">15 CFR § 272.3</a>) require that it either be translucent enough to, permit unmistakable observation of the device’s complete contents or must have at least one of the following:</p>
-                    <ul>
-                        <li>An Orange Solid Plug in Barrel: Have a blaze orange (Fed-Std-595B 12199) or orange color brighter than that specified by the federal standard color number solid plug permanently affixed to the muzzle end of the barrel as an integral part of the entire device and recessed no more than 6 millimeters from the muzzle end of the barrel; or</li>
-                        <li>An Orange Barrel Marking: A blaze orange (Fed-Std-595B 12199) or orange color brighter than that specified by the federal standard color number, marking permanently affixed to the exterior surface of the barrel, covering the circumference of the barrel from the muzzle end for a depth of at least 6 millimeters; or</li>
-                        <li>Entire Surface Coloration: Coloration of the entire exterior surface of the device in white, bright red, bright orange, bright yellow, bright green, bright blue, bright pink, or bright purple, either singly or as the predominant color in combination with other colors in any pattern.</li>
-                    </ul>
-                    <p>Please take care when outside or when transporting any form of firearm prop.</p>
-                    <p>Regardless of how realistic the prop may look, ensure that it is completely hidden while traveling and be aware of your surroundings, attire, and the appearance of your props to bystanders when outside of TouhouFest. Do not assume a costume will reassure people that your prop is not a real weapon.</p>
-                    <h5>Peace-Bonded Weapons at TouhouFest</h5>
-                    <p>You may display your prop weapons only as costume pieces. Do not swing or brandish your prop weapon in any way that could be considered unsafe or threatening.</p>
-                    <p>You may pose with a prop weapon in a brandishing manner, so long as no reasonable person would interpret it as anything but a pose for dramatic effect. TouhouFest staff or management may stop your posed brandishing in their sole discretion.</p>
-                    <p>Please put your prop weapons away when leaving the Event site at night so that you don’t get the attention of local law enforcement. TouhouFest cannot be responsible for any actions taken by local law enforcement agencies, such as detaining and questioning you, if you decide to display or brandish your prop weapons at or outside of TouhouFest. </p>
-                </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="2">
-                <Accordion.Header>Prohibited Items</Accordion.Header>
-                <Accordion.Body>
-                    <p><b><em>No Real Weapons Are Allowed at TouhouFest!</em></b></p>
-                    <p>This includes firearms, knives, curios, relic antique firearms, any form of ammunition, any items designed or manufactured with the intent to cause death or serious bodily injury, whether carried openly or concealed, even if any such weapons are inoperable or unusable and irrespective of whether you are licensed to possess such weapons. Items that may otherwise be legal for you to own or carry are not welcome at TouhouFest if they violate this Prop / Replica Weapons Policy.</p>
-                    <p>The following items are not permitted at TouhouFest:</p>
-                    <ul>
-                        <li>All Metal Weapons</li>
-                        <li>Firearms, Ammunition, Rifles, Shotguns, Handguns, Blowguns, Tasers, Laser Pointers, Laser-Aiming Devices or similar Laser Devices</li>
-                        <li>Explosives, Incendiary Devices, Chemical Weapons, and Pepper Spray / Mace</li>
-                        <li>Knives, Live Blades/Swords (including Katana and other Martial Arts Style Swords), Daggers, Sword Canes, Switchblades, Bali-Song (Butterfly Knife), Axes, Kunai, Ice Skates, and Hatchets</li>
-                        <li>Metal Pole Arms, Wooden/Metal Bats, Paddles, Stilts, Golf Clubs, and Vuvuzelas</li>
-                        <li>Archery and Hunting Bows, Arrows, Nunchucks, Brass Knuckles, and Whips</li>
-                        <li>Any item designed or manufactured with the intent to cause death or serious bodily injury to any person or property, any item that is illegal in the State of California, or any item that appears, in TouhouFest’s sole discretion, to be dangerous or which would pose or place others at risk or harm, immediate or otherwise.</li>
-                    </ul>
-                    <p>(Note: some venues prohibit other items e.g. glass bottles, food, alcohol, and e-cigarettes. Please check with the venue before bringing such items.)</p>
-                </Accordion.Body>
-            </Accordion.Item>
-        </Accordion>
-
-        <h4 className="mt-3">Cosplay Meetups/Photoshoots</h4>
-
-        <p>Photoshoots for select mainline Touhou games will be organized by our talented Cosplay Ambassadors. They are listed below as follows:</p>
-
-            <Accordion>
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>Go to hell!! (TH11, TH17, TH17.5, TH19, FDS)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th15">
-                            <Card.Body className="text-center">
-                                <Card.Title>Go to hell!!</Card.Title>
-                                <Card.Text>Saturday, 10:00 AM - 11:00 AM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 11 &quot;Subterranean Animism&quot;</strong></p>
-                        <ul>
-                            <li>Alice</li>
-                            <li>Nitori</li>
-                            <li>Patchouli</li>
-                            <li>Suika</li>
-                            <li>Yukari</li>
-                            <li>Aya</li>
-                            <li>Kisume</li>
-                            <li>Yamame</li>
-                            <li>Parsee</li>
-                            <li>Yuugi</li>
-                            <li>Satori</li>
-                            <li>Rin</li>
-                            <li>Utsuho</li>
-                            <li>Sanae</li>
-                            <li>Koishi</li>
-                            <li>Kanako</li>
-                            <li>Suwako</li>
-                        </ul>
-                        <p><strong>Touhou 17 &quot;Wily Beast and Weakest Creature&quot;</strong></p>
-                        <ul>
-                            <li>Youmu</li>
-                            <li>Eika</li>
-                            <li>Urumi</li>
-                            <li>Kutaka</li>
-                            <li>Yachie</li>
-                            <li>Mayumi</li>
-                            <li>Keiki</li>
-                            <li>Saki</li>
-                            <li>Yumm</li>
-                        </ul>
-                        <p><strong>Touhou 17.5 &quot;Gouyoku Ibun&quot;</strong></p>
-                        <ul>
-                            <li>Kanako</li>
-                            <li>Murasa</li>
-                            <li>Jo&#39;on &amp; Shion</li>
-                            <li>Flandre</li>
-                            <li>Okina</li>
-                            <li>Yamame</li>
-                            <li>Kogasa</li>
-                            <li>Yuugi</li>
-                            <li>Okuu</li>
-                            <li>Kutaka</li>
-                            <li>Yuuma</li>
-                        </ul>
-                        <p><strong>Touhou 19 &quot;Unfinished Dream of All Living Ghost&quot;</strong></p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Ran</li>
-                            <li>Aunn</li>
-                            <li>Nazrin</li>
-                            <li>Seiran</li>
-                            <li>Rin</li>
-                            <li>Tsukasa</li>
-                            <li>Mamizou</li>
-                            <li>Yachie</li>
-                            <li>Saki</li>
-                            <li>Yuuma</li>
-                            <li>Suika</li>
-                            <li>Son Biten</li>
-                            <li>Enoko</li>
-                            <li>Chiyari</li>
-                            <li>Hisami</li>
-                            <li>Zanmu</li>
-                        </ul>
-                        <p><b>Foul Detective Satori</b> (Manga)</p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Patchouli</li>
-                            <li>Marisa</li>
-                            <li>Sakuya</li>
-                            <li>Meiling</li>
-                            <li>Orin</li>
-                            <li>Remilia</li>
-                            <li>Satori</li>
-                            <li>Flandre</li>
-                            <li>Youmu</li>
-                            <li>Yuyuko</li>
-                            <li>Yukari</li>
-                            <li>Ran</li>
-                            <li>Chen</li>
-                            <li>Mizuchi</li>
-                            <li>Aya</li>
-                            <li>Sanae</li>
-                            <li>Kanako</li>
-                            <li>Nitori</li>
-                            <li>Suwako</li>
-                            <li>Hina</li>
-                            <li>Hatate</li>
-                            <li>Kyouko</li>
-                            <li>Shou</li>
-                            <li>Nazrin</li>
-                            <li>Ichirin</li>
-                            <li>Byakuren</li>
-                            <li>Kogasa</li>
-                            <li>Yuugi</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                    <Accordion.Header>Fighting Games (TH7.5, TH10.5, TH12.3, TH13.5, TH14.5, TH15.5)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 fight">
-                            <Card.Body className="text-center">
-                                <Card.Title>Fighting Games</Card.Title>
-                                <Card.Text>Saturday, 11:30 AM - 12:30 PM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Main Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 7.5 &quot;Immaterial and Missing Power&quot;</strong></p>
-                        <ul>
-                            <li>Sakuya</li>
-                            <li>Alice</li>
-                            <li>Patchouli</li>
-                            <li>Youmu</li>
-                            <li>Remilia</li>
-                            <li>Yuyuko</li>
-                            <li>Yukari</li>
-                            <li>Suika</li>
-                            <li>Meiling</li>
-                        </ul>
-                        <p><strong>Touhou 10.5 &quot;Scarlet Weather Rhapsody&quot;</strong></p>
-                        <ul>
-                            <li>Sakuya</li>
-                            <li>Alice</li>
-                            <li>Patchouli</li>
-                            <li>Youmu</li>
-                            <li>Remilia</li>
-                            <li>Yuyuko</li>
-                            <li>Yukari</li>
-                            <li>Reisen</li>
-                            <li>Suika</li>
-                            <li>Aya</li>
-                            <li>Komachi</li>
-                            <li>Iku</li>
-                            <li>Tenshi</li>
-                        </ul>
-                        <p><strong>Touhou 12.3 &quot;Hisoutensoku&quot;</strong></p>
-                        <p><b>Note!</b> All characters from Touhou 10.5 are also included here!</p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Cirno</li>
-                            <li>Meiling</li>
-                            <li>Alice</li>
-                            <li>Patchouli</li>
-                            <li>Okuu</li>
-                            <li>Suwako</li>
-                            <li>Hisoutensoku</li>
-                            <li>Goliath Doll</li>
-                        </ul>
-                        <p><strong>Touhou 13.5 &quot;Hopeless Masquerade&quot;</strong></p>
-                        <ul>
-                            <li>Ichirn &amp; Unzan</li>
-                            <li>Byakuren</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nitori</li>
-                            <li>Koishi</li>
-                            <li>Mamizou</li>
-                            <li>Kokoro</li>
-                        </ul>
-                        <p><strong>Touhou 14.5 &quot;Urban Legend in Limbo&quot;</strong></p>
-                        <ul>
-                            <li>Ichiran &amp; Unzan</li>
-                            <li>Byakuren</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nitori</li>
-                            <li>Koishi</li>
-                            <li>Mamizou</li>
-                            <li>Kokoro</li>
-                            <li>Mokou</li>
-                            <li>Kasen</li>
-                            <li>Sukuna</li>
-                            <li>Sumireko</li>
-                            <li>Reisen</li>
-                        </ul>
-                        <p><strong>Touhou 15.5 &quot;Antimony of Common Flowers&quot;</strong></p>
-                        <ul>
-                            <li>Ichiran &amp; Unzan</li>
-                            <li>Byakuren</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nitori</li>
-                            <li>Koishi</li>
-                            <li>Mamizou</li>
-                            <li>Kokoro</li>
-                            <li>Mokou</li>
-                            <li>Kasen</li>
-                            <li>Sukuna</li>
-                            <li>Sumireko</li>
-                            <li>Reisen</li>
-                            <li>Doremy</li>
-                            <li>Tenshi</li>
-                            <li>Yukari</li>
-                            <li>Jo&#39;on</li>
-                            <li>Shion</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="2">
-                    <Accordion.Header>Lunar Landing in the Bamboo Forest (TH08, TH14, TH15, SSiB, FS, LE)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th08">
-                            <Card.Body className="text-center">
-                                <Card.Title>Lunar Landing in the Bamboo Forest</Card.Title>
-                                <Card.Text>Saturday, 4:30 PM - 5:30 PM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Main Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 8 &quot;Imperishable Night&quot;</strong></p>
-                        <ul>
-                            <li>Yukari</li>
-                            <li>Alice</li>
-                            <li>Remilia</li>
-                            <li>Sakuya</li>
-                            <li>Yuyuko</li>
-                            <li>Youmu</li>
-                            <li>Wriggle</li>
-                            <li>Mystia</li>
-                            <li>Keine</li>
-                            <li>Tewi</li>
-                            <li>Reisen</li>
-                            <li>Eirin</li>
-                            <li>Kaguya</li>
-                            <li>Mokou</li>
-                        </ul>
-                        <p><strong>Touhou 14 &quot;Double Dealing Character&quot;</strong></p>
-                        <ul>
-                            <li>Cirno</li>
-                            <li>Wakasagahime</li>
-                            <li>Sekibanki</li>
-                            <li>Kagerou</li>
-                            <li>Benben &amp; Yatsuhashi</li>
-                            <li>Seija</li>
-                            <li>Sukuna</li>
-                            <li>Raiko</li>
-                            <li>Mokou</li>
-                            <li>Hecatia</li>
-                            <li>Raiko</li>
-                        </ul>
-                        <p><strong>Touhou 15 &quot;Legacy of Lunatic Kingdom&quot;</strong></p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Reisen</li>
-                            <li>Seiran</li>
-                            <li>Ringo</li>
-                            <li>Doremy</li>
-                            <li>Sagume</li>
-                            <li>Clownpiece</li>
-                            <li>Junko</li>
-                            <li>Hecatia</li>
-                        </ul>
-                        <p><b>Silent Sinner in Blue</b></p>
-                        <ul>
-                            <li>Yukari</li>
-                            <li>Reisen</li>
-                            <li>Tewi</li>
-                            <li>Kaguya</li>
-                            <li>Eirin</li>
-                            <li>Ran</li>
-                            <li>Remilia</li>
-                            <li>Sakuya</li>
-                            <li>Patchouli</li>
-                            <li>Rinnosuke</li>
-                            <li>Youmu</li>
-                            <li>Yuyuko</li>
-                            <li>Toyohime</li>
-                            <li>Yorihime</li>
-                            <li>Aya</li>
-                        </ul>
-                        <p><b>Forbidden Scrollery</b></p>
-                        <ul>
-                            <li>Kosuzu</li>
-                            <li>Akyuu</li>
-                            <li>Sakuya</li>
-                            <li>Mamizou</li>
-                            <li>Remilia</li>
-                            <li>Kokoro</li>
-                            <li>Shinmyoumaru</li>
-                            <li>Nitori</li>
-                            <li>Reisen</li>
-                            <li>Sanae</li>
-                            <li>Rinnosuke</li>
-                            <li>Nue</li>
-                            <li>Aya</li>
-                            <li>Byakuren</li>
-                            <li>Yukari</li>
-                            <li>Fortune Teller (RIP 😭)</li>
-                        </ul>
-                        <p><b>Lotus Eaters</b></p>
-                        <ul>
-                            <li>Suika</li>
-                            <li>Miyoi</li>
-                            <li>Sakuya</li>
-                            <li>Youmu</li>
-                            <li>Mamizou</li>
-                            <li>Aya</li>
-                            <li>Komachi</li>
-                            <li>Kanako</li>
-                            <li>Sanae</li>
-                            <li>Byakuren</li>
-                            <li>Nitori</li>
-                            <li>Okina</li>
-                            <li>Sannyo</li>
-                            <li>Yuugi</li>
-                            <li>Chimata</li>
-                            <li>Megumu</li>
-                            <li>Rin</li>
-                            <li>Miko</li>
-                            <li>Futo</li>
-                            <li>Son Biten</li>
-                            <li>Joon</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="3">
-                    <Accordion.Header>The Faithful Gods (TH10, TH12, TH12.5, TH13, TH16, TH18, TH20)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="th10">
-                            <Card.Body className="text-center">
-                                <Card.Title>The Faithful Gods</Card.Title>
-                                <Card.Text>Saturday, 5:30 PM - 6:30 PM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Main Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 10 &quot;Mountain of Faith&quot;</strong></p>
-                        <ul>
-                            <li>Shizuha</li>
-                            <li>Minoriko</li>
-                            <li>Hina</li>
-                            <li>Nitori</li>
-                            <li>Momiji</li>
-                            <li>Aya</li>
-                            <li>Sanae</li>
-                            <li>Kanako</li>
-                            <li>Suwako</li>
-                        </ul>
-                        <p><strong>Touhou 12 &quot;Undefined Fantastic Object&quot;</strong></p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Nazrin</li>
-                            <li>Kogasa</li>
-                            <li>Ichirn &amp; Unzan</li>
-                            <li>Murasa</li>
-                            <li>Shou</li>
-                            <li>Byakuren</li>
-                            <li>Nue</li>
-                        </ul>
-                        <p><b>Touhou 12.5 "Double Spoiler"</b></p>
-                        <ul>
-                            <li>Aya</li>
-                            <li>Hatate</li>
-                            <li>Aki</li>
-                            <li>Parsee</li>
-                            <li>Yamame</li>
-                            <li>Nitori</li>
-                            <li>Ichirin</li>
-                            <li>Yuugi</li>
-                            <li>Shou</li>
-                            <li>Rin</li>
-                            <li>Satori</li>
-                            <li>Tenshi</li>
-                            <li>Kanako</li>
-                            <li>Byakuren</li>
-                            <li>Reimu</li>
-                            <li>Shizuha</li>
-                            <li>Hina</li>
-                            <li>Kogasa</li>
-                            <li>Momiji</li>
-                            <li>Murasa</li>
-                            <li>Suika</li>
-                            <li>Nazrin</li>
-                            <li>Utsuho</li>
-                            <li>Iku</li>
-                            <li>Suwako</li>
-                            <li>Nue</li>
-                            <li>Marisa</li>
-                            <li>Kitsume</li>
-                            <li>Sanae</li>
-                        </ul>
-                        <p><strong>Touhou 13 &quot;Ten Desires&quot;</strong></p>
-                        <ul>
-                            <li>Sanae</li>
-                            <li>Youmu</li>
-                            <li>Yuyuko</li>
-                            <li>Kyouko</li>
-                            <li>Kogasa</li>
-                            <li>Yoshika</li>
-                            <li>Seiga</li>
-                            <li>Tojiko</li>
-                            <li>Futo</li>
-                            <li>Miko</li>
-                            <li>Nue</li>
-                            <li>Mamizou</li>
-                        </ul>
-                        <p><strong>Touhou 16 &quot;Hidden Star in Four Seasons&quot;</strong></p>
-                        <ul>
-                            <li>Cirno</li>
-                            <li>Aya</li>
-                            <li>Eternity Larva</li>
-                            <li>Nemuno</li>
-                            <li>Lily White</li>
-                            <li>Aunn</li>
-                            <li>Narumi</li>
-                            <li>Satono &amp; Mai</li>
-                            <li>Okina</li>
-                        </ul>
-                        <p><strong>Touhou 18 &quot;Unconnected Marketeers&quot;</strong></p>
-                        <ul>
-                            <li>Sakuya</li>
-                            <li>Sanae</li>
-                            <li>Mike</li>
-                            <li>Takane</li>
-                            <li>Sannyo</li>
-                            <li>Misumaru</li>
-                            <li>Tsukasa</li>
-                            <li>Megumu</li>
-                            <li>Chimata</li>
-                            <li>Momoyo</li>
-                        </ul>
-                        <p><strong>Touhou 20 &quot;Fossilized Wonders&quot;</strong></p>
-                        <ul>
-                            <li>Ubame</li>
-                            <li>Chimi</li>
-                            <li>Nareko</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="4">
-                    <Accordion.Header>Melodies in the Netherworld (TH07, TH09, Hifuu Club)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th07">
-                            <Card.Body className="text-center">
-                                <Card.Title>Melodies in the Netherworld</Card.Title>
-                                <Card.Text>Sunday, 9:30 AM - 10:30 AM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Touhou 7 &quot;Perfect Cherry Blossom&quot;</strong> </p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                            <li>Sakuya</li>
-                            <li>Cirno</li>
-                            <li>Letty</li>
-                            <li>Chen</li>
-                            <li>Alice</li>
-                            <li>Lily White</li>
-                            <li>Primsriver Sisters (Lunasa, Merlin &amp; Lyrica)</li>
-                            <li>Youmu</li>
-                            <li>Yuyuko</li>
-                            <li>Ran</li>
-                            <li>Yukari</li>
-                        </ul>
-                        <p><strong>Touhou 9 &quot;Phantasmagoria of Flower View&quot;</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                            <li>Sakuya</li>
-                            <li>Cirno</li>
-                            <li>Reisen</li>
-                            <li>Youmu</li>
-                            <li>Prismriver Sisters</li>
-                            <li>Mystia</li>
-                            <li>Tewi</li>
-                            <li>Aya</li>
-                            <li>Medicine</li>
-                            <li>Yuuka</li>
-                            <li>Komachi</li>
-                            <li>Eiki</li>
-                        </ul>
-                        <p><b>Hifuu Club</b></p>
-                        <ul>
-                            <li>Renko</li>
-                            <li>Maribel</li>
-                            <li>Sumireko</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="5">
-                    <Accordion.Header>PC-98 Games (TH01 ~ TH05)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 pc98">
-                            <Card.Body className="text-center">
-                                <Card.Title>PC-98 Games</Card.Title>
-                                <Card.Text>Sunday, 10:30 AM - 11:00 AM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className='mt-2'><strong>Main Protagonists</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                        </ul>
-                        <p><strong>Touhou 1 &quot;Highly Responsive to Prayers&quot;</strong></p>
-                        <ul>
-                            <li>Singyoku</li>
-                            <li>Yuugenmagan</li>
-                            <li>Elis</li>
-                            <li>Sariel</li>
-                            <li>Mima</li>
-                            <li>Kikuri</li>
-                        </ul>
-                        <p><strong>Touhou 2 &quot;Story of Eastern Wonderland&quot;</strong></p>
-                        <ul>
-                            <li>Genji</li>
-                            <li>Rika</li>
-                            <li>Meira</li>
-                            <li>Mima</li>
-                        </ul>
-                        <p><strong>Touhou 3 &quot;Phantasmagoria of Dimensional Dream&quot;</strong></p>
-                        <ul>
-                            <li>Mima</li>
-                            <li>Ellen</li>
-                            <li>Kana</li>
-                            <li>Kotohime</li>
-                            <li>Rikako</li>
-                            <li>Yumemi</li>
-                            <li>Ruukoto</li>
-                            <li>Mimi-chan</li>
-                        </ul>
-                        <p><strong>Touhou 4 &quot;Lotus Land Story&quot;</strong></p>
-                        <ul>
-                            <li>Orange</li>
-                            <li>Kurumi</li>
-                            <li>Elly</li>
-                            <li>Yuuka</li>
-                            <li>Mugetsu</li>
-                            <li>Gengetsu</li>
-                        </ul>
-                        <p><strong>Touhou 5 &quot;Mystic Square&quot;</strong></p>
-                        <ul>
-                            <li>Mima</li>
-                            <li>Yuuka</li>
-                            <li>Wheel Demon</li>
-                            <li>Sara</li>
-                            <li>Louise</li>
-                            <li>Hikariko</li>
-                            <li>Alice</li>
-                            <li>Yuki</li>
-                            <li>Mai</li>
-                            <li>Ayano</li>
-                            <li>Yumeko</li>
-                            <li>Shinki</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="6">
-                    <Accordion.Header>The Devil's Mansion (TH06, Touhouvania, TH12.8)</Accordion.Header>
-                    <Accordion.Body>
-                        <Card className="mt-2 th06">
-                            <Card.Body className="text-center">
-                                <Card.Title>The Devil's Mansion</Card.Title>
-                                <Card.Text>Sunday, 11:00 AM - 12:00 PM</Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <p className="mt-2"><strong>Touhou 6 &quot;Embodiment of Scarlet Devil&quot;</strong></p>
-                        <ul>
-                            <li>Reimu</li>
-                            <li>Marisa</li>
-                            <li>Rumia</li>
-                            <li>Daiyousei</li>
-                            <li>Cirno</li>
-                            <li>Meiling</li>
-                            <li>Koakuma</li>
-                            <li>Patchouli</li>
-                            <li>Sakuya</li>
-                            <li>Remilia</li>
-                            <li>Flandre</li>
-                            <li>Rin Satsuki</li>
-                        </ul>
-                        <p><strong>Touhouvania / Koumanjou Densetsu 1 &amp; 2</strong></p>
-                        <ul>
-                            <li>All costumes and designs featured</li>
-                        </ul>
-                        <p><b>Touhou 12.8 "Great Fairy Wars"</b></p>
-                        <ul>
-                            <li>Lily White & Lily Black</li>
-                            <li>Daiyousei</li>
-                            <li>Star Sapphire</li>
-                            <li>Luna Child</li>
-                            <li>Sunny Milk</li>
-                            <li>Marisa</li>
-                        </ul>
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
-        <p className="mt-3">Those with any further questions related to cosplay events at TouhouFest are encouraged to visit either the <b>Cosplay Ambassadors</b> booth or the <b>Touhou Cosplay Guild</b> booth, both of which are located at the Toyota Meeting Hall.</p>
-
+        <CosplayMeetupListing type="meetups"/>
+           
         <h5>Other Photoshoots/Meet Ups</h5>
         <p>The below photoshoots are also available for those interested.</p>
         <Row xs={1} md={2} lg={4} className="justify-content-center">
@@ -1041,6 +409,112 @@ export const cosplayPage = {
                         <li>Do not jump off the stage or run into the audience during your performance.</li>
                         <li>The audience likes surprises, but the staff do not! Please do not make any last minute changes to your performance that’ll throw us off guard, especially if it violates any of these rules. </li>
                     </ul>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
+
+        <h4>Cosplay Rules</h4>
+        <p>TouhouFest celebrates the creativity of cosplayers and encourage everyone to cosplay whomever they wish regardless of size, gender, age, religion, shape, color, or even species. Cosplay is all about having fun and creativity!</p>
+        <Accordion className="my-2">
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>Cosplay Guidelines</Accordion.Header>
+                <Accordion.Body>
+                    <ul>
+                        <li>No bare feet, some form of foot covering must be worn.</li>
+
+                        <li>No hateful imagery should be included in cosplay for any reason. Cosplays must not be worn to agitate or intentionally offend other attendees.</li>
+
+                        <ul>
+                            <li>Examples include Nazi/SS imagery, KKK imagery, blackface, etc</li>
+                        </ul>
+
+                        <li>Costumes should not obstruct or impede the flow of traffic or entryway.</li>
+
+                        <li>No excessively shedding props or costumes (Use of glitter, feathers, etc).</li>
+
+                        <li>No blades or metal props. PVC and wood are fine!</li>
+
+                        <li>Props must measure less than 6 feet in any arbitrary direction at rest. Expandable props and costumes can be extended temporarily for pictures or photoshoots, provided doing so does not interfere with traffic flow.</li>
+
+                        <li>Costume and clothing should not expose the body in such a way as to be deemed indecent exposure. Private parts must be covered in an opaque material that will not slip or have gaps.</li>
+
+                        <li>Males wearing tight-fitting costumes are required to wear a dance belt.</li>
+
+                        <li>Costumes or props that offer extra mobility (i.e. skates, skateboards, in line skates, scooter, or bikes) can be used for display purposes only. They cannot be ridden around.</li>
+
+                        <li>Vintage, historical, any non current uniform and any military or police-style costumes may be address at the convention’s discretion.</li>
+
+                        <li>Any weapons props must be taken to a prop check to be checked and tagged.</li>
+
+                    </ul>
+
+                    <p>Attendees should understand and agree that, for their safety and the safety of everyone at TouhouFest, we have the absolute and immediate discretion and right to inspect your costumes, prop weapons, and any other items you bring to the Event. Because your safety and the safety of every attendee is of the utmost importance.</p>
+
+                    <p>TouhouFest reserves the right to modify and/or update this policy at any time in their sole discretion and without prior notice.</p>
+
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+                <Accordion.Header>Props & Peace Bonding</Accordion.Header>
+                <Accordion.Body>
+                    <p>Prop weapons must be submitted to “Weapons Check” for Peace Bonding. TouhouFest has the sole discretion to approve prop weapons. Please visit us at one of our Weapons Check booths during the Event. TouhouFest Weapons Check booth locations shall be designated in the programs and on signs.</p>
+                    <p>We may revoke your Peace Bond at any time in our sole discretion. Behavior which will warrant revocation of your Peace Bond includes:</p>
+                    <ul>
+                        <li>Brandishing an item in an inappropriate fashion, such as play-fighting or swinging the prop around</li>
+                        <li>Causing complaints from other attendees of the Event</li>
+                        <li>Tampering or altering of the Peace Bond</li>
+                    </ul>
+                    <h5>Prop Weapons</h5>
+                    <p>Prop weapons are inoperable weapons that support the overall look of your costume or character. For example, plastic Airsoft guns, Nerf guns, water guns, dart guns, disc guns, pellet guns, and cap guns are prop weapons.</p>
+                    <h5>Peace Bonding Rules</h5>
+                    <p>If a prop weapon is, or was, at any time capable of firing anything, it must be rendered permanently inoperable in order to qualify for Peace Bonding. You can do this by, for example, permanently plugging the barrel with glue, caulk, or any non-removable substance and hot gluing all moving components of the prop in place. You must be able to prove that the prop weapon is permanently inoperable upon inspection.</p>
+                    <p>In addition, to qualify for Peace Bonding, your prop weapon must meet the following criteria:</p>
+                    <ul>
+                        <li>All bladed props, prop firearms and prop knives cannot contain metal, have metal components, or have metal-based paints on them.</li>
+                        <ul>
+                            <li>Note: Lightsabers with metal hilts are allowed.</li>
+                        </ul>
+                        <li>Prop explosives or ammunition cannot be made out of metal.</li>
+                        <li>All swords and bladed prop weapons must adhere to the following rules:</li>
+                        <ul>
+                            <li>They cannot be made out of metal</li>
+                            <li>If your non-metal blade has a sharp edge or pointed tip, it must be anchored to a hard sheath for the duration of the Event</li>
+                            <li>If you do not have a hard sheath, your non-metal blade must have a blunt edge and blunt tip</li>
+                        </ul>
+                        <li>All prop bows must be unstrung or have a low-tensile thread with no draw weight and be incapable of shooting.</li>
+                        <li>All prop arrows must have blunt non-metal tips.</li>
+                        <li>Metal chains are not permitted unless it is for cosplay and affixed to a piece of clothing and/or armor.</li>
+                    </ul>
+                    <p>If your prop weapon is a toy, look-alike, or imitation firearm, then federal regulations (<a href="https://www.ecfr.gov/current/title-15/subtitle-B/chapter-II/subchapter-H/part-272/section-272.3" rel="noreferrer">15 CFR § 272.3</a>) require that it either be translucent enough to, permit unmistakable observation of the device’s complete contents or must have at least one of the following:</p>
+                    <ul>
+                        <li>An Orange Solid Plug in Barrel: Have a blaze orange (Fed-Std-595B 12199) or orange color brighter than that specified by the federal standard color number solid plug permanently affixed to the muzzle end of the barrel as an integral part of the entire device and recessed no more than 6 millimeters from the muzzle end of the barrel; or</li>
+                        <li>An Orange Barrel Marking: A blaze orange (Fed-Std-595B 12199) or orange color brighter than that specified by the federal standard color number, marking permanently affixed to the exterior surface of the barrel, covering the circumference of the barrel from the muzzle end for a depth of at least 6 millimeters; or</li>
+                        <li>Entire Surface Coloration: Coloration of the entire exterior surface of the device in white, bright red, bright orange, bright yellow, bright green, bright blue, bright pink, or bright purple, either singly or as the predominant color in combination with other colors in any pattern.</li>
+                    </ul>
+                    <p>Please take care when outside or when transporting any form of firearm prop.</p>
+                    <p>Regardless of how realistic the prop may look, ensure that it is completely hidden while traveling and be aware of your surroundings, attire, and the appearance of your props to bystanders when outside of TouhouFest. Do not assume a costume will reassure people that your prop is not a real weapon.</p>
+                    <h5>Peace-Bonded Weapons at TouhouFest</h5>
+                    <p>You may display your prop weapons only as costume pieces. Do not swing or brandish your prop weapon in any way that could be considered unsafe or threatening.</p>
+                    <p>You may pose with a prop weapon in a brandishing manner, so long as no reasonable person would interpret it as anything but a pose for dramatic effect. TouhouFest staff or management may stop your posed brandishing in their sole discretion.</p>
+                    <p>Please put your prop weapons away when leaving the Event site at night so that you don’t get the attention of local law enforcement. TouhouFest cannot be responsible for any actions taken by local law enforcement agencies, such as detaining and questioning you, if you decide to display or brandish your prop weapons at or outside of TouhouFest. </p>
+                </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+                <Accordion.Header>Prohibited Items</Accordion.Header>
+                <Accordion.Body>
+                    <p><b><em>No Real Weapons Are Allowed at TouhouFest!</em></b></p>
+                    <p>This includes firearms, knives, curios, relic antique firearms, any form of ammunition, any items designed or manufactured with the intent to cause death or serious bodily injury, whether carried openly or concealed, even if any such weapons are inoperable or unusable and irrespective of whether you are licensed to possess such weapons. Items that may otherwise be legal for you to own or carry are not welcome at TouhouFest if they violate this Prop / Replica Weapons Policy.</p>
+                    <p>The following items are not permitted at TouhouFest:</p>
+                    <ul>
+                        <li>All Metal Weapons</li>
+                        <li>Firearms, Ammunition, Rifles, Shotguns, Handguns, Blowguns, Tasers, Laser Pointers, Laser-Aiming Devices or similar Laser Devices</li>
+                        <li>Explosives, Incendiary Devices, Chemical Weapons, and Pepper Spray / Mace</li>
+                        <li>Knives, Live Blades/Swords (including Katana and other Martial Arts Style Swords), Daggers, Sword Canes, Switchblades, Bali-Song (Butterfly Knife), Axes, Kunai, Ice Skates, and Hatchets</li>
+                        <li>Metal Pole Arms, Wooden/Metal Bats, Paddles, Stilts, Golf Clubs, and Vuvuzelas</li>
+                        <li>Archery and Hunting Bows, Arrows, Nunchucks, Brass Knuckles, and Whips</li>
+                        <li>Any item designed or manufactured with the intent to cause death or serious bodily injury to any person or property, any item that is illegal in the State of California, or any item that appears, in TouhouFest’s sole discretion, to be dangerous or which would pose or place others at risk or harm, immediate or otherwise.</li>
+                    </ul>
+                    <p>(Note: some venues prohibit other items e.g. glass bottles, food, alcohol, and e-cigarettes. Please check with the venue before bringing such items.)</p>
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
