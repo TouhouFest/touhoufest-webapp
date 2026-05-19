@@ -33,6 +33,7 @@ function CosplayMeetupListing({type}: {type:string}) {
     
         const [showEventDescription, setShowEventDescription] = useState(false);
         const [eventDetails, setEventDetails] = useState({});
+        const [activeDay, setActiveDay] = useState("Saturday");
 
         const handleEventOnHide = () => setShowEventDescription(false);
 
@@ -70,24 +71,22 @@ function CosplayMeetupListing({type}: {type:string}) {
         <Row className="justify-content-center">
             <Col xs={12} lg={8}>
                 <ListGroup className='mb-3 thfest-listgroup'>
-                    {/* uncomment once ready to tackle per-day rendering
                     <ListGroup.Item className="p-0">
-                        <Nav fill variant="pills" defaultActiveKey="foobar">
-                            <Nav.Item>
-                                <Nav.Link className="rounded-bottom-0 rounded-end-0" eventKey="foobar">Fri</Nav.Link>
+                        <Nav fill variant="pills" defaultActiveKey="sat">
+                            <Nav.Item onClick={() => setActiveDay("Friday")}>
+                                <Nav.Link className="rounded-bottom-0 rounded-end-0 fw-bold" eventKey="fri">Fri</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link className="rounded-0" eventKey="johndoe">Sat</Nav.Link>
+                            <Nav.Item onClick={() => setActiveDay("Saturday")}>
+                                <Nav.Link className="rounded-0 fw-bold" eventKey="sat">Sat</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link className="rounded-start-0 rounded-bottom-0"eventKey="foobar2">Sun</Nav.Link>
+                            <Nav.Item onClick={() => setActiveDay("Sunday")}>
+                                <Nav.Link className="rounded-start-0 rounded-bottom-0 fw-bold"eventKey="sun">Sun</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </ListGroup.Item>
-                    */}
 
                     {cosplaymeetups.map((meetup, idx) => {
-                        return meetup["meetup_type"] === type ? <>
+                        return meetup["meetup_type"] === type && meetup["event_day"] === activeDay ? <>
                         <ListGroup.Item onClick={() => handleEventOnClick(idx)}>
                             <ReturnCosplayHeader meetup={meetup}/>
                             <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>

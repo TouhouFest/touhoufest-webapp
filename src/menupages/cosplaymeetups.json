@@ -1,5 +1,15 @@
 [
   {
+    "event_title": "General Photoshoot",
+    "event_subtitle": "Cosplay Meetup for Anyone Available to Show Up",
+    "meetup_type": "other_photoshoots",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Friday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
     "event_title": "Youkai Mountain Investment Oppertunity ",
     "event_subtitle": "TH10 + Hatate, TH16, TH18",
     "meetup_type": "meetups",
@@ -60,86 +70,6 @@
     "event_end_time": "10:00 AM"
   },
   {
-    "event_title": "Faires & The Human Village ",
-    "event_subtitle": "GFW, 3F, CoLA, LE, FS, Music CDs",
-    "meetup_type": "meetups",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "PC-98",
-    "event_subtitle": "TH01, TH02, TH03, TH04, TH05",
-    "meetup_type": "meetups",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "Phantasmagoria Games ",
-    "event_subtitle": "TH3, TH9, TH19",
-    "meetup_type": "meetups",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "General Photoshoot",
-    "event_subtitle": "Cosplay Meetup for Anyone Available to Show Up",
-    "meetup_type": "other_photoshoots",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Friday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "Hag Retirement Home",
-    "event_subtitle": "Cosplays Involving \"\"\"Elderly\"\"\" Characters",
-    "meetup_type": "other_photoshoots",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "Animal / Beast Youkai",
-    "event_subtitle": "Cosplays Involving Animal / Beast Youkai Characters",
-    "meetup_type": "other_photoshoots",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "Military Touhou",
-    "event_subtitle": "Militaria/Reenactor-Themed Cosplays",
-    "meetup_type": "other_photoshoots",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
-    "event_title": "Touhou Lolita Tea Party",
-    "event_subtitle": "Lolita-Themed Cosplays",
-    "meetup_type": "other_photoshoots",
-    "event_room": "Pine Wind Garden",
-    "event_description": "tbd",
-    "event_day": "Saturday",
-    "event_start_time": "9:00 AM",
-    "event_end_time": "10:00 AM"
-  },
-  {
     "event_title": "Fumo Meetup",
     "event_subtitle": "Fumos, Nesoberies, and other plushies",
     "meetup_type": "other_photoshoots",
@@ -166,6 +96,76 @@
     "event_room": "Drawing & Painting Studio",
     "event_description": "tbd",
     "event_day": "Saturday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "Faires & The Human Village ",
+    "event_subtitle": "GFW, 3F, CoLA, LE, FS, Music CDs",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "PC-98",
+    "event_subtitle": "TH01, TH02, TH03, TH04, TH05",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "Phantasmagoria Games ",
+    "event_subtitle": "TH3, TH9, TH19",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "Hag Retirement Home",
+    "event_subtitle": "Cosplays Involving \"\"\"Elderly\"\"\" Characters",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "Animal / Beast Youkai",
+    "event_subtitle": "Cosplays Involving Animal / Beast Youkai Characters",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "Military Touhou",
+    "event_subtitle": "Militaria/Reenactor-Themed Cosplays",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
+    "event_start_time": "9:00 AM",
+    "event_end_time": "10:00 AM"
+  },
+  {
+    "event_title": "Touhou Lolita Tea Party",
+    "event_subtitle": "Lolita-Themed Cosplays",
+    "meetup_type": "meetups",
+    "event_room": "Pine Wind Garden",
+    "event_description": "tbd",
+    "event_day": "Sunday",
     "event_start_time": "9:00 AM",
     "event_end_time": "10:00 AM"
   }
