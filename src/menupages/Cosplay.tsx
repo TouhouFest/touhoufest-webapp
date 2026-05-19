@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCameraRetro, faHatWizard, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -23,13 +23,14 @@ import mysticallala from "./../images/mysticallala.jpg";
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
+import otherphotoshootscover from "./../images/otherphotoshoots_banner.jpg";
 
 import cosplaymeetups from "./cosplaymeetups.json";
 import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
 
-function CosplayMeetupListing({type, includeFriday=false}: {type:string, includeFriday?:boolean}) {
+function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, subtitleString}: {type:string, includeFriday?:boolean, includeLocation?:boolean, subtitleString:string}) {
     
         const [showEventDescription, setShowEventDescription] = useState(false);
         const [eventDetails, setEventDetails] = useState({});
@@ -46,8 +47,9 @@ function CosplayMeetupListing({type, includeFriday=false}: {type:string, include
         function ReturnCosplayHeader({meetup}: {meetup:any}) {
             return <>
                 <h5 className="mb-1">{meetup["event_title"]}</h5>
-                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>{meetup["event_day"]} | {meetup["event_start_time"]} - {meetup["event_end_time"]}</b></p>
-                <b className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</b>
+                <p className={includeLocation ? "mb-0" : "mb-1"}><FontAwesomeIcon icon={faClock} fixedWidth/> <b>{meetup["event_day"]} | {meetup["event_start_time"]} - {meetup["event_end_time"]}</b></p>
+                {includeLocation && <p className="mb-1"><FontAwesomeIcon icon={faLocationDot} fixedWidth/> <b>{meetup["event_room"]}</b></p>}
+                <b className="mb-0"><FontAwesomeIcon icon={faPersonBurst} fixedWidth/> {subtitleString}</b>
                 <p className="mb-1">{meetup["event_subtitle"]}</p>
             </>;
         }
@@ -177,28 +179,24 @@ export const cosplayPage = {
 
         <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below. To view a particular day's meetups, tap on the appropriate day in the selector. ("Fri", "Sat", "Sun")</p>
 
-        <CosplayMeetupListing type="meetups"/>
+        <CosplayMeetupListing type="meetups" subtitleString='For characters from'/>
            
-        <h5>Other Photoshoots/Meet Ups</h5>
-        <p>The below photoshoots are also available for those interested.</p>
-        <Row xs={1} md={2} lg={4} className="justify-content-center">
-            <Col>
-                <Card className="mt-2 purple-one">
-                    <Card.Body className="text-center">
-                        <Card.Title>Fumo Meetup</Card.Title>
-                        <Card.Text>Saturday, 3:00 PM - 4:00 PM</Card.Text>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="mt-2 pink-one">
-                    <Card.Body className="text-center">
-                        <Card.Title>Fangames Photoshoot</Card.Title>
-                        <Card.Text>Sunday, 12:00 PM - 12:30 PM</Card.Text>
-                    </Card.Body>
-                </Card>
+        <MakeGoheiHeader content="Other Photoshoots/Meetups" fragment_id="otherphotoshoots"/>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={6}>
+                <Image src={otherphotoshootscover} rounded fluid/>
             </Col>
         </Row>
+
+        <Row className="justify-content-center gy-3 my-3">
+            <Col xs="auto"><MakeLocationBadge location="Pine Wind Garden"/></Col>
+            <Col xs="auto"><MakeLocationBadge location="Drawing & Painting Studio"/></Col>
+        </Row>
+
+        <p>Below are a few additional other photoshoots/meetups that may be of interest.</p>
+
+        <CosplayMeetupListing type="other_photoshoots" includeFriday={true} subtitleString='Cosplay meetup features:' includeLocation={true}/>
 
         {/*
         <h4 className="mt-2">Cosplay Repair</h4>
