@@ -198,6 +198,10 @@ export const cosplayPage = {
 
         <CosplayMeetupListing type="other_photoshoots" includeFriday={true} subtitleString='Cosplay meetup features:' includeLocation={true}/>
 
+        <MakeGoheiHeader content="Cosplay Workshop" fragment_id='cosplayworkshop'/>
+
+        <p>TouhouFest is pleased to announce that it is hosting a set of cosplay workshops! For those interested in getting their cosplays to the best they can be, the below programming may be of interest:</p>
+
         {/*
         <h4 className="mt-2">Cosplay Repair</h4>
         <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner at the Toyota Meeting Hall.</p>
