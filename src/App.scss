@@ -50,6 +50,7 @@ body {
     background-color: declared_colors.$parchment;
     border-color: declared_colors.$readable_red;
   }
+
 }
 
 [data-bs-theme="dark"] {
@@ -71,7 +72,6 @@ body {
     background-color: declared_colors.$color-dark;
     border-color: declared_colors.$dark-gohei-header-bkgnd;
   }
-
 
 }
 
