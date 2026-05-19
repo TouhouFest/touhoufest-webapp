@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faCameraRetro, faHatWizard, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
-import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav } from 'react-bootstrap';
+import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
@@ -25,6 +25,80 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
 
 import cosplaymeetups from "./cosplaymeetups.json";
+import EventDescription from './../EventDescription';
+import { useState } from 'react';
+import Markdown from 'marked-react';
+
+function CosplayMeetupListing() {
+    
+        const [showEventDescription, setShowEventDescription] = useState(false);
+        const [eventDetails, setEventDetails] = useState({});
+
+        const handleEventOnHide = () => setShowEventDescription(false);
+
+        function handleEventOnClick(index:number) {
+            let evt = cosplaymeetups[index];
+            setEventDetails(evt);
+            setShowEventDescription(true);
+        }
+
+        function ReturnCosplayHeader({meetup}: {meetup:any}) {
+            return <>
+                <h5 className="mb-1">{meetup["event_title"]}</h5>
+                <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>{meetup["event_day"]} | {meetup["event_start_time"]} - {meetup["event_end_time"]}</b></p>
+                <b className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</b>
+                <p className="mb-1">{meetup["event_subtitle"]}</p>
+            </>;
+        }
+
+        
+        return <>
+
+        <Modal show={showEventDescription} onHide={handleEventOnHide} centered scrollable>
+            <Modal.Header closeButton>
+                <Modal.Title className="align-middle"></Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <ReturnCosplayHeader meetup={eventDetails}/>
+
+                <hr />
+
+                <Markdown>{eventDetails["event_description"]}</Markdown>
+            </Modal.Body>
+        </Modal>
+
+        <Row className="justify-content-center">
+            <Col xs={12} lg={8}>
+                <ListGroup className='mb-3 thfest-listgroup'>
+                    {/* uncomment once ready to tackle per-day rendering
+                    <ListGroup.Item className="p-0">
+                        <Nav fill variant="pills" defaultActiveKey="foobar">
+                            <Nav.Item>
+                                <Nav.Link className="rounded-bottom-0 rounded-end-0" eventKey="foobar">Fri</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link className="rounded-0" eventKey="johndoe">Sat</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link className="rounded-start-0 rounded-bottom-0"eventKey="foobar2">Sun</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </ListGroup.Item>
+                    */}
+
+                    {cosplaymeetups.map((meetup, idx) => {
+                        return meetup["meetup_type"] === "meetups" ? <>
+                        <ListGroup.Item onClick={() => handleEventOnClick(idx)}>
+                            <ReturnCosplayHeader meetup={meetup}/>
+                            <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                        </ListGroup.Item>
+                        </> : <></>;
+                    })}
+                </ListGroup>
+            </Col>
+        </Row>
+        </>;
+}
 
 export const cosplayPage = {
     "codename": "cosplay",
@@ -102,37 +176,7 @@ export const cosplayPage = {
 
         <p>Cosplay Meetups for select mainline Touhou games &mdash; organized by our talented Cosplay Runners and Photographers &mdash; are listed below. To view a particular day's meetups, tap on the appropriate day in the selector. ("Fri", "Sat", "Sun")</p>
 
-        <Row className="justify-content-center">
-            <Col xs={12} lg={8}>
-                <ListGroup className='mb-3 thfest-listgroup'>
-                    {/* uncomment once ready to tackle per-day rendering
-                    <ListGroup.Item className="p-0">
-                        <Nav fill variant="pills" defaultActiveKey="foobar">
-                            <Nav.Item>
-                                <Nav.Link className="rounded-bottom-0 rounded-end-0" eventKey="foobar">Fri</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link className="rounded-0" eventKey="johndoe">Sat</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link className="rounded-start-0 rounded-bottom-0"eventKey="foobar2">Sun</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                    </ListGroup.Item>
-                    */}
-
-                    {cosplaymeetups.map((meetup) => {
-                        return meetup["meetup_type"] === "meetups" ? <ListGroup.Item>
-                            <h5 className="mb-1">{meetup["event_title"]}</h5>
-                            <p className="mb-2"><FontAwesomeIcon icon={faClock}/> <b>{meetup["event_day"]} | {meetup["event_start_time"]} - {meetup["event_end_time"]}</b></p>
-                            <b className="mb-0"><FontAwesomeIcon icon={faPersonBurst}/> For characters from:</b>
-                            <p className="mb-1">{meetup["event_subtitle"]}</p>
-                            <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
-                        </ListGroup.Item> : <></>
-                    })}
-                </ListGroup>
-            </Col>
-        </Row>
+        <CosplayMeetupListing />
            
         <p className="mt-3">Those with any further questions related to cosplay events at TouhouFest are encouraged to visit either the <b>Cosplay Ambassadors</b> booth or the <b>Touhou Cosplay Guild</b> booth, both of which are located at the Toyota Meeting Hall.</p>
 
