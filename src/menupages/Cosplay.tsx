@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -284,7 +284,7 @@ export const cosplayPage = {
             <Col>
                 <Card>
                     <Card.Body>
-                        <Row className="align-items-center mb-3">
+                        <Row className="align-items-center mb-3 g-3">
                           <Col xs="auto">
                             <FontAwesomeIcon icon={faPalette} size="4x"/>
                           </Col>
@@ -299,7 +299,7 @@ export const cosplayPage = {
             <Col>
                 <Card className="h-100">
                     <Card.Body>
-                        <Row className="align-items-center mb-3">
+                        <Row className="align-items-center mb-3 g-3">
                           <Col xs="auto">
                             <FontAwesomeIcon icon={faPersonBurst} size="4x"/>
                           </Col>
@@ -314,7 +314,7 @@ export const cosplayPage = {
             <Col>
                 <Card className="h-100">
                     <Card.Body>
-                        <Row className="align-items-center mb-3">
+                        <Row className="align-items-center mb-3 g-3">
                           <Col xs="auto">
                             <FontAwesomeIcon icon={faHeart} size="4x"/>
                           </Col>
@@ -333,9 +333,33 @@ export const cosplayPage = {
         <Row xs={1} lg={3} className="gy-3 justify-content-center">
             <Col >
                 <Card>
-                    <Card.Body className="text-center gold-bg rounded">
-                        <Card.Title>Best Craftsmanship</Card.Title>
-                        <Card.Subtitle>Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+                    <Card.Header className="fw-bold">Craftsmanship</Card.Header>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Best Craftsmanship</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Craftsmanship Contest whose work and effort crafting their costume left the strongest impression of the judges.</Card.Text>
+
+                        <hr />
+
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Runner-up Best Craftsmanship</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Commemorative Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Craftsmanship Contest whose work and effort crafting their costume greatly impressed the judges.</Card.Text>
+
+
                     </Card.Body>
                 </Card>
             </Col>
