@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -20,7 +20,7 @@ import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
-import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
 import otherphotoshootscover from "./../images/otherphotoshoots_banner.jpg";
@@ -280,28 +280,48 @@ export const cosplayPage = {
         <CosplayMeetupListing type="contest" includeDaySelect={false} subtitleString='Event note:' includeLocation={true} renderModal={false}/>
 
         <h4>Categories</h4>
-        <p>There are three components within the Cosplay Contest:</p>
         <Row xs={1} md={3} className="justify-content-center gy-3">
             <Col>
-                <Card className="pink-one">
+                <Card>
                     <Card.Body>
-                        <Card.Title className="text-center">Craftmanship</Card.Title>
+                        <Row className="align-items-center mb-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faPalette} size="4x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Craftmanship</h4></Card.Title>
+                          </Col>
+                        </Row>
                         <Card.Text>The Craftsmanship category will be judged based on how well you’ve made your costume. If you’re proud of your sewing, foamwork, or any other techniques you used to put your costume together, this category is for you! You’ll have time before the contest to meet with the judges so they can see your work up close and ask any questions. During the contest, you’ll walk across the stage and strike some cool poses in front of the audience!</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
-                <Card className="red-one">
+                <Card className="h-100">
                     <Card.Body>
-                        <Card.Title className="text-center">Performance</Card.Title>
+                        <Row className="align-items-center mb-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faPersonBurst} size="4x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
                         <Card.Text>If you love to entertain, then consider entering the Performance category! You don’t have to have a self-made costume to perform, rather you’ll be judged on how well you’re able to capture the audience. This can be through a skit, dance, or anything else you can think of. You can be as comedic or dramatic as you’d like, so get creative!</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
-                <Card className="purple-one">
+                <Card className="h-100">
                     <Card.Body>
-                        <Card.Title className="text-center">Exhibition</Card.Title>
+                        <Row className="align-items-center mb-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faHeart} size="4x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Exhibition</h4></Card.Title>
+                          </Col>
+                        </Row>
                         <Card.Text>The Exhibition category is for anyone that wants a chance to walk across the stage, but doesn’t want to compete. This is just for fun and is NOT eligible for prizes, so there are no limits to whether you’ve made your costume yourself or not. Anyone may participate in this category, including staff and guests. </Card.Text>
                     </Card.Body>
                 </Card>
