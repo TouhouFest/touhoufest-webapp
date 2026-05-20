@@ -9,7 +9,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
-import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal } from 'react-bootstrap';
+import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
@@ -122,6 +122,10 @@ export const cosplayPage = {
         "fragment_id": "cosplayworkshop"
         },
         {
+        "title": "Cosplay Repair",
+        "fragment_id": "cosplayrepair"
+        },
+        {
         "title": "Cosplay Contest",
         "fragment_id": "cosplaycontest"
         },
@@ -215,18 +219,45 @@ export const cosplayPage = {
 
         <CosplayMeetupListing type="workshop" includeFriday={false} subtitleString='Workshop Features:' includeDaySelect={false} />
 
-        {/*
-        <h4 className="mt-2">Cosplay Repair</h4>
-        <p>Did your cosplay unexpectedly explode into a million billion pieces? Jitters' cosplay repair stand may be able to help you. Look for the below banner at the Toyota Meeting Hall.</p>
+        <MakeGoheiHeader content="Cosplay Repair" fragment_id='cosplayrepair'/>
+
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
-                <Figure>
-                    <Figure.Image src={cosplayrepair} fluid rounded />
-                    <Figure.Caption>Cosplay Repair Banner</Figure.Caption>
-                </Figure>
+                <Image src={cosplayrepair} rounded fluid/>
             </Col>
         </Row>
-        */}
+
+        <div className="text-center my-4"><MakeLocationBadge location="Assembly Hall"/></div>
+
+        <p>Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist. Hours and operations for Cosplay Repair are listed below:</p>
+
+        <Row xs={1} md={2} lg={4} className="mt-3">
+          <Col>
+            <Table className="w-auto mx-auto">
+              <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Times</th>
+                  </tr>
+              </thead>  
+              <tbody>
+                <tr>
+                  <td>Friday</td>
+                  <td>Not Open</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>10:00 AM - 2:30 PM</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+
         <h4 className='mt-2'>Cosplay Contest</h4>
         <h5>Itinerary</h5>
         <ol>
