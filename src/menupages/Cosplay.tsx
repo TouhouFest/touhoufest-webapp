@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
-import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTiktok, faTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { CircledBullets } from '../Utils';
 
 // const cosplaybanner = require('./../images/cosplaybanner.jpg');
@@ -20,6 +20,7 @@ import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
+import tororo from "./../images/tororo.jpg";
 import { faClock, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
@@ -411,69 +412,41 @@ export const cosplayPage = {
                 </Card>
             </Col>
         </Row>
-        <h5 className="mt-3">About the Cosplay Contest Judges</h5>
-        <Row xs={1} md={2} lg={4} className="gy-3">
+
+        <div className="my-3">
+          <MakeGoheiHeader content="Cosplay Guests" fragment_id='cosplayguests' />
+        </div>
+
+        <Row xs={1} md={2} lg={3} className="gy-3">
             <Col>
-                <Card>
-                    <Card.Img variant="top" src={medukitty} />
-                    <Card.Header className="text-center">Master of Ceremonies</Card.Header>
-                    <Card.Body>
-                        <Card.Title>Medukitty</Card.Title>
-                        <Card.Subtitle className="mb-2">Cosplay Ambassador</Card.Subtitle>
-                        <Card.Text>I'm MeduKitty, a long time cosplayer and Touhou enthusiast who's thrilled to combine her two greatest passions!  I've been cosplaying from Touhou since 2018, and my favorite thing is making my costumes from scratch with as many details as I can fit into them.  I love our community so much and I can't wait to participate in TouhouFest with you all! </Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link href="https://www.instagram.com/medukitty_/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                        <Card.Link href="https://www.tiktok.com/@medukitty" target="_blank"><FontAwesomeIcon icon={faTiktok} /> TikTok</Card.Link>
-                        <Card.Link href="https://twitter.com/medukitty" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
-                    </Card.Footer>
-                </Card>
+              <MakeGenericCard subtitle="Cosplay Guest Judge" title="Tororo" picture={tororo} links={
+                [
+                    {"link": "https://x.com/hoshibakoWorks", "title": <><FontAwesomeIcon icon={faTwitter}/> Twitter</>}
+                ]
+            }>
+                <p>Tororo is a cosplayer who has been active in the Touhou Project scene for over 17 years, and she is one of the most dedicated fans of Touhou. All of her costumes are self-made, and she excels at creating intricate and vibrant designs that capture the charm of the characters and the essence of their lore. To date, she has created over 100 Touhou Project costumes and continues to be actively involved in the scene.</p>
+              </MakeGenericCard>
             </Col>
             <Col>
-                <Card>
-                    <Card.Img variant="top" src={pumpking} />
-                    <Card.Header className="text-center">Cosplay Judge</Card.Header>
-                    <Card.Body>
-                        <Card.Title>Pumpking</Card.Title>
-                        <Card.Subtitle className="mb-2">Cosplay Ambassador</Card.Subtitle>
-                        <Card.Text>Hi!! My name is Pumpking! I'm 24 years old (as of 2025) and got into Touhou in 2020 during Covid! I love to cosplay and especially pride myself in sharing cosplay designers and making shopping overseas more accessible for newcomers. I've started making my own stuff recently too. Thank you for having me!</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link href="https://www.instagram.com/sunnysiddedup/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                        <Card.Link href="https://x.com/Sunnysiddedup" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
-                    </Card.Footer>
-                </Card>
+              <MakeGenericCard subtitle="Cosplay Judge" title="Pumpking" picture={pumpking} links={
+                [
+                    {"link": "https://www.instagram.com/sunnysiddedup/", "title": <><FontAwesomeIcon icon={faInstagram}/> Instagram</>}
+                ]
+            }>
+              <p>Hello, my name is Pumpking! I’m an Indiana native who’s been cosplaying Touhou Project since 2020. I love being apart of this community and recently have been making my own cosplays. I am also very passionate about making cosplay purchasing more assessable for others. If you need any help purchasing a premade cosplay online, I’m your gall! I have attended touhoufest for all running years and performed during Touhoufest 2024 and MCed for Touhoufest 2025. I’m happy to be back for Touhoufest 2026 to judge and see you all again!</p>
+              </MakeGenericCard>
             </Col>
             <Col>
-                <Card>
-                    <Card.Img variant="top" src={mysticallala} />
-                    <Card.Header className="text-center">Cosplay Judge</Card.Header>
-                    <Card.Body>
-                        <Card.Title>Mystical Lala</Card.Title>
-                        <Card.Subtitle className="mb-2">Cosplay Ambassador</Card.Subtitle>
-                        <Card.Text>Hi I'm Lala! I'm just a girl who cosplays the characters she loves! I've been cosplaying since 2012, and I make, buy, alter cosplays! I love cosplaying mainly Touhou girls but I do stuff from other series as well. If you have any questions I can try to help! Anyone can cosplay as long as they have fun!</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link href="https://www.instagram.com/mystical.lala/?hl=en" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                        <Card.Link href="https://x.com/Mysticallala" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
-                    </Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Img variant="top" src={uniphants} />
-                    <Card.Header className="text-center">Cosplay Guest Judge</Card.Header>
-                    <Card.Body>
-                        <Card.Title>Purple Uniphants</Card.Title>
-                        <Card.Text>You can call me Uni! I've been cosplaying since 2011, and I ventured into Touhou shortly after. I have a handful of awards under my belt, but please don't be intimidated: I love seeing how we as cosplayers bring fiction to reality with our own styles and personalities. I owe all of my crafting knowledge to the internet, but I'm still not done learning!</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link href="https://www.instagram.com/purpleuniphants/" target="_blank"><FontAwesomeIcon icon={faInstagram} /> Instagram</Card.Link>
-                        <Card.Link href="https://x.com/purpleuniphants" target="_blank"><FontAwesomeIcon icon={faXTwitter} /> Twitter</Card.Link>
-                    </Card.Footer>
-                </Card>
+              <MakeGenericCard subtitle="Cosplay Guest Judge" title="Uniphants" picture={uniphants} links={
+                [
+                    {"link": "https://www.instagram.com/purpleuniphants/", "title": <><FontAwesomeIcon icon={faInstagram}/> Instagram</>}
+                ]
+            }>
+                <p>You can call me Uni! I've been cosplaying since 2011, and I ventured into Touhou shortly after. I have a handful of awards under my belt, but please don't be intimidated: I love seeing how we as cosplayers bring fiction to reality with our own styles and personalities. I owe all of my crafting knowledge to the internet, but I'm still not done learning!</p>
+              </MakeGenericCard>
             </Col>
         </Row>
+        {/*
         <h5 className="mt-3">Rules</h5>
         <Accordion>
             <Accordion.Item eventKey="0">
@@ -525,6 +498,8 @@ export const cosplayPage = {
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
+        
+        */}
 
         <h4>Cosplay Rules</h4>
         <p>TouhouFest celebrates the creativity of cosplayers and encourage everyone to cosplay whomever they wish regardless of size, gender, age, religion, shape, color, or even species. Cosplay is all about having fun and creativity!</p>
