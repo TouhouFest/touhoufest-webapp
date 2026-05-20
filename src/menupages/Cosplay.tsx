@@ -501,7 +501,7 @@ export const cosplayPage = {
         
         */}
 
-        <h4>Cosplay Rules</h4>
+        <MakeGoheiHeader content="Cosplay Rules" fragment_id='cosplayrules'/>
         <p>TouhouFest celebrates the creativity of cosplayers and encourage everyone to cosplay whomever they wish regardless of size, gender, age, religion, shape, color, or even species. Cosplay is all about having fun and creativity!</p>
         <Accordion className="my-2">
             <Accordion.Item eventKey="0">
