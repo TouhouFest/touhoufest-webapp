@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobeAmericas, faShop } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobeAmericas, faMusic, faShop } from '@fortawesome/free-solid-svg-icons';
 import { faTwitch, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -70,7 +70,21 @@ let djs = [
 
 export const guestsPage = {
     "codename": "guests",
-    "header": (<><FontAwesomeIcon icon={faCircleUser} fixedWidth></FontAwesomeIcon> Guests & DJs</>),
+    "jumplinks": [
+        {
+            "title": "Locations",
+            "fragment_id": "locations"
+        },
+        {
+            "title": "Guests",
+            "fragment_id": "guests"
+        },
+        {
+            "title": "DJs & Performers",
+            "fragment_id": "performers"
+        },
+    ],
+    "header": (<><FontAwesomeIcon icon={faMusic} fixedWidth></FontAwesomeIcon> Music & Guests</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
         <h4>Location(s)</h4>

@@ -52,7 +52,7 @@ if(!Capacitor.isNativePlatform() && Capacitor.getPlatform() == 'web') {
 
 menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ]);
 
-let menuheader = (<>TouhouFest 2025</>);
+let menuheader = (<>TouhouFest 2026</>);
 
 import { useEffect } from "react";
 import { useLocation } from "react-router";
