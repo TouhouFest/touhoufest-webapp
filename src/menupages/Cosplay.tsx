@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
 import { faInstagram, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -20,18 +20,19 @@ import cosplayrepair from "./../images/cosplayrepair.jpg";
 import uniphants from "./../images/uniphants.jpg";
 import pumpking from "./../images/pumpking.jpg";
 import mysticallala from "./../images/mysticallala.jpg";
-import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
 import otherphotoshootscover from "./../images/otherphotoshoots_banner.jpg";
 import cosplayworkshop from "./../images/cosplayworkshop.jpg";
+import cosplaycontest from "./../images/cosplaycontest.jpg";
 
 import cosplaymeetups from "./cosplaymeetups.json";
 import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
 
-function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string}) {
+function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString, renderModal=true}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string, renderModal?:boolean}) {
     
         const [showEventDescription, setShowEventDescription] = useState(false);
         const [eventDetails, setEventDetails] = useState({});
@@ -58,19 +59,21 @@ function CosplayMeetupListing({type, includeFriday=false, includeLocation=false,
         
         return <>
 
-        <Modal show={showEventDescription} onHide={handleEventOnHide} centered scrollable>
-            <Modal.Header closeButton>
-                <Modal.Title className="align-middle"></Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <ReturnCosplayHeader meetup={eventDetails}/>
+        {renderModal && 
+          <Modal show={showEventDescription} onHide={handleEventOnHide} centered scrollable>
+              <Modal.Header closeButton>
+                  <Modal.Title className="align-middle"></Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                  <ReturnCosplayHeader meetup={eventDetails}/>
 
-                <hr />
+                  <hr />
 
-                <Markdown>{eventDetails["event_description"]}</Markdown>
-            </Modal.Body>
-        </Modal>
-
+                  <Markdown>{eventDetails["event_description"]}</Markdown>
+              </Modal.Body>
+          </Modal>
+        }
+       
         <Row className="justify-content-center">
             <Col xs={12} lg={8}>
                 <ListGroup className='mb-3 thfest-listgroup'>
@@ -96,7 +99,9 @@ function CosplayMeetupListing({type, includeFriday=false, includeLocation=false,
                         return meetup["meetup_type"] === type && meetup["event_day"] === activeDay ? <>
                         <ListGroup.Item onClick={() => handleEventOnClick(idx)}>
                             <ReturnCosplayHeader meetup={meetup}/>
-                            <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                            {
+                              renderModal && <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                            }
                         </ListGroup.Item>
                         </> : <></>;
                     })}
@@ -231,7 +236,7 @@ export const cosplayPage = {
 
         <p>Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist. Hours and operations for Cosplay Repair are listed below:</p>
 
-        <Row xs={1} md={2} lg={4} className="mt-3">
+        <Row xs={1} md={2} lg={4} className="mt-3 justify-content-center">
           <Col>
             <Table className="w-auto mx-auto">
               <thead>
@@ -258,88 +263,150 @@ export const cosplayPage = {
           </Col>
         </Row>
 
-        <h4 className='mt-2'>Cosplay Contest</h4>
-        <h5>Itinerary</h5>
-        <ol>
-            <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
-            <ol type="a">
-                <li>This portion is specifically for <b>Cosplay Contest participants</b>.</li>
-            </ol>
-            <li><b>Seating</b>: 1:00 PM - 1:30 PM</li>
-            <li><b>Cosplay Contest</b>: 1:30 PM - 3:00 PM</li>
-            <ol type="a">
-                <li>During the cosplay judging period, CorpsDanceCrew will be giving a special performance!</li>
-            </ol>
-        </ol>
-        <h5>Categories</h5>
-        <p>There are three components within the Cosplay Contest:</p>
+        <MakeGoheiHeader content="Cosplay Contest" fragment_id='cosplaycontest'/>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <Image src={cosplaycontest} rounded fluid/>
+            </Col>
+        </Row>
+
+        <div className="text-center my-4"><MakeLocationBadge location="Torino Plaza Stage"/></div>
+
+        <h4>Itinerary</h4>
+
+        <p>Summary of key events in Cosplay Contest:</p>
+
+        <CosplayMeetupListing type="contest" includeDaySelect={false} subtitleString='Event note:' includeLocation={true} renderModal={false}/>
+
+        <h4>Categories</h4>
         <Row xs={1} md={3} className="justify-content-center gy-3">
             <Col>
-                <Card className="pink-one">
+                <Card>
                     <Card.Body>
-                        <Card.Title className="text-center">Craftmanship</Card.Title>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faPalette} size="4x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Craftmanship</h4></Card.Title>
+                          </Col>
+                        </Row>
                         <Card.Text>The Craftsmanship category will be judged based on how well you’ve made your costume. If you’re proud of your sewing, foamwork, or any other techniques you used to put your costume together, this category is for you! You’ll have time before the contest to meet with the judges so they can see your work up close and ask any questions. During the contest, you’ll walk across the stage and strike some cool poses in front of the audience!</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
-                <Card className="red-one">
+                <Card className="h-100">
                     <Card.Body>
-                        <Card.Title className="text-center">Performance</Card.Title>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faPersonBurst} size="4x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
                         <Card.Text>If you love to entertain, then consider entering the Performance category! You don’t have to have a self-made costume to perform, rather you’ll be judged on how well you’re able to capture the audience. This can be through a skit, dance, or anything else you can think of. You can be as comedic or dramatic as you’d like, so get creative!</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
             <Col>
-                <Card className="purple-one">
+                <Card className="h-100">
                     <Card.Body>
-                        <Card.Title className="text-center">Exhibition</Card.Title>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faHeart} size="4x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Exhibition</h4></Card.Title>
+                          </Col>
+                        </Row>
                         <Card.Text>The Exhibition category is for anyone that wants a chance to walk across the stage, but doesn’t want to compete. This is just for fun and is NOT eligible for prizes, so there are no limits to whether you’ve made your costume yourself or not. Anyone may participate in this category, including staff and guests. </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
         </Row>
 
-        <h5 className="mt-3">Awards & Prizes</h5>
+        <h4 className="mt-3">Awards & Prizes</h4>
         <p>Please note that the Exhibition Category is not eligible for awards.</p>
         <Row xs={1} lg={3} className="gy-3 justify-content-center">
             <Col >
                 <Card>
-                    <Card.Body className="text-center gold-bg rounded">
-                        <Card.Title>Best Craftsmanship</Card.Title>
-                        <Card.Subtitle>Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+                    <Card.Header className="fw-bold">Craftsmanship</Card.Header>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Best Craftsmanship</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Craftsmanship Contest whose work and effort crafting their costume left the strongest impression of the judges.</Card.Text>
+
+                        <hr />
+
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Runner-up Best Craftsmanship</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Commemorative Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Craftsmanship Contest whose work and effort crafting their costume greatly impressed the judges.</Card.Text>
+
+
                     </Card.Body>
                 </Card>
             </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center silver-bg rounded">
-                        <Card.Title>Runner-up Best Craftsmanship</Card.Title>
-                        <Card.Subtitle>Commemorative Medal</Card.Subtitle>
+            <Col >
+                <Card>
+                    <Card.Header className="fw-bold">Performance</Card.Header>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Best Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Performance Contest whose work and effort planning and performing their skit left the strongest impression on the judges.</Card.Text>
+
+                        <hr />
+
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Runner-up Best Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Commemorative Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Performance Contest whose work and effort planning and performing their skit greatly impressed the judges.</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center gold-bg rounded">
-                        <Card.Title>Best Performance</Card.Title>
-                        <Card.Subtitle>Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center silver-bg rounded">
-                        <Card.Title>Runner-up Best Performance</Card.Title>
-                        <Card.Subtitle>Commemorative Medal</Card.Subtitle>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center gold-bg rounded">
-                        <Card.Title>Judge's Choice (Per-Judge)</Card.Title>
-                        <Card.Subtitle>Prizes up to Judge Discretion</Card.Subtitle>
+            <Col >
+                <Card className="h-100">
+                    <Card.Header className="fw-bold">Craftsmanship & Performance</Card.Header>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Best Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Prizes to Judge Discretion</Card.Subtitle>
+                        <Card.Text>Each judge will give an award to a contestant from either contest based on their own personal criteria.</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>

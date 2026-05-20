@@ -200,25 +200,34 @@
     "event_end_time": "9:00 PM"
   },
   {
-    "event_title": null,
-    "event_subtitle": null,
-    "meetup_type": null,
-    "event_room": null,
-    "event_description": null
+    "event_title": "Cosplay Contest Pre-Judging",
+    "event_subtitle": "This portion is specifically for Cosplay Contest participants. Regular attendees should not attend this event.",
+    "meetup_type": "contest",
+    "event_room": "Drawing & Painting Studio",
+    "event_description": null,
+    "event_day": "Saturday",
+    "event_start_time": "10:00 AM",
+    "event_end_time": "11:30 AM"
   },
   {
-    "event_title": null,
-    "event_subtitle": null,
-    "meetup_type": null,
-    "event_room": null,
-    "event_description": null
+    "event_title": "Cosplay Contest",
+    "event_subtitle": "Seating for all attendees",
+    "meetup_type": "contest",
+    "event_room": "Torino Plaza Stage",
+    "event_description": null,
+    "event_day": "Saturday",
+    "event_start_time": "2:45 PM",
+    "event_end_time": "3:00 PM"
   },
   {
-    "event_title": null,
-    "event_subtitle": null,
-    "meetup_type": null,
-    "event_room": null,
-    "event_description": null
+    "event_title": "Cosplay Contest Seating",
+    "event_subtitle": "Main cosplay contest event",
+    "meetup_type": "contest",
+    "event_room": "Torino Plaza Stage",
+    "event_description": null,
+    "event_day": "Saturday",
+    "event_start_time": "3:00 PM",
+    "event_end_time": "5:00 PM"
   },
   {
     "event_title": null,

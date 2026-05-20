@@ -56,6 +56,23 @@ body {
     background-color: declared_colors.$readable_red;
   }
 
+  .card {
+    background-color: declared_colors.$pale-yellow;
+    border-color: declared_colors.$readable-red;
+
+    svg {
+      color: declared_colors.$readable-red;
+    }
+
+    .card-header {
+      border-color: transparent;
+      background-color: declared_colors.$readable-red;
+      color: declared_colors.$parchment;
+    }
+
+  }
+
+
 }
 
 [data-bs-theme="dark"] {
@@ -83,8 +100,18 @@ body {
     background-color: declared_colors.$dark-gohei-header-bkgnd;
   }
 
+  .card {
+    background-color: declared_colors.$focused-background-fill;
+    border-color: declared_colors.$dark-gohei-header-bkgnd;
+    .card-body, svg {
+      color: declared_colors.$parchment;
+    }
 
-
+    .card-header {
+      border-color: transparent;
+      background-color: declared_colors.$dark-gohei-header-bkgnd;
+    }
+  }
 }
 
 .pink-one {
