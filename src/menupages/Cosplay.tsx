@@ -32,7 +32,7 @@ import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
 
-function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string}) {
+function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString, renderModal=true}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string, renderModal?:boolean}) {
     
         const [showEventDescription, setShowEventDescription] = useState(false);
         const [eventDetails, setEventDetails] = useState({});
@@ -59,19 +59,21 @@ function CosplayMeetupListing({type, includeFriday=false, includeLocation=false,
         
         return <>
 
-        <Modal show={showEventDescription} onHide={handleEventOnHide} centered scrollable>
-            <Modal.Header closeButton>
-                <Modal.Title className="align-middle"></Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <ReturnCosplayHeader meetup={eventDetails}/>
+        {renderModal && 
+          <Modal show={showEventDescription} onHide={handleEventOnHide} centered scrollable>
+              <Modal.Header closeButton>
+                  <Modal.Title className="align-middle"></Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                  <ReturnCosplayHeader meetup={eventDetails}/>
 
-                <hr />
+                  <hr />
 
-                <Markdown>{eventDetails["event_description"]}</Markdown>
-            </Modal.Body>
-        </Modal>
-
+                  <Markdown>{eventDetails["event_description"]}</Markdown>
+              </Modal.Body>
+          </Modal>
+        }
+       
         <Row className="justify-content-center">
             <Col xs={12} lg={8}>
                 <ListGroup className='mb-3 thfest-listgroup'>
@@ -97,7 +99,9 @@ function CosplayMeetupListing({type, includeFriday=false, includeLocation=false,
                         return meetup["meetup_type"] === type && meetup["event_day"] === activeDay ? <>
                         <ListGroup.Item onClick={() => handleEventOnClick(idx)}>
                             <ReturnCosplayHeader meetup={meetup}/>
-                            <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                            {
+                              renderModal && <h5 className="fw-normal text-decoration-underline">See more info <FontAwesomeIcon icon={faAngleRight} fixedWidth/></h5>
+                            }
                         </ListGroup.Item>
                         </> : <></>;
                     })}
@@ -232,7 +236,7 @@ export const cosplayPage = {
 
         <p>Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist. Hours and operations for Cosplay Repair are listed below:</p>
 
-        <Row xs={1} md={2} lg={4} className="mt-3">
+        <Row xs={1} md={2} lg={4} className="mt-3 justify-content-center">
           <Col>
             <Table className="w-auto mx-auto">
               <thead>
@@ -269,20 +273,13 @@ export const cosplayPage = {
 
         <div className="text-center my-4"><MakeLocationBadge location="Torino Plaza Stage"/></div>
 
+        <h4>Itinerary</h4>
 
-        <h5>Itinerary</h5>
-        <ol>
-            <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
-            <ol type="a">
-                <li>This portion is specifically for <b>Cosplay Contest participants</b>.</li>
-            </ol>
-            <li><b>Seating</b>: 1:00 PM - 1:30 PM</li>
-            <li><b>Cosplay Contest</b>: 1:30 PM - 3:00 PM</li>
-            <ol type="a">
-                <li>During the cosplay judging period, CorpsDanceCrew will be giving a special performance!</li>
-            </ol>
-        </ol>
-        <h5>Categories</h5>
+        <p>Summary of key events in Cosplay Contest:</p>
+
+        <CosplayMeetupListing type="contest" includeDaySelect={false} subtitleString='Event note:' includeLocation={true} renderModal={false}/>
+
+        <h4>Categories</h4>
         <p>There are three components within the Cosplay Contest:</p>
         <Row xs={1} md={3} className="justify-content-center gy-3">
             <Col>
