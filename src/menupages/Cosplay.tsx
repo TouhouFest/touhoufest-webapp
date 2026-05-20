@@ -25,6 +25,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
 import otherphotoshootscover from "./../images/otherphotoshoots_banner.jpg";
 import cosplayworkshop from "./../images/cosplayworkshop.jpg";
+import cosplaycontest from "./../images/cosplaycontest.jpg";
 
 import cosplaymeetups from "./cosplaymeetups.json";
 import EventDescription from './../EventDescription';
@@ -258,7 +259,17 @@ export const cosplayPage = {
           </Col>
         </Row>
 
-        <h4 className='mt-2'>Cosplay Contest</h4>
+        <MakeGoheiHeader content="Cosplay Contest" fragment_id='cosplaycontest'/>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <Image src={cosplaycontest} rounded fluid/>
+            </Col>
+        </Row>
+
+        <div className="text-center my-4"><MakeLocationBadge location="Torino Plaza Stage"/></div>
+
+
         <h5>Itinerary</h5>
         <ol>
             <li><b>Pre-Judging</b>: 12:00 PM - 1:00 PM</li>
