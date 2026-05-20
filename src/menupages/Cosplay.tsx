@@ -328,7 +328,7 @@ export const cosplayPage = {
             </Col>
         </Row>
 
-        <h5 className="mt-3">Awards & Prizes</h5>
+        <h4 className="mt-3">Awards & Prizes</h4>
         <p>Please note that the Exhibition Category is not eligible for awards.</p>
         <Row xs={1} lg={3} className="gy-3 justify-content-center">
             <Col >
@@ -363,35 +363,50 @@ export const cosplayPage = {
                     </Card.Body>
                 </Card>
             </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center silver-bg rounded">
-                        <Card.Title>Runner-up Best Craftsmanship</Card.Title>
-                        <Card.Subtitle>Commemorative Medal</Card.Subtitle>
+            <Col >
+                <Card>
+                    <Card.Header className="fw-bold">Performance</Card.Header>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Best Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Performance Contest whose work and effort planning and performing their skit left the strongest impression on the judges.</Card.Text>
+
+                        <hr />
+
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Runner-up Best Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Commemorative Medal</Card.Subtitle>
+                        <Card.Text>This prize is awarded to the participant of the Performance Contest whose work and effort planning and performing their skit greatly impressed the judges.</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center gold-bg rounded">
-                        <Card.Title>Best Performance</Card.Title>
-                        <Card.Subtitle>Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center silver-bg rounded">
-                        <Card.Title>Runner-up Best Performance</Card.Title>
-                        <Card.Subtitle>Commemorative Medal</Card.Subtitle>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center gold-bg rounded">
-                        <Card.Title>Judge's Choice (Per-Judge)</Card.Title>
-                        <Card.Subtitle>Prizes up to Judge Discretion</Card.Subtitle>
+            <Col >
+                <Card className="h-100">
+                    <Card.Header className="fw-bold">Craftsmanship & Performance</Card.Header>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Best Performance</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Prizes to Judge Discretion</Card.Subtitle>
+                        <Card.Text>Each judge will give an award to a contestant from either contest based on their own personal criteria.</Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
