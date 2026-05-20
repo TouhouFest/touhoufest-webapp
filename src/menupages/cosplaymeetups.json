@@ -170,25 +170,34 @@
     "event_end_time": "10:30 AM"
   },
   {
-    "event_title": null,
-    "event_subtitle": null,
-    "meetup_type": null,
-    "event_room": null,
-    "event_description": null
+    "event_title": "Cosplay Workshop: Sewing",
+    "event_subtitle": "Sewing Fundamentals and Sewing Machines",
+    "meetup_type": "workshop",
+    "event_room": "Children's Art Wing",
+    "event_description": "tbd",
+    "event_day": "Saturday",
+    "event_start_time": "6:00 PM",
+    "event_end_time": "7:00 PM"
   },
   {
-    "event_title": null,
-    "event_subtitle": null,
-    "meetup_type": null,
-    "event_room": null,
-    "event_description": null
+    "event_title": "Cosplay Workshop: Props, Wigs, & Makeup",
+    "event_subtitle": "Additives & Improvements to Your Cosplay",
+    "meetup_type": "workshop",
+    "event_room": "Children's Art Wing",
+    "event_description": "tbd",
+    "event_day": "Saturday",
+    "event_start_time": "7:00 PM",
+    "event_end_time": "8:00 PM"
   },
   {
-    "event_title": null,
-    "event_subtitle": null,
-    "meetup_type": null,
-    "event_room": null,
-    "event_description": null
+    "event_title": "Cosplay Workshop: Photography",
+    "event_subtitle": "Photography Fundamentals for Self-Cosplay Portraits",
+    "meetup_type": "workshop",
+    "event_room": "Children's Art Wing",
+    "event_description": "tbd",
+    "event_day": "Saturday",
+    "event_start_time": "8:00 PM",
+    "event_end_time": "9:00 PM"
   },
   {
     "event_title": null,

@@ -24,13 +24,14 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 import cosplaymeetupscover from "./../images/cosplay_meetups_cover.jpg";
 import otherphotoshootscover from "./../images/otherphotoshoots_banner.jpg";
+import cosplayworkshop from "./../images/cosplayworkshop.jpg";
 
 import cosplaymeetups from "./cosplaymeetups.json";
 import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
 
-function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, subtitleString}: {type:string, includeFriday?:boolean, includeLocation?:boolean, subtitleString:string}) {
+function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string}) {
     
         const [showEventDescription, setShowEventDescription] = useState(false);
         const [eventDetails, setEventDetails] = useState({});
@@ -73,21 +74,23 @@ function CosplayMeetupListing({type, includeFriday=false, includeLocation=false,
         <Row className="justify-content-center">
             <Col xs={12} lg={8}>
                 <ListGroup className='mb-3 thfest-listgroup'>
-                    <ListGroup.Item className="p-0">
-                        <Nav fill variant="pills" defaultActiveKey="sat">
-                            {includeFriday && 
-                                <Nav.Item onClick={() => setActiveDay("Friday")}>
-                                    <Nav.Link className="rounded-bottom-0 rounded-end-0 fw-bold" eventKey="fri">Fri</Nav.Link>
+                    {includeDaySelect && 
+                        <ListGroup.Item className="p-0">
+                            <Nav fill variant="pills" defaultActiveKey="sat">
+                                {includeFriday && 
+                                    <Nav.Item onClick={() => setActiveDay("Friday")}>
+                                        <Nav.Link className="rounded-bottom-0 rounded-end-0 fw-bold" eventKey="fri">Fri</Nav.Link>
+                                    </Nav.Item>
+                                }
+                                <Nav.Item onClick={() => setActiveDay("Saturday")}>
+                                    <Nav.Link className="rounded-0 fw-bold" eventKey="sat">Sat</Nav.Link>
                                 </Nav.Item>
-                            }
-                            <Nav.Item onClick={() => setActiveDay("Saturday")}>
-                                <Nav.Link className="rounded-0 fw-bold" eventKey="sat">Sat</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item onClick={() => setActiveDay("Sunday")}>
-                                <Nav.Link className="rounded-start-0 rounded-bottom-0 fw-bold"eventKey="sun">Sun</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                    </ListGroup.Item>
+                                <Nav.Item onClick={() => setActiveDay("Sunday")}>
+                                    <Nav.Link className="rounded-start-0 rounded-bottom-0 fw-bold"eventKey="sun">Sun</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        </ListGroup.Item>
+                    }
 
                     {cosplaymeetups.map((meetup, idx) => {
                         return meetup["meetup_type"] === type && meetup["event_day"] === activeDay ? <>
@@ -197,6 +200,20 @@ export const cosplayPage = {
         <p>Below are a few additional other photoshoots/meetups that may be of interest.</p>
 
         <CosplayMeetupListing type="other_photoshoots" includeFriday={true} subtitleString='Cosplay meetup features:' includeLocation={true}/>
+
+        <MakeGoheiHeader content="Cosplay Workshop" fragment_id='cosplayworkshop'/>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={6}>
+                <Image src={cosplayworkshop} rounded fluid/>
+            </Col>
+        </Row>
+
+        <div className="text-center my-4"><MakeLocationBadge location="Children's Art Wing"/></div>
+
+        <p>TouhouFest is pleased to announce that it is hosting a set of cosplay workshops! For those interested in getting their cosplays to the best they can be, the below programming may be of interest:</p>
+
+        <CosplayMeetupListing type="workshop" includeFriday={false} subtitleString='Workshop Features:' includeDaySelect={false} />
 
         {/*
         <h4 className="mt-2">Cosplay Repair</h4>
