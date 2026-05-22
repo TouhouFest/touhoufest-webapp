@@ -12,7 +12,7 @@ import { faTwitch, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-ic
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam, placeholder, maidacademy, WarningAlert } from "../Utils";
+import {torinoplaza, pinewindgarden, assemblyhall, odyssey, shihori, tam, placeholder, maidacademy, WarningAlert, MakeGoheiHeader, MakeLocationBadge, torinoplazamap } from "../Utils";
 import { Alert, Image } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure';
 import { CircledBullets } from '../Utils';
@@ -27,6 +27,7 @@ import afterglow from "./../images/artistalley/afterglow.jpg";
 import yona from "./../images/artistalley/yona.jpg";
 import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import { neosanctum,suzukann } from '../Utils';
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
 let djs = [
     {
@@ -87,12 +88,24 @@ export const guestsPage = {
     "header": (<><FontAwesomeIcon icon={faMusic} fixedWidth></FontAwesomeIcon> Music & Guests</>),
     "fluidImage": (<Image src={guestbanner} fluid />),
     "body": (<>
-        <h4>Location(s)</h4>
-        <p>Events for the following guests will occur at the following locations:</p>
-        <ul>
-            <li><b>Shihori, A-ONE, & Miko</b>: Assembly Hall (<CircledBullets argument="11"/> Theatre (Main Events))</li>
-            <li><b>TAMUSIC & Miko</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
-        </ul>
+        
+        <MakeGoheiHeader content="Locations" fragment_id='locations'/>
+
+        <p>You will find our guests at the following locations within Torino Plaza:</p>
+
+        <Row className="justify-content-center mb-3 gy-3">
+            <Col xs="auto"><MakeLocationBadge location="Torino Plaza"/></Col>
+            <Col xs="auto"><MakeLocationBadge location="George Nakano Theatre"/></Col>
+        </Row>
+
+        <h4>Torino Plaza Map</h4>
+        <Row className="justify-content-center">
+            <Col xs={12} lg={10}>
+                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Torino Plaza"/>
+            </Col>
+        </Row>
+
+        {/*
         <p>All Guests Booths are accessible also at the Torino Plaza. (<CircledBullets argument="6"/> Guest Booths)</p>
         <Row className="justify-content-center">
             <Col xs={12} className="text-center">
@@ -108,6 +121,9 @@ export const guestsPage = {
                 </Figure>
             </Col>
         </Row>
+
+        */}
+
         <h4>About The Guests</h4>
         <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
            <Col>
