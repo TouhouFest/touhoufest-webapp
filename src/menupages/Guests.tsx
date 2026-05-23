@@ -200,7 +200,8 @@ export const guestsPage = {
             </Col>
         </Row>
 
-        <h4 className="mt-2">DJs/Performers</h4>
+        <MakeGoheiHeader content="DJs & Performers" fragment_id='performers'/>
+
         <p>Throughout the convention the below talented individuals will be providing background music and/or smaller performances at the Torino Festival Plaza. Feel free to stop by and listen if able!</p>
 
         <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
