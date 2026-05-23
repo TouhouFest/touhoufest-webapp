@@ -33,45 +33,49 @@ import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 import beatmario from "./../images/beatmario.jpg";
 import akairyusei from "./../images/akairyusei.jpg";
 import yaboimatoi from "./../images/yaboimatoi.jpg";
+import kamizuki from "./../images/kamizuki.jpeg";
+import djhalica from "./../images/djhalica.jpg";
 
 let djs = [
     {
-        "name": "AfterGlow",
-        "image": afterglow,
-        "website": "https://x.com/afterglowset",
+        "name": "Kamizuki",
+        "image": kamizuki,
+        "website": "https://linktr.ee/kamizuki1209",
         "description": "",
         "location": "Saturday"
     },
     {
-        "name": "Bakkun",
-        "image": bakkun,
-        "website": "https://twitter.com/master_bacon",
+        "name": "YONA",
+        "image": yona,
+        "website": "https://www.instagram.com/yona.mus/",
+        "description": "",
         "location": "Saturday"
     },
     {
-        "name": "Neo Sanctum",
-        "image": neosanctum,
-        "location": "Saturday",
-        "website": "https://neo-sanctum.com/home"
-    },
-    {
-        "name": "Maid Academy",
+        "name": "Maid Academy Cafe",
         "image": maidacademy,
-        "location": "Sunday",
-        "website": "https://linktr.ee/maidacademy"
+        "website": "https://www.instagram.com/maidacademycafe/",
+        "description": "",
+        "location": "Sunday"
     },
     {
-        "name": "YONA",
-        "image": yona,
-        "location": "Saturday",
-        "website": "https://x.com/itsjonasw"
+        "name": "Gensou Hard Dancers",
+        "image": placeholder,
+        "website": "https://discord.gg/7mYWZpfe",
+        "description": "",
+        "location": "Sunday"
     },
     {
-        "name": "The Corps Dance Crew",
-        "image": corpsdancecrew,
-        "location": "Saturday",
-        "website": "https://x.com/TheCorpsDC"
-    }
+        "name": "DJ Halica",
+        "image": djhalica,
+        "website": "https://www.instagram.com/halica_x/",
+        "description": "",
+        "location": "Sunday"
+    },
+
+
+
+
 ];
 
 export const guestsPage = {
