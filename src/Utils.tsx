@@ -189,11 +189,12 @@ export function MakeLocationBadge({location}: {location:string}){
     return <span className="location-styling"><FontAwesomeIcon icon={faLocationDot}/> {location}</span>;
 }
 
-export function MakeGenericCard({subtitle,title,picture,location,rooms,links, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:JSX.Element[], links?:Record<string,JSX.Element | string>[], children:any}) {
+export function MakeGenericCard({subtitle,title,picture,location,rooms,links, smaller_subtitle, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:JSX.Element[], links?:Record<string,JSX.Element | string>[], smaller_subtitle?:string, children?:any}) {
     return (<>
         <div className="text-center">
             {subtitle && <h6>{subtitle}</h6>}
             <h4>{title}</h4>
+            {smaller_subtitle && <p className="mb-2">{smaller_subtitle}</p>}
             <Image src={picture} fluid rounded className="mb-3"/>
         </div>
         {location && <p><MakeLocationBadge location={location}/></p>}
@@ -207,7 +208,7 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, ch
             )}
         </Row>}
 
-        <hr />
+        {children && <hr />}
     </>);
 }
 

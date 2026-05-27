@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobe, faGlobeAmericas, faMusic, faShop } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faCompactDisc, faEarth, faEarthAmericas, faGlobe, faGlobeAmericas, faMusic, faShop } from '@fortawesome/free-solid-svg-icons';
 import { faTwitch, faTwitter, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -33,45 +33,49 @@ import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 import beatmario from "./../images/beatmario.jpg";
 import akairyusei from "./../images/akairyusei.jpg";
 import yaboimatoi from "./../images/yaboimatoi.jpg";
+import kamizuki from "./../images/kamizuki.jpeg";
+import djhalica from "./../images/djhalica.jpg";
 
 let djs = [
     {
-        "name": "AfterGlow",
-        "image": afterglow,
-        "website": "https://x.com/afterglowset",
+        "name": "Kamizuki",
+        "image": kamizuki,
+        "website": "https://linktr.ee/kamizuki1209",
         "description": "",
         "location": "Saturday"
     },
     {
-        "name": "Bakkun",
-        "image": bakkun,
-        "website": "https://twitter.com/master_bacon",
+        "name": "YONA",
+        "image": yona,
+        "website": "https://www.instagram.com/yona.mus/",
+        "description": "",
         "location": "Saturday"
     },
     {
-        "name": "Neo Sanctum",
-        "image": neosanctum,
-        "location": "Saturday",
-        "website": "https://neo-sanctum.com/home"
-    },
-    {
-        "name": "Maid Academy",
+        "name": "Maid Academy Cafe",
         "image": maidacademy,
-        "location": "Sunday",
-        "website": "https://linktr.ee/maidacademy"
+        "website": "https://www.instagram.com/maidacademycafe/",
+        "description": "",
+        "location": "Sunday"
     },
     {
-        "name": "YONA",
-        "image": yona,
-        "location": "Saturday",
-        "website": "https://x.com/itsjonasw"
+        "name": "Gensou Hard Dancers",
+        "image": placeholder,
+        "website": "https://discord.gg/7mYWZpfe",
+        "description": "",
+        "location": "Sunday"
     },
     {
-        "name": "The Corps Dance Crew",
-        "image": corpsdancecrew,
-        "location": "Saturday",
-        "website": "https://x.com/TheCorpsDC"
-    }
+        "name": "DJ Halica",
+        "image": djhalica,
+        "website": "https://www.instagram.com/halica_x/",
+        "description": "",
+        "location": "Sunday"
+    },
+
+
+
+
 ];
 
 export const guestsPage = {
@@ -196,20 +200,29 @@ export const guestsPage = {
             </Col>
         </Row>
 
-        <h4 className="mt-2">DJs/Performers</h4>
+        <MakeGoheiHeader content="DJs & Performers" fragment_id='performers'/>
+
         <p>Throughout the convention the below talented individuals will be providing background music and/or smaller performances at the Torino Festival Plaza. Feel free to stop by and listen if able!</p>
 
         <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
             {djs.map((artist, i) => <>
              <Col>
-                <Card>
+                <MakeGenericCard title={artist["name"]} smaller_subtitle={artist["location"]} picture={artist["image"]} links={
+                    [
+                        {
+                            "link": artist["website"],
+                            "title" : <><FontAwesomeIcon icon={faEarthAmericas}/> Link</>
+                        }
+                    ]
+                }/>
+                {/* <Card>
                     <Card.Img variant="top" src={artist["image"]}></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
+                </Card> */}
             </Col>
             </>)}
         </Row>
