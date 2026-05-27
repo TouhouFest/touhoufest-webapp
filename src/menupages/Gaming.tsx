@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDice, faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Alert, Card, Figure, Image } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
-import { CircledBullets, gamingmap, nakanotheatre, kenmiller } from '../Utils';
+import { CircledBullets, gamingmap, nakanotheatre, kenmiller, MakeLocationBadge } from '../Utils';
 import { Row, Col } from 'react-bootstrap';
 import {GlobalTransformWrapper} from './../GlobalTransformWrapper';
 
@@ -24,11 +24,33 @@ import drawpaint from "./../images/drawpaint.jpg";
 
 export const gamingPage = {
     "codename": "gaming",
+    "jumplinks": [
+        {
+            "link": "#tabletop",
+            "title": "Tabletop"
+        },
+        {
+            "link": "#freeplay",
+            "title": "Freeplay"
+        },
+        {
+            "link": "#fangames",
+            "title": "Fan Games"
+        },
+        {
+            "link": "#arcades",
+            "title": "Arcade Cabinets"
+        },
+        {
+            "link": "#tournaments",
+            "title": "Tournaments"
+        },
+    ],
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
-        <h4>Location(s)</h4>
         <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza. Tabletop Gaming is located in the <b>Drawing & Painting Studio</b> (<CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait) at the tail end of the Pine Wind Garden.</p>
+        {/*
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
                 <Figure>
@@ -50,13 +72,16 @@ export const gamingPage = {
             </Col>
         </Row>
 
-        <h5>Gaming Hall Map</h5>
-        <p>The entire below map is enclosed in the Toyota Hall.</p>
+        */}
+
+        <h4>Gaming Hall Map</h4>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8} className="text-center">
                 <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
             </Col>
         </Row>
+
+        <div className="text-center mt-2 mb-3"><MakeLocationBadge location="Toyota Hall"/></div>
 
         <h4>Tabletop Gaming</h4>
         <p>TouhouFest is pleased to offer a dedicated section for tabletop gaming this year! Inside the <b>Drawing & Painting Studio</b> (<CircledBullets argument="14"/> Tabletop & Mystery Parafait) two tables are available for free-play, and two tables are reserved for games specifically for "<a href="https://danmaku.party/" target="_blank" rel="noreferrer">Danmaku!!</a>", the hit Touhou-themed tabletop card game. Feel free to stop by for some engaging tabletop gaming!</p>
