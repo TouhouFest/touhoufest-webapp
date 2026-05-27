@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader} from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader, MakeGenericCard} from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
 import cookie from "./../images/artistalley/cookie.png";
@@ -213,6 +213,17 @@ export const artistVendorsPage = {
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>
              <Col>
+                
+                <MakeGenericCard smaller_subtitle={artist["location"]} title={artist["name"]} picture={artist["image"]} links={
+                    artist["website"] !== "" ? [
+                        {
+                            "link": artist["website"],
+                            "title": "Artist Link"
+                        }
+                    ] : []
+                }/>
+
+                {/*
                 <Card>
                     <Card.Img variant="top" src={artist["image"]}></Card.Img>
                     <ListGroup className="list-group-flush">
@@ -221,6 +232,7 @@ export const artistVendorsPage = {
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
                 </Card>
+                */}
             </Col>
             </>)}
         </Row>
