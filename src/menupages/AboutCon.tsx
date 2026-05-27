@@ -100,7 +100,7 @@ let past_artists = [
 
 let operating_hours = [
   {
-    "title": "General Con Hours",
+    "title": "General Con",
     "friday": "3:00 PM - 8:00 PM",
     "saturday": "9:00 AM - 10:00 PM",
     "sunday": "8:00 AM - 6:00 PM",
@@ -114,9 +114,9 @@ let operating_hours = [
     "remark": ""
   },
   {
-    "title": "Artist Alley/Vendors*",
+    "title": "Artist Alley/Vendors",
     "friday": "Not Open",
-    "saturday": "10:30 AM - 6:00 PM",
+    "saturday": "10:30 AM* - 6:00 PM",
     "sunday": "9:00 AM - 4:00 PM",
     "remark": "*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM."
   },
@@ -129,6 +129,41 @@ let operating_hours = [
   },
 
 ];
+
+export function RenderHours({title=""}: {title?:string}) {
+  return <>
+        <Row xs={1} md={2} lg={4} className="mt-3 justify-content-center">
+        
+        {operating_hours.map((section) => (title === "" || section["title"] === title) ? <Col>
+          <h4>{section["title"]} Hours</h4>
+          <Table className="w-auto mx-auto">
+            <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Times</th>
+                </tr>
+            </thead>  
+            <tbody>
+              <tr>
+                <td>Friday</td>
+                <td>{section["friday"]}</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>{section["saturday"]}</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>{section["sunday"]}</td>
+              </tr>
+            </tbody>
+          </Table>
+          {section["remark"] !== "" && <p className="small">{section["remark"]}</p>}
+        </Col> : <></>) }
+      </Row>
+
+  </>;
+}
 
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
@@ -247,35 +282,7 @@ export const aboutConPage = {
 
       <MakeGoheiHeader content="Operating Hours" fragment_id='operating_hours'/>
 
-      <Row xs={1} md={2} lg={4} className="mt-3">
-        
-        {operating_hours.map((section) => <Col>
-          <h4>{section["title"]}</h4>
-          <Table className="w-auto mx-auto">
-            <thead>
-                <tr>
-                  <th>Day</th>
-                  <th>Times</th>
-                </tr>
-            </thead>  
-            <tbody>
-              <tr>
-                <td>Friday</td>
-                <td>{section["friday"]}</td>
-              </tr>
-              <tr>
-                <td>Saturday</td>
-                <td>{section["saturday"]}</td>
-              </tr>
-              <tr>
-                <td>Sunday</td>
-                <td>{section["sunday"]}</td>
-              </tr>
-            </tbody>
-          </Table>
-          {section["remark"] !== "" && <p className="small">{section["remark"]}</p>}
-        </Col>)}
-      </Row>
+      <RenderHours />
 
       <MakeGoheiHeader content="Info & Policies" fragment_id='info_policies'/>
 

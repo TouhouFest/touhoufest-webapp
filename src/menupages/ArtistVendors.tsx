@@ -105,6 +105,7 @@ import hobbysociety from "./../images/artistalley/hobbysociety.jpg";
 import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
 
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
+import { RenderHours } from './AboutCon';
 
 let artistlist = [
 {"name": "Lyrica Live", "image": lyricalive, "location": "Booth A1", "website": "https://lyricalive.carrd.co/", "description": ""},
@@ -242,14 +243,14 @@ export const artistVendorsPage = {
         */}
 
         <h4 className="mt-3">Artist Alley Booth Map</h4>
-        <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. Lyrica Live corresponds to A1)</p>
+        <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. Gatekeep.us corresponds to A1)</p>
         <Row className="justify-content-center">
             <Col xs={12} lg={8}>
                 <GlobalTransformWrapper src={artistalleymap} caption="Map of Artist Alley"/>
             </Col>
         </Row>
 
-        <h4>Artist Alley Schedule</h4>
+        <RenderHours title="Artist Alley/Vendors"/>
 
         <MakeGoheiHeader content="Artist Alley Listing" fragment_id='artistalleylisting'/>
 
