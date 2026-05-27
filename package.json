@@ -81,6 +81,7 @@
     "gh-pages": "^6.3.0",
     "i": "^0.3.7",
     "jsdom": "^26.0.0",
+    "react-router-hash-link": "^2.4.3",
     "sass-embedded": "^1.85.1",
     "vite": "^5.4.14",
     "vite-plugin-pwa": "^0.21.1",

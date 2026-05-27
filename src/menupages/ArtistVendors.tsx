@@ -7,13 +7,13 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYen, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
+import { faYen, faEarthAmericas, faPalette } from '@fortawesome/free-solid-svg-icons';
 import { Figure, ListGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder} from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader} from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
 import cookie from "./../images/artistalley/cookie.png";
@@ -213,11 +213,17 @@ communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 export const artistVendorsPage = {
     "codename": "artistsvendors",
-    "header": (<><FontAwesomeIcon icon={faYen} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
+    "jumplinks": [
+        {
+        "title": "Artist Alley Listing",
+        "fragment_id": "artistalleylisting",
+        },
+    ],
+    "header": (<><FontAwesomeIcon icon={faPalette} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
-        <h4>Location</h4>
-        <p>Artist Alley will be held at the <b>Toyota Meeting Hall</b>, (<CircledBullets argument="5"/> Artist Alley & Cosplay Booths) next to the Torino Festival Plaza. Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza.</p>
+        <p>Artist Alley will be held at the <b>Toyota Meeting Hall</b>, (<CircledBullets argument="5"/> Artist Alley) next to the Torino Festival Plaza. Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza.</p>
+        {/*
         <Row xs={1} md={2}>
             <Col>
                 <Figure>
@@ -233,8 +239,9 @@ export const artistVendorsPage = {
             </Col>
         </Row>
 
-        <h4>Artist Alley</h4>
-        <h5 className="mt-3">Artist Alley Booth Map</h5>
+        */}
+
+        <h4 className="mt-3">Artist Alley Booth Map</h4>
         <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them. (e.g. Lyrica Live corresponds to A1)</p>
         <Row className="justify-content-center">
             <Col xs={12} lg={8}>
@@ -242,7 +249,9 @@ export const artistVendorsPage = {
             </Col>
         </Row>
 
-        <h5 className="mt-2">Artist Alley Listing</h5>
+        <h4>Artist Alley Schedule</h4>
+
+        <MakeGoheiHeader content="Artist Alley Listing" fragment_id='artistalleylisting'/>
 
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {artistlist.map((artist, i) => <>

@@ -2,6 +2,8 @@ import { Container } from "react-bootstrap";
 import { MakeGoheiHeader } from "./Utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { HashLink } from 'react-router-hash-link';
+
 
 function NewMenuPage({content}:{content:Record<string, JSX.Element>}) {
     return <>
@@ -16,7 +18,9 @@ function NewMenuPage({content}:{content:Record<string, JSX.Element>}) {
                 {"jumplinks" in content && <>
                     <p>Jump directly to:</p>
                     {content["jumplinks"].map((fragment) => {return <>
-                        <h5 className="fw-normal"><a href={`#${fragment["fragment_id"]}`} className="text-reset">{fragment["title"]} <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5>
+                        <h5 className="fw-normal"><HashLink 
+                            to={{pathname: ".", hash: `${fragment["fragment_id"]}`}}
+                            className="text-reset">{fragment["title"]} <FontAwesomeIcon icon={faAngleRight} fixedWidth/></HashLink></h5>
                     </>})}
                     <div className="mb-3"></div>
                 </>}
