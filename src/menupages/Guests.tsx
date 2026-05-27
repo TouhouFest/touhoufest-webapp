@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faCompactDisc, faEarthAmericas, faGlobe, faGlobeAmericas, faMusic, faShop } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faCompactDisc, faEarth, faEarthAmericas, faGlobe, faGlobeAmericas, faMusic, faShop } from '@fortawesome/free-solid-svg-icons';
 import { faTwitch, faTwitter, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -207,14 +207,22 @@ export const guestsPage = {
         <Row xs={2} md={4} lg={6} className="g-3 justify-content-center">
             {djs.map((artist, i) => <>
              <Col>
-                <Card>
+                <MakeGenericCard title={artist["name"]} smaller_subtitle={artist["location"]} picture={artist["image"]} links={
+                    [
+                        {
+                            "link": artist["website"],
+                            "title" : <><FontAwesomeIcon icon={faEarthAmericas}/> Link</>
+                        }
+                    ]
+                }/>
+                {/* <Card>
                     <Card.Img variant="top" src={artist["image"]}></Card.Img>
                     <ListGroup className="list-group-flush">
                         <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
                         <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
                     </ListGroup>
                     {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
+                </Card> */}
             </Col>
             </>)}
         </Row>
