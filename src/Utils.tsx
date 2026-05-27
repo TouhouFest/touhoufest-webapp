@@ -194,7 +194,7 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, sm
         <div className="text-center">
             {subtitle && <h6>{subtitle}</h6>}
             <h4>{title}</h4>
-            {smaller_subtitle && <p>{smaller_subtitle}</p>}
+            {smaller_subtitle && <p className="mb-2">{smaller_subtitle}</p>}
             <Image src={picture} fluid rounded className="mb-3"/>
         </div>
         {location && <p><MakeLocationBadge location={location}/></p>}
@@ -208,7 +208,7 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, sm
             )}
         </Row>}
 
-        <hr />
+        {children && <hr />}
     </>);
 }
 
