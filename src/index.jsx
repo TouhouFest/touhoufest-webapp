@@ -24,7 +24,7 @@ import { Capacitor } from '@capacitor/core';
 
 import {Animation, StatusBar, Style} from '@capacitor/status-bar';
 
-import { BrowserRouter } from "react-router";
+import { HashRouter } from "react-router";
 
 // Display content under transparent status bar (Android only)
 StatusBar.setOverlaysWebView({ overlay: false });
@@ -73,10 +73,10 @@ defineCustomElements(window);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <App menupagedata={menupagedata} menuheader={menuheader}/>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
