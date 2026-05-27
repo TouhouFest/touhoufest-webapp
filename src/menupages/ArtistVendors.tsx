@@ -168,50 +168,6 @@ let artistlist = [
 ];
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
-let vendors = [
-{"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://linktr.ee/siliconcat", "role": "Artist"},
-{"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
-{"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
-{"name": "Touhou Hobby Society", "image": hobbysociety, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
-{"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
-{"name": "Neko Paws", "image": nekopaws, "location": "V07", "website": "https://nekopaw.com/", "role": "Merch"},
-{"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
-{"name": "TouhouFest Merch", "image": touhoufest, "location": "V09", "website": "https://www.touhoufest.org/store", "role": "Merch"},
-{"name": "TouhouFest Info Booth", "image": touhoufest, "location": "V10", "website": "https://schedule.touhoufest.org", "role": "Info"},
-{"name": <>Kino&shy;Kreations</>, "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
-{"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
-{"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
-{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "https://ruddyg851.myportfolio.com", "role": "Vendor"},
-{"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
-{"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
-];
-vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
-
-let plazatables = [
-{"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
-//{"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
-{"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
-{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB04", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
-{"name": "Kusoya / Yasoku", "image": kusoyayaoku1, "location": "Booth FB05", "website": "https://yasoku.us/", "role": "Festival Booth"},
-{"name": "Kusoya / Yasoku", "image": kusoyayaoku2, "location": "Booth FB06", "website": "https://yasoku.us/", "role": "Festival Booth"},
-
-{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB07", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
-{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://ko-fi.com/richardeffendi/shop", "role": "Vendor"},
-{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB09", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
-{"name": "Manga de Japanese", "image": mangadejapanese, "location": "Booth FB10", "website": "https://manga-de.com", "role": "Festival Booth"},
-];
-plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
-
-let communitytables = [
-{"name": "The Corps Dance Crew", "image": corpsdancecrew, "location": "Booth FT1 ~ FT2", "website": "https://x.com/TheCorpsDC", "role": ""},
-{"name": "Organized Touhou Networking in Japan", "image": organizedtouhounetworking, "location": "Booth FT3", "website": "https://discord.gg/4uGwZEXXBN", "role": ""},
-// {"name": "Bowers Museum", "image": bowersmuseum, "location": "Booth FT5 (Saturday)", "website": "https://www.bowers.org/", "role": ""},
-{"name": "Dave & Busters", "image": daveandbusters, "location": "Booth FT5 (Sunday)", "website": "https://www.daveandbusters.com/us/en/home", "role": ""},
-{"name": "Anime Los Angeles", "image": animelosangeles, "location": "Booth FT6", "website": "https://animelosangeles.org/", "role": ""},
-{"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "Booth FT7", "website": "https://www.la-idolmatsuri.org/", "role": ""},
-];
-communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
-
 export const artistVendorsPage = {
     "codename": "artistsvendors",
     "jumplinks": [
@@ -220,10 +176,10 @@ export const artistVendorsPage = {
         "fragment_id": "artistalleylisting",
         },
     ],
-    "header": (<><FontAwesomeIcon icon={faPalette} fixedWidth></FontAwesomeIcon> Artist Alley & Vendors</>),
+    "header": (<><FontAwesomeIcon icon={faPalette} fixedWidth></FontAwesomeIcon> Artist Alley</>),
     "fluidImage": (<Image src={artistalley} fluid />),
     "body": (<>
-        <p>Artist Alley will be held at the <b>Toyota Meeting Hall</b>, (<CircledBullets argument="5"/> Artist Alley) next to the Torino Festival Plaza. Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza.</p>
+        <p>Artist Alley will be held at the <b>Toyota Meeting Hall</b>, (<CircledBullets argument="5"/> Artist Alley) next to the Torino Festival Plaza.</p>
         {/*
         <Row xs={1} md={2}>
             <Col>
@@ -268,79 +224,6 @@ export const artistVendorsPage = {
             </Col>
             </>)}
         </Row>
-
-        <h4 className="mt-3">Vendors</h4>
-        <h5>Vendors Booth Map</h5>
-        <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
-
-        <Row className="mt-3 justify-content-center">
-            <Col xs={12} md={8} className="text-center">
-                <GlobalTransformWrapper src={vendorsmap} caption="Map of Vendors"/>
-            </Col>
-        </Row>
-
-        <h5>List of Vendors</h5>
-        <p>Entries listed below are in vendors (denoted "Booth VXX").</p>
-        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
-            {vendors.map((artist, i) => <>
-             <Col>
-                <Card>
-                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
-                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Vendor Link</a></Card.Footer> : <></>}
-                </Card>
-            </Col>
-            </>)}
-       </Row>
-
-       <h4 className="mt-2">Community & Shrine Tables at Torino Plaza</h4>
-       <h5>Booth Map</h5>
-        <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
-        <Row className="justify-content-center">
-            <Col xs={12} lg={10}>
-                <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
-            </Col>
-        </Row>
-       <h5>List of Participants</h5>
-        <h6>Entry Foyer (Community Tables)</h6>
-        <p>Some booths may be empty.</p>
-        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
-            {communitytables.map((artist, i) => <>
-             <Col>
-                <Card>
-                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
-            </Col>
-            </>)}
-        </Row>
-
-       <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
-        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
-            {plazatables.map((artist, i) => <>
-             <Col>
-                <Card>
-                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
-                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
-            </Col>
-            </>)}
-       </Row>
 
 
     </>),

@@ -19,6 +19,7 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { registerSW } from 'virtual:pwa-register'
 import { conMerchPage } from "./menupages/ConMerch";
 import {sponsorsPage} from "./menupages/Sponsors";
+import {vendorsPage} from "./menupages/Vendors";
 
 import { Capacitor } from '@capacitor/core';
 
@@ -50,7 +51,7 @@ if(!Capacitor.isNativePlatform() && Capacitor.getPlatform() == 'web') {
   menupagedata = menupagedata.concat([installationPage]);
 }
 
-menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, cosplayPage, conMerchPage, settingsPage ]);
+menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, vendorsPage, cosplayPage, conMerchPage, settingsPage ]);
 
 let menuheader = (<>TouhouFest 2026</>);
 
