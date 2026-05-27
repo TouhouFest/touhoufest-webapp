@@ -191,6 +191,7 @@ export function MakeLocationBadge({location}: {location:string}){
 
 export function MakeGenericCard({subtitle,title,picture,location,rooms,links, smaller_subtitle, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:JSX.Element[], links?:Record<string,JSX.Element | string>[], smaller_subtitle?:string, children?:any}) {
     return (<>
+        <div className="h-100">
         <div className="text-center">
             {subtitle && <h6>{subtitle}</h6>}
             {(smaller_subtitle) ? <h5>{title}</h5> : <h4>{title}</h4>}
@@ -209,6 +210,7 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, sm
         </Row>}
 
         {children && <hr />}
+        </div>
     </>);
 }
 
