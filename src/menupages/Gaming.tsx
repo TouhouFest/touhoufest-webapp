@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faDice, faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faDice, faExclamationCircle, faGamepad, faGlobe, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { Alert, Card, Figure, Image } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
 import { CircledBullets, gamingmap, nakanotheatre, kenmiller, MakeLocationBadge, MakeGoheiHeader, MakeGenericCard } from '../Utils';
@@ -23,6 +23,29 @@ import danmaku from "./../images/danmaku.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 import danmakumaze from "./../images/gamingfolder/danmakumaze.png";
 import arcade from "./../images/gamingfolder/arcade.jpg";
+
+let tourneylisting = [
+    {
+        "title": "Touhou 9 PoFV",
+        "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv"
+    },
+    {
+        "title": "Touhou 12.3 Soku",
+        "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2"
+    },
+    {
+        "title": "Touhou Rivals Workshop",
+        "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1",
+    },
+    {
+        "title": "Touhou 15.5 AoCF",
+        "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-15-5-aocf"
+    },
+    {
+        "title": "Touhou Fractured Transience",
+        "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-fractured-transience"
+    }
+];
 
 export const gamingPage = {
     "codename": "gaming",
@@ -160,36 +183,65 @@ export const gamingPage = {
             </Col>)}
         </Row>
 
-        <h4 className="mt-2">Tournaments</h4>
-        <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg.</p>
-        <ul>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/overview/rules">Touhou 12.3 Hisoutensoku</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c/overview/rules">Touhou 19 Unfinished Dream of All Living Ghost</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/overview/rules">Touhou Rivals Workshop</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience/overview/rules">Touhou Fractured Transience</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf/overview/rules">Touhou 15.5 Antimony of Common Flowers</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch">Touhou 9 PoFV (Rework Patch)</a></li>
-        </ul>
-        <p>Those interested may visit <a href ="https://www.start.gg/tournament/touhoufest-2025/details" target="_blank" rel="noreferrer">TouhouFest's start.gg page for more information.</a></p>
-        <p className="small"><FontAwesomeIcon icon={faExclamationCircle} /> Sign-ups for gaming tournaments at TouhouFest will close/already has closed on June 12th, 2025.</p>
+        <MakeGoheiHeader content="Tournaments" fragment_id='tournaments'/>
 
-        <h5>Prizes</h5>
-        <Row xs={1} md={2}>
-            <Col>
-                <Card className="rounded gold-bg">
-                    <Card.Body className="text-center">
-                        <Card.Title>First Place (Per Each Bracket)</Card.Title>
-                        <Card.Subtitle>Free TouhouFest 2025 Badge</Card.Subtitle>
+        <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg. For more info visit the convention-wide <a href ="https://www.start.gg/tournament/touhoufest-2025/details" target="_blank" rel="noreferrer">start.gg page.</a></p>
+
+        <Row className="justify-content-center g-2 mb-3">
+            {tourneylisting.map((tourney) => <Col>
+                <a href={tourney["link"]} target="_blank" rel="noreferrer">
+                    <Card className="px-3 py-2 text-center h-100">
+                        <p className="mb-1 text-center"><FontAwesomeIcon icon={faGamepad}/></p>
+                        <p className="mb-0">{tourney["title"]}</p>
+                    </Card>
+                </a>
+            </Col>)}
+        </Row>
+
+        <hr />
+
+        <Row className="justify-content-center mb-3">
+            <Col xs={12} md={10} lg={8}>
+                <Card>
+                    <Card.Body>
+                        <p className="mb-1"><FontAwesomeIcon icon={faGamepad}/> <b>NEW!</b></p>
+                        <p className="mb-0">At-con registration for TouhouFest gaming tournaments is returning this year! If you wish to take advantage of this, please visit Gaming at the Toyota Hall.</p>
                     </Card.Body>
                 </Card>
             </Col>
+        </Row>
+
+        <h4>Prizes</h4>
+        <p>Prizes will be given to the 1st and 2nd placed competitors for each tournament bracket.</p>
+        <Row xs={1} md={2} className="justify-content-center">
             <Col>
-                <Card className="rounded silver-bg">
-                    <Card.Body className="text-center">
-                        <Card.Title>Second Place (Per Each Bracket)</Card.Title>
-                        <Card.Subtitle>Select Touhou-Themed Merch Giveaways</Card.Subtitle>
+                <Card>
+                    <Card.Body>
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">First Place (Per Each Bracket)</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Free TouhouFest 2026 Badge + Medal</Card.Subtitle>
+
+                        <hr />
+
+                        <Row className="align-items-center mb-3 g-3">
+                          <Col xs="auto">
+                            <FontAwesomeIcon icon={faMedal} size="2x"/>
+                          </Col>
+                          <Col>
+                            <Card.Title className="mb-0"><h4 className="mb-0">Second Place (Per Each Bracket)</h4></Card.Title>
+                          </Col>
+                        </Row>
+                        <Card.Subtitle className="fw-bold mb-2">Select Touhou-Themed Merch Giveaways</Card.Subtitle>
+
                     </Card.Body>
                 </Card>
+ 
             </Col>
         </Row>
 
