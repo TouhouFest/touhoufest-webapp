@@ -42,7 +42,7 @@ import biscaybiscuits from "./../images/artistalley/biscaybiscuits.jpg";
 import chennakitty from "./../images/artistalley/chennakitty.jpg";
 import haiyun from "./../images/artistalley/haiyun.jpg";
 import birnam from "./../images/artistalley/birnam.jpg";
-import tama from "./../images/artistalley/tama.jpg";
+import tama from "./../images/artistalley/tamatamashop.jpg";
 import gruvysgudies from "./../images/artistalley/gruvysgudies.jpg";
 import lazydaytee from "./../images/artistalley/lazydaytee.jpg";
 import bapysociety from "./../images/artistalley/bapysociety.jpg";
@@ -101,6 +101,9 @@ import kusoyayaoku2 from "./../images/artistalley/kusoyayasoku2.jpg";
 import mangadejapanese from "./../images/artistalley/mangadejapanese.jpg";
 
 import hobbysociety from "./../images/artistalley/hobbysociety.jpg";
+
+// import julianaegg from "./../images/artistalley/julianaegg.jpg";
+import tamatamashop from "./../images/artistalley/tamatamashop.jpg";
 
 import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
 
@@ -168,7 +171,7 @@ let artistlist = [
 ];
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
-import newartistalleylist from "./artistalley.json";
+import { newartistalleylist } from './artistimports';
 
 export const artistVendorsPage = {
     "codename": "artistsvendors",
@@ -213,12 +216,11 @@ export const artistVendorsPage = {
         <MakeGoheiHeader content="Artist Alley Listing" fragment_id='artistalleylisting'/>
 
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
-            {artistlist.map((artist, i) => {
-                import artistimage from `./../images/artistalley/${artist["image"]}.jpg`;
+            {newartistalleylist.map((artist, i) => {
                 return <>
                     <Col>
                         
-                        <MakeGenericCard smaller_subtitle={artist["location"]} title={artistimage} picture={artist["image"]} links={
+                        <MakeGenericCard smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
                             artist["website"] !== "" ? [
                                 {
                                     "link": artist["website"],

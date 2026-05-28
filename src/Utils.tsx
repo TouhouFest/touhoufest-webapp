@@ -210,6 +210,7 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, sm
         </Row>}
 
         {(children || subtitle) && <hr />}
+        </div>
     </>);
 }
 
