@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faDice, faExclamationCircle, faGamepad, faGlobe, faMedal } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowUpRightFromSquare, faDice, faExclamationCircle, faExternalLinkSquare, faExternalLinkSquareAlt, faGamepad, faGlobe, faMedal } from '@fortawesome/free-solid-svg-icons';
 import { Alert, Card, Figure, Image } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
 import { CircledBullets, gamingmap, nakanotheatre, kenmiller, MakeLocationBadge, MakeGoheiHeader, MakeGenericCard } from '../Utils';
@@ -42,9 +42,115 @@ let tourneylisting = [
         "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-15-5-aocf"
     },
     {
+        "title": "Touhou 19 UDoALG",
+        "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-19-udoalg-balance-patch-1-10c"
+    },
+    {
         "title": "Touhou Fractured Transience",
         "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-fractured-transience"
     }
+];
+
+let wavelisting = [
+    {
+        "event": "Wave A",
+        "links": [
+            {
+                "title": "Touhou 12.3 Soku Pool 1",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2/brackets/2240811/3249110",
+            },
+            {
+                "title": "Touhou 9 PoFV Pool 1",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv/brackets/2240818/3249118",
+            }
+
+        ]
+    },
+    {
+        "event": "Wave B",
+        "links": [
+            {
+                "title": "Touhou Rivals Pool 1",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1/brackets/2240814/3249113",
+            },
+            {
+                "title": "Touhou 9 PoFV Pool 2",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv/brackets/2240818/3249119",
+            }
+
+        ]
+    },
+    {
+        "event": "Wave C",
+        "links": [
+            {
+                "title": "Touhou Rivals Pool 2",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1/brackets/2240814/3249114",
+            },
+            {
+                "title": "Touhou 12.3 Soku Pool 2",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2/brackets/2240811/3249109",
+            }
+        ]
+    },
+    {
+        "event": "Top 4 PoFV",
+        "links": [
+            {
+                "title": "Touhou 9 PoFV Top 4",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv/brackets/2240819/3249120",
+            },
+        ]
+    },
+    {
+        "event": "Top 4 Rivals",
+        "links": [
+            {
+                "title": "Touhou Rivals Top 4",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1/brackets/2240815/3249115",
+            },
+        ]
+    },
+    {
+        "event": "Top 4 Soku",
+        "links": [
+            {
+                "title": "Touhou 12.3 Soku Top 4",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2/brackets/2240812/3249111",
+            },
+        ]
+    },
+    {
+        "event": "AoCF Full Bracket",
+        "links": [
+            {
+                "title": "Touhou AoCF Full Bracket",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-15-5-aocf/brackets/2240813/3249112",
+            },
+        ]
+    },
+    {
+        "event": "UDoALG Full Bracket",
+        "links": [
+            {
+                "title": "Touhou 19 UDoALG Full Bracket",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-19-udoalg-balance-patch-1-10c/brackets/2240816/3249116",
+            },
+        ]
+    },
+    {
+        "event": "Fractured Transience Full Bracket",
+        "links": [
+            {
+                "title": "Touhou Fractured Transience Full Bracket",
+                "link": "https://www.start.gg/tournament/touhoufest-2026/event/touhou-fractured-transience/brackets/2240817/3249117",
+            },
+        ]
+    },
+
+
+
+
 ];
 
 export const gamingPage = {
@@ -188,7 +294,7 @@ export const gamingPage = {
         <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg. For more info visit the convention-wide <a href ="https://www.start.gg/tournament/touhoufest-2025/details" target="_blank" rel="noreferrer">start.gg page.</a></p>
 
         <Row className="justify-content-center g-2 mb-3">
-            {tourneylisting.map((tourney) => <Col>
+            {tourneylisting.map((tourney) => <Col xs={6} md={6} lg={4}>
                 <a href={tourney["link"]} target="_blank" rel="noreferrer">
                     <Card className="px-3 py-2 text-center h-100">
                         <p className="mb-1 text-center"><FontAwesomeIcon icon={faGamepad}/></p>
@@ -246,88 +352,20 @@ export const gamingPage = {
         </Row>
 
 
-        <h5 className="mt-2">Wave Info</h5>
+        <h4 className="mt-2">Wave Info</h4>
         <p>Gaming tournaments will be organized in "Waves" where specific games will compete based on their particular rules. Below is a listing of each wave, their included games, as well as their respective pools on start.gg.</p>
 
         <Row xs={1} md={2} className="justify-content-center gy-3">
-            <Col>
-                <Card>
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave A</Card.Title>
+            {wavelisting.map((wave) => <Col>
+                <Card className="h-100">
+                    <Card.Header className="fw-bold">{wave["event"]}</Card.Header>
+                    <Card.Body>
+                        {wave["links"].map((link) => <>
+                            <a href={link["link"]} target="blank" rel="noreferrer"><h5>{link["title"]} <FontAwesomeIcon icon={faArrowUpRightFromSquare} fixedWidth/></h5> </a>
+                        </>)}
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2643746" target="_blank">Touhou 9 PoFV (Rework Patch)</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2862655" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
-                    </ListGroup>
-
                 </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave B</Card.Title>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643734" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2)</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2643738" target="_blank">Touhou Rivals Workshop</Card.Link></ListGroup.Item>
-                    </ListGroup>
-
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave C</Card.Title>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2862657" target="_blank">Touhou 9 PoFV (Rework Patch)</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643735" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2)</Card.Link></ListGroup.Item>
-                    </ListGroup>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave D</Card.Title>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1949467/2862661" target="_blank">Touhou 9 PoFV (Rework Patch) Finals</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1949466/2862658" target="_blank">Touhou Rivals Workshop Finals</Card.Link></ListGroup.Item>
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2" target="_blank">Touhou 12.3 Hisoutensoku (Soku 2) Finals</Card.Link></ListGroup.Item>
-                    </ListGroup>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave E</Card.Title>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf" target="_blank">Touhou 15.5 AoCF [Full Bracket]</Card.Link></ListGroup.Item>
-                    </ListGroup>
-
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave F</Card.Title>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c" target="_blank">Touhou 19 UDoALG (Balance Patch 1.10c) [Full Bracket]</Card.Link></ListGroup.Item>
-                    </ListGroup>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Body className="text-center day-indicator">
-                        <Card.Title className="mb-0">Wave G</Card.Title>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center"><Card.Link href="https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience" target="_blank">Touhou Fractured Transience [Full Bracket]</Card.Link></ListGroup.Item>
-                    </ListGroup>
-                </Card>
-            </Col>
+            </Col>)}
         </Row>
     </>)
 }
