@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faB, faBroom, faC, faCaretRight, faCircle, faCircleExclamation, faGamepad, faLocationDot, faRestroom, faSquare, faToriiGate } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faArrowUpRightFromSquare, faB, faBroom, faC, faCaretRight, faCircle, faCircleExclamation, faGamepad, faLocationDot, faRestroom, faSquare, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -191,9 +191,10 @@ export function MakeLocationBadge({location}: {location:string}){
 
 export function MakeGenericCard({subtitle,title,picture,location,rooms,links, smaller_subtitle, children}:{subtitle?:string, title:string, picture:string, location?:string, rooms?:JSX.Element[], links?:Record<string,JSX.Element | string>[], smaller_subtitle?:string, children?:any}) {
     return (<>
+        <div className="h-100">
         <div className="text-center">
             {subtitle && <h6>{subtitle}</h6>}
-            <h4>{title}</h4>
+            {(smaller_subtitle) ? <h5>{title}</h5> : <h4>{title}</h4>}
             {smaller_subtitle && <p className="mb-2">{smaller_subtitle}</p>}
             <Image src={picture} fluid rounded className="mb-3"/>
         </div>
@@ -204,11 +205,12 @@ export function MakeGenericCard({subtitle,title,picture,location,rooms,links, sm
         </Row>}
         {links && <Row>
             {links.map(
-                (link) => <Col className="text-center"><h5 className="fw-normal"><a className="text-decoration-none text-reset" href={link["link"]} target="_blank">{link["title"]} <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5></Col>
+                (link) => <Col className="text-center"><h5 className="fw-normal"><a className="text-decoration-none text-reset" href={link["link"]} target="_blank">{link["title"]} <FontAwesomeIcon icon={faArrowUpRightFromSquare} fixedWidth/></a></h5></Col>
             )}
         </Row>}
 
         {(children || subtitle) && <hr />}
+        </div>
     </>);
 }
 
