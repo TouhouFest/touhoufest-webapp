@@ -21,6 +21,8 @@ import tboddy from "./../images/gamingfolder/tboddy.jpg";
 import fireland from "./../images/gamingfolder/fireland.jpg";
 import danmaku from "./../images/danmaku.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
+import danmakumaze from "./../images/gamingfolder/danmakumaze.png";
+import arcade from "./../images/gamingfolder/arcade.jpg";
 
 export const gamingPage = {
     "codename": "gaming",
@@ -96,86 +98,67 @@ export const gamingPage = {
 
         <h5 className="fw-normal mt-3"><a className="text-decoration-none text-reset" href="https://danmaku.party" target="_blank">Visit Danmaku!!'s Website <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5>
 
-        <h4 className="mt-2">Free Play</h4> 
+        <MakeGoheiHeader content="Free Play" fragment_id='freeplay'/>
+
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
 
-        <h5>Fangames</h5> 
+        <MakeGoheiHeader content="Fangames" fragment_id='fangames'/>
+
         <p>The below fangame devs will be available and will have playable demos at the Game Hall:</p>
-
-        <Row xs={1} md={3} className="gy-3">
-            <Col>
-                <Card>
-                    <Card.Img src={noetic} variant="top"/>
-                    <Card.Body className="text-center">
-                        <Card.Subtitle>Noetic Nightjar Studios</Card.Subtitle>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link className="small" href="http://noeticnightjar.com/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
-                    </Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Img src={tboddy} variant="top"/>
-                    <Card.Body className="text-center">
-                        <Card.Subtitle>tboddy</Card.Subtitle>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://tboddy.itch.io/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
-                    </Card.Footer>
-                </Card>
-            </Col>
-            <Col>
-                <Card className="">
-                    <Card.Img src={fireland} variant="top"/>
-                    <Card.Body className="text-center">
-                        <Card.Subtitle>Fire Land</Card.Subtitle>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://store.steampowered.com/app/1825250/Touhou_Lensed_Night_Sky_Kaseigai/" target="_blank"><FontAwesomeIcon icon={faGlobe}/> Dev Link</Card.Link>
-                    </Card.Footer>
-                </Card>
-            </Col>
-        </Row>
-
-        <h5>Arcade Cabinets</h5>
-        <p>A variety of different arcade cabinets and rhythm games will be available to play throughout TouhouFest. Below is a selection of some of the offerings:</p>
-        <ul>
-            <li>Dance Dance Revolution</li>
-            <li>Chunithm</li>
-            <li>Jubeat</li>
-        </ul>
-
-        {/*
-        <h5 className="mt-2">Touhou Game Dev Fangames</h5>
-        <p>The below itch.io collections -- composed of fangames made by a variety of aspiring developers -- will also be featured at TouhouFest and are for the most part playable.</p>
 
         <Row xs={1} md={3} className="gy-3 justify-content-center">
             <Col>
-                <Card className="">
-                    <Card.Img src={retrospective} variant="top"/>
-                    <Card.Body className="text-center">
-                        <Card.Subtitle>Touhou Retrospective Collection (2024)</Card.Subtitle>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://itch.io/c/4310537/touhou-retrospective-collection-2024" target="_blank"><FontAwesomeIcon icon={faItchIo}/> Itch.io Link</Card.Link>
-                    </Card.Footer>
-                </Card>
+                <MakeGenericCard subtitle='Ice Fall Creative' title='Touhou Danmaku Maze' picture={danmakumaze} links={[
+                    {
+                        "link": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/",
+                        "title": "Dev Link"
+                    }
+                ]}/>
             </Col>
             <Col>
-                <Card className="">
-                    <Card.Img src={showcase} variant="top"/>
-                    <Card.Body className="text-center">
-                        <Card.Subtitle>Jam 13 "TouhouFest" Showcase Games</Card.Subtitle>
-                    </Card.Body>
-                    <Card.Footer className="text-center">
-                        <Card.Link className="small" href="https://itch.io/c/4310520/jam-13-touhoufest-showcase-games" target="_blank"><FontAwesomeIcon icon={faItchIo}/> Itch.io Link</Card.Link>
-                    </Card.Footer>
-                </Card>
+                <MakeGenericCard subtitle='Noetic Nightjar Studio' title='Touhou ~ Dreams of a Sunflower' picture={noetic} links={[
+                    {
+                        "link": "http://noeticnightjar.com",
+                        "title": "Dev Link"
+                    }
+                ]}/>
+            </Col>
+            <Col>
+                <MakeGenericCard subtitle='tboddy' title='Burning Spirit' picture={tboddy} links={[
+                    {
+                        "link": "http://tboddy.itch.io",
+                        "title": "Dev Link"
+                    }
+                ]}/>
+            </Col>
+            <Col>
+                <MakeGenericCard subtitle='Fire Land' title='Touhou Lensed Night Sky, Kaseigai' picture={fireland} links={[
+                    {
+                        "link": "https://store.steampowered.com/app/1825250/Touhou_Lensed_Night_Sky_Kaseigai/",
+                        "title": "Dev Link"
+                    }
+                ]}/>
             </Col>
         </Row>
 
-        */}
+        <MakeGoheiHeader content="Arcade Cabinets" fragment_id='arcades'/>
+
+        <Row className="justify-content-center my-3">
+            <Col xs={12} md={8} lg={6}>
+                <Image src={arcade} rounded fluid/>
+            </Col>
+        </Row>
+
+        <p>A variety of different arcade cabinets and rhythm games will be available to play throughout TouhouFest. Below is a selection of some of the offerings:</p>
+
+        <Row className="justify-content-center g-2">
+            {["Dance Dance Revolution", "Trouble Witches", "Tetris Grand Master 3"].map((game) => <Col xs="auto">
+                <Card className="px-3 py-2">
+                    <p className="mb-1 text-center"><FontAwesomeIcon icon={faGamepad}/></p>
+                    <p className="mb-0">{game}</p>
+                </Card>
+            </Col>)}
+        </Row>
 
         <h4 className="mt-2">Tournaments</h4>
         <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg.</p>
