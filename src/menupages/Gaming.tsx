@@ -7,10 +7,10 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDice, faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faDice, faExclamationCircle, faGamepad, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Alert, Card, Figure, Image } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
-import { CircledBullets, gamingmap, nakanotheatre, kenmiller, MakeLocationBadge } from '../Utils';
+import { CircledBullets, gamingmap, nakanotheatre, kenmiller, MakeLocationBadge, MakeGoheiHeader, MakeGenericCard } from '../Utils';
 import { Row, Col } from 'react-bootstrap';
 import {GlobalTransformWrapper} from './../GlobalTransformWrapper';
 
@@ -26,23 +26,23 @@ export const gamingPage = {
     "codename": "gaming",
     "jumplinks": [
         {
-            "link": "#tabletop",
-            "title": "Tabletop"
+            "fragment_id": "#tabletop",
+            "title": "Tabletop Gaming"
         },
         {
-            "link": "#freeplay",
+            "fragment_id": "#freeplay",
             "title": "Freeplay"
         },
         {
-            "link": "#fangames",
+            "fragment_id": "#fangames",
             "title": "Fan Games"
         },
         {
-            "link": "#arcades",
+            "fragment_id": "#arcades",
             "title": "Arcade Cabinets"
         },
         {
-            "link": "#tournaments",
+            "fragment_id": "#tournaments",
             "title": "Tournaments"
         },
     ],
@@ -83,15 +83,18 @@ export const gamingPage = {
 
         <div className="text-center mt-2 mb-3"><MakeLocationBadge location="Toyota Hall"/></div>
 
-        <h4>Tabletop Gaming</h4>
-        <p>TouhouFest is pleased to offer a dedicated section for tabletop gaming this year! Inside the <b>Drawing & Painting Studio</b> (<CircledBullets argument="14"/> Tabletop & Mystery Parafait) two tables are available for free-play, and two tables are reserved for games specifically for "<a href="https://danmaku.party/" target="_blank" rel="noreferrer">Danmaku!!</a>", the hit Touhou-themed tabletop card game. Feel free to stop by for some engaging tabletop gaming!</p>
+        <MakeGoheiHeader content="Tabletop Gaming" fragment_id='tabletop'/>
+        
+        <p>TouhouFest is pleased to offer a dedicated section for tabletop gaming this year! Inside the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Tabletop Gaming) tables are available for free-play and for "<a href="https://danmaku.party/" target="_blank" rel="noreferrer">Danmaku!!</a>", the hit Touhou-themed tabletop card game. Feel free to stop by for some engaging tabletop gaming!</p>
         <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
-                <Alert variant="success"><FontAwesomeIcon icon={faDice}/> Mystery Parafait will be selling Danmaku's biggest expansion yet, <b> Traditional Festival of Paradise</b> for the first time at TouhouFest!</Alert>
+                {/* <Alert variant="success"><FontAwesomeIcon icon={faDice}/> Mystery Parafait will be selling Danmaku's biggest expansion yet, <b> Traditional Festival of Paradise</b> for the first time at TouhouFest!</Alert> */}
 
                 <Image src={danmaku} rounded fluid/>
             </Col>
         </Row>
+
+        <h5 className="fw-normal mt-3"><a className="text-decoration-none text-reset" href="https://danmaku.party" target="_blank">Visit Danmaku!!'s Website <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5>
 
         <h4 className="mt-2">Free Play</h4> 
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
