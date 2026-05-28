@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader} from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader, MakeGenericCard} from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
 import cookie from "./../images/artistalley/cookie.png";
@@ -168,6 +168,8 @@ let artistlist = [
 ];
 artistlist.sort((a,b) => a["location"].localeCompare(b["location"]));
 
+import newartistalleylist from "./artistalley.json";
+
 export const artistVendorsPage = {
     "codename": "artistsvendors",
     "jumplinks": [
@@ -211,18 +213,33 @@ export const artistVendorsPage = {
         <MakeGoheiHeader content="Artist Alley Listing" fragment_id='artistalleylisting'/>
 
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
-            {artistlist.map((artist, i) => <>
-             <Col>
-                <Card>
-                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
-                </Card>
-            </Col>
-            </>)}
+            {artistlist.map((artist, i) => {
+                import artistimage from `./../images/artistalley/${artist["image"]}.jpg`;
+                return <>
+                    <Col>
+                        
+                        <MakeGenericCard smaller_subtitle={artist["location"]} title={artistimage} picture={artist["image"]} links={
+                            artist["website"] !== "" ? [
+                                {
+                                    "link": artist["website"],
+                                    "title": "Artist Link"
+                                }
+                            ] : []
+                        }/>
+
+                        {/*
+                        <Card>
+                            <Card.Img variant="top" src={artist["image"]}></Card.Img>
+                            <ListGroup className="list-group-flush">
+                                <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
+                                <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
+                            </ListGroup>
+                            {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Artist Link</a></Card.Footer> : <></>}
+                        </Card>
+                        */}
+                    </Col>
+            </>;
+            })}
         </Row>
 
 
