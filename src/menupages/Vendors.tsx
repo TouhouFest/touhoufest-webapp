@@ -76,6 +76,15 @@ import sekaidolproductions from "./../images/artistalley/sekaidolproductions.jpg
 import animarketplace from "./../images/artistalley/animarketplace.jpg";
 import risostudioarts from "./../images/artistalley/risostudioarts.jpg";
 
+import noetic from "./../images/gamingfolder/noetic.jpg";
+import tboddy from "./../images/gamingfolder/tboddy.jpg";
+import fireland from "./../images/gamingfolder/fireland.jpg";
+import danmaku from "./../images/danmaku.jpg";
+import drawpaint from "./../images/drawpaint.jpg";
+import danmakumaze from "./../images/gamingfolder/danmakumaze.png";
+import arcade from "./../images/gamingfolder/arcade.jpg";
+
+
 
 let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://linktr.ee/siliconcat", "role": "Artist"},
@@ -119,6 +128,17 @@ let communitytables = [
 {"name": "Touhou Game Dev", "image": placeholder, "location": "FT5", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
+
+let fangametables = [
+{"name": "Mystery Parfait", "image": danmaku, "location": "FT1", "website": "https://danmaku.party", "role": ""},
+{"name": "Ice Fall Creative", "image": danmakumaze, "location": "FT2", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
+{"name": "Fire Land", "image": fireland, "location": "FT3", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
+{"name": "Noetic Nightjar Studios", "image": noetic, "location": "FT4", "website": "http://noeticnightjar.com/", "role": ""},
+{"name": "peace research", "image": placeholder, "location": "FT4", "website": "", "role": ""},
+{"name": "Touhou M-1 Garand", "image": grandprix, "location": "FT5", "website": "", "role": ""},
+];
+communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
+
 
 
 export const vendorsPage= {
@@ -197,6 +217,22 @@ export const vendorsPage= {
        <h4 className="mt-3">Torino Plaza (Shrine Booths)</h4>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
+             <Col>
+                <MakeGenericCard smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
+                    artist["website"] !== "" ? [
+                        {
+                            "link": artist["website"],
+                            "title": "Vendor Link"
+                        }
+                    ] : []
+                }/>
+            </Col>
+            </>)}
+       </Row>
+
+       <h4 className="mt-3">Fan Game Booths (Assembly Hall)</h4>
+        <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
+            {fangametables.map((artist, i) => <>
              <Col>
                 <MakeGenericCard smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
                     artist["website"] !== "" ? [
