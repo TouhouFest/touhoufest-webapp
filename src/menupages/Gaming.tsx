@@ -180,7 +180,14 @@ export const gamingPage = {
     "header": (<><FontAwesomeIcon icon={faGamepad} fixedWidth></FontAwesomeIcon> Gaming</>),
     "fluidImage": (<Image src={gaming} fluid/>),
     "body": (<>
-        <p>Gaming events for <em>official</em> Touhou games will take place in the <b>George Nakano Theatre</b>, (<CircledBullets argument="2"/> Gaming Hall) located to the right of the Entry Plaza. Arcades are located at the <b>Ken Miller Rec Center</b> (<CircledBullets argument="9"/> Arcade Cabinets) next to the Torino Festival Plaza. Tabletop Gaming is located in the <b>Drawing & Painting Studio</b> (<CircledBullets argument="14"/> Tabletop Gaming & Mystery Parafait) at the tail end of the Pine Wind Garden.</p>
+        <h4>Locations</h4>
+        <ul>
+            <li><b>Free Play</b>: George Nakano Theatre (<CircledBullets argument="2"/> Gaming Hall)</li>
+            <li><b>Tournaments</b>: George Nakano Theatre: (<CircledBullets argument="2"/> Gaming Hall)</li>
+            <li><b>Arcades</b>: George Nakano Theatre: (<CircledBullets argument="2"/> Gaming Hall)</li>
+            <li><b>Fangames</b>: Assembly Hall (<CircledBullets argument="11"/> Cosplay Exhibition, Fan Games)</li>
+            <li><b>Tabletop & Danmaku!!</b>: (<CircledBullets argument="11"/> Tabletop)</li>
+        </ul>
         {/*
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
@@ -208,14 +215,16 @@ export const gamingPage = {
         <h4>Gaming Hall Map</h4>
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8} className="text-center">
-                <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at Toyota Hall"/>
+                <GlobalTransformWrapper src={gamingmap} caption="Map of Gaming at George Nakano Theatre"/>
             </Col>
         </Row>
 
-        <div className="text-center mt-2 mb-3"><MakeLocationBadge location="Toyota Hall"/></div>
+        <div className="text-center mt-2 mb-3"><MakeLocationBadge location="George Nakano Theatre"/></div>
 
         <MakeGoheiHeader content="Tabletop Gaming" fragment_id='tabletop'/>
         
+        <div className="text-center mt-3 mb-3"><MakeLocationBadge location="Assembly Hall"/></div>
+
         <p>TouhouFest is pleased to offer a dedicated section for tabletop gaming this year! Inside the <b>Assembly Hall</b> (<CircledBullets argument="11"/> Tabletop Gaming) tables are available for free-play and for "<a href="https://danmaku.party/" target="_blank" rel="noreferrer">Danmaku!!</a>", the hit Touhou-themed tabletop card game. Feel free to stop by for some engaging tabletop gaming!</p>
         <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6} className="text-center">
@@ -225,15 +234,19 @@ export const gamingPage = {
             </Col>
         </Row>
 
-        <h5 className="fw-normal mt-3"><a className="text-decoration-none text-reset" href="https://danmaku.party" target="_blank">Visit Danmaku!!'s Website <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5>
+        <h5 className="fw-normal mt-3 text-center"><a className="text-decoration-none text-reset" href="https://danmaku.party" target="_blank">Visit Danmaku!!'s Website <FontAwesomeIcon icon={faAngleRight} fixedWidth/></a></h5>
 
         <MakeGoheiHeader content="Free Play" fragment_id='freeplay'/>
+
+        <div className="text-center mt-3 mb-3"><MakeLocationBadge location="George Nakano Theatre"/></div>
 
         <p>Touhou mainline games, fighting games, spinoffs, and select fangames will be playable at various times throughout the con, as marked by events labelled as "Free Play". Assistance is graciously provided by <a href ="https://twitter.com/Youkaiverse" target="_blank" rel="noreferrer"><b>Youkaiverse</b></a>; we thank them for their assistance this year.</p>
 
         <MakeGoheiHeader content="Fangames" fragment_id='fangames'/>
 
-        <p>The below fangame devs will be available and will have playable demos at the Game Hall:</p>
+        <div className="text-center mt-3 mb-3"><MakeLocationBadge location="Assembly Hall"/></div>
+
+        <p>The below fangame devs will be available and will have playable demos!</p>
 
         <Row xs={1} md={3} className="gy-3 justify-content-center">
             <Col>
@@ -272,6 +285,8 @@ export const gamingPage = {
 
         <MakeGoheiHeader content="Arcade Cabinets" fragment_id='arcades'/>
 
+        <div className="text-center mt-3 mb-3"><MakeLocationBadge location="George Nakano Theatre"/></div>
+
         <Row className="justify-content-center my-3">
             <Col xs={12} md={8} lg={6}>
                 <Image src={arcade} rounded fluid/>
@@ -290,6 +305,8 @@ export const gamingPage = {
         </Row>
 
         <MakeGoheiHeader content="Tournaments" fragment_id='tournaments'/>
+
+        <div className="text-center mt-3 mb-3"><MakeLocationBadge location="George Nakano Theatre"/></div>
 
         <p>Tournaments are being arranged for the below games. Tournament rules for each game are attached below which lead to start.gg. For more info visit the convention-wide <a href ="https://www.start.gg/tournament/touhoufest-2025/details" target="_blank" rel="noreferrer">start.gg page.</a></p>
 
