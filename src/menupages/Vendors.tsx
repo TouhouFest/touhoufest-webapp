@@ -15,7 +15,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader} from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader, MakeGenericCard} from '../Utils';
 
 import artistalley from "./../images/artistalley.jpg";
 import cookie from "./../images/artistalley/cookie.png";
@@ -102,6 +102,9 @@ import kusoyayaoku1 from "./../images/artistalley/kusoyayasoku1.jpg";
 import kusoyayaoku2 from "./../images/artistalley/kusoyayasoku2.jpg";
 import mangadejapanese from "./../images/artistalley/mangadejapanese.jpg";
 
+import akibahobby from "./../images/artistalley/akibahobby.jpg";
+import gensokyoodyssey from "./../images/artistalley/gensokyoodyssey.jpg";
+
 import hobbysociety from "./../images/artistalley/hobbysociety.jpg";
 
 import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Utils";
@@ -111,22 +114,29 @@ import { RenderHours } from './AboutCon';
 
 import vendorsimage from "./../images/vendors.jpg";
 
+import beatmario from "./../images/beatmario.jpg";
+import akairyusei from "./../images/akairyusei.jpg";
+import yaboimatoi from "./../images/yaboimatoi.jpg";
+import kamizuki from "./../images/kamizuki.jpeg";
+import djhalica from "./../images/djhalica.jpg";
+import maron from "./../images/maron.jpg";
+
 let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://linktr.ee/siliconcat", "role": "Artist"},
-{"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
+{"name": "Touhou Hobby Society", "image": hobbysociety, "location": "V02", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
-{"name": "Touhou Hobby Society", "image": hobbysociety, "location": "V04", "website": "https://www.ebay.com/usr/bluebraixen", "role": "Merch"},
-{"name": "Idea Factory Intl.", "image": ideafactory, "location": "V05 & V06", "website": "https://ifi.games/", "role": "Games"},
-{"name": "Neko Paws", "image": nekopaws, "location": "V07", "website": "https://nekopaw.com/", "role": "Merch"},
-{"name": "FMAnime Shop", "image": fmanime, "location": "V08", "website": "https://www.fm-anime.com/", "role": "Cosplay"},
-{"name": "TouhouFest Merch", "image": touhoufest, "location": "V09", "website": "https://www.touhoufest.org/store", "role": "Merch"},
-{"name": "TouhouFest Info Booth", "image": touhoufest, "location": "V10", "website": "https://schedule.touhoufest.org", "role": "Info"},
-{"name": <>Kino&shy;Kreations</>, "image": kinocreations, "location": "V11 & V12", "website": "https://kinokreations.myshopify.com/", "role": "Artist"},
-{"name": "Seraphim Complex", "image": serapim, "location": "V13", "website": "https://seraphimcomplex.com/", "role": "Merch"},
-{"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V14", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
-{"name": "Stuffy Rabbit", "image": placeholder, "location": "V15", "website": "https://ruddyg851.myportfolio.com", "role": "Vendor"},
-{"name": "Brainjuice Art", "image": brainjuice, "location": "V16", "website": "https://www.brainjuiceart.com/", "role": "Artist"},
-{"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V17", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
+{"name": "TouhouFest Official Booth", "image": touhoufest, "location": "V04", "website": "https://schedule.touhoufest.org", "role": "Info"},
+{"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V10", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
+{"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V12", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
+{"name": "TouhouFest Cosplay Repair", "image": touhoufest, "location": "V09", "website": "http://localhost:5173/#/cosplay", "role": "Info"},
+{"name": "Akiba Hobby", "image": akibahobby, "location": "V05", "website": "https://shop.akbh.jp/en", "role": "Sponsor"},
+{"name": "Touhou Mystia's Izakaya", "image": mystia, "location": "V06", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "role": "Vendor"},
+{"name": "Lyrica Live", "image": lyricalive, "location": "V11", "website": "https://www.youtube.com/@lyrica-live", "role": "Vendor"},
+{"name": "Gensokyo Odyssey", "image": gensokyoodyssey, "location": "V15", "website": "https://store.steampowered.com/app/1865670/Gensokyo_Odyssey/", "role": "Vendor"},
+{"name": "BeatMARIO/COOL&CREATE", "image": beatmario, "location": "V07", "website": "https://www.youtube.com/channel/UClzpoRto1BJXaRGe9OkkGLQ", "role": "Guest"},
+{"name": "Maron/IOSYS", "image": maron, "location": "V08", "website": "https://x.com/maron47", "role": "Guest"},
+{"name": "YaboiMatoi", "image": yaboimatoi, "location": "V13", "website": "https://www.yaboimatoi.com/", "role": "Guest"},
+{"name": "Akai Ryusei/Tokyo Active NEETS", "image": akairyusei, "location": "V15", "website": "https://neets.tokyo/", "role": "Guest"},
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -171,7 +181,7 @@ export const vendorsPage= {
     "header": (<><FontAwesomeIcon icon={faStore} fixedWidth></FontAwesomeIcon> Vendors</>),
     "fluidImage": (<Image src={vendorsimage} fluid />),
     "body": (<>
-        <p>Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza.</p>
+        <p>Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza. Jump to either section to see a detailed map and vendor listing for each area.</p>
 
         <RenderHours title="Artist Alley/Vendors"/>
 
@@ -191,16 +201,14 @@ export const vendorsPage= {
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
              <Col>
-                <Card>
-                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
-                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Vendor Link</a></Card.Footer> : <></>}
-                </Card>
+                <MakeGenericCard subtitle={artist["role"]} smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
+                    artist["website"] !== "" ? [
+                        {
+                            "link": artist["website"],
+                            "title": "Vendor Link"
+                        }
+                    ] : []
+                }/>
             </Col>
             </>)}
        </Row>
