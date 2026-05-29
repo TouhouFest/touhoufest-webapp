@@ -120,6 +120,11 @@ import yaboimatoi from "./../images/yaboimatoi.jpg";
 import kamizuki from "./../images/kamizuki.jpeg";
 import djhalica from "./../images/djhalica.jpg";
 import maron from "./../images/maron.jpg";
+import bsideevents from "./../images/artistalley/bsideevents.jpg";
+
+import animarketplace from "./../images/artistalley/animarketplace.jpg";
+import risostudioarts from "./../images/artistalley/risostudioarts.jpg";
+
 
 let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://linktr.ee/siliconcat", "role": "Artist"},
@@ -156,12 +161,12 @@ let plazatables = [
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let communitytables = [
-{"name": "The Corps Dance Crew", "image": corpsdancecrew, "location": "Booth FT1 ~ FT2", "website": "https://x.com/TheCorpsDC", "role": ""},
-{"name": "Organized Touhou Networking in Japan", "image": organizedtouhounetworking, "location": "Booth FT3", "website": "https://discord.gg/4uGwZEXXBN", "role": ""},
-// {"name": "Bowers Museum", "image": bowersmuseum, "location": "Booth FT5 (Saturday)", "website": "https://www.bowers.org/", "role": ""},
-{"name": "Dave & Busters", "image": daveandbusters, "location": "Booth FT5 (Sunday)", "website": "https://www.daveandbusters.com/us/en/home", "role": ""},
-{"name": "Anime Los Angeles", "image": animelosangeles, "location": "Booth FT6", "website": "https://animelosangeles.org/", "role": ""},
-{"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "Booth FT7", "website": "https://www.la-idolmatsuri.org/", "role": ""},
+{"name": "AniMarketplace/AMP", "image": animarketplace, "location": "FT1", "website": "https://www.animarketplace.org/", "role": ""},
+{"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "FT2", "website": "https://www.la-idolmatsuri.org/", "role": ""},
+{"name": "B-Side Events", "image": bsideevents, "location": "FT3", "website": "https://www.instagram.com/events_bside/", "role": ""},
+{"name": "Riso Studio Arts", "image": risostudioarts, "location": "FT4", "website": "https://risostudioarts.com/", "role": ""},
+{"name": "PixelSundae", "image": placeholder, "location": "FT4", "website": "", "role": ""},
+{"name": "Touhou Game Dev", "image": placeholder, "location": "FT5", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -174,7 +179,7 @@ export const vendorsPage= {
         },
         {
             "fragment_id": "shrinetables",
-            "title": "Shrine & Community Tables"
+            "title": "Hakurei Shrine Tables"
         }
     ],
     "codename": "vendors",
@@ -213,12 +218,12 @@ export const vendorsPage= {
             </>)}
        </Row>
 
-        <MakeGoheiHeader content="Shrine & Community Tables" fragment_id='shrinetables'/>
+        <MakeGoheiHeader content="Hakurei Shrine Tables" fragment_id='shrinetables'/>
 
         <h4>Booth Map</h4>
         <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
         <Row className="justify-content-center">
-            <Col xs={12} lg={10}>
+            <Col xs={12} lg={10} className="text-center">
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>
