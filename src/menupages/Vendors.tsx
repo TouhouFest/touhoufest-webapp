@@ -135,7 +135,7 @@ let fangametables = [
 {"name": "Fire Land", "image": fireland, "location": "FT3", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
 {"name": "Noetic Nightjar Studios", "image": noetic, "location": "FT4", "website": "http://noeticnightjar.com/", "role": ""},
 {"name": "peace research", "image": placeholder, "location": "FT4", "website": "", "role": ""},
-{"name": "Touhou M-1 Garand", "image": grandprix, "location": "FT5", "website": "", "role": ""},
+{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "FT5", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
