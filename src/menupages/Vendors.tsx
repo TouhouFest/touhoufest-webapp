@@ -228,14 +228,14 @@ export const vendorsPage= {
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
              <Col>
-                <Card>
-                    <Card.Img variant="top" src={artist["image"]}></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
+                <MakeGenericCard smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
+                    artist["website"] !== "" ? [
+                        {
+                            "link": artist["website"],
+                            "title": "Vendor Link"
+                        }
+                    ] : []
+                }/>
             </Col>
             </>)}
         </Row>
@@ -244,16 +244,14 @@ export const vendorsPage= {
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
-                <Card>
-                    <Card.Header className="small text-center">{artist["role"]}</Card.Header>
-                    <Card.Img src={artist["image"]} className="rounded-0"></Card.Img>
-                    <ListGroup className="list-group-flush">
-                        <ListGroup.Item className="text-center">{artist["name"]}</ListGroup.Item>
-                        {/* TODO: add vendor locations + map once they become available */}
-                        <ListGroup.Item className="text-center small">{artist["location"]}</ListGroup.Item>
-                    </ListGroup>
-                    {artist["website"] !== "" ? <Card.Footer className="text-center small"><a href={artist["website"]} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEarthAmericas}></FontAwesomeIcon> Link</a></Card.Footer> : <></>}
-                </Card>
+                <MakeGenericCard smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
+                    artist["website"] !== "" ? [
+                        {
+                            "link": artist["website"],
+                            "title": "Vendor Link"
+                        }
+                    ] : []
+                }/>
             </Col>
             </>)}
        </Row>
