@@ -121,6 +121,9 @@ import kamizuki from "./../images/kamizuki.jpeg";
 import djhalica from "./../images/djhalica.jpg";
 import maron from "./../images/maron.jpg";
 import bsideevents from "./../images/artistalley/bsideevents.jpg";
+import pythonkid from "./../images/artistalley/pythonkid.jpg";
+import pocarisweat from "./../images/artistalley/pocarisweat.jpg";
+import sekaidolproductions from "./../images/artistalley/sekaidolproductions.jpg";
 
 import animarketplace from "./../images/artistalley/animarketplace.jpg";
 import risostudioarts from "./../images/artistalley/risostudioarts.jpg";
@@ -146,17 +149,16 @@ let vendors = [
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let plazatables = [
-{"name": "Cloudie", "image": cookie, "location": "Booth FB01", "website": "https://linktr.ee/cookietanuki", "role": "Official Artist"},
-//{"name": "Freeze", "image": freezeex, "location": "Booth FB02", "website": "https://icecute.squarespace.com/", "role": "Official Artist"},
-{"name": "Lemon-Crème", "image": lemoncreme, "location": "Booth FB03", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
-{"name": "Youkai Mountain", "image": youkaimountain, "location": "Booth FB04", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
-{"name": "Kusoya / Yasoku", "image": kusoyayaoku1, "location": "Booth FB05", "website": "https://yasoku.us/", "role": "Festival Booth"},
-{"name": "Kusoya / Yasoku", "image": kusoyayaoku2, "location": "Booth FB06", "website": "https://yasoku.us/", "role": "Festival Booth"},
-
-{"name": "Wudjadoo", "image": wudjadoo, "location": "Booth FB07", "website": "https://wudjadoo.myshopify.com/", "role": "Festival Booth"},
-{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "Booth FB08", "website": "https://ko-fi.com/richardeffendi/shop", "role": "Vendor"},
-{"name": "Maid Academy", "image": maidacademy, "location": "Booth FB09", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
-{"name": "Manga de Japanese", "image": mangadejapanese, "location": "Booth FB10", "website": "https://manga-de.com", "role": "Festival Booth"},
+{"name": "Kusoya / Yasoku", "image": kusoyayaoku1, "location": "FB01", "website": "https://yasoku.us/", "role": "Festival Booth"},
+{"name": "Lemon-Crème", "image": lemoncreme, "location": "FB02", "website": "https://www.etsy.com/shop/LemonCremeStudios", "role": "Festival Booth"},
+{"name": "Seraphim Complex", "image": serapim, "location": "FB03", "website": "https://seraphimcomplex.com/", "role": "Festival Booth"},
+{"name": "Kou's Collectibles", "image": placeholder, "location": "FB04", "website": "", "role": "Festival Booth"},
+{"name": "Pythonkid", "image": pythonkid, "location": "FB05", "website": "https://pythonkid.com/", "role": "Festival Booth"},
+{"name": "Animal Confectionery", "image": placeholder, "location": "FB06", "website": "", "role": "Festival Booth"},
+{"name": "Youkai Mountain", "image": youkaimountain, "location": "FB07", "website": "https://x.com/YoukaiMountain", "role": "Festival Booth"},
+{"name": "Pocari Sweat", "image": pocarisweat, "location": "FB08", "website": "https://trypocari.com/", "role": "Festival Booth"},
+{"name": "Maid Academy", "image": maidacademy, "location": "FB09 & FB10", "website": "https://linktr.ee/maidacademy", "role": "Vendor"},
+{"name": "Sekaidol Productions", "image": sekaidolproductions, "location": "FB11", "website": "https://sekaidolproductions.com/", "role": "Vendor"},
 ];
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -227,8 +229,7 @@ export const vendorsPage= {
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>
-        <h4>List of Participants</h4>
-        <h5>Entry Foyer (Community Tables)</h5>
+        <h4>Entry Foyer (Community Tables)</h4>
         <p>Some booths may be empty.</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
@@ -245,7 +246,7 @@ export const vendorsPage= {
             </>)}
         </Row>
 
-       <h5 className="mt-3">Torino Plaza (Shrine Booths)</h5>
+       <h4 className="mt-3">Torino Plaza (Shrine Booths)</h4>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
