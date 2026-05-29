@@ -109,6 +109,8 @@ import { neosanctum, maidacademy, suzukann, toyota, torinoplaza } from "./../Uti
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 import { RenderHours } from './AboutCon';
 
+import vendorsimage from "./../images/vendors.jpg";
+
 let vendors = [
 {"name": "Siliconcat", "image": siliconcat, "location": "V01", "website": "https://linktr.ee/siliconcat", "role": "Artist"},
 {"name": "Matcha", "image": matcha, "location": "V02", "website": "https://x.com/matchach?lang=en", "role": "Artist"},
@@ -155,13 +157,27 @@ communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 
 export const vendorsPage= {
-    "codename": "parking",
+    "jumplinks": [
+        {
+            "fragment_id": "humanvillage",
+            "title": "Human Village Vendors"
+        },
+        {
+            "fragment_id": "shrinetables",
+            "title": "Shrine & Community Tables"
+        }
+    ],
+    "codename": "vendors",
     "header": (<><FontAwesomeIcon icon={faStore} fixedWidth></FontAwesomeIcon> Vendors</>),
-    "fluidImage": (<></>),
+    "fluidImage": (<Image src={vendorsimage} fluid />),
     "body": (<>
-        <h4 className="mt-3">Vendors</h4>
         <p>Vendor Booths (<CircledBullets argument="3"/> Vendor Booths) is split between the Entry Plaza and the Torino Festival Plaza.</p>
-        <h5>Vendors Booth Map</h5>
+
+        <RenderHours title="Artist Alley/Vendors"/>
+
+        <MakeGoheiHeader content="Human Village Vendors" fragment_id='humanvillage'/>
+
+        <h4>Vendors Booth Map</h4>
         <p>Pinch to focus in/zoom on the map as needed. Artist locations are denoted by the alphanumeric code next to them.</p>
 
         <Row className="mt-3 justify-content-center">
@@ -170,7 +186,7 @@ export const vendorsPage= {
             </Col>
         </Row>
 
-        <h5>List of Vendors</h5>
+        <h4>List of Vendors</h4>
         <p>Entries listed below are in vendors (denoted "Booth VXX").</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
@@ -189,16 +205,17 @@ export const vendorsPage= {
             </>)}
        </Row>
 
-       <h4 className="mt-2">Community & Shrine Tables at Torino Plaza</h4>
-       <h5>Booth Map</h5>
+        <MakeGoheiHeader content="Shrine & Community Tables" fragment_id='shrinetables'/>
+
+        <h4>Booth Map</h4>
         <p>Pinch to focus in/zoom on the map as needed. Participant locations are denoted by the alphanumeric code next to them. Participants in this sections are spread out over several different locations and will be indicated accordingly.</p>
         <Row className="justify-content-center">
             <Col xs={12} lg={10}>
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>
-       <h5>List of Participants</h5>
-        <h6>Entry Foyer (Community Tables)</h6>
+        <h4>List of Participants</h4>
+        <h5>Entry Foyer (Community Tables)</h5>
         <p>Some booths may be empty.</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
@@ -215,7 +232,7 @@ export const vendorsPage= {
             </>)}
         </Row>
 
-       <h6 className="mt-3">Torino Plaza (Shrine Booths)</h6>
+       <h5 className="mt-3">Torino Plaza (Shrine Booths)</h5>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
