@@ -7,7 +7,7 @@
 <key>provisioningProfiles</key>
 <dict>
     <key>com.touhoufest.touhoufestwebapp</key>
-    <string>githubactionprovision</string>
+    <string>GithubActionProvisionForTouhouFest2026</string>
 </dict>
 </dict>
 </plist>
