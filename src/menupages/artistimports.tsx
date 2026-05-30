@@ -353,7 +353,8 @@ export const newartistalleylist =
   {
     "name": "NekoMofu Jinja",
     "image": nekomofujinja,
-    "location": "G7"
+    "location": "G7",
+    "website": "https://www.instagram.com/schemanineko/"
   },
   {
     "name": "sirmasterknight",

@@ -72,7 +72,7 @@ export const artistVendorsPage = {
                     <Col>
                         
                         <MakeGenericCard smaller_subtitle={`Booth ${artist["location"]}`} title={artist["name"]} picture={artist["image"]} links={
-                            artist["website"] !== "" ? [
+                            artist["website"] !== undefined ? [
                                 {
                                     "link": artist["website"],
                                     "title": "Artist Link"
