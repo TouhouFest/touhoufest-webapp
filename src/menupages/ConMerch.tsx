@@ -324,7 +324,7 @@ export const conMerchPage= {
             <Col>
                 <Card>
                     <Card.Img variant="top" src={item["photo"]} />
-                    <Card.Header className="text-center fw-bold">{item["price"]}</Card.Header>
+                    <Card.Header className="text-center fw-bold">Price: {item["price"]}</Card.Header>
                     <Card.Body>
                         <h5>{item["title"]}</h5>
                         {item["description"]}
