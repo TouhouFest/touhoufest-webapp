@@ -292,8 +292,8 @@ function MapModals(){
 
         <p>View Map:</p>
 
-        <Form.Select aria-label="map-select">
-            {map_select.map((map, idx) => <option onClick={(e) => setSelectedMap(e.target.value)} value={idx}>{map["title"]}</option>)}
+        <Form.Select aria-label="map-select" onChange={(e) => setSelectedMap(parseInt((e.target.value)))}>
+            {map_select.map((map, idx) => <option value={idx}>{map["title"]}</option>)}
         </Form.Select>
 
         <h4 className="mt-3">{map_select[selectedMap]["title"]}</h4>
