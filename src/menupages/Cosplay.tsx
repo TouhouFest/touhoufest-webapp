@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowUpRightFromSquare, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
 import { faInstagram, faTiktok, faTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -208,6 +208,17 @@ export const cosplayPage = {
         </Row>
 
         <p>Below are a few additional other photoshoots/meetups that may be of interest.</p>
+
+        <Row className="justify-content-center mb-3">
+            <Col xs={12} md={10}>
+                <Card>
+                    <Card.Body>
+                        <p><b>Note!</b> Walk-ins are allowed for all Solo Photoshoot timeslots, but attendees are highly encouraged to make a reservation in advance; attendees with reservations will be prioritized. Please use the below reservations link to get signed up:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDJysSUF2EAMwTfGfQ0PQuyUIjpfs7pNtsPk3drzmI5BsFg/viewform" target="_blank" className="text-decoration-none text-reset text-center"><h5>Solo Photoshoots Reservation Link <FontAwesomeIcon icon={faArrowUpRightFromSquare} fixedWidth/></h5></a>
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
 
         <CosplayMeetupListing type="other_photoshoots" includeFriday={true} subtitleString='Cosplay meetup features:' includeLocation={true}/>
 
