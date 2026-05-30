@@ -11,7 +11,7 @@ import enamelpin from "./../images/conmerch/enamelpin.png";
 import reimuposter from "./../images/conmerch/reimuposter.png";
 import reimutote from "./../images/conmerch/reimutote.png";
 import tfestposter from "./../images/conmerch/tfestposter.png";
-import { entryplaza, torinoplazamap } from '../Utils';
+import { entryplaza, MakeGenericCard, torinoplazamap } from '../Utils';
 
 import reimulego from "./../images/conmerch/reimulego.png";
 import marisalego from "./../images/conmerch/marisalego.png";
@@ -324,10 +324,10 @@ export const conMerchPage= {
             <Col>
                 <Card>
                     <Card.Img variant="top" src={item["photo"]} />
-                    <Card.Header className="text-center">{item["price"]}</Card.Header>
+                    <Card.Header className="text-center fw-bold">{item["price"]}</Card.Header>
                     <Card.Body>
-                        <Card.Title>{item["title"]}</Card.Title>
-                        <Card.Text>{item["description"]}</Card.Text>
+                        <h5>{item["title"]}</h5>
+                        {item["description"]}
                     </Card.Body>
                     {item["notes"] !== "" ? <Card.Footer className="text-center">{item["notes"]}</Card.Footer> : <></>}
                 </Card>
