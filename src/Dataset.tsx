@@ -356,13 +356,12 @@ export default function Dataset(
       let eventbulk = [
         (<>{startstr} - {endstr}</>),
         <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="4x"/>,
-        <p className="mb-1"><span>
+        <Row className="gx-1 gy-1 mb-1">
           {splitevt.map((evt) => {
-            return <EventTypeGenerator text={evt} />;
+            return <Col xs="auto"><EventTypeGenerator text={evt} /></Col>;
           })}
-          <Badge pill bg="danger">{elem["event_age_limit"]}</Badge>
-        </span></p>
-
+          <Col xs="auto"><Badge pill bg="danger">{elem["event_age_limit"]}</Badge></Col>
+        </Row>
       ];
 
       // generate event listing
