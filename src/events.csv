@@ -632,7 +632,7 @@ Cosplay Contest Pre-Judging,"Preliminary judging for Cosplay Contest participant
 **Note!** Regular attendees should attend the Cosplay Contest at 3:00PM, not this event! Only people participating in the Cosplay Contest should go to this event.",Drawing & Painting Studio,6/20/26,10:00,6/20/26,11:30,Cosplay.Reserved,
 Cosplay Contest,"A amazing showcase of some *very* talented and creative Touhou cosplayers! This event breaks down as follows:
 - Seating: 2:45 PM - 3:00 PM
-- Cosplay Contest: 3:00 PM - 5:00 PM",Torino Plaza Stage,6/20/26,13:00,6/20/26,17:00,Cosplay.Performance,
+- Cosplay Contest: 3:00 PM - 5:00 PM",Torino Plaza,6/20/26,15:00,6/20/26,17:00,Cosplay.Performance,
 Gaming Hall Free Play,,George Nakano Theatre,6/20/26,9:30,6/20/26,21:00,Gaming,
 Gaming Hall Free Play,,George Nakano Theatre,6/21/26,8:30,6/21/26,17:00,Gaming,
 Tournament Check-Ins,,George Nakano Theatre,6/20/26,9:30,6/20/26,10:00,Gaming,
@@ -724,4 +724,5 @@ TouhouFest LIVE Concert,"Another year, another TouhouFest LIVE! Join us on a bra
 
 **Note:** Due to James Armstrong Theatre constraints, attendees will leave early will *not* be allowed in. Please plan accordingly!",James Armstrong Theatre,6/20/26,18:00,6/20/26,21:00,Guest.Performance,
 Guest Meet & Greet,tbd,tbd,6/20/26,21:30,6/20/26,23:00,Guest,
-TouhouFest LIVE Concert Seating & Ticketing,"Seating and Ticketing for TouhouFest Live will be arranged during this timeslot. To arrive at TouhouFest LIVE in a timely manner, please plan on heading to the James Armstrong Theatre around this timeslot, not at 6:00 PM.",James Armstrong Theatre,6/20/26,17:30,6/20/26,18:00,Guest.Performance.Con Ops,
+TouhouFest LIVE Concert Seating & Ticketing,"Seating and Ticketing for TouhouFest LIVE will be arranged during this timeslot. To arrive at TouhouFest LIVE in a timely manner, please plan on heading to the James Armstrong Theatre around this timeslot, not at 6:00 PM.",James Armstrong Theatre,6/20/26,17:30,6/20/26,18:00,Guest.Performance.Con Ops,
+Cosplay Contest Seating,"Seating for the Cosplay Contest will be arranged during this timeslot. To arrive at the Cosplay Contest in a timely manner, please plan on heading to the Torino Plaza around this timeslot, not at 3:00 PM.",Torino Plaza,6/20/26,14:45,6/20/26,15:00,Cosplay.Performance.Con Ops,
