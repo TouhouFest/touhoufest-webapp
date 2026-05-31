@@ -100,6 +100,7 @@ export const restarauntsPage = {
         </Col>
         </Row>
 
+        {/*
         <h5 className="my-3">Maid Academy Food Menu</h5>
 
         <Row className="justify-content-center">
@@ -107,6 +108,8 @@ export const restarauntsPage = {
                 <MaidCarousel />
             </Col>
         </Row>
+
+        */}
 
         <h4 className="mt-3">Other Options</h4>
         <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
