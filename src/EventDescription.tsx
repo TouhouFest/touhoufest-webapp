@@ -58,14 +58,14 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   }
 
   return (
-    <Modal show={show_var} onHide={handleHide} centered scrollable>
-      <Modal.Header closeButton>
-        <Modal.Title className="align-middle"></Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
+    <Offcanvas show={show_var} onHide={handleHide} placement="end">
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title className="align-middle"></Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
         {output}
-      </Modal.Body>
-    </Modal>
+      </Offcanvas.Body>
+    </Offcanvas>
   );
 }
 

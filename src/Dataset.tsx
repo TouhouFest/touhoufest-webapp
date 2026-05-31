@@ -366,23 +366,26 @@ export default function Dataset(
 
       // generate event listing
       output.push(
-        <ListGroup.Item key={index} className="event-item" onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
+        <ListGroup.Item key={index} className="event-item" >
 
-          <h4  className="mb-1">{elem["event_title"]} </h4>
-          <Stack direction="horizontal" gap={3}>
-            <div  className="vr"></div>
-            <div>
-              <div >
-                <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
-                {eventbulk[2]}
+          <div onClick={() => handleEventOnClick(index, eventbulk, startjs.format("dddd, MMMM D").toString())}>
+            <h4  className="mb-1">{elem["event_title"]} </h4>
+            <Stack direction="horizontal" gap={3}>
+              <div  className="vr"></div>
+              <div>
+                <div >
+                  <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
+                  {eventbulk[2]}
 
-                {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
+                  {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
+                </div>
               </div>
-              <Stack direction = "horizontal" gap={4} className="event-icons-group">
-                <Bookmark index={index} icon_size="2x" />
-                <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="2x"/>
-              </Stack>
-            </div>
+            </Stack>
+          </div>
+
+          <Stack direction = "horizontal" gap={4} className="event-icons-group">
+            <Bookmark index={index} icon_size="2x" />
+            <IssueNotifications index={index} title={elem["event_title"]} start_ts={startjs} icon_size="2x"/>
           </Stack>
 
         </ListGroup.Item>
@@ -393,7 +396,6 @@ export default function Dataset(
 
   return (
     <>
-      <EventDescription show_var={showEventDescription} hide_fxn={handleEventOnHide} event_package={eventDetails} evt_print={evtPrint}></EventDescription>
       {output.length > 1 ?
         <>
           <ListGroup variant="flush" className="flex-grow-1">
@@ -402,6 +404,7 @@ export default function Dataset(
         </>
       : <></>}
       {output.length < 1 ? noResults() : <></>}
+      <EventDescription show_var={showEventDescription} hide_fxn={handleEventOnHide} event_package={eventDetails} evt_print={evtPrint}></EventDescription>
     </>
   );
 }

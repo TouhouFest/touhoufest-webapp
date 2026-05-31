@@ -79,7 +79,8 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
   }
 
   function onTriggerFunction(e: React.MouseEvent) {
-    e.stopPropagation();
+    // e.stopPropagation();
+    // e.preventDefault();
     // disable notifications if the event has already started
     if(bellType === faBellSlash) {
         Toast.show({
