@@ -32,6 +32,7 @@ import cosplaymeetups from "./cosplaymeetups.json";
 import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
+import { RenderHours } from './AboutCon';
 
 function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString, renderModal=true}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string, renderModal?:boolean}) {
     
@@ -248,32 +249,7 @@ export const cosplayPage = {
 
         <p>Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist. Hours and operations for Cosplay Repair are listed below:</p>
 
-        <Row xs={1} md={2} lg={4} className="mt-3 justify-content-center">
-          <Col>
-            <Table className="w-auto mx-auto">
-              <thead>
-                  <tr>
-                    <th>Day</th>
-                    <th>Times</th>
-                  </tr>
-              </thead>  
-              <tbody>
-                <tr>
-                  <td>Friday</td>
-                  <td>Not Open</td>
-                </tr>
-                <tr>
-                  <td>Saturday</td>
-                  <td>10:00 AM - 5:00 PM</td>
-                </tr>
-                <tr>
-                  <td>Sunday</td>
-                  <td>10:00 AM - 2:30 PM</td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
+        <RenderHours title="Cosplay Repair"/>
 
         <MakeGoheiHeader content="Cosplay Contest" fragment_id='cosplaycontest'/>
 

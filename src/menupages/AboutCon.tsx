@@ -127,6 +127,13 @@ let operating_hours = [
     "sunday": "9:00 AM - 5:00 PM",
     "remark": "*Note: Gaming may be either Freeplay or Tournament depending on the schedule"
   },
+  {
+    "title": "Cosplay Repair",
+    "friday": "Not Open",
+    "saturday": "10:00 AM - 5:00 PM",
+    "sunday": "10:00 AM - 3:00 PM",
+  },
+
 
 ];
 
