@@ -186,10 +186,10 @@ export const aboutConPage = {
       "title": "Official Artist",
       "fragment_id": "artist"
     },
-    {
-      "title": "Event Feedback Form",
-      "fragment_id": "feedback"
-    }
+    // {
+    //   "title": "Event Feedback Form",
+    //   "fragment_id": "feedback"
+    // }
   ],
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
   "fluidImage": (<><Image className="display-dark" src={touhoufest_dark} fluid /><Image className="display-light" src={touhoufest} fluid /></>),
@@ -386,6 +386,7 @@ export const aboutConPage = {
         </Col>
       </Row>
 
+      {/*
       <MakeGoheiHeader content="Feedback Form" fragment_id='feedback'/>
 
       <p>We’d love to hear your feedback! If you have any, please use the Google Forms link below:</p>
@@ -393,6 +394,8 @@ export const aboutConPage = {
       <div className="text-center">
         <Button className="submitbutton" href="https://docs.google.com/forms/d/e/1FAIpQLSeQlHDqopPY3Aw9hGe2AfEcD897pmVBKNKgjpz9Hb3sFp9hiA/viewform?usp=dialog" target="_blank" rel="noreferrer">View form <FontAwesomeIcon icon={faAngleRight} fixedWidth/></Button>
       </div>
+
+      */}
 
       {/*
       <h5 className="mt-3">Past Official TouhouFest Artists</h5>
