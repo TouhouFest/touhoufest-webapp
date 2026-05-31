@@ -115,17 +115,20 @@ let operating_hours = [
   },
   {
     "title": "Artist Alley/Vendors",
-    "friday": "Not Open",
-    "saturday": "10:30 AM* - 6:00 PM",
+    "friday": "3:00 PM* - 7:00 PM",
+    "saturday": "10:30 AM** - 6:00 PM",
     "sunday": "9:00 AM - 4:00 PM",
-    "remark": "*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM."
+    "remark": <>
+    <p className="small">*Note: This is restricted to outdoors vendors who optionally choose to open their doors on Friday.</p> 
+    <p className="small">**Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p> 
+    </>
   },
   {
     "title": "Gaming Hall*",
     "friday": "Not Open",
     "saturday": "9:00 AM - 9:00 PM",
     "sunday": "9:00 AM - 5:00 PM",
-    "remark": "*Note: Gaming may be either Freeplay or Tournament depending on the schedule"
+    "remark": <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
   },
   {
     "title": "Cosplay Repair",
@@ -165,7 +168,7 @@ export function RenderHours({title=""}: {title?:string}) {
               </tr>
             </tbody>
           </Table>
-          {section["remark"] !== "" && <p className="small">{section["remark"]}</p>}
+          {section["remark"] !== "" && section["remark"]}
         </Col> : <></>) }
       </Row>
 
