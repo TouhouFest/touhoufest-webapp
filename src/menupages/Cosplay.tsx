@@ -152,8 +152,9 @@ export const cosplayPage = {
         <ul>
             <li><b>Cosplay Meetups</b>: Pine Wind Garden (<CircledBullets argument="12"/> Cosplay Meetups)</li>
             <li><b>Cosplay Contest</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
-            <li><b>Cosplay Contest Pre-Judging</b>: Torino Plaza</li>
+            <li><b>Cosplay Contest Pre-Judging</b>: Drawing and Painting Studio (<CircledBullets argument="14"/> Panels 2)</li>
             <li><b>Cosplay Exhibition</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Exhibition)</li>
+            <li><b>Cosplay Repair</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Repair)</li>
             <li><b>Cosplay Workshops</b>: Children's Art Wing (<CircledBullets argument='13'/> Panels 1)</li>
             <li><b>Solo Photoshoots</b>: Drawing and Painting Studio (<CircledBullets argument='14'/> Panels 2)</li>
         </ul>
@@ -221,7 +222,7 @@ export const cosplayPage = {
             </Col>
         </Row>
 
-        <CosplayMeetupListing type="other_photoshoots" includeFriday={true} subtitleString='Cosplay meetup features:' includeLocation={true}/>
+        <CosplayMeetupListing type="other_photoshoots" includeFriday={false} subtitleString='Cosplay meetup features:' includeLocation={true}/>
 
         <MakeGoheiHeader content="Cosplay Workshop" fragment_id='cosplayworkshop'/>
 
