@@ -13,7 +13,7 @@ import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
 import thefixonwheels from "./../images/thefixonwheels.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
-import {MakeGenericCard, maidacademy } from '../Utils';
+import {MakeGenericCard, MakeGoheiHeader, maidacademy } from '../Utils';
 import sabroso from "./../images/sabroso.jpg";
 
 import mainmenu from "./../images/maidacademymenu/mainmenu.jpg";
@@ -100,6 +100,13 @@ export const restarauntsPage = {
         </Col>
         </Row>
 
+        <h4 className="mt-3">Other Options</h4>
+        <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
+
+        <MakeGoheiHeader content="Maid Academy Information"/>
+
+        <h4>Maid Academy Cafe's Day 0 Picnic Plaza</h4>
+
         {/*
         <h5 className="my-3">Maid Academy Food Menu</h5>
 
@@ -111,8 +118,6 @@ export const restarauntsPage = {
 
         */}
 
-        <h4 className="mt-3">Other Options</h4>
-        <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
 
     </>),
 }
