@@ -106,7 +106,7 @@ export const restarauntsPage = {
         <h4>Maid Academy Cafe's Day 0 Picnic Plaza</h4>
 
         <p>Maid Academy brings a interactive outdoor mini cafe experience featuring Touhou themed maids, fresh food and drinks, games, performances, and plenty of Touhou inspired music.</p>
-        <p><b>Note</b> Reservations are required for seating. Please use the below link to get registered:</p>
+        <p><b>Note!</b> Reservations are required for seating. Please use the below link to get registered:</p>
 
         <a className="text-center text-reset text-decoration-none" href="https://www.eventbrite.com/e/1990580397554?aff=oddtdtcreator" target="_blank" rel="noreferrer"><h5 className="mb-3">Picnic Plaza Registration Link <FontAwesomeIcon icon={faArrowUpRightFromSquare}/></h5></a>
 
