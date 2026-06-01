@@ -103,7 +103,7 @@ let operating_hours = [
     "title": "General Con",
     "friday": "3:00 PM - 8:00 PM",
     "saturday": "9:00 AM - 10:00 PM",
-    "sunday": "8:00 AM - 6:00 PM",
+    "sunday": "9:00 AM - 6:00 PM",
     "remark": ""
   },
   {
