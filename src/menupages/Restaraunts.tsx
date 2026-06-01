@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faBowlFood, faGlobeAmericas, faPepperHot, faSquareArrowUpRight, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faArrowUpRightFromSquare, faBowlFood, faGlobeAmericas, faPepperHot, faSquareArrowUpRight, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col, Carousel, Image } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
@@ -35,7 +35,7 @@ function MaidCarousel({imagelist}: {imagelist:string[]}) {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} >
 
         {imagelist.map((image) => <Carousel.Item>
             <GlobalTransformWrapper src={image} caption=""/>
