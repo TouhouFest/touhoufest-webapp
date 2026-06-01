@@ -27,6 +27,8 @@ import yuyukoburger from "./../images/conmerch/yuyukoburger.png";
 import gensokyostreetstyle from "./../images/conmerch/gensokyostreetstyle.png";
 import youkailifornia from "./../images/conmerch/youkailifornia.png";
 import youkailiforniasticker from "./../images/conmerch/youkailiforniasticker.png";
+import kanakomug from "./../images/conmerch/kanakomug.png";
+import touhoucalendar from "./../images/conmerch/touhoucalendar.jpg";
 
 import merchlisting from "./../images/merchlisting.png";
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
@@ -228,6 +230,26 @@ let pricelist = [
         </>,
         "photo": youkailiforniasticker,
         "notes": "Artist: cipher_jpg"
+    },
+    {
+        "price": "$25",
+        "title": "Kanako Donut (Mug)",
+        "description": <>
+            <p>Kanako had released a new merch of a Coffee Mug (real Donuts are not included)</p>
+            <p>Artist comment: I like my morning coffee *sip*</p>
+            <p>Art Design by StickyTSM </p>
+        </>,
+        "photo": kanakomug,
+        "notes": "Artist: StickyTSM"
+    },
+    {
+        "price": "$30",
+        "title": "Touhou Calendar",
+        "description": <>
+            <p>A 2026 year calendar depicting various Touhou characters</p>
+        </>,
+        "photo": touhoucalendar,
+        "notes": "Artist: Seija"
     }
 
 
@@ -310,11 +332,11 @@ export const conMerchPage= {
             </Col>
         </Row>
 
-        <h4 className="mb-3">2025 Con Merch Listing</h4>
+        <h4 className="mb-3">2026 Con Merch Listing</h4>
 
         <Row className="justify-content-center">
-            <Col xs={12} md={10}>
-                <GlobalTransformWrapper src={merchlisting} caption="2025 Merch Listing"/>
+            <Col xs={12} md={10} className="text-center">
+                <GlobalTransformWrapper src={merchlisting} caption="2026 Merch Listing"/>
             </Col>
         </Row>
 
