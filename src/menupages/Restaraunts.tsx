@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faBowlFood, faGlobeAmericas, faPepperHot, faSquareArrowUpRight, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col, Carousel, Image } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
@@ -20,9 +20,14 @@ import mainmenu from "./../images/maidacademymenu/mainmenu.jpg";
 import entry01 from "./../images/maidacademymenu/entry01.jpg";
 import entry02 from "./../images/maidacademymenu/entry02.jpg";
 import entry03 from "./../images/maidacademymenu/entry03.jpg";
-import { useState } from 'react';
 
-function MaidCarousel() {
+import friday01 from "./../images/maidacademymenu/friday01.png";
+import friday02 from "./../images/maidacademymenu/friday02.png";
+
+import { useState } from 'react';
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
+
+function MaidCarousel({imagelist}: {imagelist:string[]}) {
     const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex:number) => {
@@ -31,18 +36,11 @@ function MaidCarousel() {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-        <Carousel.Item>
-            <Image src={mainmenu} fluid rounded/>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={entry01} fluid rounded/>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={entry02} fluid rounded/>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={entry03} fluid rounded/>
-        </Carousel.Item>
+
+        {imagelist.map((image) => <Carousel.Item>
+            <GlobalTransformWrapper src={image} caption=""/>
+        </Carousel.Item>)}
+
     </Carousel>
   );
 }
@@ -107,12 +105,23 @@ export const restarauntsPage = {
 
         <h4>Maid Academy Cafe's Day 0 Picnic Plaza</h4>
 
-        {/*
-        <h5 className="my-3">Maid Academy Food Menu</h5>
+        <p>Maid Academy brings a interactive outdoor mini cafe experience featuring Touhou themed maids, fresh food and drinks, games, performances, and plenty of Touhou inspired music.</p>
+        <p><b>Note</b> Reservations are required for seating. Please use the below link to get registered:</p>
+
+        <a className="text-center text-reset text-decoration-none" href="https://www.eventbrite.com/e/1990580397554?aff=oddtdtcreator" target="_blank" rel="noreferrer"><h5 className="mb-3">Picnic Plaza Registration Link <FontAwesomeIcon icon={faArrowUpRightFromSquare}/></h5></a>
 
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
-                <MaidCarousel />
+                <MaidCarousel imagelist={[friday01, friday02]}/>
+            </Col>
+        </Row>
+
+        {/*
+        <h4 className="my-3">Maid Academy Saturday & Sunday Food Menu</h4>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <MaidCarousel imagelist=[mainmenu, entry01, entry02, entry03]/>
             </Col>
         </Row>
 
