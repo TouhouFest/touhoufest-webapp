@@ -79,6 +79,7 @@ let map_select = [
                 <ul className="list-unstyled">
                     <li><CircledBullets argument="11"/> Cosplay Exhibition, Fan Games</li>
                     <li><CircledBullets argument="11"/> Tabletop Gaming</li>
+                    <li><CircledBullets argument="11"/> Cosplay Repair</li>
                 </ul>
 
                 <b>Pine Wind Garden</b>
@@ -242,7 +243,8 @@ let roomlist = [
         "picture": assemblyhall,
         "rooms": [
             <><CircledBullets argument="11"/> Cosplay Exhibition, Fan Games</>,
-            <><CircledBullets argument="11"/> Tabletop Gaming</>
+            <><CircledBullets argument="11"/> Tabletop Gaming</>,
+            <><CircledBullets argument="11"/> Cosplay Repair</>
         ],
         "content": <p>The Assembly Hall is the left-most building of the convention center and is left from the main stage. The following event spaces are located here:</p>
     },

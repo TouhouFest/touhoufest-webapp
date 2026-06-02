@@ -38,3 +38,5 @@ examples/*/playwright/.cache/
 myenv
 
 ios/App/TouhouFest.xcarchive/
+
+misc.xml

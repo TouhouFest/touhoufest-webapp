@@ -79,7 +79,8 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
   }
 
   function onTriggerFunction(e: React.MouseEvent) {
-    e.stopPropagation();
+    // e.stopPropagation();
+    // e.preventDefault();
     // disable notifications if the event has already started
     if(bellType === faBellSlash) {
         Toast.show({
@@ -160,12 +161,16 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
           }
           // remove the old item
           else {
-            localStorage.removeItem(`${NOTIFYNAME}-${index}`);
+            removeNotification();
+            // localStorage.removeItem(`${NOTIFYNAME}-${index}`);
           }
+        }
+        else if(bellType !== defaultState()){
+          removeNotification();
         }
       }
     });
-  }, [])
+  })
 
   // add listener for when any notification is fired off
   LocalNotifications.addListener('localNotificationReceived', checkNotificationFired);

@@ -3,7 +3,7 @@ import MainWrapper from "./MainWrapper";
 import DatasetWrapper from "./DatasetWrapper";
 import NewMenuPage from "./NewMenuPage";
 
-function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) { 
+function App({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element | string>[], menuheader:JSX.Element|JSX.Element[]}) { 
 
     return (<Routes>
         <Route element={<MainWrapper menupagedata={menupagedata} menuheader={menuheader}/>}>

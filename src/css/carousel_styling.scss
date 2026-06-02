@@ -1,0 +1,43 @@
+@use 'declared_colors';
+
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+  align-items: end;
+  filter: none;
+}
+
+.carousel-indicators {
+  margin-bottom: 0;
+  text-indent: 0px;
+  height: initial;
+  padding: 0.25rem;
+}
+
+.carousel-control-next-icon {
+  padding: 1em;
+}
+
+.carousel-indicators, .carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: rgba(declared_colors.$readable_red, 0.9);
+  opacity: 1;
+  border-radius: 3px;
+}
+
+.carousel-indicators button {
+    background-color: white !important;
+}
+
+[data-bs-theme="light"] {
+  .carousel-indicators, .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: rgba(declared_colors.$readable-red, 0.9);
+    opacity: 1;
+    border-radius: 3px;
+  }
+}
+[data-bs-theme="dark"] {
+  .carousel-indicators, .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: rgba(declared_colors.$dark-gohei-header-bkgnd, 0.9);
+    opacity: 1;
+    border-radius: 3px;
+  }
+}

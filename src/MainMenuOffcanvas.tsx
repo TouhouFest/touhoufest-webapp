@@ -44,7 +44,7 @@ export default function MainMenuOffcanvas({ mainIcon, menuheader, touhoufest, me
                     <Nav className="justify-content-end flex-grow-1 pe-3 fs-5">
                         {menunavs}
                         <Nav.Link>{darkModeSelector} <FontAwesomeIcon icon={faAngleRight} className="ms-2"/></Nav.Link>
-                        <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSeQlHDqopPY3Aw9hGe2AfEcD897pmVBKNKgjpz9Hb3sFp9hiA/viewform?usp=dialog" target="_blank"><FontAwesomeIcon icon={faComment} fixedWidth /> Feedback Form <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Nav.Link>
+                        {/* <Nav.Link href="https://docs.google.com/forms/d/e/1FAIpQLSeQlHDqopPY3Aw9hGe2AfEcD897pmVBKNKgjpz9Hb3sFp9hiA/viewform?usp=dialog" target="_blank"><FontAwesomeIcon icon={faComment} fixedWidth /> Feedback Form <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Nav.Link> */}
                         <Nav.Link href="https://github.com/kir12/touhoufest-webapp" target="_blank"><FontAwesomeIcon icon={faGithub} fixedWidth></FontAwesomeIcon> About App <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ms-2"/></Nav.Link>
                         <Nav.Link href="https://www.google.com/search?q=marisa+kirisame&client=firefox-b-1-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwioqcvz4fT9AhW2kYkEHTCND3AQ0pQJegQIBBAC&biw=1920&bih=884&dpr=1" target="_blank"><FontAwesomeIcon icon={faHeart} fixedWidth></FontAwesomeIcon> Best Girl <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ms-2"/></Nav.Link>
                     </Nav>

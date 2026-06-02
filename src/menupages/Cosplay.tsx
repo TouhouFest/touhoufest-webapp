@@ -7,7 +7,7 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowUpRightFromSquare, faCameraRetro, faHatWizard, faLocationDot, faMedal, faPalette, faPersonBurst } from '@fortawesome/free-solid-svg-icons';
 import {pinewindgarden, assemblyhall, entryplaza, WarningAlert, toyota, MakeGenericCard, MakeGoheiHeader, MakeLocationBadge } from "../Utils";
 import { Accordion, Card, Figure, Image, Row, Col, ListGroup, Nav, Modal, Table } from 'react-bootstrap';
 import { faInstagram, faTiktok, faTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -32,6 +32,7 @@ import cosplaymeetups from "./cosplaymeetups.json";
 import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
+import { RenderHours } from './AboutCon';
 
 function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString, renderModal=true}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string, renderModal?:boolean}) {
     
@@ -151,8 +152,9 @@ export const cosplayPage = {
         <ul>
             <li><b>Cosplay Meetups</b>: Pine Wind Garden (<CircledBullets argument="12"/> Cosplay Meetups)</li>
             <li><b>Cosplay Contest</b>: Torino Plaza (<CircledBullets argument="7"/> Main Stage)</li>
-            <li><b>Cosplay Contest Pre-Judging</b>: Torino Plaza</li>
+            <li><b>Cosplay Contest Pre-Judging</b>: Drawing and Painting Studio (<CircledBullets argument="14"/> Panels 2)</li>
             <li><b>Cosplay Exhibition</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Exhibition)</li>
+            <li><b>Cosplay Repair</b>: Assembly Hall (<CircledBullets argument='11'/> Cosplay Repair)</li>
             <li><b>Cosplay Workshops</b>: Children's Art Wing (<CircledBullets argument='13'/> Panels 1)</li>
             <li><b>Solo Photoshoots</b>: Drawing and Painting Studio (<CircledBullets argument='14'/> Panels 2)</li>
         </ul>
@@ -209,7 +211,18 @@ export const cosplayPage = {
 
         <p>Below are a few additional other photoshoots/meetups that may be of interest.</p>
 
-        <CosplayMeetupListing type="other_photoshoots" includeFriday={true} subtitleString='Cosplay meetup features:' includeLocation={true}/>
+        <Row className="justify-content-center mb-3">
+            <Col xs={12} md={10}>
+                <Card>
+                    <Card.Body>
+                        <p><b>Note!</b> Walk-ins are allowed for all Solo Photoshoot timeslots, but attendees are highly encouraged to make a reservation in advance; attendees with reservations will be prioritized. Please use the below reservations link to get signed up:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHDJysSUF2EAMwTfGfQ0PQuyUIjpfs7pNtsPk3drzmI5BsFg/viewform" target="_blank" className="text-decoration-none text-reset text-center"><h5>Solo Photoshoots Reservation Link <FontAwesomeIcon icon={faArrowUpRightFromSquare} fixedWidth/></h5></a>
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
+
+        <CosplayMeetupListing type="other_photoshoots" includeFriday={false} subtitleString='Cosplay meetup features:' includeLocation={true}/>
 
         <MakeGoheiHeader content="Cosplay Workshop" fragment_id='cosplayworkshop'/>
 
@@ -237,32 +250,7 @@ export const cosplayPage = {
 
         <p>Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist. Hours and operations for Cosplay Repair are listed below:</p>
 
-        <Row xs={1} md={2} lg={4} className="mt-3 justify-content-center">
-          <Col>
-            <Table className="w-auto mx-auto">
-              <thead>
-                  <tr>
-                    <th>Day</th>
-                    <th>Times</th>
-                  </tr>
-              </thead>  
-              <tbody>
-                <tr>
-                  <td>Friday</td>
-                  <td>Not Open</td>
-                </tr>
-                <tr>
-                  <td>Saturday</td>
-                  <td>10:00 AM - 5:00 PM</td>
-                </tr>
-                <tr>
-                  <td>Sunday</td>
-                  <td>10:00 AM - 2:30 PM</td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
+        <RenderHours title="Cosplay Repair"/>
 
         <MakeGoheiHeader content="Cosplay Contest" fragment_id='cosplaycontest'/>
 

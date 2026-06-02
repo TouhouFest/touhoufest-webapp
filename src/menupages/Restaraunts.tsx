@@ -7,21 +7,27 @@ fontawesome and bootstrap are imported here for you so you can use them outright
 */
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBowlFood, faGlobeAmericas, faPepperHot, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faArrowUpRightFromSquare, faBowlFood, faGlobeAmericas, faPepperHot, faSquareArrowUpRight, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { Card, Row, Col, Carousel, Image } from 'react-bootstrap';
 import okamoto from "./../images/okamoto.jpg";
 import lupitastacos from "./../images/lupitas-tacos.jpg";
 import thefixonwheels from "./../images/thefixonwheels.jpg";
 import poutinebrothers from "./../images/poutinebrothers.png";
-import {MakeGenericCard, maidacademy } from '../Utils';
+import {MakeGenericCard, MakeGoheiHeader, maidacademy } from '../Utils';
+import sabroso from "./../images/sabroso.jpg";
 
 import mainmenu from "./../images/maidacademymenu/mainmenu.jpg";
 import entry01 from "./../images/maidacademymenu/entry01.jpg";
 import entry02 from "./../images/maidacademymenu/entry02.jpg";
 import entry03 from "./../images/maidacademymenu/entry03.jpg";
-import { useState } from 'react';
 
-function MaidCarousel() {
+import friday01 from "./../images/maidacademymenu/friday01.png";
+import friday02 from "./../images/maidacademymenu/friday02.png";
+
+import { useState } from 'react';
+import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
+
+function MaidCarousel({imagelist}: {imagelist:string[]}) {
     const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex:number) => {
@@ -29,19 +35,12 @@ function MaidCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-        <Carousel.Item>
-            <Image src={mainmenu} fluid rounded/>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={entry01} fluid rounded/>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={entry02} fluid rounded/>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Image src={entry03} fluid rounded/>
-        </Carousel.Item>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} >
+
+        {imagelist.map((image) => <Carousel.Item>
+            <GlobalTransformWrapper src={image} caption=""/>
+        </Carousel.Item>)}
+
     </Carousel>
   );
 }
@@ -88,18 +87,46 @@ export const restarauntsPage = {
                 <p>Maid Academy Cafe is one of vendors/performers and will also be selling a selection of light refreshments and drinks at their vendors booth located in Torino Plaza.</p>
             </MakeGenericCard>
         </Col>
-        </Row>
-
-        <h5 className="my-3">Maid Academy Food Menu</h5>
-
-        <Row className="justify-content-center">
-            <Col xs={12} md={10} lg={8}>
-                <MaidCarousel />
-            </Col>
+        <Col xs={12} md={6} lg={true}>
+            <MakeGenericCard subtitle='BBQ & Burgers' title="Sabroso Mobile Kitchen" location='Front Circular Drive' picture={sabroso} links={
+                [
+                        {"link": "https://www.yelp.com/biz/sabroso-mobile-kitchen-santa-ana", "title": <><FontAwesomeIcon icon={faGlobeAmericas}/> Website</>}, 
+                ]
+            }>
+                <p>A food truck for BBQ, smoked ribs, and burgers that many people will enjoy</p>
+            </MakeGenericCard>
+        </Col>
         </Row>
 
         <h4 className="mt-3">Other Options</h4>
         <p> This Google Maps link to <a href = "https://www.google.com/maps/search/Restaurants/@33.834631,-118.3583814,15z/data=!4m8!2m7!3m6!1sRestaurants!2sTorrance+Cultural+Arts+Center,+3330+Civic+Center+Dr,+Torrance,+CA+90503!3s0x80c2b52a55535501:0xbf414574f90a0717!4m2!1d-118.3439379!2d33.8394014?entry=ttu" target="_blank" rel="noreferrer">restaraunts nearby the Torrance Cultural Arts Center</a> may be helpful.</p>
+
+        <MakeGoheiHeader content="Maid Academy Information"/>
+
+        <h4>Maid Academy Cafe's Day 0 Picnic Plaza</h4>
+
+        <p>Maid Academy brings a interactive outdoor mini cafe experience featuring Touhou themed maids, fresh food and drinks, games, performances, and plenty of Touhou inspired music.</p>
+        <p><b>Note!</b> Reservations are required for seating. Please use the below link to get registered:</p>
+
+        <a className="text-center text-reset text-decoration-none" href="https://www.eventbrite.com/e/1990580397554?aff=oddtdtcreator" target="_blank" rel="noreferrer"><h5 className="mb-3">Picnic Plaza Registration Link <FontAwesomeIcon icon={faArrowUpRightFromSquare}/></h5></a>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <MaidCarousel imagelist={[friday01, friday02]}/>
+            </Col>
+        </Row>
+
+        {/*
+        <h4 className="my-3">Maid Academy Saturday & Sunday Food Menu</h4>
+
+        <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
+                <MaidCarousel imagelist=[mainmenu, entry01, entry02, entry03]/>
+            </Col>
+        </Row>
+
+        */}
+
 
     </>),
 }

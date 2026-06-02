@@ -20,10 +20,10 @@ import touhoufest_dark from "./images/touhoufest_dark.jpg";
 import { Stack } from 'react-bootstrap';
 
 import { faStar } from '@fortawesome/free-regular-svg-icons';
-import { Link, Outlet } from 'react-router';
+import { Link, Outlet, useLocation } from 'react-router';
 
 
-function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element>[], menuheader:JSX.Element|JSX.Element[]}) { 
+function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, JSX.Element | string>[], menuheader:JSX.Element|JSX.Element[]}) { 
 
   // indicator for home, bookmarks, filtering
   // const [mode, setMode] = useState("home");
@@ -131,19 +131,24 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
   //   }
   // }, [showFilterPane, showMainMenu, menupagebools, showEventDescription]);
 
-  const [activeMenuKey, setActiveMenuKey] = useState("dataset");
 
   function setActiveMenuItem(codename:string) {
-    setActiveMenuKey(codename);
     setShowMainMenu(false);
   }
 
-  let menunavs = [<Nav.Link onClick={() => setActiveMenuItem("dataset")} className={activeMenuKey === "dataset" ? "menu-selected" : ""} to={"/"} eventKey={"dataset"} as={Link}><FontAwesomeIcon icon={faBookOpen} fixedWidth/> Schedule <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>];
-                        
-  // let menupages = [];
+  let activeDirectory:string = useLocation().pathname;
+  if(activeDirectory === "/") {
+    activeDirectory = "dataset";
+  }
+  else{
+    activeDirectory = activeDirectory.replace("/","");
+  }
+
+  let menunavs = [<Nav.Link onClick={() => setActiveMenuItem("dataset")} className={activeDirectory === "dataset" ? "menu-selected" : ""} to={"/"} eventKey={"dataset"} as={Link}><FontAwesomeIcon icon={faBookOpen} fixedWidth/> Schedule <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>];
+
 
   for (const [i, entry] of menupagedata.entries()) {
-    menunavs.push(<Nav.Link onClick={() => setActiveMenuItem(entry["codename"])} className={activeMenuKey === entry["codename"] ? "menu-selected" : ""} to={"/" + entry["codename"]} eventKey={entry["codename"]} as={Link}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
+    menunavs.push(<Nav.Link onClick={() => setActiveMenuItem(entry["codename"])} className={activeDirectory === entry["codename"] ? "menu-selected" : ""} to={"/" + entry["codename"]} eventKey={entry["codename"]} as={Link}>{entry["header"]} <FontAwesomeIcon icon={faChevronRight} className="ms-2"/></Nav.Link>);
     // menupages.push(
     //   <MenuPage show_var={() => getMenuState(i)} hide_fxn={changeMenuPageState} idx={i}>
     //     <MenuPage.Header >{entry["header"]}</MenuPage.Header>
@@ -184,7 +189,7 @@ function MainWrapper({ menupagedata, menuheader }: {menupagedata:Record<string, 
             <Navbar.Brand className="ms-2">
               {/* if desired to dynamically change page title based on scroll position, start here */}
               {/* title={(availableDays.length > 0) ? availableDays[activeDayIndex] : ""} */}
-              {activeMenuKey === "dataset" &&
+              {activeDirectory === "dataset" && rendered_days.length > 0 &&
               <NavDropdown title={selectedDay} id="day-dropdown-widget">
                 { rendered_days }
                 <NavDropdown.Item className={selectedDay === "All Days" ? "newtimes-filler" : ""} onClick={() => {setSelectedDay("All Days")}}>All Days</NavDropdown.Item>

@@ -1,56 +1,74 @@
 event_title,event_description,event_room,event_start_day,event_start_time,event_end_day,event_end_time,event_type,event_age_limit
-Pre-Reg Pick Up & Mixer/Social (Friday),Badge Pre-Reg Pick Up + a chance to meet and get to know fellow con-goers.,George Nakano Theatre,6/13/25,15:00,6/13/25,19:00,Convention,
-Pre-Reg and Load-In For Artists and Vendors,"Artists and Vendors, this is where setup is for you on Friday. For further details please consult your email.
+General Photoshoot,Cosplay Meetup & Photoshoot for anyone who shows up on Friday!,Pine Wind Garden,6/19/26,16:00,6/19/26,16:45,Cosplay.Photoshoot.No Badge Required,
+"Youkai Mountain Investment Opportunity (TH10 + Hatate, TH16, TH18)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
 
-**Note!** This event is meant for artist and vendors **only**, not for regular convention attendees!",Toyota Meeting Hall,6/13/25,14:00,6/13/25,19:00,Convention.Reserved,
-Doors Open (Saturday),TouhouFest's Saturday start time is 9:00AM.,Torrance Cultural Arts Center,6/14/25,9:00,6/14/25,9:00,Convention,
-Opening Ceremonies,Welcome to TouhouFest! MikoTan and several others on TouhouFest staff will start things off with a few opening remarks.,Torino Plaza,6/14/25,11:00,6/14/25,11:30,Convention,
-Neo Sanctum Performance,"Neo Sanctum, a Canadian Touhou music circle, will be hosting a small performance involving songs they've arranged. Stop by to hear some quality tunes!",Torino Plaza,6/14/25,15:00,6/14/25,16:00,Performance,
-YONA Performance,3 piece instrumental progressive metal covering Touhou songs. Heavily video game & anime inspired. Our set consists of 5 Touhou covers picked from this [metal Touhou compilation EP I released last year.](https://youtu.be/GygnB6Vb6Y4?si=aLnnRiiXu0f5FlWN),Torino Plaza,6/14/25,16:30,6/14/25,17:00,Performance,
-Gensokyo You Can! Moriya Shrine: The Gateway to Touhou Pilgrimage,"Despite Gensokyo is dangerous for humans, Touhou Pilgrimage is a great channel to safely explore many of its inspirations. Did you know Lake Suwa, home of the Moriya Trio, is an excellent introduction?
+**Main Protagonists**
+- Reimu
+- Marisa
 
-The panel will briefly cover the locale and culture that inspired the Moriya Shrine and its residents, Fandom Presences and Fanwork References.",Assembly Hall,6/14/25,10:00,6/14/25,11:30,Panels,
-Fumology 103,"A deep(ish), comedy-centric, interactive panel into everything Fumo, and the biggest one yet! You don't have to have been to 101 or 102, as we'll cover the same base material as we did there, but move into completely new territory that hasn't been covered before, with possibly some announcements? And we may or may not (will) have a giveaway too ;)
+**Touhou 10 ""Mountain of Faith""**
+- Shizuha (Midboss)
+- Minoriko
+- Hina
+- Nitori
+- Momiji (Midboss)
+- Aya
+- Sanae
+- Kanako
+- Suwako
 
-If you have something to do during the panel, you're welcome to join us any time! ",Assembly Hall,6/15/25,10:00,6/15/25,11:30,Panels,
-"""Even A Monkey Can Draw Anime Girls! How Touhou 1draw Can Improve Your Art Skills""","Does looking at pretty Touhou art make your heart yearn, wishing you could draw like that? Struggled to get started? Lost motivation? Don't worry, Jennifer Raye has been there too, and she'll show you how to fight your evil brain demons and start drawing pretty anime girls right here, right now! Simple drawing supplies will be provided, but bringing your own is recommended.",Children's Art Wing,6/14/25,13:00,6/14/25,14:30,Panels,
-Cosplay Contest Pre-Judging,"Preliminary judging for Cosplay Contest participants prior to the main event. 
+**Touhou 12.5 ""Double Spoiler""**
+- Aya
+- Hatate
 
-**Note!** Regular attendees should attend the Cosplay Contest at 1:00PM, **not** this event! Only people *participating in the Cosplay Contest* should go to this event.",Assembly Hall,6/14/25,12:00,6/14/25,13:00,Cosplay.Reserved,
-Cosplay Contest,"A amazing showcase of some *very* talented and creative Touhou cosplayers! This event breaks down as follows:
-- Seating: 1:00 PM - 1:30 PM
-- Cosplay Contest: 1:30 PM - 3:00 PM
+**Touhou 16 ""Hidden Star in Four Seasons""**
+- Cirno (Playable)
+- Aya (Playable)
+- Eternity Larva
+- Nemuno
+- Lily White (Midboss)
+- Aunn
+- Narumi
+- Satono & Mai
+- Okina
 
-CorpsDanceCrew will be giving a special performance during the Cosplay Contest's judging period!",Assembly Hall,6/14/25,13:00,6/14/25,15:00,Cosplay.Performance,
-Touhou Fan-Anime Screening,A screening of Hifuu Activity Record Episode 3 and 19th Touhou M-1 Grand Prix. Enjoy the latest releases of these beloved series with full English subtitles!,Children's Art Wing,6/14/25,17:00,6/14/25,19:00,Screening,
-Artist Alley & Vendors Open (Saturday),"Come visit Artist Alley & Vendors and purchase a variety of prints, charms, and other fanworks! 
+**Touhou 17.5 ""Gouyoku Ibun""**
+- Kanako
+- Murasa
+- Jo'on & Shion
+- Flandre
+- Okina
+- Yamame
+- Kogasa
+- Yuugi
+- Okuu
+- Kutaka
+- Yuuma
 
-**Note!** Some vendors may start selling as early as 9AM, but this depends on the individual vendor. You can reliably expect all vendors to start selling by 10AM.",Toyota Meeting Hall,6/14/25,10:00,6/14/25,10:00,Convention,
-Artist Alley & Vendors Close (Saturday),,Toyota Meeting Hall,6/14/25,18:00,6/14/25,18:00,Convention,
-TouhouFest LIVE Concert,"Get ready to SCREAM OUT when Eurobeat doujin circle **A-ONE** joins TouhouFest as part of this electrifying concert. Starring **Elementas**, **Rute**, and **Aki**, along with appearances from **Shihori** and **Miko**, the night shall be lit up with banger after banger on the stage! Itenerary below:
-- Seating: 7:00 PM - 7:30 PM
-- Shihori: 7:35 PM - 8:05 PM
-- Miko-san: 8:10 PM - 8:40 PM
-- A-ONE: 8:45 PM - 9:15 PM
-- All Performers: 9:20 PM - 9:30 PM
+**Touhou 18 ""Unconnected Marketeers""**
+- Sakuya (Playable)
+- Sanae (Playable)
+- Mike
+- Takane
+- Sannyo
+- Misumaru
+- Tsukasa
+- Megumu
+- Chimata
+- Momoyo",Pine Wind Garden,6/20/26,10:00,6/20/26,10:45,Cosplay.Photoshoot,
+"Go to hell!! (TH11, TH17, TH17.5, TH19, WaHH, FDS)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
 
-**Note:** This event will be loud! For those with sensitive hearing, it may be worthwhile to bring along some hearing protection.
-
-**Note:** By Miko's request, please do not take photos/videos of her portion of the concert.",Assembly Hall,6/14/25,19:00,6/14/25,21:30,Guest.Performance,
-Guest Meet & Greet,An opportunity to meet the very talented guests featured at the TouhouFest LIVE Concert and get autographs as desired!,Assembly Hall,6/14/25,21:30,6/14/25,23:30,Guest,
-"Cosplay Meetup: Go to hell!! (TH11, TH17, TH17.5, TH19, FDS)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
-
-**Protagonists**
+**Main Protagonists**
 - Reimu
 - Marisa
 
 **Touhou 11 ""Subterranean Animism""**
-- Alice
-- Nitori
-- Patchouli
-- Suika
-- Yukari
-- Aya
+- Alice (Shot Type)
+- Nitori (Shot Type)
+- Patchouli (Shot Type)
+- Suika (Shot Type)
+- Yukari (Shot Type)
+- Aya (Shot Type)
 - Kisume
 - Yamame
 - Parsee
@@ -60,11 +78,11 @@ Guest Meet & Greet,An opportunity to meet the very talented guests featured at t
 - Utsuho
 - Sanae
 - Koishi
-- Kanako
-- Suwako
+- Kanako (Credits)
+- Suwako (Credits)
 
 **Touhou 17 ""Wily Beast and Weakest Creature""**
-- Youmu
+- Youmu (Playable)
 - Eika
 - Urumi
 - Kutaka
@@ -106,61 +124,96 @@ Guest Meet & Greet,An opportunity to meet the very talented guests featured at t
 - Hisami
 - Zanmu
 
+
+**Wild and Horned Hermit** (Manga)
+- Kasen
+- Kasen's Arm
+- Tenshi
+
 **Foul Detective Satori** (Manga)
+- Mizuchi
+- Other Characters",Pine Wind Garden,6/20/26,11:00,6/20/26,11:45,Cosplay.Photoshoot,
+"Flowering Spring (TH7, TH9, Ground Fighters (TH7.5, TH 10.5, TH12.3))","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+
+**Main Protagonists**
 - Reimu
-- Patchouli
 - Marisa
-- Sakuya
-- Meiling
-- Orin
-- Remilia
-- Satori
-- Flandre
+
+**Touhou 7 ""Perfect Cherry Blossom""** 
+- Sakuya (Playable)
+- Cirno (Midboss)
+- Letty
+- Chen
+- Alice
+- Lily White (Midboss)
+- Primsriver Sisters (Lunasa, Merlin & Lyrica)
 - Youmu
 - Yuyuko
-- Yukari
 - Ran
-- Chen
-- Mizuchi
+- Yukari
+
+**Touhou 9 ""Phantasmagoria of Flower View""**
+- Sakuya
+- Cirno
+- Reisen
+- Youmu
+- Prismriver Sisters
+- Mystia
+- Tewi
 - Aya
+- Medicine
+- Yuuka
+- Komachi
+- Eiki
+
+**Touhou 7.5 ""Immaterial and Missing Power"" / Touhou 10.5 ""Scarlet Weather Rhapsody"" / Touhou 12.3 ""Hisoutensoku""**
+- Sakuya
+- Alice
+- Patchouli
+- Youmu
+- Remilia
+- Yuyuko
+- Yukari
+- Reisen
+- Suika
+- Aya
+- Komachi
+- Iku
+- Tenshi
 - Sanae
-- Kanako
-- Nitori
+- Cirno
+- Meiling
+- Alice
+- Patchouli
+- Okuu
 - Suwako
-- Hina
-- Hatate
-- Kyouko
-- Shou
-- Nazrin
-- Ichirin
-- Byakuren
-- Kogasa
-- Yuugi",Pine Wind Garden,6/14/25,10:00,6/14/25,11:00,Cosplay.Photoshoot,
-"Cosplay Meetup: Lunar Landing in the Bamboo Forest (TH08, TH14, TH15, SSiB, FS, LE)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+- Hisoutensoku
+- Goliath Doll",Pine Wind Garden,6/20/26,12:00,6/20/26,12:45,Cosplay.Photoshoot,
+"Lunarians Ruin Everything! (TH8, TH15, TH20, SSiB)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
 
 **Main Protagonists**
 - Reimu
 - Marisa
 
 **Touhou 8 ""Imperishable Night""**
-- Yukari
-- Alice
-- Remilia
-- Sakuya
-- Yuyuko
-- Youmu
+- Yukari (Playable)
+- Alice (Playable)
+- Remilia (Playable)
+- Sakuya (Playable)
+- Yuyuko (Playable)
+- Youmu (Playable)
 - Wriggle
 - Mystia
 - Keine
-- Tewi
+- Tewi (Midboss)
 - Reisen
 - Eirin
 - Kaguya
 - Mokou
 
 **Touhou 15 ""Legacy of Lunatic Kingdom""**
-- Sanae
-- Reisen
+- Sanae (Playable)
+- Reisen (Playable)
 - Seiran
 - Ringo
 - Doremy
@@ -169,8 +222,49 @@ Guest Meet & Greet,An opportunity to meet the very talented guests featured at t
 - Junko
 - Hecatia
 
-**Touhou 14 ""Double Dealing Character""**
+**Touhou 20 ""Fossilized Wonders""**
+- Ubame
+- Chimi
+- Nareko
+- Yuiman
+- Toyohime
+- Ariya
+- Nina
+
+
+**Silent Sinner in Blue** (Manga)
+- Toyohime
+- Yorihime
+- Ran
+- Yukari
+- Youmu
+- Yuyuko
+- Kaguya
+- Eirin
+- Remilia
+- Sakuya
+- Patchouli
+- Rinnosuke",Pine Wind Garden,6/20/26,13:00,6/20/26,13:45,Cosplay.Photoshoot,
+"Vampires Vs Werewolves (TH6, TH14, Koumajou Densetsu: Scarlet Symphony)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+
+**Main Protagonists**
+- Reimu
+- Marisa
+
+**Touhou 6 ""Embodiment of Scarlet Devil""**
+- Rumia
+- Daiyousei (Midboss)
 - Cirno
+- Meiling
+- Koakuma (Midboss)
+- Patchouli
+- Sakuya
+- Remilia
+- Flandre
+- Rin Satsuki (Cut Character)
+
+**Touhou 14 ""Double Dealing Character""**
+- Cirno (Midboss)
 - Wakasagahime
 - Sekibanki
 - Kagerou
@@ -182,79 +276,13 @@ Guest Meet & Greet,An opportunity to meet the very talented guests featured at t
 - Hecatia
 - Raiko
 
-**Silent Sinner in Blue**
-- Yukari
-- Reisen
-- Tewi
-- Kaguya
-- Eirin
-- Ran
-- Remilia
-- Sakuya
-- Patchouli
-- Rinnosuke
-- Youmu
-- Yuyuko
-- Toyohime
-- Yorihime
-- Aya
-
-**Forbidden Scrollery**
-- Kosuzu
-- Akyuu
-- Sakuya
-- Mamizou
-- Remilia
-- Kokoro
-- Shinmyoumaru
-- Nitori
-- Reisen
-- Sanae
-- Rinnosuke
-- Nue
-- Aya
-- Byakuren
-- Yukari
-- Fortune Teller (RIP 😭)
-
-**Lotus Eaters**
-- Suika
-- Miyoi
-- Sakuya
-- Youmu
-- Mamizou
-- Aya
-- Komachi
-- Kanako
-- Sanae
-- Byakuren
-- Nitori
-- Okina
-- Sannyo
-- Yuugi
-- Chimata
-- Megumu
-- Rin
-- Miko
-- Futo
-- Son Biten
-- Joon",Pine Wind Garden,6/14/25,16:30,6/14/25,17:30,Cosplay.Photoshoot,
-"Cosplay Meetup: The Faithful Gods (TH10, TH12, 12.5, TH13, TH16, TH18, TH20)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters:
+**Touhouvania / Koumanjou Densetsu 1 & 2**
+- All costumes and designs featured",Pine Wind Garden,6/20/26,14:00,6/20/26,14:45,Cosplay.Photoshoot,
+"Religious Rivalries (TH12, TH13, Floating Fighters (TH13.5, TH 14.5, TH15.5)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
 
 **Main Protagonists**
 - Reimu
 - Marisa
-
-**Touhou 10 ""Mountain of Faith""**
-- Shizuha
-- Minoriko
-- Hina
-- Nitori
-- Momiji
-- Aya
-- Sanae
-- Kanako
-- Suwako
 
 **Touhou 12 ""Undefined Fantastic Object""**
 - Sanae
@@ -265,37 +293,6 @@ Guest Meet & Greet,An opportunity to meet the very talented guests featured at t
 - Shou
 - Byakuren
 - Nue
-
-**Touhou 12.5 ""Double Spoiler""**
-- Aya
-- Hatate
-- Aki
-- Parsee
-- Yamame
-- Nitori
-- Ichirin
-- Yuugi
-- Shou
-- Rin
-- Satori
-- Tenshi
-- Kanako
-- Byakuren
-- Reimu
-- Shizuha
-- Hina
-- Kogasa
-- Momiji
-- Murasa
-- Suika
-- Nazrin
-- Utsuho
-- Iku
-- Suwako
-- Nue
-- Marisa
-- Kitsume
-- Sanae
 
 **Touhou 13 ""Ten Desires""**
 - Sanae
@@ -311,57 +308,164 @@ Guest Meet & Greet,An opportunity to meet the very talented guests featured at t
 - Nue
 - Mamizou
 
-**Touhou 16 ""Hidden Star in Four Seasons""**
+**Touhou 13.5 ""Hopeless Masquerade"" / Touhou 14.5 ""Urban Legend in Limbo"" / Touhou 15.5 ""Antimony of Common Flowers""**
+- Ichiran & Unzan
+- Byakuren
+- Futo
+- Miko
+- Nitori
+- Koishi
+- Mamizou
+- Kokoro
+- Mokou
+- Kasen
+- Sukuna
+- Sumireko
+- Reisen
+- Doremy
+- Tenshi
+- Yukari
+- Jo'on
+- Shion",Pine Wind Garden,6/20/26,17:15,6/20/26,17:40,Cosplay.Photoshoot,
+Hag Retirement Home,"Cosplay Meetup & Photoshoot for those older characters who need a little help getting around. It's Bingo night in gensokyo!
+
+**Ancient Hags:**
+- Mima (TH1)
+
+**Classic Hags:**
+- Yukari (TH7)
+- Yuyuko (TH7)
+
+**Lunar Hags:**
+- Eirin (TH8)
+- Kaguya (TH8)
+- Toyohime / Yorihime (SSiB)
+
+**Religious Hags:**
+- Kanako (TH10)
+- Byakuren (TH12)
+- Seiga (TH13)
+
+**Hags of Questionable Moral Character:**
+- Yachie (TH17)
+- Saki (TH17)
+- Yuuma (TH17.5)
+- Sanyo (TH18)
+- Hisami (TH19)
+
+**Mountain Hags:**
+- Nemuno (TH16)
+- Ubame (TH20)
+
+**Other Hags:**
+- Iku (TH10.5)
+- Okina (TH16)
+- Mitsumaru (TH18)
+
+**Retirement Home Staff:**
+- Ran Yakumo (Yukari)
+- Youmu (Yuyuko)
+- Tewi / Reisen (Eirin / Kaguya)
+- Reisen 2 (Yorihime / Toyohime)
+- Sanae (Kanako)",Pine Wind Garden,6/21/26,10:30,6/21/26,10:55,Cosplay.Photoshoot,
+Animal / Beast Youkai,"Cosplay Meetup & Photoshoot for all the animals of Gensokyo! Fish and Bugs welcome!
+
+**Cats:**
+- Chen (TH7)
+- Rin (TH11)
+- Shou (TH12)
+- Mike (TH18)
+
+**Dogs / Foxes:**
+- Ran (TH7)
+- Momiji (TH10)
+- Kyouko (TH13)
+- Kagerou (TH14)
+- Aunn (TH16)
+- Tsukasa (TH18)
+- Enoko (TH19)
+
+**Rabbits:**
+- Tewi (TH8)
+- Reisen (TH8)
+- Seiran (TH15)
+- Ringo (TH15)
+- Reisen 2 (SSiB)
+
+**Birds:**
+- Mystia (TH8)
+- Aya (TH9)
+- Okuu (TH11)
+- Hatate (TH12.5)
+- Kutaka (TH17)
+- Megumu (TH18)
+- Tokiko (CoLA)
+
+**Bugs:**
+- Wriggle (TH8)
+- Yamame (TH11)
+- Eternity (TH16)
+- Momoyo (TH18)
+
+**Fish:**
+- Iku (TH10.5)
+- Giant Catfish (TH12.3)
+- Wakasagihime (TH14)
+- Eika (TH17)
+
+**Cryptids:**
+- Nue (TH12)
+- Chiyari (TH19)
+- Chimi (TH20)
+
+**Other:**
+- Suwako (TH10)
+- Nazrin (TH12)
+- Mamizou (TH13)
+- Urumi (TH17)
+- Yachie (TH17)
+- Saki (TH17)
+- Yuuma (TH17.5)
+- Biten (TH19)
+
+**Animal-related:**
+- Kasen (WaHH)",Pine Wind Garden,6/21/26,11:00,6/21/26,11:25,Cosplay.Photoshoot,
+Touhou Lolita Tea Party,Cosplay Meetup & Photoshoot for Touhou cosplayers in Lolita-inspired designs! (Note: We do not actually have tea!),Pine Wind Garden,6/21/26,11:30,6/21/26,11:55,Cosplay.Photoshoot,
+"Faires & The Human Village (GFW, 3F, CoLA, LE, FS, Music CDs)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+
+**Fairies (Great Fairy Wars / Three Fairies Manga)**
 - Cirno
-- Aya
+- Daiyousei
+- Lily White / Lily Black
+- Sunny Milk / Star Sapphie / Luna Child
+- Clownpiece
 - Eternity Larva
-- Nemuno
-- Lily White
-- Aunn
-- Narumi
-- Satono & Mai
-- Okina
+- Any ""Generic"" Fairies!
 
-**Touhou 18 ""Unconnected Marketeers""**
-- Sakuya
-- Sanae
-- Mike
-- Takane
-- Sannyo
-- Misumaru
-- Tsukasa
-- Megumu
-- Chimata
-- Momoyo
+**Fairy Opposition**
+- Marisa (Great Fairy Wars)
+- Reimu (Three Fairies Manga)
+- Okina (Three Fairies Manga)
 
-**Touhou 20 ""Fossilized Wonders""**
-- Ubame
-- Chimi
-- Nareko (Michigan)",Pine Wind Garden,6/14/25,17:30,6/14/25,18:30,Cosplay.Photoshoot,
-Fumo Meet Up,Interested in getting to know other Fumo owners at the con? Stop by this fumo small gathering/photoshoot!,Pine Wind Garden,6/14/25,15:30,6/14/25,16:30,Photoshoot,
-Heart of the Hijack: Why Are There So Many Touhou Hijacks?,"Touhou hijacks have long been a core part of the Touhou experience, but how and why do they keep on happening? Self-proclaimed Touhou hijackologist Delta Pie, operator of the Touhou Hijack Archive on Twitter and BlueSky, explores the stories behind popular and not-so-popular Touhou hijacks to try to make sense of how Touhou keeps getting into the most bizarre places.",Children's Art Wing,6/14/25,10:00,6/14/25,11:00,Panels,
-The Soku Rundown,"Touhoufest, EVO, Frosty Faustings, and CEOtaku champion DaBomb presents his quick fix, lightning fast guide to learning Touhou 12.3: Hisoutensoku. Join to learn a unique way to enjoy the series through fighting games. All skill levels in fighting games are welcome. Learn the ropes, pick a character, get some ideas, and then get out there to have fun and have Soku.",Children's Art Wing,6/14/25,11:30,6/14/25,12:30,Panels,
-Designing and Creating Touhou Cosplays that Fit YOUR Needs!,"Interested in Touhou cosplay but don’t know where to start? Can’t find a character that suits your body-type or would feel comfortable to cosplay? Want to rep your favorite character but don’t feel comfortable in feminine clothing? Come and join us! We will cover everything from closet cosplays to designing and creating your own cosplay from scratch! In addition, we will give a lot of different designs and cosplay ideas so you can have a Touhou cosplay you love, no matter your level of experience!",Children's Art Wing,6/14/25,15:00,6/14/25,16:30,Panels,
-Writing a Touhou Book (The Sumireko Chronicle) with Megapig9001,"Writer Megapig9001 details how he ended up writing a Touhou Fiction Novella for TouhouFest 2025. Megapig will detail how the idea of the book came to be, the hurdles of getting the book made, and different experimental ideas the book employs. Megapig will also offer advice to fellow Touhou Writers.",Children's Art Wing,6/15/25,15:00,6/15/25,16:00,Panels,
-Maid Academy Performance,"Maid Academy Cafe, a local Maid & Butler cafe located in Orange County, will be hosting a small performance involving a variety of popular songs. For more information about the group [check out their Instagram](https://www.instagram.com/maidacademycafe/).",Torino Plaza,6/15/25,10:00,6/15/26,11:00,Performance,
-TAMUSIC Performance,"Here comes a returning guest of honor, TAMUSIC!!!! He'll be performing with us again this year at TouhouFest 2025 with his signature violin!",Torino Plaza,6/15/25,12:30,6/15/26,14:30,Guest.Performance,
-TAM Signing/Meet and Greet,An opportunity to meet + get to know TAM himself and get autographs as desired!,Torino Plaza,6/15/25,14:30,6/15/26,15:30,Guest,
-Closing Ceremonies,Thank you all for attending TouhouFest 2025! MikoTan and others on staff will give a few closing remarks.,Torino Plaza,6/15/25,17:30,6/15/26,18:00,Convention,
-Doors Close (Saturday),TouhouFest closes for the night. We'll see you again Sunday at 9:00 AM!,Torrance Cultural Arts Center,6/14/25,23:00,6/14/25,23:00,Convention,
-Doors Open (Sunday),TouhouFest's Sunday start time is 9:00AM.,Torrance Cultural Arts Center,6/15/25,9:00,6/15/26,9:00,Convention,
-Doors Close (Sunday),TouhouFest closes shop on Sunday at 6:00 PM. See you all next year!,Torrance Cultural Arts Center,6/15/25,18:00,6/15/26,18:00,Convention,
-TOUHOU WRESTLING!,"Paradarx and his announcers are back with Touhou Wrestling! This time, there will be more epic matches with characters created with the latest WWE 2K24 game! Who will come out on top as the champion this year? Forget everything about Spell Card rules, Brother! Your in it for the EXTREME! OOH YEEEAH!",Assembly Hall,6/15/25,12:00,6/15/26,13:30,Panels,
-TouhouFest LIVE Day 2,"Didn't have enough of A-ONE and Miko yesterday? Have no fear, because they'll be performing *again* outside in the Torino Plaza! Join us for a few riveting tunes and some meet and greet time afterwards.
+**Human Village (Curosities of Lotus Asia, Forbidden Scrollery, Lotus Eaters)**
+- Keine (Common Side Character)
+- Sakuya (Common Side Character)
+- Youmu (Common Side Character)
+- Rinnosuke (CoLA)
+- Sumireko (CoLA)
+- Akyuu (FS)
+- Kosuzu (FS)
+- Mamizou (FS)
+- Kokoro (FS)
+- Fortune Teller (FS)
+- Miyoi (LE)
+- Suika (LE)
 
-**Note:** This event will be loud! For those with sensitive hearing, it may be worthwhile to bring along some hearing protection.
-
-**Note:** By Miko's request, please do not take photos/videos of her portion of this event.",Torino Plaza,6/15/25,16:00,6/15/26,16:30,Guest.Performance,
-A-ONE / Miko Meet & Greet,An opportunity to meet the very talented guests featured at the TouhouFest LIVE Concert and get autographs as desired!,Torino Plaza,6/15/25,16:30,6/15/25,17:30,Guest,
-Artist Alley & Vendors Open (Sunday),"Come visit Artist Alley & Vendors and purchase a variety of prints, charms, and other fanworks! 
-
-**Note!** Some vendors may start selling as early as 9AM, but this depends on the individual vendor. You can reliably expect all vendors to start selling by 10AM.",Toyota Meeting Hall,6/15/25,10:00,6/15/25,10:00,Convention,
-Artist Alley & Vendors Close (Sunday),,Toyota Meeting Hall,6/15/25,17:00,6/15/25,17:00,Convention,
-Cosplay Meetup: PC-98 (TH01 ~ TH05),"Cosplay Meetup & Photoshoot for any characters from the Touhou PC-98 games.
+**Music CDs**
+- Maribel
+- Renko
+",Pine Wind Garden,6/21/26,12:00,6/21/26,12:25,Cosplay.Photoshoot,
+PC-98,"Cosplay Meetup & Photoshoot for any characters from the Touhou PC-98 games.
 
 **Main Protagonists**
 - Reimu
@@ -400,8 +504,8 @@ Cosplay Meetup: PC-98 (TH01 ~ TH05),"Cosplay Meetup & Photoshoot for any charact
 - Gengetsu
 
 **Touhou 5 ""Mystic Square""**
-- Mima
-- Yuuka
+- Mima (Playable)
+- Yuuka (Playable)
 - Wheel Demon
 - Sara
 - Louise
@@ -411,27 +515,66 @@ Cosplay Meetup: PC-98 (TH01 ~ TH05),"Cosplay Meetup & Photoshoot for any charact
 - Mai
 - Ayano
 - Yumeko
-- Shinki",Pine Wind Garden,6/15/25,10:30,6/15/25,11:00,Cosplay.Photoshoot,
-"Cosplay Meetup: Fighting Games (TH7.5, TH10.5, TH12.3, TH13.5, TH14.5, TH15.5)","Cosplay Meetup & Photoshoot for cosplayers from any of the fighting games and characters.
-
-**Note!** Background characters are not included on *this* list, but may make appearances at game-specific shoots at the cosplay organizer's discretion.
+- Shinki
+",Pine Wind Garden,6/21/26,12:30,6/21/26,12:55,Cosplay.Photoshoot,
+Military Touhou,Cosplay Meetup & Photoshoot for Touhou cosplayers in Military-inspired designs!,Pine Wind Garden,6/21/26,13:00,6/21/26,13:20,Cosplay.Photoshoot,
+Fumo Meetup,"Fumos, Nesoberies, and other plushies",Pine Wind Garden,6/21/26,13:30,6/21/26,14:30,Photoshoot,
+"Phantasmagoria Games (TH3, TH9, TH19)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
 
 **Main Protagonists**
 - Reimu
 - Marisa
 
-**Touhou 7.5 ""Immaterial and Missing Power""**
-- Sakuya
-- Alice
-- Patchouli
-- Youmu
-- Remilia
-- Yuyuko
-- Yukari
-- Suika
-- Meiling
+**Touhou 3 ""Phantasmagoria of Dimensional Dream""**
+- Mima
+- Ellen
+- Kana
+- Kotohime
+- Rikako
+- Yumemi
+- Ruukoto
+- Mimi-chan
 
-**Touhou 10.5 ""Scarlet Weather Rhapsody""**
+
+**Touhou 9 ""Phantasmagoria of Flower View""**
+- Sakuya
+- Cirno
+- Reisen
+- Youmu
+- Prismriver Sisters
+- Mystia
+- Tewi
+- Aya
+- Medicine
+- Yuuka
+- Komachi
+- Eiki
+
+**Touhou 19 ""Unfinished Dream of All Living Ghost""**
+- Sanae
+- Ran
+- Aunn
+- Nazrin
+- Seiran
+- Rin
+- Tsukasa
+- Mamizou
+- Yachie
+- Saki
+- Yuuma
+- Suika
+- Son Biten
+- Enoko
+- Chiyari
+- Hisami
+- Zanmu",Pine Wind Garden,6/21/26,15:00,6/21/26,15:25,Cosplay.Photoshoot,
+"Fighting Games (TH7.5, TH12.5, TH10.3, TH13.5, TH14.5, TH15.5)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+
+**Main Protagonists**
+- Reimu
+- Marisa
+
+**Touhou 7.5 ""Immaterial and Missing Power"" / Touhou 10.5 ""Scarlet Weather Rhapsody"" / Touhou 12.3 ""Hisoutensoku""**
 - Sakuya
 - Alice
 - Patchouli
@@ -445,10 +588,6 @@ Cosplay Meetup: PC-98 (TH01 ~ TH05),"Cosplay Meetup & Photoshoot for any charact
 - Komachi
 - Iku
 - Tenshi
-
-**Touhou 12.3 ""Hisoutensoku""**
-
-**Note!** all characters from Touhou 10.5 are also included here!
 - Sanae
 - Cirno
 - Meiling
@@ -459,32 +598,7 @@ Cosplay Meetup: PC-98 (TH01 ~ TH05),"Cosplay Meetup & Photoshoot for any charact
 - Hisoutensoku
 - Goliath Doll
 
-**Touhou 13.5 ""Hopeless Masquerade""**
-- Ichirn & Unzan
-- Byakuren
-- Futo
-- Miko
-- Nitori
-- Koishi
-- Mamizou
-- Kokoro
-
-**Touhou 14.5 ""Urban Legend in Limbo""**
-- Ichiran & Unzan
-- Byakuren
-- Futo
-- Miko
-- Nitori
-- Koishi
-- Mamizou
-- Kokoro
-- Mokou
-- Kasen
-- Sukuna
-- Sumireko
-- Reisen
-
-**Touhou 15.5 ""Antimony of Common Flowers""**
+**Touhou 13.5 ""Hopeless Masquerade"" / Touhou 14.5 ""Urban Legend in Limbo"" / Touhou 15.5 ""Antimony of Common Flowers""**
 - Ichiran & Unzan
 - Byakuren
 - Futo
@@ -502,113 +616,173 @@ Cosplay Meetup: PC-98 (TH01 ~ TH05),"Cosplay Meetup & Photoshoot for any charact
 - Tenshi
 - Yukari
 - Jo'on
-- Shion",Pine Wind Garden,6/14/25,11:30,6/14/25,12:30,Cosplay.Photoshoot,
-"Cosplay Meetup: The Devil's Mansion (TH06, Touhouvania 1 & 2, TH12.8)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+- Shion",Pine Wind Garden,6/21/26,15:30,6/21/26,15:55,Cosplay.Photoshoot,
+Solo Photo Studio,"Interested in getting a set of high-quality solo portrait shots of your Touhou cosplay? Come over to our Solo Photo Studio, where one of our talented cosplay photographers will be able to help!
 
-**Touhou 6 ""Embodiment of Scarlet Devil""**
-- Reimu
-- Marisa
-- Rumia
-- Daiyousei
-- Cirno
-- Meiling
-- Koakuma
-- Patchouli
-- Sakuya
-- Remilia
-- Flandre
-- Rin Satsuki
+**Note!** Walk-ins are allowed for all Solo Photo Studio timeslots, but attendees are highly encouraged to make a reservation in advance; attendees with reservations will be prioritized. Please use the below reservations link to get signed up: 
 
-**Touhouvania / Koumanjou Densetsu 1 & 2**
-- All costumes and designs featured
+## [Solo Photo Studio Reservation Link](https://docs.google.com/forms/d/e/1FAIpQLSeHDJysSUF2EAMwTfGfQ0PQuyUIjpfs7pNtsPk3drzmI5BsFg/viewform)",Drawing & Painting Studio,6/20/26,18:00,6/20/26,19:45,Cosplay.Photoshoot,
+Solo Photo Studio,"Interested in getting a set of high-quality solo portrait shots of your Touhou cosplay? Come over to our Solo Photo Studio, where one of our talented cosplay photographers will be able to help!
 
-**Touhou 12.8 ""Great Fairy Wars""**
-- Lily White & Lily Black
-- Daiyousei
-- Star Sapphire
-- Luna Child
-- Sunny Milk
-- Marisa",Pine Wind Garden,6/15/25,11:00,6/15/25,12:00,Cosplay.Photoshoot,
-Fangames Photoshoot,A meetup for any fan characters or designs from unofficial/spinoff content!,Pine Wind Garden,6/15/25,12:00,6/15/25,12:30,Cosplay.Photoshoot,
-A World Connecting Unreality,"What happens when Touhou inspires bright minds to make derivative and original stories following Touhou's format? Look no further to A World Connecting Unreality! Here, the panelists will introduce one of these examples, Len'en Project and go over Touhou inspirations in its works.",Children's Art Wing,6/15/25,10:00,6/15/25,11:00,Panels,
-"Western Touhou Fandom: Past, Present, and Future","The western Touhou community has existed for over 20 years. Now spanning multiple generations, this community has developed it's own unique and rich history. Join us for a retrospective of the past, an evaluation of the present, and preparation for the future!",Children's Art Wing,6/15/25,11:30,6/15/25,13:00,Panels,
-The Wondrous World of Sukusuku Hakutaku,"A panel discussing the Sukusuku plushies, their history, and many of the various derivative works that expand on their lore",Assembly Hall,6/15/25,14:30,6/15/25,16:00,Panels,
-Touhou Five on Overdrive!,"No one knows anything about the Touhou 5, so let's five that! Mystic Square is arguably one of the GREATEST Touhou games ever made; you deserve to learn about how to play and appreciate what it did for the franchise.",Children's Art Wing,6/15/25,16:30,6/15/25,17:30,Panels,
-Bakkun DJ Set,,Torino Plaza,6/14/25,12:00,6/14/25,13:00,DJ,
-AfterGlow DJ Set,,Torino Plaza,6/14/25,13:30,6/14/25,14:30,DJ,
-Badge Registration & Pre-Reg Pickup Opens (Saturday),,George Nakano Theatre,6/14/25,9:00,6/14/25,9:00,Convention,
-Badge Registration & Pre-Reg Pickup Closes (Saturday),,George Nakano Theatre,6/14/25,17:00,6/14/25,17:00,Convention,
-Badge Registration & Pre-Reg Pickup Opens (Sunday),,George Nakano Theatre,6/15/25,9:00,6/15/25,9:00,Convention,
-Badge Registration & Pre-Reg Pickup Closes (Sunday),,George Nakano Theatre,6/15/25,15:00,6/15/25,15:00,Convention,
-Industry Guest Q&A Session,"Several of our esteemed Industry Guests (including Hojo-san, Suzukann, and more!) will be holding a special Q&A session. If you're curious about Reitaisai, Touhou circles, and the doujin scene writ large, feel free to stop by!
+**Note!** Walk-ins are allowed for all Solo Photo Studio timeslots, but attendees are highly encouraged to make a reservation in advance; attendees with reservations will be prioritized. Please use the below reservations link to get signed up: 
 
-**Note!** By request of the guests, attendee video and photography is prohibited.",Assembly Hall,6/15/25,16:30,6/15/25,17:30,Guest.Panels,
-Queer Gensokyo: Touhou through a Queer Lens,"This panel is about the queer characters and identities which exist in Gensokyo and in the wider Touhou Project. It consists of a brief overview of what a queer lens is, before applying that lens to several characters and to the setting of Gensokyo. Audience participation is encouraged, but this is NOT a panel to debate the validity of identity and queerness. ",Children's Art Wing,6/15/25,13:30,6/15/25,14:30,Panels,
-"Cosplay Meetup: Melodies in the Netherworld (TH07, TH09, Hifuu Club)","Cosplay Meetup & Photoshoot for cosplayers from the below games and characters: 
+## [Solo Photo Studio Reservation Link](https://docs.google.com/forms/d/e/1FAIpQLSeHDJysSUF2EAMwTfGfQ0PQuyUIjpfs7pNtsPk3drzmI5BsFg/viewform)",Drawing & Painting Studio,6/21/26,9:00,6/21/26,10:30,Cosplay.Photoshoot,
+Cosplay Contest Pre-Judging,"Preliminary judging for Cosplay Contest participants prior to the main event. Only applicable to those who filled out the craftsmanship form for the cosplay competition.
 
-**Touhou 7 ""Perfect Cherry Blossom""** 
-- Reimu
-- Marisa
-- Sakuya
-- Cirno
-- Letty
-- Chen
-- Alice
-- Lily White
-- Primsriver Sisters (Lunasa, Merlin & Lyrica)
-- Youmu
-- Yuyuko
-- Ran
-- Yukari
+**Note!** Regular attendees should attend the Cosplay Contest at 3:00PM, not this event! Only people participating in the Cosplay Contest should go to this event.",Drawing & Painting Studio,6/20/26,10:00,6/20/26,11:30,Cosplay.Reserved,
+Cosplay Contest,"A amazing showcase of some *very* talented and creative Touhou cosplayers! This event breaks down as follows:
+- Seating: 2:45 PM - 3:00 PM
+- Cosplay Contest: 3:00 PM - 5:00 PM",Torino Plaza,6/20/26,15:00,6/20/26,17:00,Cosplay.Performance,
+Gaming Hall Free Play Opens (Saturday),"Free play of all the official Touhou games, arcade games, and Touhou fan games starts up at this time!",George Nakano Theatre,6/20/26,9:00,6/20/26,9:30,Gaming,
+Gaming Hall Free Play Closed (Saturday),"Free play will be closing up shop at this time, see you next time!",George Nakano Theatre,6/20/26,21:00,6/20/26,21:00,Gaming,
+Gaming Hall Free Play Opens (Sunday),"Free play of all the official Touhou games, arcade games, and Touhou fan games starts up at this time!",George Nakano Theatre,6/21/26,9:00,6/21/26,9:00,Gaming,
+Gaming Hall Free Play Closes (Sunday),"Free play will be closing up shop at this time, see you next time!",George Nakano Theatre,6/21/26,17:00,6/21/26,17:00,Gaming,
+Check-In for Tournaments Wave A,Check-Ins for this Tournament Wave will take place at this timeslot; please head to the George Nakano Theatre,George Nakano Theatre,6/20/26,9:30,6/20/26,10:00,Gaming.Con Ops,
+Check-In for Tournaments Wave B,Check-Ins for this Tournament Wave will take place at this timeslot; please head to the George Nakano Theatre,George Nakano Theatre,6/20/26,11:30,6/20/26,12:00,Gaming.Con Ops,
+Check-In for Tournaments Wave C,Check-Ins for this Tournament Wave will take place at this timeslot; please head to the George Nakano Theatre,George Nakano Theatre,6/20/26,13:30,6/20/26,14:00,Gaming.Con Ops,
+Tournaments: Wave A,"Pools/Brackets for Hisou (Pool 1) + PoFV (Pool 1). See below for direct start.gg links:
+- [Hisou (Pool 1)](https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2/brackets/2240811/3249110)
+- [PoFV (Pool 2)](https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv/brackets/2240818/3249118)",George Nakano Theatre,6/20/26,10:00,6/20/26,12:00,Gaming,
+Tournaments: Wave B,"Pools/Brackets for Rivals (Pool 1) + PoFV (Pool 2). See below for direct start.gg links:
+- [Rivals (Pool 1)](https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1/brackets/2240814/3249113)
+- [PoFV (Pool 2)](https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv/brackets/2240818/3249119)",George Nakano Theatre,6/20/26,12:00,6/20/26,14:00,Gaming,
+Tournaments: Wave C,"Pools/Brackets for Rivals (Pool 2) + Hisou (Pool 2). See below for direct start.gg links:
+- [Rivals (Pool 2)](https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1/brackets/2240814/3249114)
+- [Hisou (Pool 2)](https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2/brackets/2240811/3249109)",George Nakano Theatre,6/20/26,14:00,6/20/26,16:00,Gaming,
+Tournaments: Top 4 PoFV,"Pools/Brackets for Top 4 PoFV. See below for direct start.gg link:
+- [Top 4 PoFV](https://www.start.gg/tournament/touhoufest-2026/event/touhou-9-pofv/brackets/2240819/3249120)",George Nakano Theatre,6/20/26,15:00,6/20/26,18:00,Gaming,
+"Tournaments: Top 4 Rivals
+","Pools/Brackets for Top 4 Rivals. See below for direct start.gg link:
+- [Rivals Top 4](https://www.start.gg/tournament/touhoufest-2026/event/touhou-rivals-workshop-1v1/brackets/2240815/3249115)",George Nakano Theatre,6/20/26,17:00,6/20/26,19:00,Gaming,
+Tournaments: Top 4 Hisoutensoku,"Pools/Brackets for Top 4 Soku. See below for direct start.gg link:
+- [Soku Top 4](https://www.start.gg/tournament/touhoufest-2026/event/touhou-12-3-hisoutensoku-soku-2/brackets/2240812/3249111)",George Nakano Theatre,6/20/26,19:00,6/20/26,21:00,Gaming,
+Check-In for AoCF Tournament Bracket,Check-Ins for this Tournament Bracket will take place at this timeslot; please head to the George Nakano Theatre,George Nakano Theatre,6/21/26,9:30,6/21/26,10:00,Gaming.Con Ops,
+Check-In for UDoALG Tournament Bracket,Check-Ins for this Tournament Bracket will take place at this timeslot; please head to the George Nakano Theatre,George Nakano Theatre,6/21/26,11:30,6/21/26,12:00,Gaming.Con Ops,
+Check-In for Fractured Transience Tournament Bracket,Check-Ins for this Tournament Bracket will take place at this timeslot; please head to the George Nakano Theatre,George Nakano Theatre,6/21/26,13:30,6/21/26,14:00,Gaming.Con Ops,
+Tournaments: AoCF,"Pools/Brackets for all of AoCF. See below for direct start.gg link:
+- [AoCF Bracket](https://www.start.gg/tournament/touhoufest-2026/event/touhou-15-5-aocf/brackets/2240813/3249112)",George Nakano Theatre,6/21/26,10:00,6/21/26,13:00,Gaming,
+Tournaments: UDoALG,"Pools/Brackets for all of UDoALG. See below for direct start.gg link:
+- [UDoALG](https://www.start.gg/tournament/touhoufest-2026/event/touhou-19-udoalg-balance-patch-1-10c/brackets/2240816/3249116)",George Nakano Theatre,6/21/26,12:00,6/21/26,15:00,Gaming,
+Tournaments: Fractured Transience,"Pools/Brackets for all of Fractured Transience. See below for direct start.gg link:
+- [Fractured Transience](https://www.start.gg/tournament/touhoufest-2026/event/touhou-fractured-transience/brackets/2240817/3249117)",George Nakano Theatre,6/21/26,14:00,6/21/26,17:00,Gaming,
+Tactical Touhou: A Look at Military-themed Touhou Works,"The juxtaposition of cute girls doing not-so-cute things has long been a troupe in the Otaku community, and “Girls with Guns” has long been a very popular subgenre in the space. Touhou, with its normally care-free and cutesy setting, has historically been a very popular platform for showing off this contrast, with a huge variety of militarized depictions of its characters and setting. In this panel, we will cover fanart, doujins, fangames, and cosplays of “kitted-out” Touhou characters throughout the years, along with some of the canon references in official works to armed conflict.",Drawing and Painting Studio,6/19/26,16:30,6/19/26,17:15,Panels.No Badge Required,
+The Art of Danmaku: The Basics of Touhou Game Mechanics and Elegant Danmaku Patterns,"Have you ever been at awe of the danmaku patterns in your favourite Touhou games which are visually complex yet simple in elegance? Even more, have you always wanted to make a Touhou game of your own, yet felt completely lost on where even to begin? Here, we'll explore the process of making a Touhou game and the most important part, how to construct bosses and danmaku patterns. While programming will be demonstrated, we will do our best to illustrate and describe concepts as simply as possible using at most high school mathematics.",Drawing and Painting Studio,6/19/26,17:30,6/19/26,18:45,Panels.No Badge Required,
+"Gensokyo Geography 101: or How I Learned to Stop Worrying and Love Speculation
+","Despite Gensokyo is dangerous for humans, we can safely explore many of its inspirations through Touhou Pilgrimages. Did you know Lake Suwa, home of the Moriya Trio, is an excellent introduction?
 
-**Touhou 9 ""Phantasmagoria of Flower View""**
-- Reimu
-- Marisa
-- Sakuya
-- Cirno
-- Reisen
-- Youmu
-- Prismriver Sisters
-- Mystia
-- Tewi
-- Aya
-- Medicine
-- Yuuka
-- Komachi
-- Eiki
+The panel will briefly cover the locale and culture that inspired the Moriya Shrine and its residents, Fandom Presences and Fanwork References.",Drawing and Painting Studio,6/19/26,19:00,6/19/26,19:45,Panels.No Badge Required,
+Fumology 104; The Fumoreckoning,"Silly little plushies have taken over the world. The end is near. How do we stop them? First we must learn about them. Go undercover, they say. So, we must learn what we can. What tactics do they use for global domination? Who are scalpers? How can we stop them? 
 
-**Hifuu Club**
-- Renko
-- Maribel
-- Sumireko",Pine Wind Garden,6/15/25,9:30,6/15/25,10:30,Cosplay.Photoshoot,
-Tribute for Mr. E,"From Mystical Lala, one of our Cosplay Ambassadors:
+Why will one be given away at the end? 
 
-""Mr E left a legacy in the Touhou Fumo community with his photos and videos that you may have seen at some point in your Touhou Journey. After an unfortunate accident in 2024, I thought about doing something special for him at TouhouFest this year.
+At the end, you will all also receive your bachelors degrees in Fumology! Thanks for coming along this ride.",Children's Art Wing,6/20/26,10:30,6/20/26,11:45,Panels,
+"Queering Gensokyo: Yuri in Fansokyo
+","The follow on to last year's [i] Queering Gensokyo [/i], Yuri in Fansokyo covers the wide variety of inter cast shipping that existed in the Touhou Fandom. In this panel, we will discuss fanworks that depict lesbian relationships. Discussion will focus around the who and why these fanworks are produced, and their intended audience. Both the western and eastern sides of the fandom will be discussed. Audience Participation is welcome.",Children's Art Wing,6/20/26,12:00,6/20/26,12:45,Panels,
+"Beyond the Sonic Boundaries: Odd, Obscure, & Unorthodox Touhou Music
+","“There is a Touhou arrangement for every genre” but what does that bold claim actually entail? Prepare to discover new musical worlds in this showcase of underappreciated arrangement styles. Learn about and listen to unique circles and albums specializing in these one-of-a-kind sounds, and explore doujin music scenes happening outside of Japan! An open heart and open ears is recommended.",Children's Art Wing,6/20/26,13:00,6/20/26,14:15,Panels,
+"Gensokyo You Can! Moriya Shrine: The Gateway to Touhou Pilgrimage
+","Despite Gensokyo is dangerous for humans, we can safely explore many of its inspirations through Touhou Pilgrimages. Did you know Lake Suwa, home of the Moriya Trio, is an excellent introduction?
 
-I'm hosting a special tribute for Mr E at my booth! Come share your stories, or pay tribute to someone who made tremendous impact in our community!""
+The panel will briefly cover the locale and culture that inspired the Moriya Shrine and its residents, Fandom Presences and Fanwork References.",Children's Art Wing,6/20/26,14:30,6/20/26,15:45,Panels,
+M-1 Grand Prix,"A screening of the 20th Touhou M-1 Grand Prix, the latest iteration yet!",Children's Art Wing,6/20/26,16:00,6/20/26,17:45,"Screening
+",
+Cosplay Workshop (Sewing),"The Cosplay Workshop is a new offering at Touhoufest 2026: It will be a series of guided tutorials on various cosplay-related topics.
 
-Mystical Lala's booth is located in the **Ambassador Booths** inside the Toyota Meeting Hall. (Same area as Artist Alley)",Toyota Meeting Hall,6/13/25,17:00,6/13/25,18:30,Special,
-Tournament Check-Ins and Free Play,[Start.gg details here.](https://www.start.gg/tournament/touhoufest-2025/details),George Nakano Theatre,6/14/25,9:30,6/14/25,10:30,Gaming,
-Tournaments: Wave A,"Pool A for below games. Links to respective start.gg links attached.
-- [Touhou 9 PoFV (Rework Patch)](https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2643746)
-- [Touhou Rivals Workshop](https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2862655)",George Nakano Theatre,6/14/25,10:30,6/14/25,12:30,Gaming,
-Tournaments: Wave B,"Pool B for below games. Links to respective start.gg links attached.
-- [Touhou 12.3 Hisoutensoku (Soku 2)](https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643734)
-- [Touhou Rivals Workshop](https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1786271/2643738)",George Nakano Theatre,6/14/25,12:30,6/14/25,14:30,Gaming,
-Tournaments: Wave C,"Pool C for below games. Links to respective start.gg links attached.
-- [Touhou 9 PoFV (Rework Patch)](https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1786277/2862657)
-- [Touhou 12.3 Hisoutensoku (Soku 2)](https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2/brackets/1786268/2643735)",George Nakano Theatre,6/14/25,14:30,6/14/25,16:30,Gaming,
-Tournaments: Wave D,"Day 1 Finals - Top 4 cut of each game
-- [Touhou 9 PoFV (Rework Patch)](https://www.start.gg/tournament/touhoufest-2025/event/touhou-9-pofv-rework-patch/brackets/1949467/2862661)
-- [Touhou Rivals Workshop](https://www.start.gg/tournament/touhoufest-2025/event/touhou-rivals-workshop-1v1/brackets/1949466/2862658)
-- [Touhou 12.3 Hisoutensoku (Soku 2)](https://www.start.gg/tournament/touhoufest-2025/event/touhou-12-3-hisoutensoku-soku-2)",George Nakano Theatre,6/14/25,16:30,6/14/25,18:30,Gaming,
-Tournaments: Wave E,- [Touhou 15.5 AoCF [Full Bracket]](https://www.start.gg/tournament/touhoufest-2025/event/touhou-15-5-aocf),George Nakano Theatre,6/15/25,11:00,6/15/25,13:00,Gaming,
-Tournaments: Wave F,- [Touhou 19 UDoALG (Balance Patch 1.10c) [Full Bracket]](https://www.start.gg/tournament/touhoufest-2025/event/touhou-19-udoalg-balance-patch-1-10c),George Nakano Theatre,6/15/25,13:00,6/15/25,15:00,Gaming,
-Tournaments: Wave G,- [Touhou Fractured Transience [Full Bracket]](https://www.start.gg/tournament/touhoufest-2025/event/touhou-fractured-transience),George Nakano Theatre,6/15/25,15:00,6/15/25,17:00,Gaming,
-Gaming Hall Free Play,,George Nakano Theatre,6/14/25,18:30,6/14/25,22:30,Gaming,
-Gaming Hall Free Play,,George Nakano Theatre,6/15/25,9:00,6/15/25,10:00,Gaming,
-Gaming Hall Free Play,,George Nakano Theatre,6/15/25,16:00,6/15/25,17:00,Gaming,
-Free Space for Unofficial Photoshoots & Meetups,The Pine Wind Garden will be available for free use during this timeslot!,Pine Wind Garden,6/14/25,12:30,6/14/25,15:30,Cosplay.Photoshoot,
-Free Space for Unofficial Photoshoots & Meetups,The Pine Wind Garden will be available for free use during this timeslot!,Pine Wind Garden,6/14/25,18:30,6/14/25,22:30,Cosplay.Photoshoot,
-Free Space for Unofficial Photoshoots & Meetups,The Pine Wind Garden will be available for free use during this timeslot!,Pine Wind Garden,6/15/25,12:30,6/15/25,17:30,Cosplay.Photoshoot,
-Coobie (DJ),,Torino Plaza,6/14/25,17:30,6/14/25,18:30,DJ,
+The sewing section will explore various techniques on how to approach a sewing project including: 
+
+- How to select fabrics for your project, and we will even have fabric samples!
+- How to select a sewing machine for your skill level
+- How to identify the garments you will need to cosplay a touhou character
+- Basics on patterning/designing garments based on your measurements
+- Live sewing machine demonstrations
+
+Please let us know if you have any suggestions for topics to cover!
+## [Suggestions Form](https://forms.gle/Lxp94yWEvPQuGo6E7)",Children's Art Wing,6/20/26,18:00,6/20/26,19:00,Panels.Workshop,
+Cosplay Workshop (Props / Wigs / Makeup),"The Cosplay Workshop is a new offering at Touhoufest 2026: It will be a series of guided tutorials on various cosplay-related topics.
+
+The props, wigs, and makeup section will explore various techniques on how to handle the non-dress related aspects of your cosplay, including:
+
+- Basics on working with EVA Foam for props, as well as brief looks at other prop-making materials 
+- How to paint your props 
+- Wig basics and live wig cutting demonstrations
+- Makeup basics and live makeup demonstrations
+
+Please let us know if you have any suggestions for topics to cover!
+## [Suggestions Form](https://forms.gle/Lxp94yWEvPQuGo6E7)",Children's Art Wing,6/20/26,19:00,6/20/26,20:00,Panels.Workshop,
+Cosplay Workshop (Photography),"The Cosplay Workshop is a new offering at Touhoufest 2026: It will be a series of guided tutorials on various cosplay-related topics.
+
+The photography section will explore various techniques on how to handle the non-dress related aspects of your cosplay, including:
+
+- How to pose well for a photo as a subject
+- How to setup your set/lighting
+- How to choose your camera / equipment
+- Basics of photo editing
+
+Please let us know if you have any suggestions for topics to cover!
+## [Suggestions Form](https://forms.gle/Lxp94yWEvPQuGo6E7)",Children's Art Wing,6/20/26,20:00,6/20/26,21:00,Panels.Workshop,
+Touhou and TTRPGS – Running a D20 roleplaying game in Gensokyo,"Do you want to explore the world of Touhou in the company of your friends? Tabletop Roleplaying Games (TTRPGS) allow you and your friends to do so. In this 45-minute panel, two experienced Game Masters talk about their experience adapting the world of Touhou to their TTRPG of choice - Pathfinder 2nd Edition. They discuss how to make your game feel like Touhou by adapting game mechanics to fit Touhou characters and common elements of TTRPGS to avoid in your Touhou campaign. The panelists share anecdotes from previous Touhou campaigns in order to answer one overarching question - What makes a roleplaying campaign feel like Touhou?
+PG13 - Mention of drugs due to the Alchemist Class. Descriptions of violence, may have harsh language",Drawing and Painting Studio,6/20/26,12:30,6/20/26,13:15,Panels,
+How to be good at Touhou (Wait. Touhou has a videogame!?),"Yes. Touhou is a videogame.
+Now... how can I tryhard at it? Are you willing to give up your mental well-being? Are you willing to endure the pain? Are you willing to humble yourself towards a new experience of what a hard game is? 
+Let me hold your hand (non-romantically) to teach you the very basics of the official bullet-hell games, and how to enjoy (and dying while trying) colorful and amazing bullet patterns.",Drawing and Painting Studio,6/20/26,13:30,6/20/26,14:15,Panels,
+Touhou Cold Read Comedy Grand Prix!,"Like comedy skits? Want to try your hand at comedic acting? Think you're good at improv? Doesn't matter! Come on down to witness or participate in a comedic gauntlet where contestants from all over the state will do whatever it takes to win the grand prize!!! Teams of two or three will demonstrate their comedic prowess (or lack of it!) in an attempt to impress 5 judges, whose scores will determine which teams are eliminated. When only two teams remain, they will face off in the grand finals.",Drawing and Painting Studio,6/20/26,14:30,6/20/26,15:45,Panels,
+"Touhou Jeopardy
+",So You Think You Know Touhou… Join us in a fun filled Game show as your knowledge of the series and all that surrounds it is put to the test. Compete against others and have a chance to take home the grand prize if you can outsmart the competition!,Drawing and Painting Studio,6/20/26,16:00,6/20/26,17:15,Panels,
+Even A Monkey Can Draw Anime Girls! How Touhou 1draw Can Improve Your Art Skills,"Does looking at pretty Touhou art make your heart yearn, wishing you could draw like that? Struggled to get started? Lost motivation? Don't worry, Jennifer Raye has been there too, and she'll show you how to fight your evil brain demons and start drawing pretty anime girls right here, right now! Simple drawing supplies will be provided, but bringing your own is recommended.",Children's Art Wing,6/21/26,10:00,6/21/26,11:15,Panels,
+Elite Ball Knowledge: A Guide to Touhou Reiiden,"Are you interested in seeing where Touhou began, but baffled by the strangeness of a game so unique? Are you already familiar with the game, but want to know more? Do you just want a strategy guide? This panel is for you! Chroma has spent many moons cultivating her Ball Knowledge, and would like to share said knowledge with the convention.",Children's Art Wing,6/21/26,11:30,6/21/26,12:45,Panels,
+"The Unreasonable Effectiveness of Audiovisual Syncing in Touhou Games
+","Everyone knows that Touhou music is top-notch, but what you might've missed are the small details ZUN uses to bind each track to its in-game setting, whether by making effective use of backgrounds, syncing danmaku attacks to the beat, or integrating the song into a boss fight. Join williewillus, author of the well-known ""Top Touhou Music Syncs"" video, for a deep-dive into the nitty-gritty details that elevate Touhou music beyond a simple video game OST.",Children's Art Wing,6/21/26,13:00,6/21/26,14:15,Panels,
+M-1 Grand Prix,"A screening of the 20th Touhou M-1 Grand Prix, the latest iteration yet!",Children's Art Wing,6/21/26,14:30,6/21/26,16:00,"Screening
+",
+What the Hell? -Quick History of Bullet Hells / Danmaku,"Join us for a rapid tour through the evolution of bullet hell shooters! From their arcade beginnings to genre‑defining titles like DoDonPachi and Touhou. We’ll break down how danmakus became known for intricate patterns, high‑skill play, and a passionate global fanbase. We’ll also look at where the genre is headed through the indie scene. ",Drawing and Painting Studio,6/21/26,11:00,6/21/26,11:45,Panels,
+Touhou Wrestling!,"Paradarx and his announcers are back with Touhou Wrestling in 2026! There will be epic matches with characters created with the WWE 2K games! 
+The theme this year is Big Bad Bosses! The Gods and Youkai whom hold power have made themselves known, and are now in the competition, and they are here to dominate!
+Tag Team Belts and the Touhoufest World Champtionship are on the line. And some more swole action with cosplayers with a twist! 
+
+Its a main event worthy panel worth watching!
+TOUHOU WRESTLING!!! OOOOH-YEEEEAH BROTHER!!!",Drawing and Painting Studio,6/21/26,12:00,6/21/26,13:30,Panels,
+Maid Academy Cafe's Picnic Plaza (Session 1),"Maid Academy brings a interactive outdoor mini cafe experience featuring Touhou themed maids, fresh food and drinks, games, performances, and plenty of Touhou inspired music. 
+
+**Note!** Reservations are required for seating. Please use the below link to register:
+
+## [Reservation Link](https://www.eventbrite.com/e/1990580397554?aff=oddtdtcreator)",Torino Plaza,6/19/26,16:15,6/19/26,16:45,Guest.Reserved,
+Maid Academy Cafe's Picnic Plaza (Session 2),"Maid Academy brings a interactive outdoor mini cafe experience featuring Touhou themed maids, fresh food and drinks, games, performances, and plenty of Touhou inspired music. 
+
+**Note!** Reservations are required for seating. Please use the below link to register:
+
+## [Reservation Link](https://www.eventbrite.com/e/1990580397554?aff=oddtdtcreator)",Torino Plaza,6/19/26,18:05,6/19/26,19:35,Guest.Reserved,
+Kamizuki,"Kamizuki is a J-rock/ACG band based in Los Angeles. We perform high-energy and rhythm-driven Japanese Rock songs. We are passionate about Japanese music culture and anime, and aim to share the songs we love with the audience through a prepared live set.",Torino Plaza,6/20/26,11:45,6/20/26,12:45,Performance,
+YONA,High Octane Instrumental Metal/Rock covers of popular Touhou music,Torino Plaza,6/20/26,13:30,6/20/26,14:30,Performance,
+Maid Academy Cafe,"Maid Academy @maidacademycafe has charmed audiences with its delightful mix of music, dance, and character-driven performances for over 9 years. Home to a cast of maids and butlers, each performer chooses their own persona, songs, and schedule, bringing authenticity and heart to every show.",Torino Plaza,6/21/26,11:30,6/21/26,12:30,Performance,
+Gensou Hard Dancers,"We are a small group of shuffle/jumpstyle dancers, here to dance to our favorite touhou arranges!",Torino Plaza,6/21/26,13:30,6/21/26,14:00,Performance,
+DJ halica,"Hello, my name is Halica! I am an amateur DJ from DFW, Texas with a love for the DIY and underground scene. You can typically find me spinning on open decks at places like arcades. My DJ style is overall varied, but for this performance there will be a focus primarily on drum and bass. I believe in a playing a mix of crowd-pleasers along with otherwise lesser-known tracks that will turn heads.",Torino Plaza,6/21/26,15:30,6/21/26,16:30,Performance,
+Pre-Reg Pick Up,Badge Pre-Reg Pick Up + a chance to meet and get to know fellow con-goers.,Torrance Cultural Arts Center,6/19/26,15:00,6/19/26,20:00,Con Ops,
+Doors Open (Saturday),TouhouFest's Saturday start time is 9:00AM.,Torrance Cultural Arts Center,6/20/26,9:00,6/20/26,9:00,Con Ops,
+Doors Close (Saturday),TouhouFest closes for the night. We'll see you again Sunday at 8:00 AM!,Torrance Cultural Arts Center,6/20/26,23:00,6/20/26,23:00,Con Ops,
+Doors Open (Sunday),TouhouFest's Sunday start time is 8:00AM.,Torrance Cultural Arts Center,6/21/26,9:00,6/21/26,9:00,Con Ops,
+Doors Close (Sunday),TouhouFest closes shop on Sunday at 6:00 PM. See you all next year!,Torrance Cultural Arts Center,6/21/26,18:00,6/21/26,18:00,Con Ops,
+Artist Alley & Vendors Open (Saturday),"Come visit Artist Alley & Vendors and purchase a variety of prints, charms, and other fanworks! 
+
+**Note!** Some vendors may start selling as early as 9AM, but this depends on the individual vendor. You can reliably expect all vendors to start selling by 10AM.",Toyota Meeting Hall,6/20/26,10:30,6/20/26,10:30,Con Ops,
+Artist Alley & Vendors Close (Saturday),Artist Alley/Vendors closes roughly around this time; see you tommorow!,"Toyota Meeting Hall
+",6/20/26,18:00,6/20/26,18:00,Con Ops,
+Artist Alley & Vendors Open (Sunday),"Come visit Artist Alley & Vendors and purchase a variety of prints, charms, and other fanworks! ",Toyota Meeting Hall,6/21/26,9:00,6/21/26,9:00,Con Ops,
+Artist Alley & Vendors Close (Sunday),Artist Alley/Vendors closes roughly around this time; see you next year!,"Toyota Meeting Hall
+",6/21/26,16:00,6/21/26,16:00,Con Ops,
+Opening Ceremonies,Welcome to TouhouFest! MikoTan and several others on TouhouFest staff will start things off with a few opening remarks.,Torino Plaza,6/20/26,9:45,6/20/26,10:15,Con Ops,
+Closing Ceremonies,Thank you all for attending TouhouFest 2026! MikoTan and others on staff will give a few closing remarks.,Torino Plaza,6/21/26,17:30,6/21/26,18:00,Con Ops,
+TouhouFest LIVE Concert,"Another year, another TouhouFest LIVE! Join us on a brand new stage as icons such as COOL&CREATE's Beatmario, IOSYS' Maron, Tokyo Active NEETs' Akai Ryusei, and YaboiMatoi come together and perform in what will undoubtedly be TouhouFest's biggest concert yet! Concert iteneary follows:
+- Seating: 5:30 PM - 6:00 PM
+- Concert: 6:00 PM - 9:00 PM
+
+**Note:** This event will be loud! For those with sensitive hearing, it may be worthwhile to bring along some hearing protection.
+
+**Note:** This is a *ticketed* event! They are free and will be available just prior to the concert,  but they _will_ be checked prior to entry.
+
+**Note:** Due to James Armstrong Theatre constraints, attendees will leave early will *not* be allowed in. Please plan accordingly!",James Armstrong Theatre,6/20/26,18:00,6/20/26,21:00,Guest.Performance,
+TouhouFest LIVE Concert Seating & Ticketing,"Seating and Ticketing for TouhouFest LIVE will be arranged during this timeslot. To arrive at TouhouFest LIVE in a timely manner, please plan on heading to the James Armstrong Theatre around this timeslot, not at 6:00 PM.",James Armstrong Theatre,6/20/26,17:30,6/20/26,18:00,Guest.Performance.Con Ops,
+Cosplay Contest Seating,"Seating for the Cosplay Contest will be arranged during this timeslot. To arrive at the Cosplay Contest in a timely manner, please plan on heading to the Torino Plaza around this timeslot, not at 3:00 PM.",Torino Plaza,6/20/26,14:45,6/20/26,15:00,Cosplay.Performance.Con Ops,
+Cosplay Repair Opens (Saturday),Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist.,Assembly Hall,6/20/26,10:00,6/20/26,10:00,Cosplay.Con Ops,
+Cosplay Repair Closes (Saturday),Cosplay Repair will be closing shop at this time. Please be sure to arrive earlier if you need something from Cosplay Repair!,Assembly Hall,6/20/26,17:00,6/20/26,17:00,Cosplay.Con Ops,
+Cosplay Repair Opens (Saturday),Did your cosplay unexpectedly explode into a million billion pieces? TouhouFest will have a dedicated Cosplay Repair stand available to assist.,Assembly Hall,6/21/26,10:00,6/21/26,10:00,Cosplay.Con Ops,
+Cosplay Repair Closes (Sunday),Cosplay Repair will be closing shop at this time. Please be sure to arrive earlier if you need something from Cosplay Repair!,Assembly Hall,6/21/26,15:00,6/21/26,15:00,Cosplay.Con Ops,

@@ -39,6 +39,9 @@ import checkin02 from "./../images/checkin/checkin02.png";
 
 import hoshibako from "./../images/artistalley/hoshibako.jpg";
 
+import akibahobby from "./../images/artistalley/akibahobby.jpg";
+import pocarisweat from "./../images/artistalley/pocarisweat.jpg";
+
 let official_artists = [
     {
         "name": <>HoskibakoWorks</>,
@@ -103,7 +106,7 @@ let operating_hours = [
     "title": "General Con",
     "friday": "3:00 PM - 8:00 PM",
     "saturday": "9:00 AM - 10:00 PM",
-    "sunday": "8:00 AM - 6:00 PM",
+    "sunday": "9:00 AM - 6:00 PM",
     "remark": ""
   },
   {
@@ -115,18 +118,28 @@ let operating_hours = [
   },
   {
     "title": "Artist Alley/Vendors",
-    "friday": "Not Open",
-    "saturday": "10:30 AM* - 6:00 PM",
+    "friday": "3:00 PM* - 7:00 PM",
+    "saturday": "10:30 AM** - 6:00 PM",
     "sunday": "9:00 AM - 4:00 PM",
-    "remark": "*Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM."
+    "remark": <>
+    <p className="small">*Note: This is restricted to outdoors vendors who optionally choose to open their doors on Friday.</p> 
+    <p className="small">**Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p> 
+    </>
   },
   {
     "title": "Gaming Hall*",
     "friday": "Not Open",
     "saturday": "9:00 AM - 9:00 PM",
     "sunday": "9:00 AM - 5:00 PM",
-    "remark": "*Note: Gaming may be either Freeplay or Tournament depending on the schedule"
+    "remark": <p className="small">*Note: Gaming may be either Freeplay or Tournament depending on the schedule</p>
   },
+  {
+    "title": "Cosplay Repair",
+    "friday": "Not Open",
+    "saturday": "10:00 AM - 5:00 PM",
+    "sunday": "10:00 AM - 3:00 PM",
+  },
+
 
 ];
 
@@ -158,7 +171,7 @@ export function RenderHours({title=""}: {title?:string}) {
               </tr>
             </tbody>
           </Table>
-          {section["remark"] !== "" && <p className="small">{section["remark"]}</p>}
+          {section["remark"] !== "" && section["remark"]}
         </Col> : <></>) }
       </Row>
 
@@ -187,9 +200,13 @@ export const aboutConPage = {
       "fragment_id": "artist"
     },
     {
-      "title": "Event Feedback Form",
-      "fragment_id": "feedback"
+      "title": "Sponsors",
+      "fragment_id" : "sponsors"
     }
+    // {
+    //   "title": "Event Feedback Form",
+    //   "fragment_id": "feedback"
+    // }
   ],
   "header": (<><FontAwesomeIcon icon={faCircleInfo} fixedWidth></FontAwesomeIcon> About TouhouFest</>),
   "fluidImage": (<><Image className="display-dark" src={touhoufest_dark} fluid /><Image className="display-light" src={touhoufest} fluid /></>),
@@ -385,7 +402,36 @@ export const aboutConPage = {
           </MakeGenericCard>
         </Col>
       </Row>
+      
+      <MakeGoheiHeader content="Sponsors" fragment_id='sponsors'/>
 
+        <p>TouhouFest is pleased to feature the below sponsors this year! We are very grateful for their gracious financial support.</p>
+
+        <Row xs={2} md={3} className="justify-content-center">
+            <Col>
+                <MakeGenericCard subtitle='Online Japanese Goods' title="Hobby Lobby" picture={akibahobby} links={
+                    [
+                        {
+                            "link": "https://shop.akbh.jp/en",
+                            "title": <>Shop Link</>
+                        }
+                    ]
+                }/>
+            </Col>
+            <Col>
+                <MakeGenericCard subtitle='Sports Drinks' title='Pocari Sweat' picture={pocarisweat} links={
+                    [
+                        {
+                            "link": "https://trypocari.com/",
+                            "title": <>Website Link</>
+                        }
+                    ]
+                }/> 
+            </Col>
+        </Row>
+
+
+      {/*
       <MakeGoheiHeader content="Feedback Form" fragment_id='feedback'/>
 
       <p>We’d love to hear your feedback! If you have any, please use the Google Forms link below:</p>
@@ -393,6 +439,8 @@ export const aboutConPage = {
       <div className="text-center">
         <Button className="submitbutton" href="https://docs.google.com/forms/d/e/1FAIpQLSeQlHDqopPY3Aw9hGe2AfEcD897pmVBKNKgjpz9Hb3sFp9hiA/viewform?usp=dialog" target="_blank" rel="noreferrer">View form <FontAwesomeIcon icon={faAngleRight} fixedWidth/></Button>
       </div>
+
+      */}
 
       {/*
       <h5 className="mt-3">Past Official TouhouFest Artists</h5>
