@@ -51,7 +51,7 @@ if(!Capacitor.isNativePlatform() && Capacitor.getPlatform() == 'web') {
   menupagedata = menupagedata.concat([installationPage]);
 }
 
-menupagedata = menupagedata.concat([conCenterPage, sponsorsPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, vendorsPage, cosplayPage, conMerchPage, settingsPage ]);
+menupagedata = menupagedata.concat([conCenterPage, restarauntsPage, guestsPage, gamingPage, artistVendorsPage, vendorsPage, cosplayPage, conMerchPage, settingsPage ]);
 
 let menuheader = (<>TouhouFest 2026</>);
 

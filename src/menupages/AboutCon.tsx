@@ -39,6 +39,9 @@ import checkin02 from "./../images/checkin/checkin02.png";
 
 import hoshibako from "./../images/artistalley/hoshibako.jpg";
 
+import akibahobby from "./../images/artistalley/akibahobby.jpg";
+import pocarisweat from "./../images/artistalley/pocarisweat.jpg";
+
 let official_artists = [
     {
         "name": <>HoskibakoWorks</>,
@@ -196,6 +199,10 @@ export const aboutConPage = {
       "title": "Official Artist",
       "fragment_id": "artist"
     },
+    {
+      "title": "Sponsors",
+      "fragment_id" : "sponsors"
+    }
     // {
     //   "title": "Event Feedback Form",
     //   "fragment_id": "feedback"
@@ -395,6 +402,34 @@ export const aboutConPage = {
           </MakeGenericCard>
         </Col>
       </Row>
+      
+      <MakeGoheiHeader content="Sponsors" fragment_id='sponsors'/>
+
+        <p>TouhouFest is pleased to feature the below sponsors this year! We are very grateful for their gracious financial support.</p>
+
+        <Row xs={2} md={3} className="justify-content-center">
+            <Col>
+                <MakeGenericCard subtitle='Online Japanese Goods' title="Hobby Lobby" picture={akibahobby} links={
+                    [
+                        {
+                            "link": "https://shop.akbh.jp/en",
+                            "title": <>Shop Link</>
+                        }
+                    ]
+                }/>
+            </Col>
+            <Col>
+                <MakeGenericCard subtitle='Sports Drinks' title='Pocari Sweat' picture={pocarisweat} links={
+                    [
+                        {
+                            "link": "https://trypocari.com/",
+                            "title": <>Website Link</>
+                        }
+                    ]
+                }/> 
+            </Col>
+        </Row>
+
 
       {/*
       <MakeGoheiHeader content="Feedback Form" fragment_id='feedback'/>

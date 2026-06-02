@@ -13,13 +13,15 @@ import { Card, Carousel, Col, Image, Row } from 'react-bootstrap';
 import murasaki01 from "./../images/sponsors/murasaki/murasaki01.jpg";
 import murasaki02 from "./../images/sponsors/murasaki/murasaki02.jpg";
 import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { MakeGenericCard } from '../Utils';
 
 export const sponsorsPage = {
     "codename":"sponsors",
     "header": (<><FontAwesomeIcon icon={faFire} fixedWidth></FontAwesomeIcon> Sponsors</>),
     "fluidImage": (<></>),
     "body": (<>
-        <p>TouhouFest is pleased to feature the below sponsor(s) this year! We are very grateful for their gracious financial support.</p>
+
+        {/*
         <Row className="justify-content-center align-self-center">
             <Col xs={12} md={10} lg={6}>
                 <Card>
@@ -46,5 +48,6 @@ export const sponsorsPage = {
                 </Card>
             </Col>
         </Row>
+        */}
     </>),
 }
