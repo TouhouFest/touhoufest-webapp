@@ -58,7 +58,7 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
   }
 
   return (
-    <Offcanvas show={show_var} onHide={handleHide} placement="end">
+    <Offcanvas show={show_var} onHide={handleHide} placement="start" className="eventDescModal">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title className="align-middle"></Offcanvas.Title>
       </Offcanvas.Header>

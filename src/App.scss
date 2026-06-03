@@ -195,6 +195,12 @@ pwa-toast{
   color: white;
 }
 
+.eventDescModal .offcanvas-header button {
+  --bs-btn-close-bg: url(angle-left-solid-full.svg);
+  margin-right: auto;
+  margin-left: 0;
+}
+
 .Con_Ops {
   background-color: #CBCBD2 !important;
   color: black !important;

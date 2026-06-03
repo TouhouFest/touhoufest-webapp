@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 224.05 384.14999"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="angle-left-solid-full.svg"
+   width="224.05"
+   height="384.14999"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.240625"
+     inkscape:cx="128.16121"
+     inkscape:cy="191.83879"
+     inkscape:window-width="1920"
+     inkscape:window-height="1002"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+  <path
+     d="m 9.375,169.475 c -12.5,12.5 -12.5,32.8 0,45.3 l 160,160 c 12.5,12.5 32.8,12.5 45.3,0 12.5,-12.5 12.5,-32.8 0,-45.3 l -137.4,-137.4 137.3,-137.4 c 12.5,-12.5 12.5,-32.8 0,-45.3 -12.5,-12.5 -32.8,-12.5 -45.3,0 l -160,160 z"
+     id="path1" />
+</svg>
