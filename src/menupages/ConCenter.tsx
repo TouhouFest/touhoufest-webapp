@@ -258,7 +258,7 @@ let roomlist = [
     },
     {
         "title": "Children's Art Wing",
-        "picture": nakanotheatre,
+        "picture": childrensartwing,
         "rooms": [
             <><CircledBullets argument="13"/> Panels 1</>,
             <><CircledBullets argument="restroom"/> Restrooms</>
