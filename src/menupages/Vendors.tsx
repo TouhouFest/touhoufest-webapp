@@ -15,7 +15,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
-import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader, MakeGenericCard} from '../Utils';
+import { CircledBullets, artistalleymap, vendorsmap, torinoplazamap, placeholder, MakeGoheiHeader, MakeGenericCard, MakeLocationBadge} from '../Utils';
 
 import idolmatsuri from "./../images/artistalley/idolmatsuri.png";
 
@@ -101,7 +101,7 @@ let vendors = [
 {"name": "BeatMARIO/COOL&CREATE", "image": beatmario, "location": "V07", "website": "https://www.youtube.com/channel/UClzpoRto1BJXaRGe9OkkGLQ", "role": "Guest"},
 {"name": "Maron/IOSYS", "image": maron, "location": "V08", "website": "https://x.com/maron47", "role": "Guest"},
 {"name": "YaboiMatoi", "image": yaboimatoi, "location": "V13", "website": "https://www.yaboimatoi.com/", "role": "Guest"},
-{"name": "Akai Ryusei/Tokyo Active NEETS", "image": akairyusei, "location": "V15", "website": "https://neets.tokyo/", "role": "Guest"},
+{"name": "Akai Ryusei/Tokyo Active NEETS", "image": akairyusei, "location": "V14", "website": "https://neets.tokyo/", "role": "Guest"},
 ];
 vendors.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -124,18 +124,20 @@ let communitytables = [
 {"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "FT2", "website": "https://www.la-idolmatsuri.org/", "role": ""},
 {"name": "B-Side Events", "image": bsideevents, "location": "FT3", "website": "https://www.instagram.com/events_bside/", "role": ""},
 {"name": "Riso Studio Arts", "image": risostudioarts, "location": "FT4", "website": "https://risostudioarts.com/", "role": ""},
-{"name": "PixelSundae", "image": placeholder, "location": "FT4", "website": "", "role": ""},
-{"name": "Touhou Game Dev", "image": placeholder, "location": "FT5", "website": "", "role": ""},
+{"name": "PixelSundae", "image": placeholder, "location": "FT5", "website": "", "role": ""},
+{"name": "Touhou Game Dev", "image": placeholder, "location": "FT6", "website": "", "role": ""},
+{"name": "Sheepeydarkness", "image": placeholder, "location": "FT7", "website": "", "role": ""},
+{"name": "Idle Rage", "image": placeholder, "location": "FT8", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let fangametables = [
-{"name": "Mystery Parfait", "image": danmaku, "location": "FT1", "website": "https://danmaku.party", "role": ""},
-{"name": "Ice Fall Creative", "image": danmakumaze, "location": "FT2", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
-{"name": "Fire Land", "image": fireland, "location": "FT3", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
-{"name": "Noetic Nightjar Studios", "image": noetic, "location": "FT4", "website": "http://noeticnightjar.com/", "role": ""},
-{"name": "peace research", "image": placeholder, "location": "FT4", "website": "", "role": ""},
-{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "FT5", "website": "", "role": ""},
+{"name": "Mystery Parfait", "image": danmaku, "location": "FG1", "website": "https://danmaku.party", "role": ""},
+{"name": "Ice Fall Creative", "image": danmakumaze, "location": "FG2", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
+{"name": "Fire Land", "image": fireland, "location": "FG3", "website": "https://store.steampowered.com/app/2927320/Touhou_Danmaku_Maze/", "role": ""},
+{"name": "Noetic Nightjar Studios", "image": noetic, "location": "FG4", "website": "http://noeticnightjar.com/", "role": ""},
+{"name": "peace research", "image": placeholder, "location": "FG5", "website": "", "role": ""},
+{"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "FG6", "website": "https://www.youtube.com/channel/UC1uFa3v2uibwxWnI_hrD9fA", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -172,6 +174,7 @@ export const vendorsPage= {
         </Row>
 
         <h4>List of Vendors</h4>
+        <p className="my-3"><MakeLocationBadge location="Entry Plaza"/></p>
         <p>Entries listed below are in vendors (denoted "Booth VXX").</p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {vendors.map((artist, i) => <>
@@ -197,8 +200,8 @@ export const vendorsPage= {
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Vendors at Torino Plaza" />
             </Col>
         </Row>
-        <h4>Entry Foyer (Community Tables)</h4>
-        <p>Some booths may be empty.</p>
+        <h4>Fan Community Tables</h4>
+        <p className="my-3"><MakeLocationBadge location="Entry Foyer (Ken Miller Rec Center)"/></p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {communitytables.map((artist, i) => <>
              <Col>
@@ -214,7 +217,8 @@ export const vendorsPage= {
             </>)}
         </Row>
 
-       <h4 className="mt-3">Torino Plaza (Shrine Booths)</h4>
+       <h4 className="mt-3">Torino Plaza Vendors</h4>
+        <p className="my-3"><MakeLocationBadge location="Torino Plaza"/></p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {plazatables.map((artist, i) => <>
              <Col>
@@ -230,7 +234,8 @@ export const vendorsPage= {
             </>)}
        </Row>
 
-       <h4 className="mt-3">Fan Game Booths (Assembly Hall)</h4>
+       <h4 className="mt-3">Fan Game Vendors</h4>
+        <p className="my-3"><MakeLocationBadge location="Assembly Hall"/></p>
         <Row xs={2} md={4} lg={5} className="g-3 justify-content-center">
             {fangametables.map((artist, i) => <>
              <Col>
