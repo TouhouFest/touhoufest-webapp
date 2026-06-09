@@ -126,7 +126,7 @@ let communitytables = [
 {"name": "Riso Studio Arts", "image": risostudioarts, "location": "FT4", "website": "https://risostudioarts.com/", "role": ""},
 {"name": "PixelSundae", "image": placeholder, "location": "FT5", "website": "", "role": ""},
 {"name": "Touhou Game Dev", "image": placeholder, "location": "FT6", "website": "", "role": ""},
-{"name": "Sheepeydarkness", "image": placeholder, "location": "FT7", "website": "", "role": ""},
+{"name": "東方関係部: OTNJ", "image": organizedtouhounetworking, "location": "FT7", "website": "https://discord.gg/ct9JS95CwM", "role": ""},
 {"name": "Idle Rage", "image": placeholder, "location": "FT8", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
