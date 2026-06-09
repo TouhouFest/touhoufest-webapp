@@ -7,8 +7,8 @@ android {
         applicationId 'com.touhoufest.touhoufestwebapp'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 190
-        versionName "190"
+        versionCode 191
+        versionName "191"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
