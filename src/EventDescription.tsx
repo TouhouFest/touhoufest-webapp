@@ -5,6 +5,8 @@ import Markdown from 'marked-react';
 import {App} from '@capacitor/app';
 import { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar, faClock, faLocation, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_var:boolean, hide_fxn:Function, event_package:any, evt_print:JSX.Element[]}) {
 
@@ -31,8 +33,9 @@ function EventDescription({show_var, hide_fxn, event_package, evt_print}: {show_
       <>
         <h3><b>{event_package["event_title"]}</b></h3>
         <ul className="list-unstyled mb-1">
-          <li><b>{event_package["daytext"]} | {evt_print[0]}</b></li>
-          <li><b>{event_package["event_room"]}</b></li>
+          <li><FontAwesomeIcon fixedWidth icon={faLocationDot}/> <b>{event_package["event_room"]}</b></li>
+          <li><FontAwesomeIcon fixedWidth icon={faCalendar}/> <b>{event_package["daytext"]}</b></li>
+          <li><FontAwesomeIcon fixedWidth icon={faClock}/> <b>{evt_print[0]}</b></li>
         </ul>
         {evt_print[2]}
 

@@ -22,7 +22,8 @@ import noresultsdark from "./noresults-dark.jpg";
 import Stack from "react-bootstrap/Stack";
 import gohei_border from "./gohei_border.svg";
 import hakurei_border from "./hakurei_border.svg";
-import { faToriiGate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faBuilding, faClock, faLocationDot, faToriiGate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 dayjs.extend(customParseFormat);
 dayjs.extend(timezone);
@@ -374,7 +375,8 @@ export default function Dataset(
               <div  className="vr"></div>
               <div>
                 <div >
-                  <p className="mb-1"><b>{elem["event_room"]} | {eventbulk[0]}</b></p>
+                  <p className="mb-1"><FontAwesomeIcon icon={faLocationDot} fixedWidth/> <b>{elem["event_room"]}</b></p>
+                  <p className="mb-1"><FontAwesomeIcon icon={faClock} fixedWidth/> <b>{eventbulk[0]}</b></p>
                   {eventbulk[2]}
 
                   {elem["event_description"] && <p className="mb-1">{elem["event_description"].substring(0,40)}...&nbsp; <u>See more</u> &#8250;</p>}
