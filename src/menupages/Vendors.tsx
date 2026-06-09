@@ -92,7 +92,7 @@ let vendors = [
 {"name": "Artist Collaboration Experience", "image": ace, "location": "V03", "website": "https://www.artcollabexp.com/", "role": "Artist"},
 {"name": "TouhouFest Official Booth", "image": touhoufest, "location": "V04", "website": "", "role": "Info"},
 {"name": <>Sunameri&shy;Drill</>, "image": sunameridrill, "location": "V10", "website": "https://www.instagram.com/sunameridrill/", "role": "Vendor"},
-{"name": "Whimsical Artchive ", "image": whimsicalarchive, "location": "V12", "website": "https://whimsicalartchive.carrd.co/", "role": "Artist"},
+{"name": "Whimsy Artchive ", "image": whimsicalarchive, "location": "V12", "website": "https://whimsyartchive.carrd.co/", "role": "Artist"},
 {"name": "TouhouFest Cosplay Repair", "image": touhoufest, "location": "V09", "website": "", "role": "Info"},
 {"name": "Akiba Hobby", "image": akibahobby, "location": "V05", "website": "https://shop.akbh.jp/en", "role": "Sponsor"},
 {"name": "Touhou Mystia's Izakaya", "image": mystia, "location": "V06", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "role": "Vendor"},

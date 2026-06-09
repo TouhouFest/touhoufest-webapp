@@ -92,8 +92,13 @@ import pyonever from "./../images/artistalley/pyonever.jpg";
 import lisuworks from "./../images/artistalley/lisuworks.jpg";
 import rinnekanzaki from "./../images/artistalley/rinnekanzaki.jpg";
 import rinabow from "./../images/artistalley/rinabow.jpg";
+import dumbslime from "./../images/artistalley/dumbslime.jpg";
+import archrose from "./../images/artistalley/archrose.jpg";
+
+import fantasymechanics from "./../images/artistalley/fantasymechanics.jpg";
 
 import { placeholder } from "../Utils";
+import { arch } from "os";
 
 export const newartistalleylist = 
 [
@@ -110,15 +115,15 @@ export const newartistalleylist =
   },
   {
     "name": "Dumbslime",
-    "image": placeholder,
+    "image": dumbslime,
     "location": "B10",
-    "website": "https://www.deviantart.com/dumbslime/gallery"
+    "website": "https://bsky.app/profile/microsoftslime.bsky.social"
   },
   {
     "name": "Arch Rose",
-    "image": placeholder,
+    "image": archrose,
     "location": "B11",
-    "website": "https://radiovomit.art/#portfolio"
+    "website": "https://radiovomit.art"
   },
   {
     "name": "sxkyu",
@@ -153,7 +158,7 @@ export const newartistalleylist =
     "name": "o_blujaja",
     "image": o_blujaja,
     "location": "B6",
-    "website": "https://lit.link/en/blujaja"
+    "website": "https://x.com/o_blujaja"
   },
   {
     "name": "JGSDF - Gensokyo Garrison",
@@ -330,7 +335,7 @@ export const newartistalleylist =
     "name": "ScaryYandere",
     "image": scaryyandere,
     "location": "G3",
-    "website": "https://vgen.co/ScaryYandere/portfolio"
+    "website": "https://bsky.app/profile/scaryyandere.bsky.social"
   },
   {
     "name": "KingOfSadism",
@@ -360,7 +365,7 @@ export const newartistalleylist =
     "name": "sirmasterknight",
     "image": sirmasterknight,
     "location": "G8",
-    "website": "https://sirmasterknight.carrd.co/"
+    "website": "https://www.instagram.com/sirmasterknight"
   },
   {
     "name": "pyon4ever",
@@ -396,7 +401,7 @@ export const newartistalleylist =
     "name": "Rinne Kanzaki",
     "image": rinnekanzaki,
     "location": "H4",
-    "website": "https://sites.google.com/view/rinnekanzakig"
+    "website": "https://linktr.ee/Rinnekanzaki"
   },
   {
     "name": "BARK SNARL",
@@ -410,8 +415,8 @@ export const newartistalleylist =
     "location": "H6"
   },
   {
-    "name": "Fantasy Mehanics",
-    "image": placeholder,
+    "name": "Fantasy Mechanics",
+    "image": fantasymechanics,
     "location": "H7",
     "website": "https://www.youtube.com/channel/UCs8zc3KqROO1GOSNMKFYBfQ"
   },
