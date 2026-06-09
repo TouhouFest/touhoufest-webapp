@@ -119,11 +119,10 @@ let operating_hours = [
   {
     "title": "Artist Alley/Vendors",
     "friday": "3:00 PM* - 7:00 PM",
-    "saturday": "10:30 AM** - 6:00 PM",
+    "saturday": "9:00 AM** - 6:00 PM",
     "sunday": "9:00 AM - 4:00 PM",
     "remark": <>
     <p className="small">*Note: This is restricted to outdoors vendors who optionally choose to open their doors on Friday.</p> 
-    <p className="small">**Note: Some vendors may start selling as early as 9AM, but this is up to the individual vendor. You may reliably expect all vendors to start selling by 10AM.</p> 
     </>
   },
   {
