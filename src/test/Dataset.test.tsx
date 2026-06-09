@@ -75,7 +75,7 @@ describe("Dataset", () => {
             },
         ];
 
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
+        const getItemTest = localStorage.getItem.mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
         // const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(USEDEVICETZ);
 
         Papa.parse = GenerateMockPapa(mockup);
@@ -83,8 +83,10 @@ describe("Dataset", () => {
         render(dataset);
         await waitFor(() => {
             // todo: adjust output of papa.parse to maybe call complete function?
-            expect(screen.getByText(new RegExp("Toyota Hall | 3/2 10:35 PM - 4/26 11:30 PM"))).toBeDefined();
-            expect(screen.getByText(new RegExp("All | 3/2 10:35 PM - 4/6 11:30 PM"))).toBeDefined();
+            expect(screen.getByText(new RegExp("Toyota Hall"))).toBeDefined();
+            expect(screen.getByText(new RegExp("3/2 10:35 PM - 4/26 11:30 PM"))).toBeDefined();
+            expect(screen.getByText(new RegExp("All"))).toBeDefined();
+            expect(screen.getByText(new RegExp("3/2 10:35 PM - 4/6 11:30 PM"))).toBeDefined();
         });
     });
 
@@ -95,7 +97,7 @@ describe("Dataset", () => {
         vi.stubEnv("TZ","America/Los_Angeles");
         expect(dayjs.tz.guess()).toBe("America/Los_Angeles");
         
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
+        const getItemTest = localStorage.getItem.mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
 
         // load event
         Papa.parse = GenerateMockPapa([{
@@ -114,7 +116,8 @@ describe("Dataset", () => {
 
         // expectation: time should print exactly
         await waitFor(() => {
-            expect(screen.getByText(new RegExp(`All | 7:35 PM - 8:30 PM`))).toBeDefined();
+            expect(screen.getByText(new RegExp(`7:35 PM - 8:30 PM`))).toBeDefined();
+            expect(screen.getByText(new RegExp(`All`))).toBeDefined();
         });
 
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
@@ -127,7 +130,7 @@ describe("Dataset", () => {
         vi.stubEnv("TZ","America/Chicago");
         expect(dayjs.tz.guess()).toBe("America/Chicago");
         
-        const getItemTest = vi.spyOn(Storage.prototype, "getItem").mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
+        const getItemTest = localStorage.getItem.mockImplementation((input) => mockGetItemImplementation(input, USEDEVICETZ));
 
         // load event
         Papa.parse = GenerateMockPapa([{
@@ -145,7 +148,8 @@ describe("Dataset", () => {
         render(dataset);
 
         await waitFor(() => {
-            expect(screen.getByText(new RegExp(`All | 9:35 PM - 10:30 PM`))).toBeDefined();
+            expect(screen.getByText(new RegExp(`All`))).toBeDefined();
+            expect(screen.getByText(new RegExp(`9:35 PM - 10:30 PM`))).toBeDefined();
         });
 
         // possible sol'n? https://github.com/vitest-dev/vitest/issues/1575
@@ -179,7 +183,8 @@ describe("Dataset", () => {
         await waitFor(() => {
             expect(getItemTest).toHaveBeenCalledWith(NATIVETIMETYPE);
             expect(screen.getAllByText(`Sunday, March 2`).length).greaterThan(0);
-            expect(screen.getByText(new RegExp(`All | 7:35 PM - 8:30 PM`))).toBeDefined();
+            expect(screen.getByText(new RegExp(`All`))).toBeDefined();
+            expect(screen.getByText(new RegExp(`7:35 PM - 8:30 PM`))).toBeDefined();
         });
     });
 
