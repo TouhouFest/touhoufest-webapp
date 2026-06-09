@@ -98,8 +98,8 @@ let vendors = [
 {"name": "Touhou Mystia's Izakaya", "image": mystia, "location": "V06", "website": "https://store.steampowered.com/app/1584090/Touhou_Mystias_Izakaya/", "role": "Vendor"},
 {"name": "Lyrica Live", "image": lyricalive, "location": "V11", "website": "https://www.youtube.com/@lyrica-live", "role": "Vendor"},
 {"name": "Gensokyo Odyssey", "image": gensokyoodyssey, "location": "V15", "website": "https://store.steampowered.com/app/1865670/Gensokyo_Odyssey/", "role": "Vendor"},
-{"name": "BeatMARIO/COOL&CREATE", "image": beatmario, "location": "V07", "website": "https://www.youtube.com/channel/UClzpoRto1BJXaRGe9OkkGLQ", "role": "Guest"},
-{"name": "Maron/IOSYS", "image": maron, "location": "V08", "website": "https://x.com/maron47", "role": "Guest"},
+{"name": "BeatMARIO / COOL&CREATE", "image": beatmario, "location": "V07", "website": "https://www.youtube.com/channel/UClzpoRto1BJXaRGe9OkkGLQ", "role": "Guest"},
+{"name": "Maron / IOSYS", "image": maron, "location": "V08", "website": "https://x.com/maron47", "role": "Guest"},
 {"name": "YaboiMatoi", "image": yaboimatoi, "location": "V13", "website": "https://www.yaboimatoi.com/", "role": "Guest"},
 {"name": "Akai Ryusei/Tokyo Active NEETS", "image": akairyusei, "location": "V14", "website": "https://neets.tokyo/", "role": "Guest"},
 ];
@@ -120,7 +120,7 @@ let plazatables = [
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let communitytables = [
-{"name": "AniMarketplace/AMP", "image": animarketplace, "location": "FT1", "website": "https://www.animarketplace.org/", "role": ""},
+{"name": <>Ani<wbr />Market<wbr />place / AMP</>, "image": animarketplace, "location": "FT1", "website": "https://www.animarketplace.org/", "role": ""},
 {"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "FT2", "website": "https://www.la-idolmatsuri.org/", "role": ""},
 {"name": "B-Side Events", "image": bsideevents, "location": "FT3", "website": "https://www.instagram.com/events_bside/", "role": ""},
 {"name": "Riso Studio Arts", "image": risostudioarts, "location": "FT4", "website": "https://risostudioarts.com/", "role": ""},

@@ -196,7 +196,7 @@ export const cosplayPage = {
 
         <CosplayMeetupListing type="meetups" subtitleString='For characters from'/>
            
-        <MakeGoheiHeader content="Other Photoshoots/Meetups" fragment_id="otherphotoshoots"/>
+        <MakeGoheiHeader content="Other Photoshoots / Meetups" fragment_id="otherphotoshoots"/>
 
         <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6}>

@@ -119,7 +119,7 @@ let operating_hours = [
   {
     "title": "Artist Alley/Vendors",
     "friday": "3:00 PM* - 7:00 PM",
-    "saturday": "9:00 AM** - 6:00 PM",
+    "saturday": "9:00 AM - 6:00 PM",
     "sunday": "9:00 AM - 4:00 PM",
     "remark": <>
     <p className="small">*Note: This is restricted to outdoors vendors who optionally choose to open their doors on Friday.</p> 
@@ -408,7 +408,7 @@ export const aboutConPage = {
 
         <Row xs={2} md={3} className="justify-content-center">
             <Col>
-                <MakeGenericCard subtitle='Online Japanese Goods' title="Hobby Lobby" picture={akibahobby} links={
+                <MakeGenericCard subtitle='Japanese Goods' title="Hobby Lobby" picture={akibahobby} links={
                     [
                         {
                             "link": "https://shop.akbh.jp/en",

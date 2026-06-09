@@ -182,11 +182,11 @@ export const gamingPage = {
     "body": (<>
         <h4>Locations</h4>
         <ul>
-            <li><b>Free Play</b>: George Nakano Theatre (<CircledBullets argument="2"/> Gaming Hall)</li>
-            <li><b>Tournaments</b>: George Nakano Theatre: (<CircledBullets argument="2"/> Gaming Hall)</li>
-            <li><b>Arcades</b>: George Nakano Theatre: (<CircledBullets argument="2"/> Gaming Hall)</li>
-            <li><b>Fangames</b>: Assembly Hall (<CircledBullets argument="11"/> Cosplay Exhibition, Fan Games)</li>
-            <li><b>Tabletop & Danmaku!!</b>: (<CircledBullets argument="11"/> Tabletop)</li>
+            <li><b>Free Play</b>: George Nakano Theatre <br />(<CircledBullets argument="2"/> Gaming Hall)</li>
+            <li><b>Tournaments</b>: George Nakano Theatre <br />(<CircledBullets argument="2"/> Gaming Hall)</li>
+            <li><b>Arcades</b>: George Nakano Theatre <br />(<CircledBullets argument="2"/> Gaming Hall)</li>
+            <li><b>Fangames</b>: Assembly Hall <br />(<CircledBullets argument="11"/> Cosplay Exhibition, Fan Games)</li>
+            <li><b>Tabletop & Danmaku!!</b>: Assembly Hall <br />(<CircledBullets argument="11"/> Tabletop)</li>
         </ul>
         {/*
         <Row className="justify-content-center">
