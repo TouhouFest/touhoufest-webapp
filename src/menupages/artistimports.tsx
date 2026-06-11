@@ -10,6 +10,7 @@ import partyu from "./../images/artistalley/partyu.jpg";
 import gurugurumaru from "./../images/artistalley/gurugurumaru.jpg";
 import chennakitty from "./../images/artistalley/chennakitty.jpg";
 import suzukannn from "./../images/suzukann.jpg";
+import gladhand from "./../images/artistalley/gladhand.jpg";
 
 import lyricalive from "./../images/artistalley/lyricalive.jpg";
 import dreamingchimera from "./../images/artistalley/dreamingchimera.jpg";
@@ -96,6 +97,7 @@ import dumbslime from "./../images/artistalley/dumbslime.jpg";
 import archrose from "./../images/artistalley/archrose.jpg";
 
 import fantasymechanics from "./../images/artistalley/fantasymechanics.jpg";
+import mysticallala from "./../images/mysticallala.jpg";
 
 import { placeholder } from "../Utils";
 import { arch } from "os";
@@ -431,6 +433,18 @@ export const newartistalleylist =
     "image": rinabow,
     "location": "H9",
     "website": "https://www.rinabow.nl/"
+  },
+  {
+    "name": "Gladhand",
+    "image": gladhand,
+    "location": "E3",
+    "website": "https://gladhand.carrd.co/"
+  },
+  {
+    "name": "Mystical Lala",
+    "image": mysticallala,
+    "location": "H8",
+    "website": "https://www.instagram.com/mystical.lala/"
   }
 ];
 newartistalleylist.sort((a,b) => a["location"].localeCompare(b["location"]));
