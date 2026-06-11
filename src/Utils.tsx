@@ -1,4 +1,4 @@
-import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faArrowUpRightFromSquare, faB, faBroom, faC, faCaretRight, faCircle, faCircleExclamation, faGamepad, faLocationDot, faRestroom, faSquare, faToriiGate } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, fa0, fa1, fa2, fa3, fa4, fa5, fa6, fa7,fa8, fa9, faA, faAngleRight, faArrowUpRightFromSquare, faB, faBroom, faC, faCameraRetro, faCaretRight, faCircle, faCircleExclamation, faCircleInfo, faClapperboard, faGamepad, faHand, faHatWizard, faHeadset, faLocationDot, faMicrophoneLines, faPersonBurst, faPersonChalkboard, faRestroom, faSquare, faThumbsUp, faToriiGate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Cookies from 'universal-cookie';
 
@@ -159,7 +159,43 @@ export function WarningAlert({children}:{children:any}) {
 import {Badge, Image} from 'react-bootstrap';
 
 export function EventTypeGenerator({text}: {text:string}) {
-    return (<><Badge pill className={text.replace(" ","_")+ ' me-1'}>{/*<FontAwesomeIcon icon={faGamepad}/>*/}{text}</Badge></>);
+    let eventicon:IconDefinition = faCircleInfo;
+    switch(text.trimEnd()) {
+        case "Con Ops":
+            eventicon = faHeadset;
+            break;
+        case "Cosplay":
+            eventicon = faHatWizard;
+            break;
+        case "Gaming":
+            eventicon = faGamepad;
+            break;
+        case "Guest":
+            eventicon = faPersonBurst;
+            break;
+        case "Panels":
+            eventicon = faPersonChalkboard;
+            break;
+        case "Performance":
+            eventicon = faMicrophoneLines;
+            break;
+        case "Photoshoot":
+            eventicon = faCameraRetro;
+            break;
+        case "Screening":
+            eventicon = faClapperboard;
+            break;
+        case "No Badge Required":
+            eventicon = faThumbsUp;
+            break;
+        case "Reserved":
+            eventicon = faHand;
+            break;
+        default:
+            eventicon = faCircleInfo;
+            break;
+    }
+    return (<><Badge pill className={text.replace(" ","_")+ ' me-1'}><FontAwesomeIcon icon={eventicon} fixedWidth/> {text}</Badge></>);
 }
 
 import gohei_border from "./gohei_border.svg";
