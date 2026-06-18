@@ -27,7 +27,7 @@ import friday02 from "./../images/maidacademymenu/friday02.png";
 import { useState } from 'react';
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
-function MaidCarousel({imagelist}: {imagelist:string[]}) {
+export function MaidCarousel({imagelist}: {imagelist:string[]}) {
     const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex:number) => {

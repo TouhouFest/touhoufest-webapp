@@ -23,6 +23,10 @@ import danmaku from "./../images/danmaku.jpg";
 import drawpaint from "./../images/drawpaint.jpg";
 import danmakumaze from "./../images/gamingfolder/danmakumaze.png";
 import arcade from "./../images/gamingfolder/arcade.jpg";
+import { MaidCarousel } from './Restaraunts';
+
+import promo1 from "./../images/gamingfolder/promo1.png";
+import promo2 from "./../images/gamingfolder/promo2.png";
 
 let tourneylisting = [
     {
@@ -157,6 +161,10 @@ export const gamingPage = {
     "codename": "gaming",
     "jumplinks": [
         {
+            "fragment_id": "#merchgiveaway",
+            "title": "Merch Giveaway"
+        },
+        {
             "fragment_id": "#tabletop",
             "title": "Tabletop Gaming"
         },
@@ -220,6 +228,14 @@ export const gamingPage = {
         </Row>
 
         <div className="text-center mt-2 mb-3"><MakeLocationBadge location="George Nakano Theatre"/></div>
+
+        <MakeGoheiHeader content="Merch Giveaway" fragment_id='merchgiveaway'/>
+
+        <Row className="justify-content-center mb-3 mt-3">
+            <Col xs={12} md={10} lg={8} className="text-center">
+                <MaidCarousel imagelist={[promo1, promo2]}/>
+            </Col>
+        </Row>
 
         <MakeGoheiHeader content="Tabletop Gaming" fragment_id='tabletop'/>
         
