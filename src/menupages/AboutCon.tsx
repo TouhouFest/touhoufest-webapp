@@ -216,7 +216,7 @@ export const aboutConPage = {
         <p className="lead">June 20th - 21st, 2026</p>
       </div>
       <Row className="text-center">
-        <Col><a href="https://discord.com/invite/touhoufest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://discord.touhoufest.org" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
         <Col><a href="https://twitter.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareXTwitter} fixedWidth></FontAwesomeIcon></h5></a></Col>
         <Col><a href="https://www.facebook.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareFacebook} fixedWidth></FontAwesomeIcon></h5></a></Col>
         <Col><a href="https://www.instagram.com/touhoufest/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faInstagram} fixedWidth></FontAwesomeIcon></h5></a></Col>

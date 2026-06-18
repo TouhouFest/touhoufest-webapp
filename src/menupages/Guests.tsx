@@ -30,6 +30,8 @@ import corpsdancecrew from "./../images/artistalley/corpsdancecrew.jpg";
 import { neosanctum,suzukann } from '../Utils';
 import { GlobalTransformWrapper } from '../GlobalTransformWrapper';
 
+import jatconcert from "./../images/jatconcert.png";
+
 import beatmario from "./../images/beatmario.jpg";
 import akairyusei from "./../images/akairyusei.jpg";
 import yaboimatoi from "./../images/yaboimatoi.jpg";
@@ -111,6 +113,14 @@ export const guestsPage = {
         <Row className="justify-content-center">
             <Col xs={12} lg={10}>
                 <GlobalTransformWrapper src={torinoplazamap} caption="Map of Torino Plaza"/>
+            </Col>
+        </Row>
+
+        <h4>TouhouFest LIVE Concert Guidelines</h4>
+
+        <Row className="justify-content-center mb-3">
+            <Col xs={12} md={10} lg={8}>
+                <Image src={jatconcert} fluid rounded/>
             </Col>
         </Row>
 

@@ -116,17 +116,13 @@ export const restarauntsPage = {
             </Col>
         </Row>
 
-        {/*
         <h4 className="my-3">Maid Academy Saturday & Sunday Food Menu</h4>
 
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
-                <MaidCarousel imagelist=[mainmenu, entry01, entry02, entry03]/>
+                <Image src={mainmenu} rounded fluid/>
             </Col>
         </Row>
-
-        */}
-
 
     </>),
 }
