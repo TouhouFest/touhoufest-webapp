@@ -120,7 +120,7 @@ export const restarauntsPage = {
 
         <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
-                <Image src={mainmenu} rounded fluid/>
+                <GlobalTransformWrapper src={mainmenu} caption=""/>
             </Col>
         </Row>
 
