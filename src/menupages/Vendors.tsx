@@ -120,14 +120,13 @@ let plazatables = [
 plazatables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
 let communitytables = [
-{"name": <>Ani<wbr />Market<wbr />place / AMP</>, "image": animarketplace, "location": "FT1", "website": "https://www.animarketplace.org/", "role": ""},
+{"name": <>Ani<wbr />Market<wbr />place / AMP</>, "image": animarketplace, "location": "FT4", "website": "https://www.animarketplace.org/", "role": ""},
 {"name": "LA Idol Matsuri", "image": idolmatsuri, "location": "FT2", "website": "https://www.la-idolmatsuri.org/", "role": ""},
 {"name": "B-Side Events", "image": bsideevents, "location": "FT3", "website": "https://www.instagram.com/events_bside/", "role": ""},
-{"name": "Riso Studio Arts", "image": risostudioarts, "location": "FT4", "website": "https://risostudioarts.com/", "role": ""},
+{"name": "Riso Studio Arts", "image": risostudioarts, "location": "FT1", "website": "https://risostudioarts.com/", "role": ""},
 {"name": "PixelSundae", "image": placeholder, "location": "FT5", "website": "", "role": ""},
-{"name": "Touhou Game Dev", "image": placeholder, "location": "FT6", "website": "", "role": ""},
 {"name": "東方関係部: OTNJ", "image": organizedtouhounetworking, "location": "FT7", "website": "https://discord.gg/ct9JS95CwM", "role": ""},
-{"name": "Idle Rage", "image": placeholder, "location": "FT8", "website": "", "role": ""},
+{"name": "Idle Rage", "image": placeholder, "location": "FT6", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
@@ -138,6 +137,7 @@ let fangametables = [
 {"name": "Noetic Nightjar Studios", "image": noetic, "location": "FG4", "website": "http://noeticnightjar.com/", "role": ""},
 {"name": "peace research", "image": placeholder, "location": "FG5", "website": "", "role": ""},
 {"name": "Touhou M-1 Grand Prix", "image": grandprix, "location": "FG6", "website": "https://www.youtube.com/channel/UC1uFa3v2uibwxWnI_hrD9fA", "role": ""},
+{"name": "Touhou Game Dev", "image": placeholder, "location": "FG7", "website": "", "role": ""},
 ];
 communitytables.sort((a,b) => a["location"].localeCompare(b["location"]));
 
