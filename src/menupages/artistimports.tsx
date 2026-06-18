@@ -447,4 +447,28 @@ export const newartistalleylist =
     "website": "https://www.instagram.com/mystical.lala/"
   }
 ];
-newartistalleylist.sort((a,b) => a["location"].localeCompare(b["location"]));
+newartistalleylist.sort((a,b) => {
+  let left = a["location"];
+  let right = b["location"];
+  let leftletter = left.replace(/[^a-z]/gi, '');
+  let rightletter = right.replace(/[^a-z]/gi, '');
+  let leftnum = parseInt(left.replace(/[^0-9]/gi, ''));
+  let rightnum = parseInt(right.replace(/[^0-9]/gi, ''));
+
+  if(leftletter.localeCompare(rightletter) !== 0) {
+    return leftletter.localeCompare(rightletter);
+  }
+
+  else if(leftnum === rightnum) {
+    return 0;
+  }
+
+  else if(leftnum <= rightnum) {
+    return -1;
+  }
+
+  else {
+    return 1;
+  }
+
+});
