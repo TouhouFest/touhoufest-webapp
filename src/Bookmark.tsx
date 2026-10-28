@@ -4,7 +4,7 @@ import { COOKIE_NAME, get_cookie_list, cookies, cookie_parameters } from "./Util
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
-export default function Bookmark({index, icon_size="lg"}: {index:number, icon_size:string}) {
+export default function Bookmark({index, icon_size="lg"}: {index: string, icon_size: string}) {
   const [starType, setStarType] = useState(faStar);
 
 
@@ -18,7 +18,7 @@ export default function Bookmark({index, icon_size="lg"}: {index:number, icon_si
       setStarType(fasStar);
     }
     else{ // remove cookie
-      let cookie_idx_rm = current_cookie_list.indexOf(index.toString());
+      let cookie_idx_rm = current_cookie_list.indexOf(index);
       if (cookie_idx_rm > -1){
         current_cookie_list.splice(cookie_idx_rm, 1);
       }
@@ -29,7 +29,7 @@ export default function Bookmark({index, icon_size="lg"}: {index:number, icon_si
 
   useEffect(function(){
     let current_cookie_list = get_cookie_list();
-    if(current_cookie_list.indexOf(index.toString()) > -1){
+    if(current_cookie_list.indexOf(index) > -1){
       setStarType(fasStar);
     }
   })

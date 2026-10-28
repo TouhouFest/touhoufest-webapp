@@ -11,7 +11,7 @@ import { Toast } from '@capacitor/toast';
 describe("Notifications",() => {
     
     test('stupid simple notifications', () => {
-        let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs()}/>
+        let notification = <IssueNotifications index={"1"} title={"test event"} start_ts={dayjs()}/>
         render(notification);
         expect(screen.getByRole("img", {hidden: true})).toBeDefined();
 
@@ -31,7 +31,7 @@ describe("Notifications",() => {
             }
         );
 
-        let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs().add(7,'day')}/>
+        let notification = <IssueNotifications index={"1"} title={"test event"} start_ts={dayjs().add(7,'day')}/>
         render(notification);
         await userEvent.click(screen.getByRole("img", {hidden:true}));
 
@@ -58,7 +58,7 @@ describe("Notifications",() => {
             }
         );
 
-        let notification = <IssueNotifications index={1} title={"test event"} start_ts={dayjs().add(7,'day')}/>
+        let notification = <IssueNotifications index={"1"} title={"test event"} start_ts={dayjs().add(7,'day')}/>
         render(notification);
         await userEvent.click(screen.getByRole("img", {hidden:true}));
 

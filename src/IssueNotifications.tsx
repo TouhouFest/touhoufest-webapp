@@ -8,8 +8,17 @@ import dayjs from "dayjs/esm/index.js";
 import DefaultNoficationModal from './DefaultNotificationModal';
 import { DEFAULTNOTIFY } from './Utils';
 
+function getNotificationId(id: string): number {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = ((hash << 5) - hash) + id.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
 // todo: optionally switch to push notifications if louder notifications are requested
-export default function IssueNotifications({index, title, start_ts, icon_size="lg"}: {index:number, title:string, start_ts:dayjs.Dayjs, icon_size:string}) {
+export default function IssueNotifications({index, title, start_ts, icon_size="lg"}: {index: string, title:string, start_ts:dayjs.Dayjs, icon_size:string}) {
 
   const [bellType, setBellType] = useState(defaultState());
   const NOTIFYNAME:string = "NOTIFY";
@@ -46,7 +55,7 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
         {
           title:"Event Starting Soon!",
           body:bodydesc,
-          id:index,
+          id: getNotificationId(index),
           schedule: {
             at: usedate.toDate(),
             allowWhileIdle:true
@@ -90,7 +99,7 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
     }
     // check permissions the first time
     else if (bellType === fasBell) {
-      let cancelitem:CancelOptions = {notifications: [{id: index}]};
+      let cancelitem:CancelOptions = {notifications: [{id: getNotificationId(index)}]};
       LocalNotifications.cancel(cancelitem).then(() => {
         removeNotification();
       });
@@ -124,7 +133,7 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
 
   function checkNotificationFired(fired_not: LocalNotificationSchema) {
     //update ui accordingly
-    if (fired_not["id"] === index) {
+    if (fired_not["id"] === getNotificationId(index)) {
       removeNotification();
     }
   }
@@ -135,7 +144,7 @@ export default function IssueNotifications({index, title, start_ts, icon_size="l
     let foundNotification:boolean = false;
     LocalNotifications.getPending().then((result) => {
       result.notifications.map((notice, i) => {
-        if (notice.id === index) {
+        if (notice.id === getNotificationId(index)) {
           foundNotification = true;
         }
       });

@@ -4,7 +4,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 
 describe("EventDescription", () => {
     test("day of week is rendered", async () => {
-        let eventdesc = <EventDescription show_var={true} hide_fxn={vi.fn()} event_package={{"daytext": "Friday, June 13", "uniqueID": 0}} evt_print={[<>foobar</>,<>foobar</>]}/>
+        let eventdesc = <EventDescription show_var={true} hide_fxn={vi.fn()} event_package={{"daytext": "Friday, June 13", "uniqueID": "0"}} evt_print={[<>foobar</>,<>foobar</>]}/>
 
         render(eventdesc);
 
