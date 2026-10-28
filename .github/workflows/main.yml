@@ -21,12 +21,6 @@ jobs:
       - run:  echo ""$GIT_CRYPT_KEY"" | base64 -di --decode > ~/key && git-crypt unlock ~/key && rm ~/key
         env:
           GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
-      - name: Pull down events from Google Sheets
-        run: curl -L --output src/events.csv ""$SUPER_SECRET""
-        env:
-          SUPER_SECRET: ${{ secrets.GOOGLE_SHEETS_URL }}
-      # commit new events and deploy to website
-      - uses: stefanzweifel/git-auto-commit-action@v5
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git

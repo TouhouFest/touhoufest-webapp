@@ -13,10 +13,8 @@ import { colors, get_cookie_list, cmp, CON_TIMEZONE, USECONTZ, NATIVETIMETYPE, E
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
-import Papa from 'papaparse';
 import Image from 'react-bootstrap/Image';
 import IssueNotifications from "./IssueNotifications";
-import events from './events.csv';
 import noresults from './noresults.jpg';
 import noresultsdark from "./noresults-dark.jpg";
 import Stack from "react-bootstrap/Stack";
@@ -24,6 +22,35 @@ import gohei_border from "./gohei_border.svg";
 import hakurei_border from "./hakurei_border.svg";
 import { faBuilding, faClock, faLocationDot, faToriiGate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const SCHEDULE_API_URL =
+  import.meta.env.VITE_SCHEDULE_API_URL ||
+  "https://registration.touhoufest.org/schedule/panels_json";
+const SCHEDULE_CACHE_KEY = "TF_SCHEDULE_CACHE";
+
+async function fetchScheduleWithBackoff(
+  url: string,
+  maxAttempts = 8
+): Promise<any[]> {
+  const isTest = import.meta.env.MODE === "test";
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const events = Array.isArray(data) ? data : data?.events;
+      if (Array.isArray(events)) return events;
+      throw new Error("Invalid response format");
+    } catch (err) {
+      if (attempt === maxAttempts - 1) throw err;
+      const delay = isTest
+        ? 5
+        : Math.min(30000, 500 * 2 ** attempt + Math.random() * 500);
+      await new Promise((r) => setTimeout(r, delay));
+    }
+  }
+  return [];
+}
 
 dayjs.extend(customParseFormat);
 dayjs.extend(timezone);
@@ -116,7 +143,7 @@ interface EventListing {
   event_end_time:string,
   event_type:string,
   event_age_limit:string,
-  uniqueID: number,
+  uniqueID: string,
   [key:string]: any;
 }
 
@@ -130,13 +157,14 @@ export default function Dataset(
   const [evtPrint, setEvtPrint] = useState([<></>]);
   // const [availableDays, setAvailableDays] = useState([]);
 
-  function handleEventOnClick(index:number, evtbulk:JSX.Element[], daytext:string) {
-    let evt = dataSet.loc({ rows: [index] }).toJSON()[0];
-    // let evt = toJSON(dataSet.loc({rows:[index]}))[0];
-    evt["daytext"] = daytext;
-    setEventDetails(evt);
-    setShowEventDescription(true);
-    setEvtPrint(evtbulk);
+  function handleEventOnClick(index: string, evtbulk:JSX.Element[], daytext:string) {
+    let evt = dataSet.data.find((e) => e.uniqueID === index);
+    if (evt) {
+      evt["daytext"] = daytext;
+      setEventDetails(evt);
+      setShowEventDescription(true);
+      setEvtPrint(evtbulk);
+    }
   };
   const handleEventOnHide = () => setShowEventDescription(false);
 
@@ -145,45 +173,112 @@ export default function Dataset(
   }
 
   useEffect(() => {
+    let isMounted = true;
 
-    Papa.parse(events, {
-      header: true,
-      download: true,
-      dynamicTyping: true,
-      complete: function (results:Papa.ParseResult<EventListing>) {
-        let newdata = new SPDataFrame(results.data);
-        newdata = newdata.addColumn("combinedStart", newdata.apply((row:EventListing) => {
-          return dayjs.tz(row["event_start_day"] + " " + row["event_start_time"], "M/D/YY H:mm", CON_TIMEZONE).toISOString();
-        }));
-        newdata = newdata.addColumn("combinedEnd", newdata.apply((row:EventListing) => {
-          return dayjs.tz(row["event_end_day"] + " " + row["event_end_time"], "M/D/YY H:mm", CON_TIMEZONE).toISOString();
-        }));
-        newdata = newdata.sortValues("combinedStart");
-        newdata = newdata.addColumn("uniqueID", newdata.index);
+    const processData = (data: any[]) => {
+      let events = data.map((item: any, idx: number) => {
+        let startjs =
+          item.start_unix != null
+            ? dayjs.unix(item.start_unix).tz(CON_TIMEZONE)
+            : dayjs.tz(
+                `${item.event_start_day} ${item.event_start_time}`,
+                "M/D/YY H:mm",
+                CON_TIMEZONE
+              );
+        let endjs =
+          item.end_unix != null
+            ? dayjs.unix(item.end_unix).tz(CON_TIMEZONE)
+            : dayjs.tz(
+                `${item.event_end_day} ${item.event_end_time}`,
+                "M/D/YY H:mm",
+                CON_TIMEZONE
+              );
 
-        let event_types = uniqueColumn(newdata.get('event_type').map((elm) => elm.split(".")).flat(1)).sort();
-        let room_list = uniqueColumn(newdata.get("event_room"));
-        let params = { 'event_types': event_types, 'room_list': room_list };
+        let types = [...(item.tracks || []), ...(item.content || [])];
+        if (!types.length && item.event_type) {
+          types.push(...item.event_type.split("."));
+        }
+        if (!types.length) {
+          types.push("Convention");
+        }
 
-        // newdata.debug();
-        // console.log(params);
+        let description = item.description ?? item.event_description ?? "";
+        if (item.panelists?.length) {
+          let pstr = `**Panelist${item.panelists.length > 1 ? "s" : ""}:** ${item.panelists.join(", ")}`;
+          if (!description.includes(pstr)) {
+            description = description ? `${description}\n\n${pstr}` : pstr;
+          }
+        }
 
-        let days = newdata.apply((row:EventListing) => {
-          return dayjs(row["combinedStart" as keyof EventListing]).format("dddd, M/D").toString();
-        });
-        days = uniqueColumn(days);
-        changeDays(days);
-        // setAvailableDays(days);
+        return {
+          uniqueID: String(item.id),
+          event_title: item.name ?? item.event_title ?? "",
+          event_description: description,
+          event_room: item.location ?? item.event_room ?? "TBA",
+          event_start_day: startjs.format("M/D/YY"),
+          event_start_time: startjs.format("H:mm"),
+          event_end_day: endjs.format("M/D/YY"),
+          event_end_time: endjs.format("H:mm"),
+          combinedStart: startjs.toISOString(),
+          combinedEnd: endjs.toISOString(),
+          event_type: types.join("."),
+          event_age_limit: item.rating ?? item.event_age_limit ?? "",
+          panelists: item.panelists || [],
+        } as EventListing;
+      });
 
-        param_fxn(params, 'toFilterOptions');
-        // optional: drop original time parameters
+      events.sort((a, b) => a.combinedStart.localeCompare(b.combinedStart));
 
-        setDataSet(newdata);
-        setDataUpdated(true);
+      let newdata = new SPDataFrame(events);
+      let event_types = uniqueColumn(
+        newdata
+          .get("event_type")
+          .map((elm) => (elm || "").split("."))
+          .flat(1)
+      ).sort();
+      let room_list = uniqueColumn(newdata.get("event_room"));
+      let params = { event_types: event_types, room_list: room_list };
 
+      let days = newdata.apply((row: EventListing) => {
+        return dayjs(row["combinedStart" as keyof EventListing])
+          .format("dddd, M/D")
+          .toString();
+      });
+      days = uniqueColumn(days);
+      changeDays(days);
+
+      param_fxn(params, "toFilterOptions");
+
+      setDataSet(newdata);
+      setDataUpdated(true);
+    };
+
+    const cached = localStorage.getItem(SCHEDULE_CACHE_KEY);
+    if (cached) {
+      try {
+        processData(JSON.parse(cached));
+      } catch (e) {
+        // ignore parse error
       }
-    });
+    }
 
+    fetchScheduleWithBackoff(SCHEDULE_API_URL)
+      .then((data) => {
+        if (!isMounted || !Array.isArray(data) || data.length === 0) return;
+        try {
+          localStorage.setItem(SCHEDULE_CACHE_KEY, JSON.stringify(data));
+        } catch (e) {
+          // ignore storage quota error
+        }
+        processData(data);
+      })
+      .catch(() => {
+        // silent fallback to cached data to avoid surfacing failures
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   // <img src = {noresults} className="img-fluid" alt="Confused Marisa"></img>
@@ -241,10 +336,11 @@ export default function Dataset(
     }
 
     if (mode === "bookmarks") {
-      let cookie_list = get_cookie_list();
-      cookie_list = cookie_list.map(Number);
-      cookie_list.sort(cmp);
-      displayData = dataSet.loc({ rows: cookie_list });
+      let cookie_list = new Set(get_cookie_list());
+      let result = displayData.data.map((item) =>
+        cookie_list.has(item.uniqueID)
+      );
+      displayData = displayData.loc({ rows: result });
     }
     else if (mode === "filter") {
 
@@ -301,7 +397,7 @@ export default function Dataset(
     // console.log(jsonexport);
     jsonexport.forEach(function (elem, index_) {
 
-      let index:number = elem["uniqueID" as keyof EventListing];
+      let index: string = elem["uniqueID" as keyof EventListing];
       let splitevt = elem["event_type"].split(".");
     
       // compute time display

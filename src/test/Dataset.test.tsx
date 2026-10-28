@@ -5,7 +5,7 @@ import Papa from 'papaparse';
 import dayjs, { Dayjs } from "dayjs/esm";
 import timezone from "dayjs/esm/plugin/timezone";
 import utc from "dayjs/esm/plugin/utc";
-import { NATIVETIMETYPE, USEDEVICETZ } from "../Utils";
+import { COOKIE_NAME, cookies, NATIVETIMETYPE, USEDEVICETZ } from "../Utils";
 import { faBroom } from "@fortawesome/free-solid-svg-icons";
 
 // attempting to mock events.csv directly hasn't worked because Papa.parse will not properly parse the input
@@ -24,22 +24,33 @@ Opening Ceremonies,Welcome to TouhouFest! MikoTan and several others on TouhouFe
         */
 
 
-// helper function to forcefully callback helper function inside complete() with supplied parameters
-function GenerateMockPapa(mockup:any[]) {
-    return vi.fn().mockImplementation(
-        async (csvString, config) => {
-            config["complete"]({data: mockup});
-            return {
-                data: ["foobar"]
-            }
-        }
-    );
-   
+// mock fetch response for test cases
+function GenerateMockPapa(mockup: any[]) {
+  const items = mockup.map((item, idx) => ({
+    id: item.id || `mock-id-${idx}`,
+    ...item,
+  }));
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    status: 200,
+    json: async () => items,
+  });
+  return vi.fn();
 }
 
-function mockGetItemImplementation(input:string, output:string | null) : string | null {
-    if(input === NATIVETIMETYPE) {return output;}
-    else {return null;}
+let mockCacheData: string | null = null;
+
+function mockGetItemImplementation(
+  input: string,
+  output: string | null
+): string | null {
+  if (input === NATIVETIMETYPE) {
+    return output;
+  }
+  if (input === "TF_SCHEDULE_CACHE") {
+    return mockCacheData;
+  }
+  return null;
 }
 
 describe("Dataset", () => {
@@ -303,8 +314,177 @@ describe("Dataset", () => {
         await waitFor(() => {
             expect(screen.getAllByText("test event 0").length).eq(1);
         });
-
-
-
     });
-})
+
+  test("transforms Ubersystem panels_json format", async () => {
+    GenerateMockPapa([
+      {
+        name: "Touhou Music Trivia",
+        location: "Panel Room 1",
+        start_unix: 1740972900,
+        end_unix: 1740976200,
+        duration: 55,
+        description: "Test your knowledge of Gensokyo music!",
+        panelists: ["ZUN", "Marisa"],
+        rating: "18+",
+        content: ["Loud Audio"],
+        tracks: ["Panel", "Music"],
+      },
+    ]);
+
+    let dataset = (
+      <Dataset
+        mode="home"
+        param_fxn={vi.fn()}
+        appliedFilters={vi.fn()}
+        changeDays={vi.fn()}
+        oppositeTheme={faBroom}
+        showEventDescription={false}
+        setShowEventDescription={vi.fn()}
+        selectedDay="All Days"
+      />
+    );
+    render(dataset);
+
+    await waitFor(() => {
+      expect(screen.getByText("Touhou Music Trivia")).toBeDefined();
+      expect(screen.getByText(new RegExp("Panel Room 1"))).toBeDefined();
+      expect(screen.getByText("18+")).toBeDefined();
+      expect(screen.getByText("Panel")).toBeDefined();
+      expect(screen.getByText("Music")).toBeDefined();
+      expect(screen.getByText("Loud Audio")).toBeDefined();
+    });
+  });
+
+  test("loads from localStorage cache when fetch fails (offline)", async () => {
+    global.fetch = vi.fn().mockRejectedValue(new Error("Network offline"));
+    mockCacheData = JSON.stringify([
+      {
+        id: "offline-1",
+        name: "Cached Offline Event",
+        location: "Shrine Room",
+        start_unix: 1740972900,
+        end_unix: 1740976200,
+        tracks: ["Offline"],
+        rating: "All Ages",
+        content: [],
+      },
+    ]);
+
+    let dataset = (
+      <Dataset
+        mode="home"
+        param_fxn={vi.fn()}
+        appliedFilters={vi.fn()}
+        changeDays={vi.fn()}
+        oppositeTheme={faBroom}
+        showEventDescription={false}
+        setShowEventDescription={vi.fn()}
+        selectedDay="All Days"
+      />
+    );
+    render(dataset);
+
+    await waitFor(() => {
+      expect(screen.getByText("Cached Offline Event")).toBeDefined();
+      expect(screen.getByText(new RegExp("Shrine Room"))).toBeDefined();
+    });
+    mockCacheData = null;
+  });
+
+  test("retries fetch with backoff on failure and succeeds", async () => {
+    let attempts = 0;
+    global.fetch = vi.fn().mockImplementation(async () => {
+      attempts++;
+      if (attempts < 3) {
+        return { ok: false, status: 503, statusText: "Unavailable" };
+      }
+      return {
+        ok: true,
+        status: 200,
+        json: async () => [
+          {
+            id: "retry-1",
+            name: "Retried Event",
+            location: "Main Stage",
+            start_unix: 1740972900,
+            end_unix: 1740976200,
+            tracks: ["Main"],
+            rating: "All Ages",
+            content: [],
+          },
+        ],
+      };
+    });
+
+    let dataset = (
+      <Dataset
+        mode="home"
+        param_fxn={vi.fn()}
+        appliedFilters={vi.fn()}
+        changeDays={vi.fn()}
+        oppositeTheme={faBroom}
+        showEventDescription={false}
+        setShowEventDescription={vi.fn()}
+        selectedDay="All Days"
+      />
+    );
+    render(dataset);
+
+    await waitFor(() => {
+      expect(screen.getByText("Retried Event")).toBeDefined();
+      expect(attempts).toBeGreaterThanOrEqual(3);
+    });
+  });
+
+  test("supports stable event string IDs and filters by bookmarks", async () => {
+    cookies.set(COOKIE_NAME, "uuid-event-2");
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => [
+        {
+          id: "uuid-event-1",
+          name: "First Stable Event",
+          location: "Room A",
+          start_unix: 1740972900,
+          end_unix: 1740976200,
+          tracks: ["Track 1"],
+          rating: "All Ages",
+          content: [],
+        },
+        {
+          id: "uuid-event-2",
+          name: "Second Stable Event",
+          location: "Room B",
+          start_unix: 1740976500,
+          end_unix: 1740979800,
+          tracks: ["Track 2"],
+          rating: "All Ages",
+          content: [],
+        },
+      ],
+    });
+
+    let dataset = (
+      <Dataset
+        mode="bookmarks"
+        param_fxn={vi.fn()}
+        appliedFilters={vi.fn()}
+        changeDays={vi.fn()}
+        oppositeTheme={faBroom}
+        showEventDescription={false}
+        setShowEventDescription={vi.fn()}
+        selectedDay="All Days"
+      />
+    );
+    render(dataset);
+
+    await waitFor(() => {
+      expect(screen.getByText("Second Stable Event")).toBeDefined();
+      expect(screen.queryByText("First Stable Event")).toBeNull();
+    });
+
+    cookies.remove(COOKIE_NAME);
+  });
+});
