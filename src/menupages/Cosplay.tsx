@@ -33,17 +33,20 @@ import EventDescription from './../EventDescription';
 import { useState } from 'react';
 import Markdown from 'marked-react';
 import { RenderHours } from './AboutCon';
+import { useConData } from '../ConData';
 
 function CosplayMeetupListing({type, includeFriday=false, includeLocation=false, includeDaySelect=true, subtitleString, renderModal=true}: {type:string, includeFriday?:boolean, includeDaySelect?:boolean, includeLocation?:boolean, subtitleString:string, renderModal?:boolean}) {
     
+        const { cosplayMeetups } = useConData();
+        const activeMeetups = cosplayMeetups?.length ? cosplayMeetups : cosplaymeetups;
         const [showEventDescription, setShowEventDescription] = useState(false);
-        const [eventDetails, setEventDetails] = useState({});
+        const [eventDetails, setEventDetails] = useState<Record<string, any>>({});
         const [activeDay, setActiveDay] = useState("Saturday");
 
         const handleEventOnHide = () => setShowEventDescription(false);
 
         function handleEventOnClick(index:number) {
-            let evt = cosplaymeetups[index];
+            let evt = activeMeetups[index];
             setEventDetails(evt);
             setShowEventDescription(true);
         }
@@ -97,7 +100,7 @@ function CosplayMeetupListing({type, includeFriday=false, includeLocation=false,
                         </ListGroup.Item>
                     }
 
-                    {cosplaymeetups.map((meetup, idx) => {
+                    {activeMeetups.map((meetup, idx) => {
                         return meetup["meetup_type"] === type && meetup["event_day"] === activeDay ? <>
                         <ListGroup.Item onClick={() => handleEventOnClick(idx)}>
                             <ReturnCosplayHeader meetup={meetup}/>
