@@ -12,6 +12,7 @@ import { faDiscord, faSquareXTwitter, faSquareFacebook, faInstagram, faBluesky }
 import { Image, Accordion, Card, ListGroup, Button, Table } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
 import { con_banner, getColorState, MakeGenericCard, MakeGoheiHeader, WarningAlert } from "../Utils";
+import { DEFAULT_EVENT_DATES, useConData } from "../ConData";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -177,6 +178,42 @@ export function RenderHours({title=""}: {title?:string}) {
   </>;
 }
 
+function AboutConIntro() {
+  const { eventDates, venueName, venueAddress } = useConData();
+  const bodyDates =
+    eventDates === DEFAULT_EVENT_DATES
+      ? "June 20st - 21st, 2026"
+      : eventDates;
+  return (
+    <>
+      <div className="text-center">
+        <h3 className="display-6">Welcome to TouhouFest!</h3>
+        <p className="lead">{eventDates}</p>
+      </div>
+      <Row className="text-center">
+        <Col><a href="https://discord.touhoufest.org" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://twitter.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareXTwitter} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://www.facebook.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareFacebook} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://www.instagram.com/touhoufest/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faInstagram} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://www.touhoufest.org/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faGlobeAmericas} fixedWidth></FontAwesomeIcon></h5></a></Col>
+        <Col><a href="https://bsky.app/profile/touhoufest.org" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faBluesky} fixedWidth></FontAwesomeIcon></h5></a></Col>
+      </Row>
+      <div className="text-center mt-3">
+        <h4>{venueName}</h4>
+        <p>{venueAddress}</p>
+
+        <Ratio aspectRatio="16x9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.9497761747903!2d-118.34651282403861!3d33.83940582893829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b52a55535501%3A0xbf414574f90a0717!2sTorrance%20Cultural%20Arts%20Center!5e0!3m2!1sen!2sus!4v1709492414671!5m2!1sen!2sus" allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Con Center Google Maps"></iframe>
+        </Ratio>
+        <Button className="submitbutton mt-3" href="https://www.google.com/maps?ll=33.839401,-118.343938&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=13781372703427135255" target="_blank" rel="noreferrer">View In Maps <FontAwesomeIcon icon={faAngleRight} fixedWidth/></Button>
+      </div>
+      <p className="mt-3">
+        A Touhou Project-themed fan event being held on {bodyDates}, at the {venueName} in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
+      </p>
+    </>
+  );
+}
+
 // aboutConPage:Record<string, JSX.Element>
 export const aboutConPage = { 
   "displayTitle": false,
@@ -211,30 +248,7 @@ export const aboutConPage = {
   "fluidImage": (<><Image className="display-dark" src={touhoufest_dark} fluid /><Image className="display-light" src={touhoufest} fluid /></>),
   "body": (
     <>
-      <div className="text-center">
-        <h3 className="display-6">Welcome to TouhouFest!</h3>
-        <p className="lead">June 20th - 21st, 2026</p>
-      </div>
-      <Row className="text-center">
-        <Col><a href="https://discord.touhoufest.org" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faDiscord} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://twitter.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareXTwitter} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://www.facebook.com/TouhouFest" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faSquareFacebook} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://www.instagram.com/touhoufest/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faInstagram} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://www.touhoufest.org/" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faGlobeAmericas} fixedWidth></FontAwesomeIcon></h5></a></Col>
-        <Col><a href="https://bsky.app/profile/touhoufest.org" target="_blank" rel="noreferrer" className="text-reset"><h5><FontAwesomeIcon icon={faBluesky} fixedWidth></FontAwesomeIcon></h5></a></Col>
-      </Row>
-      <div className="text-center mt-3">
-        <h4>Torrance Cultural Arts Center</h4>
-        <p>3330 Civic Center Dr, Torrance, CA 90503</p>
-
-        <Ratio aspectRatio="16x9">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.9497761747903!2d-118.34651282403861!3d33.83940582893829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b52a55535501%3A0xbf414574f90a0717!2sTorrance%20Cultural%20Arts%20Center!5e0!3m2!1sen!2sus!4v1709492414671!5m2!1sen!2sus" allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Con Center Google Maps"></iframe>
-        </Ratio>
-        <Button className="submitbutton mt-3" href="https://www.google.com/maps?ll=33.839401,-118.343938&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=13781372703427135255" target="_blank" rel="noreferrer">View In Maps <FontAwesomeIcon icon={faAngleRight} fixedWidth/></Button>
-      </div>
-      <p className="mt-3">
-        A Touhou Project-themed fan event being held on June 20st - 21st, 2026, at the Torrance Cultural Arts Center in Torrance, California. Touhou fans from across the country will gather to celebrate the coming season and enjoy all the Touhou community has to offer such as art, music, and more!
-      </p>
+      <AboutConIntro />
 
       <MakeGoheiHeader content="Instructions for Checking In Using QR Code" fragment_id='checkoutpage'/>
 
